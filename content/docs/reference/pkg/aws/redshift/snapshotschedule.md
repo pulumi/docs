@@ -275,8 +275,7 @@ The SnapshotSchedule resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definitions_csharp">
 <a href="#definitions_csharp" style="color: inherit; text-decoration: inherit;">Definitions</a>
@@ -285,8 +284,7 @@ The SnapshotSchedule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -295,8 +293,7 @@ The SnapshotSchedule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -305,8 +302,7 @@ The SnapshotSchedule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -315,8 +311,7 @@ The SnapshotSchedule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_csharp">
 <a href="#identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -326,8 +321,7 @@ The SnapshotSchedule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -336,13 +330,11 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definitions_go">
 <a href="#definitions_go" style="color: inherit; text-decoration: inherit;">Definitions</a>
@@ -351,8 +343,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -361,8 +352,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -371,8 +361,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -381,8 +370,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_go">
 <a href="#identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -392,8 +380,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -402,13 +389,11 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definitions_nodejs">
 <a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
@@ -417,8 +402,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -427,8 +411,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -437,8 +420,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -447,8 +429,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_nodejs">
 <a href="#identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
@@ -458,8 +439,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -468,13 +448,11 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="definitions_python">
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
@@ -483,8 +461,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -493,8 +470,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -503,8 +479,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -513,8 +488,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_prefix_python">
 <a href="#identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
@@ -524,8 +498,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -534,8 +507,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -546,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -555,8 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -564,13 +534,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -578,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -587,13 +554,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -601,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,13 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -624,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -633,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -761,8 +721,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -770,8 +729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitions_csharp">
 <a href="#state_definitions_csharp" style="color: inherit; text-decoration: inherit;">Definitions</a>
@@ -780,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -790,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -800,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_csharp">
 <a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -810,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_csharp">
 <a href="#state_identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -821,8 +775,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -831,13 +784,11 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -845,8 +796,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitions_go">
 <a href="#state_definitions_go" style="color: inherit; text-decoration: inherit;">Definitions</a>
@@ -855,8 +805,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -865,8 +814,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -875,8 +823,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_go">
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -885,8 +832,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_go">
 <a href="#state_identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -896,8 +842,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -906,13 +851,11 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -920,8 +863,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitions_nodejs">
 <a href="#state_definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
@@ -930,8 +872,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -940,8 +881,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -950,8 +890,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_nodejs">
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -960,8 +899,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_nodejs">
 <a href="#state_identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
@@ -971,8 +909,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -981,13 +918,11 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -995,8 +930,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitions_python">
 <a href="#state_definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
@@ -1005,8 +939,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1015,8 +948,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the snapshot schedule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -1025,8 +957,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_python">
 <a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -1035,8 +966,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_prefix_python">
 <a href="#state_identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
@@ -1046,8 +976,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
     </dt>
     <dd>{{% md %}}Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1056,8 +985,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

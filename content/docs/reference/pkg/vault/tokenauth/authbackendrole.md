@@ -307,8 +307,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -317,8 +316,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedpolicies_csharp">
 <a href="#allowedpolicies_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Policies</a>
@@ -327,8 +325,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="boundcidrs_csharp">
 <a href="#boundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -338,8 +335,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disallowedpolicies_csharp">
 <a href="#disallowedpolicies_csharp" style="color: inherit; text-decoration: inherit;">Disallowed<wbr>Policies</a>
@@ -348,8 +344,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="explicitmaxttl_csharp">
 <a href="#explicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Max<wbr>Ttl</a>
@@ -359,8 +354,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="orphan_csharp">
 <a href="#orphan_csharp" style="color: inherit; text-decoration: inherit;">Orphan</a>
@@ -369,8 +363,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathsuffix_csharp">
 <a href="#pathsuffix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Suffix</a>
@@ -379,8 +372,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -392,8 +384,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="renewable_csharp">
 <a href="#renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -402,8 +393,7 @@ value of this field. Specified in seconds.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_csharp">
 <a href="#tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -414,8 +404,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_csharp">
 <a href="#tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -427,8 +416,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_csharp">
 <a href="#tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -438,8 +426,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_csharp">
 <a href="#tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -449,8 +436,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_csharp">
 <a href="#tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -461,8 +447,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_csharp">
 <a href="#tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -474,8 +459,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_csharp">
 <a href="#tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -484,8 +468,7 @@ value of this field. Specified in seconds.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenttl_csharp">
 <a href="#tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -495,8 +478,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -509,13 +491,11 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -524,8 +504,7 @@ requests a different type at generation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedpolicies_go">
 <a href="#allowedpolicies_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Policies</a>
@@ -534,8 +513,7 @@ requests a different type at generation time.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="boundcidrs_go">
 <a href="#boundcidrs_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -545,8 +523,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disallowedpolicies_go">
 <a href="#disallowedpolicies_go" style="color: inherit; text-decoration: inherit;">Disallowed<wbr>Policies</a>
@@ -555,8 +532,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="explicitmaxttl_go">
 <a href="#explicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Max<wbr>Ttl</a>
@@ -566,8 +542,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="orphan_go">
 <a href="#orphan_go" style="color: inherit; text-decoration: inherit;">Orphan</a>
@@ -576,8 +551,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathsuffix_go">
 <a href="#pathsuffix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Suffix</a>
@@ -586,8 +560,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -599,8 +572,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="renewable_go">
 <a href="#renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -609,8 +581,7 @@ value of this field. Specified in seconds.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_go">
 <a href="#tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -621,8 +592,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_go">
 <a href="#tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -634,8 +604,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_go">
 <a href="#tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -645,8 +614,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_go">
 <a href="#tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -656,8 +624,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_go">
 <a href="#tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -668,8 +635,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_go">
 <a href="#tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -681,8 +647,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_go">
 <a href="#tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -691,8 +656,7 @@ value of this field. Specified in seconds.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenttl_go">
 <a href="#tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -702,8 +666,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -716,13 +679,11 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -731,8 +692,7 @@ requests a different type at generation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedpolicies_nodejs">
 <a href="#allowedpolicies_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Policies</a>
@@ -741,8 +701,7 @@ requests a different type at generation time.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="boundcidrs_nodejs">
 <a href="#boundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Cidrs</a>
@@ -752,8 +711,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disallowedpolicies_nodejs">
 <a href="#disallowedpolicies_nodejs" style="color: inherit; text-decoration: inherit;">disallowed<wbr>Policies</a>
@@ -762,8 +720,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="explicitmaxttl_nodejs">
 <a href="#explicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Max<wbr>Ttl</a>
@@ -773,8 +730,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="orphan_nodejs">
 <a href="#orphan_nodejs" style="color: inherit; text-decoration: inherit;">orphan</a>
@@ -783,8 +739,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathsuffix_nodejs">
 <a href="#pathsuffix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
@@ -793,8 +748,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -806,8 +760,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="renewable_nodejs">
 <a href="#renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -816,8 +769,7 @@ value of this field. Specified in seconds.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_nodejs">
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
@@ -828,8 +780,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_nodejs">
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -841,8 +792,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_nodejs">
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
@@ -852,8 +802,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_nodejs">
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -863,8 +812,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_nodejs">
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
@@ -875,8 +823,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_nodejs">
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
@@ -888,8 +835,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_nodejs">
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
@@ -898,8 +844,7 @@ value of this field. Specified in seconds.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenttl_nodejs">
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
@@ -909,8 +854,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -923,13 +867,11 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -938,8 +880,7 @@ requests a different type at generation time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_policies_python">
 <a href="#allowed_policies_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>policies</a>
@@ -948,8 +889,7 @@ requests a different type at generation time.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="bound_cidrs_python">
 <a href="#bound_cidrs_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>cidrs</a>
@@ -959,8 +899,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disallowed_policies_python">
 <a href="#disallowed_policies_python" style="color: inherit; text-decoration: inherit;">disallowed_<wbr>policies</a>
@@ -969,8 +908,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="explicit_max_ttl_python">
 <a href="#explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>max_<wbr>ttl</a>
@@ -980,8 +918,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="orphan_python">
 <a href="#orphan_python" style="color: inherit; text-decoration: inherit;">orphan</a>
@@ -990,8 +927,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_suffix_python">
 <a href="#path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
@@ -1000,8 +936,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1013,8 +948,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="renewable_python">
 <a href="#renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -1023,8 +957,7 @@ value of this field. Specified in seconds.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_bound_cidrs_python">
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
@@ -1035,8 +968,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_explicit_max_ttl_python">
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
@@ -1048,8 +980,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_max_ttl_python">
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
@@ -1059,8 +990,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_no_default_policy_python">
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
@@ -1070,8 +1000,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_num_uses_python">
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
@@ -1082,8 +1011,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_period_python">
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
@@ -1095,8 +1023,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_policies_python">
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
@@ -1105,8 +1032,7 @@ value of this field. Specified in seconds.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_ttl_python">
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
@@ -1116,8 +1042,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -1130,8 +1055,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1142,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1151,13 +1074,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1165,13 +1086,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1179,13 +1098,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1193,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1321,8 +1237,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedpolicies_csharp">
 <a href="#state_allowedpolicies_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Policies</a>
@@ -1331,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_boundcidrs_csharp">
 <a href="#state_boundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -1342,8 +1256,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disallowedpolicies_csharp">
 <a href="#state_disallowedpolicies_csharp" style="color: inherit; text-decoration: inherit;">Disallowed<wbr>Policies</a>
@@ -1352,8 +1265,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_explicitmaxttl_csharp">
 <a href="#state_explicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Max<wbr>Ttl</a>
@@ -1363,8 +1275,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_orphan_csharp">
 <a href="#state_orphan_csharp" style="color: inherit; text-decoration: inherit;">Orphan</a>
@@ -1373,8 +1284,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pathsuffix_csharp">
 <a href="#state_pathsuffix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Suffix</a>
@@ -1383,8 +1293,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1396,8 +1305,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_csharp">
 <a href="#state_renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -1406,8 +1314,7 @@ value of this field. Specified in seconds.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
 <a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1416,8 +1323,7 @@ value of this field. Specified in seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_csharp">
 <a href="#state_tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -1428,8 +1334,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_csharp">
 <a href="#state_tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1441,8 +1346,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_csharp">
 <a href="#state_tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -1452,8 +1356,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_csharp">
 <a href="#state_tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1463,8 +1366,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_csharp">
 <a href="#state_tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -1475,8 +1377,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_csharp">
 <a href="#state_tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -1488,8 +1389,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_csharp">
 <a href="#state_tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -1498,8 +1398,7 @@ value of this field. Specified in seconds.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_csharp">
 <a href="#state_tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -1509,8 +1408,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_csharp">
 <a href="#state_tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1523,13 +1421,11 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedpolicies_go">
 <a href="#state_allowedpolicies_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Policies</a>
@@ -1538,8 +1434,7 @@ requests a different type at generation time.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_boundcidrs_go">
 <a href="#state_boundcidrs_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -1549,8 +1444,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disallowedpolicies_go">
 <a href="#state_disallowedpolicies_go" style="color: inherit; text-decoration: inherit;">Disallowed<wbr>Policies</a>
@@ -1559,8 +1453,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_explicitmaxttl_go">
 <a href="#state_explicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Max<wbr>Ttl</a>
@@ -1570,8 +1463,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_orphan_go">
 <a href="#state_orphan_go" style="color: inherit; text-decoration: inherit;">Orphan</a>
@@ -1580,8 +1472,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pathsuffix_go">
 <a href="#state_pathsuffix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Suffix</a>
@@ -1590,8 +1481,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1603,8 +1493,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_go">
 <a href="#state_renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -1613,8 +1502,7 @@ value of this field. Specified in seconds.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1623,8 +1511,7 @@ value of this field. Specified in seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_go">
 <a href="#state_tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -1635,8 +1522,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_go">
 <a href="#state_tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1648,8 +1534,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_go">
 <a href="#state_tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -1659,8 +1544,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_go">
 <a href="#state_tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1670,8 +1554,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_go">
 <a href="#state_tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -1682,8 +1565,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_go">
 <a href="#state_tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -1695,8 +1577,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_go">
 <a href="#state_tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -1705,8 +1586,7 @@ value of this field. Specified in seconds.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_go">
 <a href="#state_tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -1716,8 +1596,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_go">
 <a href="#state_tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1730,13 +1609,11 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedpolicies_nodejs">
 <a href="#state_allowedpolicies_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Policies</a>
@@ -1745,8 +1622,7 @@ requests a different type at generation time.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_boundcidrs_nodejs">
 <a href="#state_boundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Cidrs</a>
@@ -1756,8 +1632,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disallowedpolicies_nodejs">
 <a href="#state_disallowedpolicies_nodejs" style="color: inherit; text-decoration: inherit;">disallowed<wbr>Policies</a>
@@ -1766,8 +1641,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_explicitmaxttl_nodejs">
 <a href="#state_explicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Max<wbr>Ttl</a>
@@ -1777,8 +1651,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_orphan_nodejs">
 <a href="#state_orphan_nodejs" style="color: inherit; text-decoration: inherit;">orphan</a>
@@ -1787,8 +1660,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pathsuffix_nodejs">
 <a href="#state_pathsuffix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
@@ -1797,8 +1669,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1810,8 +1681,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_nodejs">
 <a href="#state_renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -1820,8 +1690,7 @@ value of this field. Specified in seconds.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -1830,8 +1699,7 @@ value of this field. Specified in seconds.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_nodejs">
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
@@ -1842,8 +1710,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_nodejs">
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1855,8 +1722,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_nodejs">
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
@@ -1866,8 +1732,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_nodejs">
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1877,8 +1742,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_nodejs">
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
@@ -1889,8 +1753,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_nodejs">
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
@@ -1902,8 +1765,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_nodejs">
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
@@ -1912,8 +1774,7 @@ value of this field. Specified in seconds.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_nodejs">
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
@@ -1923,8 +1784,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_nodejs">
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -1937,13 +1797,11 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_policies_python">
 <a href="#state_allowed_policies_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>policies</a>
@@ -1952,8 +1810,7 @@ requests a different type at generation time.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of allowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_bound_cidrs_python">
 <a href="#state_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>cidrs</a>
@@ -1963,8 +1820,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disallowed_policies_python">
 <a href="#state_disallowed_policies_python" style="color: inherit; text-decoration: inherit;">disallowed_<wbr>policies</a>
@@ -1973,8 +1829,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of disallowed policies for given role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_explicit_max_ttl_python">
 <a href="#state_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>max_<wbr>ttl</a>
@@ -1984,8 +1839,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, the
 token will have an explicit max TTL set upon it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_explicit_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_orphan_python">
 <a href="#state_orphan_python" style="color: inherit; text-decoration: inherit;">orphan</a>
@@ -1994,8 +1848,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, tokens created against this policy will be orphan tokens.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_suffix_python">
 <a href="#state_path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
@@ -2004,8 +1857,7 @@ token will have an explicit max TTL set upon it.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tokens created against this role will have the given suffix as part of their path in addition to the role name.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -2017,8 +1869,7 @@ token will have an explicit max TTL set upon it.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_python">
 <a href="#state_renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -2027,8 +1878,7 @@ value of this field. Specified in seconds.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wether to disable the ability of the token to be renewed past its initial TTL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -2037,8 +1887,7 @@ value of this field. Specified in seconds.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_bound_cidrs_python">
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
@@ -2049,8 +1898,7 @@ value of this field. Specified in seconds.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_explicit_max_ttl_python">
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
@@ -2062,8 +1910,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_max_ttl_python">
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
@@ -2073,8 +1920,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_no_default_policy_python">
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
@@ -2084,8 +1930,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_num_uses_python">
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
@@ -2096,8 +1941,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_period_python">
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
@@ -2109,8 +1953,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_policies_python">
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
@@ -2119,8 +1962,7 @@ value of this field. Specified in seconds.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_ttl_python">
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
@@ -2130,8 +1972,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_type_python">
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -2144,8 +1985,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

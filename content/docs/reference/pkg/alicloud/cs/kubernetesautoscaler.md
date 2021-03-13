@@ -501,8 +501,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -511,8 +510,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cooldownduration_csharp">
 <a href="#cooldownduration_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
@@ -521,8 +519,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deferscaleinduration_csharp">
 <a href="#deferscaleinduration_csharp" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
@@ -531,8 +528,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="utilization_csharp">
 <a href="#utilization_csharp" style="color: inherit; text-decoration: inherit;">Utilization</a>
@@ -541,8 +537,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepools_csharp">
 <a href="#nodepools_csharp" style="color: inherit; text-decoration: inherit;">Nodepools</a>
@@ -553,8 +548,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useecsramroletoken_csharp">
 <a href="#useecsramroletoken_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
@@ -563,13 +557,11 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -578,8 +570,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cooldownduration_go">
 <a href="#cooldownduration_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
@@ -588,8 +579,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deferscaleinduration_go">
 <a href="#deferscaleinduration_go" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
@@ -598,8 +588,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="utilization_go">
 <a href="#utilization_go" style="color: inherit; text-decoration: inherit;">Utilization</a>
@@ -608,8 +597,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepools_go">
 <a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Nodepools</a>
@@ -620,8 +608,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useecsramroletoken_go">
 <a href="#useecsramroletoken_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
@@ -630,13 +617,11 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -645,8 +630,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cooldownduration_nodejs">
 <a href="#cooldownduration_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Duration</a>
@@ -655,8 +639,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deferscaleinduration_nodejs">
 <a href="#deferscaleinduration_nodejs" style="color: inherit; text-decoration: inherit;">defer<wbr>Scale<wbr>In<wbr>Duration</a>
@@ -665,8 +648,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="utilization_nodejs">
 <a href="#utilization_nodejs" style="color: inherit; text-decoration: inherit;">utilization</a>
@@ -675,8 +657,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepools_nodejs">
 <a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">nodepools</a>
@@ -687,8 +668,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useecsramroletoken_nodejs">
 <a href="#useecsramroletoken_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
@@ -697,13 +677,11 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -712,8 +690,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cool_down_duration_python">
 <a href="#cool_down_duration_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>duration</a>
@@ -722,8 +699,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defer_scale_in_duration_python">
 <a href="#defer_scale_in_duration_python" style="color: inherit; text-decoration: inherit;">defer_<wbr>scale_<wbr>in_<wbr>duration</a>
@@ -732,8 +708,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="utilization_python">
 <a href="#utilization_python" style="color: inherit; text-decoration: inherit;">utilization</a>
@@ -742,8 +717,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepools_python">
 <a href="#nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
@@ -754,8 +728,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_ecs_ram_role_token_python">
 <a href="#use_ecs_ram_role_token_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ecs_<wbr>ram_<wbr>role_<wbr>token</a>
@@ -764,8 +737,7 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -776,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -785,13 +756,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -799,13 +768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -813,13 +780,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -827,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -955,8 +919,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -965,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldownduration_csharp">
 <a href="#state_cooldownduration_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
@@ -975,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deferscaleinduration_csharp">
 <a href="#state_deferscaleinduration_csharp" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
@@ -985,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_csharp">
 <a href="#state_nodepools_csharp" style="color: inherit; text-decoration: inherit;">Nodepools</a>
@@ -997,8 +957,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useecsramroletoken_csharp">
 <a href="#state_useecsramroletoken_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
@@ -1007,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilization_csharp">
 <a href="#state_utilization_csharp" style="color: inherit; text-decoration: inherit;">Utilization</a>
@@ -1017,13 +975,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1032,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldownduration_go">
 <a href="#state_cooldownduration_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
@@ -1042,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deferscaleinduration_go">
 <a href="#state_deferscaleinduration_go" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
@@ -1052,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_go">
 <a href="#state_nodepools_go" style="color: inherit; text-decoration: inherit;">Nodepools</a>
@@ -1064,8 +1017,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useecsramroletoken_go">
 <a href="#state_useecsramroletoken_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
@@ -1074,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilization_go">
 <a href="#state_utilization_go" style="color: inherit; text-decoration: inherit;">Utilization</a>
@@ -1084,13 +1035,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1099,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cooldownduration_nodejs">
 <a href="#state_cooldownduration_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Duration</a>
@@ -1109,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deferscaleinduration_nodejs">
 <a href="#state_deferscaleinduration_nodejs" style="color: inherit; text-decoration: inherit;">defer<wbr>Scale<wbr>In<wbr>Duration</a>
@@ -1119,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_nodejs">
 <a href="#state_nodepools_nodejs" style="color: inherit; text-decoration: inherit;">nodepools</a>
@@ -1131,8 +1077,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useecsramroletoken_nodejs">
 <a href="#state_useecsramroletoken_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
@@ -1141,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilization_nodejs">
 <a href="#state_utilization_nodejs" style="color: inherit; text-decoration: inherit;">utilization</a>
@@ -1151,13 +1095,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1166,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cool_down_duration_python">
 <a href="#state_cool_down_duration_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>duration</a>
@@ -1176,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defer_scale_in_duration_python">
 <a href="#state_defer_scale_in_duration_python" style="color: inherit; text-decoration: inherit;">defer_<wbr>scale_<wbr>in_<wbr>duration</a>
@@ -1186,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_python">
 <a href="#state_nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
@@ -1198,8 +1137,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_ecs_ram_role_token_python">
 <a href="#state_use_ecs_ram_role_token_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ecs_<wbr>ram_<wbr>role_<wbr>token</a>
@@ -1208,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilization_python">
 <a href="#state_utilization_python" style="color: inherit; text-decoration: inherit;">utilization</a>
@@ -1218,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1234,8 +1170,7 @@ The following state arguments are supported:
 <h4 id="kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1243,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1252,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_csharp">
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
@@ -1261,13 +1194,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1275,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1284,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_go">
 <a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
@@ -1293,13 +1222,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1307,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1316,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_nodejs">
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
@@ -1325,13 +1250,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1339,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1348,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taints_python">
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
@@ -1357,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

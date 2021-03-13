@@ -271,8 +271,7 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -281,8 +280,7 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -291,8 +289,7 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -301,8 +298,7 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_csharp">
 <a href="#backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -312,8 +308,7 @@ The Droplet resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -322,8 +317,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -333,8 +327,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +336,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetworking_csharp">
 <a href="#privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -356,8 +348,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resizedisk_csharp">
 <a href="#resizedisk_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
@@ -369,8 +360,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -382,8 +372,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -392,8 +381,7 @@ to retrieve them.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -402,8 +390,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeids_csharp">
 <a href="#volumeids_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
@@ -412,8 +399,7 @@ to retrieve them.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcuuid_csharp">
 <a href="#vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -422,13 +408,11 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -437,8 +421,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -447,8 +430,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -457,8 +439,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_go">
 <a href="#backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -468,8 +449,7 @@ to retrieve them.
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -478,8 +458,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -489,8 +468,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -499,8 +477,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetworking_go">
 <a href="#privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -512,8 +489,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resizedisk_go">
 <a href="#resizedisk_go" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
@@ -525,8 +501,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -538,8 +513,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -548,8 +522,7 @@ to retrieve them.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -558,8 +531,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeids_go">
 <a href="#volumeids_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
@@ -568,8 +540,7 @@ to retrieve them.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcuuid_go">
 <a href="#vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -578,13 +549,11 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -593,8 +562,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -603,8 +571,7 @@ to retrieve them.
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -613,8 +580,7 @@ to retrieve them.
         <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_nodejs">
 <a href="#backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -624,8 +590,7 @@ to retrieve them.
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -634,8 +599,7 @@ false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -645,8 +609,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -655,8 +618,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetworking_nodejs">
 <a href="#privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
@@ -668,8 +630,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resizedisk_nodejs">
 <a href="#resizedisk_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Disk</a>
@@ -681,8 +642,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
@@ -694,8 +654,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -704,8 +663,7 @@ to retrieve them.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -714,8 +672,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeids_nodejs">
 <a href="#volumeids_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Ids</a>
@@ -724,8 +681,7 @@ to retrieve them.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcuuid_nodejs">
 <a href="#vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
@@ -734,13 +690,11 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -749,8 +703,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -759,8 +712,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -769,8 +721,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_python">
 <a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -780,8 +731,7 @@ to retrieve them.
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -790,8 +740,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -801,8 +750,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -811,8 +759,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_networking_python">
 <a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
@@ -824,8 +771,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resize_disk_python">
 <a href="#resize_disk_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>disk</a>
@@ -837,8 +783,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_keys_python">
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
@@ -850,8 +795,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -860,8 +804,7 @@ to retrieve them.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -870,8 +813,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_ids_python">
 <a href="#volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
@@ -880,8 +822,7 @@ to retrieve them.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_uuid_python">
 <a href="#vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
@@ -890,8 +831,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -902,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -911,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_csharp">
 <a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -921,8 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dropleturn_csharp">
 <a href="#dropleturn_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
@@ -932,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -941,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -951,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4addressprivate_csharp">
 <a href="#ipv4addressprivate_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
@@ -961,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -971,8 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -981,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -990,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pricehourly_csharp">
 <a href="#pricehourly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
@@ -1000,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pricemonthly_csharp">
 <a href="#pricemonthly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
@@ -1010,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1020,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcpus_csharp">
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -1030,13 +957,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1044,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_go">
 <a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -1054,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dropleturn_go">
 <a href="#dropleturn_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
@@ -1065,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1074,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -1084,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4addressprivate_go">
 <a href="#ipv4addressprivate_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
@@ -1094,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -1104,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1114,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -1123,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pricehourly_go">
 <a href="#pricehourly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
@@ -1133,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pricemonthly_go">
 <a href="#pricemonthly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
@@ -1143,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1153,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcpus_go">
 <a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -1163,13 +1076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1177,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_nodejs">
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1187,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dropleturn_nodejs">
 <a href="#dropleturn_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Urn</a>
@@ -1198,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1207,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -1217,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4addressprivate_nodejs">
 <a href="#ipv4addressprivate_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Private</a>
@@ -1227,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -1237,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1247,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -1256,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pricehourly_nodejs">
 <a href="#pricehourly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Hourly</a>
@@ -1266,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pricemonthly_nodejs">
 <a href="#pricemonthly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Monthly</a>
@@ -1276,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1286,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcpus_nodejs">
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -1296,13 +1195,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1310,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_python">
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1320,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="droplet_urn_python">
 <a href="#droplet_urn_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>urn</a>
@@ -1331,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1340,8 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -1350,8 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4_address_private_python">
 <a href="#ipv4_address_private_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>private</a>
@@ -1360,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -1370,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1380,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -1389,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="price_hourly_python">
 <a href="#price_hourly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>hourly</a>
@@ -1399,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="price_monthly_python">
 <a href="#price_monthly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>monthly</a>
@@ -1409,8 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1419,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcpus_python">
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -1429,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1557,8 +1441,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backups_csharp">
 <a href="#state_backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -1568,8 +1451,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1577,8 +1459,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_csharp">
 <a href="#state_disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -1587,8 +1468,7 @@ false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropleturn_csharp">
 <a href="#state_dropleturn_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
@@ -1598,8 +1478,7 @@ false.
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_csharp">
 <a href="#state_image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1608,8 +1487,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_csharp">
 <a href="#state_ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -1618,8 +1496,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4addressprivate_csharp">
 <a href="#state_ipv4addressprivate_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
@@ -1628,8 +1505,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_csharp">
 <a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1638,8 +1514,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6address_csharp">
 <a href="#state_ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -1648,8 +1523,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
 <a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1658,8 +1532,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_csharp">
 <a href="#state_memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -1667,8 +1540,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_csharp">
 <a href="#state_monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -1678,8 +1550,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1688,8 +1559,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pricehourly_csharp">
 <a href="#state_pricehourly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
@@ -1698,8 +1568,7 @@ Defaults to false.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pricemonthly_csharp">
 <a href="#state_pricemonthly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
@@ -1708,8 +1577,7 @@ Defaults to false.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatenetworking_csharp">
 <a href="#state_privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -1721,8 +1589,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1731,8 +1598,7 @@ Droplet inside of your account's default VPC for the region. Use the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resizedisk_csharp">
 <a href="#state_resizedisk_csharp" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
@@ -1744,8 +1610,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1754,8 +1619,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshkeys_csharp">
 <a href="#state_sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -1767,8 +1631,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1777,8 +1640,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1787,8 +1649,7 @@ to retrieve them.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1797,8 +1658,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_csharp">
 <a href="#state_vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -1807,8 +1667,7 @@ to retrieve them.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeids_csharp">
 <a href="#state_volumeids_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
@@ -1817,8 +1676,7 @@ to retrieve them.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcuuid_csharp">
 <a href="#state_vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -1827,13 +1685,11 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backups_go">
 <a href="#state_backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -1843,8 +1699,7 @@ to retrieve them.
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1852,8 +1707,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_go">
 <a href="#state_disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -1862,8 +1716,7 @@ false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropleturn_go">
 <a href="#state_dropleturn_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Urn</a>
@@ -1873,8 +1726,7 @@ false.
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_go">
 <a href="#state_image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1883,8 +1735,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_go">
 <a href="#state_ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -1893,8 +1744,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4addressprivate_go">
 <a href="#state_ipv4addressprivate_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
@@ -1903,8 +1753,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_go">
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1913,8 +1762,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6address_go">
 <a href="#state_ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -1923,8 +1771,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
 <a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1933,8 +1780,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_go">
 <a href="#state_memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -1942,8 +1788,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_go">
 <a href="#state_monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -1953,8 +1798,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1963,8 +1807,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pricehourly_go">
 <a href="#state_pricehourly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
@@ -1973,8 +1816,7 @@ Defaults to false.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pricemonthly_go">
 <a href="#state_pricemonthly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
@@ -1983,8 +1825,7 @@ Defaults to false.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatenetworking_go">
 <a href="#state_privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -1996,8 +1837,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2006,8 +1846,7 @@ Droplet inside of your account's default VPC for the region. Use the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resizedisk_go">
 <a href="#state_resizedisk_go" style="color: inherit; text-decoration: inherit;">Resize<wbr>Disk</a>
@@ -2019,8 +1858,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2029,8 +1867,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshkeys_go">
 <a href="#state_sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -2042,8 +1879,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2052,8 +1888,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2062,8 +1897,7 @@ to retrieve them.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -2072,8 +1906,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_go">
 <a href="#state_vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -2082,8 +1915,7 @@ to retrieve them.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeids_go">
 <a href="#state_volumeids_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
@@ -2092,8 +1924,7 @@ to retrieve them.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcuuid_go">
 <a href="#state_vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -2102,13 +1933,11 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backups_nodejs">
 <a href="#state_backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -2118,8 +1947,7 @@ to retrieve them.
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2127,8 +1955,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_nodejs">
 <a href="#state_disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -2137,8 +1964,7 @@ false.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropleturn_nodejs">
 <a href="#state_dropleturn_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Urn</a>
@@ -2148,8 +1974,7 @@ false.
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_nodejs">
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2158,8 +1983,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_nodejs">
 <a href="#state_ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -2168,8 +1992,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4addressprivate_nodejs">
 <a href="#state_ipv4addressprivate_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Private</a>
@@ -2178,8 +2001,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_nodejs">
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -2188,8 +2010,7 @@ false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6address_nodejs">
 <a href="#state_ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -2198,8 +2019,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -2208,8 +2028,7 @@ false.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_nodejs">
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2217,8 +2036,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_nodejs">
 <a href="#state_monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -2228,8 +2046,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2238,8 +2055,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pricehourly_nodejs">
 <a href="#state_pricehourly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Hourly</a>
@@ -2248,8 +2064,7 @@ Defaults to false.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pricemonthly_nodejs">
 <a href="#state_pricemonthly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Monthly</a>
@@ -2258,8 +2073,7 @@ Defaults to false.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatenetworking_nodejs">
 <a href="#state_privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
@@ -2271,8 +2085,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2281,8 +2094,7 @@ Droplet inside of your account's default VPC for the region. Use the
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resizedisk_nodejs">
 <a href="#state_resizedisk_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Disk</a>
@@ -2294,8 +2106,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2304,8 +2115,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshkeys_nodejs">
 <a href="#state_sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
@@ -2317,8 +2127,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2327,8 +2136,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2337,8 +2145,7 @@ to retrieve them.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -2347,8 +2154,7 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_nodejs">
 <a href="#state_vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -2357,8 +2163,7 @@ to retrieve them.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeids_nodejs">
 <a href="#state_volumeids_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Ids</a>
@@ -2367,8 +2172,7 @@ to retrieve them.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcuuid_nodejs">
 <a href="#state_vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
@@ -2377,13 +2181,11 @@ to retrieve them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backups_python">
 <a href="#state_backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -2393,8 +2195,7 @@ to retrieve them.
     </dt>
     <dd>{{% md %}}Boolean controlling if backups are made. Defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2402,8 +2203,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_python">
 <a href="#state_disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -2412,8 +2212,7 @@ false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplet_urn_python">
 <a href="#state_droplet_urn_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>urn</a>
@@ -2423,8 +2222,7 @@ false.
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
 * `name`- The name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_python">
 <a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2433,8 +2231,7 @@ false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_address_python">
 <a href="#state_ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -2443,8 +2240,7 @@ false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_address_private_python">
 <a href="#state_ipv4_address_private_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>private</a>
@@ -2453,8 +2249,7 @@ false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private networking IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_python">
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -2463,8 +2258,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling if IPv6 is enabled. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_address_python">
 <a href="#state_ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -2473,8 +2267,7 @@ false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -2483,8 +2276,7 @@ false.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Droplet locked
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_python">
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2492,8 +2284,7 @@ false.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_python">
 <a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -2503,8 +2294,7 @@ false.
     </dt>
     <dd>{{% md %}}Boolean controlling whether monitoring agent is installed.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2513,8 +2303,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_price_hourly_python">
 <a href="#state_price_hourly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>hourly</a>
@@ -2523,8 +2312,7 @@ Defaults to false.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_price_monthly_python">
 <a href="#state_price_monthly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>monthly</a>
@@ -2533,8 +2321,7 @@ Defaults to false.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_networking_python">
 <a href="#state_private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
@@ -2546,8 +2333,7 @@ Defaults to false.
 is enabled. When VPC is enabled on an account, this will provision the
 Droplet inside of your account's default VPC for the region. Use the
 `vpc_uuid` attribute to specify a different VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2556,8 +2342,7 @@ Droplet inside of your account's default VPC for the region. Use the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to start in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resize_disk_python">
 <a href="#state_resize_disk_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>disk</a>
@@ -2569,8 +2354,7 @@ Droplet inside of your account's default VPC for the region. Use the
 size when resizing a Droplet. It defaults to `true`. When set to `false`,
 only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
 size is a permanent change**. Increasing only RAM and CPU is reversible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2579,8 +2363,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssh_keys_python">
 <a href="#state_ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
@@ -2592,8 +2375,7 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 the format `[12345, 123456]`. To retrieve this info, use a tool such
 as `curl` with the [DigitalOcean API](https://developers.digitalocean.com/documentation/v2/#ssh-keys),
 to retrieve them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2602,8 +2384,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2612,8 +2393,7 @@ to retrieve them.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -2622,8 +2402,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_python">
 <a href="#state_vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -2632,8 +2411,7 @@ to retrieve them.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the instance's virtual CPUs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_ids_python">
 <a href="#state_volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
@@ -2642,8 +2420,7 @@ to retrieve them.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_uuid_python">
 <a href="#state_vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
@@ -2652,8 +2429,7 @@ to retrieve them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

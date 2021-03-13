@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -156,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate identifier. For example, `rds-ca-2019`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latestvalidtill_csharp">
 <a href="#latestvalidtill_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Valid<wbr>Till</a>
@@ -166,13 +164,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, returns the certificate with the latest `ValidTill`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -181,8 +177,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate identifier. For example, `rds-ca-2019`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latestvalidtill_go">
 <a href="#latestvalidtill_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Valid<wbr>Till</a>
@@ -191,13 +186,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, returns the certificate with the latest `ValidTill`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -206,8 +199,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate identifier. For example, `rds-ca-2019`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latestvalidtill_nodejs">
 <a href="#latestvalidtill_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Valid<wbr>Till</a>
@@ -216,13 +208,11 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When enabled, returns the certificate with the latest `ValidTill`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -231,8 +221,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate identifier. For example, `rds-ca-2019`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latest_valid_till_python">
 <a href="#latest_valid_till_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>valid_<wbr>till</a>
@@ -241,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, returns the certificate with the latest `ValidTill`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -255,8 +243,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -265,8 +252,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatetype_csharp">
 <a href="#certificatetype_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Type</a>
@@ -275,8 +261,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of certificate. For example, `CA`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customeroverride_csharp">
 <a href="#customeroverride_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Override</a>
@@ -285,8 +270,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether there is an override for the default certificate identifier.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customeroverridevalidtill_csharp">
 <a href="#customeroverridevalidtill_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Override<wbr>Valid<wbr>Till</a>
@@ -295,8 +279,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there is an override for the default certificate identifier, when the override expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -304,8 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -314,8 +296,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validfrom_csharp">
 <a href="#validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -324,8 +305,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validtill_csharp">
 <a href="#validtill_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Till</a>
@@ -334,8 +314,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestvalidtill_csharp">
 <a href="#latestvalidtill_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Valid<wbr>Till</a>
@@ -343,13 +322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -358,8 +335,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatetype_go">
 <a href="#certificatetype_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Type</a>
@@ -368,8 +344,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of certificate. For example, `CA`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customeroverride_go">
 <a href="#customeroverride_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Override</a>
@@ -378,8 +353,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether there is an override for the default certificate identifier.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customeroverridevalidtill_go">
 <a href="#customeroverridevalidtill_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Override<wbr>Valid<wbr>Till</a>
@@ -388,8 +362,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there is an override for the default certificate identifier, when the override expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -397,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -407,8 +379,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validfrom_go">
 <a href="#validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -417,8 +388,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validtill_go">
 <a href="#validtill_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Till</a>
@@ -427,8 +397,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestvalidtill_go">
 <a href="#latestvalidtill_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Valid<wbr>Till</a>
@@ -436,13 +405,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -451,8 +418,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatetype_nodejs">
 <a href="#certificatetype_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Type</a>
@@ -461,8 +427,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of certificate. For example, `CA`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customeroverride_nodejs">
 <a href="#customeroverride_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Override</a>
@@ -471,8 +436,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether there is an override for the default certificate identifier.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customeroverridevalidtill_nodejs">
 <a href="#customeroverridevalidtill_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Override<wbr>Valid<wbr>Till</a>
@@ -481,8 +445,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there is an override for the default certificate identifier, when the override expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,8 +453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -500,8 +462,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validfrom_nodejs">
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
@@ -510,8 +471,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validtill_nodejs">
 <a href="#validtill_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Till</a>
@@ -520,8 +480,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestvalidtill_nodejs">
 <a href="#latestvalidtill_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Valid<wbr>Till</a>
@@ -529,13 +488,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -544,8 +501,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_type_python">
 <a href="#certificate_type_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>type</a>
@@ -554,8 +510,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of certificate. For example, `CA`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_override_python">
 <a href="#customer_override_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>override</a>
@@ -564,8 +519,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether there is an override for the default certificate identifier.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_override_valid_till_python">
 <a href="#customer_override_valid_till_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>override_<wbr>valid_<wbr>till</a>
@@ -574,8 +528,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If there is an override for the default certificate identifier, when the override expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -583,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -593,8 +545,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_from_python">
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
@@ -603,8 +554,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_till_python">
 <a href="#valid_till_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>till</a>
@@ -613,8 +563,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_valid_till_python">
 <a href="#latest_valid_till_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>valid_<wbr>till</a>
@@ -622,8 +571,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

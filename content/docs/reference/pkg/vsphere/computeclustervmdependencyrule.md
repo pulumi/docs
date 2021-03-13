@@ -162,8 +162,7 @@ The ComputeClusterVmDependencyRule resource accepts the following [input]({{< re
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_csharp">
 <a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -174,8 +173,7 @@ The ComputeClusterVmDependencyRule resource accepts the following [input]({{< re
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencyvmgroupname_csharp">
 <a href="#dependencyvmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Vm<wbr>Group<wbr>Name</a>
@@ -187,8 +185,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmgroupname_csharp">
 <a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -200,8 +197,7 @@ group are started.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -210,8 +206,7 @@ the group specified by
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_csharp">
 <a href="#mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -221,8 +216,7 @@ the group specified by
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -232,13 +226,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_go">
 <a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -249,8 +241,7 @@ cluster.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencyvmgroupname_go">
 <a href="#dependencyvmgroupname_go" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Vm<wbr>Group<wbr>Name</a>
@@ -262,8 +253,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmgroupname_go">
 <a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -275,8 +265,7 @@ group are started.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -285,8 +274,7 @@ the group specified by
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_go">
 <a href="#mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -296,8 +284,7 @@ the group specified by
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,13 +294,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_nodejs">
 <a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -324,8 +309,7 @@ cluster.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencyvmgroupname_nodejs">
 <a href="#dependencyvmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Vm<wbr>Group<wbr>Name</a>
@@ -337,8 +321,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmgroupname_nodejs">
 <a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Group<wbr>Name</a>
@@ -350,8 +333,7 @@ group are started.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -360,8 +342,7 @@ the group specified by
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_nodejs">
 <a href="#mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -371,8 +352,7 @@ the group specified by
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -382,13 +362,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_cluster_id_python">
 <a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -399,8 +377,7 @@ cluster.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependency_vm_group_name_python">
 <a href="#dependency_vm_group_name_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>vm_<wbr>group_<wbr>name</a>
@@ -412,8 +389,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_group_name_python">
 <a href="#vm_group_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>group_<wbr>name</a>
@@ -425,8 +401,7 @@ group are started.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -435,8 +410,7 @@ the group specified by
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_python">
 <a href="#mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -446,8 +420,7 @@ the group specified by
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -457,8 +430,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -469,8 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -478,13 +449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -492,13 +461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -506,13 +473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -520,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -648,8 +612,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_csharp">
 <a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -660,8 +623,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dependencyvmgroupname_csharp">
 <a href="#state_dependencyvmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Vm<wbr>Group<wbr>Name</a>
@@ -673,8 +635,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -683,8 +644,7 @@ group are started.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_csharp">
 <a href="#state_mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -694,8 +654,7 @@ group are started.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -705,8 +664,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmgroupname_csharp">
 <a href="#state_vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -718,13 +676,11 @@ cluster.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_go">
 <a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -735,8 +691,7 @@ the group specified by
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dependencyvmgroupname_go">
 <a href="#state_dependencyvmgroupname_go" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Vm<wbr>Group<wbr>Name</a>
@@ -748,8 +703,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -758,8 +712,7 @@ group are started.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_go">
 <a href="#state_mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -769,8 +722,7 @@ group are started.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -780,8 +732,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmgroupname_go">
 <a href="#state_vmgroupname_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Group<wbr>Name</a>
@@ -793,13 +744,11 @@ cluster.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_nodejs">
 <a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -810,8 +759,7 @@ the group specified by
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dependencyvmgroupname_nodejs">
 <a href="#state_dependencyvmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Vm<wbr>Group<wbr>Name</a>
@@ -823,8 +771,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -833,8 +780,7 @@ group are started.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_nodejs">
 <a href="#state_mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -844,8 +790,7 @@ group are started.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -855,8 +800,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmgroupname_nodejs">
 <a href="#state_vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Group<wbr>Name</a>
@@ -868,13 +812,11 @@ cluster.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_cluster_id_python">
 <a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -885,8 +827,7 @@ the group specified by
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dependency_vm_group_name_python">
 <a href="#state_dependency_vm_group_name_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>vm_<wbr>group_<wbr>name</a>
@@ -898,8 +839,7 @@ resource if changed.
 rule depends on. The VMs defined in the group specified by
 `vm_group_name` will not be started until the VMs in this
 group are started.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -908,8 +848,7 @@ group are started.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_python">
 <a href="#state_mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -919,8 +858,7 @@ group are started.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -930,8 +868,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_group_name_python">
 <a href="#state_vm_group_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>group_<wbr>name</a>
@@ -943,8 +880,7 @@ cluster.
 this rule. The VMs defined in this group will not be started until the VMs in
 the group specified by
 `dependency_vm_group_name` are started.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

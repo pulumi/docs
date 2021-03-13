@@ -155,8 +155,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -165,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -175,13 +173,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -190,8 +186,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -200,13 +195,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -215,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -225,13 +217,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -240,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -250,8 +239,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Virtual Network Gateway is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,8 +252,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activeactive_csharp">
 <a href="#activeactive_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Active</a>
@@ -274,8 +261,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this an Active-Active Gateway?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bgpsettings_csharp">
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -283,8 +269,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customroutes_csharp">
 <a href="#customroutes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
@@ -292,8 +277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultlocalnetworkgatewayid_csharp">
 <a href="#defaultlocalnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -305,8 +289,7 @@ The following output properties are available:
 through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (*forced tunneling*). Refer to the
 [Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -316,8 +299,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
     </dt>
     <dd>{{% md %}}Will BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -326,8 +308,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -336,8 +317,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -346,8 +326,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -356,8 +335,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -366,8 +344,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddressenabled_csharp">
 <a href="#privateipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -376,8 +353,7 @@ for this Virtual Network Gateway.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -385,8 +361,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -395,8 +370,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -405,8 +379,7 @@ for this Virtual Network Gateway.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -415,8 +388,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpnclientconfigurations_csharp">
 <a href="#vpnclientconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configurations</a>
@@ -425,8 +397,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">List&lt;Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpntype_csharp">
 <a href="#vpntype_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
@@ -435,13 +406,11 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activeactive_go">
 <a href="#activeactive_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Active</a>
@@ -450,8 +419,7 @@ for this Virtual Network Gateway.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this an Active-Active Gateway?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bgpsettings_go">
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -459,8 +427,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customroutes_go">
 <a href="#customroutes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
@@ -468,8 +435,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultlocalnetworkgatewayid_go">
 <a href="#defaultlocalnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -481,8 +447,7 @@ for this Virtual Network Gateway.
 through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (*forced tunneling*). Refer to the
 [Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -492,8 +457,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
     </dt>
     <dd>{{% md %}}Will BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -502,8 +466,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -512,8 +475,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipconfigurations_go">
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -522,8 +484,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -532,8 +493,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -542,8 +502,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddressenabled_go">
 <a href="#privateipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -552,8 +511,7 @@ for this Virtual Network Gateway.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -561,8 +519,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -571,8 +528,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -581,8 +537,7 @@ for this Virtual Network Gateway.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -591,8 +546,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpnclientconfigurations_go">
 <a href="#vpnclientconfigurations_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configurations</a>
@@ -601,8 +555,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">[]Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpntype_go">
 <a href="#vpntype_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
@@ -611,13 +564,11 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activeactive_nodejs">
 <a href="#activeactive_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Active</a>
@@ -626,8 +577,7 @@ for this Virtual Network Gateway.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this an Active-Active Gateway?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bgpsettings_nodejs">
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
@@ -635,8 +585,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customroutes_nodejs">
 <a href="#customroutes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Routes</a>
@@ -644,8 +593,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultlocalnetworkgatewayid_nodejs">
 <a href="#defaultlocalnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -657,8 +605,7 @@ for this Virtual Network Gateway.
 through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (*forced tunneling*). Refer to the
 [Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
@@ -668,8 +615,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
     </dt>
     <dd>{{% md %}}Will BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -678,8 +624,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -688,8 +633,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
@@ -698,8 +642,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -708,8 +651,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -718,8 +660,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddressenabled_nodejs">
 <a href="#privateipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -728,8 +669,7 @@ for this Virtual Network Gateway.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -737,8 +677,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -747,8 +686,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -757,8 +695,7 @@ for this Virtual Network Gateway.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -767,8 +704,7 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpnclientconfigurations_nodejs">
 <a href="#vpnclientconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configurations</a>
@@ -777,8 +713,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpntype_nodejs">
 <a href="#vpntype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Type</a>
@@ -787,13 +722,11 @@ for this Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="active_active_python">
 <a href="#active_active_python" style="color: inherit; text-decoration: inherit;">active_<wbr>active</a>
@@ -802,8 +735,7 @@ for this Virtual Network Gateway.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this an Active-Active Gateway?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bgp_settings_python">
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
@@ -811,8 +743,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaybgpsetting">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Setting]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_routes_python">
 <a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
@@ -820,8 +751,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvirtualnetworkgatewaycustomroute">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_local_network_gateway_id_python">
 <a href="#default_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -833,8 +763,7 @@ for this Virtual Network Gateway.
 through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (*forced tunneling*). Refer to the
 [Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
@@ -844,8 +773,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
     </dt>
     <dd>{{% md %}}Will BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -854,8 +782,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -864,8 +791,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_configurations_python">
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
@@ -874,8 +800,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayipconfiguration">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -884,8 +809,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -894,8 +818,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_address_enabled_python">
 <a href="#private_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>enabled</a>
@@ -904,8 +827,7 @@ for this Virtual Network Gateway.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a private IP will be used for this  gateway for connections.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -913,8 +835,7 @@ for this Virtual Network Gateway.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -923,8 +844,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -933,8 +853,7 @@ for this Virtual Network Gateway.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -943,8 +862,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpn_client_configurations_python">
 <a href="#vpn_client_configurations_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configurations</a>
@@ -953,8 +871,7 @@ for this Virtual Network Gateway.
         <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfiguration">Sequence[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpn_type_python">
 <a href="#vpn_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>type</a>
@@ -963,8 +880,7 @@ for this Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -978,8 +894,7 @@ for this Virtual Network Gateway.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_csharp">
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
@@ -988,8 +903,7 @@ for this Virtual Network Gateway.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerweight_csharp">
 <a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
@@ -999,8 +913,7 @@ for this Virtual Network Gateway.
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeringaddress_csharp">
 <a href="#peeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Address</a>
@@ -1011,13 +924,11 @@ through BGP peering.
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
 on the on-premises VPN devices.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_go">
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
@@ -1026,8 +937,7 @@ on the on-premises VPN devices.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerweight_go">
 <a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
@@ -1037,8 +947,7 @@ on the on-premises VPN devices.
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeringaddress_go">
 <a href="#peeringaddress_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Address</a>
@@ -1049,13 +958,11 @@ through BGP peering.
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
 on the on-premises VPN devices.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_nodejs">
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
@@ -1064,8 +971,7 @@ on the on-premises VPN devices.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerweight_nodejs">
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
@@ -1075,8 +981,7 @@ on the on-premises VPN devices.
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeringaddress_nodejs">
 <a href="#peeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Address</a>
@@ -1087,13 +992,11 @@ through BGP peering.
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
 on the on-premises VPN devices.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_python">
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
@@ -1102,8 +1005,7 @@ on the on-premises VPN devices.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_weight_python">
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
@@ -1113,8 +1015,7 @@ on the on-premises VPN devices.
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peering_address_python">
 <a href="#peering_address_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>address</a>
@@ -1125,8 +1026,7 @@ through BGP peering.
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
 on the on-premises VPN devices.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvirtualnetworkgatewaycustomroute">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</h4>
@@ -1134,8 +1034,7 @@ on the on-premises VPN devices.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1144,13 +1043,11 @@ on the on-premises VPN devices.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1159,13 +1056,11 @@ on the on-premises VPN devices.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
@@ -1174,13 +1069,11 @@ on the on-premises VPN devices.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
@@ -1189,8 +1082,7 @@ on the on-premises VPN devices.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvirtualnetworkgatewayipconfiguration">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</h4>
@@ -1198,8 +1090,7 @@ on the on-premises VPN devices.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1208,8 +1099,7 @@ on the on-premises VPN devices.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddressallocation_csharp">
 <a href="#privateipaddressallocation_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Allocation</a>
@@ -1219,8 +1109,7 @@ on the on-premises VPN devices.
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddressid_csharp">
 <a href="#publicipaddressid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
@@ -1230,8 +1119,7 @@ of the gateways virtual interface is assigned.
     </dt>
     <dd>{{% md %}}The ID of the Public IP Address associated
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1243,13 +1131,11 @@ with the Virtual Network Gateway.
 which the virtual network gateway will be created. It is mandatory that
 the associated subnet is named `GatewaySubnet`. Therefore, each virtual
 network can contain at most a single Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1258,8 +1144,7 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddressallocation_go">
 <a href="#privateipaddressallocation_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address<wbr>Allocation</a>
@@ -1269,8 +1154,7 @@ network can contain at most a single Virtual Network Gateway.
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddressid_go">
 <a href="#publicipaddressid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
@@ -1280,8 +1164,7 @@ of the gateways virtual interface is assigned.
     </dt>
     <dd>{{% md %}}The ID of the Public IP Address associated
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1293,13 +1176,11 @@ with the Virtual Network Gateway.
 which the virtual network gateway will be created. It is mandatory that
 the associated subnet is named `GatewaySubnet`. Therefore, each virtual
 network can contain at most a single Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1308,8 +1189,7 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddressallocation_nodejs">
 <a href="#privateipaddressallocation_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
@@ -1319,8 +1199,7 @@ network can contain at most a single Virtual Network Gateway.
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddressid_nodejs">
 <a href="#publicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Id</a>
@@ -1330,8 +1209,7 @@ of the gateways virtual interface is assigned.
     </dt>
     <dd>{{% md %}}The ID of the Public IP Address associated
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1343,13 +1221,11 @@ with the Virtual Network Gateway.
 which the virtual network gateway will be created. It is mandatory that
 the associated subnet is named `GatewaySubnet`. Therefore, each virtual
 network can contain at most a single Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1358,8 +1234,7 @@ network can contain at most a single Virtual Network Gateway.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_ip_address_allocation_python">
 <a href="#private_ip_address_allocation_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>allocation</a>
@@ -1369,8 +1244,7 @@ network can contain at most a single Virtual Network Gateway.
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_ip_address_id_python">
 <a href="#public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>id</a>
@@ -1380,8 +1254,7 @@ of the gateways virtual interface is assigned.
     </dt>
     <dd>{{% md %}}The ID of the Public IP Address associated
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1393,8 +1266,7 @@ with the Virtual Network Gateway.
 which the virtual network gateway will be created. It is mandatory that
 the associated subnet is named `GatewaySubnet`. Therefore, each virtual
 network can contain at most a single Virtual Network Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvirtualnetworkgatewayvpnclientconfiguration">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</h4>
@@ -1402,8 +1274,7 @@ network can contain at most a single Virtual Network Gateway.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aadaudience_csharp">
 <a href="#aadaudience_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
@@ -1415,8 +1286,7 @@ network can contain at most a single Virtual Network Gateway.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aadissuer_csharp">
 <a href="#aadissuer_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
@@ -1427,8 +1297,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The STS url for your tenant
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aadtenant_csharp">
 <a href="#aadtenant_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
@@ -1439,8 +1308,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}AzureAD Tenant URL
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="addressspaces_csharp">
 <a href="#addressspaces_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
@@ -1451,8 +1319,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
 in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radiusserveraddress_csharp">
 <a href="#radiusserveraddress_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
@@ -1463,8 +1330,7 @@ in CIDR notation.
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radiusserversecret_csharp">
 <a href="#radiusserversecret_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
@@ -1475,8 +1341,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revokedcertificates_csharp">
 <a href="#revokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Revoked<wbr>Certificates</a>
@@ -1488,8 +1353,7 @@ This setting is incompatible with the use of
 are defined below.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootcertificates_csharp">
 <a href="#rootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificates</a>
@@ -1502,8 +1366,7 @@ defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnclientprotocols_csharp">
 <a href="#vpnclientprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
@@ -1513,13 +1376,11 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aadaudience_go">
 <a href="#aadaudience_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
@@ -1531,8 +1392,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aadissuer_go">
 <a href="#aadissuer_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
@@ -1543,8 +1403,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The STS url for your tenant
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aadtenant_go">
 <a href="#aadtenant_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
@@ -1555,8 +1414,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}AzureAD Tenant URL
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="addressspaces_go">
 <a href="#addressspaces_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Spaces</a>
@@ -1567,8 +1425,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
 in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radiusserveraddress_go">
 <a href="#radiusserveraddress_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
@@ -1579,8 +1436,7 @@ in CIDR notation.
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radiusserversecret_go">
 <a href="#radiusserversecret_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
@@ -1591,8 +1447,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revokedcertificates_go">
 <a href="#revokedcertificates_go" style="color: inherit; text-decoration: inherit;">Revoked<wbr>Certificates</a>
@@ -1604,8 +1459,7 @@ This setting is incompatible with the use of
 are defined below.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootcertificates_go">
 <a href="#rootcertificates_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificates</a>
@@ -1618,8 +1472,7 @@ defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnclientprotocols_go">
 <a href="#vpnclientprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
@@ -1629,13 +1482,11 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aadaudience_nodejs">
 <a href="#aadaudience_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Audience</a>
@@ -1647,8 +1498,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aadissuer_nodejs">
 <a href="#aadissuer_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Issuer</a>
@@ -1659,8 +1509,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The STS url for your tenant
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aadtenant_nodejs">
 <a href="#aadtenant_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant</a>
@@ -1671,8 +1520,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}AzureAD Tenant URL
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="addressspaces_nodejs">
 <a href="#addressspaces_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Spaces</a>
@@ -1683,8 +1531,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
 in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radiusserveraddress_nodejs">
 <a href="#radiusserveraddress_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
@@ -1695,8 +1542,7 @@ in CIDR notation.
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radiusserversecret_nodejs">
 <a href="#radiusserversecret_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
@@ -1707,8 +1553,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revokedcertificates_nodejs">
 <a href="#revokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>Certificates</a>
@@ -1720,8 +1565,7 @@ This setting is incompatible with the use of
 are defined below.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootcertificates_nodejs">
 <a href="#rootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Certificates</a>
@@ -1734,8 +1578,7 @@ defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnclientprotocols_nodejs">
 <a href="#vpnclientprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
@@ -1745,13 +1588,11 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aad_audience_python">
 <a href="#aad_audience_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>audience</a>
@@ -1763,8 +1604,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 See [Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections](https://docs.microsoft.com/en-gb/azure/vpn-gateway/openvpn-azure-ad-tenant-multi-app) for values
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aad_issuer_python">
 <a href="#aad_issuer_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>issuer</a>
@@ -1775,8 +1615,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The STS url for your tenant
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aad_tenant_python">
 <a href="#aad_tenant_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant</a>
@@ -1787,8 +1626,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}AzureAD Tenant URL
 This setting is incompatible with the use of
 `root_certificate` and `revoked_certificate`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="address_spaces_python">
 <a href="#address_spaces_python" style="color: inherit; text-decoration: inherit;">address_<wbr>spaces</a>
@@ -1799,8 +1637,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
 in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radius_server_address_python">
 <a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
@@ -1811,8 +1648,7 @@ in CIDR notation.
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="radius_server_secret_python">
 <a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
@@ -1823,8 +1659,7 @@ This setting is incompatible with the use of
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `root_certificate` and `revoked_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revoked_certificates_python">
 <a href="#revoked_certificates_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>certificates</a>
@@ -1836,8 +1671,7 @@ This setting is incompatible with the use of
 are defined below.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="root_certificates_python">
 <a href="#root_certificates_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificates</a>
@@ -1850,8 +1684,7 @@ defined below. These root certificates are used to sign the client certificate
 used by the VPN clients to connect to the gateway.
 This setting is incompatible with the use of
 `aad_tenant`, `aad_audience`, `aad_issuer`, `radius_server_address`, and `radius_server_secret`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_client_protocols_python">
 <a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
@@ -1861,8 +1694,7 @@ This setting is incompatible with the use of
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate</h4>
@@ -1870,8 +1702,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1880,8 +1711,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1889,13 +1719,11 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1904,8 +1732,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1913,13 +1740,11 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1928,8 +1753,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1937,13 +1761,11 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1952,8 +1774,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1961,8 +1782,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate</h4>
@@ -1970,8 +1790,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1980,8 +1799,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_csharp">
 <a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -1990,13 +1808,11 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2005,8 +1821,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_go">
 <a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -2015,13 +1830,11 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2030,8 +1843,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_nodejs">
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
@@ -2040,13 +1852,11 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2055,8 +1865,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Network Gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_cert_data_python">
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
@@ -2065,8 +1874,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

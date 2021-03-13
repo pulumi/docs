@@ -284,8 +284,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -294,8 +293,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domainnameconfiguration_csharp">
 <a href="#domainnameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Configuration</a>
@@ -304,8 +302,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutualtlsauthentication_csharp">
 <a href="#mutualtlsauthentication_csharp" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -314,8 +311,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -324,13 +320,11 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -339,8 +333,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domainnameconfiguration_go">
 <a href="#domainnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Configuration</a>
@@ -349,8 +342,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutualtlsauthentication_go">
 <a href="#mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -359,8 +351,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -369,13 +360,11 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -384,8 +373,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domainnameconfiguration_nodejs">
 <a href="#domainnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Configuration</a>
@@ -394,8 +382,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutualtlsauthentication_nodejs">
 <a href="#mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
@@ -404,8 +391,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -414,13 +400,11 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -429,8 +413,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domain_name_configuration_python">
 <a href="#domain_name_configuration_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>configuration</a>
@@ -439,8 +422,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutual_tls_authentication_python">
 <a href="#mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
@@ -449,8 +431,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -459,8 +440,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -471,8 +451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apimappingselectionexpression_csharp">
 <a href="#apimappingselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
@@ -481,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -491,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -500,13 +477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apimappingselectionexpression_go">
 <a href="#apimappingselectionexpression_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
@@ -515,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -525,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -534,13 +507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apimappingselectionexpression_nodejs">
 <a href="#apimappingselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
@@ -549,8 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -559,8 +529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -568,13 +537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="api_mapping_selection_expression_python">
 <a href="#api_mapping_selection_expression_python" style="color: inherit; text-decoration: inherit;">api_<wbr>mapping_<wbr>selection_<wbr>expression</a>
@@ -583,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -593,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -602,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,8 +694,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimappingselectionexpression_csharp">
 <a href="#state_apimappingselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
@@ -740,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -750,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -760,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainnameconfiguration_csharp">
 <a href="#state_domainnameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Configuration</a>
@@ -770,8 +730,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutualtlsauthentication_csharp">
 <a href="#state_mutualtlsauthentication_csharp" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -780,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -790,13 +748,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimappingselectionexpression_go">
 <a href="#state_apimappingselectionexpression_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
@@ -805,8 +761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -815,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
 <a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -825,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainnameconfiguration_go">
 <a href="#state_domainnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Configuration</a>
@@ -835,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutualtlsauthentication_go">
 <a href="#state_mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -845,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -855,13 +806,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimappingselectionexpression_nodejs">
 <a href="#state_apimappingselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Mapping<wbr>Selection<wbr>Expression</a>
@@ -870,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -880,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -890,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainnameconfiguration_nodejs">
 <a href="#state_domainnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Configuration</a>
@@ -900,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutualtlsauthentication_nodejs">
 <a href="#state_mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
@@ -910,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -920,13 +864,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_mapping_selection_expression_python">
 <a href="#state_api_mapping_selection_expression_python" style="color: inherit; text-decoration: inherit;">api_<wbr>mapping_<wbr>selection_<wbr>expression</a>
@@ -935,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -945,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_python">
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -955,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name. Must be between 1 and 512 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_configuration_python">
 <a href="#state_domain_name_configuration_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>configuration</a>
@@ -965,8 +904,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutual_tls_authentication_python">
 <a href="#state_mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
@@ -975,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -985,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1001,8 +937,7 @@ The following state arguments are supported:
 <h4 id="domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatearn_csharp">
 <a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -1012,8 +947,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
 Use the `aws.acm.Certificate` resource to configure an ACM certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1022,8 +956,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint type. Valid values: `REGIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicy_csharp">
 <a href="#securitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
@@ -1032,8 +965,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1042,8 +974,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Route 53 Hosted Zone ID of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdomainname_csharp">
 <a href="#targetdomainname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Domain<wbr>Name</a>
@@ -1052,13 +983,11 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatearn_go">
 <a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -1068,8 +997,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
     </dt>
     <dd>{{% md %}}The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
 Use the `aws.acm.Certificate` resource to configure an ACM certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1078,8 +1006,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint type. Valid values: `REGIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicy_go">
 <a href="#securitypolicy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
@@ -1088,8 +1015,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostedzoneid_go">
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1098,8 +1024,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Route 53 Hosted Zone ID of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdomainname_go">
 <a href="#targetdomainname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Domain<wbr>Name</a>
@@ -1108,13 +1033,11 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatearn_nodejs">
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
@@ -1124,8 +1047,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
     </dt>
     <dd>{{% md %}}The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
 Use the `aws.acm.Certificate` resource to configure an ACM certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -1134,8 +1056,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint type. Valid values: `REGIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitypolicy_nodejs">
 <a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
@@ -1144,8 +1065,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -1154,8 +1074,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Route 53 Hosted Zone ID of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetdomainname_nodejs">
 <a href="#targetdomainname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Domain<wbr>Name</a>
@@ -1164,13 +1083,11 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_arn_python">
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
@@ -1180,8 +1097,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
     </dt>
     <dd>{{% md %}}The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
 Use the `aws.acm.Certificate` resource to configure an ACM certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -1190,8 +1106,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint type. Valid values: `REGIONAL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_policy_python">
 <a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
@@ -1200,8 +1115,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosted_zone_id_python">
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -1210,8 +1124,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Route 53 Hosted Zone ID of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_domain_name_python">
 <a href="#target_domain_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>domain_<wbr>name</a>
@@ -1220,15 +1133,13 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target domain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststoreuri_csharp">
 <a href="#truststoreuri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
@@ -1238,8 +1149,7 @@ Use the `aws.acm.Certificate` resource to configure an ACM certificate.
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststoreversion_csharp">
 <a href="#truststoreversion_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Version</a>
@@ -1248,13 +1158,11 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststoreuri_go">
 <a href="#truststoreuri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
@@ -1264,8 +1172,7 @@ The truststore can contain certificates from public or private certificate autho
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststoreversion_go">
 <a href="#truststoreversion_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Version</a>
@@ -1274,13 +1181,11 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststoreuri_nodejs">
 <a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
@@ -1290,8 +1195,7 @@ The truststore can contain certificates from public or private certificate autho
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststoreversion_nodejs">
 <a href="#truststoreversion_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Version</a>
@@ -1300,13 +1204,11 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststore_uri_python">
 <a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
@@ -1316,8 +1218,7 @@ The truststore can contain certificates from public or private certificate autho
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststore_version_python">
 <a href="#truststore_version_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>version</a>
@@ -1326,8 +1227,7 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

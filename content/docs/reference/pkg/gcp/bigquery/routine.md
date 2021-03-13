@@ -293,8 +293,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -303,8 +302,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definitionbody_csharp">
 <a href="#definitionbody_csharp" style="color: inherit; text-decoration: inherit;">Definition<wbr>Body</a>
@@ -314,8 +312,7 @@ The Routine resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routineid_csharp">
 <a href="#routineid_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
@@ -324,8 +321,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_csharp">
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -335,8 +331,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -345,8 +340,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinismlevel_csharp">
 <a href="#determinismlevel_csharp" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
@@ -356,8 +350,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedlibraries_csharp">
 <a href="#importedlibraries_csharp" style="color: inherit; text-decoration: inherit;">Imported<wbr>Libraries</a>
@@ -367,8 +360,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_csharp">
 <a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -378,8 +370,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -389,8 +380,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returntype_csharp">
 <a href="#returntype_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
@@ -407,8 +397,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routinetype_csharp">
 <a href="#routinetype_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Type</a>
@@ -418,13 +407,11 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -433,8 +420,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definitionbody_go">
 <a href="#definitionbody_go" style="color: inherit; text-decoration: inherit;">Definition<wbr>Body</a>
@@ -444,8 +430,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routineid_go">
 <a href="#routineid_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
@@ -454,8 +439,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_go">
 <a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -465,8 +449,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -475,8 +458,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinismlevel_go">
 <a href="#determinismlevel_go" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
@@ -486,8 +468,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedlibraries_go">
 <a href="#importedlibraries_go" style="color: inherit; text-decoration: inherit;">Imported<wbr>Libraries</a>
@@ -497,8 +478,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_go">
 <a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -508,8 +488,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -519,8 +498,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returntype_go">
 <a href="#returntype_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
@@ -537,8 +515,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routinetype_go">
 <a href="#routinetype_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Type</a>
@@ -548,13 +525,11 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -563,8 +538,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definitionbody_nodejs">
 <a href="#definitionbody_nodejs" style="color: inherit; text-decoration: inherit;">definition<wbr>Body</a>
@@ -574,8 +548,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routineid_nodejs">
 <a href="#routineid_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Id</a>
@@ -584,8 +557,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_nodejs">
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -595,8 +567,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -605,8 +576,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinismlevel_nodejs">
 <a href="#determinismlevel_nodejs" style="color: inherit; text-decoration: inherit;">determinism<wbr>Level</a>
@@ -616,8 +586,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedlibraries_nodejs">
 <a href="#importedlibraries_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Libraries</a>
@@ -627,8 +596,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_nodejs">
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
@@ -638,8 +606,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -649,8 +616,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returntype_nodejs">
 <a href="#returntype_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Type</a>
@@ -667,8 +633,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routinetype_nodejs">
 <a href="#routinetype_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Type</a>
@@ -678,13 +643,11 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -693,8 +656,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definition_body_python">
 <a href="#definition_body_python" style="color: inherit; text-decoration: inherit;">definition_<wbr>body</a>
@@ -704,8 +666,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routine_id_python">
 <a href="#routine_id_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>id</a>
@@ -714,8 +675,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_python">
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -725,8 +685,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -735,8 +694,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="determinism_level_python">
 <a href="#determinism_level_python" style="color: inherit; text-decoration: inherit;">determinism_<wbr>level</a>
@@ -746,8 +704,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imported_libraries_python">
 <a href="#imported_libraries_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>libraries</a>
@@ -757,8 +714,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_python">
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
@@ -768,8 +724,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -779,8 +734,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_type_python">
 <a href="#return_type_python" style="color: inherit; text-decoration: inherit;">return_<wbr>type</a>
@@ -797,8 +751,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routine_type_python">
 <a href="#routine_type_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>type</a>
@@ -808,8 +761,7 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -820,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -830,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -839,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -849,13 +798,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -864,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -873,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -883,13 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -898,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -907,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -917,13 +858,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -932,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -941,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -951,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1079,8 +1015,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_csharp">
 <a href="#state_arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -1090,8 +1025,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_csharp">
 <a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1100,8 +1034,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasetid_csharp">
 <a href="#state_datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -1110,8 +1043,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitionbody_csharp">
 <a href="#state_definitionbody_csharp" style="color: inherit; text-decoration: inherit;">Definition<wbr>Body</a>
@@ -1121,8 +1053,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1131,8 +1062,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_determinismlevel_csharp">
 <a href="#state_determinismlevel_csharp" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
@@ -1142,8 +1072,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importedlibraries_csharp">
 <a href="#state_importedlibraries_csharp" style="color: inherit; text-decoration: inherit;">Imported<wbr>Libraries</a>
@@ -1153,8 +1082,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_language_csharp">
 <a href="#state_language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -1164,8 +1092,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_csharp">
 <a href="#state_lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1174,8 +1101,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1185,8 +1111,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_returntype_csharp">
 <a href="#state_returntype_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
@@ -1203,8 +1128,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routineid_csharp">
 <a href="#state_routineid_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
@@ -1213,8 +1137,7 @@ the schema as returned by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routinetype_csharp">
 <a href="#state_routinetype_csharp" style="color: inherit; text-decoration: inherit;">Routine<wbr>Type</a>
@@ -1224,13 +1147,11 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_go">
 <a href="#state_arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -1240,8 +1161,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_go">
 <a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1250,8 +1170,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasetid_go">
 <a href="#state_datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -1260,8 +1179,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitionbody_go">
 <a href="#state_definitionbody_go" style="color: inherit; text-decoration: inherit;">Definition<wbr>Body</a>
@@ -1271,8 +1189,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1281,8 +1198,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_determinismlevel_go">
 <a href="#state_determinismlevel_go" style="color: inherit; text-decoration: inherit;">Determinism<wbr>Level</a>
@@ -1292,8 +1208,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importedlibraries_go">
 <a href="#state_importedlibraries_go" style="color: inherit; text-decoration: inherit;">Imported<wbr>Libraries</a>
@@ -1303,8 +1218,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_language_go">
 <a href="#state_language_go" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -1314,8 +1228,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_go">
 <a href="#state_lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1324,8 +1237,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1335,8 +1247,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_returntype_go">
 <a href="#state_returntype_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
@@ -1353,8 +1264,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routineid_go">
 <a href="#state_routineid_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Id</a>
@@ -1363,8 +1273,7 @@ the schema as returned by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routinetype_go">
 <a href="#state_routinetype_go" style="color: inherit; text-decoration: inherit;">Routine<wbr>Type</a>
@@ -1374,13 +1283,11 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_nodejs">
 <a href="#state_arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -1390,8 +1297,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_nodejs">
 <a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -1400,8 +1306,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasetid_nodejs">
 <a href="#state_datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -1410,8 +1315,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definitionbody_nodejs">
 <a href="#state_definitionbody_nodejs" style="color: inherit; text-decoration: inherit;">definition<wbr>Body</a>
@@ -1421,8 +1325,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1431,8 +1334,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_determinismlevel_nodejs">
 <a href="#state_determinismlevel_nodejs" style="color: inherit; text-decoration: inherit;">determinism<wbr>Level</a>
@@ -1442,8 +1344,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importedlibraries_nodejs">
 <a href="#state_importedlibraries_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Libraries</a>
@@ -1453,8 +1354,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_language_nodejs">
 <a href="#state_language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
@@ -1464,8 +1364,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_nodejs">
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -1474,8 +1373,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1485,8 +1383,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_returntype_nodejs">
 <a href="#state_returntype_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Type</a>
@@ -1503,8 +1400,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routineid_nodejs">
 <a href="#state_routineid_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Id</a>
@@ -1513,8 +1409,7 @@ the schema as returned by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routinetype_nodejs">
 <a href="#state_routinetype_nodejs" style="color: inherit; text-decoration: inherit;">routine<wbr>Type</a>
@@ -1524,13 +1419,11 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_python">
 <a href="#state_arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -1540,8 +1433,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     </dt>
     <dd>{{% md %}}Input/output argument of a function or a stored procedure.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_time_python">
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -1550,8 +1442,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_id_python">
 <a href="#state_dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -1560,8 +1451,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this routine
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_definition_body_python">
 <a href="#state_definition_body_python" style="color: inherit; text-decoration: inherit;">definition_<wbr>body</a>
@@ -1571,8 +1461,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The body of the routine. For functions, this is the expression in the AS clause.
 If language=SQL, it is the substring inside (but excluding) the parentheses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1581,8 +1470,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the routine if defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_determinism_level_python">
 <a href="#state_determinism_level_python" style="color: inherit; text-decoration: inherit;">determinism_<wbr>level</a>
@@ -1592,8 +1480,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
     </dt>
     <dd>{{% md %}}The determinism level of the JavaScript UDF if defined.
 Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imported_libraries_python">
 <a href="#state_imported_libraries_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>libraries</a>
@@ -1603,8 +1490,7 @@ Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_D
     </dt>
     <dd>{{% md %}}Optional. If language = "JAVASCRIPT", this field stores the path of the
 imported JAVASCRIPT libraries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_language_python">
 <a href="#state_language_python" style="color: inherit; text-decoration: inherit;">language</a>
@@ -1614,8 +1500,7 @@ imported JAVASCRIPT libraries.
     </dt>
     <dd>{{% md %}}The language of the routine.
 Possible values are `SQL` and `JAVASCRIPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_time_python">
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1624,8 +1509,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this routine was modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1635,8 +1519,7 @@ Possible values are `SQL` and `JAVASCRIPT`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_return_type_python">
 <a href="#state_return_type_python" style="color: inherit; text-decoration: inherit;">return_<wbr>type</a>
@@ -1653,8 +1536,7 @@ changed. If the API returns a different value for the same schema, e.g. it switc
 d the order of values or replaced STRUCT field type with RECORD field type, we currently
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routine_id_python">
 <a href="#state_routine_id_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>id</a>
@@ -1663,8 +1545,7 @@ the schema as returned by the API.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routine_type_python">
 <a href="#state_routine_type_python" style="color: inherit; text-decoration: inherit;">routine_<wbr>type</a>
@@ -1674,8 +1555,7 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}The type of routine.
 Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1690,8 +1570,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
 <h4 id="routineargument">Routine<wbr>Argument</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="argumentkind_csharp">
 <a href="#argumentkind_csharp" style="color: inherit; text-decoration: inherit;">Argument<wbr>Kind</a>
@@ -1702,8 +1581,7 @@ Possible values are `SCALAR_FUNCTION` and `PROCEDURE`.
     <dd>{{% md %}}Defaults to FIXED_TYPE.
 Default value is `FIXED_TYPE`.
 Possible values are `FIXED_TYPE` and `ANY_TYPE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1718,8 +1596,7 @@ a different value for the same schema, e.g. it switched the order of values
 or replaced STRUCT field type with RECORD field type, we currently cannot
 suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1729,8 +1606,7 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}Specifies whether the argument is input or output. Can be set for procedures only.
 Possible values are `IN`, `OUT`, and `INOUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1739,13 +1615,11 @@ Possible values are `IN`, `OUT`, and `INOUT`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this argument. Can be absent for function return argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="argumentkind_go">
 <a href="#argumentkind_go" style="color: inherit; text-decoration: inherit;">Argument<wbr>Kind</a>
@@ -1756,8 +1630,7 @@ Possible values are `IN`, `OUT`, and `INOUT`.
     <dd>{{% md %}}Defaults to FIXED_TYPE.
 Default value is `FIXED_TYPE`.
 Possible values are `FIXED_TYPE` and `ANY_TYPE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1772,8 +1645,7 @@ a different value for the same schema, e.g. it switched the order of values
 or replaced STRUCT field type with RECORD field type, we currently cannot
 suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1783,8 +1655,7 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}Specifies whether the argument is input or output. Can be set for procedures only.
 Possible values are `IN`, `OUT`, and `INOUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1793,13 +1664,11 @@ Possible values are `IN`, `OUT`, and `INOUT`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this argument. Can be absent for function return argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="argumentkind_nodejs">
 <a href="#argumentkind_nodejs" style="color: inherit; text-decoration: inherit;">argument<wbr>Kind</a>
@@ -1810,8 +1679,7 @@ Possible values are `IN`, `OUT`, and `INOUT`.
     <dd>{{% md %}}Defaults to FIXED_TYPE.
 Default value is `FIXED_TYPE`.
 Possible values are `FIXED_TYPE` and `ANY_TYPE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -1826,8 +1694,7 @@ a different value for the same schema, e.g. it switched the order of values
 or replaced STRUCT field type with RECORD field type, we currently cannot
 suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1837,8 +1704,7 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}Specifies whether the argument is input or output. Can be set for procedures only.
 Possible values are `IN`, `OUT`, and `INOUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1847,13 +1713,11 @@ Possible values are `IN`, `OUT`, and `INOUT`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this argument. Can be absent for function return argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="argument_kind_python">
 <a href="#argument_kind_python" style="color: inherit; text-decoration: inherit;">argument_<wbr>kind</a>
@@ -1864,8 +1728,7 @@ Possible values are `IN`, `OUT`, and `INOUT`.
     <dd>{{% md %}}Defaults to FIXED_TYPE.
 Default value is `FIXED_TYPE`.
 Possible values are `FIXED_TYPE` and `ANY_TYPE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -1880,8 +1743,7 @@ a different value for the same schema, e.g. it switched the order of values
 or replaced STRUCT field type with RECORD field type, we currently cannot
 suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1891,8 +1753,7 @@ the schema as returned by the API.
     </dt>
     <dd>{{% md %}}Specifies whether the argument is input or output. Can be set for procedures only.
 Possible values are `IN`, `OUT`, and `INOUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1901,8 +1762,7 @@ Possible values are `IN`, `OUT`, and `INOUT`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this argument. Can be absent for function return argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

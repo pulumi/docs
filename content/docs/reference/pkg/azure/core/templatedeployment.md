@@ -475,8 +475,7 @@ The TemplateDeployment resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentmode_csharp">
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -487,8 +486,7 @@ The TemplateDeployment resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -498,8 +496,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -509,8 +506,7 @@ create the template deployment.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -519,8 +515,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersbody_csharp">
 <a href="#parametersbody_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
@@ -529,8 +524,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatebody_csharp">
 <a href="#templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -539,13 +533,11 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentmode_go">
 <a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -556,8 +548,7 @@ new resource to be created.
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -567,8 +558,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -578,8 +568,7 @@ create the template deployment.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -588,8 +577,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersbody_go">
 <a href="#parametersbody_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
@@ -598,8 +586,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatebody_go">
 <a href="#templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -608,13 +595,11 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentmode_nodejs">
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -625,8 +610,7 @@ new resource to be created.
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -636,8 +620,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -647,8 +630,7 @@ create the template deployment.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -657,8 +639,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersbody_nodejs">
 <a href="#parametersbody_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Body</a>
@@ -667,8 +648,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatebody_nodejs">
 <a href="#templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
@@ -677,13 +657,11 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_mode_python">
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -694,8 +672,7 @@ new resource to be created.
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -705,8 +682,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -716,8 +692,7 @@ create the template deployment.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -726,8 +701,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_body_python">
 <a href="#parameters_body_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>body</a>
@@ -736,8 +710,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_body_python">
 <a href="#template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
@@ -746,8 +719,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -758,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -767,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -777,13 +747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -791,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -801,13 +768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -815,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -825,13 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -839,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -849,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -977,8 +937,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmode_csharp">
 <a href="#state_deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -989,8 +948,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1000,8 +958,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_csharp">
 <a href="#state_outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1010,8 +967,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1020,8 +976,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametersbody_csharp">
 <a href="#state_parametersbody_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
@@ -1030,8 +985,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1041,8 +995,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatebody_csharp">
 <a href="#state_templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -1051,13 +1004,11 @@ create the template deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmode_go">
 <a href="#state_deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -1068,8 +1019,7 @@ create the template deployment.
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1079,8 +1029,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_go">
 <a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1089,8 +1038,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1099,8 +1047,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametersbody_go">
 <a href="#state_parametersbody_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Body</a>
@@ -1109,8 +1056,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1120,8 +1066,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatebody_go">
 <a href="#state_templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -1130,13 +1075,11 @@ create the template deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmode_nodejs">
 <a href="#state_deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -1147,8 +1090,7 @@ create the template deployment.
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1158,8 +1100,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_nodejs">
 <a href="#state_outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1168,8 +1109,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1178,8 +1118,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametersbody_nodejs">
 <a href="#state_parametersbody_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Body</a>
@@ -1188,8 +1127,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1199,8 +1137,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatebody_nodejs">
 <a href="#state_templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
@@ -1209,13 +1146,11 @@ create the template deployment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_mode_python">
 <a href="#state_deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -1226,8 +1161,7 @@ create the template deployment.
     <dd>{{% md %}}Specifies the mode that is used to deploy resources. This value could be either `Incremental` or `Complete`.
 Note that you will almost *always* want this to be set to `Incremental` otherwise the deployment will destroy all infrastructure not
 specified within the template, and this provider will not be aware of this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1237,8 +1171,7 @@ specified within the template, and this provider will not be aware of this.
     </dt>
     <dd>{{% md %}}Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_python">
 <a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1247,8 +1180,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1257,8 +1189,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name and value pairs that define the deployment parameters for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_body_python">
 <a href="#state_parameters_body_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>body</a>
@@ -1267,8 +1198,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1278,8 +1208,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the template deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_body_python">
 <a href="#state_template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
@@ -1288,8 +1217,7 @@ create the template deployment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the JSON definition for the template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

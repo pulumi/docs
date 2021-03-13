@@ -275,8 +275,7 @@ The SourceRepresentationInstance resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databaseversion_csharp">
 <a href="#databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -286,8 +285,7 @@ The SourceRepresentationInstance resource accepts the following [input]({{< relr
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -296,8 +294,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -306,8 +303,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -317,8 +313,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -328,8 +323,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -339,13 +333,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databaseversion_go">
 <a href="#databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -355,8 +347,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -365,8 +356,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -375,8 +365,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -386,8 +375,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -397,8 +385,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -408,13 +395,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databaseversion_nodejs">
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
@@ -424,8 +409,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -434,8 +418,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -444,8 +427,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -455,8 +437,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -466,8 +447,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -477,13 +457,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_version_python">
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
@@ -493,8 +471,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -503,8 +480,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -513,8 +489,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -524,8 +499,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -535,8 +509,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -546,8 +519,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -558,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -567,13 +538,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -581,13 +550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -595,13 +562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -609,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -737,8 +701,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databaseversion_csharp">
 <a href="#state_databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -748,8 +711,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -758,8 +720,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -768,8 +729,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -779,8 +739,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -790,8 +749,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -801,13 +759,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databaseversion_go">
 <a href="#state_databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -817,8 +773,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -827,8 +782,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -837,8 +791,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -848,8 +801,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -859,8 +811,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -870,13 +821,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databaseversion_nodejs">
 <a href="#state_databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
@@ -886,8 +835,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -896,8 +844,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -906,8 +853,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -917,8 +863,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -928,8 +873,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -939,13 +883,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_version_python">
 <a href="#state_database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
@@ -955,8 +897,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -965,8 +906,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -975,8 +915,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -986,8 +925,7 @@ Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server.
 Defaults to 3306.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -997,8 +935,7 @@ Defaults to 3306.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1008,8 +945,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

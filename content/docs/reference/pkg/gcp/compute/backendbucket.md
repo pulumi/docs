@@ -292,8 +292,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -302,8 +301,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnpolicy_csharp">
 <a href="#cdnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
@@ -313,8 +311,7 @@ The BackendBucket resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customresponseheaders_csharp">
 <a href="#customresponseheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
@@ -323,8 +320,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -334,8 +330,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecdn_csharp">
 <a href="#enablecdn_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
@@ -344,8 +339,7 @@ client when the resource is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -360,8 +354,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -371,13 +364,11 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -386,8 +377,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnpolicy_go">
 <a href="#cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
@@ -397,8 +387,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customresponseheaders_go">
 <a href="#customresponseheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
@@ -407,8 +396,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -418,8 +406,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecdn_go">
 <a href="#enablecdn_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
@@ -428,8 +415,7 @@ client when the resource is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -444,8 +430,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -455,13 +440,11 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -470,8 +453,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdnpolicy_nodejs">
 <a href="#cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
@@ -481,8 +463,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customresponseheaders_nodejs">
 <a href="#customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
@@ -491,8 +472,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -502,8 +482,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecdn_nodejs">
 <a href="#enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
@@ -512,8 +491,7 @@ client when the resource is created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -528,8 +506,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -539,13 +516,11 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -554,8 +529,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cdn_policy_python">
 <a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
@@ -565,8 +539,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_response_headers_python">
 <a href="#custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
@@ -575,8 +548,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -586,8 +558,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_cdn_python">
 <a href="#enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
@@ -596,8 +567,7 @@ client when the resource is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -612,8 +582,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -623,8 +592,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -635,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -645,8 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -654,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -664,13 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -679,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -688,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -698,13 +659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -713,8 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -722,8 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -732,13 +689,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -747,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -766,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -894,8 +846,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucketname_csharp">
 <a href="#state_bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -904,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnpolicy_csharp">
 <a href="#state_cdnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
@@ -915,8 +865,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -925,8 +874,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customresponseheaders_csharp">
 <a href="#state_customresponseheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
@@ -935,8 +883,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -946,8 +893,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablecdn_csharp">
 <a href="#state_enablecdn_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
@@ -956,8 +902,7 @@ client when the resource is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -972,8 +917,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -983,8 +927,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -993,13 +936,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucketname_go">
 <a href="#state_bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -1008,8 +949,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnpolicy_go">
 <a href="#state_cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
@@ -1019,8 +959,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1029,8 +968,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customresponseheaders_go">
 <a href="#state_customresponseheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Response<wbr>Headers</a>
@@ -1039,8 +977,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1050,8 +987,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablecdn_go">
 <a href="#state_enablecdn_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
@@ -1060,8 +996,7 @@ client when the resource is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1076,8 +1011,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1087,8 +1021,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1097,13 +1030,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucketname_nodejs">
 <a href="#state_bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -1112,8 +1043,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdnpolicy_nodejs">
 <a href="#state_cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
@@ -1123,8 +1053,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1133,8 +1062,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customresponseheaders_nodejs">
 <a href="#state_customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
@@ -1143,8 +1071,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1154,8 +1081,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablecdn_nodejs">
 <a href="#state_enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
@@ -1164,8 +1090,7 @@ client when the resource is created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1180,8 +1105,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1191,8 +1115,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1201,13 +1124,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_name_python">
 <a href="#state_bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -1216,8 +1137,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cdn_policy_python">
 <a href="#state_cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
@@ -1227,8 +1147,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1237,8 +1156,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_response_headers_python">
 <a href="#state_custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
@@ -1247,8 +1165,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1258,8 +1175,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional textual description of the resource; provided by the
 client when the resource is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_cdn_python">
 <a href="#state_enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
@@ -1268,8 +1184,7 @@ client when the resource is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendBucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1284,8 +1199,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1295,8 +1209,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1305,8 +1218,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1321,8 +1233,7 @@ If it is not provided, the provider project is used.
 <h4 id="backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cachemode_csharp">
 <a href="#cachemode_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
@@ -1330,8 +1241,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientttl_csharp">
 <a href="#clientttl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Ttl</a>
@@ -1339,8 +1249,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -1348,8 +1257,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1357,8 +1265,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecaching_csharp">
 <a href="#negativecaching_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching</a>
@@ -1366,8 +1273,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecachingpolicies_csharp">
 <a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
@@ -1375,8 +1281,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">List&lt;Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servewhilestale_csharp">
 <a href="#servewhilestale_csharp" style="color: inherit; text-decoration: inherit;">Serve<wbr>While<wbr>Stale</a>
@@ -1384,8 +1289,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedurlcachemaxagesec_csharp">
 <a href="#signedurlcachemaxagesec_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
@@ -1401,13 +1305,11 @@ Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cachemode_go">
 <a href="#cachemode_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
@@ -1415,8 +1317,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientttl_go">
 <a href="#clientttl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Ttl</a>
@@ -1424,8 +1325,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -1433,8 +1333,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1442,8 +1341,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecaching_go">
 <a href="#negativecaching_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching</a>
@@ -1451,8 +1349,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecachingpolicies_go">
 <a href="#negativecachingpolicies_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
@@ -1460,8 +1357,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">[]Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servewhilestale_go">
 <a href="#servewhilestale_go" style="color: inherit; text-decoration: inherit;">Serve<wbr>While<wbr>Stale</a>
@@ -1469,8 +1365,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedurlcachemaxagesec_go">
 <a href="#signedurlcachemaxagesec_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
@@ -1486,13 +1381,11 @@ Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cachemode_nodejs">
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
@@ -1500,8 +1393,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientttl_nodejs">
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
@@ -1509,8 +1401,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -1518,8 +1409,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -1527,8 +1417,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecaching_nodejs">
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
@@ -1536,8 +1425,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativecachingpolicies_nodejs">
 <a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
@@ -1545,8 +1433,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servewhilestale_nodejs">
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
@@ -1554,8 +1441,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedurlcachemaxagesec_nodejs">
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
@@ -1571,13 +1457,11 @@ Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cache_mode_python">
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
@@ -1585,8 +1469,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_ttl_python">
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
@@ -1594,8 +1477,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -1603,8 +1485,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1612,8 +1493,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negative_caching_python">
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
@@ -1621,8 +1501,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negative_caching_policies_python">
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
@@ -1630,8 +1509,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Sequence[Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serve_while_stale_python">
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
@@ -1639,8 +1517,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signed_url_cache_max_age_sec_python">
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
@@ -1656,15 +1533,13 @@ Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1672,8 +1547,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1681,13 +1555,11 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1695,8 +1567,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1704,13 +1575,11 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1718,8 +1587,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1727,13 +1595,11 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1741,8 +1607,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1750,8 +1615,7 @@ header. The actual headers served in responses will not be altered.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

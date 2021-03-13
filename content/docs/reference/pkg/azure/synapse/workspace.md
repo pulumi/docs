@@ -370,8 +370,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -380,8 +379,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqladministratorlogin_csharp">
 <a href="#sqladministratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
@@ -390,8 +388,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqladministratorloginpassword_csharp">
 <a href="#sqladministratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login<wbr>Password</a>
@@ -400,8 +397,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagedatalakegen2filesystemid_csharp">
 <a href="#storagedatalakegen2filesystemid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
@@ -410,8 +406,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadadmin_csharp">
 <a href="#aadadmin_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Admin</a>
@@ -420,8 +415,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuredevopsrepo_csharp">
 <a href="#azuredevopsrepo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
@@ -430,8 +424,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubrepo_csharp">
 <a href="#githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
@@ -440,8 +433,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -450,8 +442,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedresourcegroupname_csharp">
 <a href="#managedresourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -460,8 +451,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedvirtualnetworkenabled_csharp">
 <a href="#managedvirtualnetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
@@ -470,8 +460,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -480,8 +469,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_csharp">
 <a href="#sqlidentitycontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
@@ -490,8 +478,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -500,13 +487,11 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -515,8 +500,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqladministratorlogin_go">
 <a href="#sqladministratorlogin_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
@@ -525,8 +509,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqladministratorloginpassword_go">
 <a href="#sqladministratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login<wbr>Password</a>
@@ -535,8 +518,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagedatalakegen2filesystemid_go">
 <a href="#storagedatalakegen2filesystemid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
@@ -545,8 +527,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadadmin_go">
 <a href="#aadadmin_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Admin</a>
@@ -555,8 +536,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuredevopsrepo_go">
 <a href="#azuredevopsrepo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
@@ -565,8 +545,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubrepo_go">
 <a href="#githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
@@ -575,8 +554,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -585,8 +563,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedresourcegroupname_go">
 <a href="#managedresourcegroupname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -595,8 +572,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedvirtualnetworkenabled_go">
 <a href="#managedvirtualnetworkenabled_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
@@ -605,8 +581,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -615,8 +590,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_go">
 <a href="#sqlidentitycontrolenabled_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
@@ -625,8 +599,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -635,13 +608,11 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -650,8 +621,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqladministratorlogin_nodejs">
 <a href="#sqladministratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login</a>
@@ -660,8 +630,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqladministratorloginpassword_nodejs">
 <a href="#sqladministratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login<wbr>Password</a>
@@ -670,8 +639,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagedatalakegen2filesystemid_nodejs">
 <a href="#storagedatalakegen2filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
@@ -680,8 +648,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadadmin_nodejs">
 <a href="#aadadmin_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Admin</a>
@@ -690,8 +657,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuredevopsrepo_nodejs">
 <a href="#azuredevopsrepo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Devops<wbr>Repo</a>
@@ -700,8 +666,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubrepo_nodejs">
 <a href="#githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
@@ -710,8 +675,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -720,8 +684,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedresourcegroupname_nodejs">
 <a href="#managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -730,8 +693,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedvirtualnetworkenabled_nodejs">
 <a href="#managedvirtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
@@ -740,8 +702,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -750,8 +711,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlidentitycontrolenabled_nodejs">
 <a href="#sqlidentitycontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
@@ -760,8 +720,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -770,13 +729,11 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -785,8 +742,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_administrator_login_python">
 <a href="#sql_administrator_login_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login</a>
@@ -795,8 +751,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_administrator_login_password_python">
 <a href="#sql_administrator_login_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login_<wbr>password</a>
@@ -805,8 +760,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_data_lake_gen2_filesystem_id_python">
 <a href="#storage_data_lake_gen2_filesystem_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>lake_<wbr>gen2_<wbr>filesystem_<wbr>id</a>
@@ -815,8 +769,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_admin_python">
 <a href="#aad_admin_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>admin</a>
@@ -825,8 +778,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_devops_repo_python">
 <a href="#azure_devops_repo_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>devops_<wbr>repo</a>
@@ -835,8 +787,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_repo_python">
 <a href="#github_repo_python" style="color: inherit; text-decoration: inherit;">github_<wbr>repo</a>
@@ -845,8 +796,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -855,8 +805,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_resource_group_name_python">
 <a href="#managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
@@ -865,8 +814,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_virtual_network_enabled_python">
 <a href="#managed_virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>enabled</a>
@@ -875,8 +823,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -885,8 +832,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_identity_control_enabled_python">
 <a href="#sql_identity_control_enabled_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>identity_<wbr>control_<wbr>enabled</a>
@@ -895,8 +841,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -905,8 +850,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -917,8 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivityendpoints_csharp">
 <a href="#connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
@@ -927,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -936,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_csharp">
 <a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
@@ -946,13 +887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#workspaceidentity">List&lt;Workspace<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivityendpoints_go">
 <a href="#connectivityendpoints_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
@@ -961,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -970,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_go">
 <a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
@@ -980,13 +917,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#workspaceidentity">[]Workspace<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivityendpoints_nodejs">
 <a href="#connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
@@ -995,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1004,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_nodejs">
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
@@ -1014,13 +947,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#workspaceidentity">Workspace<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivity_endpoints_python">
 <a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
@@ -1029,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1038,8 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_python">
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
@@ -1048,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#workspaceidentity">Sequence[Workspace<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1176,8 +1104,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aadadmin_csharp">
 <a href="#state_aadadmin_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Admin</a>
@@ -1186,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azuredevopsrepo_csharp">
 <a href="#state_azuredevopsrepo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
@@ -1196,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectivityendpoints_csharp">
 <a href="#state_connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
@@ -1206,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_githubrepo_csharp">
 <a href="#state_githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
@@ -1216,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_csharp">
 <a href="#state_identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
@@ -1226,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceidentity">List&lt;Workspace<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1236,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedresourcegroupname_csharp">
 <a href="#state_managedresourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -1246,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedvirtualnetworkenabled_csharp">
 <a href="#state_managedvirtualnetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
@@ -1256,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1266,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1276,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorlogin_csharp">
 <a href="#state_sqladministratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
@@ -1286,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorloginpassword_csharp">
 <a href="#state_sqladministratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login<wbr>Password</a>
@@ -1296,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlidentitycontrolenabled_csharp">
 <a href="#state_sqlidentitycontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
@@ -1306,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagedatalakegen2filesystemid_csharp">
 <a href="#state_storagedatalakegen2filesystemid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
@@ -1316,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1326,13 +1239,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aadadmin_go">
 <a href="#state_aadadmin_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Admin</a>
@@ -1341,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azuredevopsrepo_go">
 <a href="#state_azuredevopsrepo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
@@ -1351,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectivityendpoints_go">
 <a href="#state_connectivityendpoints_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
@@ -1361,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_githubrepo_go">
 <a href="#state_githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
@@ -1371,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_go">
 <a href="#state_identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
@@ -1381,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceidentity">[]Workspace<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1391,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedresourcegroupname_go">
 <a href="#state_managedresourcegroupname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -1401,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedvirtualnetworkenabled_go">
 <a href="#state_managedvirtualnetworkenabled_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
@@ -1411,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1421,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1431,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorlogin_go">
 <a href="#state_sqladministratorlogin_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
@@ -1441,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorloginpassword_go">
 <a href="#state_sqladministratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login<wbr>Password</a>
@@ -1451,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlidentitycontrolenabled_go">
 <a href="#state_sqlidentitycontrolenabled_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
@@ -1461,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagedatalakegen2filesystemid_go">
 <a href="#state_storagedatalakegen2filesystemid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
@@ -1471,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1481,13 +1378,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aadadmin_nodejs">
 <a href="#state_aadadmin_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Admin</a>
@@ -1496,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azuredevopsrepo_nodejs">
 <a href="#state_azuredevopsrepo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Devops<wbr>Repo</a>
@@ -1506,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectivityendpoints_nodejs">
 <a href="#state_connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
@@ -1516,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_githubrepo_nodejs">
 <a href="#state_githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
@@ -1526,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_nodejs">
 <a href="#state_identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
@@ -1536,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceidentity">Workspace<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1546,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedresourcegroupname_nodejs">
 <a href="#state_managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
@@ -1556,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedvirtualnetworkenabled_nodejs">
 <a href="#state_managedvirtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
@@ -1566,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1576,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1586,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorlogin_nodejs">
 <a href="#state_sqladministratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login</a>
@@ -1596,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqladministratorloginpassword_nodejs">
 <a href="#state_sqladministratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login<wbr>Password</a>
@@ -1606,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlidentitycontrolenabled_nodejs">
 <a href="#state_sqlidentitycontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
@@ -1616,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagedatalakegen2filesystemid_nodejs">
 <a href="#state_storagedatalakegen2filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
@@ -1626,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1636,13 +1517,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aad_admin_python">
 <a href="#state_aad_admin_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>admin</a>
@@ -1651,8 +1530,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_devops_repo_python">
 <a href="#state_azure_devops_repo_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>devops_<wbr>repo</a>
@@ -1661,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectivity_endpoints_python">
 <a href="#state_connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
@@ -1671,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_github_repo_python">
 <a href="#state_github_repo_python" style="color: inherit; text-decoration: inherit;">github_<wbr>repo</a>
@@ -1681,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identities_python">
 <a href="#state_identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
@@ -1691,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#workspaceidentity">Sequence[Workspace<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1701,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_resource_group_name_python">
 <a href="#state_managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
@@ -1711,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_virtual_network_enabled_python">
 <a href="#state_managed_virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>enabled</a>
@@ -1721,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1731,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1741,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_administrator_login_python">
 <a href="#state_sql_administrator_login_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login</a>
@@ -1751,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_administrator_login_password_python">
 <a href="#state_sql_administrator_login_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login_<wbr>password</a>
@@ -1761,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_identity_control_enabled_python">
 <a href="#state_sql_identity_control_enabled_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>identity_<wbr>control_<wbr>enabled</a>
@@ -1771,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_data_lake_gen2_filesystem_id_python">
 <a href="#state_storage_data_lake_gen2_filesystem_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>lake_<wbr>gen2_<wbr>filesystem_<wbr>id</a>
@@ -1781,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1791,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1807,8 +1671,7 @@ The following state arguments are supported:
 <h4 id="workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1817,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1827,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1837,13 +1698,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1852,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1862,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1872,13 +1729,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1887,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1897,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1907,13 +1760,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1922,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1932,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1942,15 +1791,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1959,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branchname_csharp">
 <a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
@@ -1969,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1979,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_csharp">
 <a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -1989,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_csharp">
 <a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -1999,13 +1842,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -2014,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branchname_go">
 <a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
@@ -2024,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -2034,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_go">
 <a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -2044,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_go">
 <a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -2054,13 +1891,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -2069,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branchname_nodejs">
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
@@ -2079,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -2089,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_nodejs">
 <a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
@@ -2099,8 +1931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_nodejs">
 <a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
@@ -2109,13 +1940,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -2124,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure DevOps account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branch_name_python">
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
@@ -2134,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -2144,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure DevOps project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_name_python">
 <a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
@@ -2154,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="root_folder_python">
 <a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
@@ -2164,15 +1989,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -2181,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branchname_csharp">
 <a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
@@ -2191,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_csharp">
 <a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -2201,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_csharp">
 <a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -2211,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="giturl_csharp">
 <a href="#giturl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Url</a>
@@ -2221,13 +2040,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -2236,8 +2053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branchname_go">
 <a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
@@ -2246,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_go">
 <a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
@@ -2256,8 +2071,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_go">
 <a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
@@ -2266,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="giturl_go">
 <a href="#giturl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Url</a>
@@ -2276,13 +2089,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -2291,8 +2102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branchname_nodejs">
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
@@ -2301,8 +2111,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryname_nodejs">
 <a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
@@ -2311,8 +2120,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rootfolder_nodejs">
 <a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
@@ -2321,8 +2129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="giturl_nodejs">
 <a href="#giturl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Url</a>
@@ -2331,13 +2138,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -2346,8 +2151,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub account name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="branch_name_python">
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
@@ -2356,8 +2160,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_name_python">
 <a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
@@ -2366,8 +2169,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="root_folder_python">
 <a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
@@ -2376,8 +2178,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="git_url_python">
 <a href="#git_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>url</a>
@@ -2386,15 +2187,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workspaceidentity">Workspace<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2403,8 +2202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2413,8 +2211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2423,13 +2220,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2438,8 +2233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2448,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2458,13 +2251,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -2473,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -2483,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2493,13 +2282,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -2508,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2518,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2528,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

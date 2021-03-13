@@ -482,8 +482,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replicationinstanceclass_csharp">
 <a href="#replicationinstanceclass_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Class</a>
@@ -492,8 +491,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationinstanceid_csharp">
 <a href="#replicationinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Id</a>
@@ -502,8 +500,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocatedstorage_csharp">
 <a href="#allocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
@@ -512,8 +509,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmajorversionupgrade_csharp">
 <a href="#allowmajorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
@@ -522,8 +518,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_csharp">
 <a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -532,8 +527,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_csharp">
 <a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -542,8 +536,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -552,8 +545,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -562,8 +554,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_csharp">
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -572,8 +563,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiaz_csharp">
 <a href="#multiaz_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
@@ -582,8 +572,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_csharp">
 <a href="#preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -592,8 +581,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_csharp">
 <a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -602,8 +590,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationsubnetgroupid_csharp">
 <a href="#replicationsubnetgroupid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Subnet<wbr>Group<wbr>Id</a>
@@ -612,8 +599,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -622,8 +608,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_csharp">
 <a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -632,13 +617,11 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replicationinstanceclass_go">
 <a href="#replicationinstanceclass_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Class</a>
@@ -647,8 +630,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationinstanceid_go">
 <a href="#replicationinstanceid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Id</a>
@@ -657,8 +639,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocatedstorage_go">
 <a href="#allocatedstorage_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
@@ -667,8 +648,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmajorversionupgrade_go">
 <a href="#allowmajorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
@@ -677,8 +657,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_go">
 <a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -687,8 +666,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_go">
 <a href="#autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -697,8 +675,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -707,8 +684,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -717,8 +693,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_go">
 <a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -727,8 +702,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiaz_go">
 <a href="#multiaz_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
@@ -737,8 +711,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_go">
 <a href="#preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -747,8 +720,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_go">
 <a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -757,8 +729,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationsubnetgroupid_go">
 <a href="#replicationsubnetgroupid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Subnet<wbr>Group<wbr>Id</a>
@@ -767,8 +738,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -777,8 +747,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_go">
 <a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -787,13 +756,11 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replicationinstanceclass_nodejs">
 <a href="#replicationinstanceclass_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Class</a>
@@ -802,8 +769,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationinstanceid_nodejs">
 <a href="#replicationinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Id</a>
@@ -812,8 +778,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocatedstorage_nodejs">
 <a href="#allocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Storage</a>
@@ -822,8 +787,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmajorversionupgrade_nodejs">
 <a href="#allowmajorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
@@ -832,8 +796,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_nodejs">
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -842,8 +805,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_nodejs">
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -852,8 +814,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -862,8 +823,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -872,8 +832,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyarn_nodejs">
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -882,8 +841,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiaz_nodejs">
 <a href="#multiaz_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az</a>
@@ -892,8 +850,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_nodejs">
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -902,8 +859,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_nodejs">
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -912,8 +868,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationsubnetgroupid_nodejs">
 <a href="#replicationsubnetgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Subnet<wbr>Group<wbr>Id</a>
@@ -922,8 +877,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -932,8 +886,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_nodejs">
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -942,13 +895,11 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replication_instance_class_python">
 <a href="#replication_instance_class_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>class</a>
@@ -957,8 +908,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_instance_id_python">
 <a href="#replication_instance_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>id</a>
@@ -967,8 +917,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocated_storage_python">
 <a href="#allocated_storage_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>storage</a>
@@ -977,8 +926,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_major_version_upgrade_python">
 <a href="#allow_major_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>major_<wbr>version_<wbr>upgrade</a>
@@ -987,8 +935,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_immediately_python">
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -997,8 +944,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_minor_version_upgrade_python">
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -1007,8 +953,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1017,8 +962,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1027,8 +971,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_arn_python">
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -1037,8 +980,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_az_python">
 <a href="#multi_az_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az</a>
@@ -1047,8 +989,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_maintenance_window_python">
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -1057,8 +998,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicly_accessible_python">
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -1067,8 +1007,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_subnet_group_id_python">
 <a href="#replication_subnet_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>subnet_<wbr>group_<wbr>id</a>
@@ -1077,8 +1016,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1087,8 +1025,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_security_group_ids_python">
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1097,8 +1034,7 @@ The ReplicationInstance resource accepts the following [input]({{< relref "/docs
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1109,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1118,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstancearn_csharp">
 <a href="#replicationinstancearn_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Arn</a>
@@ -1128,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstanceprivateips_csharp">
 <a href="#replicationinstanceprivateips_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Private<wbr>Ips</a>
@@ -1138,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstancepublicips_csharp">
 <a href="#replicationinstancepublicips_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Public<wbr>Ips</a>
@@ -1148,13 +1080,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1162,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstancearn_go">
 <a href="#replicationinstancearn_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Arn</a>
@@ -1172,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstanceprivateips_go">
 <a href="#replicationinstanceprivateips_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Private<wbr>Ips</a>
@@ -1182,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstancepublicips_go">
 <a href="#replicationinstancepublicips_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Public<wbr>Ips</a>
@@ -1192,13 +1119,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1206,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstancearn_nodejs">
 <a href="#replicationinstancearn_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Arn</a>
@@ -1216,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstanceprivateips_nodejs">
 <a href="#replicationinstanceprivateips_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Private<wbr>Ips</a>
@@ -1226,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationinstancepublicips_nodejs">
 <a href="#replicationinstancepublicips_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Public<wbr>Ips</a>
@@ -1236,13 +1158,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1250,8 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_instance_arn_python">
 <a href="#replication_instance_arn_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>arn</a>
@@ -1260,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_instance_private_ips_python">
 <a href="#replication_instance_private_ips_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>private_<wbr>ips</a>
@@ -1270,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_instance_public_ips_python">
 <a href="#replication_instance_public_ips_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>public_<wbr>ips</a>
@@ -1280,8 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1408,8 +1324,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocatedstorage_csharp">
 <a href="#state_allocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
@@ -1418,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmajorversionupgrade_csharp">
 <a href="#state_allowmajorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
@@ -1428,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
 <a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1438,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_csharp">
 <a href="#state_autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1448,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1458,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1468,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_csharp">
 <a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -1478,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiaz_csharp">
 <a href="#state_multiaz_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
@@ -1488,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_csharp">
 <a href="#state_preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -1498,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_csharp">
 <a href="#state_publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1508,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstancearn_csharp">
 <a href="#state_replicationinstancearn_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Arn</a>
@@ -1518,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceclass_csharp">
 <a href="#state_replicationinstanceclass_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Class</a>
@@ -1528,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceid_csharp">
 <a href="#state_replicationinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Id</a>
@@ -1538,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceprivateips_csharp">
 <a href="#state_replicationinstanceprivateips_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Private<wbr>Ips</a>
@@ -1548,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstancepublicips_csharp">
 <a href="#state_replicationinstancepublicips_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Public<wbr>Ips</a>
@@ -1558,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationsubnetgroupid_csharp">
 <a href="#state_replicationsubnetgroupid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Subnet<wbr>Group<wbr>Id</a>
@@ -1568,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1578,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_csharp">
 <a href="#state_vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1588,13 +1486,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocatedstorage_go">
 <a href="#state_allocatedstorage_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
@@ -1603,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmajorversionupgrade_go">
 <a href="#state_allowmajorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
@@ -1613,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
 <a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1623,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_go">
 <a href="#state_autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1633,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1643,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1653,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_go">
 <a href="#state_kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
@@ -1663,8 +1553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiaz_go">
 <a href="#state_multiaz_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
@@ -1673,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_go">
 <a href="#state_preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -1683,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_go">
 <a href="#state_publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1693,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstancearn_go">
 <a href="#state_replicationinstancearn_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Arn</a>
@@ -1703,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceclass_go">
 <a href="#state_replicationinstanceclass_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Class</a>
@@ -1713,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceid_go">
 <a href="#state_replicationinstanceid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Id</a>
@@ -1723,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceprivateips_go">
 <a href="#state_replicationinstanceprivateips_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Private<wbr>Ips</a>
@@ -1733,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstancepublicips_go">
 <a href="#state_replicationinstancepublicips_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Instance<wbr>Public<wbr>Ips</a>
@@ -1743,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationsubnetgroupid_go">
 <a href="#state_replicationsubnetgroupid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Subnet<wbr>Group<wbr>Id</a>
@@ -1753,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1763,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_go">
 <a href="#state_vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1773,13 +1652,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocatedstorage_nodejs">
 <a href="#state_allocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Storage</a>
@@ -1788,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmajorversionupgrade_nodejs">
 <a href="#state_allowmajorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Major<wbr>Version<wbr>Upgrade</a>
@@ -1798,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -1808,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_nodejs">
 <a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1818,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1828,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1838,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyarn_nodejs">
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
@@ -1848,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiaz_nodejs">
 <a href="#state_multiaz_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az</a>
@@ -1858,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_nodejs">
 <a href="#state_preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -1868,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_nodejs">
 <a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -1878,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstancearn_nodejs">
 <a href="#state_replicationinstancearn_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Arn</a>
@@ -1888,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceclass_nodejs">
 <a href="#state_replicationinstanceclass_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Class</a>
@@ -1898,8 +1764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceid_nodejs">
 <a href="#state_replicationinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Id</a>
@@ -1908,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstanceprivateips_nodejs">
 <a href="#state_replicationinstanceprivateips_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Private<wbr>Ips</a>
@@ -1918,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationinstancepublicips_nodejs">
 <a href="#state_replicationinstancepublicips_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Instance<wbr>Public<wbr>Ips</a>
@@ -1928,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationsubnetgroupid_nodejs">
 <a href="#state_replicationsubnetgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Subnet<wbr>Group<wbr>Id</a>
@@ -1938,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1948,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcsecuritygroupids_nodejs">
 <a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1958,13 +1818,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocated_storage_python">
 <a href="#state_allocated_storage_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>storage</a>
@@ -1973,8 +1831,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_major_version_upgrade_python">
 <a href="#state_allow_major_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>major_<wbr>version_<wbr>upgrade</a>
@@ -1983,8 +1840,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that major version upgrades are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -1993,8 +1849,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_minor_version_upgrade_python">
 <a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -2003,8 +1858,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -2013,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the replication instance will be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -2023,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The engine version number of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_arn_python">
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
@@ -2033,8 +1885,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multi_az_python">
 <a href="#state_multi_az_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az</a>
@@ -2043,8 +1894,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_maintenance_window_python">
 <a href="#state_preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -2053,8 +1903,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicly_accessible_python">
 <a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -2063,8 +1912,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_instance_arn_python">
 <a href="#state_replication_instance_arn_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>arn</a>
@@ -2073,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_instance_class_python">
 <a href="#state_replication_instance_class_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>class</a>
@@ -2083,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_instance_id_python">
 <a href="#state_replication_instance_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>id</a>
@@ -2093,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The replication instance identifier. This parameter is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_instance_private_ips_python">
 <a href="#state_replication_instance_private_ips_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>private_<wbr>ips</a>
@@ -2103,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the private IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_instance_public_ips_python">
 <a href="#state_replication_instance_public_ips_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>instance_<wbr>public_<wbr>ips</a>
@@ -2113,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the public IP addresses of the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_subnet_group_id_python">
 <a href="#state_replication_subnet_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>subnet_<wbr>group_<wbr>id</a>
@@ -2123,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet group to associate with the replication instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2133,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_security_group_ids_python">
 <a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -2143,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

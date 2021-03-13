@@ -302,8 +302,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specificreservation_csharp">
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -313,8 +312,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -323,8 +321,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -333,8 +330,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -349,8 +345,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -360,8 +355,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservationrequired_csharp">
 <a href="#specificreservationrequired_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
@@ -372,13 +366,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specificreservation_go">
 <a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -388,8 +380,7 @@ affinity for any reservation. Defaults to false.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -398,8 +389,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -408,8 +398,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -424,8 +413,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -435,8 +423,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservationrequired_go">
 <a href="#specificreservationrequired_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
@@ -447,13 +434,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specificreservation_nodejs">
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
@@ -463,8 +448,7 @@ affinity for any reservation. Defaults to false.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -473,8 +457,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -483,8 +466,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -499,8 +481,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -510,8 +491,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservationrequired_nodejs">
 <a href="#specificreservationrequired_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation<wbr>Required</a>
@@ -522,13 +502,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specific_reservation_python">
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
@@ -538,8 +516,7 @@ affinity for any reservation. Defaults to false.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -548,8 +525,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -558,8 +534,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +549,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -585,8 +559,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specific_reservation_required_python">
 <a href="#specific_reservation_required_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation_<wbr>required</a>
@@ -597,8 +570,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -609,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="commitment_csharp">
 <a href="#commitment_csharp" style="color: inherit; text-decoration: inherit;">Commitment</a>
@@ -619,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -629,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -638,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -648,8 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -658,13 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="commitment_go">
 <a href="#commitment_go" style="color: inherit; text-decoration: inherit;">Commitment</a>
@@ -673,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -683,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -692,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -702,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -712,13 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="commitment_nodejs">
 <a href="#commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
@@ -727,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -737,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -746,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -756,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -766,13 +721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="commitment_python">
 <a href="#commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
@@ -781,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -791,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -800,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -810,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -820,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -948,8 +896,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commitment_csharp">
 <a href="#state_commitment_csharp" style="color: inherit; text-decoration: inherit;">Commitment</a>
@@ -958,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -968,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -978,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -994,8 +938,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1005,8 +948,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1015,8 +957,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specificreservation_csharp">
 <a href="#state_specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -1026,8 +967,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specificreservationrequired_csharp">
 <a href="#state_specificreservationrequired_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
@@ -1038,8 +978,7 @@ Structure is documented below.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1048,8 +987,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1058,13 +996,11 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commitment_go">
 <a href="#state_commitment_go" style="color: inherit; text-decoration: inherit;">Commitment</a>
@@ -1073,8 +1009,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1083,8 +1018,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1093,8 +1027,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1109,8 +1042,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1120,8 +1052,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1130,8 +1061,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specificreservation_go">
 <a href="#state_specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -1141,8 +1071,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specificreservationrequired_go">
 <a href="#state_specificreservationrequired_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
@@ -1153,8 +1082,7 @@ Structure is documented below.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1163,8 +1091,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1173,13 +1100,11 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commitment_nodejs">
 <a href="#state_commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
@@ -1188,8 +1113,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1198,8 +1122,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1208,8 +1131,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1224,8 +1146,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1235,8 +1156,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1245,8 +1165,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specificreservation_nodejs">
 <a href="#state_specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
@@ -1256,8 +1175,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specificreservationrequired_nodejs">
 <a href="#state_specificreservationrequired_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation<wbr>Required</a>
@@ -1268,8 +1186,7 @@ Structure is documented below.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1278,8 +1195,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1288,13 +1204,11 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commitment_python">
 <a href="#state_commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
@@ -1303,8 +1217,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1313,8 +1226,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1323,8 +1235,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1339,8 +1250,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1350,8 +1260,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1360,8 +1269,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specific_reservation_python">
 <a href="#state_specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
@@ -1371,8 +1279,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specific_reservation_required_python">
 <a href="#state_specific_reservation_required_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation_<wbr>required</a>
@@ -1383,8 +1290,7 @@ Structure is documented below.
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1393,8 +1299,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1403,8 +1308,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1419,8 +1323,7 @@ affinity for any reservation. Defaults to false.
 <h4 id="reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1429,8 +1332,7 @@ affinity for any reservation. Defaults to false.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceproperties_csharp">
 <a href="#instanceproperties_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Properties</a>
@@ -1440,8 +1342,7 @@ affinity for any reservation. Defaults to false.
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inusecount_csharp">
 <a href="#inusecount_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Use<wbr>Count</a>
@@ -1451,13 +1352,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1466,8 +1365,7 @@ How many instances are in use.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceproperties_go">
 <a href="#instanceproperties_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Properties</a>
@@ -1477,8 +1375,7 @@ How many instances are in use.
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inusecount_go">
 <a href="#inusecount_go" style="color: inherit; text-decoration: inherit;">In<wbr>Use<wbr>Count</a>
@@ -1488,13 +1385,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1503,8 +1398,7 @@ How many instances are in use.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceproperties_nodejs">
 <a href="#instanceproperties_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Properties</a>
@@ -1514,8 +1408,7 @@ How many instances are in use.
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inusecount_nodejs">
 <a href="#inusecount_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Use<wbr>Count</a>
@@ -1525,13 +1418,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1540,8 +1431,7 @@ How many instances are in use.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_properties_python">
 <a href="#instance_properties_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>properties</a>
@@ -1551,8 +1441,7 @@ How many instances are in use.
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="in_use_count_python">
 <a href="#in_use_count_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use_<wbr>count</a>
@@ -1562,15 +1451,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1579,8 +1466,7 @@ How many instances are in use.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
@@ -1590,8 +1476,7 @@ How many instances are in use.
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localssds_csharp">
 <a href="#localssds_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssds</a>
@@ -1602,8 +1487,7 @@ Structure is documented below.
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -1615,13 +1499,11 @@ Structure is documented below.
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1630,8 +1512,7 @@ for information on available CPU platforms.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
@@ -1641,8 +1522,7 @@ for information on available CPU platforms.
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localssds_go">
 <a href="#localssds_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssds</a>
@@ -1653,8 +1533,7 @@ Structure is documented below.
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -1666,13 +1545,11 @@ Structure is documented below.
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -1681,8 +1558,7 @@ for information on available CPU platforms.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
@@ -1692,8 +1568,7 @@ for information on available CPU platforms.
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localssds_nodejs">
 <a href="#localssds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssds</a>
@@ -1704,8 +1579,7 @@ Structure is documented below.
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
@@ -1717,13 +1591,11 @@ Structure is documented below.
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -1732,8 +1604,7 @@ for information on available CPU platforms.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
@@ -1743,8 +1614,7 @@ for information on available CPU platforms.
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_ssds_python">
 <a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
@@ -1755,8 +1625,7 @@ Structure is documented below.
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
@@ -1768,15 +1637,13 @@ Structure is documented below.
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratorcount_csharp">
 <a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
@@ -1786,8 +1653,7 @@ for information on available CPU platforms.
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acceleratortype_csharp">
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -1799,13 +1665,11 @@ this instance.
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratorcount_go">
 <a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
@@ -1815,8 +1679,7 @@ If you are creating an instance template, specify only the accelerator name.
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acceleratortype_go">
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -1828,13 +1691,11 @@ this instance.
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratorcount_nodejs">
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
@@ -1844,8 +1705,7 @@ If you are creating an instance template, specify only the accelerator name.
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acceleratortype_nodejs">
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
@@ -1857,13 +1717,11 @@ this instance.
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accelerator_count_python">
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
@@ -1873,8 +1731,7 @@ If you are creating an instance template, specify only the accelerator name.
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accelerator_type_python">
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
@@ -1886,15 +1743,13 @@ this instance.
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1903,8 +1758,7 @@ If you are creating an instance template, specify only the accelerator name.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1915,13 +1769,11 @@ If you are creating an instance template, specify only the accelerator name.
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1930,8 +1782,7 @@ Possible values are `SCSI` and `NVME`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1942,13 +1793,11 @@ Possible values are `SCSI` and `NVME`.
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -1957,8 +1806,7 @@ Possible values are `SCSI` and `NVME`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1969,13 +1817,11 @@ Possible values are `SCSI` and `NVME`.
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -1984,8 +1830,7 @@ Possible values are `SCSI` and `NVME`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1996,8 +1841,7 @@ Possible values are `SCSI` and `NVME`.
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

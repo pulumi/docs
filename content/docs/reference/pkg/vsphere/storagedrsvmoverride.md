@@ -162,8 +162,7 @@ The StorageDrsVmOverride resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastoreclusterid_csharp">
 <a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -174,8 +173,7 @@ The StorageDrsVmOverride resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -185,8 +183,7 @@ Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_csharp">
 <a href="#sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -198,8 +195,7 @@ the override for.  Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_csharp">
 <a href="#sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -210,8 +206,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsintravmaffinity_csharp">
 <a href="#sdrsintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -224,13 +219,11 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastoreclusterid_go">
 <a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -241,8 +234,7 @@ requirements. When not specified, the datastore cluster's settings are used.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -252,8 +244,7 @@ Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_go">
 <a href="#sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -265,8 +256,7 @@ the override for.  Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_go">
 <a href="#sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -277,8 +267,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsintravmaffinity_go">
 <a href="#sdrsintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -291,13 +280,11 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastoreclusterid_nodejs">
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
@@ -308,8 +295,7 @@ requirements. When not specified, the datastore cluster's settings are used.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -319,8 +305,7 @@ Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_nodejs">
 <a href="#sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
@@ -332,8 +317,7 @@ the override for.  Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_nodejs">
 <a href="#sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
@@ -344,8 +328,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsintravmaffinity_nodejs">
 <a href="#sdrsintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -358,13 +341,11 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_cluster_id_python">
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
@@ -375,8 +356,7 @@ requirements. When not specified, the datastore cluster's settings are used.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -386,8 +366,7 @@ Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_automation_level_python">
 <a href="#sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
@@ -399,8 +378,7 @@ the override for.  Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_enabled_python">
 <a href="#sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
@@ -411,8 +389,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_intra_vm_affinity_python">
 <a href="#sdrs_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</a>
@@ -425,8 +402,7 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -437,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -446,13 +421,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -460,13 +433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -474,13 +445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -488,8 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -616,8 +584,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_csharp">
 <a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -628,8 +595,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_csharp">
 <a href="#state_sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -641,8 +607,7 @@ Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_csharp">
 <a href="#state_sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -653,8 +618,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsintravmaffinity_csharp">
 <a href="#state_sdrsintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -667,8 +631,7 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_csharp">
 <a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -678,13 +641,11 @@ requirements. When not specified, the datastore cluster's settings are used.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_go">
 <a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -695,8 +656,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_go">
 <a href="#state_sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -708,8 +668,7 @@ Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_go">
 <a href="#state_sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -720,8 +679,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsintravmaffinity_go">
 <a href="#state_sdrsintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -734,8 +692,7 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_go">
 <a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -745,13 +702,11 @@ requirements. When not specified, the datastore cluster's settings are used.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_nodejs">
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
@@ -762,8 +717,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_nodejs">
 <a href="#state_sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
@@ -775,8 +729,7 @@ Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_nodejs">
 <a href="#state_sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
@@ -787,8 +740,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsintravmaffinity_nodejs">
 <a href="#state_sdrsintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -801,8 +753,7 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_nodejs">
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -812,13 +763,11 @@ requirements. When not specified, the datastore cluster's settings are used.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_cluster_id_python">
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
@@ -829,8 +778,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_automation_level_python">
 <a href="#state_sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
@@ -842,8 +790,7 @@ Forces a new resource if changed.
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_enabled_python">
 <a href="#state_sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
@@ -854,8 +801,7 @@ specific SDRS subsystem.
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_intra_vm_affinity_python">
 <a href="#state_sdrs_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</a>
@@ -868,8 +814,7 @@ for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_id_python">
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -879,8 +824,7 @@ requirements. When not specified, the datastore cluster's settings are used.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -461,8 +461,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="claimname_csharp">
 <a href="#claimname_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
@@ -471,8 +470,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="claimvalue_csharp">
 <a href="#claimvalue_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value</a>
@@ -481,8 +479,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -491,8 +488,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtoaccesstoken_csharp">
 <a href="#addtoaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
@@ -501,8 +497,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtoidtoken_csharp">
 <a href="#addtoidtoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
@@ -511,8 +506,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtouserinfo_csharp">
 <a href="#addtouserinfo_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
@@ -521,8 +515,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claimvaluetype_csharp">
 <a href="#claimvaluetype_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
@@ -531,8 +524,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -541,8 +533,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientscopeid_csharp">
 <a href="#clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -551,8 +542,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -561,13 +551,11 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="claimname_go">
 <a href="#claimname_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
@@ -576,8 +564,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="claimvalue_go">
 <a href="#claimvalue_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value</a>
@@ -586,8 +573,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -596,8 +582,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtoaccesstoken_go">
 <a href="#addtoaccesstoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
@@ -606,8 +591,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtoidtoken_go">
 <a href="#addtoidtoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
@@ -616,8 +600,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtouserinfo_go">
 <a href="#addtouserinfo_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
@@ -626,8 +609,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claimvaluetype_go">
 <a href="#claimvaluetype_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
@@ -636,8 +618,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -646,8 +627,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientscopeid_go">
 <a href="#clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -656,8 +636,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -666,13 +645,11 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="claimname_nodejs">
 <a href="#claimname_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Name</a>
@@ -681,8 +658,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="claimvalue_nodejs">
 <a href="#claimvalue_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value</a>
@@ -691,8 +667,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -701,8 +676,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtoaccesstoken_nodejs">
 <a href="#addtoaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Access<wbr>Token</a>
@@ -711,8 +685,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtoidtoken_nodejs">
 <a href="#addtoidtoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Id<wbr>Token</a>
@@ -721,8 +694,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addtouserinfo_nodejs">
 <a href="#addtouserinfo_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Userinfo</a>
@@ -731,8 +703,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claimvaluetype_nodejs">
 <a href="#claimvaluetype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value<wbr>Type</a>
@@ -741,8 +712,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -751,8 +721,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientscopeid_nodejs">
 <a href="#clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
@@ -761,8 +730,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -771,13 +739,11 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="claim_name_python">
 <a href="#claim_name_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>name</a>
@@ -786,8 +752,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="claim_value_python">
 <a href="#claim_value_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value</a>
@@ -796,8 +761,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -806,8 +770,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_to_access_token_python">
 <a href="#add_to_access_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>access_<wbr>token</a>
@@ -816,8 +779,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_to_id_token_python">
 <a href="#add_to_id_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>id_<wbr>token</a>
@@ -826,8 +788,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_to_userinfo_python">
 <a href="#add_to_userinfo_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>userinfo</a>
@@ -836,8 +797,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claim_value_type_python">
 <a href="#claim_value_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value_<wbr>type</a>
@@ -846,8 +806,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -856,8 +815,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_scope_id_python">
 <a href="#client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
@@ -866,8 +824,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -876,8 +833,7 @@ The HardcodedClaimProtocolMapper resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -888,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -897,13 +852,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -911,13 +864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -925,13 +876,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -939,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1067,8 +1015,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addtoaccesstoken_csharp">
 <a href="#state_addtoaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
@@ -1077,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addtoidtoken_csharp">
 <a href="#state_addtoidtoken_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
@@ -1087,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addtouserinfo_csharp">
 <a href="#state_addtouserinfo_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
@@ -1097,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimname_csharp">
 <a href="#state_claimname_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
@@ -1107,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimvalue_csharp">
 <a href="#state_claimvalue_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value</a>
@@ -1117,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimvaluetype_csharp">
 <a href="#state_claimvaluetype_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
@@ -1127,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1137,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientscopeid_csharp">
 <a href="#state_clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -1147,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1157,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -1167,13 +1105,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addtoaccesstoken_go">
 <a href="#state_addtoaccesstoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Access<wbr>Token</a>
@@ -1182,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addtoidtoken_go">
 <a href="#state_addtoidtoken_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Id<wbr>Token</a>
@@ -1192,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addtouserinfo_go">
 <a href="#state_addtouserinfo_go" style="color: inherit; text-decoration: inherit;">Add<wbr>To<wbr>Userinfo</a>
@@ -1202,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimname_go">
 <a href="#state_claimname_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Name</a>
@@ -1212,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimvalue_go">
 <a href="#state_claimvalue_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value</a>
@@ -1222,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimvaluetype_go">
 <a href="#state_claimvaluetype_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Value<wbr>Type</a>
@@ -1232,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1242,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientscopeid_go">
 <a href="#state_clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -1252,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1262,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -1272,13 +1199,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addtoaccesstoken_nodejs">
 <a href="#state_addtoaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Access<wbr>Token</a>
@@ -1287,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addtoidtoken_nodejs">
 <a href="#state_addtoidtoken_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Id<wbr>Token</a>
@@ -1297,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addtouserinfo_nodejs">
 <a href="#state_addtouserinfo_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>To<wbr>Userinfo</a>
@@ -1307,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimname_nodejs">
 <a href="#state_claimname_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Name</a>
@@ -1317,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimvalue_nodejs">
 <a href="#state_claimvalue_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value</a>
@@ -1327,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimvaluetype_nodejs">
 <a href="#state_claimvaluetype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value<wbr>Type</a>
@@ -1337,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1347,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientscopeid_nodejs">
 <a href="#state_clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
@@ -1357,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1367,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -1377,13 +1293,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_add_to_access_token_python">
 <a href="#state_add_to_access_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>access_<wbr>token</a>
@@ -1392,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the access token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_add_to_id_token_python">
 <a href="#state_add_to_id_token_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>id_<wbr>token</a>
@@ -1402,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the id token. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_add_to_userinfo_python">
 <a href="#state_add_to_userinfo_python" style="color: inherit; text-decoration: inherit;">add_<wbr>to_<wbr>userinfo</a>
@@ -1412,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claim_name_python">
 <a href="#state_claim_name_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>name</a>
@@ -1422,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the claim to insert into a token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claim_value_python">
 <a href="#state_claim_value_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value</a>
@@ -1432,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hardcoded value of the claim.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claim_value_type_python">
 <a href="#state_claim_value_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value_<wbr>type</a>
@@ -1442,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1452,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper should be attached to. Conflicts with `client_scope_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_scope_id_python">
 <a href="#state_client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
@@ -1462,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client scope this protocol mapper should be attached to. Conflicts with `client_id`. One of `client_id` or `client_scope_id` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1472,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -1482,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

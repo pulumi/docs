@@ -485,8 +485,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -495,8 +494,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -505,8 +503,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_csharp">
 <a href="#comparison_csharp" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -515,8 +512,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -525,8 +521,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -535,8 +530,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -545,8 +539,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_csharp">
 <a href="#event_csharp" style="color: inherit; text-decoration: inherit;">Event</a>
@@ -555,8 +548,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationprovider_csharp">
 <a href="#integrationprovider_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Provider</a>
@@ -565,8 +557,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -575,8 +566,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processwhere_csharp">
 <a href="#processwhere_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Where</a>
@@ -585,8 +575,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_csharp">
 <a href="#runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -595,8 +584,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="select_csharp">
 <a href="#select_csharp" style="color: inherit; text-decoration: inherit;">Select</a>
@@ -605,8 +593,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="violationclosetimer_csharp">
 <a href="#violationclosetimer_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
@@ -615,8 +602,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -625,8 +611,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="where_csharp">
 <a href="#where_csharp" style="color: inherit; text-decoration: inherit;">Where</a>
@@ -635,13 +620,11 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -650,8 +633,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -660,8 +642,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_go">
 <a href="#comparison_go" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -670,8 +651,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -680,8 +660,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -690,8 +669,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -700,8 +678,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_go">
 <a href="#event_go" style="color: inherit; text-decoration: inherit;">Event</a>
@@ -710,8 +687,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationprovider_go">
 <a href="#integrationprovider_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Provider</a>
@@ -720,8 +696,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -730,8 +705,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processwhere_go">
 <a href="#processwhere_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Where</a>
@@ -740,8 +714,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_go">
 <a href="#runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -750,8 +723,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="select_go">
 <a href="#select_go" style="color: inherit; text-decoration: inherit;">Select</a>
@@ -760,8 +732,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="violationclosetimer_go">
 <a href="#violationclosetimer_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
@@ -770,8 +741,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -780,8 +750,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="where_go">
 <a href="#where_go" style="color: inherit; text-decoration: inherit;">Where</a>
@@ -790,13 +759,11 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -805,8 +772,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -815,8 +781,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_nodejs">
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -825,8 +790,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -835,8 +799,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -845,8 +808,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -855,8 +817,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_nodejs">
 <a href="#event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
@@ -865,8 +826,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationprovider_nodejs">
 <a href="#integrationprovider_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Provider</a>
@@ -875,8 +835,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -885,8 +844,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processwhere_nodejs">
 <a href="#processwhere_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Where</a>
@@ -895,8 +853,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_nodejs">
 <a href="#runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
@@ -905,8 +862,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="select_nodejs">
 <a href="#select_nodejs" style="color: inherit; text-decoration: inherit;">select</a>
@@ -915,8 +871,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="violationclosetimer_nodejs">
 <a href="#violationclosetimer_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Close<wbr>Timer</a>
@@ -925,8 +880,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -935,8 +889,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="where_nodejs">
 <a href="#where_nodejs" style="color: inherit; text-decoration: inherit;">where</a>
@@ -945,13 +898,11 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -960,8 +911,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -970,8 +920,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_python">
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -980,8 +929,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -990,8 +938,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1000,8 +947,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1010,8 +956,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_python">
 <a href="#event_python" style="color: inherit; text-decoration: inherit;">event</a>
@@ -1020,8 +965,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_provider_python">
 <a href="#integration_provider_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>provider</a>
@@ -1030,8 +974,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1040,8 +983,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="process_where_python">
 <a href="#process_where_python" style="color: inherit; text-decoration: inherit;">process_<wbr>where</a>
@@ -1050,8 +992,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbook_url_python">
 <a href="#runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
@@ -1060,8 +1001,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="select_python">
 <a href="#select_python" style="color: inherit; text-decoration: inherit;">select</a>
@@ -1070,8 +1010,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="violation_close_timer_python">
 <a href="#violation_close_timer_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>close_<wbr>timer</a>
@@ -1080,8 +1019,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1090,8 +1028,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="where_python">
 <a href="#where_python" style="color: inherit; text-decoration: inherit;">where</a>
@@ -1100,8 +1037,7 @@ The InfraAlertCondition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1112,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1122,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1131,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1141,13 +1074,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1156,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1165,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1175,13 +1104,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1190,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1199,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1209,13 +1134,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1224,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1233,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1243,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1371,8 +1291,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comparison_csharp">
 <a href="#state_comparison_csharp" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -1381,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1391,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_csharp">
 <a href="#state_critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -1401,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1411,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1421,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_csharp">
 <a href="#state_event_csharp" style="color: inherit; text-decoration: inherit;">Event</a>
@@ -1431,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationprovider_csharp">
 <a href="#state_integrationprovider_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Provider</a>
@@ -1441,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1451,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1461,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processwhere_csharp">
 <a href="#state_processwhere_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Where</a>
@@ -1471,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_csharp">
 <a href="#state_runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -1481,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_select_csharp">
 <a href="#state_select_csharp" style="color: inherit; text-decoration: inherit;">Select</a>
@@ -1491,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1501,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_csharp">
 <a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1511,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationclosetimer_csharp">
 <a href="#state_violationclosetimer_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
@@ -1521,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_csharp">
 <a href="#state_warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1531,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_where_csharp">
 <a href="#state_where_csharp" style="color: inherit; text-decoration: inherit;">Where</a>
@@ -1541,13 +1444,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comparison_go">
 <a href="#state_comparison_go" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -1556,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1566,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_go">
 <a href="#state_critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -1576,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1586,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1596,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_go">
 <a href="#state_event_go" style="color: inherit; text-decoration: inherit;">Event</a>
@@ -1606,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationprovider_go">
 <a href="#state_integrationprovider_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Provider</a>
@@ -1616,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1626,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1636,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processwhere_go">
 <a href="#state_processwhere_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Where</a>
@@ -1646,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_go">
 <a href="#state_runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -1656,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_select_go">
 <a href="#state_select_go" style="color: inherit; text-decoration: inherit;">Select</a>
@@ -1666,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1676,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_go">
 <a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1686,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationclosetimer_go">
 <a href="#state_violationclosetimer_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
@@ -1696,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_go">
 <a href="#state_warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1706,8 +1592,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_where_go">
 <a href="#state_where_go" style="color: inherit; text-decoration: inherit;">Where</a>
@@ -1716,13 +1601,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comparison_nodejs">
 <a href="#state_comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -1731,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1741,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_nodejs">
 <a href="#state_critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -1751,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1761,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1771,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_nodejs">
 <a href="#state_event_nodejs" style="color: inherit; text-decoration: inherit;">event</a>
@@ -1781,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationprovider_nodejs">
 <a href="#state_integrationprovider_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Provider</a>
@@ -1791,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1801,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -1811,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processwhere_nodejs">
 <a href="#state_processwhere_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Where</a>
@@ -1821,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_nodejs">
 <a href="#state_runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
@@ -1831,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_select_nodejs">
 <a href="#state_select_nodejs" style="color: inherit; text-decoration: inherit;">select</a>
@@ -1841,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1851,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_nodejs">
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1861,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationclosetimer_nodejs">
 <a href="#state_violationclosetimer_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Close<wbr>Timer</a>
@@ -1871,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_nodejs">
 <a href="#state_warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1881,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_where_nodejs">
 <a href="#state_where_nodejs" style="color: inherit; text-decoration: inherit;">where</a>
@@ -1891,13 +1758,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comparison_python">
 <a href="#state_comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -1906,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1916,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_python">
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -1926,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1936,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Infrastructure alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1946,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_python">
 <a href="#state_event_python" style="color: inherit; text-decoration: inherit;">event</a>
@@ -1956,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_provider_python">
 <a href="#state_integration_provider_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>provider</a>
@@ -1966,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1976,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1986,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_process_where_python">
 <a href="#state_process_where_python" style="color: inherit; text-decoration: inherit;">process_<wbr>where</a>
@@ -1996,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Required by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbook_url_python">
 <a href="#state_runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
@@ -2006,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_select_python">
 <a href="#state_select_python" style="color: inherit; text-decoration: inherit;">select</a>
@@ -2016,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2026,8 +1879,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_at_python">
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -2036,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violation_close_timer_python">
 <a href="#state_violation_close_timer_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>close_<wbr>timer</a>
@@ -2046,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_python">
 <a href="#state_warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -2056,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_where_python">
 <a href="#state_where_python" style="color: inherit; text-decoration: inherit;">where</a>
@@ -2066,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2082,8 +1930,7 @@ The following state arguments are supported:
 <h4 id="infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2091,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timefunction_csharp">
 <a href="#timefunction_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2100,8 +1946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2109,13 +1954,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2123,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timefunction_go">
 <a href="#timefunction_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2132,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2141,13 +1982,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2155,8 +1994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timefunction_nodejs">
 <a href="#timefunction_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
@@ -2164,8 +2002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2173,13 +2010,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2187,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_function_python">
 <a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
@@ -2196,8 +2030,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2205,15 +2038,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2221,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timefunction_csharp">
 <a href="#timefunction_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2230,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2239,13 +2068,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2253,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timefunction_go">
 <a href="#timefunction_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2262,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2271,13 +2096,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2285,8 +2108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timefunction_nodejs">
 <a href="#timefunction_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
@@ -2294,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2303,13 +2124,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2317,8 +2136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_function_python">
 <a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
@@ -2326,8 +2144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2335,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

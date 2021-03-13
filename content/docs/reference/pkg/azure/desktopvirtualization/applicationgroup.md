@@ -381,8 +381,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolid_csharp">
 <a href="#hostpoolid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Id</a>
@@ -392,8 +391,7 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -404,8 +402,7 @@ Virtual Desktop Application Group.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -415,8 +412,7 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -425,8 +421,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -435,8 +430,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -446,8 +440,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -456,8 +449,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -466,13 +458,11 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolid_go">
 <a href="#hostpoolid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Id</a>
@@ -482,8 +472,7 @@ located. Changing the location/region forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -494,8 +483,7 @@ Virtual Desktop Application Group.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -505,8 +493,7 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -515,8 +502,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -525,8 +511,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -536,8 +521,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -546,8 +530,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -556,13 +539,11 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolid_nodejs">
 <a href="#hostpoolid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Id</a>
@@ -572,8 +553,7 @@ located. Changing the location/region forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -584,8 +564,7 @@ Virtual Desktop Application Group.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -595,8 +574,7 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -605,8 +583,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -615,8 +592,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -626,8 +602,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -636,8 +611,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -646,13 +620,11 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_pool_id_python">
 <a href="#host_pool_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>id</a>
@@ -662,8 +634,7 @@ located. Changing the location/region forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -674,8 +645,7 @@ Virtual Desktop Application Group.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -685,8 +655,7 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -695,8 +664,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -705,8 +673,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -716,8 +683,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -726,8 +692,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -736,8 +701,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -748,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -757,13 +720,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -771,13 +732,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,13 +744,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -799,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -927,8 +883,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -937,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_csharp">
 <a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -947,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostpoolid_csharp">
 <a href="#state_hostpoolid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Id</a>
@@ -958,8 +911,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -969,8 +921,7 @@ Virtual Desktop Application Group.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -979,8 +930,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -991,8 +941,7 @@ located. Changing the location/region forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1001,8 +950,7 @@ a new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1012,13 +960,11 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1027,8 +973,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_go">
 <a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1037,8 +982,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostpoolid_go">
 <a href="#state_hostpoolid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Id</a>
@@ -1048,8 +992,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1059,8 +1002,7 @@ Virtual Desktop Application Group.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1069,8 +1011,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1081,8 +1022,7 @@ located. Changing the location/region forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1091,8 +1031,7 @@ a new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1102,13 +1041,11 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1117,8 +1054,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_nodejs">
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -1127,8 +1063,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostpoolid_nodejs">
 <a href="#state_hostpoolid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Id</a>
@@ -1138,8 +1073,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1149,8 +1083,7 @@ Virtual Desktop Application Group.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1159,8 +1092,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1171,8 +1103,7 @@ located. Changing the location/region forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1181,8 +1112,7 @@ a new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1192,13 +1122,11 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1207,8 +1135,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to set a description for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendly_name_python">
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -1217,8 +1144,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to set a friendly name for the Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_pool_id_python">
 <a href="#state_host_pool_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>id</a>
@@ -1228,8 +1154,7 @@ Valid options are `RemoteApp` or `Desktop` application groups.
     </dt>
     <dd>{{% md %}}Resource ID for a Virtual Desktop Host Pool to associate with the
 Virtual Desktop Application Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1239,8 +1164,7 @@ Virtual Desktop Application Group.
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Desktop Application Group is
 located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1249,8 +1173,7 @@ located. Changing the location/region forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Virtual Desktop Application Group. Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1261,8 +1184,7 @@ located. Changing the location/region forces a new resource to be created.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Application Group. Changing the resource group name forces
 a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1271,8 +1193,7 @@ a new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1282,8 +1203,7 @@ a new resource to be created.
     </dt>
     <dd>{{% md %}}Type of Virtual Desktop Application Group.
 Valid options are `RemoteApp` or `Desktop` application groups.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

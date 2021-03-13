@@ -302,8 +302,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -312,8 +311,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolmaxreuse_csharp">
 <a href="#connpoolmaxreuse_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxreuse</a>
@@ -322,8 +320,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolmaxsize_csharp">
 <a href="#connpoolmaxsize_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxsize</a>
@@ -332,8 +329,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolminsize_csharp">
 <a href="#connpoolminsize_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Minsize</a>
@@ -342,8 +338,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolreplenish_csharp">
 <a href="#connpoolreplenish_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Replenish</a>
@@ -352,8 +347,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolstep_csharp">
 <a href="#connpoolstep_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Step</a>
@@ -362,8 +356,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolidletimeoutoverride_csharp">
 <a href="#connpoolidletimeoutoverride_csharp" style="color: inherit; text-decoration: inherit;">Connpoolidle<wbr>Timeoutoverride</a>
@@ -372,8 +365,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_csharp">
 <a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -382,8 +374,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcehttp10response_csharp">
 <a href="#forcehttp10response_csharp" style="color: inherit; text-decoration: inherit;">Forcehttp10response</a>
@@ -392,8 +383,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeout_csharp">
 <a href="#idletimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -402,8 +392,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheadersize_csharp">
 <a href="#maxheadersize_csharp" style="color: inherit; text-decoration: inherit;">Maxheader<wbr>Size</a>
@@ -412,13 +401,11 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -427,8 +414,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolmaxreuse_go">
 <a href="#connpoolmaxreuse_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxreuse</a>
@@ -437,8 +423,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolmaxsize_go">
 <a href="#connpoolmaxsize_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxsize</a>
@@ -447,8 +432,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolminsize_go">
 <a href="#connpoolminsize_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Minsize</a>
@@ -457,8 +441,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolreplenish_go">
 <a href="#connpoolreplenish_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Replenish</a>
@@ -467,8 +450,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolstep_go">
 <a href="#connpoolstep_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Step</a>
@@ -477,8 +459,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolidletimeoutoverride_go">
 <a href="#connpoolidletimeoutoverride_go" style="color: inherit; text-decoration: inherit;">Connpoolidle<wbr>Timeoutoverride</a>
@@ -487,8 +468,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_go">
 <a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -497,8 +477,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcehttp10response_go">
 <a href="#forcehttp10response_go" style="color: inherit; text-decoration: inherit;">Forcehttp10response</a>
@@ -507,8 +486,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeout_go">
 <a href="#idletimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -517,8 +495,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheadersize_go">
 <a href="#maxheadersize_go" style="color: inherit; text-decoration: inherit;">Maxheader<wbr>Size</a>
@@ -527,13 +504,11 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -542,8 +517,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolmaxreuse_nodejs">
 <a href="#connpoolmaxreuse_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Maxreuse</a>
@@ -552,8 +526,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolmaxsize_nodejs">
 <a href="#connpoolmaxsize_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Maxsize</a>
@@ -562,8 +535,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolminsize_nodejs">
 <a href="#connpoolminsize_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Minsize</a>
@@ -572,8 +544,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolreplenish_nodejs">
 <a href="#connpoolreplenish_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Replenish</a>
@@ -582,8 +553,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolstep_nodejs">
 <a href="#connpoolstep_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Step</a>
@@ -592,8 +562,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolidletimeoutoverride_nodejs">
 <a href="#connpoolidletimeoutoverride_nodejs" style="color: inherit; text-decoration: inherit;">connpoolidle<wbr>Timeoutoverride</a>
@@ -602,8 +571,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_nodejs">
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -612,8 +580,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcehttp10response_nodejs">
 <a href="#forcehttp10response_nodejs" style="color: inherit; text-decoration: inherit;">forcehttp10response</a>
@@ -622,8 +589,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeout_nodejs">
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
@@ -632,8 +598,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheadersize_nodejs">
 <a href="#maxheadersize_nodejs" style="color: inherit; text-decoration: inherit;">maxheader<wbr>Size</a>
@@ -642,13 +607,11 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -657,8 +620,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpool_maxreuse_python">
 <a href="#connpool_maxreuse_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>maxreuse</a>
@@ -667,8 +629,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpool_maxsize_python">
 <a href="#connpool_maxsize_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>maxsize</a>
@@ -677,8 +638,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpool_minsize_python">
 <a href="#connpool_minsize_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>minsize</a>
@@ -687,8 +647,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpool_replenish_python">
 <a href="#connpool_replenish_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>replenish</a>
@@ -697,8 +656,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpool_step_python">
 <a href="#connpool_step_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>step</a>
@@ -707,8 +665,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connpoolidle_timeoutoverride_python">
 <a href="#connpoolidle_timeoutoverride_python" style="color: inherit; text-decoration: inherit;">connpoolidle_<wbr>timeoutoverride</a>
@@ -717,8 +674,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaults_from_python">
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -727,8 +683,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcehttp10response_python">
 <a href="#forcehttp10response_python" style="color: inherit; text-decoration: inherit;">forcehttp10response</a>
@@ -737,8 +692,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_timeout_python">
 <a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
@@ -747,8 +701,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheader_size_python">
 <a href="#maxheader_size_python" style="color: inherit; text-decoration: inherit;">maxheader_<wbr>size</a>
@@ -757,8 +710,7 @@ The ProfileFastHttp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -769,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -778,13 +729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -792,13 +741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -806,13 +753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -820,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -948,8 +892,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolmaxreuse_csharp">
 <a href="#state_connpoolmaxreuse_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxreuse</a>
@@ -958,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolmaxsize_csharp">
 <a href="#state_connpoolmaxsize_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxsize</a>
@@ -968,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolminsize_csharp">
 <a href="#state_connpoolminsize_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Minsize</a>
@@ -978,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolreplenish_csharp">
 <a href="#state_connpoolreplenish_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Replenish</a>
@@ -988,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolstep_csharp">
 <a href="#state_connpoolstep_csharp" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Step</a>
@@ -998,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolidletimeoutoverride_csharp">
 <a href="#state_connpoolidletimeoutoverride_csharp" style="color: inherit; text-decoration: inherit;">Connpoolidle<wbr>Timeoutoverride</a>
@@ -1008,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
 <a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1018,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcehttp10response_csharp">
 <a href="#state_forcehttp10response_csharp" style="color: inherit; text-decoration: inherit;">Forcehttp10response</a>
@@ -1028,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_csharp">
 <a href="#state_idletimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -1038,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxheadersize_csharp">
 <a href="#state_maxheadersize_csharp" style="color: inherit; text-decoration: inherit;">Maxheader<wbr>Size</a>
@@ -1048,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1058,13 +991,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolmaxreuse_go">
 <a href="#state_connpoolmaxreuse_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxreuse</a>
@@ -1073,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolmaxsize_go">
 <a href="#state_connpoolmaxsize_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Maxsize</a>
@@ -1083,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolminsize_go">
 <a href="#state_connpoolminsize_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Minsize</a>
@@ -1093,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolreplenish_go">
 <a href="#state_connpoolreplenish_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Replenish</a>
@@ -1103,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolstep_go">
 <a href="#state_connpoolstep_go" style="color: inherit; text-decoration: inherit;">Connpool<wbr>Step</a>
@@ -1113,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolidletimeoutoverride_go">
 <a href="#state_connpoolidletimeoutoverride_go" style="color: inherit; text-decoration: inherit;">Connpoolidle<wbr>Timeoutoverride</a>
@@ -1123,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
 <a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1133,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcehttp10response_go">
 <a href="#state_forcehttp10response_go" style="color: inherit; text-decoration: inherit;">Forcehttp10response</a>
@@ -1143,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_go">
 <a href="#state_idletimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
@@ -1153,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxheadersize_go">
 <a href="#state_maxheadersize_go" style="color: inherit; text-decoration: inherit;">Maxheader<wbr>Size</a>
@@ -1163,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1173,13 +1094,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolmaxreuse_nodejs">
 <a href="#state_connpoolmaxreuse_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Maxreuse</a>
@@ -1188,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolmaxsize_nodejs">
 <a href="#state_connpoolmaxsize_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Maxsize</a>
@@ -1198,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolminsize_nodejs">
 <a href="#state_connpoolminsize_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Minsize</a>
@@ -1208,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolreplenish_nodejs">
 <a href="#state_connpoolreplenish_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Replenish</a>
@@ -1218,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolstep_nodejs">
 <a href="#state_connpoolstep_nodejs" style="color: inherit; text-decoration: inherit;">connpool<wbr>Step</a>
@@ -1228,8 +1143,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolidletimeoutoverride_nodejs">
 <a href="#state_connpoolidletimeoutoverride_nodejs" style="color: inherit; text-decoration: inherit;">connpoolidle<wbr>Timeoutoverride</a>
@@ -1238,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -1248,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcehttp10response_nodejs">
 <a href="#state_forcehttp10response_nodejs" style="color: inherit; text-decoration: inherit;">forcehttp10response</a>
@@ -1258,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idletimeout_nodejs">
 <a href="#state_idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
@@ -1268,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxheadersize_nodejs">
 <a href="#state_maxheadersize_nodejs" style="color: inherit; text-decoration: inherit;">maxheader<wbr>Size</a>
@@ -1278,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1288,13 +1197,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connpool_maxreuse_python">
 <a href="#state_connpool_maxreuse_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>maxreuse</a>
@@ -1303,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of times that the system can re-use a current connection. The default value is 0 (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpool_maxsize_python">
 <a href="#state_connpool_maxsize_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>maxsize</a>
@@ -1313,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections to a load balancing pool. A setting of 0 specifies that a pool can accept an unlimited number of connections. The default value is 2048.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpool_minsize_python">
 <a href="#state_connpool_minsize_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>minsize</a>
@@ -1323,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum number of connections to a load balancing pool. A setting of 0 specifies that there is no minimum. The default value is 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpool_replenish_python">
 <a href="#state_connpool_replenish_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>replenish</a>
@@ -1333,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value is enabled. When this option is enabled, the system replenishes the number of connections to a load balancing pool to the number of connections that existed when the server closed the connection to the pool. When disabled, the system replenishes the connection that was closed by the server, only when there are fewer connections to the pool than the number of connections set in the connpool-min-size connections option. Also see the connpool-min-size option..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpool_step_python">
 <a href="#state_connpool_step_python" style="color: inherit; text-decoration: inherit;">connpool_<wbr>step</a>
@@ -1343,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the increment in which the system makes additional connections available, when all available connections are in use. The default value is 4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connpoolidle_timeoutoverride_python">
 <a href="#state_connpoolidle_timeoutoverride_python" style="color: inherit; text-decoration: inherit;">connpoolidle_<wbr>timeoutoverride</a>
@@ -1353,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds after which a server-side connection in a OneConnect pool is eligible for deletion, when the connection has no traffic.The value of this option overrides the idle-timeout value that you specify. The default value is 0 (zero) seconds, which disables the override setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -1363,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcehttp10response_python">
 <a href="#state_forcehttp10response_python" style="color: inherit; text-decoration: inherit;">forcehttp10response</a>
@@ -1373,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to rewrite the HTTP version in the status line of the server to HTTP 1.0 to discourage the client from pipelining or chunking data. The default value is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idle_timeout_python">
 <a href="#state_idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
@@ -1383,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies an idle timeout in seconds. This setting specifies the number of seconds that a connection is idle before the connection is eligible for deletion.When you specify an idle timeout for the Fast L4 profile, the value must be greater than the bigdb database variable Pva.Scrub time in msec for it to work properly.The default value is 300 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxheader_size_python">
 <a href="#state_maxheader_size_python" style="color: inherit; text-decoration: inherit;">maxheader_<wbr>size</a>
@@ -1393,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum amount of HTTP header data that the system buffers before making a load balancing decision. The default setting is 32768.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1403,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the profile_fasthttp
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -573,8 +573,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_csharp">
 <a href="#directory_csharp" style="color: inherit; text-decoration: inherit;">Directory</a>
@@ -585,8 +584,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The directory containing the kustomization to apply. The value can be a local directory or a folder in a
 git repository.
 Example: ./helloWorld
-Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd>
-    <dt class="property-optional"
+Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_csharp">
 <a href="#resourceprefix_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
@@ -594,8 +592,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformations_csharp">
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
@@ -603,13 +600,11 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_go">
 <a href="#directory_go" style="color: inherit; text-decoration: inherit;">Directory</a>
@@ -620,8 +615,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
     <dd>{{% md %}}The directory containing the kustomization to apply. The value can be a local directory or a folder in a
 git repository.
 Example: ./helloWorld
-Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd>
-    <dt class="property-optional"
+Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_go">
 <a href="#resourceprefix_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
@@ -629,8 +623,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformations_go">
 <a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
@@ -638,13 +631,11 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_nodejs">
 <a href="#directory_nodejs" style="color: inherit; text-decoration: inherit;">directory</a>
@@ -655,8 +646,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
     <dd>{{% md %}}The directory containing the kustomization to apply. The value can be a local directory or a folder in a
 git repository.
 Example: ./helloWorld
-Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd>
-    <dt class="property-optional"
+Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_nodejs">
 <a href="#resourceprefix_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Prefix</a>
@@ -664,8 +654,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformations_nodejs">
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
@@ -673,13 +662,11 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="directory_python">
 <a href="#directory_python" style="color: inherit; text-decoration: inherit;">directory</a>
@@ -690,8 +677,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
     <dd>{{% md %}}The directory containing the kustomization to apply. The value can be a local directory or a folder in a
 git repository.
 Example: ./helloWorld
-Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd>
-    <dt class="property-optional"
+Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_prefix_python">
 <a href="#resource_prefix_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>prefix</a>
@@ -699,8 +685,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformations_python">
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
@@ -708,8 +693,7 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -720,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -729,13 +712,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,13 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -757,13 +736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -771,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

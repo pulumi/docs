@@ -162,8 +162,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityprovideralias_csharp">
 <a href="#identityprovideralias_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Alias</a>
@@ -172,8 +171,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_csharp">
 <a href="#realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -182,8 +180,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersession_csharp">
 <a href="#usersession_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Session</a>
@@ -192,8 +189,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
 <a href="#attributename_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -202,8 +198,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_csharp">
 <a href="#attributevalue_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -212,8 +207,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraconfig_csharp">
 <a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -221,8 +215,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -231,13 +224,11 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityprovideralias_go">
 <a href="#identityprovideralias_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Alias</a>
@@ -246,8 +237,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_go">
 <a href="#realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -256,8 +246,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersession_go">
 <a href="#usersession_go" style="color: inherit; text-decoration: inherit;">User<wbr>Session</a>
@@ -266,8 +255,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
 <a href="#attributename_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -276,8 +264,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_go">
 <a href="#attributevalue_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -286,8 +273,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraconfig_go">
 <a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -295,8 +281,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -305,13 +290,11 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityprovideralias_nodejs">
 <a href="#identityprovideralias_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Alias</a>
@@ -320,8 +303,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_nodejs">
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -330,8 +312,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersession_nodejs">
 <a href="#usersession_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Session</a>
@@ -340,8 +321,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
@@ -350,8 +330,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_nodejs">
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
@@ -360,8 +339,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraconfig_nodejs">
 <a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
@@ -369,8 +347,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -379,13 +356,11 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_provider_alias_python">
 <a href="#identity_provider_alias_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>alias</a>
@@ -394,8 +369,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_python">
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -404,8 +378,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_session_python">
 <a href="#user_session_python" style="color: inherit; text-decoration: inherit;">user_<wbr>session</a>
@@ -414,8 +387,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
@@ -424,8 +396,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_value_python">
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
@@ -434,8 +405,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_config_python">
 <a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
@@ -443,8 +413,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -453,8 +422,7 @@ The HardcodedAttributeIdentityProviderMapper resource accepts the following [inp
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -465,8 +433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -474,13 +441,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -488,13 +453,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -502,13 +465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -516,8 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -644,8 +604,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributename_csharp">
 <a href="#state_attributename_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -654,8 +613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributevalue_csharp">
 <a href="#state_attributevalue_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -664,8 +622,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_csharp">
 <a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -673,8 +630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identityprovideralias_csharp">
 <a href="#state_identityprovideralias_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Alias</a>
@@ -683,8 +639,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -693,8 +648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_csharp">
 <a href="#state_realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -703,8 +657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersession_csharp">
 <a href="#state_usersession_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Session</a>
@@ -713,13 +666,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributename_go">
 <a href="#state_attributename_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -728,8 +679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributevalue_go">
 <a href="#state_attributevalue_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -738,8 +688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_go">
 <a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -747,8 +696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identityprovideralias_go">
 <a href="#state_identityprovideralias_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Alias</a>
@@ -757,8 +705,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -767,8 +714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_go">
 <a href="#state_realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -777,8 +723,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersession_go">
 <a href="#state_usersession_go" style="color: inherit; text-decoration: inherit;">User<wbr>Session</a>
@@ -787,13 +732,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributename_nodejs">
 <a href="#state_attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
@@ -802,8 +745,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributevalue_nodejs">
 <a href="#state_attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
@@ -812,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_nodejs">
 <a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
@@ -821,8 +762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identityprovideralias_nodejs">
 <a href="#state_identityprovideralias_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Alias</a>
@@ -831,8 +771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -841,8 +780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_nodejs">
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -851,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersession_nodejs">
 <a href="#state_usersession_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Session</a>
@@ -861,13 +798,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attribute_name_python">
 <a href="#state_attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
@@ -876,8 +811,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OIDC Claim
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attribute_value_python">
 <a href="#state_attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
@@ -886,8 +820,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User Attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_config_python">
 <a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
@@ -895,8 +828,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_provider_alias_python">
 <a href="#state_identity_provider_alias_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>alias</a>
@@ -905,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IDP Alias
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -915,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IDP Mapper Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_python">
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -925,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_session_python">
 <a href="#state_user_session_python" style="color: inherit; text-decoration: inherit;">user_<wbr>session</a>
@@ -935,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Attribute Related To a User Session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

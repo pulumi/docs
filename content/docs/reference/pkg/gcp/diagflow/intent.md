@@ -297,8 +297,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -307,8 +306,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -318,8 +316,7 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultresponseplatforms_csharp">
 <a href="#defaultresponseplatforms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
@@ -330,8 +327,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -342,8 +338,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_csharp">
 <a href="#inputcontextnames_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
@@ -353,8 +348,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfallback_csharp">
 <a href="#isfallback_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
@@ -363,8 +357,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mldisabled_csharp">
 <a href="#mldisabled_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
@@ -375,8 +368,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_csharp">
 <a href="#parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -386,8 +378,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -399,8 +390,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -410,8 +400,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetcontexts_csharp">
 <a href="#resetcontexts_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
@@ -420,8 +409,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookstate_csharp">
 <a href="#webhookstate_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
@@ -434,13 +422,11 @@ If it is not provided, the provider project is used.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -449,8 +435,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -460,8 +445,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultresponseplatforms_go">
 <a href="#defaultresponseplatforms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
@@ -472,8 +456,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -484,8 +467,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_go">
 <a href="#inputcontextnames_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
@@ -495,8 +477,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfallback_go">
 <a href="#isfallback_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
@@ -505,8 +486,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mldisabled_go">
 <a href="#mldisabled_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
@@ -517,8 +497,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_go">
 <a href="#parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -528,8 +507,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -541,8 +519,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -552,8 +529,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetcontexts_go">
 <a href="#resetcontexts_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
@@ -562,8 +538,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookstate_go">
 <a href="#webhookstate_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
@@ -576,13 +551,11 @@ If it is not provided, the provider project is used.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -591,8 +564,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -602,8 +574,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultresponseplatforms_nodejs">
 <a href="#defaultresponseplatforms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Response<wbr>Platforms</a>
@@ -614,8 +585,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -626,8 +596,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_nodejs">
 <a href="#inputcontextnames_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Context<wbr>Names</a>
@@ -637,8 +606,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfallback_nodejs">
 <a href="#isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
@@ -647,8 +615,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mldisabled_nodejs">
 <a href="#mldisabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Disabled</a>
@@ -659,8 +626,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_nodejs">
 <a href="#parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -670,8 +636,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -683,8 +648,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -694,8 +658,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetcontexts_nodejs">
 <a href="#resetcontexts_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Contexts</a>
@@ -704,8 +667,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookstate_nodejs">
 <a href="#webhookstate_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>State</a>
@@ -718,13 +680,11 @@ If it is not provided, the provider project is used.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -733,8 +693,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -744,8 +703,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_response_platforms_python">
 <a href="#default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
@@ -756,8 +714,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -768,8 +725,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_context_names_python">
 <a href="#input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
@@ -779,8 +735,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_fallback_python">
 <a href="#is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
@@ -789,8 +744,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ml_disabled_python">
 <a href="#ml_disabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>disabled</a>
@@ -801,8 +755,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_followup_intent_name_python">
 <a href="#parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
@@ -812,8 +765,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -825,8 +777,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -836,8 +787,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reset_contexts_python">
 <a href="#reset_contexts_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>contexts</a>
@@ -846,8 +796,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_state_python">
 <a href="#webhook_state_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>state</a>
@@ -860,8 +809,7 @@ If it is not provided, the provider project is used.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -872,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="followupintentinfos_csharp">
 <a href="#followupintentinfos_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
@@ -883,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -892,8 +838,7 @@ in the output.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -902,8 +847,7 @@ in the output.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootfollowupintentname_csharp">
 <a href="#rootfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -913,13 +857,11 @@ in the output.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="followupintentinfos_go">
 <a href="#followupintentinfos_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
@@ -929,8 +871,7 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -938,8 +879,7 @@ in the output.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -948,8 +888,7 @@ in the output.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootfollowupintentname_go">
 <a href="#rootfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -959,13 +898,11 @@ in the output.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="followupintentinfos_nodejs">
 <a href="#followupintentinfos_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Infos</a>
@@ -975,8 +912,7 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -984,8 +920,7 @@ in the output.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -994,8 +929,7 @@ in the output.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootfollowupintentname_nodejs">
 <a href="#rootfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1005,13 +939,11 @@ in the output.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="followup_intent_infos_python">
 <a href="#followup_intent_infos_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>infos</a>
@@ -1021,8 +953,7 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1030,8 +961,7 @@ in the output.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1040,8 +970,7 @@ in the output.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_followup_intent_name_python">
 <a href="#root_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>followup_<wbr>intent_<wbr>name</a>
@@ -1051,8 +980,7 @@ in the output.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1179,8 +1107,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1190,8 +1117,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultresponseplatforms_csharp">
 <a href="#state_defaultresponseplatforms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
@@ -1202,8 +1128,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1212,8 +1137,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_csharp">
 <a href="#state_events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1224,8 +1148,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_followupintentinfos_csharp">
 <a href="#state_followupintentinfos_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
@@ -1235,8 +1158,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputcontextnames_csharp">
 <a href="#state_inputcontextnames_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
@@ -1246,8 +1168,7 @@ in the output.
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isfallback_csharp">
 <a href="#state_isfallback_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
@@ -1256,8 +1177,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mldisabled_csharp">
 <a href="#state_mldisabled_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
@@ -1268,8 +1188,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1278,8 +1197,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentfollowupintentname_csharp">
 <a href="#state_parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1289,8 +1207,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1302,8 +1219,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1313,8 +1229,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetcontexts_csharp">
 <a href="#state_resetcontexts_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
@@ -1323,8 +1238,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootfollowupintentname_csharp">
 <a href="#state_rootfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1334,8 +1248,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookstate_csharp">
 <a href="#state_webhookstate_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
@@ -1348,13 +1261,11 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1364,8 +1275,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultresponseplatforms_go">
 <a href="#state_defaultresponseplatforms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
@@ -1376,8 +1286,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1386,8 +1295,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_go">
 <a href="#state_events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1398,8 +1306,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_followupintentinfos_go">
 <a href="#state_followupintentinfos_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
@@ -1409,8 +1316,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputcontextnames_go">
 <a href="#state_inputcontextnames_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
@@ -1420,8 +1326,7 @@ in the output.
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isfallback_go">
 <a href="#state_isfallback_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
@@ -1430,8 +1335,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mldisabled_go">
 <a href="#state_mldisabled_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
@@ -1442,8 +1346,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1452,8 +1355,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentfollowupintentname_go">
 <a href="#state_parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1463,8 +1365,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1476,8 +1377,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1487,8 +1387,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetcontexts_go">
 <a href="#state_resetcontexts_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
@@ -1497,8 +1396,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootfollowupintentname_go">
 <a href="#state_rootfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1508,8 +1406,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookstate_go">
 <a href="#state_webhookstate_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
@@ -1522,13 +1419,11 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1538,8 +1433,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultresponseplatforms_nodejs">
 <a href="#state_defaultresponseplatforms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Response<wbr>Platforms</a>
@@ -1550,8 +1444,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1560,8 +1453,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_nodejs">
 <a href="#state_events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1572,8 +1464,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_followupintentinfos_nodejs">
 <a href="#state_followupintentinfos_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Infos</a>
@@ -1583,8 +1474,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputcontextnames_nodejs">
 <a href="#state_inputcontextnames_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Context<wbr>Names</a>
@@ -1594,8 +1484,7 @@ in the output.
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isfallback_nodejs">
 <a href="#state_isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
@@ -1604,8 +1493,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mldisabled_nodejs">
 <a href="#state_mldisabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Disabled</a>
@@ -1616,8 +1504,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1626,8 +1513,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentfollowupintentname_nodejs">
 <a href="#state_parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1637,8 +1523,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1650,8 +1535,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1661,8 +1545,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resetcontexts_nodejs">
 <a href="#state_resetcontexts_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Contexts</a>
@@ -1671,8 +1554,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootfollowupintentname_nodejs">
 <a href="#state_rootfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1682,8 +1564,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookstate_nodejs">
 <a href="#state_webhookstate_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>State</a>
@@ -1696,13 +1577,11 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1712,8 +1591,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_response_platforms_python">
 <a href="#state_default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
@@ -1724,8 +1602,7 @@ Note: The action name must not contain whitespaces.
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1734,8 +1611,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_python">
 <a href="#state_events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1746,8 +1622,7 @@ Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_followup_intent_infos_python">
 <a href="#state_followup_intent_infos_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>infos</a>
@@ -1757,8 +1632,7 @@ the contexts must be present in the active user session for an event to trigger 
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_context_names_python">
 <a href="#state_input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
@@ -1768,8 +1642,7 @@ in the output.
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_fallback_python">
 <a href="#state_is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
@@ -1778,8 +1651,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ml_disabled_python">
 <a href="#state_ml_disabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>disabled</a>
@@ -1790,8 +1662,7 @@ Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1800,8 +1671,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_followup_intent_name_python">
 <a href="#state_parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
@@ -1811,8 +1681,7 @@ ONLY match mode. Also, auto-markup in the UI is turned off.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1824,8 +1693,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1835,8 +1703,7 @@ to the Normal priority in the console.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reset_contexts_python">
 <a href="#state_reset_contexts_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>contexts</a>
@@ -1845,8 +1712,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_followup_intent_name_python">
 <a href="#state_root_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>followup_<wbr>intent_<wbr>name</a>
@@ -1856,8 +1722,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhook_state_python">
 <a href="#state_webhook_state_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>state</a>
@@ -1870,8 +1735,7 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1886,8 +1750,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
 <h4 id="intentfollowupintentinfo">Intent<wbr>Followup<wbr>Intent<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followupintentname_csharp">
 <a href="#followupintentname_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Name</a>
@@ -1895,8 +1758,7 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_csharp">
 <a href="#parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1906,13 +1768,11 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followupintentname_go">
 <a href="#followupintentname_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Name</a>
@@ -1920,8 +1780,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_go">
 <a href="#parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1931,13 +1790,11 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followupintentname_nodejs">
 <a href="#followupintentname_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Name</a>
@@ -1945,8 +1802,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_nodejs">
 <a href="#parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
@@ -1956,13 +1812,11 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followup_intent_name_python">
 <a href="#followup_intent_name_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>name</a>
@@ -1970,8 +1824,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_followup_intent_name_python">
 <a href="#parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
@@ -1981,8 +1834,7 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -284,8 +284,7 @@ The Flavor resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_csharp">
 <a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -295,8 +294,7 @@ The Flavor resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ram_csharp">
 <a href="#ram_csharp" style="color: inherit; text-decoration: inherit;">Ram</a>
@@ -306,8 +304,7 @@ The Flavor resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_csharp">
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -317,8 +314,7 @@ creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_csharp">
 <a href="#ephemeral_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral</a>
@@ -328,8 +324,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraspecs_csharp">
 <a href="#extraspecs_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Specs</a>
@@ -338,8 +333,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_csharp">
 <a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -349,8 +343,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_csharp">
 <a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -360,8 +353,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -371,8 +363,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -384,8 +375,7 @@ flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rxtxfactor_csharp">
 <a href="#rxtxfactor_csharp" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
@@ -395,8 +385,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swap_csharp">
 <a href="#swap_csharp" style="color: inherit; text-decoration: inherit;">Swap</a>
@@ -406,13 +395,11 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_go">
 <a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -422,8 +409,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ram_go">
 <a href="#ram_go" style="color: inherit; text-decoration: inherit;">Ram</a>
@@ -433,8 +419,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_go">
 <a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -444,8 +429,7 @@ creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_go">
 <a href="#ephemeral_go" style="color: inherit; text-decoration: inherit;">Ephemeral</a>
@@ -455,8 +439,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraspecs_go">
 <a href="#extraspecs_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Specs</a>
@@ -465,8 +448,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_go">
 <a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -476,8 +458,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_go">
 <a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -487,8 +468,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -498,8 +478,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -511,8 +490,7 @@ flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rxtxfactor_go">
 <a href="#rxtxfactor_go" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
@@ -522,8 +500,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swap_go">
 <a href="#swap_go" style="color: inherit; text-decoration: inherit;">Swap</a>
@@ -533,13 +510,11 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_nodejs">
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -549,8 +524,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ram_nodejs">
 <a href="#ram_nodejs" style="color: inherit; text-decoration: inherit;">ram</a>
@@ -560,8 +534,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_nodejs">
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -571,8 +544,7 @@ creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_nodejs">
 <a href="#ephemeral_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral</a>
@@ -582,8 +554,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraspecs_nodejs">
 <a href="#extraspecs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Specs</a>
@@ -592,8 +563,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_nodejs">
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -603,8 +573,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_nodejs">
 <a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -614,8 +583,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +593,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -638,8 +605,7 @@ flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rxtxfactor_nodejs">
 <a href="#rxtxfactor_nodejs" style="color: inherit; text-decoration: inherit;">rx<wbr>Tx<wbr>Factor</a>
@@ -649,8 +615,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swap_nodejs">
 <a href="#swap_nodejs" style="color: inherit; text-decoration: inherit;">swap</a>
@@ -660,13 +625,11 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_python">
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -676,8 +639,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ram_python">
 <a href="#ram_python" style="color: inherit; text-decoration: inherit;">ram</a>
@@ -687,8 +649,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_python">
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -698,8 +659,7 @@ creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_python">
 <a href="#ephemeral_python" style="color: inherit; text-decoration: inherit;">ephemeral</a>
@@ -709,8 +669,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_specs_python">
 <a href="#extra_specs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>specs</a>
@@ -719,8 +678,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavor_id_python">
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -730,8 +688,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_public_python">
 <a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -741,8 +698,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -752,8 +708,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -765,8 +720,7 @@ flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rx_tx_factor_python">
 <a href="#rx_tx_factor_python" style="color: inherit; text-decoration: inherit;">rx_<wbr>tx_<wbr>factor</a>
@@ -776,8 +730,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swap_python">
 <a href="#swap_python" style="color: inherit; text-decoration: inherit;">swap</a>
@@ -787,8 +740,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -799,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -808,13 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -822,13 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -836,13 +783,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -850,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -978,8 +922,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disk_csharp">
 <a href="#state_disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -989,8 +932,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_csharp">
 <a href="#state_ephemeral_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral</a>
@@ -1000,8 +942,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraspecs_csharp">
 <a href="#state_extraspecs_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Specs</a>
@@ -1010,8 +951,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_csharp">
 <a href="#state_flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -1021,8 +961,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_csharp">
 <a href="#state_ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1032,8 +971,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1043,8 +981,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ram_csharp">
 <a href="#state_ram_csharp" style="color: inherit; text-decoration: inherit;">Ram</a>
@@ -1054,8 +991,7 @@ flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1067,8 +1003,7 @@ creates a new flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rxtxfactor_csharp">
 <a href="#state_rxtxfactor_csharp" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
@@ -1078,8 +1013,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_swap_csharp">
 <a href="#state_swap_csharp" style="color: inherit; text-decoration: inherit;">Swap</a>
@@ -1089,8 +1023,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_csharp">
 <a href="#state_vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -1100,13 +1033,11 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disk_go">
 <a href="#state_disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -1116,8 +1047,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_go">
 <a href="#state_ephemeral_go" style="color: inherit; text-decoration: inherit;">Ephemeral</a>
@@ -1127,8 +1057,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraspecs_go">
 <a href="#state_extraspecs_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Specs</a>
@@ -1137,8 +1066,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_go">
 <a href="#state_flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -1148,8 +1076,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_go">
 <a href="#state_ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1159,8 +1086,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1170,8 +1096,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ram_go">
 <a href="#state_ram_go" style="color: inherit; text-decoration: inherit;">Ram</a>
@@ -1181,8 +1106,7 @@ flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1194,8 +1118,7 @@ creates a new flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rxtxfactor_go">
 <a href="#state_rxtxfactor_go" style="color: inherit; text-decoration: inherit;">Rx<wbr>Tx<wbr>Factor</a>
@@ -1205,8 +1128,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_swap_go">
 <a href="#state_swap_go" style="color: inherit; text-decoration: inherit;">Swap</a>
@@ -1216,8 +1138,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_go">
 <a href="#state_vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -1227,13 +1148,11 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disk_nodejs">
 <a href="#state_disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1243,8 +1162,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_nodejs">
 <a href="#state_ephemeral_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral</a>
@@ -1254,8 +1172,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraspecs_nodejs">
 <a href="#state_extraspecs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Specs</a>
@@ -1264,8 +1181,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_nodejs">
 <a href="#state_flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -1275,8 +1191,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_nodejs">
 <a href="#state_ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -1286,8 +1201,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1297,8 +1211,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ram_nodejs">
 <a href="#state_ram_nodejs" style="color: inherit; text-decoration: inherit;">ram</a>
@@ -1308,8 +1221,7 @@ flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1321,8 +1233,7 @@ creates a new flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rxtxfactor_nodejs">
 <a href="#state_rxtxfactor_nodejs" style="color: inherit; text-decoration: inherit;">rx<wbr>Tx<wbr>Factor</a>
@@ -1332,8 +1243,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_swap_nodejs">
 <a href="#state_swap_nodejs" style="color: inherit; text-decoration: inherit;">swap</a>
@@ -1343,8 +1253,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_nodejs">
 <a href="#state_vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -1354,13 +1263,11 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disk_python">
 <a href="#state_disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1370,8 +1277,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in GiB to use for the root
 (/) partition. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_python">
 <a href="#state_ephemeral_python" style="color: inherit; text-decoration: inherit;">ephemeral</a>
@@ -1381,8 +1287,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}The amount of ephemeral in GiB. If unspecified,
 the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_specs_python">
 <a href="#state_extra_specs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>specs</a>
@@ -1391,8 +1296,7 @@ the default is 0. Changing this creates a new flavor.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs of metadata for the flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavor_id_python">
 <a href="#state_flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -1402,8 +1306,7 @@ the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}Unique ID (integer or UUID) of flavor to create. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_public_python">
 <a href="#state_is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -1413,8 +1316,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}Whether the flavor is public. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1424,8 +1326,7 @@ a new flavor.
     </dt>
     <dd>{{% md %}}A unique name for the flavor. Changing this creates a new
 flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ram_python">
 <a href="#state_ram_python" style="color: inherit; text-decoration: inherit;">ram</a>
@@ -1435,8 +1336,7 @@ flavor.
     </dt>
     <dd>{{% md %}}The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1448,8 +1348,7 @@ creates a new flavor.
 Flavors are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rx_tx_factor_python">
 <a href="#state_rx_tx_factor_python" style="color: inherit; text-decoration: inherit;">rx_<wbr>tx_<wbr>factor</a>
@@ -1459,8 +1358,7 @@ Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_swap_python">
 <a href="#state_swap_python" style="color: inherit; text-decoration: inherit;">swap</a>
@@ -1470,8 +1368,7 @@ this creates a new flavor.
     </dt>
     <dd>{{% md %}}The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcpus_python">
 <a href="#state_vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -1481,8 +1378,7 @@ unspecified, the default is 0. Changing this creates a new flavor.
     </dt>
     <dd>{{% md %}}The number of virtual CPUs to use. Changing this creates
 a new flavor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

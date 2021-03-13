@@ -345,8 +345,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -355,8 +354,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="linkedservicename_csharp">
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
@@ -365,8 +363,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="readaccessid_csharp">
 <a href="#readaccessid_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Access<wbr>Id</a>
@@ -375,8 +372,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -385,8 +381,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -395,8 +390,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -405,8 +399,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -415,8 +408,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="writeaccessid_csharp">
 <a href="#writeaccessid_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Access<wbr>Id</a>
@@ -425,13 +417,11 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -440,8 +430,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="linkedservicename_go">
 <a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
@@ -450,8 +439,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="readaccessid_go">
 <a href="#readaccessid_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Access<wbr>Id</a>
@@ -460,8 +448,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -470,8 +457,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -480,8 +466,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -490,8 +475,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -500,8 +484,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="writeaccessid_go">
 <a href="#writeaccessid_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Access<wbr>Id</a>
@@ -510,13 +493,11 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -525,8 +506,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="linkedservicename_nodejs">
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
@@ -535,8 +515,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="readaccessid_nodejs">
 <a href="#readaccessid_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Access<wbr>Id</a>
@@ -545,8 +524,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -555,8 +533,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -565,8 +542,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -575,8 +551,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -585,8 +560,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="writeaccessid_nodejs">
 <a href="#writeaccessid_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Access<wbr>Id</a>
@@ -595,13 +569,11 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -610,8 +582,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="linked_service_name_python">
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
@@ -620,8 +591,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="read_access_id_python">
 <a href="#read_access_id_python" style="color: inherit; text-decoration: inherit;">read_<wbr>access_<wbr>id</a>
@@ -630,8 +600,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -640,8 +609,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -650,8 +618,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -660,8 +627,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -670,8 +636,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="write_access_id_python">
 <a href="#write_access_id_python" style="color: inherit; text-decoration: inherit;">write_<wbr>access_<wbr>id</a>
@@ -680,8 +645,7 @@ The LinkedService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -692,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -701,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -711,13 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -725,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -735,13 +694,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -749,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -759,13 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -783,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -911,8 +863,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_linkedservicename_csharp">
 <a href="#state_linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
@@ -921,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -931,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readaccessid_csharp">
 <a href="#state_readaccessid_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Access<wbr>Id</a>
@@ -941,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -951,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -961,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -971,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspaceid_csharp">
 <a href="#state_workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -981,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_workspacename_csharp">
 <a href="#state_workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -991,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeaccessid_csharp">
 <a href="#state_writeaccessid_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Access<wbr>Id</a>
@@ -1001,13 +944,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_linkedservicename_go">
 <a href="#state_linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
@@ -1016,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1026,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readaccessid_go">
 <a href="#state_readaccessid_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Access<wbr>Id</a>
@@ -1036,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1046,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1056,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1066,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspaceid_go">
 <a href="#state_workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1076,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_workspacename_go">
 <a href="#state_workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -1086,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeaccessid_go">
 <a href="#state_writeaccessid_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Access<wbr>Id</a>
@@ -1096,13 +1029,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_linkedservicename_nodejs">
 <a href="#state_linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
@@ -1111,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1121,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readaccessid_nodejs">
 <a href="#state_readaccessid_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Access<wbr>Id</a>
@@ -1131,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1141,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1151,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1161,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspaceid_nodejs">
 <a href="#state_workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -1171,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_workspacename_nodejs">
 <a href="#state_workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -1181,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeaccessid_nodejs">
 <a href="#state_writeaccessid_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Access<wbr>Id</a>
@@ -1191,13 +1114,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_linked_service_name_python">
 <a href="#state_linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
@@ -1206,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in workspace_name. Accepted values are `automation` and `cluster`. Defaults to `automation`. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1216,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The generated name of the Linked Service. The format for this attribute is always `<workspace name>/<linked service type>`(e.g. `workspace1/Automation` or `workspace1/Cluster`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_read_access_id_python">
 <a href="#state_read_access_id_python" style="color: inherit; text-decoration: inherit;">read_<wbr>access_<wbr>id</a>
@@ -1226,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1236,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1246,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `read_access_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1256,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workspace_id_python">
 <a href="#state_workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -1266,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_workspace_name_python">
 <a href="#state_workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -1276,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics Workspace that will contain the Log Analytics Linked Service resource. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `workspace_id` and will be removed in a future version of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_access_id_python">
 <a href="#state_write_access_id_python" style="color: inherit; text-decoration: inherit;">write_<wbr>access_<wbr>id</a>
@@ -1286,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the writable Resource that will be linked to the workspace. This should be used for linking to a Log Analytics Cluster resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

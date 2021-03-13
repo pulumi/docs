@@ -369,8 +369,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -379,8 +378,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -389,8 +387,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -400,8 +397,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -412,13 +408,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -427,8 +421,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -437,8 +430,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -448,8 +440,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -460,13 +451,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -475,8 +464,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -485,8 +473,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -496,8 +483,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -508,13 +494,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -523,8 +507,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -533,8 +516,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -544,8 +526,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -556,8 +537,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -568,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -578,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -587,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -597,13 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -612,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -621,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -631,13 +604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -646,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -665,13 +634,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -680,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -689,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -699,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -827,8 +791,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -837,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -847,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -857,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -868,8 +828,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -880,8 +839,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -890,13 +848,11 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -905,8 +861,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -915,8 +870,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -925,8 +879,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -936,8 +889,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -948,8 +900,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -958,13 +909,11 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -973,8 +922,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -983,8 +931,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -993,8 +940,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1004,8 +950,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1016,8 +961,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1026,13 +970,11 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1041,8 +983,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1051,8 +992,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1061,8 +1001,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1072,8 +1011,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1084,8 +1022,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The set of rules that belong to this policy. There must always be a default
 rule (rule with priority 2147483647 and match "\*"). If no rules are provided when creating a
 security policy, a default rule with action "allow" will be added. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1094,8 +1031,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1110,8 +1046,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
 <h4 id="securitypolicyrule">Security<wbr>Policy<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1122,8 +1057,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     <dd>{{% md %}}Action to take when `match` matches the request. Valid values:
 * "allow" : allow access to target
 * "deny(status)" : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -1133,8 +1067,7 @@ security policy, a default rule with action "allow" will be added. Structure is 
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1144,8 +1077,7 @@ If it evaluates to true, the corresponding `action` is enforced. Structure is do
     </dt>
     <dd>{{% md %}}An unique positive integer indicating the priority of evaluation for a rule.
 Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1154,8 +1086,7 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -1165,13 +1096,11 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
     </dt>
     <dd>{{% md %}}When set to true, the `action` specified above is not enforced.
 Stackdriver logs for requests that trigger a preview action are annotated as such.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1182,8 +1111,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     <dd>{{% md %}}Action to take when `match` matches the request. Valid values:
 * "allow" : allow access to target
 * "deny(status)" : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -1193,8 +1121,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1204,8 +1131,7 @@ If it evaluates to true, the corresponding `action` is enforced. Structure is do
     </dt>
     <dd>{{% md %}}An unique positive integer indicating the priority of evaluation for a rule.
 Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1214,8 +1140,7 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -1225,13 +1150,11 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
     </dt>
     <dd>{{% md %}}When set to true, the `action` specified above is not enforced.
 Stackdriver logs for requests that trigger a preview action are annotated as such.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1242,8 +1165,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     <dd>{{% md %}}Action to take when `match` matches the request. Valid values:
 * "allow" : allow access to target
 * "deny(status)" : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1253,8 +1175,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1264,8 +1185,7 @@ If it evaluates to true, the corresponding `action` is enforced. Structure is do
     </dt>
     <dd>{{% md %}}An unique positive integer indicating the priority of evaluation for a rule.
 Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1274,8 +1194,7 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -1285,13 +1204,11 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
     </dt>
     <dd>{{% md %}}When set to true, the `action` specified above is not enforced.
 Stackdriver logs for requests that trigger a preview action are annotated as such.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1302,8 +1219,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     <dd>{{% md %}}Action to take when `match` matches the request. Valid values:
 * "allow" : allow access to target
 * "deny(status)" : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1313,8 +1229,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against.
 If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1324,8 +1239,7 @@ If it evaluates to true, the corresponding `action` is enforced. Structure is do
     </dt>
     <dd>{{% md %}}An unique positive integer indicating the priority of evaluation for a rule.
 Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1334,8 +1248,7 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this rule. Max size is 64.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -1345,15 +1258,13 @@ Rules are evaluated from highest priority (lowest numerically) to lowest priorit
     </dt>
     <dd>{{% md %}}When set to true, the `action` specified above is not enforced.
 Stackdriver logs for requests that trigger a preview action are annotated as such.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicyrulematch">Security<wbr>Policy<wbr>Rule<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1364,8 +1275,7 @@ Stackdriver logs for requests that trigger a preview action are annotated as suc
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expr_csharp">
 <a href="#expr_csharp" style="color: inherit; text-decoration: inherit;">Expr</a>
@@ -1376,8 +1286,7 @@ Structure is documented below.
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionedexpr_csharp">
 <a href="#versionedexpr_csharp" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
@@ -1388,13 +1297,11 @@ Structure is documented below.
     <dd>{{% md %}}Predefined rule expression. If this field is specified, `config` must also be specified.
 Available options:
 * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1405,8 +1312,7 @@ Available options:
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expr_go">
 <a href="#expr_go" style="color: inherit; text-decoration: inherit;">Expr</a>
@@ -1417,8 +1323,7 @@ Structure is documented below.
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionedexpr_go">
 <a href="#versionedexpr_go" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
@@ -1429,13 +1334,11 @@ Structure is documented below.
     <dd>{{% md %}}Predefined rule expression. If this field is specified, `config` must also be specified.
 Available options:
 * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1446,8 +1349,7 @@ Available options:
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expr_nodejs">
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
@@ -1458,8 +1360,7 @@ Structure is documented below.
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionedexpr_nodejs">
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
@@ -1470,13 +1371,11 @@ Structure is documented below.
     <dd>{{% md %}}Predefined rule expression. If this field is specified, `config` must also be specified.
 Available options:
 * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1487,8 +1386,7 @@ Available options:
     <dd>{{% md %}}The configuration options available when specifying `versioned_expr`.
 This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expr_python">
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
@@ -1499,8 +1397,7 @@ Structure is documented below.
     <dd>{{% md %}}User defined CEVAL expression. A CEVAL expression is used to specify match criteria
 such as origin.ip, source.region_code and contents in the request header.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioned_expr_python">
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
@@ -1511,15 +1408,13 @@ Structure is documented below.
     <dd>{{% md %}}Predefined rule expression. If this field is specified, `config` must also be specified.
 Available options:
 * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicyrulematchconfig">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="srcipranges_csharp">
 <a href="#srcipranges_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
@@ -1530,13 +1425,11 @@ Available options:
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
 to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="srcipranges_go">
 <a href="#srcipranges_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
@@ -1547,13 +1440,11 @@ to match against inbound traffic. There is a limit of 10 IP ranges per rule. A v
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
 to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="srcipranges_nodejs">
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
@@ -1564,13 +1455,11 @@ to match against inbound traffic. There is a limit of 10 IP ranges per rule. A v
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
 to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="src_ip_ranges_python">
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
@@ -1581,15 +1470,13 @@ to match against inbound traffic. There is a limit of 10 IP ranges per rule. A v
     <dd>{{% md %}}Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
 to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '\*' matches all IPs
 (can be used to override the default behavior).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicyrulematchexpr">Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Expr</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1599,13 +1486,11 @@ to match against inbound traffic. There is a limit of 10 IP ranges per rule. A v
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 The application context of the containing message determines which well-known feature set of CEL is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1615,13 +1500,11 @@ The application context of the containing message determines which well-known fe
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 The application context of the containing message determines which well-known feature set of CEL is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1631,13 +1514,11 @@ The application context of the containing message determines which well-known fe
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 The application context of the containing message determines which well-known feature set of CEL is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1647,8 +1528,7 @@ The application context of the containing message determines which well-known fe
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 The application context of the containing message determines which well-known feature set of CEL is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

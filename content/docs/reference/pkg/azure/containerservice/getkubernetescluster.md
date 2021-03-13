@@ -149,8 +149,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -159,8 +158,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -169,13 +167,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +180,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -194,13 +189,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -209,8 +202,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -219,13 +211,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -234,8 +224,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -244,8 +233,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -258,8 +246,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addonprofiles_csharp">
 <a href="#addonprofiles_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profiles</a>
@@ -268,8 +255,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_csharp">
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -278,8 +264,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `agent_pool_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiserverauthorizedipranges_csharp">
 <a href="#apiserverauthorizedipranges_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
@@ -288,8 +273,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the primaries.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -298,8 +282,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -308,8 +291,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -318,8 +300,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -328,8 +309,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_csharp">
 <a href="#identities_csharp" style="color: inherit; text-decoration: inherit;">Identities</a>
@@ -338,8 +318,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteridentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigraw_csharp">
 <a href="#kubeadminconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
@@ -348,8 +327,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigs_csharp">
 <a href="#kubeadminconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
@@ -358,8 +336,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigraw_csharp">
 <a href="#kubeconfigraw_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Raw</a>
@@ -368,8 +345,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigs_csharp">
 <a href="#kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
@@ -378,8 +354,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletidentities_csharp">
 <a href="#kubeletidentities_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
@@ -388,8 +363,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetesversion_csharp">
 <a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
@@ -398,8 +372,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofiles_csharp">
 <a href="#linuxprofiles_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profiles</a>
@@ -408,8 +381,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -418,8 +390,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -428,8 +399,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofiles_csharp">
 <a href="#networkprofiles_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
@@ -438,8 +408,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternetworkprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noderesourcegroup_csharp">
 <a href="#noderesourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
@@ -448,8 +417,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateclusterenabled_csharp">
 <a href="#privateclusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
@@ -458,8 +426,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_csharp">
 <a href="#privatefqdn_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
@@ -468,8 +435,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkenabled_csharp">
 <a href="#privatelinkenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
@@ -477,8 +443,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -486,8 +451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolebasedaccesscontrols_csharp">
 <a href="#rolebasedaccesscontrols_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Controls</a>
@@ -496,8 +460,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipals_csharp">
 <a href="#serviceprincipals_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principals</a>
@@ -506,8 +469,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -516,8 +478,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofiles_csharp">
 <a href="#windowsprofiles_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profiles</a>
@@ -526,13 +487,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addonprofiles_go">
 <a href="#addonprofiles_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profiles</a>
@@ -541,8 +500,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofile">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_go">
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -551,8 +509,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}An `agent_pool_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiserverauthorizedipranges_go">
 <a href="#apiserverauthorizedipranges_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
@@ -561,8 +518,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the primaries.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -571,8 +527,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -581,8 +536,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -591,8 +545,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,8 +554,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_go">
 <a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
@@ -611,8 +563,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteridentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigraw_go">
 <a href="#kubeadminconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Config<wbr>Raw</a>
@@ -621,8 +572,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigs_go">
 <a href="#kubeadminconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
@@ -631,8 +581,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigraw_go">
 <a href="#kubeconfigraw_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Raw</a>
@@ -641,8 +590,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigs_go">
 <a href="#kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
@@ -651,8 +599,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletidentities_go">
 <a href="#kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
@@ -661,8 +608,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetesversion_go">
 <a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
@@ -671,8 +617,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofiles_go">
 <a href="#linuxprofiles_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profiles</a>
@@ -681,8 +626,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -691,8 +635,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -701,8 +644,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofiles_go">
 <a href="#networkprofiles_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
@@ -711,8 +653,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternetworkprofile">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noderesourcegroup_go">
 <a href="#noderesourcegroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
@@ -721,8 +662,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateclusterenabled_go">
 <a href="#privateclusterenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Enabled</a>
@@ -731,8 +671,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_go">
 <a href="#privatefqdn_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Fqdn</a>
@@ -741,8 +680,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkenabled_go">
 <a href="#privatelinkenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Enabled</a>
@@ -750,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -759,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolebasedaccesscontrols_go">
 <a href="#rolebasedaccesscontrols_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Controls</a>
@@ -769,8 +705,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipals_go">
 <a href="#serviceprincipals_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principals</a>
@@ -779,8 +714,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -789,8 +723,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofiles_go">
 <a href="#windowsprofiles_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profiles</a>
@@ -799,13 +732,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addonprofiles_nodejs">
 <a href="#addonprofiles_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profiles</a>
@@ -814,8 +745,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_nodejs">
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
@@ -824,8 +754,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}An `agent_pool_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiserverauthorizedipranges_nodejs">
 <a href="#apiserverauthorizedipranges_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</a>
@@ -834,8 +763,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the primaries.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -844,8 +772,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
@@ -854,8 +781,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -864,8 +790,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -874,8 +799,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_nodejs">
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
@@ -884,8 +808,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteridentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigraw_nodejs">
 <a href="#kubeadminconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Config<wbr>Raw</a>
@@ -894,8 +817,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminconfigs_nodejs">
 <a href="#kubeadminconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Admin<wbr>Configs</a>
@@ -904,8 +826,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigraw_nodejs">
 <a href="#kubeconfigraw_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config<wbr>Raw</a>
@@ -914,8 +835,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeconfigs_nodejs">
 <a href="#kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Configs</a>
@@ -924,8 +844,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletidentities_nodejs">
 <a href="#kubeletidentities_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Identities</a>
@@ -934,8 +853,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetesversion_nodejs">
 <a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
@@ -944,8 +862,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofiles_nodejs">
 <a href="#linuxprofiles_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profiles</a>
@@ -954,8 +871,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -964,8 +880,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -974,8 +889,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofiles_nodejs">
 <a href="#networkprofiles_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profiles</a>
@@ -984,8 +898,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternetworkprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noderesourcegroup_nodejs">
 <a href="#noderesourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Resource<wbr>Group</a>
@@ -994,8 +907,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateclusterenabled_nodejs">
 <a href="#privateclusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Enabled</a>
@@ -1004,8 +916,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_nodejs">
 <a href="#privatefqdn_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Fqdn</a>
@@ -1014,8 +925,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkenabled_nodejs">
 <a href="#privatelinkenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Enabled</a>
@@ -1023,8 +933,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1032,8 +941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolebasedaccesscontrols_nodejs">
 <a href="#rolebasedaccesscontrols_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Based<wbr>Access<wbr>Controls</a>
@@ -1042,8 +950,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control[]</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipals_nodejs">
 <a href="#serviceprincipals_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principals</a>
@@ -1052,8 +959,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1062,8 +968,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofiles_nodejs">
 <a href="#windowsprofiles_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profiles</a>
@@ -1072,13 +977,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addon_profiles_python">
 <a href="#addon_profiles_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profiles</a>
@@ -1087,8 +990,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agent_pool_profiles_python">
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
@@ -1097,8 +999,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}An `agent_pool_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_server_authorized_ip_ranges_python">
 <a href="#api_server_authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</a>
@@ -1107,8 +1008,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the primaries.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -1117,8 +1017,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set used for the Nodes and Volumes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
@@ -1127,8 +1026,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1137,8 +1035,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1147,8 +1044,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identities_python">
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
@@ -1157,8 +1053,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteridentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kube_admin_config_raw_python">
 <a href="#kube_admin_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>config_<wbr>raw</a>
@@ -1167,8 +1062,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kube_admin_configs_python">
 <a href="#kube_admin_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>admin_<wbr>configs</a>
@@ -1177,8 +1071,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeadminconfig">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kube_config_raw_python">
 <a href="#kube_config_raw_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config_<wbr>raw</a>
@@ -1187,8 +1080,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kube_configs_python">
 <a href="#kube_configs_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>configs</a>
@@ -1197,8 +1089,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeconfig">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubelet_identities_python">
 <a href="#kubelet_identities_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>identities</a>
@@ -1207,8 +1098,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterkubeletidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetes_version_python">
 <a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
@@ -1217,8 +1107,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linux_profiles_python">
 <a href="#linux_profiles_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profiles</a>
@@ -1227,8 +1116,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1237,8 +1125,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1247,8 +1134,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_profiles_python">
 <a href="#network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
@@ -1257,8 +1143,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusternetworkprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_resource_group_python">
 <a href="#node_resource_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>resource_<wbr>group</a>
@@ -1267,8 +1152,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_cluster_enabled_python">
 <a href="#private_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>enabled</a>
@@ -1277,8 +1161,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the cluster has the Kubernetes API only exposed on internal IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_fqdn_python">
 <a href="#private_fqdn_python" style="color: inherit; text-decoration: inherit;">private_<wbr>fqdn</a>
@@ -1287,8 +1170,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_enabled_python">
 <a href="#private_link_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>enabled</a>
@@ -1296,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1305,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_based_access_controls_python">
 <a href="#role_based_access_controls_python" style="color: inherit; text-decoration: inherit;">role_<wbr>based_<wbr>access_<wbr>controls</a>
@@ -1315,8 +1195,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrol">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control]</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_principals_python">
 <a href="#service_principals_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principals</a>
@@ -1325,8 +1204,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterserviceprincipal">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1335,8 +1213,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windows_profiles_python">
 <a href="#windows_profiles_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profiles</a>
@@ -1345,8 +1222,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterwindowsprofile">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1360,8 +1236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurepolicies_csharp">
 <a href="#azurepolicies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policies</a>
@@ -1370,8 +1245,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpapplicationroutings_csharp">
 <a href="#httpapplicationroutings_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routings</a>
@@ -1380,8 +1254,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubedashboards_csharp">
 <a href="#kubedashboards_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboards</a>
@@ -1390,8 +1263,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="omsagents_csharp">
 <a href="#omsagents_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agents</a>
@@ -1400,13 +1272,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurepolicies_go">
 <a href="#azurepolicies_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policies</a>
@@ -1415,8 +1285,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpapplicationroutings_go">
 <a href="#httpapplicationroutings_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routings</a>
@@ -1425,8 +1294,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubedashboards_go">
 <a href="#kubedashboards_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboards</a>
@@ -1435,8 +1303,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="omsagents_go">
 <a href="#omsagents_go" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agents</a>
@@ -1445,13 +1312,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurepolicies_nodejs">
 <a href="#azurepolicies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Policies</a>
@@ -1460,8 +1325,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpapplicationroutings_nodejs">
 <a href="#httpapplicationroutings_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routings</a>
@@ -1470,8 +1334,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing[]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubedashboards_nodejs">
 <a href="#kubedashboards_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboards</a>
@@ -1480,8 +1343,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard[]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="omsagents_nodejs">
 <a href="#omsagents_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agents</a>
@@ -1490,13 +1352,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent[]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_policies_python">
 <a href="#azure_policies_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policies</a>
@@ -1505,8 +1365,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_application_routings_python">
 <a href="#http_application_routings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routings</a>
@@ -1515,8 +1374,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kube_dashboards_python">
 <a href="#kube_dashboards_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboards</a>
@@ -1525,8 +1383,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oms_agents_python">
 <a href="#oms_agents_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agents</a>
@@ -1535,8 +1392,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteraddonprofileazurepolicy">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</h4>
@@ -1544,8 +1400,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1554,13 +1409,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1569,13 +1422,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1584,13 +1435,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1599,8 +1448,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteraddonprofilehttpapplicationrouting">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</h4>
@@ -1608,8 +1456,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1618,8 +1465,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpapplicationroutingzonename_csharp">
 <a href="#httpapplicationroutingzonename_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
@@ -1628,13 +1474,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1643,8 +1487,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpapplicationroutingzonename_go">
 <a href="#httpapplicationroutingzonename_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
@@ -1653,13 +1496,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1668,8 +1509,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpapplicationroutingzonename_nodejs">
 <a href="#httpapplicationroutingzonename_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</a>
@@ -1678,13 +1518,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1693,8 +1531,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_application_routing_zone_name_python">
 <a href="#http_application_routing_zone_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routing_<wbr>zone_<wbr>name</a>
@@ -1703,8 +1540,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteraddonprofilekubedashboard">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</h4>
@@ -1712,8 +1548,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1722,13 +1557,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1737,13 +1570,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1752,13 +1583,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1767,8 +1596,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteraddonprofileomsagent">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</h4>
@@ -1776,8 +1604,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1786,8 +1613,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1796,8 +1622,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="omsagentidentities_csharp">
 <a href="#omsagentidentities_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
@@ -1806,13 +1631,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1821,8 +1644,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1831,8 +1653,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="omsagentidentities_go">
 <a href="#omsagentidentities_go" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
@@ -1841,13 +1662,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1856,8 +1675,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1866,8 +1684,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="omsagentidentities_nodejs">
 <a href="#omsagentidentities_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
@@ -1876,13 +1693,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1891,8 +1706,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -1901,8 +1715,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oms_agent_identities_python">
 <a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
@@ -1911,8 +1724,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteraddonprofileomsagentomsagentidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity</h4>
@@ -1920,8 +1732,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1930,8 +1741,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1940,8 +1750,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_csharp">
 <a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -1950,13 +1759,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1965,8 +1772,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1975,8 +1781,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_go">
 <a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -1985,13 +1790,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -2000,8 +1803,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -2010,8 +1812,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_nodejs">
 <a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -2020,13 +1821,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -2035,8 +1834,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -2045,8 +1843,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_assigned_identity_id_python">
 <a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
@@ -2055,8 +1852,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteragentpoolprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile</h4>
@@ -2064,8 +1860,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -2074,8 +1869,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2084,8 +1878,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautoscaling_csharp">
 <a href="#enableautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -2094,8 +1887,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -2103,8 +1895,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -2113,8 +1904,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxpods_csharp">
 <a href="#maxpods_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -2123,8 +1913,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincount_csharp">
 <a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -2133,8 +1922,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2143,8 +1931,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodelabels_csharp">
 <a href="#nodelabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -2152,8 +1939,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -2161,8 +1947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orchestratorversion_csharp">
 <a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -2171,8 +1956,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osdisksizegb_csharp">
 <a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2181,8 +1965,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -2191,8 +1974,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2201,8 +1983,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2211,8 +1992,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upgradesettings_csharp">
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -2221,8 +2001,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -2231,8 +2010,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetsubnetid_csharp">
 <a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
@@ -2241,13 +2019,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -2256,8 +2032,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2266,8 +2041,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautoscaling_go">
 <a href="#enableautoscaling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -2276,8 +2050,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -2285,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcount_go">
 <a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -2295,8 +2067,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxpods_go">
 <a href="#maxpods_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -2305,8 +2076,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincount_go">
 <a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -2315,8 +2085,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2325,8 +2094,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodelabels_go">
 <a href="#nodelabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -2334,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetaints_go">
 <a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -2343,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orchestratorversion_go">
 <a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -2353,8 +2119,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osdisksizegb_go">
 <a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2363,8 +2128,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -2373,8 +2137,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2383,8 +2146,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2393,8 +2155,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upgradesettings_go">
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -2403,8 +2164,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -2413,8 +2173,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetsubnetid_go">
 <a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
@@ -2423,13 +2182,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -2438,8 +2195,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2448,8 +2204,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enableautoscaling_nodejs">
 <a href="#enableautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Scaling</a>
@@ -2458,8 +2213,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -2467,8 +2221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcount_nodejs">
 <a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
@@ -2477,8 +2230,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxpods_nodejs">
 <a href="#maxpods_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods</a>
@@ -2487,8 +2239,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincount_nodejs">
 <a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
@@ -2497,8 +2248,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2507,8 +2257,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodelabels_nodejs">
 <a href="#nodelabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Labels</a>
@@ -2516,8 +2265,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -2525,8 +2273,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orchestratorversion_nodejs">
 <a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
@@ -2535,8 +2282,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osdisksizegb_nodejs">
 <a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2545,8 +2291,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -2555,8 +2300,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2565,8 +2309,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2575,8 +2318,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upgradesettings_nodejs">
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
@@ -2585,8 +2327,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -2595,8 +2336,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetsubnetid_nodejs">
 <a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Id</a>
@@ -2605,13 +2345,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -2620,8 +2358,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2630,8 +2367,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_auto_scaling_python">
 <a href="#enable_auto_scaling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>scaling</a>
@@ -2640,8 +2376,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
@@ -2649,8 +2384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_count_python">
 <a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
@@ -2659,8 +2393,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_pods_python">
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
@@ -2669,8 +2402,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_count_python">
 <a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
@@ -2679,8 +2411,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2689,8 +2420,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_labels_python">
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
@@ -2698,8 +2428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_taints_python">
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -2707,8 +2436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orchestrator_version_python">
 <a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
@@ -2717,8 +2445,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kubernetes version used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_disk_size_gb_python">
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -2727,8 +2454,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -2737,8 +2463,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2747,8 +2472,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2757,8 +2481,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upgrade_settings_python">
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
@@ -2767,8 +2490,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -2777,8 +2499,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnet_subnet_id_python">
 <a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
@@ -2787,8 +2508,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteragentpoolprofileupgradesetting">Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting</h4>
@@ -2796,8 +2516,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxsurge_csharp">
 <a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -2806,13 +2525,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxsurge_go">
 <a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -2821,13 +2538,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxsurge_nodejs">
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
@@ -2836,13 +2551,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_surge_python">
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
@@ -2851,8 +2564,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusteridentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Identity</h4>
@@ -2860,8 +2572,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2870,8 +2581,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2880,8 +2590,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2890,8 +2599,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_csharp">
 <a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -2900,13 +2608,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2915,8 +2621,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2925,8 +2630,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2935,8 +2639,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_go">
 <a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -2945,13 +2648,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -2960,8 +2661,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -2970,8 +2670,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2980,8 +2679,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_nodejs">
 <a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -2990,13 +2688,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3005,8 +2701,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -3015,8 +2710,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3025,8 +2719,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_assigned_identity_id_python">
 <a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
@@ -3035,8 +2728,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterkubeadminconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</h4>
@@ -3044,8 +2736,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificate_csharp">
 <a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -3054,8 +2745,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_csharp">
 <a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -3064,8 +2754,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustercacertificate_csharp">
 <a href="#clustercacertificate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
@@ -3074,8 +2763,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3084,8 +2772,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3094,8 +2781,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3104,13 +2790,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificate_go">
 <a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -3119,8 +2803,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_go">
 <a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -3129,8 +2812,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustercacertificate_go">
 <a href="#clustercacertificate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
@@ -3139,8 +2821,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3149,8 +2830,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3159,8 +2839,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3169,13 +2848,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificate_nodejs">
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
@@ -3184,8 +2861,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_nodejs">
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -3194,8 +2870,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustercacertificate_nodejs">
 <a href="#clustercacertificate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
@@ -3204,8 +2879,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3214,8 +2888,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3224,8 +2897,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3234,13 +2906,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_certificate_python">
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
@@ -3249,8 +2919,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_key_python">
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -3259,8 +2928,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_ca_certificate_python">
 <a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
@@ -3269,8 +2937,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3279,8 +2946,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3289,8 +2955,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3299,8 +2964,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterkubeconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
@@ -3308,8 +2972,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificate_csharp">
 <a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -3318,8 +2981,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_csharp">
 <a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -3328,8 +2990,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustercacertificate_csharp">
 <a href="#clustercacertificate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
@@ -3338,8 +2999,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3348,8 +3008,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3358,8 +3017,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3368,13 +3026,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificate_go">
 <a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -3383,8 +3039,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_go">
 <a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -3393,8 +3048,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustercacertificate_go">
 <a href="#clustercacertificate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ca<wbr>Certificate</a>
@@ -3403,8 +3057,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3413,8 +3066,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3423,8 +3075,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3433,13 +3084,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificate_nodejs">
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
@@ -3448,8 +3097,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientkey_nodejs">
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -3458,8 +3106,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustercacertificate_nodejs">
 <a href="#clustercacertificate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
@@ -3468,8 +3115,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3478,8 +3124,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3488,8 +3133,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3498,13 +3142,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_certificate_python">
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
@@ -3513,8 +3155,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_key_python">
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -3523,8 +3164,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_ca_certificate_python">
 <a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
@@ -3533,8 +3173,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3543,8 +3182,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3553,8 +3191,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3563,8 +3200,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterkubeletidentity">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</h4>
@@ -3572,8 +3208,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3582,8 +3217,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -3592,8 +3226,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_csharp">
 <a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -3602,13 +3235,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3617,8 +3248,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -3627,8 +3257,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_go">
 <a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -3637,13 +3266,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -3652,8 +3279,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -3662,8 +3288,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userassignedidentityid_nodejs">
 <a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
@@ -3672,13 +3297,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -3687,8 +3310,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -3697,8 +3319,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_assigned_identity_id_python">
 <a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
@@ -3707,8 +3328,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterlinuxprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</h4>
@@ -3716,8 +3336,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -3726,8 +3345,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -3736,13 +3354,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -3751,8 +3367,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -3761,13 +3376,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -3776,8 +3389,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
@@ -3786,13 +3398,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -3801,8 +3411,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_keys_python">
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
@@ -3811,8 +3420,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterlinuxprofilesshkey">Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</h4>
@@ -3820,8 +3428,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -3830,13 +3437,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -3845,13 +3450,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
@@ -3860,13 +3463,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
@@ -3875,8 +3476,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusternetworkprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</h4>
@@ -3884,8 +3484,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsserviceip_csharp">
 <a href="#dnsserviceip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Ip</a>
@@ -3894,8 +3493,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dockerbridgecidr_csharp">
 <a href="#dockerbridgecidr_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
@@ -3904,8 +3502,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancersku_csharp">
 <a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
@@ -3913,8 +3510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkplugin_csharp">
 <a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
@@ -3923,8 +3519,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkpolicy_csharp">
 <a href="#networkpolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
@@ -3933,8 +3528,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podcidr_csharp">
 <a href="#podcidr_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
@@ -3943,8 +3537,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicecidr_csharp">
 <a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -3953,13 +3546,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsserviceip_go">
 <a href="#dnsserviceip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Ip</a>
@@ -3968,8 +3559,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dockerbridgecidr_go">
 <a href="#dockerbridgecidr_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
@@ -3978,8 +3568,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancersku_go">
 <a href="#loadbalancersku_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
@@ -3987,8 +3576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkplugin_go">
 <a href="#networkplugin_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
@@ -3997,8 +3585,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkpolicy_go">
 <a href="#networkpolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
@@ -4007,8 +3594,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podcidr_go">
 <a href="#podcidr_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
@@ -4017,8 +3603,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicecidr_go">
 <a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -4027,13 +3612,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsserviceip_nodejs">
 <a href="#dnsserviceip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Ip</a>
@@ -4042,8 +3625,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dockerbridgecidr_nodejs">
 <a href="#dockerbridgecidr_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
@@ -4052,8 +3634,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancersku_nodejs">
 <a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
@@ -4061,8 +3642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkplugin_nodejs">
 <a href="#networkplugin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
@@ -4071,8 +3651,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkpolicy_nodejs">
 <a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
@@ -4081,8 +3660,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podcidr_nodejs">
 <a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
@@ -4091,8 +3669,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicecidr_nodejs">
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
@@ -4101,13 +3678,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dns_service_ip_python">
 <a href="#dns_service_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>ip</a>
@@ -4116,8 +3691,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="docker_bridge_cidr_python">
 <a href="#docker_bridge_cidr_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>bridge_<wbr>cidr</a>
@@ -4126,8 +3700,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_sku_python">
 <a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
@@ -4135,8 +3708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_plugin_python">
 <a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
@@ -4145,8 +3717,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_policy_python">
 <a href="#network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
@@ -4155,8 +3726,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pod_cidr_python">
 <a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
@@ -4165,8 +3735,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_cidr_python">
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
@@ -4175,8 +3744,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterrolebasedaccesscontrol">Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</h4>
@@ -4184,8 +3752,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureactivedirectories_csharp">
 <a href="#azureactivedirectories_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directories</a>
@@ -4194,8 +3761,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4204,13 +3770,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureactivedirectories_go">
 <a href="#azureactivedirectories_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directories</a>
@@ -4219,8 +3783,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">[]Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4229,13 +3792,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureactivedirectories_nodejs">
 <a href="#azureactivedirectories_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directories</a>
@@ -4244,8 +3805,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4254,13 +3814,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_active_directories_python">
 <a href="#azure_active_directories_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directories</a>
@@ -4269,8 +3827,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4279,8 +3836,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</h4>
@@ -4288,8 +3844,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admingroupobjectids_csharp">
 <a href="#admingroupobjectids_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>Ids</a>
@@ -4298,8 +3853,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientappid_csharp">
 <a href="#clientappid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
@@ -4308,8 +3862,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_csharp">
 <a href="#managed_csharp" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -4318,8 +3871,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverappid_csharp">
 <a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
@@ -4328,8 +3880,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4338,13 +3889,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admingroupobjectids_go">
 <a href="#admingroupobjectids_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>Ids</a>
@@ -4353,8 +3902,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientappid_go">
 <a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>Id</a>
@@ -4363,8 +3911,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_go">
 <a href="#managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -4373,8 +3920,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverappid_go">
 <a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Id</a>
@@ -4383,8 +3929,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4393,13 +3938,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admingroupobjectids_nodejs">
 <a href="#admingroupobjectids_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>Ids</a>
@@ -4408,8 +3951,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientappid_nodejs">
 <a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>Id</a>
@@ -4418,8 +3960,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_nodejs">
 <a href="#managed_nodejs" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -4428,8 +3969,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverappid_nodejs">
 <a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Id</a>
@@ -4438,8 +3978,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -4448,13 +3987,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_group_object_ids_python">
 <a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
@@ -4463,8 +4000,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of Object IDs of Azure Active Directory Groups which have Admin Role on the Cluster (when using a Managed integration).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_app_id_python">
 <a href="#client_app_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>app_<wbr>id</a>
@@ -4473,8 +4009,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_python">
 <a href="#managed_python" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -4483,8 +4018,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Azure Active Directory Integration managed (also known as AAD Integration V2)?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_app_id_python">
 <a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
@@ -4493,8 +4027,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4503,8 +4036,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by primary components.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterserviceprincipal">Get<wbr>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</h4>
@@ -4512,8 +4044,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4522,13 +4053,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4537,13 +4066,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4552,13 +4079,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4567,8 +4092,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID of the user-defined Managed Identity assigned to the Kubelets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusterwindowsprofile">Get<wbr>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</h4>
@@ -4576,8 +4100,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -4586,13 +4109,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -4601,13 +4122,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -4616,13 +4135,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -4631,8 +4148,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

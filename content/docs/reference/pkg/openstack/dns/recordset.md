@@ -307,8 +307,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -318,8 +317,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -328,8 +326,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -339,8 +336,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_csharp">
 <a href="#records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -351,8 +347,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -363,8 +358,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -373,8 +367,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -384,8 +377,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -395,13 +387,11 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -411,8 +401,7 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -421,8 +410,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -432,8 +420,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_go">
 <a href="#records_go" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -444,8 +431,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -456,8 +442,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -466,8 +451,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -477,8 +461,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -488,13 +471,11 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -504,8 +485,7 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -514,8 +494,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -525,8 +504,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_nodejs">
 <a href="#records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
@@ -537,8 +515,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -549,8 +526,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -559,8 +535,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -570,8 +545,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -581,13 +555,11 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -597,8 +569,7 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -607,8 +578,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -618,8 +588,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_python">
 <a href="#records_python" style="color: inherit; text-decoration: inherit;">records</a>
@@ -630,8 +599,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -642,8 +610,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -652,8 +619,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -663,8 +629,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -674,8 +639,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -686,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -695,13 +658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -709,13 +670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -723,13 +682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -737,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -865,8 +821,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -875,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -886,8 +840,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_csharp">
 <a href="#state_records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -898,8 +851,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -910,8 +862,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -920,8 +871,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -931,8 +881,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -942,8 +891,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -953,13 +901,11 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -968,8 +914,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -979,8 +924,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_go">
 <a href="#state_records_go" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -991,8 +935,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1003,8 +946,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1013,8 +955,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1024,8 +965,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1035,8 +975,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1046,13 +985,11 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1061,8 +998,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1072,8 +1008,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_nodejs">
 <a href="#state_records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
@@ -1084,8 +1019,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1096,8 +1030,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1106,8 +1039,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1117,8 +1049,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1128,8 +1059,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1139,13 +1069,11 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1154,8 +1082,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1165,8 +1092,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_python">
 <a href="#state_records_python" style="color: inherit; text-decoration: inherit;">records</a>
@@ -1177,8 +1103,7 @@ Changing this creates a new DNS  record set.
     <dd>{{% md %}}An array of DNS records. _Note:_ if an IPv6 address
 contains brackets (`[ ]`), the brackets will be stripped and the modified
 address will be recorded in the state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1189,8 +1114,7 @@ address will be recorded in the state.
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1199,8 +1123,7 @@ Changing this creates a new DNS  record set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1210,8 +1133,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1221,8 +1143,7 @@ Changing this creates a new DNS  record set.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1232,8 +1153,7 @@ new record set.
     </dt>
     <dd>{{% md %}}The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

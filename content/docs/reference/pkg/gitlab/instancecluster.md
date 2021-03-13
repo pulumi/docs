@@ -295,8 +295,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetesapiurl_csharp">
 <a href="#kubernetesapiurl_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Api<wbr>Url</a>
@@ -305,8 +304,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetestoken_csharp">
 <a href="#kubernetestoken_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Token</a>
@@ -315,8 +313,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -325,8 +322,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -335,8 +331,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentscope_csharp">
 <a href="#environmentscope_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Scope</a>
@@ -345,8 +340,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesauthorizationtype_csharp">
 <a href="#kubernetesauthorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Authorization<wbr>Type</a>
@@ -355,8 +349,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetescacert_csharp">
 <a href="#kubernetescacert_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -365,8 +358,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesnamespace_csharp">
 <a href="#kubernetesnamespace_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Namespace</a>
@@ -375,8 +367,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_csharp">
 <a href="#managed_csharp" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -385,8 +376,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementprojectid_csharp">
 <a href="#managementprojectid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
@@ -395,8 +385,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -405,13 +394,11 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetesapiurl_go">
 <a href="#kubernetesapiurl_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Api<wbr>Url</a>
@@ -420,8 +407,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetestoken_go">
 <a href="#kubernetestoken_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Token</a>
@@ -430,8 +416,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -440,8 +425,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -450,8 +434,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentscope_go">
 <a href="#environmentscope_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Scope</a>
@@ -460,8 +443,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesauthorizationtype_go">
 <a href="#kubernetesauthorizationtype_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Authorization<wbr>Type</a>
@@ -470,8 +452,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetescacert_go">
 <a href="#kubernetescacert_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -480,8 +461,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesnamespace_go">
 <a href="#kubernetesnamespace_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Namespace</a>
@@ -490,8 +470,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_go">
 <a href="#managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -500,8 +479,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementprojectid_go">
 <a href="#managementprojectid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
@@ -510,8 +488,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -520,13 +497,11 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetesapiurl_nodejs">
 <a href="#kubernetesapiurl_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Api<wbr>Url</a>
@@ -535,8 +510,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetestoken_nodejs">
 <a href="#kubernetestoken_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Token</a>
@@ -545,8 +519,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -555,8 +528,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -565,8 +537,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentscope_nodejs">
 <a href="#environmentscope_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Scope</a>
@@ -575,8 +546,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesauthorizationtype_nodejs">
 <a href="#kubernetesauthorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Authorization<wbr>Type</a>
@@ -585,8 +555,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetescacert_nodejs">
 <a href="#kubernetescacert_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Ca<wbr>Cert</a>
@@ -595,8 +564,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetesnamespace_nodejs">
 <a href="#kubernetesnamespace_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Namespace</a>
@@ -605,8 +573,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_nodejs">
 <a href="#managed_nodejs" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -615,8 +582,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementprojectid_nodejs">
 <a href="#managementprojectid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Project<wbr>Id</a>
@@ -625,8 +591,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -635,13 +600,11 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetes_api_url_python">
 <a href="#kubernetes_api_url_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>api_<wbr>url</a>
@@ -650,8 +613,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kubernetes_token_python">
 <a href="#kubernetes_token_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>token</a>
@@ -660,8 +622,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -670,8 +631,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -680,8 +640,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_scope_python">
 <a href="#environment_scope_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>scope</a>
@@ -690,8 +649,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_authorization_type_python">
 <a href="#kubernetes_authorization_type_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>authorization_<wbr>type</a>
@@ -700,8 +658,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_ca_cert_python">
 <a href="#kubernetes_ca_cert_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>ca_<wbr>cert</a>
@@ -710,8 +667,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_namespace_python">
 <a href="#kubernetes_namespace_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>namespace</a>
@@ -720,8 +676,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_python">
 <a href="#managed_python" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -730,8 +685,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_project_id_python">
 <a href="#management_project_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>project_<wbr>id</a>
@@ -740,8 +694,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -750,8 +703,7 @@ The InstanceCluster resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -762,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clustertype_csharp">
 <a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -771,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -780,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -789,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformtype_csharp">
 <a href="#platformtype_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Type</a>
@@ -798,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providertype_csharp">
 <a href="#providertype_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
@@ -807,13 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clustertype_go">
 <a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -821,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -830,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -839,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformtype_go">
 <a href="#platformtype_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Type</a>
@@ -848,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providertype_go">
 <a href="#providertype_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
@@ -857,13 +798,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clustertype_nodejs">
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
@@ -871,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -880,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -889,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformtype_nodejs">
 <a href="#platformtype_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Type</a>
@@ -898,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providertype_nodejs">
 <a href="#providertype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Type</a>
@@ -907,13 +842,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cluster_type_python">
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
@@ -921,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -930,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -939,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_type_python">
 <a href="#platform_type_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>type</a>
@@ -948,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_type_python">
 <a href="#provider_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>type</a>
@@ -957,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1085,8 +1013,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clustertype_csharp">
 <a href="#state_clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -1094,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1103,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1113,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1123,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentscope_csharp">
 <a href="#state_environmentscope_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Scope</a>
@@ -1133,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesapiurl_csharp">
 <a href="#state_kubernetesapiurl_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Api<wbr>Url</a>
@@ -1143,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesauthorizationtype_csharp">
 <a href="#state_kubernetesauthorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Authorization<wbr>Type</a>
@@ -1153,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetescacert_csharp">
 <a href="#state_kubernetescacert_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -1163,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesnamespace_csharp">
 <a href="#state_kubernetesnamespace_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Namespace</a>
@@ -1173,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetestoken_csharp">
 <a href="#state_kubernetestoken_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Token</a>
@@ -1183,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_csharp">
 <a href="#state_managed_csharp" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -1193,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementprojectid_csharp">
 <a href="#state_managementprojectid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
@@ -1203,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1213,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformtype_csharp">
 <a href="#state_platformtype_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Type</a>
@@ -1222,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providertype_csharp">
 <a href="#state_providertype_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
@@ -1231,13 +1144,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clustertype_go">
 <a href="#state_clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -1245,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1254,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1264,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1274,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentscope_go">
 <a href="#state_environmentscope_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Scope</a>
@@ -1284,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesapiurl_go">
 <a href="#state_kubernetesapiurl_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Api<wbr>Url</a>
@@ -1294,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesauthorizationtype_go">
 <a href="#state_kubernetesauthorizationtype_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Authorization<wbr>Type</a>
@@ -1304,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetescacert_go">
 <a href="#state_kubernetescacert_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -1314,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesnamespace_go">
 <a href="#state_kubernetesnamespace_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Namespace</a>
@@ -1324,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetestoken_go">
 <a href="#state_kubernetestoken_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Token</a>
@@ -1334,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_go">
 <a href="#state_managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -1344,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementprojectid_go">
 <a href="#state_managementprojectid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Project<wbr>Id</a>
@@ -1354,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1364,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformtype_go">
 <a href="#state_platformtype_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Type</a>
@@ -1373,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providertype_go">
 <a href="#state_providertype_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Type</a>
@@ -1382,13 +1279,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clustertype_nodejs">
 <a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
@@ -1396,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1405,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1415,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1425,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentscope_nodejs">
 <a href="#state_environmentscope_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Scope</a>
@@ -1435,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesapiurl_nodejs">
 <a href="#state_kubernetesapiurl_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Api<wbr>Url</a>
@@ -1445,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesauthorizationtype_nodejs">
 <a href="#state_kubernetesauthorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Authorization<wbr>Type</a>
@@ -1455,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetescacert_nodejs">
 <a href="#state_kubernetescacert_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Ca<wbr>Cert</a>
@@ -1465,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesnamespace_nodejs">
 <a href="#state_kubernetesnamespace_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Namespace</a>
@@ -1475,8 +1362,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetestoken_nodejs">
 <a href="#state_kubernetestoken_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Token</a>
@@ -1485,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_nodejs">
 <a href="#state_managed_nodejs" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -1495,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementprojectid_nodejs">
 <a href="#state_managementprojectid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Project<wbr>Id</a>
@@ -1505,8 +1389,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1515,8 +1398,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformtype_nodejs">
 <a href="#state_platformtype_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Type</a>
@@ -1524,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providertype_nodejs">
 <a href="#state_providertype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Type</a>
@@ -1533,13 +1414,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_type_python">
 <a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
@@ -1547,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1556,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1566,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1576,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environment_scope_python">
 <a href="#state_environment_scope_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>scope</a>
@@ -1586,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_api_url_python">
 <a href="#state_kubernetes_api_url_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>api_<wbr>url</a>
@@ -1596,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_authorization_type_python">
 <a href="#state_kubernetes_authorization_type_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>authorization_<wbr>type</a>
@@ -1606,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_ca_cert_python">
 <a href="#state_kubernetes_ca_cert_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>ca_<wbr>cert</a>
@@ -1616,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_namespace_python">
 <a href="#state_kubernetes_namespace_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>namespace</a>
@@ -1626,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique namespace related to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_token_python">
 <a href="#state_kubernetes_token_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>token</a>
@@ -1636,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_python">
 <a href="#state_managed_python" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -1646,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_project_id_python">
 <a href="#state_management_project_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>project_<wbr>id</a>
@@ -1656,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the management project for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1666,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_type_python">
 <a href="#state_platform_type_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>type</a>
@@ -1675,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_type_python">
 <a href="#state_provider_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>type</a>
@@ -1684,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

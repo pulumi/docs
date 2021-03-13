@@ -360,8 +360,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="springcloudappid_csharp">
 <a href="#springcloudappid_csharp" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -370,8 +369,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -380,8 +378,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -390,8 +387,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancecount_csharp">
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
@@ -400,8 +396,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jvmoptions_csharp">
 <a href="#jvmoptions_csharp" style="color: inherit; text-decoration: inherit;">Jvm<wbr>Options</a>
@@ -410,8 +405,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryingb_csharp">
 <a href="#memoryingb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
@@ -420,8 +414,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -430,8 +423,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_csharp">
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -440,13 +432,11 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="springcloudappid_go">
 <a href="#springcloudappid_go" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -455,8 +445,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -465,8 +454,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -475,8 +463,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancecount_go">
 <a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
@@ -485,8 +472,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jvmoptions_go">
 <a href="#jvmoptions_go" style="color: inherit; text-decoration: inherit;">Jvm<wbr>Options</a>
@@ -495,8 +481,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryingb_go">
 <a href="#memoryingb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
@@ -505,8 +490,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -515,8 +499,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_go">
 <a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -525,13 +508,11 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="springcloudappid_nodejs">
 <a href="#springcloudappid_nodejs" style="color: inherit; text-decoration: inherit;">spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -540,8 +521,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -550,8 +530,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -560,8 +539,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancecount_nodejs">
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
@@ -570,8 +548,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jvmoptions_nodejs">
 <a href="#jvmoptions_nodejs" style="color: inherit; text-decoration: inherit;">jvm<wbr>Options</a>
@@ -580,8 +557,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryingb_nodejs">
 <a href="#memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gb</a>
@@ -590,8 +566,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -600,8 +575,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimeversion_nodejs">
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
@@ -610,13 +584,11 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="spring_cloud_app_id_python">
 <a href="#spring_cloud_app_id_python" style="color: inherit; text-decoration: inherit;">spring_<wbr>cloud_<wbr>app_<wbr>id</a>
@@ -625,8 +597,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -635,8 +606,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -645,8 +615,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_count_python">
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
@@ -655,8 +624,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jvm_options_python">
 <a href="#jvm_options_python" style="color: inherit; text-decoration: inherit;">jvm_<wbr>options</a>
@@ -665,8 +633,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_in_gb_python">
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
@@ -675,8 +642,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -685,8 +651,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_version_python">
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
@@ -695,8 +660,7 @@ The SpringCloudJavaDeployment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -707,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -716,13 +679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -730,13 +691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -744,13 +703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -758,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -886,8 +842,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_csharp">
 <a href="#state_cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -896,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_csharp">
 <a href="#state_environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -906,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancecount_csharp">
 <a href="#state_instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
@@ -916,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jvmoptions_csharp">
 <a href="#state_jvmoptions_csharp" style="color: inherit; text-decoration: inherit;">Jvm<wbr>Options</a>
@@ -926,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryingb_csharp">
 <a href="#state_memoryingb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
@@ -936,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -946,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimeversion_csharp">
 <a href="#state_runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -956,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_springcloudappid_csharp">
 <a href="#state_springcloudappid_csharp" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -966,13 +914,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_go">
 <a href="#state_cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -981,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_go">
 <a href="#state_environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -991,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancecount_go">
 <a href="#state_instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
@@ -1001,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jvmoptions_go">
 <a href="#state_jvmoptions_go" style="color: inherit; text-decoration: inherit;">Jvm<wbr>Options</a>
@@ -1011,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryingb_go">
 <a href="#state_memoryingb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>Gb</a>
@@ -1021,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1031,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimeversion_go">
 <a href="#state_runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -1041,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_springcloudappid_go">
 <a href="#state_springcloudappid_go" style="color: inherit; text-decoration: inherit;">Spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -1051,13 +990,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_nodejs">
 <a href="#state_cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -1066,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_nodejs">
 <a href="#state_environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -1076,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancecount_nodejs">
 <a href="#state_instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
@@ -1086,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jvmoptions_nodejs">
 <a href="#state_jvmoptions_nodejs" style="color: inherit; text-decoration: inherit;">jvm<wbr>Options</a>
@@ -1096,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryingb_nodejs">
 <a href="#state_memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Gb</a>
@@ -1106,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1116,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimeversion_nodejs">
 <a href="#state_runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
@@ -1126,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_springcloudappid_nodejs">
 <a href="#state_springcloudappid_nodejs" style="color: inherit; text-decoration: inherit;">spring<wbr>Cloud<wbr>App<wbr>Id</a>
@@ -1136,13 +1066,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_python">
 <a href="#state_cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -1151,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required cpu of the Spring Cloud Deployment. Possible Values are between `1` and `4`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environment_variables_python">
 <a href="#state_environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -1161,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_count_python">
 <a href="#state_instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
@@ -1171,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between `1` and `500`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jvm_options_python">
 <a href="#state_jvm_options_python" style="color: inherit; text-decoration: inherit;">jvm_<wbr>options</a>
@@ -1181,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the jvm option of the Spring Cloud Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_in_gb_python">
 <a href="#state_memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
@@ -1191,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the required memory size of the Spring Cloud Deployment. Possible Values are between `1` and `8`. Defaults to `1` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1201,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_version_python">
 <a href="#state_runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
@@ -1211,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the runtime version of the Spring Cloud Deployment. Possible Values are `Java_8` and `Java_11`. Defaults to `Java_8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spring_cloud_app_id_python">
 <a href="#state_spring_cloud_app_id_python" style="color: inherit; text-decoration: inherit;">spring_<wbr>cloud_<wbr>app_<wbr>id</a>
@@ -1221,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -360,8 +360,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -370,8 +369,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisionedconcurrentexecutions_csharp">
 <a href="#provisionedconcurrentexecutions_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Concurrent<wbr>Executions</a>
@@ -380,8 +378,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -390,13 +387,11 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -405,8 +400,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisionedconcurrentexecutions_go">
 <a href="#provisionedconcurrentexecutions_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Concurrent<wbr>Executions</a>
@@ -415,8 +409,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -425,13 +418,11 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -440,8 +431,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisionedconcurrentexecutions_nodejs">
 <a href="#provisionedconcurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Concurrent<wbr>Executions</a>
@@ -450,8 +440,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -460,13 +449,11 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -475,8 +462,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioned_concurrent_executions_python">
 <a href="#provisioned_concurrent_executions_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>concurrent_<wbr>executions</a>
@@ -485,8 +471,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -495,8 +480,7 @@ The ProvisionedConcurrencyConfig resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -507,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -516,13 +499,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -530,13 +511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -544,13 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -558,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -686,8 +662,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_functionname_csharp">
 <a href="#state_functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -696,8 +671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionedconcurrentexecutions_csharp">
 <a href="#state_provisionedconcurrentexecutions_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Concurrent<wbr>Executions</a>
@@ -706,8 +680,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_csharp">
 <a href="#state_qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -716,13 +689,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_functionname_go">
 <a href="#state_functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -731,8 +702,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionedconcurrentexecutions_go">
 <a href="#state_provisionedconcurrentexecutions_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Concurrent<wbr>Executions</a>
@@ -741,8 +711,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_go">
 <a href="#state_qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -751,13 +720,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_functionname_nodejs">
 <a href="#state_functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -766,8 +733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionedconcurrentexecutions_nodejs">
 <a href="#state_provisionedconcurrentexecutions_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Concurrent<wbr>Executions</a>
@@ -776,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_nodejs">
 <a href="#state_qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -786,13 +751,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_function_name_python">
 <a href="#state_function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -801,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioned_concurrent_executions_python">
 <a href="#state_provisioned_concurrent_executions_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>concurrent_<wbr>executions</a>
@@ -811,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of capacity to allocate. Must be greater than or equal to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_python">
 <a href="#state_qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -821,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda Function version or Lambda Alias name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

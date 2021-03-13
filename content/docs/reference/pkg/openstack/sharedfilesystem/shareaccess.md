@@ -170,8 +170,7 @@ The ShareAccess resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevel_csharp">
 <a href="#accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -180,8 +179,7 @@ The ShareAccess resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accessto_csharp">
 <a href="#accessto_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
@@ -191,8 +189,7 @@ The ShareAccess resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accesstype_csharp">
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -203,8 +200,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shareid_csharp">
 <a href="#shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
@@ -213,8 +209,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -225,13 +220,11 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevel_go">
 <a href="#accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -240,8 +233,7 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accessto_go">
 <a href="#accessto_go" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
@@ -251,8 +243,7 @@ creates a new share access.
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accesstype_go">
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -263,8 +254,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shareid_go">
 <a href="#shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
@@ -273,8 +263,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -285,13 +274,11 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevel_nodejs">
 <a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
@@ -300,8 +287,7 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accessto_nodejs">
 <a href="#accessto_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>To</a>
@@ -311,8 +297,7 @@ creates a new share access.
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accesstype_nodejs">
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
@@ -323,8 +308,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shareid_nodejs">
 <a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
@@ -333,8 +317,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -345,13 +328,11 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_level_python">
 <a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
@@ -360,8 +341,7 @@ creates a new share access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="access_to_python">
 <a href="#access_to_python" style="color: inherit; text-decoration: inherit;">access_<wbr>to</a>
@@ -371,8 +351,7 @@ creates a new share access.
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="access_type_python">
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
@@ -383,8 +362,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="share_id_python">
 <a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
@@ -393,8 +371,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -405,8 +382,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -417,8 +393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -427,8 +402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -436,13 +410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -451,8 +423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -460,13 +431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -475,8 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -484,13 +452,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -499,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -636,8 +600,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_csharp">
 <a href="#state_accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -646,8 +609,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_csharp">
 <a href="#state_accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -656,8 +618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessto_csharp">
 <a href="#state_accessto_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
@@ -667,8 +628,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstype_csharp">
 <a href="#state_accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -679,8 +639,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -691,8 +650,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareid_csharp">
 <a href="#state_shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
@@ -701,13 +659,11 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_go">
 <a href="#state_accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -716,8 +672,7 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_go">
 <a href="#state_accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -726,8 +681,7 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessto_go">
 <a href="#state_accessto_go" style="color: inherit; text-decoration: inherit;">Access<wbr>To</a>
@@ -737,8 +691,7 @@ creates a new share access.
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstype_go">
 <a href="#state_accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -749,8 +702,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -761,8 +713,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareid_go">
 <a href="#state_shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
@@ -771,13 +722,11 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_nodejs">
 <a href="#state_accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -786,8 +735,7 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_nodejs">
 <a href="#state_accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
@@ -796,8 +744,7 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessto_nodejs">
 <a href="#state_accessto_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>To</a>
@@ -807,8 +754,7 @@ creates a new share access.
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesstype_nodejs">
 <a href="#state_accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
@@ -819,8 +765,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -831,8 +776,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shareid_nodejs">
 <a href="#state_shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
@@ -841,13 +785,11 @@ creates a new share access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_key_python">
 <a href="#state_access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -856,8 +798,7 @@ creates a new share access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access credential of the entity granted access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_level_python">
 <a href="#state_access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
@@ -866,8 +807,7 @@ creates a new share access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access level to the share. Can either be `rw` or `ro`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_to_python">
 <a href="#state_access_to_python" style="color: inherit; text-decoration: inherit;">access_<wbr>to</a>
@@ -877,8 +817,7 @@ creates a new share access.
     </dt>
     <dd>{{% md %}}The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_type_python">
 <a href="#state_access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
@@ -889,8 +828,7 @@ address or a username verified by configured Security Service of the Share Netwo
     <dd>{{% md %}}The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -901,8 +839,7 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_share_id_python">
 <a href="#state_share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
@@ -911,8 +848,7 @@ creates a new share access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share to which you are granted access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

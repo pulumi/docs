@@ -283,8 +283,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_csharp">
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -293,8 +292,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -303,8 +301,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopay_csharp">
 <a href="#autopay_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pay</a>
@@ -313,8 +310,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autousecoupon_csharp">
 <a href="#autousecoupon_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Use<wbr>Coupon</a>
@@ -323,8 +319,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthpackagename_csharp">
 <a href="#bandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
@@ -333,8 +328,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthtype_csharp">
 <a href="#bandwidthtype_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Type</a>
@@ -343,8 +337,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingtype_csharp">
 <a href="#billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
@@ -353,8 +346,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbngeographicregionida_csharp">
 <a href="#cbngeographicregionida_csharp" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Ida</a>
@@ -363,8 +355,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbngeographicregionidb_csharp">
 <a href="#cbngeographicregionidb_csharp" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Idb</a>
@@ -373,8 +364,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -383,8 +373,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -393,8 +382,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymenttype_csharp">
 <a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
@@ -403,8 +391,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_csharp">
 <a href="#ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -413,13 +400,11 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_go">
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -428,8 +413,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -438,8 +422,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopay_go">
 <a href="#autopay_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pay</a>
@@ -448,8 +431,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autousecoupon_go">
 <a href="#autousecoupon_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Use<wbr>Coupon</a>
@@ -458,8 +440,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthpackagename_go">
 <a href="#bandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
@@ -468,8 +449,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthtype_go">
 <a href="#bandwidthtype_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Type</a>
@@ -478,8 +458,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingtype_go">
 <a href="#billingtype_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
@@ -488,8 +467,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbngeographicregionida_go">
 <a href="#cbngeographicregionida_go" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Ida</a>
@@ -498,8 +476,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbngeographicregionidb_go">
 <a href="#cbngeographicregionidb_go" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Idb</a>
@@ -508,8 +485,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -518,8 +494,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -528,8 +503,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymenttype_go">
 <a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
@@ -538,8 +512,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_go">
 <a href="#ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -548,13 +521,11 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_nodejs">
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -563,8 +534,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -573,8 +543,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopay_nodejs">
 <a href="#autopay_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pay</a>
@@ -583,8 +552,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autousecoupon_nodejs">
 <a href="#autousecoupon_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Use<wbr>Coupon</a>
@@ -593,8 +561,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthpackagename_nodejs">
 <a href="#bandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Name</a>
@@ -603,8 +570,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthtype_nodejs">
 <a href="#bandwidthtype_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Type</a>
@@ -613,8 +579,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingtype_nodejs">
 <a href="#billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
@@ -623,8 +588,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbngeographicregionida_nodejs">
 <a href="#cbngeographicregionida_nodejs" style="color: inherit; text-decoration: inherit;">cbn<wbr>Geographic<wbr>Region<wbr>Ida</a>
@@ -633,8 +597,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbngeographicregionidb_nodejs">
 <a href="#cbngeographicregionidb_nodejs" style="color: inherit; text-decoration: inherit;">cbn<wbr>Geographic<wbr>Region<wbr>Idb</a>
@@ -643,8 +606,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -653,8 +615,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -663,8 +624,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymenttype_nodejs">
 <a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
@@ -673,8 +633,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_nodejs">
 <a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -683,13 +642,11 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bandwidth_python">
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -698,8 +655,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -708,8 +664,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_pay_python">
 <a href="#auto_pay_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pay</a>
@@ -718,8 +673,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_use_coupon_python">
 <a href="#auto_use_coupon_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>use_<wbr>coupon</a>
@@ -728,8 +682,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_package_name_python">
 <a href="#bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>name</a>
@@ -738,8 +691,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_type_python">
 <a href="#bandwidth_type_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>type</a>
@@ -748,8 +700,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_type_python">
 <a href="#billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
@@ -758,8 +709,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbn_geographic_region_ida_python">
 <a href="#cbn_geographic_region_ida_python" style="color: inherit; text-decoration: inherit;">cbn_<wbr>geographic_<wbr>region_<wbr>ida</a>
@@ -768,8 +718,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cbn_geographic_region_idb_python">
 <a href="#cbn_geographic_region_idb_python" style="color: inherit; text-decoration: inherit;">cbn_<wbr>geographic_<wbr>region_<wbr>idb</a>
@@ -778,8 +727,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -788,8 +736,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -798,8 +745,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payment_type_python">
 <a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
@@ -808,8 +754,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_python">
 <a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -818,8 +763,7 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -830,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -839,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -849,13 +791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -863,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -873,13 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -887,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -897,13 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -921,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1049,8 +981,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autopay_csharp">
 <a href="#state_autopay_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pay</a>
@@ -1059,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autousecoupon_csharp">
 <a href="#state_autousecoupon_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Use<wbr>Coupon</a>
@@ -1069,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
 <a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1079,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthpackagename_csharp">
 <a href="#state_bandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
@@ -1089,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthtype_csharp">
 <a href="#state_bandwidthtype_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Type</a>
@@ -1099,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingtype_csharp">
 <a href="#state_billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
@@ -1109,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbngeographicregionida_csharp">
 <a href="#state_cbngeographicregionida_csharp" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Ida</a>
@@ -1119,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbngeographicregionidb_csharp">
 <a href="#state_cbngeographicregionidb_csharp" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Idb</a>
@@ -1129,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1139,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_csharp">
 <a href="#state_duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1149,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymenttype_csharp">
 <a href="#state_paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
@@ -1159,8 +1080,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_csharp">
 <a href="#state_ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -1169,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1179,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1189,13 +1107,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autopay_go">
 <a href="#state_autopay_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pay</a>
@@ -1204,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autousecoupon_go">
 <a href="#state_autousecoupon_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Use<wbr>Coupon</a>
@@ -1214,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
 <a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1224,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthpackagename_go">
 <a href="#state_bandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Package<wbr>Name</a>
@@ -1234,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthtype_go">
 <a href="#state_bandwidthtype_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Type</a>
@@ -1244,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingtype_go">
 <a href="#state_billingtype_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
@@ -1254,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbngeographicregionida_go">
 <a href="#state_cbngeographicregionida_go" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Ida</a>
@@ -1264,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbngeographicregionidb_go">
 <a href="#state_cbngeographicregionidb_go" style="color: inherit; text-decoration: inherit;">Cbn<wbr>Geographic<wbr>Region<wbr>Idb</a>
@@ -1274,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1284,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_go">
 <a href="#state_duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1294,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymenttype_go">
 <a href="#state_paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
@@ -1304,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_go">
 <a href="#state_ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -1314,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1324,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1334,13 +1237,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autopay_nodejs">
 <a href="#state_autopay_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pay</a>
@@ -1349,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autousecoupon_nodejs">
 <a href="#state_autousecoupon_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Use<wbr>Coupon</a>
@@ -1359,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1369,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthpackagename_nodejs">
 <a href="#state_bandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Package<wbr>Name</a>
@@ -1379,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthtype_nodejs">
 <a href="#state_bandwidthtype_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Type</a>
@@ -1389,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingtype_nodejs">
 <a href="#state_billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
@@ -1399,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbngeographicregionida_nodejs">
 <a href="#state_cbngeographicregionida_nodejs" style="color: inherit; text-decoration: inherit;">cbn<wbr>Geographic<wbr>Region<wbr>Ida</a>
@@ -1409,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbngeographicregionidb_nodejs">
 <a href="#state_cbngeographicregionidb_nodejs" style="color: inherit; text-decoration: inherit;">cbn<wbr>Geographic<wbr>Region<wbr>Idb</a>
@@ -1419,8 +1313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1429,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_nodejs">
 <a href="#state_duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1439,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymenttype_nodejs">
 <a href="#state_paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
@@ -1449,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_nodejs">
 <a href="#state_ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -1459,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1469,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1479,13 +1367,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_pay_python">
 <a href="#state_auto_pay_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pay</a>
@@ -1494,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto pay. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_use_coupon_python">
 <a href="#state_auto_use_coupon_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>use_<wbr>coupon</a>
@@ -1504,8 +1389,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The auto use coupon. Valid values: `false`, `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1514,8 +1398,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth value of bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_package_name_python">
 <a href="#state_bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>package_<wbr>name</a>
@@ -1524,8 +1407,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth packet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_type_python">
 <a href="#state_bandwidth_type_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>type</a>
@@ -1534,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_type_python">
 <a href="#state_billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
@@ -1544,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing type. Valid values: `PayBy95`, `PayByTraffic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbn_geographic_region_ida_python">
 <a href="#state_cbn_geographic_region_ida_python" style="color: inherit; text-decoration: inherit;">cbn_<wbr>geographic_<wbr>region_<wbr>ida</a>
@@ -1554,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cbn_geographic_region_idb_python">
 <a href="#state_cbn_geographic_region_idb_python" style="color: inherit; text-decoration: inherit;">cbn_<wbr>geographic_<wbr>region_<wbr>idb</a>
@@ -1564,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1574,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of bandwidth package.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_python">
 <a href="#state_duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1584,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payment_type_python">
 <a href="#state_payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
@@ -1594,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_python">
 <a href="#state_ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -1604,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ratio.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1614,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1624,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

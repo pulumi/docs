@@ -297,8 +297,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="productcode_csharp">
 <a href="#productcode_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -307,8 +306,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotaactioncode_csharp">
 <a href="#quotaactioncode_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Action<wbr>Code</a>
@@ -317,8 +315,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotaalarmname_csharp">
 <a href="#quotaalarmname_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Alarm<wbr>Name</a>
@@ -327,8 +324,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotadimensions_csharp">
 <a href="#quotadimensions_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Dimensions</a>
@@ -337,8 +333,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#quotaalarmquotadimension">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Quotas.<wbr>Inputs.<wbr>Quota<wbr>Alarm<wbr>Quota<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -347,8 +342,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdpercent_csharp">
 <a href="#thresholdpercent_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
@@ -357,8 +351,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_csharp">
 <a href="#webhook_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook</a>
@@ -367,13 +360,11 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="productcode_go">
 <a href="#productcode_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -382,8 +373,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotaactioncode_go">
 <a href="#quotaactioncode_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Action<wbr>Code</a>
@@ -392,8 +382,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotaalarmname_go">
 <a href="#quotaalarmname_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Alarm<wbr>Name</a>
@@ -402,8 +391,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotadimensions_go">
 <a href="#quotadimensions_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Dimensions</a>
@@ -412,8 +400,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#quotaalarmquotadimension">[]Quota<wbr>Alarm<wbr>Quota<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -422,8 +409,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdpercent_go">
 <a href="#thresholdpercent_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
@@ -432,8 +418,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_go">
 <a href="#webhook_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook</a>
@@ -442,13 +427,11 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="productcode_nodejs">
 <a href="#productcode_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code</a>
@@ -457,8 +440,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotaactioncode_nodejs">
 <a href="#quotaactioncode_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Action<wbr>Code</a>
@@ -467,8 +449,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quotaalarmname_nodejs">
 <a href="#quotaalarmname_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Alarm<wbr>Name</a>
@@ -477,8 +458,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotadimensions_nodejs">
 <a href="#quotadimensions_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Dimensions</a>
@@ -487,8 +467,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#quotaalarmquotadimension">Quota<wbr>Alarm<wbr>Quota<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -497,8 +476,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdpercent_nodejs">
 <a href="#thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
@@ -507,8 +485,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_nodejs">
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook</a>
@@ -517,13 +494,11 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="product_code_python">
 <a href="#product_code_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code</a>
@@ -532,8 +507,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quota_action_code_python">
 <a href="#quota_action_code_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>action_<wbr>code</a>
@@ -542,8 +516,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quota_alarm_name_python">
 <a href="#quota_alarm_name_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>alarm_<wbr>name</a>
@@ -552,8 +525,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quota_dimensions_python">
 <a href="#quota_dimensions_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>dimensions</a>
@@ -562,8 +534,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#quotaalarmquotadimension">Sequence[Quota<wbr>Alarm<wbr>Quota<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -572,8 +543,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_percent_python">
 <a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
@@ -582,8 +552,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_hook_python">
 <a href="#web_hook_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook</a>
@@ -592,8 +561,7 @@ The QuotaAlarm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -604,8 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -613,13 +580,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -627,13 +592,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -641,13 +604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,8 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -783,8 +743,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_productcode_csharp">
 <a href="#state_productcode_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -793,8 +752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotaactioncode_csharp">
 <a href="#state_quotaactioncode_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Action<wbr>Code</a>
@@ -803,8 +761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotaalarmname_csharp">
 <a href="#state_quotaalarmname_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Alarm<wbr>Name</a>
@@ -813,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotadimensions_csharp">
 <a href="#state_quotadimensions_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Dimensions</a>
@@ -823,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#quotaalarmquotadimension">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Quotas.<wbr>Inputs.<wbr>Quota<wbr>Alarm<wbr>Quota<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_csharp">
 <a href="#state_threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -833,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdpercent_csharp">
 <a href="#state_thresholdpercent_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
@@ -843,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhook_csharp">
 <a href="#state_webhook_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook</a>
@@ -853,13 +806,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_productcode_go">
 <a href="#state_productcode_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -868,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotaactioncode_go">
 <a href="#state_quotaactioncode_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Action<wbr>Code</a>
@@ -878,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotaalarmname_go">
 <a href="#state_quotaalarmname_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Alarm<wbr>Name</a>
@@ -888,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotadimensions_go">
 <a href="#state_quotadimensions_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Dimensions</a>
@@ -898,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#quotaalarmquotadimension">[]Quota<wbr>Alarm<wbr>Quota<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_go">
 <a href="#state_threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -908,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdpercent_go">
 <a href="#state_thresholdpercent_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
@@ -918,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhook_go">
 <a href="#state_webhook_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook</a>
@@ -928,13 +873,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_productcode_nodejs">
 <a href="#state_productcode_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code</a>
@@ -943,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotaactioncode_nodejs">
 <a href="#state_quotaactioncode_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Action<wbr>Code</a>
@@ -953,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotaalarmname_nodejs">
 <a href="#state_quotaalarmname_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Alarm<wbr>Name</a>
@@ -963,8 +904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotadimensions_nodejs">
 <a href="#state_quotadimensions_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Dimensions</a>
@@ -973,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#quotaalarmquotadimension">Quota<wbr>Alarm<wbr>Quota<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_nodejs">
 <a href="#state_threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -983,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdpercent_nodejs">
 <a href="#state_thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
@@ -993,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhook_nodejs">
 <a href="#state_webhook_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook</a>
@@ -1003,13 +940,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_product_code_python">
 <a href="#state_product_code_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code</a>
@@ -1018,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Product Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quota_action_code_python">
 <a href="#state_quota_action_code_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>action_<wbr>code</a>
@@ -1028,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Quota Action Code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quota_alarm_name_python">
 <a href="#state_quota_alarm_name_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>alarm_<wbr>name</a>
@@ -1038,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quota_dimensions_python">
 <a href="#state_quota_dimensions_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>dimensions</a>
@@ -1048,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#quotaalarmquotadimension">Sequence[Quota<wbr>Alarm<wbr>Quota<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Quota Dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_python">
 <a href="#state_threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1058,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The threshold of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_percent_python">
 <a href="#state_threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
@@ -1068,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The threshold percent of Quota Alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_hook_python">
 <a href="#state_web_hook_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook</a>
@@ -1078,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The WebHook of Quota Alarm.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1094,8 +1022,7 @@ The following state arguments are supported:
 <h4 id="quotaalarmquotadimension">Quota<wbr>Alarm<wbr>Quota<wbr>Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1104,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key of quota_dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1114,13 +1040,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Value of quota_dimensions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1129,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key of quota_dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1139,13 +1062,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Value of quota_dimensions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1154,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key of quota_dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1164,13 +1084,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Value of quota_dimensions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1179,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Key of quota_dimensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1189,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Value of quota_dimensions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

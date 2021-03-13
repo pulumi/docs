@@ -453,8 +453,7 @@ The ApiKey resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationinsightsid_csharp">
 <a href="#applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -463,8 +462,7 @@ The ApiKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -474,8 +472,7 @@ The ApiKey resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readpermissions_csharp">
 <a href="#readpermissions_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Permissions</a>
@@ -484,8 +481,7 @@ new resource to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writepermissions_csharp">
 <a href="#writepermissions_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Permissions</a>
@@ -494,13 +490,11 @@ new resource to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationinsightsid_go">
 <a href="#applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -509,8 +503,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -520,8 +513,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readpermissions_go">
 <a href="#readpermissions_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Permissions</a>
@@ -530,8 +522,7 @@ new resource to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writepermissions_go">
 <a href="#writepermissions_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Permissions</a>
@@ -540,13 +531,11 @@ new resource to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationinsightsid_nodejs">
 <a href="#applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
@@ -555,8 +544,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -566,8 +554,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readpermissions_nodejs">
 <a href="#readpermissions_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Permissions</a>
@@ -576,8 +563,7 @@ new resource to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writepermissions_nodejs">
 <a href="#writepermissions_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Permissions</a>
@@ -586,13 +572,11 @@ new resource to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_insights_id_python">
 <a href="#application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
@@ -601,8 +585,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -612,8 +595,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_permissions_python">
 <a href="#read_permissions_python" style="color: inherit; text-decoration: inherit;">read_<wbr>permissions</a>
@@ -622,8 +604,7 @@ new resource to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_permissions_python">
 <a href="#write_permissions_python" style="color: inherit; text-decoration: inherit;">write_<wbr>permissions</a>
@@ -632,8 +613,7 @@ new resource to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -644,8 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -653,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -663,13 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -678,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -687,13 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -702,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -711,13 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -726,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -735,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -863,8 +831,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationinsightsid_csharp">
 <a href="#state_applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -873,8 +840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -883,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -894,8 +859,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readpermissions_csharp">
 <a href="#state_readpermissions_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Permissions</a>
@@ -904,8 +868,7 @@ new resource to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writepermissions_csharp">
 <a href="#state_writepermissions_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Permissions</a>
@@ -914,13 +877,11 @@ new resource to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apikey_go">
 <a href="#state_apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -929,8 +890,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationinsightsid_go">
 <a href="#state_applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -939,8 +899,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -950,8 +909,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readpermissions_go">
 <a href="#state_readpermissions_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Permissions</a>
@@ -960,8 +918,7 @@ new resource to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writepermissions_go">
 <a href="#state_writepermissions_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Permissions</a>
@@ -970,13 +927,11 @@ new resource to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apikey_nodejs">
 <a href="#state_apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -985,8 +940,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationinsightsid_nodejs">
 <a href="#state_applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
@@ -995,8 +949,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1006,8 +959,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readpermissions_nodejs">
 <a href="#state_readpermissions_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Permissions</a>
@@ -1016,8 +968,7 @@ new resource to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writepermissions_nodejs">
 <a href="#state_writepermissions_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Permissions</a>
@@ -1026,13 +977,11 @@ new resource to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_key_python">
 <a href="#state_api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -1041,8 +990,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API Key secret (Sensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_insights_id_python">
 <a href="#state_application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
@@ -1051,8 +999,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1062,8 +1009,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_read_permissions_python">
 <a href="#state_read_permissions_python" style="color: inherit; text-decoration: inherit;">read_<wbr>permissions</a>
@@ -1072,8 +1018,7 @@ new resource to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of read permissions granted to the API key. Valid values are `agentconfig`, `aggregate`, `api`, `draft`, `extendqueries`, `search`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_permissions_python">
 <a href="#state_write_permissions_python" style="color: inherit; text-decoration: inherit;">write_<wbr>permissions</a>
@@ -1082,8 +1027,7 @@ new resource to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of write permissions granted to the API key. Valid values are `annotations`. Please note these values are case sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

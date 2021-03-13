@@ -375,8 +375,7 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -385,8 +384,7 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_csharp">
 <a href="#build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
@@ -395,8 +393,7 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceremove_csharp">
 <a href="#forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
@@ -405,8 +402,7 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keeplocally_csharp">
 <a href="#keeplocally_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
@@ -417,8 +413,7 @@ The RemoteImage resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pulltrigger_csharp">
 <a href="#pulltrigger_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
@@ -427,8 +422,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="pulltriggers_csharp">
 <a href="#pulltriggers_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
@@ -440,13 +434,11 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -455,8 +447,7 @@ to trigger an image update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_go">
 <a href="#build_go" style="color: inherit; text-decoration: inherit;">Build</a>
@@ -465,8 +456,7 @@ to trigger an image update.
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceremove_go">
 <a href="#forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
@@ -475,8 +465,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keeplocally_go">
 <a href="#keeplocally_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
@@ -487,8 +476,7 @@ to trigger an image update.
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pulltrigger_go">
 <a href="#pulltrigger_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
@@ -497,8 +485,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="pulltriggers_go">
 <a href="#pulltriggers_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
@@ -510,13 +497,11 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -525,8 +510,7 @@ to trigger an image update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_nodejs">
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
@@ -535,8 +519,7 @@ to trigger an image update.
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceremove_nodejs">
 <a href="#forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
@@ -545,8 +528,7 @@ to trigger an image update.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keeplocally_nodejs">
 <a href="#keeplocally_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Locally</a>
@@ -557,8 +539,7 @@ to trigger an image update.
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pulltrigger_nodejs">
 <a href="#pulltrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Trigger</a>
@@ -567,8 +548,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="pulltriggers_nodejs">
 <a href="#pulltriggers_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Triggers</a>
@@ -580,13 +560,11 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -595,8 +573,7 @@ to trigger an image update.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_python">
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
@@ -605,8 +582,7 @@ to trigger an image update.
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_remove_python">
 <a href="#force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
@@ -615,8 +591,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keep_locally_python">
 <a href="#keep_locally_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>locally</a>
@@ -627,8 +602,7 @@ to trigger an image update.
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="pull_trigger_python">
 <a href="#pull_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>trigger</a>
@@ -637,8 +611,7 @@ the docker local storage on destroy operation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="pull_triggers_python">
 <a href="#pull_triggers_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>triggers</a>
@@ -650,8 +623,7 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -662,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -671,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_csharp">
 <a href="#latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
@@ -680,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -689,13 +658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -703,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_go">
 <a href="#latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
@@ -712,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -721,13 +686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -735,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_nodejs">
 <a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
@@ -744,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -753,13 +714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -767,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_python">
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
@@ -776,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -785,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -913,8 +869,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_build_csharp">
 <a href="#state_build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
@@ -923,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceremove_csharp">
 <a href="#state_forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
@@ -933,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keeplocally_csharp">
 <a href="#state_keeplocally_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
@@ -945,8 +898,7 @@ The following state arguments are supported:
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_csharp">
 <a href="#state_latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
@@ -954,8 +906,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -964,8 +915,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_csharp">
 <a href="#state_output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -973,8 +923,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pulltrigger_csharp">
 <a href="#state_pulltrigger_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
@@ -983,8 +932,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_pulltriggers_csharp">
 <a href="#state_pulltriggers_csharp" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
@@ -996,13 +944,11 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_build_go">
 <a href="#state_build_go" style="color: inherit; text-decoration: inherit;">Build</a>
@@ -1011,8 +957,7 @@ to trigger an image update.
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceremove_go">
 <a href="#state_forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
@@ -1021,8 +966,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keeplocally_go">
 <a href="#state_keeplocally_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Locally</a>
@@ -1033,8 +977,7 @@ to trigger an image update.
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_go">
 <a href="#state_latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
@@ -1042,8 +985,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1052,8 +994,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_go">
 <a href="#state_output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -1061,8 +1002,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pulltrigger_go">
 <a href="#state_pulltrigger_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Trigger</a>
@@ -1071,8 +1011,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_pulltriggers_go">
 <a href="#state_pulltriggers_go" style="color: inherit; text-decoration: inherit;">Pull<wbr>Triggers</a>
@@ -1084,13 +1023,11 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_build_nodejs">
 <a href="#state_build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
@@ -1099,8 +1036,7 @@ to trigger an image update.
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceremove_nodejs">
 <a href="#state_forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
@@ -1109,8 +1045,7 @@ to trigger an image update.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keeplocally_nodejs">
 <a href="#state_keeplocally_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Locally</a>
@@ -1121,8 +1056,7 @@ to trigger an image update.
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_nodejs">
 <a href="#state_latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
@@ -1130,8 +1064,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1140,8 +1073,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_nodejs">
 <a href="#state_output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -1149,8 +1081,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pulltrigger_nodejs">
 <a href="#state_pulltrigger_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Trigger</a>
@@ -1159,8 +1090,7 @@ the docker local storage on destroy operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_pulltriggers_nodejs">
 <a href="#state_pulltriggers_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Triggers</a>
@@ -1172,13 +1102,11 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_build_python">
 <a href="#state_build_python" style="color: inherit; text-decoration: inherit;">build</a>
@@ -1187,8 +1115,7 @@ to trigger an image update.
         <span class="property-type"><a href="#remoteimagebuild">Remote<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_remove_python">
 <a href="#state_force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
@@ -1197,8 +1124,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force remove the image when the resource is destroyed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keep_locally_python">
 <a href="#state_keep_locally_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>locally</a>
@@ -1209,8 +1135,7 @@ to trigger an image update.
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
 the docker local storage on destroy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_python">
 <a href="#state_latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
@@ -1218,8 +1143,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1228,8 +1152,7 @@ the docker local storage on destroy operation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Docker image, including any tags or SHA256 repo digests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_python">
 <a href="#state_output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -1237,8 +1160,7 @@ the docker local storage on destroy operation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_pull_trigger_python">
 <a href="#state_pull_trigger_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>trigger</a>
@@ -1247,8 +1169,7 @@ the docker local storage on destroy operation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Deprecated**, use `pull_triggers` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use field pull_triggers instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_pull_triggers_python">
 <a href="#state_pull_triggers_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>triggers</a>
@@ -1260,8 +1181,7 @@ the docker local storage on destroy operation.
 image pull when changed. This is used to store the image digest from the
 registry when using the `docker.RegistryImage` [data source](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 to trigger an image update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1276,8 +1196,7 @@ to trigger an image update.
 <h4 id="remoteimagebuild">Remote<wbr>Image<wbr>Build</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1285,8 +1204,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildarg_csharp">
 <a href="#buildarg_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Arg</a>
@@ -1294,8 +1212,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_csharp">
 <a href="#dockerfile_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
@@ -1304,8 +1221,7 @@ to trigger an image update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceremove_csharp">
 <a href="#forceremove_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
@@ -1313,8 +1229,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1322,8 +1237,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocache_csharp">
 <a href="#nocache_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
@@ -1331,8 +1245,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remove_csharp">
 <a href="#remove_csharp" style="color: inherit; text-decoration: inherit;">Remove</a>
@@ -1341,8 +1254,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}default true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1350,8 +1262,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1359,13 +1270,11 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1373,8 +1282,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildarg_go">
 <a href="#buildarg_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Arg</a>
@@ -1382,8 +1290,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_go">
 <a href="#dockerfile_go" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
@@ -1392,8 +1299,7 @@ to trigger an image update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceremove_go">
 <a href="#forceremove_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Remove</a>
@@ -1401,8 +1307,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1410,8 +1315,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocache_go">
 <a href="#nocache_go" style="color: inherit; text-decoration: inherit;">No<wbr>Cache</a>
@@ -1419,8 +1323,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remove_go">
 <a href="#remove_go" style="color: inherit; text-decoration: inherit;">Remove</a>
@@ -1429,8 +1332,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}default true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1438,8 +1340,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1447,13 +1348,11 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1461,8 +1360,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildarg_nodejs">
 <a href="#buildarg_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Arg</a>
@@ -1470,8 +1368,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_nodejs">
 <a href="#dockerfile_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile</a>
@@ -1480,8 +1377,7 @@ to trigger an image update.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceremove_nodejs">
 <a href="#forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
@@ -1489,8 +1385,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1498,8 +1393,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nocache_nodejs">
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
@@ -1507,8 +1401,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remove_nodejs">
 <a href="#remove_nodejs" style="color: inherit; text-decoration: inherit;">remove</a>
@@ -1517,8 +1410,7 @@ to trigger an image update.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}default true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1526,8 +1418,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1535,13 +1426,11 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1549,8 +1438,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_arg_python">
 <a href="#build_arg_python" style="color: inherit; text-decoration: inherit;">build_<wbr>arg</a>
@@ -1558,8 +1446,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_python">
 <a href="#dockerfile_python" style="color: inherit; text-decoration: inherit;">dockerfile</a>
@@ -1568,8 +1455,7 @@ to trigger an image update.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default Dockerfile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_remove_python">
 <a href="#force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
@@ -1577,8 +1463,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1586,8 +1471,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_cache_python">
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
@@ -1595,8 +1479,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remove_python">
 <a href="#remove_python" style="color: inherit; text-decoration: inherit;">remove</a>
@@ -1605,8 +1488,7 @@ to trigger an image update.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}default true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1614,8 +1496,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1623,8 +1504,7 @@ to trigger an image update.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

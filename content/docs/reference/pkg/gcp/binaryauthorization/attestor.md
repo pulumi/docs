@@ -583,8 +583,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestationauthoritynote_csharp">
 <a href="#attestationauthoritynote_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
@@ -594,8 +593,7 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -605,8 +603,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -615,8 +612,7 @@ displayed in chooser dialogs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -626,13 +622,11 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestationauthoritynote_go">
 <a href="#attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
@@ -642,8 +636,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -653,8 +646,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -663,8 +655,7 @@ displayed in chooser dialogs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -674,13 +665,11 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestationauthoritynote_nodejs">
 <a href="#attestationauthoritynote_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority<wbr>Note</a>
@@ -690,8 +679,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -701,8 +689,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -711,8 +698,7 @@ displayed in chooser dialogs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -722,13 +708,11 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestation_authority_note_python">
 <a href="#attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
@@ -738,8 +722,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -749,8 +732,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -759,8 +741,7 @@ displayed in chooser dialogs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -770,8 +751,7 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -782,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -791,13 +770,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -805,13 +782,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -819,13 +794,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -833,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -961,8 +933,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestationauthoritynote_csharp">
 <a href="#state_attestationauthoritynote_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
@@ -972,8 +943,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -983,8 +953,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -993,8 +962,7 @@ displayed in chooser dialogs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1004,13 +972,11 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestationauthoritynote_go">
 <a href="#state_attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
@@ -1020,8 +986,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1031,8 +996,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1041,8 +1005,7 @@ displayed in chooser dialogs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1052,13 +1015,11 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestationauthoritynote_nodejs">
 <a href="#state_attestationauthoritynote_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority<wbr>Note</a>
@@ -1068,8 +1029,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1079,8 +1039,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1089,8 +1048,7 @@ displayed in chooser dialogs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1100,13 +1058,11 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestation_authority_note_python">
 <a href="#state_attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
@@ -1116,8 +1072,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1127,8 +1082,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1137,8 +1091,7 @@ displayed in chooser dialogs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1148,8 +1101,7 @@ displayed in chooser dialogs.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1164,8 +1116,7 @@ If it is not provided, the provider project is used.
 <h4 id="attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notereference_csharp">
 <a href="#notereference_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Reference</a>
@@ -1180,8 +1131,7 @@ should be specified in the format `projects/*/notes/*` (or the legacy
 An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegationserviceaccountemail_csharp">
 <a href="#delegationserviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Delegation<wbr>Service<wbr>Account<wbr>Email</a>
@@ -1199,8 +1149,7 @@ This email address is fixed for the lifetime of the Attestor, but
 callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -1216,13 +1165,11 @@ image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
 attestations exist.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notereference_go">
 <a href="#notereference_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Reference</a>
@@ -1237,8 +1184,7 @@ should be specified in the format `projects/*/notes/*` (or the legacy
 An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegationserviceaccountemail_go">
 <a href="#delegationserviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Delegation<wbr>Service<wbr>Account<wbr>Email</a>
@@ -1256,8 +1202,7 @@ This email address is fixed for the lifetime of the Attestor, but
 callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -1273,13 +1218,11 @@ image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
 attestations exist.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notereference_nodejs">
 <a href="#notereference_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
@@ -1294,8 +1237,7 @@ should be specified in the format `projects/*/notes/*` (or the legacy
 An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegationserviceaccountemail_nodejs">
 <a href="#delegationserviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
@@ -1313,8 +1255,7 @@ This email address is fixed for the lifetime of the Attestor, but
 callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -1330,13 +1271,11 @@ image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
 attestations exist.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="note_reference_python">
 <a href="#note_reference_python" style="color: inherit; text-decoration: inherit;">note_<wbr>reference</a>
@@ -1351,8 +1290,7 @@ should be specified in the format `projects/*/notes/*` (or the legacy
 An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegation_service_account_email_python">
 <a href="#delegation_service_account_email_python" style="color: inherit; text-decoration: inherit;">delegation_<wbr>service_<wbr>account_<wbr>email</a>
@@ -1370,8 +1308,7 @@ This email address is fixed for the lifetime of the Attestor, but
 callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -1387,15 +1324,13 @@ image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
 attestations exist.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="attestorattestationauthoritynotepublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asciiarmoredpgppublickey_csharp">
 <a href="#asciiarmoredpgppublickey_csharp" style="color: inherit; text-decoration: inherit;">Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
@@ -1412,8 +1347,7 @@ and fill it in automatically. BinAuthz computes this ID
 as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -1422,8 +1356,7 @@ be overwritten by the API-calculated ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1437,8 +1370,7 @@ verify them, and that ID must match the contents of this
 field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkixpublickey_csharp">
 <a href="#pkixpublickey_csharp" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
@@ -1452,13 +1384,11 @@ type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
 encoding of the public key.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asciiarmoredpgppublickey_go">
 <a href="#asciiarmoredpgppublickey_go" style="color: inherit; text-decoration: inherit;">Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
@@ -1475,8 +1405,7 @@ and fill it in automatically. BinAuthz computes this ID
 as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -1485,8 +1414,7 @@ be overwritten by the API-calculated ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1500,8 +1428,7 @@ verify them, and that ID must match the contents of this
 field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkixpublickey_go">
 <a href="#pkixpublickey_go" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
@@ -1515,13 +1442,11 @@ type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
 encoding of the public key.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asciiarmoredpgppublickey_nodejs">
 <a href="#asciiarmoredpgppublickey_nodejs" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
@@ -1538,8 +1463,7 @@ and fill it in automatically. BinAuthz computes this ID
 as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1548,8 +1472,7 @@ be overwritten by the API-calculated ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1563,8 +1486,7 @@ verify them, and that ID must match the contents of this
 field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkixpublickey_nodejs">
 <a href="#pkixpublickey_nodejs" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
@@ -1578,13 +1500,11 @@ type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
 encoding of the public key.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ascii_armored_pgp_public_key_python">
 <a href="#ascii_armored_pgp_public_key_python" style="color: inherit; text-decoration: inherit;">ascii_<wbr>armored_<wbr>pgp_<wbr>public_<wbr>key</a>
@@ -1601,8 +1521,7 @@ and fill it in automatically. BinAuthz computes this ID
 as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1611,8 +1530,7 @@ be overwritten by the API-calculated ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1626,8 +1544,7 @@ verify them, and that ID must match the contents of this
 field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkix_public_key_python">
 <a href="#pkix_public_key_python" style="color: inherit; text-decoration: inherit;">pkix_<wbr>public_<wbr>key</a>
@@ -1641,15 +1558,13 @@ type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
 encoding of the public key.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeypem_csharp">
 <a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
@@ -1659,8 +1574,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -1673,13 +1587,11 @@ a signature using this key. These signature algorithm must
 match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeypem_go">
 <a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
@@ -1689,8 +1601,7 @@ public key).
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -1703,13 +1614,11 @@ a signature using this key. These signature algorithm must
 match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeypem_nodejs">
 <a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
@@ -1719,8 +1628,7 @@ public key).
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
@@ -1733,13 +1641,11 @@ a signature using this key. These signature algorithm must
 match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_key_pem_python">
 <a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
@@ -1749,8 +1655,7 @@ public key).
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
@@ -1763,8 +1668,7 @@ a signature using this key. These signature algorithm must
 match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -170,8 +170,7 @@ The PreparedQuery resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -180,8 +179,7 @@ The PreparedQuery resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_csharp">
 <a href="#connect_csharp" style="color: inherit; text-decoration: inherit;">Connect</a>
@@ -192,8 +190,7 @@ The PreparedQuery resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -203,8 +200,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -213,8 +209,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_csharp">
 <a href="#failover_csharp" style="color: inherit; text-decoration: inherit;">Failover</a>
@@ -224,8 +219,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorecheckids_csharp">
 <a href="#ignorecheckids_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
@@ -239,8 +233,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -251,8 +244,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_csharp">
 <a href="#near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -264,8 +256,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_csharp">
 <a href="#nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -276,8 +267,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlypassing_csharp">
 <a href="#onlypassing_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
@@ -287,8 +277,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemeta_csharp">
 <a href="#servicemeta_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
@@ -299,8 +288,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_csharp">
 <a href="#session_csharp" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -313,8 +301,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storedtoken_csharp">
 <a href="#storedtoken_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
@@ -324,8 +311,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -336,8 +322,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -347,8 +332,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -358,13 +342,11 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -373,8 +355,7 @@ This overrides the token that the agent provides by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_go">
 <a href="#connect_go" style="color: inherit; text-decoration: inherit;">Connect</a>
@@ -385,8 +366,7 @@ This overrides the token that the agent provides by default.
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -396,8 +376,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -406,8 +385,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_go">
 <a href="#failover_go" style="color: inherit; text-decoration: inherit;">Failover</a>
@@ -417,8 +395,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorecheckids_go">
 <a href="#ignorecheckids_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
@@ -432,8 +409,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -444,8 +420,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_go">
 <a href="#near_go" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -457,8 +432,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_go">
 <a href="#nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -469,8 +443,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlypassing_go">
 <a href="#onlypassing_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
@@ -480,8 +453,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemeta_go">
 <a href="#servicemeta_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
@@ -492,8 +464,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_go">
 <a href="#session_go" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -506,8 +477,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storedtoken_go">
 <a href="#storedtoken_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
@@ -517,8 +487,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -529,8 +498,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -540,8 +508,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -551,13 +518,11 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -566,8 +531,7 @@ This overrides the token that the agent provides by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_nodejs">
 <a href="#connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
@@ -578,8 +542,7 @@ This overrides the token that the agent provides by default.
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -589,8 +552,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -599,8 +561,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_nodejs">
 <a href="#failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
@@ -610,8 +571,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorecheckids_nodejs">
 <a href="#ignorecheckids_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Check<wbr>Ids</a>
@@ -625,8 +585,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -637,8 +596,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_nodejs">
 <a href="#near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
@@ -650,8 +608,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_nodejs">
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
@@ -662,8 +619,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlypassing_nodejs">
 <a href="#onlypassing_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Passing</a>
@@ -673,8 +629,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemeta_nodejs">
 <a href="#servicemeta_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta</a>
@@ -685,8 +640,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_nodejs">
 <a href="#session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
@@ -699,8 +653,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storedtoken_nodejs">
 <a href="#storedtoken_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Token</a>
@@ -710,8 +663,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -722,8 +674,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -733,8 +684,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -744,13 +694,11 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -759,8 +707,7 @@ This overrides the token that the agent provides by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_python">
 <a href="#connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
@@ -771,8 +718,7 @@ This overrides the token that the agent provides by default.
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -782,8 +728,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -792,8 +737,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_python">
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
@@ -803,8 +747,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_check_ids_python">
 <a href="#ignore_check_ids_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>check_<wbr>ids</a>
@@ -818,8 +761,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -830,8 +772,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_python">
 <a href="#near_python" style="color: inherit; text-decoration: inherit;">near</a>
@@ -843,8 +784,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_meta_python">
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
@@ -855,8 +795,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="only_passing_python">
 <a href="#only_passing_python" style="color: inherit; text-decoration: inherit;">only_<wbr>passing</a>
@@ -866,8 +805,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_meta_python">
 <a href="#service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
@@ -878,8 +816,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_python">
 <a href="#session_python" style="color: inherit; text-decoration: inherit;">session</a>
@@ -892,8 +829,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stored_token_python">
 <a href="#stored_token_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>token</a>
@@ -903,8 +839,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -915,8 +850,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -926,8 +860,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -937,8 +870,7 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -949,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -958,13 +889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -972,13 +901,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -986,13 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1000,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1128,8 +1052,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connect_csharp">
 <a href="#state_connect_csharp" style="color: inherit; text-decoration: inherit;">Connect</a>
@@ -1140,8 +1063,7 @@ The following state arguments are supported:
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1151,8 +1073,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_csharp">
 <a href="#state_dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -1161,8 +1082,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failover_csharp">
 <a href="#state_failover_csharp" style="color: inherit; text-decoration: inherit;">Failover</a>
@@ -1172,8 +1092,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorecheckids_csharp">
 <a href="#state_ignorecheckids_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
@@ -1187,8 +1106,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1199,8 +1117,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_near_csharp">
 <a href="#state_near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -1212,8 +1129,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodemeta_csharp">
 <a href="#state_nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -1224,8 +1140,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlypassing_csharp">
 <a href="#state_onlypassing_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
@@ -1235,8 +1150,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1245,8 +1159,7 @@ return nodes with passing health checks in the result.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicemeta_csharp">
 <a href="#state_servicemeta_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
@@ -1257,8 +1170,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_csharp">
 <a href="#state_session_csharp" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -1271,8 +1183,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storedtoken_csharp">
 <a href="#state_storedtoken_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
@@ -1282,8 +1193,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1294,8 +1204,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1305,8 +1214,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1316,13 +1224,11 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connect_go">
 <a href="#state_connect_go" style="color: inherit; text-decoration: inherit;">Connect</a>
@@ -1333,8 +1239,7 @@ This overrides the token that the agent provides by default.
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1344,8 +1249,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_go">
 <a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -1354,8 +1258,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failover_go">
 <a href="#state_failover_go" style="color: inherit; text-decoration: inherit;">Failover</a>
@@ -1365,8 +1268,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorecheckids_go">
 <a href="#state_ignorecheckids_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Check<wbr>Ids</a>
@@ -1380,8 +1282,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1392,8 +1293,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_near_go">
 <a href="#state_near_go" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -1405,8 +1305,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodemeta_go">
 <a href="#state_nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -1417,8 +1316,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlypassing_go">
 <a href="#state_onlypassing_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Passing</a>
@@ -1428,8 +1326,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1438,8 +1335,7 @@ return nodes with passing health checks in the result.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicemeta_go">
 <a href="#state_servicemeta_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta</a>
@@ -1450,8 +1346,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_go">
 <a href="#state_session_go" style="color: inherit; text-decoration: inherit;">Session</a>
@@ -1464,8 +1359,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storedtoken_go">
 <a href="#state_storedtoken_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Token</a>
@@ -1475,8 +1369,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1487,8 +1380,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1498,8 +1390,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1509,13 +1400,11 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connect_nodejs">
 <a href="#state_connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
@@ -1526,8 +1415,7 @@ This overrides the token that the agent provides by default.
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1537,8 +1425,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_nodejs">
 <a href="#state_dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -1547,8 +1434,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failover_nodejs">
 <a href="#state_failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
@@ -1558,8 +1444,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorecheckids_nodejs">
 <a href="#state_ignorecheckids_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Check<wbr>Ids</a>
@@ -1573,8 +1458,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1585,8 +1469,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_near_nodejs">
 <a href="#state_near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
@@ -1598,8 +1481,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodemeta_nodejs">
 <a href="#state_nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
@@ -1610,8 +1492,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlypassing_nodejs">
 <a href="#state_onlypassing_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Passing</a>
@@ -1621,8 +1502,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1631,8 +1511,7 @@ return nodes with passing health checks in the result.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicemeta_nodejs">
 <a href="#state_servicemeta_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta</a>
@@ -1643,8 +1522,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_nodejs">
 <a href="#state_session_nodejs" style="color: inherit; text-decoration: inherit;">session</a>
@@ -1657,8 +1535,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storedtoken_nodejs">
 <a href="#state_storedtoken_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Token</a>
@@ -1668,8 +1545,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1680,8 +1556,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1691,8 +1566,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1702,13 +1576,11 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connect_python">
 <a href="#state_connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
@@ -1719,8 +1591,7 @@ This overrides the token that the agent provides by default.
     <dd>{{% md %}}When `true` the prepared query will return connect
 proxy services for a queried service.  Conditions such as `tags` in the
 prepared query will be matched against the proxy service. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1730,8 +1601,7 @@ prepared query will be matched against the proxy service. Defaults to false.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_python">
 <a href="#state_dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -1740,8 +1610,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type"><a href="#preparedquerydns">Prepared<wbr>Query<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for controlling the DNS response details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failover_python">
 <a href="#state_failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
@@ -1751,8 +1620,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Options for controlling behavior when no healthy
 nodes are available in the local DC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_check_ids_python">
 <a href="#state_ignore_check_ids_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>check_<wbr>ids</a>
@@ -1766,8 +1634,7 @@ emergency or as a temporary measure when a health check is found to be
 unreliable. Being able to ignore it in centrally-defined queries can be
 simpler than de-registering the check as an interim solution until the check
 can be fixed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1778,8 +1645,7 @@ can be fixed.
     <dd>{{% md %}}The name of the prepared query. Used to identify
 the prepared query during requests. Can be specified as an empty string
 to configure the query as a catch-all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_near_python">
 <a href="#state_near_python" style="color: inherit; text-decoration: inherit;">near</a>
@@ -1791,8 +1657,7 @@ to configure the query as a catch-all.
 near using Consul's distance sorting and network coordinates. The magic
 `_agent` value can be used to always sort nearest the node servicing the
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_meta_python">
 <a href="#state_node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
@@ -1803,8 +1668,7 @@ request.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs that
 will be used for filtering the query results to nodes with the given metadata
 values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_only_passing_python">
 <a href="#state_only_passing_python" style="color: inherit; text-decoration: inherit;">only_<wbr>passing</a>
@@ -1814,8 +1678,7 @@ values present.
     </dt>
     <dd>{{% md %}}When `true`, the prepared query will only
 return nodes with passing health checks in the result.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1824,8 +1687,7 @@ return nodes with passing health checks in the result.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_meta_python">
 <a href="#state_service_meta_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta</a>
@@ -1836,8 +1698,7 @@ return nodes with passing health checks in the result.
     <dd>{{% md %}}Specifies a list of user-defined key/value pairs
 that will be used for filtering the query results to services with the given
 metadata values present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_python">
 <a href="#state_session_python" style="color: inherit; text-decoration: inherit;">session</a>
@@ -1850,8 +1711,7 @@ lifetime to.  This is an advanced parameter that should not be used without a
 complete understanding of Consul sessions and the implications of their use
 (it is recommended to leave this blank in nearly all cases).  If this
 parameter is omitted the query will not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stored_token_python">
 <a href="#state_stored_token_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>token</a>
@@ -1861,8 +1721,7 @@ parameter is omitted the query will not expire.
     </dt>
     <dd>{{% md %}}The ACL token to store with the prepared
 query. This token will be used by default whenever the query is executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1873,8 +1732,7 @@ query. This token will be used by default whenever the query is executed.
     <dd>{{% md %}}The list of required and/or disallowed tags.  If a tag is
 in this list it must be present.  If the tag is preceded with a "!" then it is
 disallowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1884,8 +1742,7 @@ disallowed.
     </dt>
     <dd>{{% md %}}Query templating options. This is used to make a
 single prepared query respond to many different requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1895,8 +1752,7 @@ single prepared query respond to many different requests.
     </dt>
     <dd>{{% md %}}The ACL token to use when saving the prepared query.
 This overrides the token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1911,8 +1767,7 @@ This overrides the token that the agent provides by default.
 <h4 id="preparedquerydns">Prepared<wbr>Query<wbr>Dns</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1921,13 +1776,11 @@ This overrides the token that the agent provides by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1936,13 +1789,11 @@ This overrides the token that the agent provides by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1951,13 +1802,11 @@ This overrides the token that the agent provides by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1966,15 +1815,13 @@ This overrides the token that the agent provides by default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TTL to send when returning DNS results.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preparedqueryfailover">Prepared<wbr>Query<wbr>Failover</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_csharp">
 <a href="#datacenters_csharp" style="color: inherit; text-decoration: inherit;">Datacenters</a>
@@ -1983,8 +1830,7 @@ This overrides the token that the agent provides by default.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nearestn_csharp">
 <a href="#nearestn_csharp" style="color: inherit; text-decoration: inherit;">Nearest<wbr>N</a>
@@ -1994,13 +1840,11 @@ This overrides the token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_go">
 <a href="#datacenters_go" style="color: inherit; text-decoration: inherit;">Datacenters</a>
@@ -2009,8 +1853,7 @@ sorted in ascending order of estimated RTT.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nearestn_go">
 <a href="#nearestn_go" style="color: inherit; text-decoration: inherit;">Nearest<wbr>N</a>
@@ -2020,13 +1863,11 @@ sorted in ascending order of estimated RTT.
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_nodejs">
 <a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
@@ -2035,8 +1876,7 @@ sorted in ascending order of estimated RTT.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nearestn_nodejs">
 <a href="#nearestn_nodejs" style="color: inherit; text-decoration: inherit;">nearest<wbr>N</a>
@@ -2046,13 +1886,11 @@ sorted in ascending order of estimated RTT.
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_python">
 <a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
@@ -2061,8 +1899,7 @@ sorted in ascending order of estimated RTT.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Remote datacenters to return results from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nearest_n_python">
 <a href="#nearest_n_python" style="color: inherit; text-decoration: inherit;">nearest_<wbr>n</a>
@@ -2072,15 +1909,13 @@ sorted in ascending order of estimated RTT.
     </dt>
     <dd>{{% md %}}Return results from this many datacenters,
 sorted in ascending order of estimated RTT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preparedquerytemplate">Prepared<wbr>Query<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regexp_csharp">
 <a href="#regexp_csharp" style="color: inherit; text-decoration: inherit;">Regexp</a>
@@ -2090,8 +1925,7 @@ sorted in ascending order of estimated RTT.
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2101,13 +1935,11 @@ sorted in ascending order of estimated RTT.
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regexp_go">
 <a href="#regexp_go" style="color: inherit; text-decoration: inherit;">Regexp</a>
@@ -2117,8 +1949,7 @@ only `name_prefix_match` is supported.
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2128,13 +1959,11 @@ only `name_prefix_match` is supported.
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regexp_nodejs">
 <a href="#regexp_nodejs" style="color: inherit; text-decoration: inherit;">regexp</a>
@@ -2144,8 +1973,7 @@ only `name_prefix_match` is supported.
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2155,13 +1983,11 @@ only `name_prefix_match` is supported.
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="regexp_python">
 <a href="#regexp_python" style="color: inherit; text-decoration: inherit;">regexp</a>
@@ -2171,8 +1997,7 @@ only `name_prefix_match` is supported.
     </dt>
     <dd>{{% md %}}The regular expression to match with. When using
 `name_prefix_match`, this regex is applied against the query name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2182,8 +2007,7 @@ only `name_prefix_match` is supported.
     </dt>
     <dd>{{% md %}}The type of template matching to perform. Currently
 only `name_prefix_match` is supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

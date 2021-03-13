@@ -350,8 +350,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointid_csharp">
 <a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -361,8 +360,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -371,8 +369,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -381,8 +378,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -394,8 +390,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -405,13 +400,11 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointid_go">
 <a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -421,8 +414,7 @@ range of [0, 65535]. If unspecified, the default is 0.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -431,8 +423,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -441,8 +432,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -454,8 +444,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -465,13 +454,11 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointid_nodejs">
 <a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
@@ -481,8 +468,7 @@ range of [0, 65535]. If unspecified, the default is 0.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -491,8 +477,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -501,8 +486,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -514,8 +498,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -525,13 +508,11 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_id_python">
 <a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
@@ -541,8 +522,7 @@ range of [0, 65535]. If unspecified, the default is 0.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -551,8 +531,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -561,8 +540,7 @@ lowercase letters or the hyphen character.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -574,8 +552,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -585,8 +562,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -597,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -606,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -616,13 +590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -630,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -640,13 +611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -654,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -664,13 +632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -688,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -816,8 +780,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -826,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointid_csharp">
 <a href="#state_endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -837,8 +799,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -850,8 +811,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -860,8 +820,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -871,8 +830,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -881,13 +839,11 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -896,8 +852,7 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointid_go">
 <a href="#state_endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -907,8 +862,7 @@ range of [0, 65535]. If unspecified, the default is 0.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -920,8 +874,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -930,8 +883,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -941,8 +893,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -951,13 +902,11 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -966,8 +915,7 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointid_nodejs">
 <a href="#state_endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
@@ -977,8 +925,7 @@ range of [0, 65535]. If unspecified, the default is 0.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -990,8 +937,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1000,8 +946,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1011,8 +956,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1021,13 +965,11 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1036,8 +978,7 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_id_python">
 <a href="#state_endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
@@ -1047,8 +988,7 @@ range of [0, 65535]. If unspecified, the default is 0.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1060,8 +1000,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 512 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1070,8 +1009,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1081,8 +1019,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}Port that the endpoint is running on, must be in the
 range of [0, 65535]. If unspecified, the default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1091,8 +1028,7 @@ range of [0, 65535]. If unspecified, the default is 0.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the service that this endpoint provides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

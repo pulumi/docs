@@ -283,8 +283,7 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_csharp">
 <a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -294,8 +293,7 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -305,8 +303,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -315,8 +312,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadoguserconfig_csharp">
 <a href="#datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
@@ -325,8 +321,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalawscloudwatchlogsuserconfig_csharp">
 <a href="#externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -335,8 +330,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalawscloudwatchmetricsuserconfig_csharp">
 <a href="#externalawscloudwatchmetricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
@@ -345,8 +339,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalelasticsearchlogsuserconfig_csharp">
 <a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -355,8 +348,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalgooglecloudlogginguserconfig_csharp">
 <a href="#externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
@@ -365,8 +357,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalkafkauserconfig_csharp">
 <a href="#externalkafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
@@ -375,8 +366,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalschemaregistryuserconfig_csharp">
 <a href="#externalschemaregistryuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
@@ -385,8 +375,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jolokiauserconfig_csharp">
 <a href="#jolokiauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
@@ -395,8 +384,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheususerconfig_csharp">
 <a href="#prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
@@ -405,8 +393,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsysloguserconfig_csharp">
 <a href="#rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
@@ -415,8 +402,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxuserconfig_csharp">
 <a href="#signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
@@ -425,13 +411,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_go">
 <a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -441,8 +425,7 @@ By the time of writing the only available option is `datadog`.
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -452,8 +435,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -462,8 +444,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadoguserconfig_go">
 <a href="#datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
@@ -472,8 +453,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalawscloudwatchlogsuserconfig_go">
 <a href="#externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -482,8 +462,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalawscloudwatchmetricsuserconfig_go">
 <a href="#externalawscloudwatchmetricsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
@@ -492,8 +471,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalelasticsearchlogsuserconfig_go">
 <a href="#externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -502,8 +480,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalgooglecloudlogginguserconfig_go">
 <a href="#externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
@@ -512,8 +489,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalkafkauserconfig_go">
 <a href="#externalkafkauserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
@@ -522,8 +498,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalschemaregistryuserconfig_go">
 <a href="#externalschemaregistryuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
@@ -532,8 +507,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jolokiauserconfig_go">
 <a href="#jolokiauserconfig_go" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
@@ -542,8 +516,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheususerconfig_go">
 <a href="#prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
@@ -552,8 +525,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsysloguserconfig_go">
 <a href="#rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
@@ -562,8 +534,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxuserconfig_go">
 <a href="#signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
@@ -572,13 +543,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_nodejs">
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
@@ -588,8 +557,7 @@ By the time of writing the only available option is `datadog`.
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -599,8 +567,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -609,8 +576,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadoguserconfig_nodejs">
 <a href="#datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
@@ -619,8 +585,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalawscloudwatchlogsuserconfig_nodejs">
 <a href="#externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -629,8 +594,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalawscloudwatchmetricsuserconfig_nodejs">
 <a href="#externalawscloudwatchmetricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
@@ -639,8 +603,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalelasticsearchlogsuserconfig_nodejs">
 <a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -649,8 +612,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalgooglecloudlogginguserconfig_nodejs">
 <a href="#externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
@@ -659,8 +621,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalkafkauserconfig_nodejs">
 <a href="#externalkafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Kafka<wbr>User<wbr>Config</a>
@@ -669,8 +630,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalschemaregistryuserconfig_nodejs">
 <a href="#externalschemaregistryuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
@@ -679,8 +639,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jolokiauserconfig_nodejs">
 <a href="#jolokiauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">jolokia<wbr>User<wbr>Config</a>
@@ -689,8 +648,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheususerconfig_nodejs">
 <a href="#prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
@@ -699,8 +657,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsysloguserconfig_nodejs">
 <a href="#rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
@@ -709,8 +666,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxuserconfig_nodejs">
 <a href="#signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
@@ -719,13 +675,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_name_python">
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
@@ -735,8 +689,7 @@ By the time of writing the only available option is `datadog`.
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -746,8 +699,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -756,8 +708,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadog_user_config_python">
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
@@ -766,8 +717,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_aws_cloudwatch_logs_user_config_python">
 <a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
@@ -776,8 +726,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_aws_cloudwatch_metrics_user_config_python">
 <a href="#external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
@@ -786,8 +735,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_elasticsearch_logs_user_config_python">
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
@@ -796,8 +744,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_google_cloud_logging_user_config_python">
 <a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
@@ -806,8 +753,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_kafka_user_config_python">
 <a href="#external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
@@ -816,8 +762,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_schema_registry_user_config_python">
 <a href="#external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
@@ -826,8 +771,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jolokia_user_config_python">
 <a href="#jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
@@ -836,8 +780,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_user_config_python">
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
@@ -846,8 +789,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsyslog_user_config_python">
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
@@ -856,8 +798,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfx_user_config_python">
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
@@ -866,8 +807,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -878,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointconfig_csharp">
 <a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
@@ -888,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -897,13 +835,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointconfig_go">
 <a href="#endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
@@ -912,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -921,13 +856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointconfig_nodejs">
 <a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
@@ -936,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -945,13 +877,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_config_python">
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
@@ -960,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -969,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1097,8 +1025,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadoguserconfig_csharp">
 <a href="#state_datadoguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
@@ -1107,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfig_csharp">
 <a href="#state_endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
@@ -1117,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointname_csharp">
 <a href="#state_endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -1128,8 +1053,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_csharp">
 <a href="#state_endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1139,8 +1063,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalawscloudwatchlogsuserconfig_csharp">
 <a href="#state_externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -1149,8 +1072,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalawscloudwatchmetricsuserconfig_csharp">
 <a href="#state_externalawscloudwatchmetricsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
@@ -1159,8 +1081,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalelasticsearchlogsuserconfig_csharp">
 <a href="#state_externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -1169,8 +1090,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalgooglecloudlogginguserconfig_csharp">
 <a href="#state_externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
@@ -1179,8 +1099,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalkafkauserconfig_csharp">
 <a href="#state_externalkafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
@@ -1189,8 +1108,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalschemaregistryuserconfig_csharp">
 <a href="#state_externalschemaregistryuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
@@ -1199,8 +1117,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jolokiauserconfig_csharp">
 <a href="#state_jolokiauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
@@ -1209,8 +1126,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1219,8 +1135,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prometheususerconfig_csharp">
 <a href="#state_prometheususerconfig_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
@@ -1229,8 +1144,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsysloguserconfig_csharp">
 <a href="#state_rsysloguserconfig_csharp" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
@@ -1239,8 +1153,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signalfxuserconfig_csharp">
 <a href="#state_signalfxuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
@@ -1249,13 +1162,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadoguserconfig_go">
 <a href="#state_datadoguserconfig_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>User<wbr>Config</a>
@@ -1264,8 +1175,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfig_go">
 <a href="#state_endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
@@ -1274,8 +1184,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointname_go">
 <a href="#state_endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -1285,8 +1194,7 @@ By the time of writing the only available option is `datadog`.
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_go">
 <a href="#state_endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -1296,8 +1204,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalawscloudwatchlogsuserconfig_go">
 <a href="#state_externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -1306,8 +1213,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalawscloudwatchmetricsuserconfig_go">
 <a href="#state_externalawscloudwatchmetricsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
@@ -1316,8 +1222,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalelasticsearchlogsuserconfig_go">
 <a href="#state_externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -1326,8 +1231,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalgooglecloudlogginguserconfig_go">
 <a href="#state_externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
@@ -1336,8 +1240,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalkafkauserconfig_go">
 <a href="#state_externalkafkauserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Kafka<wbr>User<wbr>Config</a>
@@ -1346,8 +1249,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalschemaregistryuserconfig_go">
 <a href="#state_externalschemaregistryuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
@@ -1356,8 +1258,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jolokiauserconfig_go">
 <a href="#state_jolokiauserconfig_go" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
@@ -1366,8 +1267,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1376,8 +1276,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prometheususerconfig_go">
 <a href="#state_prometheususerconfig_go" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>User<wbr>Config</a>
@@ -1386,8 +1285,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsysloguserconfig_go">
 <a href="#state_rsysloguserconfig_go" style="color: inherit; text-decoration: inherit;">Rsyslog<wbr>User<wbr>Config</a>
@@ -1396,8 +1294,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signalfxuserconfig_go">
 <a href="#state_signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
@@ -1406,13 +1303,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadoguserconfig_nodejs">
 <a href="#state_datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
@@ -1421,8 +1316,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfig_nodejs">
 <a href="#state_endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
@@ -1431,8 +1325,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointname_nodejs">
 <a href="#state_endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
@@ -1442,8 +1335,7 @@ By the time of writing the only available option is `datadog`.
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointtype_nodejs">
 <a href="#state_endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -1453,8 +1345,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalawscloudwatchlogsuserconfig_nodejs">
 <a href="#state_externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -1463,8 +1354,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalawscloudwatchmetricsuserconfig_nodejs">
 <a href="#state_externalawscloudwatchmetricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
@@ -1473,8 +1363,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalelasticsearchlogsuserconfig_nodejs">
 <a href="#state_externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
@@ -1483,8 +1372,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalgooglecloudlogginguserconfig_nodejs">
 <a href="#state_externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
@@ -1493,8 +1381,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalkafkauserconfig_nodejs">
 <a href="#state_externalkafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Kafka<wbr>User<wbr>Config</a>
@@ -1503,8 +1390,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalschemaregistryuserconfig_nodejs">
 <a href="#state_externalschemaregistryuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
@@ -1513,8 +1399,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jolokiauserconfig_nodejs">
 <a href="#state_jolokiauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">jolokia<wbr>User<wbr>Config</a>
@@ -1523,8 +1408,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1533,8 +1417,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prometheususerconfig_nodejs">
 <a href="#state_prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
@@ -1543,8 +1426,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsysloguserconfig_nodejs">
 <a href="#state_rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
@@ -1553,8 +1435,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signalfxuserconfig_nodejs">
 <a href="#state_signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
@@ -1563,13 +1444,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadog_user_config_python">
 <a href="#state_datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
@@ -1578,8 +1457,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_config_python">
 <a href="#state_endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
@@ -1588,8 +1466,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_name_python">
 <a href="#state_endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
@@ -1599,8 +1476,7 @@ By the time of writing the only available option is `datadog`.
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_type_python">
 <a href="#state_endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -1610,8 +1486,7 @@ to identify different integration endpoints.
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_aws_cloudwatch_logs_user_config_python">
 <a href="#state_external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
@@ -1620,8 +1495,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_aws_cloudwatch_metrics_user_config_python">
 <a href="#state_external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
@@ -1630,8 +1504,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_elasticsearch_logs_user_config_python">
 <a href="#state_external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
@@ -1640,8 +1513,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_google_cloud_logging_user_config_python">
 <a href="#state_external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
@@ -1650,8 +1522,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_kafka_user_config_python">
 <a href="#state_external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
@@ -1660,8 +1531,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_schema_registry_user_config_python">
 <a href="#state_external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
@@ -1670,8 +1540,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jolokia_user_config_python">
 <a href="#state_jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
@@ -1680,8 +1549,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1690,8 +1558,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prometheus_user_config_python">
 <a href="#state_prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
@@ -1700,8 +1567,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsyslog_user_config_python">
 <a href="#state_rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
@@ -1710,8 +1576,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signalfx_user_config_python">
 <a href="#state_signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
@@ -1720,8 +1585,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1736,8 +1600,7 @@ By the time of writing the only available option is `datadog`.
 <h4 id="serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadogapikey_csharp">
 <a href="#datadogapikey_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Api<wbr>Key</a>
@@ -1745,8 +1608,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableconsumerstats_csharp">
 <a href="#disableconsumerstats_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Consumer<wbr>Stats</a>
@@ -1754,8 +1616,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitioncontexts_csharp">
 <a href="#maxpartitioncontexts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Contexts</a>
@@ -1763,8 +1624,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="site_csharp">
 <a href="#site_csharp" style="color: inherit; text-decoration: inherit;">Site</a>
@@ -1772,13 +1632,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadogapikey_go">
 <a href="#datadogapikey_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Api<wbr>Key</a>
@@ -1786,8 +1644,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableconsumerstats_go">
 <a href="#disableconsumerstats_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Consumer<wbr>Stats</a>
@@ -1795,8 +1652,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitioncontexts_go">
 <a href="#maxpartitioncontexts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Contexts</a>
@@ -1804,8 +1660,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="site_go">
 <a href="#site_go" style="color: inherit; text-decoration: inherit;">Site</a>
@@ -1813,13 +1668,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadogapikey_nodejs">
 <a href="#datadogapikey_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
@@ -1827,8 +1680,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableconsumerstats_nodejs">
 <a href="#disableconsumerstats_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Consumer<wbr>Stats</a>
@@ -1836,8 +1688,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitioncontexts_nodejs">
 <a href="#maxpartitioncontexts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Contexts</a>
@@ -1845,8 +1696,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="site_nodejs">
 <a href="#site_nodejs" style="color: inherit; text-decoration: inherit;">site</a>
@@ -1854,13 +1704,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadog_api_key_python">
 <a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
@@ -1868,8 +1716,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_consumer_stats_python">
 <a href="#disable_consumer_stats_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>consumer_<wbr>stats</a>
@@ -1877,8 +1724,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_partition_contexts_python">
 <a href="#max_partition_contexts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>contexts</a>
@@ -1886,8 +1732,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="site_python">
 <a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
@@ -1895,15 +1740,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -1911,8 +1754,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggroupname_csharp">
 <a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
@@ -1920,8 +1762,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1929,8 +1770,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -1938,13 +1778,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -1952,8 +1790,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggroupname_go">
 <a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
@@ -1961,8 +1798,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1970,8 +1806,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -1979,13 +1814,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -1993,8 +1826,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggroupname_nodejs">
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
@@ -2002,8 +1834,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2011,8 +1842,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -2020,13 +1850,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -2034,8 +1862,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
@@ -2043,8 +1870,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2052,8 +1878,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -2061,15 +1886,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -2077,8 +1900,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2086,8 +1908,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2095,8 +1916,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -2104,13 +1924,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -2118,8 +1936,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2127,8 +1944,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2136,8 +1952,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -2145,13 +1960,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -2159,8 +1972,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2168,8 +1980,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2177,8 +1988,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -2186,13 +1996,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -2200,8 +2008,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2209,8 +2016,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2218,8 +2024,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -2227,15 +2032,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_csharp">
 <a href="#ca_csharp" style="color: inherit; text-decoration: inherit;">Ca</a>
@@ -2243,8 +2046,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdaysmax_csharp">
 <a href="#indexdaysmax_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Days<wbr>Max</a>
@@ -2252,8 +2054,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexprefix_csharp">
 <a href="#indexprefix_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Prefix</a>
@@ -2261,8 +2062,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -2270,8 +2070,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2279,13 +2078,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_go">
 <a href="#ca_go" style="color: inherit; text-decoration: inherit;">Ca</a>
@@ -2293,8 +2090,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdaysmax_go">
 <a href="#indexdaysmax_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Days<wbr>Max</a>
@@ -2302,8 +2098,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexprefix_go">
 <a href="#indexprefix_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Prefix</a>
@@ -2311,8 +2106,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -2320,8 +2114,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2329,13 +2122,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_nodejs">
 <a href="#ca_nodejs" style="color: inherit; text-decoration: inherit;">ca</a>
@@ -2343,8 +2134,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdaysmax_nodejs">
 <a href="#indexdaysmax_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Days<wbr>Max</a>
@@ -2352,8 +2142,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexprefix_nodejs">
 <a href="#indexprefix_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
@@ -2361,8 +2150,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2370,8 +2158,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2379,13 +2166,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_python">
 <a href="#ca_python" style="color: inherit; text-decoration: inherit;">ca</a>
@@ -2393,8 +2178,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_days_max_python">
 <a href="#index_days_max_python" style="color: inherit; text-decoration: inherit;">index_<wbr>days_<wbr>max</a>
@@ -2402,8 +2186,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_prefix_python">
 <a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
@@ -2411,8 +2194,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2420,8 +2202,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2429,15 +2210,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logid_csharp">
 <a href="#logid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Id</a>
@@ -2445,8 +2224,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2454,8 +2232,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountcredentials_csharp">
 <a href="#serviceaccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Credentials</a>
@@ -2463,13 +2240,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logid_go">
 <a href="#logid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Id</a>
@@ -2477,8 +2252,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2486,8 +2260,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountcredentials_go">
 <a href="#serviceaccountcredentials_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Credentials</a>
@@ -2495,13 +2268,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logid_nodejs">
 <a href="#logid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Id</a>
@@ -2509,8 +2280,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -2518,8 +2288,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountcredentials_nodejs">
 <a href="#serviceaccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Credentials</a>
@@ -2527,13 +2296,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="log_id_python">
 <a href="#log_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>id</a>
@@ -2541,8 +2308,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2550,8 +2316,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_credentials_python">
 <a href="#service_account_credentials_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>credentials</a>
@@ -2559,15 +2324,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bootstrapservers_csharp">
 <a href="#bootstrapservers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
@@ -2575,8 +2338,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslmechanism_csharp">
 <a href="#saslmechanism_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
@@ -2584,8 +2346,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslplainpassword_csharp">
 <a href="#saslplainpassword_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Password</a>
@@ -2593,8 +2354,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslplainusername_csharp">
 <a href="#saslplainusername_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Username</a>
@@ -2602,8 +2362,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityprotocol_csharp">
 <a href="#securityprotocol_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Protocol</a>
@@ -2611,8 +2370,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcacert_csharp">
 <a href="#sslcacert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Cert</a>
@@ -2620,8 +2378,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_csharp">
 <a href="#sslclientcert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Cert</a>
@@ -2629,8 +2386,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientkey_csharp">
 <a href="#sslclientkey_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key</a>
@@ -2638,8 +2394,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslendpointidentificationalgorithm_csharp">
 <a href="#sslendpointidentificationalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
@@ -2647,13 +2402,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bootstrapservers_go">
 <a href="#bootstrapservers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
@@ -2661,8 +2414,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslmechanism_go">
 <a href="#saslmechanism_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
@@ -2670,8 +2422,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslplainpassword_go">
 <a href="#saslplainpassword_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Password</a>
@@ -2679,8 +2430,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslplainusername_go">
 <a href="#saslplainusername_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Username</a>
@@ -2688,8 +2438,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityprotocol_go">
 <a href="#securityprotocol_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Protocol</a>
@@ -2697,8 +2446,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcacert_go">
 <a href="#sslcacert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Cert</a>
@@ -2706,8 +2454,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_go">
 <a href="#sslclientcert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Cert</a>
@@ -2715,8 +2462,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientkey_go">
 <a href="#sslclientkey_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key</a>
@@ -2724,8 +2470,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslendpointidentificationalgorithm_go">
 <a href="#sslendpointidentificationalgorithm_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
@@ -2733,13 +2478,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bootstrapservers_nodejs">
 <a href="#bootstrapservers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Servers</a>
@@ -2747,8 +2490,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslmechanism_nodejs">
 <a href="#saslmechanism_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Mechanism</a>
@@ -2756,8 +2498,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslplainpassword_nodejs">
 <a href="#saslplainpassword_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Plain<wbr>Password</a>
@@ -2765,8 +2506,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslplainusername_nodejs">
 <a href="#saslplainusername_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Plain<wbr>Username</a>
@@ -2774,8 +2514,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityprotocol_nodejs">
 <a href="#securityprotocol_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Protocol</a>
@@ -2783,8 +2522,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcacert_nodejs">
 <a href="#sslcacert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
@@ -2792,8 +2530,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_nodejs">
 <a href="#sslclientcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
@@ -2801,8 +2538,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientkey_nodejs">
 <a href="#sslclientkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
@@ -2810,8 +2546,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslendpointidentificationalgorithm_nodejs">
 <a href="#sslendpointidentificationalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
@@ -2819,13 +2554,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bootstrap_servers_python">
 <a href="#bootstrap_servers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>servers</a>
@@ -2833,8 +2566,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_mechanism_python">
 <a href="#sasl_mechanism_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>mechanism</a>
@@ -2842,8 +2574,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_plain_password_python">
 <a href="#sasl_plain_password_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>plain_<wbr>password</a>
@@ -2851,8 +2582,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_plain_username_python">
 <a href="#sasl_plain_username_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>plain_<wbr>username</a>
@@ -2860,8 +2590,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_protocol_python">
 <a href="#security_protocol_python" style="color: inherit; text-decoration: inherit;">security_<wbr>protocol</a>
@@ -2869,8 +2598,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_ca_cert_python">
 <a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
@@ -2878,8 +2606,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_client_cert_python">
 <a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
@@ -2887,8 +2614,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_client_key_python">
 <a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
@@ -2896,8 +2622,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_endpoint_identification_algorithm_python">
 <a href="#ssl_endpoint_identification_algorithm_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>endpoint_<wbr>identification_<wbr>algorithm</a>
@@ -2905,15 +2630,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -2921,8 +2644,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_csharp">
 <a href="#basicauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
@@ -2930,8 +2652,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_csharp">
 <a href="#basicauthusername_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
@@ -2939,8 +2660,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2948,13 +2668,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -2962,8 +2680,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_go">
 <a href="#basicauthpassword_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
@@ -2971,8 +2688,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_go">
 <a href="#basicauthusername_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
@@ -2980,8 +2696,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2989,13 +2704,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -3003,8 +2716,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_nodejs">
 <a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
@@ -3012,8 +2724,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_nodejs">
 <a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
@@ -3021,8 +2732,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3030,13 +2740,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -3044,8 +2752,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_password_python">
 <a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
@@ -3053,8 +2760,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_username_python">
 <a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
@@ -3062,8 +2768,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3071,15 +2776,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_csharp">
 <a href="#basicauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
@@ -3087,8 +2790,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_csharp">
 <a href="#basicauthusername_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
@@ -3096,13 +2798,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_go">
 <a href="#basicauthpassword_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
@@ -3110,8 +2810,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_go">
 <a href="#basicauthusername_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
@@ -3119,13 +2818,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_nodejs">
 <a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
@@ -3133,8 +2830,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_nodejs">
 <a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
@@ -3142,13 +2838,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_password_python">
 <a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
@@ -3156,8 +2850,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_username_python">
 <a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
@@ -3165,15 +2858,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_csharp">
 <a href="#basicauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
@@ -3181,8 +2872,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_csharp">
 <a href="#basicauthusername_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
@@ -3190,13 +2880,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_go">
 <a href="#basicauthpassword_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
@@ -3204,8 +2892,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_go">
 <a href="#basicauthusername_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
@@ -3213,13 +2900,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_nodejs">
 <a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
@@ -3227,8 +2912,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthusername_nodejs">
 <a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
@@ -3236,13 +2920,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_password_python">
 <a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
@@ -3250,8 +2932,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_username_python">
 <a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
@@ -3259,15 +2940,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_csharp">
 <a href="#ca_csharp" style="color: inherit; text-decoration: inherit;">Ca</a>
@@ -3275,8 +2954,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -3284,8 +2962,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -3293,8 +2970,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3302,8 +2978,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logline_csharp">
 <a href="#logline_csharp" style="color: inherit; text-decoration: inherit;">Logline</a>
@@ -3311,8 +2986,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3320,8 +2994,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sd_csharp">
 <a href="#sd_csharp" style="color: inherit; text-decoration: inherit;">Sd</a>
@@ -3329,8 +3002,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_csharp">
 <a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -3338,8 +3010,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -3347,13 +3018,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_go">
 <a href="#ca_go" style="color: inherit; text-decoration: inherit;">Ca</a>
@@ -3361,8 +3030,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -3370,8 +3038,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -3379,8 +3046,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3388,8 +3054,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logline_go">
 <a href="#logline_go" style="color: inherit; text-decoration: inherit;">Logline</a>
@@ -3397,8 +3062,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3406,8 +3070,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sd_go">
 <a href="#sd_go" style="color: inherit; text-decoration: inherit;">Sd</a>
@@ -3415,8 +3078,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_go">
 <a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -3424,8 +3086,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -3433,13 +3094,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_nodejs">
 <a href="#ca_nodejs" style="color: inherit; text-decoration: inherit;">ca</a>
@@ -3447,8 +3106,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -3456,8 +3114,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -3465,8 +3122,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3474,8 +3130,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logline_nodejs">
 <a href="#logline_nodejs" style="color: inherit; text-decoration: inherit;">logline</a>
@@ -3483,8 +3138,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3492,8 +3146,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sd_nodejs">
 <a href="#sd_nodejs" style="color: inherit; text-decoration: inherit;">sd</a>
@@ -3501,8 +3154,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_nodejs">
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
@@ -3510,8 +3162,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -3519,13 +3170,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_python">
 <a href="#ca_python" style="color: inherit; text-decoration: inherit;">ca</a>
@@ -3533,8 +3182,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -3542,8 +3190,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -3551,8 +3198,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3560,8 +3206,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logline_python">
 <a href="#logline_python" style="color: inherit; text-decoration: inherit;">logline</a>
@@ -3569,8 +3214,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3578,8 +3222,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sd_python">
 <a href="#sd_python" style="color: inherit; text-decoration: inherit;">sd</a>
@@ -3587,8 +3230,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_python">
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
@@ -3596,8 +3238,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -3605,15 +3246,13 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_csharp">
 <a href="#enabledmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
@@ -3621,8 +3260,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxapikey_csharp">
 <a href="#signalfxapikey_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Api<wbr>Key</a>
@@ -3630,8 +3268,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxrealm_csharp">
 <a href="#signalfxrealm_csharp" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Realm</a>
@@ -3639,13 +3276,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_go">
 <a href="#enabledmetrics_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Metrics</a>
@@ -3653,8 +3288,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxapikey_go">
 <a href="#signalfxapikey_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Api<wbr>Key</a>
@@ -3662,8 +3296,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxrealm_go">
 <a href="#signalfxrealm_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>Realm</a>
@@ -3671,13 +3304,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_nodejs">
 <a href="#enabledmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Metrics</a>
@@ -3685,8 +3316,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxapikey_nodejs">
 <a href="#signalfxapikey_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Api<wbr>Key</a>
@@ -3694,8 +3324,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfxrealm_nodejs">
 <a href="#signalfxrealm_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Realm</a>
@@ -3703,13 +3332,11 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_metrics_python">
 <a href="#enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
@@ -3717,8 +3344,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfx_api_key_python">
 <a href="#signalfx_api_key_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>api_<wbr>key</a>
@@ -3726,8 +3352,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signalfx_realm_python">
 <a href="#signalfx_realm_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>realm</a>
@@ -3735,8 +3360,7 @@ By the time of writing the only available option is `datadog`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

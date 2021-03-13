@@ -280,8 +280,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directoryid_csharp">
 <a href="#directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -290,8 +289,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsips_csharp">
 <a href="#dnsips_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ips</a>
@@ -300,8 +298,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedomainname_csharp">
 <a href="#remotedomainname_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Domain<wbr>Name</a>
@@ -310,13 +307,11 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directoryid_go">
 <a href="#directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -325,8 +320,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsips_go">
 <a href="#dnsips_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ips</a>
@@ -335,8 +329,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedomainname_go">
 <a href="#remotedomainname_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Domain<wbr>Name</a>
@@ -345,13 +338,11 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directoryid_nodejs">
 <a href="#directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
@@ -360,8 +351,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsips_nodejs">
 <a href="#dnsips_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ips</a>
@@ -370,8 +360,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedomainname_nodejs">
 <a href="#remotedomainname_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Domain<wbr>Name</a>
@@ -380,13 +369,11 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="directory_id_python">
 <a href="#directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
@@ -395,8 +382,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dns_ips_python">
 <a href="#dns_ips_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ips</a>
@@ -405,8 +391,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_domain_name_python">
 <a href="#remote_domain_name_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>domain_<wbr>name</a>
@@ -415,8 +400,7 @@ The ConditionalForwader resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -427,8 +411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -436,13 +419,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -450,13 +431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -464,13 +443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -478,8 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -606,8 +582,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_directoryid_csharp">
 <a href="#state_directoryid_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -616,8 +591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsips_csharp">
 <a href="#state_dnsips_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ips</a>
@@ -626,8 +600,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotedomainname_csharp">
 <a href="#state_remotedomainname_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Domain<wbr>Name</a>
@@ -636,13 +609,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_directoryid_go">
 <a href="#state_directoryid_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Id</a>
@@ -651,8 +622,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsips_go">
 <a href="#state_dnsips_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ips</a>
@@ -661,8 +631,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotedomainname_go">
 <a href="#state_remotedomainname_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Domain<wbr>Name</a>
@@ -671,13 +640,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_directoryid_nodejs">
 <a href="#state_directoryid_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Id</a>
@@ -686,8 +653,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsips_nodejs">
 <a href="#state_dnsips_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ips</a>
@@ -696,8 +662,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotedomainname_nodejs">
 <a href="#state_remotedomainname_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Domain<wbr>Name</a>
@@ -706,13 +671,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_directory_id_python">
 <a href="#state_directory_id_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>id</a>
@@ -721,8 +684,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_ips_python">
 <a href="#state_dns_ips_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ips</a>
@@ -731,8 +693,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of forwarder IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_domain_name_python">
 <a href="#state_remote_domain_name_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>domain_<wbr>name</a>
@@ -741,8 +702,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the remote domain for which forwarders will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

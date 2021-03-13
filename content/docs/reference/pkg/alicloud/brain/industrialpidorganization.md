@@ -260,8 +260,7 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pidorganizationname_csharp">
 <a href="#pidorganizationname_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Name</a>
@@ -270,8 +269,7 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentpidorganizationid_csharp">
 <a href="#parentpidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Pid<wbr>Organization<wbr>Id</a>
@@ -280,13 +278,11 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pidorganizationname_go">
 <a href="#pidorganizationname_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Name</a>
@@ -295,8 +291,7 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentpidorganizationid_go">
 <a href="#parentpidorganizationid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Pid<wbr>Organization<wbr>Id</a>
@@ -305,13 +300,11 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pidorganizationname_nodejs">
 <a href="#pidorganizationname_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Name</a>
@@ -320,8 +313,7 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parentpidorganizationid_nodejs">
 <a href="#parentpidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Pid<wbr>Organization<wbr>Id</a>
@@ -330,13 +322,11 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pid_organization_name_python">
 <a href="#pid_organization_name_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>name</a>
@@ -345,8 +335,7 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parent_pid_organization_id_python">
 <a href="#parent_pid_organization_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>pid_<wbr>organization_<wbr>id</a>
@@ -355,8 +344,7 @@ The IndustrialPidOrganization resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -367,8 +355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -376,13 +363,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -390,13 +375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -404,13 +387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -418,8 +399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -546,8 +526,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_parentpidorganizationid_csharp">
 <a href="#state_parentpidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Pid<wbr>Organization<wbr>Id</a>
@@ -556,8 +535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidorganizationname_csharp">
 <a href="#state_pidorganizationname_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Name</a>
@@ -566,13 +544,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_parentpidorganizationid_go">
 <a href="#state_parentpidorganizationid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Pid<wbr>Organization<wbr>Id</a>
@@ -581,8 +557,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidorganizationname_go">
 <a href="#state_pidorganizationname_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Name</a>
@@ -591,13 +566,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_parentpidorganizationid_nodejs">
 <a href="#state_parentpidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Pid<wbr>Organization<wbr>Id</a>
@@ -606,8 +579,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pidorganizationname_nodejs">
 <a href="#state_pidorganizationname_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Name</a>
@@ -616,13 +588,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_parent_pid_organization_id_python">
 <a href="#state_parent_pid_organization_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>pid_<wbr>organization_<wbr>id</a>
@@ -631,8 +601,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of parent pid organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pid_organization_name_python">
 <a href="#state_pid_organization_name_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>name</a>
@@ -641,8 +610,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of pid organization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -501,8 +501,7 @@ The RegionAutoscaler resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscalingpolicy_csharp">
 <a href="#autoscalingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
@@ -516,8 +515,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -528,8 +526,7 @@ Structure is documented below.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -538,8 +535,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -548,8 +544,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -559,8 +554,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -569,13 +563,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscalingpolicy_go">
 <a href="#autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
@@ -589,8 +581,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -601,8 +592,7 @@ Structure is documented below.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -611,8 +601,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -621,8 +610,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -632,8 +620,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -642,13 +629,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscalingpolicy_nodejs">
 <a href="#autoscalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policy</a>
@@ -662,8 +647,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -674,8 +658,7 @@ Structure is documented below.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -684,8 +667,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -694,8 +676,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -705,8 +686,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -715,13 +695,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoscaling_policy_python">
 <a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
@@ -735,8 +713,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -747,8 +724,7 @@ Structure is documented below.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -757,8 +733,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -767,8 +742,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -778,8 +752,7 @@ be a positive float value. If not defined, the default is 0.8.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -788,8 +761,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -810,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -829,13 +798,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -844,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -853,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -863,13 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -878,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -887,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -897,13 +858,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -912,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -921,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -931,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1059,8 +1015,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingpolicy_csharp">
 <a href="#state_autoscalingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
@@ -1074,8 +1029,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1084,8 +1038,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1094,8 +1047,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1104,8 +1056,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1115,8 +1066,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1125,8 +1075,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1135,8 +1084,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1147,13 +1095,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingpolicy_go">
 <a href="#state_autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
@@ -1167,8 +1113,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1177,8 +1122,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1187,8 +1131,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1197,8 +1140,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1208,8 +1150,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1218,8 +1159,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1228,8 +1168,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1240,13 +1179,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingpolicy_nodejs">
 <a href="#state_autoscalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policy</a>
@@ -1260,8 +1197,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1270,8 +1206,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1280,8 +1215,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1290,8 +1224,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1301,8 +1234,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1311,8 +1243,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1321,8 +1252,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1333,13 +1263,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_policy_python">
 <a href="#state_autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
@@ -1353,8 +1281,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1363,8 +1290,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1373,8 +1299,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1383,8 +1308,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1394,8 +1318,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1404,8 +1327,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the region where the instance group resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1414,8 +1336,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1426,8 +1347,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1442,8 +1362,7 @@ be a positive float value. If not defined, the default is 0.8.
 <h4 id="regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxreplicas_csharp">
 <a href="#maxreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
@@ -1455,8 +1374,7 @@ be a positive float value. If not defined, the default is 0.8.
 to. This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
 of replicas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minreplicas_csharp">
 <a href="#minreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Replicas</a>
@@ -1468,8 +1386,7 @@ of replicas.
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_csharp">
 <a href="#cooldownperiod_csharp" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
@@ -1486,8 +1403,7 @@ Virtual machine initialization times might vary because of
 numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
 and time the startup process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuutilization_csharp">
 <a href="#cpuutilization_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization</a>
@@ -1499,8 +1415,7 @@ and time the startup process.
 scale based on the average CPU utilization of a managed instance
 group.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingutilization_csharp">
 <a href="#loadbalancingutilization_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Utilization</a>
@@ -1510,8 +1425,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_csharp">
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
@@ -1521,8 +1435,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1533,8 +1446,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines operating mode for this policy.
 Default value is `ON`.
 Possible values are `OFF`, `ONLY_UP`, and `ON`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowncontrol_csharp">
 <a href="#scaledowncontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
@@ -1545,8 +1457,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleincontrol_csharp">
 <a href="#scaleincontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Control</a>
@@ -1557,8 +1468,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingschedules_csharp">
 <a href="#scalingschedules_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
@@ -1566,13 +1476,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxreplicas_go">
 <a href="#maxreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
@@ -1584,8 +1492,7 @@ Structure is documented below.
 to. This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
 of replicas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minreplicas_go">
 <a href="#minreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Replicas</a>
@@ -1597,8 +1504,7 @@ of replicas.
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_go">
 <a href="#cooldownperiod_go" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
@@ -1615,8 +1521,7 @@ Virtual machine initialization times might vary because of
 numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
 and time the startup process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuutilization_go">
 <a href="#cpuutilization_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization</a>
@@ -1628,8 +1533,7 @@ and time the startup process.
 scale based on the average CPU utilization of a managed instance
 group.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingutilization_go">
 <a href="#loadbalancingutilization_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Utilization</a>
@@ -1639,8 +1543,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_go">
 <a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
@@ -1650,8 +1553,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1662,8 +1564,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines operating mode for this policy.
 Default value is `ON`.
 Possible values are `OFF`, `ONLY_UP`, and `ON`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowncontrol_go">
 <a href="#scaledowncontrol_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
@@ -1674,8 +1575,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleincontrol_go">
 <a href="#scaleincontrol_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Control</a>
@@ -1686,8 +1586,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingschedules_go">
 <a href="#scalingschedules_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
@@ -1695,13 +1594,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">[]Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxreplicas_nodejs">
 <a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
@@ -1713,8 +1610,7 @@ Structure is documented below.
 to. This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
 of replicas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minreplicas_nodejs">
 <a href="#minreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Replicas</a>
@@ -1726,8 +1622,7 @@ of replicas.
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_nodejs">
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
@@ -1744,8 +1639,7 @@ Virtual machine initialization times might vary because of
 numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
 and time the startup process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuutilization_nodejs">
 <a href="#cpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
@@ -1757,8 +1651,7 @@ and time the startup process.
 scale based on the average CPU utilization of a managed instance
 group.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingutilization_nodejs">
 <a href="#loadbalancingutilization_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Utilization</a>
@@ -1768,8 +1661,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_nodejs">
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
@@ -1779,8 +1671,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1791,8 +1682,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines operating mode for this policy.
 Default value is `ON`.
 Possible values are `OFF`, `ONLY_UP`, and `ON`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowncontrol_nodejs">
 <a href="#scaledowncontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
@@ -1803,8 +1693,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleincontrol_nodejs">
 <a href="#scaleincontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Control</a>
@@ -1815,8 +1704,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingschedules_nodejs">
 <a href="#scalingschedules_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedules</a>
@@ -1824,13 +1712,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_replicas_python">
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
@@ -1842,8 +1728,7 @@ Structure is documented below.
 to. This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
 of replicas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_replicas_python">
 <a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
@@ -1855,8 +1740,7 @@ of replicas.
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_period_python">
 <a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
@@ -1873,8 +1757,7 @@ Virtual machine initialization times might vary because of
 numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
 and time the startup process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_utilization_python">
 <a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
@@ -1886,8 +1769,7 @@ and time the startup process.
 scale based on the average CPU utilization of a managed instance
 group.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancing_utilization_python">
 <a href="#load_balancing_utilization_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>utilization</a>
@@ -1897,8 +1779,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_python">
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
@@ -1908,8 +1789,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1920,8 +1800,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines operating mode for this policy.
 Default value is `ON`.
 Possible values are `OFF`, `ONLY_UP`, and `ON`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_control_python">
 <a href="#scale_down_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>control</a>
@@ -1932,8 +1811,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_in_control_python">
 <a href="#scale_in_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>control</a>
@@ -1944,8 +1822,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_schedules_python">
 <a href="#scaling_schedules_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedules</a>
@@ -1953,15 +1830,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1972,13 +1847,11 @@ Structure is documented below.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1989,13 +1862,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2006,13 +1877,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2023,15 +1892,13 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2042,13 +1909,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2059,13 +1924,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2076,13 +1939,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2093,15 +1954,13 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicymetric">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2110,8 +1969,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -2146,8 +2004,7 @@ one TimeSeries for the autoscaled group or for each of the instances
 (if you are using gce_instance resource type). If multiple
 TimeSeries are returned upon the query execution, the autoscaler
 will sum their respective values to obtain its scaling value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleinstanceassignment_csharp">
 <a href="#singleinstanceassignment_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Instance<wbr>Assignment</a>
@@ -2169,8 +2026,7 @@ A bad example would be a metric exporting an average or median
 latency, since this value can't include a chunk assignable to a
 single instance, it could be better used with utilization_target
 instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2181,8 +2037,7 @@ instead.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2193,13 +2048,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
 Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2208,8 +2061,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -2244,8 +2096,7 @@ one TimeSeries for the autoscaled group or for each of the instances
 (if you are using gce_instance resource type). If multiple
 TimeSeries are returned upon the query execution, the autoscaler
 will sum their respective values to obtain its scaling value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleinstanceassignment_go">
 <a href="#singleinstanceassignment_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Instance<wbr>Assignment</a>
@@ -2267,8 +2118,7 @@ A bad example would be a metric exporting an average or median
 latency, since this value can't include a chunk assignable to a
 single instance, it could be better used with utilization_target
 instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2279,8 +2129,7 @@ instead.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2291,13 +2140,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
 Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2306,8 +2153,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -2342,8 +2188,7 @@ one TimeSeries for the autoscaled group or for each of the instances
 (if you are using gce_instance resource type). If multiple
 TimeSeries are returned upon the query execution, the autoscaler
 will sum their respective values to obtain its scaling value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleinstanceassignment_nodejs">
 <a href="#singleinstanceassignment_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Instance<wbr>Assignment</a>
@@ -2365,8 +2210,7 @@ A bad example would be a metric exporting an average or median
 latency, since this value can't include a chunk assignable to a
 single instance, it could be better used with utilization_target
 instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2377,8 +2221,7 @@ instead.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2389,13 +2232,11 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
 Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2404,8 +2245,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -2440,8 +2280,7 @@ one TimeSeries for the autoscaled group or for each of the instances
 (if you are using gce_instance resource type). If multiple
 TimeSeries are returned upon the query execution, the autoscaler
 will sum their respective values to obtain its scaling value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_instance_assignment_python">
 <a href="#single_instance_assignment_python" style="color: inherit; text-decoration: inherit;">single_<wbr>instance_<wbr>assignment</a>
@@ -2463,8 +2302,7 @@ A bad example would be a metric exporting an average or median
 latency, since this value can't include a chunk assignable to a
 single instance, it could be better used with utilization_target
 instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2475,8 +2313,7 @@ instead.
     <dd>{{% md %}}Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2487,15 +2324,13 @@ be a positive float value. If not defined, the default is 0.8.
     <dd>{{% md %}}Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric.
 Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxscaleddownreplicas_csharp">
 <a href="#maxscaleddownreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
@@ -2505,8 +2340,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowsec_csharp">
 <a href="#timewindowsec_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
@@ -2516,13 +2350,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxscaleddownreplicas_go">
 <a href="#maxscaleddownreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
@@ -2532,8 +2364,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowsec_go">
 <a href="#timewindowsec_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
@@ -2543,13 +2374,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxscaleddownreplicas_nodejs">
 <a href="#maxscaleddownreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
@@ -2559,8 +2388,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowsec_nodejs">
 <a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
@@ -2570,13 +2398,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_scaled_down_replicas_python">
 <a href="#max_scaled_down_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>down_<wbr>replicas</a>
@@ -2586,8 +2412,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_window_sec_python">
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
@@ -2597,15 +2422,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
 <a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -2615,8 +2438,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -2626,13 +2448,11 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
 <a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -2642,8 +2462,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -2653,13 +2472,11 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -2669,8 +2486,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -2680,13 +2496,11 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_python">
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -2696,8 +2510,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -2707,15 +2520,13 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxscaledinreplicas_csharp">
 <a href="#maxscaledinreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>In<wbr>Replicas</a>
@@ -2725,8 +2536,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowsec_csharp">
 <a href="#timewindowsec_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
@@ -2736,13 +2546,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxscaledinreplicas_go">
 <a href="#maxscaledinreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>In<wbr>Replicas</a>
@@ -2752,8 +2560,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowsec_go">
 <a href="#timewindowsec_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
@@ -2763,13 +2570,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxscaledinreplicas_nodejs">
 <a href="#maxscaledinreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>In<wbr>Replicas</a>
@@ -2779,8 +2584,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindowsec_nodejs">
 <a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
@@ -2790,13 +2594,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_scaled_in_replicas_python">
 <a href="#max_scaled_in_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>in_<wbr>replicas</a>
@@ -2806,8 +2608,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_window_sec_python">
 <a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
@@ -2817,15 +2618,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
 <a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -2835,8 +2634,7 @@ to include directives regarding slower scale down, as described above.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -2846,13 +2644,11 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
 <a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -2862,8 +2658,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -2873,13 +2668,11 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -2889,8 +2682,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -2900,13 +2692,11 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_python">
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -2916,8 +2706,7 @@ For example, specify 80 for 80%.
     </dt>
     <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
 integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -2927,15 +2716,13 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="durationsec_csharp">
 <a href="#durationsec_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Sec</a>
@@ -2944,8 +2731,7 @@ For example, specify 80 for 80%.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minrequiredreplicas_csharp">
 <a href="#minrequiredreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Required<wbr>Replicas</a>
@@ -2954,8 +2740,7 @@ For example, specify 80 for 80%.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2964,8 +2749,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -2974,8 +2758,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2984,8 +2767,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -2994,8 +2776,7 @@ For example, specify 80 for 80%.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -3004,13 +2785,11 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="durationsec_go">
 <a href="#durationsec_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Sec</a>
@@ -3019,8 +2798,7 @@ For example, specify 80 for 80%.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minrequiredreplicas_go">
 <a href="#minrequiredreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Required<wbr>Replicas</a>
@@ -3029,8 +2807,7 @@ For example, specify 80 for 80%.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3039,8 +2816,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -3049,8 +2825,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3059,8 +2834,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -3069,8 +2843,7 @@ For example, specify 80 for 80%.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -3079,13 +2852,11 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="durationsec_nodejs">
 <a href="#durationsec_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Sec</a>
@@ -3094,8 +2865,7 @@ For example, specify 80 for 80%.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minrequiredreplicas_nodejs">
 <a href="#minrequiredreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Required<wbr>Replicas</a>
@@ -3104,8 +2874,7 @@ For example, specify 80 for 80%.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3114,8 +2883,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -3124,8 +2892,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3134,8 +2901,7 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -3144,8 +2910,7 @@ For example, specify 80 for 80%.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -3154,13 +2919,11 @@ For example, specify 80 for 80%.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_sec_python">
 <a href="#duration_sec_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>sec</a>
@@ -3169,8 +2932,7 @@ For example, specify 80 for 80%.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_required_replicas_python">
 <a href="#min_required_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>required_<wbr>replicas</a>
@@ -3179,8 +2941,7 @@ For example, specify 80 for 80%.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3189,8 +2950,7 @@ For example, specify 80 for 80%.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -3199,8 +2959,7 @@ For example, specify 80 for 80%.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3209,8 +2968,7 @@ For example, specify 80 for 80%.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -3219,8 +2977,7 @@ For example, specify 80 for 80%.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -3229,8 +2986,7 @@ For example, specify 80 for 80%.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -434,8 +434,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -444,8 +443,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -454,8 +452,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
 <a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -464,8 +461,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaler_csharp">
 <a href="#autoscaler_csharp" style="color: inherit; text-decoration: inherit;">Autoscaler</a>
@@ -474,8 +470,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_csharp">
 <a href="#blacklists_csharp" style="color: inherit; text-decoration: inherit;">Blacklists</a>
@@ -484,8 +479,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllerid_csharp">
 <a href="#controllerid_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -494,8 +488,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -504,8 +497,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_csharp">
 <a href="#drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -514,8 +506,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -524,8 +515,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbacktoondemand_csharp">
 <a href="#fallbacktoondemand_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -534,8 +524,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
 <a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -544,8 +533,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_csharp">
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -554,8 +542,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -564,8 +551,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -574,8 +560,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
 <a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -584,8 +569,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanloadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -594,8 +578,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_csharp">
 <a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -604,8 +587,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -614,8 +596,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -624,8 +605,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -634,8 +614,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootvolumesize_csharp">
 <a href="#rootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size</a>
@@ -644,8 +623,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_csharp">
 <a href="#scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -654,8 +632,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_csharp">
 <a href="#spotpercentage_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -664,8 +641,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -674,8 +650,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceantag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_csharp">
 <a href="#updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -683,8 +658,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useastemplateonly_csharp">
 <a href="#useastemplateonly_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>As<wbr>Template<wbr>Only</a>
@@ -693,8 +667,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -703,8 +676,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizecommitments_csharp">
 <a href="#utilizecommitments_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -712,8 +684,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizereservedinstances_csharp">
 <a href="#utilizereservedinstances_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -722,8 +693,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelists_csharp">
 <a href="#whitelists_csharp" style="color: inherit; text-decoration: inherit;">Whitelists</a>
@@ -732,13 +702,11 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -747,8 +715,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -757,8 +724,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
 <a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -767,8 +733,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaler_go">
 <a href="#autoscaler_go" style="color: inherit; text-decoration: inherit;">Autoscaler</a>
@@ -777,8 +742,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_go">
 <a href="#blacklists_go" style="color: inherit; text-decoration: inherit;">Blacklists</a>
@@ -787,8 +751,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllerid_go">
 <a href="#controllerid_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -797,8 +760,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
 <a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -807,8 +769,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_go">
 <a href="#drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -817,8 +778,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -827,8 +787,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbacktoondemand_go">
 <a href="#fallbacktoondemand_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -837,8 +796,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
 <a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -847,8 +805,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_go">
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -857,8 +814,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -867,8 +823,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -877,8 +832,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
 <a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -887,8 +841,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanloadbalancer">[]Ocean<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
 <a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -897,8 +850,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_go">
 <a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -907,8 +859,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -917,8 +868,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -927,8 +877,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -937,8 +886,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootvolumesize_go">
 <a href="#rootvolumesize_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size</a>
@@ -947,8 +895,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_go">
 <a href="#scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -957,8 +904,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_go">
 <a href="#spotpercentage_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -967,8 +913,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -977,8 +922,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceantag">[]Ocean<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_go">
 <a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -986,8 +930,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useastemplateonly_go">
 <a href="#useastemplateonly_go" style="color: inherit; text-decoration: inherit;">Use<wbr>As<wbr>Template<wbr>Only</a>
@@ -996,8 +939,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1006,8 +948,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizecommitments_go">
 <a href="#utilizecommitments_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -1015,8 +956,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizereservedinstances_go">
 <a href="#utilizereservedinstances_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -1025,8 +965,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelists_go">
 <a href="#whitelists_go" style="color: inherit; text-decoration: inherit;">Whitelists</a>
@@ -1035,13 +974,11 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1050,8 +987,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -1060,8 +996,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1070,8 +1005,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaler_nodejs">
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
@@ -1080,8 +1014,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_nodejs">
 <a href="#blacklists_nodejs" style="color: inherit; text-decoration: inherit;">blacklists</a>
@@ -1090,8 +1023,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllerid_nodejs">
 <a href="#controllerid_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
@@ -1100,8 +1032,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -1110,8 +1041,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_nodejs">
 <a href="#drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
@@ -1120,8 +1050,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -1130,8 +1059,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbacktoondemand_nodejs">
 <a href="#fallbacktoondemand_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>To<wbr>Ondemand</a>
@@ -1140,8 +1068,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
@@ -1150,8 +1077,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_nodejs">
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -1160,8 +1086,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -1170,8 +1095,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -1180,8 +1104,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -1190,8 +1113,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -1200,8 +1122,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_nodejs">
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -1210,8 +1131,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -1220,8 +1140,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1230,8 +1149,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1240,8 +1158,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootvolumesize_nodejs">
 <a href="#rootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size</a>
@@ -1250,8 +1167,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_nodejs">
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
@@ -1260,8 +1176,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_nodejs">
 <a href="#spotpercentage_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Percentage</a>
@@ -1270,8 +1185,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1280,8 +1194,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_nodejs">
 <a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
@@ -1289,8 +1202,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useastemplateonly_nodejs">
 <a href="#useastemplateonly_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>As<wbr>Template<wbr>Only</a>
@@ -1299,8 +1211,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -1309,8 +1220,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizecommitments_nodejs">
 <a href="#utilizecommitments_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Commitments</a>
@@ -1318,8 +1228,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizereservedinstances_nodejs">
 <a href="#utilizereservedinstances_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Reserved<wbr>Instances</a>
@@ -1328,8 +1237,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelists_nodejs">
 <a href="#whitelists_nodejs" style="color: inherit; text-decoration: inherit;">whitelists</a>
@@ -1338,13 +1246,11 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -1353,8 +1259,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -1363,8 +1268,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -1373,8 +1277,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaler_python">
 <a href="#autoscaler_python" style="color: inherit; text-decoration: inherit;">autoscaler</a>
@@ -1383,8 +1286,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blacklists_python">
 <a href="#blacklists_python" style="color: inherit; text-decoration: inherit;">blacklists</a>
@@ -1393,8 +1295,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controller_id_python">
 <a href="#controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
@@ -1403,8 +1304,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -1413,8 +1313,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="draining_timeout_python">
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
@@ -1423,8 +1322,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -1433,8 +1331,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_to_ondemand_python">
 <a href="#fallback_to_ondemand_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>to_<wbr>ondemand</a>
@@ -1443,8 +1340,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
@@ -1453,8 +1349,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_python">
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -1463,8 +1358,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -1473,8 +1367,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -1483,8 +1376,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -1493,8 +1385,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanloadbalancer">Sequence[Ocean<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -1503,8 +1394,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_size_python">
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -1513,8 +1403,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -1523,8 +1412,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1533,8 +1421,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1543,8 +1430,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_volume_size_python">
 <a href="#root_volume_size_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>size</a>
@@ -1553,8 +1439,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduled_tasks_python">
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
@@ -1563,8 +1448,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_percentage_python">
 <a href="#spot_percentage_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>percentage</a>
@@ -1573,8 +1457,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1583,8 +1466,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceantag">Sequence[Ocean<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_policy_python">
 <a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
@@ -1592,8 +1474,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_as_template_only_python">
 <a href="#use_as_template_only_python" style="color: inherit; text-decoration: inherit;">use_<wbr>as_<wbr>template_<wbr>only</a>
@@ -1602,8 +1483,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -1612,8 +1492,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilize_commitments_python">
 <a href="#utilize_commitments_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>commitments</a>
@@ -1621,8 +1500,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilize_reserved_instances_python">
 <a href="#utilize_reserved_instances_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>reserved_<wbr>instances</a>
@@ -1631,8 +1509,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelists_python">
 <a href="#whitelists_python" style="color: inherit; text-decoration: inherit;">whitelists</a>
@@ -1641,8 +1518,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1653,8 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1662,13 +1537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1676,13 +1549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1690,13 +1561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1704,8 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1832,8 +1700,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associatepublicipaddress_csharp">
 <a href="#state_associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1842,8 +1709,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaler_csharp">
 <a href="#state_autoscaler_csharp" style="color: inherit; text-decoration: inherit;">Autoscaler</a>
@@ -1852,8 +1718,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_csharp">
 <a href="#state_blacklists_csharp" style="color: inherit; text-decoration: inherit;">Blacklists</a>
@@ -1862,8 +1727,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controllerid_csharp">
 <a href="#state_controllerid_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -1872,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_csharp">
 <a href="#state_desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -1882,8 +1745,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_csharp">
 <a href="#state_drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -1892,8 +1754,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_csharp">
 <a href="#state_ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -1902,8 +1763,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_csharp">
 <a href="#state_fallbacktoondemand_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -1912,8 +1772,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_graceperiod_csharp">
 <a href="#state_graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -1922,8 +1781,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_csharp">
 <a href="#state_iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -1932,8 +1790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1942,8 +1799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
 <a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1952,8 +1808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
 <a href="#state_loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1962,8 +1817,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanloadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_csharp">
 <a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -1972,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minsize_csharp">
 <a href="#state_minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -1982,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_csharp">
 <a href="#state_monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -1992,8 +1844,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2002,8 +1853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2012,8 +1862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootvolumesize_csharp">
 <a href="#state_rootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size</a>
@@ -2022,8 +1871,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_csharp">
 <a href="#state_scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -2032,8 +1880,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_csharp">
 <a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -2042,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotpercentage_csharp">
 <a href="#state_spotpercentage_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -2052,8 +1898,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_csharp">
 <a href="#state_subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -2062,8 +1907,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2072,8 +1916,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceantag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_csharp">
 <a href="#state_updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -2081,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useastemplateonly_csharp">
 <a href="#state_useastemplateonly_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>As<wbr>Template<wbr>Only</a>
@@ -2091,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -2101,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizecommitments_csharp">
 <a href="#state_utilizecommitments_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -2110,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizereservedinstances_csharp">
 <a href="#state_utilizereservedinstances_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -2120,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_csharp">
 <a href="#state_whitelists_csharp" style="color: inherit; text-decoration: inherit;">Whitelists</a>
@@ -2130,13 +1968,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associatepublicipaddress_go">
 <a href="#state_associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -2145,8 +1981,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaler_go">
 <a href="#state_autoscaler_go" style="color: inherit; text-decoration: inherit;">Autoscaler</a>
@@ -2155,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_go">
 <a href="#state_blacklists_go" style="color: inherit; text-decoration: inherit;">Blacklists</a>
@@ -2165,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controllerid_go">
 <a href="#state_controllerid_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Id</a>
@@ -2175,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
 <a href="#state_desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -2185,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_go">
 <a href="#state_drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -2195,8 +2026,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_go">
 <a href="#state_ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -2205,8 +2035,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_go">
 <a href="#state_fallbacktoondemand_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -2215,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_graceperiod_go">
 <a href="#state_graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -2225,8 +2053,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_go">
 <a href="#state_iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -2235,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2245,8 +2071,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_go">
 <a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -2255,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
 <a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -2265,8 +2089,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanloadbalancer">[]Ocean<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_go">
 <a href="#state_maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -2275,8 +2098,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minsize_go">
 <a href="#state_minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -2285,8 +2107,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_go">
 <a href="#state_monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -2295,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2305,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2315,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootvolumesize_go">
 <a href="#state_rootvolumesize_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Size</a>
@@ -2325,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_go">
 <a href="#state_scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -2335,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_go">
 <a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -2345,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotpercentage_go">
 <a href="#state_spotpercentage_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -2355,8 +2170,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_go">
 <a href="#state_subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -2365,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2375,8 +2188,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceantag">[]Ocean<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_go">
 <a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -2384,8 +2196,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useastemplateonly_go">
 <a href="#state_useastemplateonly_go" style="color: inherit; text-decoration: inherit;">Use<wbr>As<wbr>Template<wbr>Only</a>
@@ -2394,8 +2205,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -2404,8 +2214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizecommitments_go">
 <a href="#state_utilizecommitments_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -2413,8 +2222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizereservedinstances_go">
 <a href="#state_utilizereservedinstances_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -2423,8 +2231,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_go">
 <a href="#state_whitelists_go" style="color: inherit; text-decoration: inherit;">Whitelists</a>
@@ -2433,13 +2240,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associatepublicipaddress_nodejs">
 <a href="#state_associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -2448,8 +2253,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaler_nodejs">
 <a href="#state_autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">autoscaler</a>
@@ -2458,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_nodejs">
 <a href="#state_blacklists_nodejs" style="color: inherit; text-decoration: inherit;">blacklists</a>
@@ -2468,8 +2271,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controllerid_nodejs">
 <a href="#state_controllerid_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Id</a>
@@ -2478,8 +2280,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_nodejs">
 <a href="#state_desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -2488,8 +2289,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_nodejs">
 <a href="#state_drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
@@ -2498,8 +2298,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_nodejs">
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -2508,8 +2307,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_nodejs">
 <a href="#state_fallbacktoondemand_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>To<wbr>Ondemand</a>
@@ -2518,8 +2316,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_graceperiod_nodejs">
 <a href="#state_graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
@@ -2528,8 +2325,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_nodejs">
 <a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -2538,8 +2334,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2548,8 +2343,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_nodejs">
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -2558,8 +2352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -2568,8 +2361,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_nodejs">
 <a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -2578,8 +2370,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minsize_nodejs">
 <a href="#state_minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -2588,8 +2379,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_nodejs">
 <a href="#state_monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -2598,8 +2388,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2608,8 +2397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2618,8 +2406,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootvolumesize_nodejs">
 <a href="#state_rootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Size</a>
@@ -2628,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_nodejs">
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
@@ -2638,8 +2424,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_nodejs">
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -2648,8 +2433,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotpercentage_nodejs">
 <a href="#state_spotpercentage_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Percentage</a>
@@ -2658,8 +2442,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_nodejs">
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -2668,8 +2451,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2678,8 +2460,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_nodejs">
 <a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
@@ -2687,8 +2468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useastemplateonly_nodejs">
 <a href="#state_useastemplateonly_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>As<wbr>Template<wbr>Only</a>
@@ -2697,8 +2477,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -2707,8 +2486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizecommitments_nodejs">
 <a href="#state_utilizecommitments_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Commitments</a>
@@ -2716,8 +2494,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizereservedinstances_nodejs">
 <a href="#state_utilizereservedinstances_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Reserved<wbr>Instances</a>
@@ -2726,8 +2503,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_nodejs">
 <a href="#state_whitelists_nodejs" style="color: inherit; text-decoration: inherit;">whitelists</a>
@@ -2736,13 +2512,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associate_public_ip_address_python">
 <a href="#state_associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -2751,8 +2525,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaler_python">
 <a href="#state_autoscaler_python" style="color: inherit; text-decoration: inherit;">autoscaler</a>
@@ -2761,8 +2534,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blacklists_python">
 <a href="#state_blacklists_python" style="color: inherit; text-decoration: inherit;">blacklists</a>
@@ -2771,8 +2543,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instance types not allowed in the Ocean cluster. Cannot be configured if `whitelist` is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controller_id_python">
 <a href="#state_controller_id_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>id</a>
@@ -2781,8 +2552,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ocean cluster identifier. Example: `ocean.k8s`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -2791,8 +2561,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_draining_timeout_python">
 <a href="#state_draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
@@ -2801,8 +2570,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_optimized_python">
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -2811,8 +2579,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_to_ondemand_python">
 <a href="#state_fallback_to_ondemand_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>to_<wbr>ondemand</a>
@@ -2821,8 +2588,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grace_period_python">
 <a href="#state_grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
@@ -2831,8 +2597,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_instance_profile_python">
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -2841,8 +2606,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2851,8 +2615,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -2861,8 +2624,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -2871,8 +2633,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanloadbalancer">Sequence[Ocean<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- Array of load balancer objects to add to ocean cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_python">
 <a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -2881,8 +2642,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_size_python">
 <a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -2891,8 +2651,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_python">
 <a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -2901,8 +2660,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2911,8 +2669,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2921,8 +2678,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_volume_size_python">
 <a href="#state_root_volume_size_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>size</a>
@@ -2931,8 +2687,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_tasks_python">
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
@@ -2941,8 +2696,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set scheduling object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_groups_python">
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2951,8 +2705,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_percentage_python">
 <a href="#state_spot_percentage_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>percentage</a>
@@ -2961,8 +2714,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_ids_python">
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -2971,8 +2723,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2981,8 +2732,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceantag">Sequence[Ocean<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_policy_python">
 <a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
@@ -2990,8 +2740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_as_template_only_python">
 <a href="#state_use_as_template_only_python" style="color: inherit; text-decoration: inherit;">use_<wbr>as_<wbr>template_<wbr>only</a>
@@ -3000,8 +2749,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}launch specification defined on the Ocean object will function only as a template for virtual node groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -3010,8 +2758,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilize_commitments_python">
 <a href="#state_utilize_commitments_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>commitments</a>
@@ -3019,8 +2766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilize_reserved_instances_python">
 <a href="#state_utilize_reserved_instances_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>reserved_<wbr>instances</a>
@@ -3029,8 +2775,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, Ocean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_python">
 <a href="#state_whitelists_python" style="color: inherit; text-decoration: inherit;">whitelists</a>
@@ -3039,8 +2784,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster. Cannot be configured if `blacklist` is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3055,8 +2799,7 @@ The following state arguments are supported:
 <h4 id="oceanautoscaler">Ocean<wbr>Autoscaler</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoheadroompercentage_csharp">
 <a href="#autoheadroompercentage_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Headroom<wbr>Percentage</a>
@@ -3065,8 +2808,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `autoscale_is_auto_config` toggled on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_csharp">
 <a href="#autoscalecooldown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -3075,8 +2817,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
 <a href="#autoscaledown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -3085,8 +2826,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
 <a href="#autoscaleheadroom_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -3095,8 +2835,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_csharp">
 <a href="#autoscaleisautoconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -3105,8 +2844,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_csharp">
 <a href="#autoscaleisenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -3115,8 +2853,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_csharp">
 <a href="#resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
@@ -3125,13 +2862,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoheadroompercentage_go">
 <a href="#autoheadroompercentage_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Headroom<wbr>Percentage</a>
@@ -3140,8 +2875,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `autoscale_is_auto_config` toggled on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_go">
 <a href="#autoscalecooldown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -3150,8 +2884,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
 <a href="#autoscaledown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -3160,8 +2893,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
 <a href="#autoscaleheadroom_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -3170,8 +2902,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_go">
 <a href="#autoscaleisautoconfig_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -3180,8 +2911,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_go">
 <a href="#autoscaleisenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -3190,8 +2920,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_go">
 <a href="#resourcelimits_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
@@ -3200,13 +2929,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoheadroompercentage_nodejs">
 <a href="#autoheadroompercentage_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Headroom<wbr>Percentage</a>
@@ -3215,8 +2942,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `autoscale_is_auto_config` toggled on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_nodejs">
 <a href="#autoscalecooldown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
@@ -3225,8 +2951,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
@@ -3235,8 +2960,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
@@ -3245,8 +2969,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_nodejs">
 <a href="#autoscaleisautoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -3255,8 +2978,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_nodejs">
 <a href="#autoscaleisenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
@@ -3265,8 +2987,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_nodejs">
 <a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
@@ -3275,13 +2996,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_headroom_percentage_python">
 <a href="#auto_headroom_percentage_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>headroom_<wbr>percentage</a>
@@ -3290,8 +3009,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `autoscale_is_auto_config` toggled on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_cooldown_python">
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
@@ -3300,8 +3018,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_down_python">
 <a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
@@ -3310,8 +3027,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_headroom_python">
 <a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
@@ -3320,8 +3036,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_auto_config_python">
 <a href="#autoscale_is_auto_config_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>auto_<wbr>config</a>
@@ -3330,8 +3045,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_enabled_python">
 <a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
@@ -3340,8 +3054,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean Kubernetes autoscaler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_limits_python">
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
@@ -3350,15 +3063,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanautoscalerautoscaledown">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Down</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -3366,8 +3077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_csharp">
 <a href="#maxscaledownpercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -3376,13 +3086,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -3390,8 +3098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_go">
 <a href="#maxscaledownpercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -3400,13 +3107,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -3414,8 +3119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_nodejs">
 <a href="#maxscaledownpercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -3424,13 +3128,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -3438,8 +3140,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_scale_down_percentage_python">
 <a href="#max_scale_down_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scale_<wbr>down_<wbr>percentage</a>
@@ -3448,15 +3149,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanautoscalerautoscaleheadroom">Ocean<wbr>Autoscaler<wbr>Autoscale<wbr>Headroom</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_csharp">
 <a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -3465,8 +3164,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpuperunit_csharp">
 <a href="#gpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Per<wbr>Unit</a>
@@ -3475,8 +3173,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
 <a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -3485,8 +3182,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
 <a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -3495,13 +3191,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_go">
 <a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -3510,8 +3204,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpuperunit_go">
 <a href="#gpuperunit_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Per<wbr>Unit</a>
@@ -3520,8 +3213,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
 <a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -3530,8 +3222,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
 <a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -3540,13 +3231,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_nodejs">
 <a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
@@ -3555,8 +3244,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpuperunit_nodejs">
 <a href="#gpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Per<wbr>Unit</a>
@@ -3565,8 +3253,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
 <a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
@@ -3575,8 +3262,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
 <a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
@@ -3585,13 +3271,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_per_unit_python">
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
@@ -3600,8 +3284,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gpu_per_unit_python">
 <a href="#gpu_per_unit_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>per_<wbr>unit</a>
@@ -3610,8 +3293,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of GPUS to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
@@ -3620,8 +3302,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
@@ -3630,15 +3311,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxmemorygib_csharp">
 <a href="#maxmemorygib_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Memory<wbr>Gib</a>
@@ -3647,8 +3326,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_csharp">
 <a href="#maxvcpu_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Vcpu</a>
@@ -3657,13 +3335,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxmemorygib_go">
 <a href="#maxmemorygib_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Memory<wbr>Gib</a>
@@ -3672,8 +3348,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_go">
 <a href="#maxvcpu_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Vcpu</a>
@@ -3682,13 +3357,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxmemorygib_nodejs">
 <a href="#maxmemorygib_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Memory<wbr>Gib</a>
@@ -3697,8 +3370,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_nodejs">
 <a href="#maxvcpu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vcpu</a>
@@ -3707,13 +3379,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_memory_gib_python">
 <a href="#max_memory_gib_python" style="color: inherit; text-decoration: inherit;">max_<wbr>memory_<wbr>gib</a>
@@ -3722,8 +3392,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_vcpu_python">
 <a href="#max_vcpu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vcpu</a>
@@ -3732,15 +3401,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanloadbalancer">Ocean<wbr>Load<wbr>Balancer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -3749,8 +3416,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to TARGET_GROUP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3759,8 +3425,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3769,13 +3434,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -3784,8 +3447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to TARGET_GROUP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3794,8 +3456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3804,13 +3465,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -3819,8 +3478,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to TARGET_GROUP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3829,8 +3487,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3839,13 +3496,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -3854,8 +3509,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if type is set to TARGET_GROUP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3864,8 +3518,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required if type is set to CLASSIC
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3874,15 +3527,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shutdownhours_csharp">
 <a href="#shutdownhours_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Hours</a>
@@ -3891,8 +3542,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set shutdown hours for cluster object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_csharp">
 <a href="#tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
@@ -3901,13 +3551,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtasktask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scheduling tasks for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shutdownhours_go">
 <a href="#shutdownhours_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Hours</a>
@@ -3916,8 +3564,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
     <dd>{{% md %}}Set shutdown hours for cluster object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_go">
 <a href="#tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
@@ -3926,13 +3573,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtasktask">[]Ocean<wbr>Scheduled<wbr>Task<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}The scheduling tasks for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shutdownhours_nodejs">
 <a href="#shutdownhours_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Hours</a>
@@ -3941,8 +3586,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
     <dd>{{% md %}}Set shutdown hours for cluster object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_nodejs">
 <a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
@@ -3951,13 +3595,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling tasks for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shutdown_hours_python">
 <a href="#shutdown_hours_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>hours</a>
@@ -3966,8 +3608,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set shutdown hours for cluster object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tasks_python">
 <a href="#tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
@@ -3976,15 +3617,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanscheduledtasktask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling tasks for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timewindows_csharp">
 <a href="#timewindows_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Windows</a>
@@ -3994,8 +3633,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
 Example: Fri:15:30-Wed:14:30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4004,13 +3642,11 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timewindows_go">
 <a href="#timewindows_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Windows</a>
@@ -4020,8 +3656,7 @@ Example: Fri:15:30-Wed:14:30
     </dt>
     <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
 Example: Fri:15:30-Wed:14:30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4030,13 +3665,11 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timewindows_nodejs">
 <a href="#timewindows_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Windows</a>
@@ -4046,8 +3679,7 @@ Example: Fri:15:30-Wed:14:30
     </dt>
     <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
 Example: Fri:15:30-Wed:14:30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -4056,13 +3688,11 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_windows_python">
 <a href="#time_windows_python" style="color: inherit; text-decoration: inherit;">time_<wbr>windows</a>
@@ -4072,8 +3702,7 @@ Example: Fri:15:30-Wed:14:30
     </dt>
     <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
 Example: Fri:15:30-Wed:14:30
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -4082,15 +3711,13 @@ Example: Fri:15:30-Wed:14:30
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cronexpression_csharp">
 <a href="#cronexpression_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
@@ -4100,8 +3727,7 @@ Example: Fri:15:30-Wed:14:30
     </dt>
     <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
 Example: 0 1 * * *
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4110,8 +3736,7 @@ Example: 0 1 * * *
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
 <a href="#tasktype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
@@ -4121,13 +3746,11 @@ Example: 0 1 * * *
     </dt>
     <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
 Example: clusterRoll
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cronexpression_go">
 <a href="#cronexpression_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
@@ -4137,8 +3760,7 @@ Example: clusterRoll
     </dt>
     <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
 Example: 0 1 * * *
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4147,8 +3769,7 @@ Example: 0 1 * * *
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_go">
 <a href="#tasktype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
@@ -4158,13 +3779,11 @@ Example: 0 1 * * *
     </dt>
     <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
 Example: clusterRoll
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cronexpression_nodejs">
 <a href="#cronexpression_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
@@ -4174,8 +3793,7 @@ Example: clusterRoll
     </dt>
     <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
 Example: 0 1 * * *
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -4184,8 +3802,7 @@ Example: 0 1 * * *
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
 <a href="#tasktype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
@@ -4195,13 +3812,11 @@ Example: 0 1 * * *
     </dt>
     <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
 Example: clusterRoll
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cron_expression_python">
 <a href="#cron_expression_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>expression</a>
@@ -4211,8 +3826,7 @@ Example: clusterRoll
     </dt>
     <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
 Example: 0 1 * * *
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -4221,8 +3835,7 @@ Example: 0 1 * * *
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="task_type_python">
 <a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
@@ -4232,15 +3845,13 @@ Example: 0 1 * * *
     </dt>
     <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
 Example: clusterRoll
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceantag">Ocean<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4249,8 +3860,7 @@ Example: clusterRoll
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4259,13 +3869,11 @@ Example: clusterRoll
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4274,8 +3882,7 @@ Example: clusterRoll
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4284,13 +3891,11 @@ Example: clusterRoll
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4299,8 +3904,7 @@ Example: clusterRoll
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4309,13 +3913,11 @@ Example: clusterRoll
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4324,8 +3926,7 @@ Example: clusterRoll
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4334,15 +3935,13 @@ Example: clusterRoll
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shouldroll_csharp">
 <a href="#shouldroll_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
@@ -4351,8 +3950,7 @@ Example: clusterRoll
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollconfig_csharp">
 <a href="#rollconfig_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
@@ -4361,13 +3959,11 @@ Example: clusterRoll
         <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shouldroll_go">
 <a href="#shouldroll_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
@@ -4376,8 +3972,7 @@ Example: clusterRoll
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollconfig_go">
 <a href="#rollconfig_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
@@ -4386,13 +3981,11 @@ Example: clusterRoll
         <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shouldroll_nodejs">
 <a href="#shouldroll_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Roll</a>
@@ -4401,8 +3994,7 @@ Example: clusterRoll
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollconfig_nodejs">
 <a href="#rollconfig_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
@@ -4411,13 +4003,11 @@ Example: clusterRoll
         <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="should_roll_python">
 <a href="#should_roll_python" style="color: inherit; text-decoration: inherit;">should_<wbr>roll</a>
@@ -4426,8 +4016,7 @@ Example: clusterRoll
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roll_config_python">
 <a href="#roll_config_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>config</a>
@@ -4436,15 +4025,13 @@ Example: clusterRoll
         <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batchsizepercentage_csharp">
 <a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -4453,13 +4040,11 @@ Example: clusterRoll
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batchsizepercentage_go">
 <a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -4468,13 +4053,11 @@ Example: clusterRoll
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batchsizepercentage_nodejs">
 <a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
@@ -4483,13 +4066,11 @@ Example: clusterRoll
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batch_size_percentage_python">
 <a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
@@ -4498,8 +4079,7 @@ Example: clusterRoll
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

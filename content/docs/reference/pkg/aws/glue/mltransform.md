@@ -631,8 +631,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inputrecordtables_csharp">
 <a href="#inputrecordtables_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Record<wbr>Tables</a>
@@ -641,8 +640,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransforminputrecordtable">List&lt;MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -651,8 +649,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -661,8 +658,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -671,8 +667,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glueversion_csharp">
 <a href="#glueversion_csharp" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -681,8 +676,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_csharp">
 <a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -691,8 +685,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
 <a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -701,8 +694,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -711,8 +703,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofworkers_csharp">
 <a href="#numberofworkers_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -721,8 +712,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -731,8 +721,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -741,8 +730,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workertype_csharp">
 <a href="#workertype_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -751,13 +739,11 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inputrecordtables_go">
 <a href="#inputrecordtables_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Record<wbr>Tables</a>
@@ -766,8 +752,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransforminputrecordtable">[]MLTransform<wbr>Input<wbr>Record<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -776,8 +761,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -786,8 +770,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -796,8 +779,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glueversion_go">
 <a href="#glueversion_go" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -806,8 +788,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_go">
 <a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -816,8 +797,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
 <a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -826,8 +806,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -836,8 +815,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofworkers_go">
 <a href="#numberofworkers_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -846,8 +824,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -856,8 +833,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -866,8 +842,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workertype_go">
 <a href="#workertype_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -876,13 +851,11 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inputrecordtables_nodejs">
 <a href="#inputrecordtables_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Record<wbr>Tables</a>
@@ -891,8 +864,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransforminputrecordtable">MLTransform<wbr>Input<wbr>Record<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -901,8 +873,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -911,8 +882,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -921,8 +891,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glueversion_nodejs">
 <a href="#glueversion_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Version</a>
@@ -931,8 +900,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_nodejs">
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
@@ -941,8 +909,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
@@ -951,8 +918,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -961,8 +927,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofworkers_nodejs">
 <a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
@@ -971,8 +936,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -981,8 +945,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -991,8 +954,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workertype_nodejs">
 <a href="#workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
@@ -1001,13 +963,11 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="input_record_tables_python">
 <a href="#input_record_tables_python" style="color: inherit; text-decoration: inherit;">input_<wbr>record_<wbr>tables</a>
@@ -1016,8 +976,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransforminputrecordtable">Sequence[MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1026,8 +985,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -1036,8 +994,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1046,8 +1003,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glue_version_python">
 <a href="#glue_version_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>version</a>
@@ -1056,8 +1012,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_capacity_python">
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
@@ -1066,8 +1021,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
@@ -1076,8 +1030,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1086,8 +1039,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_workers_python">
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
@@ -1096,8 +1048,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1106,8 +1057,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1116,8 +1066,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_type_python">
 <a href="#worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
@@ -1126,8 +1075,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1138,8 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1148,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1157,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelcount_csharp">
 <a href="#labelcount_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Count</a>
@@ -1167,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schemas_csharp">
 <a href="#schemas_csharp" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -1177,13 +1121,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mltransformschema">List&lt;MLTransform<wbr>Schema&gt;</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1192,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1201,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelcount_go">
 <a href="#labelcount_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Count</a>
@@ -1211,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schemas_go">
 <a href="#schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -1221,13 +1160,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mltransformschema">[]MLTransform<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1236,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1245,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelcount_nodejs">
 <a href="#labelcount_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Count</a>
@@ -1255,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schemas_nodejs">
 <a href="#schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -1265,13 +1199,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mltransformschema">MLTransform<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1280,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1289,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_count_python">
 <a href="#label_count_python" style="color: inherit; text-decoration: inherit;">label_<wbr>count</a>
@@ -1299,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schemas_python">
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -1309,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mltransformschema">Sequence[MLTransform<wbr>Schema]</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1437,8 +1365,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1447,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1457,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glueversion_csharp">
 <a href="#state_glueversion_csharp" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -1467,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputrecordtables_csharp">
 <a href="#state_inputrecordtables_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Record<wbr>Tables</a>
@@ -1477,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransforminputrecordtable">List&lt;MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelcount_csharp">
 <a href="#state_labelcount_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Count</a>
@@ -1487,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcapacity_csharp">
 <a href="#state_maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -1497,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretries_csharp">
 <a href="#state_maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -1507,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1517,8 +1437,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofworkers_csharp">
 <a href="#state_numberofworkers_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -1527,8 +1446,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1537,8 +1455,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1547,8 +1464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_csharp">
 <a href="#state_schemas_csharp" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -1557,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformschema">List&lt;MLTransform<wbr>Schema<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1567,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1577,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workertype_csharp">
 <a href="#state_workertype_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -1587,13 +1500,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1602,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1612,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glueversion_go">
 <a href="#state_glueversion_go" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -1622,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputrecordtables_go">
 <a href="#state_inputrecordtables_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Record<wbr>Tables</a>
@@ -1632,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransforminputrecordtable">[]MLTransform<wbr>Input<wbr>Record<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelcount_go">
 <a href="#state_labelcount_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Count</a>
@@ -1642,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcapacity_go">
 <a href="#state_maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -1652,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretries_go">
 <a href="#state_maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -1662,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1672,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofworkers_go">
 <a href="#state_numberofworkers_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -1682,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1692,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1702,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_go">
 <a href="#state_schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -1712,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformschema">[]MLTransform<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1722,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1732,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workertype_go">
 <a href="#state_workertype_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -1742,13 +1639,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1757,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1767,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glueversion_nodejs">
 <a href="#state_glueversion_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Version</a>
@@ -1777,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputrecordtables_nodejs">
 <a href="#state_inputrecordtables_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Record<wbr>Tables</a>
@@ -1787,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransforminputrecordtable">MLTransform<wbr>Input<wbr>Record<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelcount_nodejs">
 <a href="#state_labelcount_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Count</a>
@@ -1797,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcapacity_nodejs">
 <a href="#state_maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
@@ -1807,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxretries_nodejs">
 <a href="#state_maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
@@ -1817,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1827,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofworkers_nodejs">
 <a href="#state_numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
@@ -1837,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1847,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -1857,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_nodejs">
 <a href="#state_schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -1867,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformschema">MLTransform<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1877,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1887,8 +1769,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workertype_nodejs">
 <a href="#state_workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
@@ -1897,13 +1778,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1912,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1922,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glue_version_python">
 <a href="#state_glue_version_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>version</a>
@@ -1932,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_record_tables_python">
 <a href="#state_input_record_tables_python" style="color: inherit; text-decoration: inherit;">input_<wbr>record_<wbr>tables</a>
@@ -1942,8 +1818,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransforminputrecordtable">Sequence[MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_count_python">
 <a href="#state_label_count_python" style="color: inherit; text-decoration: inherit;">label_<wbr>count</a>
@@ -1952,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_capacity_python">
 <a href="#state_max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
@@ -1962,8 +1836,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_retries_python">
 <a href="#state_max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
@@ -1972,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1982,8 +1854,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_of_workers_python">
 <a href="#state_number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
@@ -1992,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -2002,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -2012,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_python">
 <a href="#state_schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -2022,8 +1890,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformschema">Sequence[MLTransform<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2032,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2042,8 +1908,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_type_python">
 <a href="#state_worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
@@ -2052,8 +1917,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2068,8 +1932,7 @@ The following state arguments are supported:
 <h4 id="mltransforminputrecordtable">MLTransform<wbr>Input<wbr>Record<wbr>Table</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -2078,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A database name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -2088,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A table name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -2098,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionname_csharp">
 <a href="#connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -2108,13 +1968,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -2123,8 +1981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A database name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -2133,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A table name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -2143,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionname_go">
 <a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -2153,13 +2008,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -2168,8 +2021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A database name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -2178,8 +2030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A table name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -2188,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionname_nodejs">
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
@@ -2198,13 +2048,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -2213,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A database name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -2223,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A table name in the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -2233,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_name_python">
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
@@ -2243,15 +2088,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connection to the AWS Glue Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mltransformparameters">MLTransform<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="findmatchesparameters_csharp">
 <a href="#findmatchesparameters_csharp" style="color: inherit; text-decoration: inherit;">Find<wbr>Matches<wbr>Parameters</a>
@@ -2260,8 +2103,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transformtype_csharp">
 <a href="#transformtype_csharp" style="color: inherit; text-decoration: inherit;">Transform<wbr>Type</a>
@@ -2270,13 +2112,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="findmatchesparameters_go">
 <a href="#findmatchesparameters_go" style="color: inherit; text-decoration: inherit;">Find<wbr>Matches<wbr>Parameters</a>
@@ -2285,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transformtype_go">
 <a href="#transformtype_go" style="color: inherit; text-decoration: inherit;">Transform<wbr>Type</a>
@@ -2295,13 +2134,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="findmatchesparameters_nodejs">
 <a href="#findmatchesparameters_nodejs" style="color: inherit; text-decoration: inherit;">find<wbr>Matches<wbr>Parameters</a>
@@ -2310,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transformtype_nodejs">
 <a href="#transformtype_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Type</a>
@@ -2320,13 +2156,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="find_matches_parameters_python">
 <a href="#find_matches_parameters_python" style="color: inherit; text-decoration: inherit;">find_<wbr>matches_<wbr>parameters</a>
@@ -2335,8 +2169,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transform_type_python">
 <a href="#transform_type_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>type</a>
@@ -2345,15 +2178,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accuracycosttradeoff_csharp">
 <a href="#accuracycosttradeoff_csharp" style="color: inherit; text-decoration: inherit;">Accuracy<wbr>Cost<wbr>Trade<wbr>Off</a>
@@ -2362,8 +2193,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The value that is selected when tuning your transform for a balance between accuracy and cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceprovidedlabels_csharp">
 <a href="#enforceprovidedlabels_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Provided<wbr>Labels</a>
@@ -2372,8 +2202,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value to switch on or off to force the output to match the provided labels from users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precisionrecalltradeoff_csharp">
 <a href="#precisionrecalltradeoff_csharp" style="color: inherit; text-decoration: inherit;">Precision<wbr>Recall<wbr>Trade<wbr>Off</a>
@@ -2382,8 +2211,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The value selected when tuning your transform for a balance between precision and recall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykeycolumnname_csharp">
 <a href="#primarykeycolumnname_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key<wbr>Column<wbr>Name</a>
@@ -2392,13 +2220,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a column that uniquely identifies rows in the source table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accuracycosttradeoff_go">
 <a href="#accuracycosttradeoff_go" style="color: inherit; text-decoration: inherit;">Accuracy<wbr>Cost<wbr>Trade<wbr>Off</a>
@@ -2407,8 +2233,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The value that is selected when tuning your transform for a balance between accuracy and cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceprovidedlabels_go">
 <a href="#enforceprovidedlabels_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Provided<wbr>Labels</a>
@@ -2417,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value to switch on or off to force the output to match the provided labels from users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precisionrecalltradeoff_go">
 <a href="#precisionrecalltradeoff_go" style="color: inherit; text-decoration: inherit;">Precision<wbr>Recall<wbr>Trade<wbr>Off</a>
@@ -2427,8 +2251,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The value selected when tuning your transform for a balance between precision and recall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykeycolumnname_go">
 <a href="#primarykeycolumnname_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key<wbr>Column<wbr>Name</a>
@@ -2437,13 +2260,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a column that uniquely identifies rows in the source table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accuracycosttradeoff_nodejs">
 <a href="#accuracycosttradeoff_nodejs" style="color: inherit; text-decoration: inherit;">accuracy<wbr>Cost<wbr>Trade<wbr>Off</a>
@@ -2452,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value that is selected when tuning your transform for a balance between accuracy and cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceprovidedlabels_nodejs">
 <a href="#enforceprovidedlabels_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Provided<wbr>Labels</a>
@@ -2462,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value to switch on or off to force the output to match the provided labels from users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precisionrecalltradeoff_nodejs">
 <a href="#precisionrecalltradeoff_nodejs" style="color: inherit; text-decoration: inherit;">precision<wbr>Recall<wbr>Trade<wbr>Off</a>
@@ -2472,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value selected when tuning your transform for a balance between precision and recall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykeycolumnname_nodejs">
 <a href="#primarykeycolumnname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key<wbr>Column<wbr>Name</a>
@@ -2482,13 +2300,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a column that uniquely identifies rows in the source table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accuracy_cost_trade_off_python">
 <a href="#accuracy_cost_trade_off_python" style="color: inherit; text-decoration: inherit;">accuracy_<wbr>cost_<wbr>trade_<wbr>off</a>
@@ -2497,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value that is selected when tuning your transform for a balance between accuracy and cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_provided_labels_python">
 <a href="#enforce_provided_labels_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>provided_<wbr>labels</a>
@@ -2507,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value to switch on or off to force the output to match the provided labels from users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precision_recall_trade_off_python">
 <a href="#precision_recall_trade_off_python" style="color: inherit; text-decoration: inherit;">precision_<wbr>recall_<wbr>trade_<wbr>off</a>
@@ -2517,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value selected when tuning your transform for a balance between precision and recall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_column_name_python">
 <a href="#primary_key_column_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key_<wbr>column_<wbr>name</a>
@@ -2527,15 +2340,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a column that uniquely identifies rows in the source table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mltransformschema">MLTransform<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -2544,8 +2355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data in the column.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2554,13 +2364,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -2569,8 +2377,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data in the column.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2579,13 +2386,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -2594,8 +2399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data in the column.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2604,13 +2408,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -2619,8 +2421,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data in the column.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2629,8 +2430,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

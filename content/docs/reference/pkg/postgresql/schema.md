@@ -162,8 +162,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -172,8 +171,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropcascade_csharp">
 <a href="#dropcascade_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
@@ -182,8 +180,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ifnotexists_csharp">
 <a href="#ifnotexists_csharp" style="color: inherit; text-decoration: inherit;">If<wbr>Not<wbr>Exists</a>
@@ -192,8 +189,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -203,8 +199,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -213,8 +208,7 @@ database instance where it is configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -224,13 +218,11 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -239,8 +231,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropcascade_go">
 <a href="#dropcascade_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
@@ -249,8 +240,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ifnotexists_go">
 <a href="#ifnotexists_go" style="color: inherit; text-decoration: inherit;">If<wbr>Not<wbr>Exists</a>
@@ -259,8 +249,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -270,8 +259,7 @@ policy block supports fields documented below.
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -280,8 +268,7 @@ database instance where it is configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -291,13 +278,11 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -306,8 +291,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropcascade_nodejs">
 <a href="#dropcascade_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Cascade</a>
@@ -316,8 +300,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ifnotexists_nodejs">
 <a href="#ifnotexists_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>Not<wbr>Exists</a>
@@ -326,8 +309,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -337,8 +319,7 @@ policy block supports fields documented below.
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -347,8 +328,7 @@ database instance where it is configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -358,13 +338,11 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -373,8 +351,7 @@ policy block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drop_cascade_python">
 <a href="#drop_cascade_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>cascade</a>
@@ -383,8 +360,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="if_not_exists_python">
 <a href="#if_not_exists_python" style="color: inherit; text-decoration: inherit;">if_<wbr>not_<wbr>exists</a>
@@ -393,8 +369,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -404,8 +379,7 @@ policy block supports fields documented below.
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -414,8 +388,7 @@ database instance where it is configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -425,8 +398,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -437,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -446,13 +417,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -460,13 +429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -474,13 +441,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -488,8 +453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -616,8 +580,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_csharp">
 <a href="#state_database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -626,8 +589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropcascade_csharp">
 <a href="#state_dropcascade_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
@@ -636,8 +598,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ifnotexists_csharp">
 <a href="#state_ifnotexists_csharp" style="color: inherit; text-decoration: inherit;">If<wbr>Not<wbr>Exists</a>
@@ -646,8 +607,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -657,8 +617,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_csharp">
 <a href="#state_owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -667,8 +626,7 @@ database instance where it is configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -678,13 +636,11 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_go">
 <a href="#state_database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -693,8 +649,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropcascade_go">
 <a href="#state_dropcascade_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Cascade</a>
@@ -703,8 +658,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ifnotexists_go">
 <a href="#state_ifnotexists_go" style="color: inherit; text-decoration: inherit;">If<wbr>Not<wbr>Exists</a>
@@ -713,8 +667,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -724,8 +677,7 @@ policy block supports fields documented below.
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_go">
 <a href="#state_owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -734,8 +686,7 @@ database instance where it is configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -745,13 +696,11 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_nodejs">
 <a href="#state_database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -760,8 +709,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropcascade_nodejs">
 <a href="#state_dropcascade_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Cascade</a>
@@ -770,8 +718,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ifnotexists_nodejs">
 <a href="#state_ifnotexists_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>Not<wbr>Exists</a>
@@ -780,8 +727,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -791,8 +737,7 @@ policy block supports fields documented below.
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_nodejs">
 <a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -801,8 +746,7 @@ database instance where it is configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -812,13 +756,11 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_python">
 <a href="#state_database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -827,8 +769,7 @@ policy block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drop_cascade_python">
 <a href="#state_drop_cascade_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>cascade</a>
@@ -837,8 +778,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_if_not_exists_python">
 <a href="#state_if_not_exists_python" style="color: inherit; text-decoration: inherit;">if_<wbr>not_<wbr>exists</a>
@@ -847,8 +787,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -858,8 +797,7 @@ policy block supports fields documented below.
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_python">
 <a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -868,8 +806,7 @@ database instance where it is configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -879,8 +816,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -895,8 +831,7 @@ policy block supports fields documented below.
 <h4 id="schemapolicy">Schema<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_csharp">
 <a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
@@ -905,8 +840,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createwithgrant_csharp">
 <a href="#createwithgrant_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>With<wbr>Grant</a>
@@ -915,8 +849,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -925,8 +858,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -935,8 +867,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usagewithgrant_csharp">
 <a href="#usagewithgrant_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>With<wbr>Grant</a>
@@ -945,13 +876,11 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_go">
 <a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
@@ -960,8 +889,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createwithgrant_go">
 <a href="#createwithgrant_go" style="color: inherit; text-decoration: inherit;">Create<wbr>With<wbr>Grant</a>
@@ -970,8 +898,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -980,8 +907,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -990,8 +916,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usagewithgrant_go">
 <a href="#usagewithgrant_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>With<wbr>Grant</a>
@@ -1000,13 +925,11 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_nodejs">
 <a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
@@ -1015,8 +938,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createwithgrant_nodejs">
 <a href="#createwithgrant_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>With<wbr>Grant</a>
@@ -1025,8 +947,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1035,8 +956,7 @@ policy block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -1045,8 +965,7 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usagewithgrant_nodejs">
 <a href="#usagewithgrant_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>With<wbr>Grant</a>
@@ -1055,13 +974,11 @@ policy block supports fields documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_python">
 <a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
@@ -1070,8 +987,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_with_grant_python">
 <a href="#create_with_grant_python" style="color: inherit; text-decoration: inherit;">create_<wbr>with_<wbr>grant</a>
@@ -1080,8 +996,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1090,8 +1005,7 @@ policy block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -1100,8 +1014,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_with_grant_python">
 <a href="#usage_with_grant_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>with_<wbr>grant</a>
@@ -1110,8 +1023,7 @@ policy block supports fields documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

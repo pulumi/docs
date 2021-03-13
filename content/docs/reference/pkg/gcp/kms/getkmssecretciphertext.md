@@ -61,8 +61,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cryptokey_csharp">
 <a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
@@ -73,8 +72,7 @@ The following arguments are supported:
     <dd>{{% md %}}The id of the CryptoKey that will be used to
 encrypt the provided plaintext. This is represented by the format
 `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plaintext_csharp">
 <a href="#plaintext_csharp" style="color: inherit; text-decoration: inherit;">Plaintext</a>
@@ -83,13 +81,11 @@ encrypt the provided plaintext. This is represented by the format
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The plaintext to be encrypted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cryptokey_go">
 <a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
@@ -100,8 +96,7 @@ encrypt the provided plaintext. This is represented by the format
     <dd>{{% md %}}The id of the CryptoKey that will be used to
 encrypt the provided plaintext. This is represented by the format
 `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plaintext_go">
 <a href="#plaintext_go" style="color: inherit; text-decoration: inherit;">Plaintext</a>
@@ -110,13 +105,11 @@ encrypt the provided plaintext. This is represented by the format
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The plaintext to be encrypted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cryptokey_nodejs">
 <a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
@@ -127,8 +120,7 @@ encrypt the provided plaintext. This is represented by the format
     <dd>{{% md %}}The id of the CryptoKey that will be used to
 encrypt the provided plaintext. This is represented by the format
 `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plaintext_nodejs">
 <a href="#plaintext_nodejs" style="color: inherit; text-decoration: inherit;">plaintext</a>
@@ -137,13 +129,11 @@ encrypt the provided plaintext. This is represented by the format
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The plaintext to be encrypted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="crypto_key_python">
 <a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
@@ -154,8 +144,7 @@ encrypt the provided plaintext. This is represented by the format
     <dd>{{% md %}}The id of the CryptoKey that will be used to
 encrypt the provided plaintext. This is represented by the format
 `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plaintext_python">
 <a href="#plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
@@ -164,8 +153,7 @@ encrypt the provided plaintext. This is represented by the format
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The plaintext to be encrypted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -178,8 +166,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ciphertext_csharp">
 <a href="#ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
@@ -188,8 +175,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cryptokey_csharp">
 <a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
@@ -197,8 +183,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -207,8 +192,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plaintext_csharp">
 <a href="#plaintext_csharp" style="color: inherit; text-decoration: inherit;">Plaintext</a>
@@ -216,13 +200,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ciphertext_go">
 <a href="#ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
@@ -231,8 +213,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cryptokey_go">
 <a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
@@ -240,8 +221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -250,8 +230,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plaintext_go">
 <a href="#plaintext_go" style="color: inherit; text-decoration: inherit;">Plaintext</a>
@@ -259,13 +238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ciphertext_nodejs">
 <a href="#ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
@@ -274,8 +251,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cryptokey_nodejs">
 <a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
@@ -283,8 +259,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -293,8 +268,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plaintext_nodejs">
 <a href="#plaintext_nodejs" style="color: inherit; text-decoration: inherit;">plaintext</a>
@@ -302,13 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ciphertext_python">
 <a href="#ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
@@ -317,8 +289,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="crypto_key_python">
 <a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
@@ -326,8 +297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -336,8 +306,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plaintext_python">
 <a href="#plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
@@ -345,8 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

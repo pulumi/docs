@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="idpid_csharp">
 <a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -156,13 +155,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="idpid_go">
 <a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -171,13 +168,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="idpid_nodejs">
 <a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
@@ -186,13 +181,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="idp_id_python">
 <a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
@@ -201,8 +194,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the IdP to retrieve metadata for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -215,8 +207,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertionssigned_csharp">
 <a href="#assertionssigned_csharp" style="color: inherit; text-decoration: inherit;">Assertions<wbr>Signed</a>
@@ -225,8 +216,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether assertions are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authnrequestsigned_csharp">
 <a href="#authnrequestsigned_csharp" style="color: inherit; text-decoration: inherit;">Authn<wbr>Request<wbr>Signed</a>
@@ -235,8 +225,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether authn requests are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptioncertificate_csharp">
 <a href="#encryptioncertificate_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
@@ -245,8 +234,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML request encryption certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -255,8 +243,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httppostbinding_csharp">
 <a href="#httppostbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
@@ -265,8 +252,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpredirectbinding_csharp">
 <a href="#httpredirectbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
@@ -275,8 +261,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -285,8 +270,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -295,8 +279,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw IdP metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signingcertificate_csharp">
 <a href="#signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
@@ -305,8 +288,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idpid_csharp">
 <a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -314,13 +296,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertionssigned_go">
 <a href="#assertionssigned_go" style="color: inherit; text-decoration: inherit;">Assertions<wbr>Signed</a>
@@ -329,8 +309,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether assertions are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authnrequestsigned_go">
 <a href="#authnrequestsigned_go" style="color: inherit; text-decoration: inherit;">Authn<wbr>Request<wbr>Signed</a>
@@ -339,8 +318,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether authn requests are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptioncertificate_go">
 <a href="#encryptioncertificate_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate</a>
@@ -349,8 +327,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML request encryption certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -359,8 +336,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httppostbinding_go">
 <a href="#httppostbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
@@ -369,8 +345,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpredirectbinding_go">
 <a href="#httpredirectbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
@@ -379,8 +354,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -389,8 +363,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -399,8 +372,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw IdP metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signingcertificate_go">
 <a href="#signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
@@ -409,8 +381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idpid_go">
 <a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -418,13 +389,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertionssigned_nodejs">
 <a href="#assertionssigned_nodejs" style="color: inherit; text-decoration: inherit;">assertions<wbr>Signed</a>
@@ -433,8 +402,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether assertions are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authnrequestsigned_nodejs">
 <a href="#authnrequestsigned_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Request<wbr>Signed</a>
@@ -443,8 +411,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether authn requests are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptioncertificate_nodejs">
 <a href="#encryptioncertificate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate</a>
@@ -453,8 +420,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML request encryption certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -463,8 +429,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httppostbinding_nodejs">
 <a href="#httppostbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Post<wbr>Binding</a>
@@ -473,8 +438,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpredirectbinding_nodejs">
 <a href="#httpredirectbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Redirect<wbr>Binding</a>
@@ -483,8 +447,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -493,8 +456,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -503,8 +465,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw IdP metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signingcertificate_nodejs">
 <a href="#signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
@@ -513,8 +474,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idpid_nodejs">
 <a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
@@ -522,13 +482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertions_signed_python">
 <a href="#assertions_signed_python" style="color: inherit; text-decoration: inherit;">assertions_<wbr>signed</a>
@@ -537,8 +495,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether assertions are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authn_request_signed_python">
 <a href="#authn_request_signed_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>request_<wbr>signed</a>
@@ -547,8 +504,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether authn requests are signed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_certificate_python">
 <a href="#encryption_certificate_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate</a>
@@ -557,8 +513,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML request encryption certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -567,8 +522,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_post_binding_python">
 <a href="#http_post_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>post_<wbr>binding</a>
@@ -577,8 +531,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_redirect_binding_python">
 <a href="#http_redirect_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>redirect_<wbr>binding</a>
@@ -587,8 +540,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -597,8 +549,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -607,8 +558,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}raw IdP metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signing_certificate_python">
 <a href="#signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
@@ -617,8 +567,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML request signing certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idp_id_python">
 <a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
@@ -626,8 +575,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

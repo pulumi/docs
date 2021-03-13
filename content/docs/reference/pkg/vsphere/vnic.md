@@ -624,8 +624,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -634,8 +633,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributedportgroup_csharp">
 <a href="#distributedportgroup_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
@@ -644,8 +642,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributedswitchport_csharp">
 <a href="#distributedswitchport_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
@@ -654,8 +651,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_csharp">
 <a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -664,8 +660,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv4">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -674,8 +669,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv6">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_csharp">
 <a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -684,8 +678,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_csharp">
 <a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -694,8 +687,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netstack_csharp">
 <a href="#netstack_csharp" style="color: inherit; text-decoration: inherit;">Netstack</a>
@@ -704,8 +696,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portgroup_csharp">
 <a href="#portgroup_csharp" style="color: inherit; text-decoration: inherit;">Portgroup</a>
@@ -714,13 +705,11 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -729,8 +718,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributedportgroup_go">
 <a href="#distributedportgroup_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
@@ -739,8 +727,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributedswitchport_go">
 <a href="#distributedswitchport_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
@@ -749,8 +736,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_go">
 <a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -759,8 +745,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -769,8 +754,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_go">
 <a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -779,8 +763,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_go">
 <a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -789,8 +772,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netstack_go">
 <a href="#netstack_go" style="color: inherit; text-decoration: inherit;">Netstack</a>
@@ -799,8 +781,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portgroup_go">
 <a href="#portgroup_go" style="color: inherit; text-decoration: inherit;">Portgroup</a>
@@ -809,13 +790,11 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -824,8 +803,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributedportgroup_nodejs">
 <a href="#distributedportgroup_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Port<wbr>Group</a>
@@ -834,8 +812,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributedswitchport_nodejs">
 <a href="#distributedswitchport_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Switch<wbr>Port</a>
@@ -844,8 +821,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_nodejs">
 <a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -854,8 +830,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -864,8 +839,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_nodejs">
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -874,8 +848,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_nodejs">
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -884,8 +857,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netstack_nodejs">
 <a href="#netstack_nodejs" style="color: inherit; text-decoration: inherit;">netstack</a>
@@ -894,8 +866,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portgroup_nodejs">
 <a href="#portgroup_nodejs" style="color: inherit; text-decoration: inherit;">portgroup</a>
@@ -904,13 +875,11 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -919,8 +888,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributed_port_group_python">
 <a href="#distributed_port_group_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>port_<wbr>group</a>
@@ -929,8 +897,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributed_switch_port_python">
 <a href="#distributed_switch_port_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>switch_<wbr>port</a>
@@ -939,8 +906,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_python">
 <a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -949,8 +915,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -959,8 +924,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_python">
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -969,8 +933,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_python">
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -979,8 +942,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netstack_python">
 <a href="#netstack_python" style="color: inherit; text-decoration: inherit;">netstack</a>
@@ -989,8 +951,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portgroup_python">
 <a href="#portgroup_python" style="color: inherit; text-decoration: inherit;">portgroup</a>
@@ -999,8 +960,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1011,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1020,13 +979,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1034,13 +991,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1048,13 +1003,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1062,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1190,8 +1142,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_distributedportgroup_csharp">
 <a href="#state_distributedportgroup_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
@@ -1200,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributedswitchport_csharp">
 <a href="#state_distributedswitchport_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
@@ -1210,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1220,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_csharp">
 <a href="#state_ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -1230,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv4">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_csharp">
 <a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1240,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv6">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mac_csharp">
 <a href="#state_mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -1250,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_csharp">
 <a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -1260,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netstack_csharp">
 <a href="#state_netstack_csharp" style="color: inherit; text-decoration: inherit;">Netstack</a>
@@ -1270,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portgroup_csharp">
 <a href="#state_portgroup_csharp" style="color: inherit; text-decoration: inherit;">Portgroup</a>
@@ -1280,13 +1223,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_distributedportgroup_go">
 <a href="#state_distributedportgroup_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Port<wbr>Group</a>
@@ -1295,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributedswitchport_go">
 <a href="#state_distributedswitchport_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Switch<wbr>Port</a>
@@ -1305,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1315,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_go">
 <a href="#state_ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -1325,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_go">
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1335,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mac_go">
 <a href="#state_mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -1345,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_go">
 <a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -1355,8 +1290,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netstack_go">
 <a href="#state_netstack_go" style="color: inherit; text-decoration: inherit;">Netstack</a>
@@ -1365,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portgroup_go">
 <a href="#state_portgroup_go" style="color: inherit; text-decoration: inherit;">Portgroup</a>
@@ -1375,13 +1308,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_distributedportgroup_nodejs">
 <a href="#state_distributedportgroup_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Port<wbr>Group</a>
@@ -1390,8 +1321,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributedswitchport_nodejs">
 <a href="#state_distributedswitchport_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Switch<wbr>Port</a>
@@ -1400,8 +1330,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1410,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_nodejs">
 <a href="#state_ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -1420,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_nodejs">
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1430,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mac_nodejs">
 <a href="#state_mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -1440,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_nodejs">
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -1450,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netstack_nodejs">
 <a href="#state_netstack_nodejs" style="color: inherit; text-decoration: inherit;">netstack</a>
@@ -1460,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portgroup_nodejs">
 <a href="#state_portgroup_nodejs" style="color: inherit; text-decoration: inherit;">portgroup</a>
@@ -1470,13 +1393,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_distributed_port_group_python">
 <a href="#state_distributed_port_group_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>port_<wbr>group</a>
@@ -1485,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributed_switch_port_python">
 <a href="#state_distributed_switch_port_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>switch_<wbr>port</a>
@@ -1495,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1505,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_python">
 <a href="#state_ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -1515,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_python">
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1525,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mac_python">
 <a href="#state_mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -1535,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_python">
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -1545,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netstack_python">
 <a href="#state_netstack_python" style="color: inherit; text-decoration: inherit;">netstack</a>
@@ -1555,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portgroup_python">
 <a href="#state_portgroup_python" style="color: inherit; text-decoration: inherit;">portgroup</a>
@@ -1565,8 +1478,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1581,8 +1493,7 @@ The following state arguments are supported:
 <h4 id="vnicipv4">Vnic<wbr>Ipv4</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dhcp_csharp">
 <a href="#dhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp</a>
@@ -1591,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_csharp">
 <a href="#gw_csharp" style="color: inherit; text-decoration: inherit;">Gw</a>
@@ -1601,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -1611,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netmask_csharp">
 <a href="#netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1621,13 +1529,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Netmask of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dhcp_go">
 <a href="#dhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp</a>
@@ -1636,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_go">
 <a href="#gw_go" style="color: inherit; text-decoration: inherit;">Gw</a>
@@ -1646,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -1656,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netmask_go">
 <a href="#netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1666,13 +1569,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Netmask of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dhcp_nodejs">
 <a href="#dhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp</a>
@@ -1681,8 +1582,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_nodejs">
 <a href="#gw_nodejs" style="color: inherit; text-decoration: inherit;">gw</a>
@@ -1691,8 +1591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1701,8 +1600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netmask_nodejs">
 <a href="#netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1711,13 +1609,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Netmask of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dhcp_python">
 <a href="#dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp</a>
@@ -1726,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_python">
 <a href="#gw_python" style="color: inherit; text-decoration: inherit;">gw</a>
@@ -1736,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1746,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netmask_python">
 <a href="#netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1756,15 +1649,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Netmask of the interface, if DHCP is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vnicipv6">Vnic<wbr>Ipv6</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addresses_csharp">
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
@@ -1773,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoconfig_csharp">
 <a href="#autoconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoconfig</a>
@@ -1783,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use IPv6 Autoconfiguration (RFC2462).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_csharp">
 <a href="#dhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp</a>
@@ -1793,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_csharp">
 <a href="#gw_csharp" style="color: inherit; text-decoration: inherit;">Gw</a>
@@ -1803,13 +1691,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addresses_go">
 <a href="#addresses_go" style="color: inherit; text-decoration: inherit;">Addresses</a>
@@ -1818,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoconfig_go">
 <a href="#autoconfig_go" style="color: inherit; text-decoration: inherit;">Autoconfig</a>
@@ -1828,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use IPv6 Autoconfiguration (RFC2462).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_go">
 <a href="#dhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp</a>
@@ -1838,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_go">
 <a href="#gw_go" style="color: inherit; text-decoration: inherit;">Gw</a>
@@ -1848,13 +1731,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addresses_nodejs">
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
@@ -1863,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoconfig_nodejs">
 <a href="#autoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoconfig</a>
@@ -1873,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use IPv6 Autoconfiguration (RFC2462).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_nodejs">
 <a href="#dhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp</a>
@@ -1883,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_nodejs">
 <a href="#gw_nodejs" style="color: inherit; text-decoration: inherit;">gw</a>
@@ -1893,13 +1771,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addresses_python">
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
@@ -1908,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoconfig_python">
 <a href="#autoconfig_python" style="color: inherit; text-decoration: inherit;">autoconfig</a>
@@ -1918,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use IPv6 Autoconfiguration (RFC2462).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_python">
 <a href="#dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp</a>
@@ -1928,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gw_python">
 <a href="#gw_python" style="color: inherit; text-decoration: inherit;">gw</a>
@@ -1938,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

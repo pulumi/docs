@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalHttpEventCollector"
-title_tag: "Resource GlobalHttpEventCollector | Package Splunk"
-meta_desc: "Explore the GlobalHttpEventCollector resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.GlobalHttpEventCollector"
+title_tag: "splunk.GlobalHttpEventCollector"
+meta_desc: "Documentation for the splunk.GlobalHttpEventCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Update Global HTTP Event Collector input configuration.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -79,9 +91,12 @@ http = splunk.GlobalHttpEventCollector("http",
     port=8088)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -94,9 +109,16 @@ const http = new splunk.GlobalHttpEventCollector("http", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GlobalHttpEventCollector Resource {#create}
@@ -121,9 +143,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -131,9 +151,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -141,9 +159,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -151,10 +167,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -180,9 +193,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -190,9 +201,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -200,9 +209,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -210,9 +217,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -220,18 +225,13 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +239,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +247,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,10 +255,7 @@ const http = new splunk.GlobalHttpEventCollector("http", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -277,9 +270,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dedicatediothreads_csharp">
 <a href="#dedicatediothreads_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Io<wbr>Threads</a>
@@ -288,8 +279,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -298,8 +288,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_csharp">
 <a href="#enablessl_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -308,8 +297,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsockets_csharp">
 <a href="#maxsockets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sockets</a>
@@ -318,8 +306,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxthreads_csharp">
 <a href="#maxthreads_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Threads</a>
@@ -328,8 +315,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -338,8 +324,7 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedeploymentserver_csharp">
 <a href="#usedeploymentserver_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Deployment<wbr>Server</a>
@@ -349,14 +334,11 @@ The GlobalHttpEventCollector resource accepts the following [input]({{< relref "
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dedicatediothreads_go">
 <a href="#dedicatediothreads_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Io<wbr>Threads</a>
@@ -365,8 +347,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -375,8 +356,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_go">
 <a href="#enablessl_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -385,8 +365,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsockets_go">
 <a href="#maxsockets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Sockets</a>
@@ -395,8 +374,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxthreads_go">
 <a href="#maxthreads_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Threads</a>
@@ -405,8 +383,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -415,8 +392,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedeploymentserver_go">
 <a href="#usedeploymentserver_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Deployment<wbr>Server</a>
@@ -426,14 +402,11 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dedicatediothreads_nodejs">
 <a href="#dedicatediothreads_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Io<wbr>Threads</a>
@@ -442,8 +415,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -452,8 +424,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_nodejs">
 <a href="#enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
@@ -462,8 +433,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsockets_nodejs">
 <a href="#maxsockets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sockets</a>
@@ -472,8 +442,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxthreads_nodejs">
 <a href="#maxthreads_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threads</a>
@@ -482,8 +451,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -492,8 +460,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedeploymentserver_nodejs">
 <a href="#usedeploymentserver_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Deployment<wbr>Server</a>
@@ -503,14 +470,11 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dedicated_io_threads_python">
 <a href="#dedicated_io_threads_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>io_<wbr>threads</a>
@@ -519,8 +483,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -529,8 +492,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_ssl_python">
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
@@ -539,8 +501,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_sockets_python">
 <a href="#max_sockets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sockets</a>
@@ -549,8 +510,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_threads_python">
 <a href="#max_threads_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threads</a>
@@ -559,8 +519,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -569,8 +528,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_deployment_server_python">
 <a href="#use_deployment_server_python" style="color: inherit; text-decoration: inherit;">use_<wbr>deployment_<wbr>server</a>
@@ -580,8 +538,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -592,9 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,14 +557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -617,14 +569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -632,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -647,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -775,9 +720,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dedicatediothreads_csharp">
 <a href="#state_dedicatediothreads_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Io<wbr>Threads</a>
@@ -786,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -796,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_csharp">
 <a href="#state_enablessl_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -806,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsockets_csharp">
 <a href="#state_maxsockets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Sockets</a>
@@ -816,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxthreads_csharp">
 <a href="#state_maxthreads_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Threads</a>
@@ -826,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -836,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usedeploymentserver_csharp">
 <a href="#state_usedeploymentserver_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Deployment<wbr>Server</a>
@@ -847,14 +784,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dedicatediothreads_go">
 <a href="#state_dedicatediothreads_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Io<wbr>Threads</a>
@@ -863,8 +797,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -873,8 +806,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_go">
 <a href="#state_enablessl_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -883,8 +815,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsockets_go">
 <a href="#state_maxsockets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Sockets</a>
@@ -893,8 +824,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxthreads_go">
 <a href="#state_maxthreads_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Threads</a>
@@ -903,8 +833,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -913,8 +842,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usedeploymentserver_go">
 <a href="#state_usedeploymentserver_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Deployment<wbr>Server</a>
@@ -924,14 +852,11 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dedicatediothreads_nodejs">
 <a href="#state_dedicatediothreads_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Io<wbr>Threads</a>
@@ -940,8 +865,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -950,8 +874,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_nodejs">
 <a href="#state_enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
@@ -960,8 +883,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsockets_nodejs">
 <a href="#state_maxsockets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Sockets</a>
@@ -970,8 +892,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxthreads_nodejs">
 <a href="#state_maxthreads_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threads</a>
@@ -980,8 +901,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -990,8 +910,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usedeploymentserver_nodejs">
 <a href="#state_usedeploymentserver_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Deployment<wbr>Server</a>
@@ -1001,14 +920,11 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dedicated_io_threads_python">
 <a href="#state_dedicated_io_threads_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>io_<wbr>threads</a>
@@ -1017,8 +933,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of threads used by HTTP Input server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1027,8 +942,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_ssl_python">
 <a href="#state_enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
@@ -1037,8 +951,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SSL protocol for HTTP data input. `true` = SSL enabled, `false` = SSL disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_sockets_python">
 <a href="#state_max_sockets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>sockets</a>
@@ -1047,8 +960,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of simultaneous HTTP connections accepted. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_threads_python">
 <a href="#state_max_threads_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threads</a>
@@ -1057,8 +969,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of threads that can be used by active HTTP transactions. Adjusting this value may cause server performance issues and is not generally recommended. Possible values for this setting vary by OS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1067,8 +978,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP data input IP port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_deployment_server_python">
 <a href="#state_use_deployment_server_python" style="color: inherit; text-decoration: inherit;">use_<wbr>deployment_<wbr>server</a>
@@ -1078,8 +988,7 @@ Copy the full contents of the splunk_httpinput app directory to this directory f
     </dt>
     <dd>{{% md %}}Indicates whether the event collector input writes its configuration to a deployment server repository. When this setting is set to 1 (enabled), the input writes its configuration to the directory specified as repositoryLocation in serverclass.conf.
 Copy the full contents of the splunk_httpinput app directory to this directory for the configuration to work. When enabled, only the tokens defined in the splunk_httpinput app in this repository are viewable and editable on the API and the Data Inputs page in Splunk Web. When disabled, the input writes its configuration to $SPLUNK_HOME/etc/apps by default. Defaults to 0 (disabled).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

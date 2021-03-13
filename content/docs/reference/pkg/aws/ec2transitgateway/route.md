@@ -360,8 +360,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidrblock_csharp">
 <a href="#destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -370,8 +369,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transitgatewayroutetableid_csharp">
 <a href="#transitgatewayroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -380,8 +378,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blackhole_csharp">
 <a href="#blackhole_csharp" style="color: inherit; text-decoration: inherit;">Blackhole</a>
@@ -390,8 +387,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewayattachmentid_csharp">
 <a href="#transitgatewayattachmentid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -400,13 +396,11 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidrblock_go">
 <a href="#destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -415,8 +409,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transitgatewayroutetableid_go">
 <a href="#transitgatewayroutetableid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -425,8 +418,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blackhole_go">
 <a href="#blackhole_go" style="color: inherit; text-decoration: inherit;">Blackhole</a>
@@ -435,8 +427,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewayattachmentid_go">
 <a href="#transitgatewayattachmentid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -445,13 +436,11 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidrblock_nodejs">
 <a href="#destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
@@ -460,8 +449,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transitgatewayroutetableid_nodejs">
 <a href="#transitgatewayroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -470,8 +458,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blackhole_nodejs">
 <a href="#blackhole_nodejs" style="color: inherit; text-decoration: inherit;">blackhole</a>
@@ -480,8 +467,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitgatewayattachmentid_nodejs">
 <a href="#transitgatewayattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -490,13 +476,11 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_cidr_block_python">
 <a href="#destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
@@ -505,8 +489,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transit_gateway_route_table_id_python">
 <a href="#transit_gateway_route_table_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>route_<wbr>table_<wbr>id</a>
@@ -515,8 +498,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blackhole_python">
 <a href="#blackhole_python" style="color: inherit; text-decoration: inherit;">blackhole</a>
@@ -525,8 +507,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transit_gateway_attachment_id_python">
 <a href="#transit_gateway_attachment_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>attachment_<wbr>id</a>
@@ -535,8 +516,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -547,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -556,13 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -570,13 +547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -584,13 +559,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -598,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -726,8 +698,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blackhole_csharp">
 <a href="#state_blackhole_csharp" style="color: inherit; text-decoration: inherit;">Blackhole</a>
@@ -736,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidrblock_csharp">
 <a href="#state_destinationcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -746,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_csharp">
 <a href="#state_transitgatewayattachmentid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -756,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayroutetableid_csharp">
 <a href="#state_transitgatewayroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -766,13 +734,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blackhole_go">
 <a href="#state_blackhole_go" style="color: inherit; text-decoration: inherit;">Blackhole</a>
@@ -781,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidrblock_go">
 <a href="#state_destinationcidrblock_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Block</a>
@@ -791,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_go">
 <a href="#state_transitgatewayattachmentid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -801,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayroutetableid_go">
 <a href="#state_transitgatewayroutetableid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -811,13 +774,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blackhole_nodejs">
 <a href="#state_blackhole_nodejs" style="color: inherit; text-decoration: inherit;">blackhole</a>
@@ -826,8 +787,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidrblock_nodejs">
 <a href="#state_destinationcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Block</a>
@@ -836,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_nodejs">
 <a href="#state_transitgatewayattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
@@ -846,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayroutetableid_nodejs">
 <a href="#state_transitgatewayroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Route<wbr>Table<wbr>Id</a>
@@ -856,13 +814,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blackhole_python">
 <a href="#state_blackhole_python" style="color: inherit; text-decoration: inherit;">blackhole</a>
@@ -871,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to drop traffic that matches this route (default to `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_cidr_block_python">
 <a href="#state_destination_cidr_block_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>block</a>
@@ -881,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_attachment_id_python">
 <a href="#state_transit_gateway_attachment_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>attachment_<wbr>id</a>
@@ -891,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_route_table_id_python">
 <a href="#state_transit_gateway_route_table_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>route_<wbr>table_<wbr>id</a>
@@ -901,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway Route Table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

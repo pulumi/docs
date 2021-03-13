@@ -277,8 +277,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -287,8 +286,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityerrorredirecturl_csharp">
 <a href="#accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -297,8 +295,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_csharp">
 <a href="#accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -307,8 +304,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_csharp">
 <a href="#autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -317,8 +313,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buttonfield_csharp">
 <a href="#buttonfield_csharp" style="color: inherit; text-decoration: inherit;">Button<wbr>Field</a>
@@ -327,8 +322,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -337,8 +331,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_csharp">
 <a href="#hideios_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -347,8 +340,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_csharp">
 <a href="#hideweb_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -357,8 +349,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordfield_csharp">
 <a href="#passwordfield_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Field</a>
@@ -367,8 +358,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_csharp">
 <a href="#preconfiguredapp_csharp" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -377,8 +367,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -387,8 +376,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -397,8 +385,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlregex_csharp">
 <a href="#urlregex_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
@@ -407,8 +394,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_csharp">
 <a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -417,8 +403,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_csharp">
 <a href="#usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -427,8 +412,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatetype_csharp">
 <a href="#usernametemplatetype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -437,8 +421,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernamefield_csharp">
 <a href="#usernamefield_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Field</a>
@@ -447,8 +430,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -457,13 +439,11 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#swauser">List&lt;Swa<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -472,8 +452,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityerrorredirecturl_go">
 <a href="#accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -482,8 +461,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_go">
 <a href="#accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -492,8 +470,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_go">
 <a href="#autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -502,8 +479,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buttonfield_go">
 <a href="#buttonfield_go" style="color: inherit; text-decoration: inherit;">Button<wbr>Field</a>
@@ -512,8 +488,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -522,8 +497,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_go">
 <a href="#hideios_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -532,8 +506,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_go">
 <a href="#hideweb_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -542,8 +515,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordfield_go">
 <a href="#passwordfield_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Field</a>
@@ -552,8 +524,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_go">
 <a href="#preconfiguredapp_go" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -562,8 +533,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -572,8 +542,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -582,8 +551,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlregex_go">
 <a href="#urlregex_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
@@ -592,8 +560,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_go">
 <a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -602,8 +569,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_go">
 <a href="#usernametemplatesuffix_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -612,8 +578,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatetype_go">
 <a href="#usernametemplatetype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -622,8 +587,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernamefield_go">
 <a href="#usernamefield_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Field</a>
@@ -632,8 +596,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -642,13 +605,11 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#swauser">[]Swa<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -657,8 +618,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityerrorredirecturl_nodejs">
 <a href="#accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -667,8 +627,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_nodejs">
 <a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
@@ -677,8 +636,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_nodejs">
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
@@ -687,8 +645,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buttonfield_nodejs">
 <a href="#buttonfield_nodejs" style="color: inherit; text-decoration: inherit;">button<wbr>Field</a>
@@ -697,8 +654,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -707,8 +663,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_nodejs">
 <a href="#hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
@@ -717,8 +672,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_nodejs">
 <a href="#hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
@@ -727,8 +681,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordfield_nodejs">
 <a href="#passwordfield_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Field</a>
@@ -737,8 +690,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_nodejs">
 <a href="#preconfiguredapp_nodejs" style="color: inherit; text-decoration: inherit;">preconfigured<wbr>App</a>
@@ -747,8 +699,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -757,8 +708,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -767,8 +717,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlregex_nodejs">
 <a href="#urlregex_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
@@ -777,8 +726,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_nodejs">
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
@@ -787,8 +735,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_nodejs">
 <a href="#usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -797,8 +744,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatetype_nodejs">
 <a href="#usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
@@ -807,8 +753,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernamefield_nodejs">
 <a href="#usernamefield_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Field</a>
@@ -817,8 +762,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -827,13 +771,11 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#swauser">Swa<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -842,8 +784,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_error_redirect_url_python">
 <a href="#accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
@@ -852,8 +793,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_self_service_python">
 <a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
@@ -862,8 +802,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_submit_toolbar_python">
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
@@ -872,8 +811,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="button_field_python">
 <a href="#button_field_python" style="color: inherit; text-decoration: inherit;">button_<wbr>field</a>
@@ -882,8 +820,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -892,8 +829,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_ios_python">
 <a href="#hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
@@ -902,8 +838,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_web_python">
 <a href="#hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
@@ -912,8 +847,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_field_python">
 <a href="#password_field_python" style="color: inherit; text-decoration: inherit;">password_<wbr>field</a>
@@ -922,8 +856,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfigured_app_python">
 <a href="#preconfigured_app_python" style="color: inherit; text-decoration: inherit;">preconfigured_<wbr>app</a>
@@ -932,8 +865,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -942,8 +874,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -952,8 +883,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_regex_python">
 <a href="#url_regex_python" style="color: inherit; text-decoration: inherit;">url_<wbr>regex</a>
@@ -962,8 +892,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_python">
 <a href="#user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
@@ -972,8 +901,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_suffix_python">
 <a href="#user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
@@ -982,8 +910,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_type_python">
 <a href="#user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
@@ -992,8 +919,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_field_python">
 <a href="#username_field_python" style="color: inherit; text-decoration: inherit;">username_<wbr>field</a>
@@ -1002,8 +928,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1012,8 +937,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#swauser">Sequence[Swa<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1024,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1033,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1043,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_csharp">
 <a href="#signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1053,13 +974,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1067,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1077,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_go">
 <a href="#signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1087,13 +1004,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1101,8 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1111,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_nodejs">
 <a href="#signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
@@ -1121,13 +1034,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1135,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1145,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sign_on_mode_python">
 <a href="#sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
@@ -1155,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1283,8 +1191,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityerrorredirecturl_csharp">
 <a href="#state_accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -1293,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_csharp">
 <a href="#state_accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -1303,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_csharp">
 <a href="#state_autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -1313,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buttonfield_csharp">
 <a href="#state_buttonfield_csharp" style="color: inherit; text-decoration: inherit;">Button<wbr>Field</a>
@@ -1323,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1333,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_csharp">
 <a href="#state_hideios_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -1343,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_csharp">
 <a href="#state_hideweb_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -1353,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1363,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1373,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordfield_csharp">
 <a href="#state_passwordfield_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Field</a>
@@ -1383,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfiguredapp_csharp">
 <a href="#state_preconfiguredapp_csharp" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -1393,8 +1290,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_csharp">
 <a href="#state_signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1403,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1413,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1423,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urlregex_csharp">
 <a href="#state_urlregex_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
@@ -1433,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_csharp">
 <a href="#state_usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -1443,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_csharp">
 <a href="#state_usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -1453,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatetype_csharp">
 <a href="#state_usernametemplatetype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -1463,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernamefield_csharp">
 <a href="#state_usernamefield_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Field</a>
@@ -1473,8 +1362,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1483,13 +1371,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#swauser">List&lt;Swa<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityerrorredirecturl_go">
 <a href="#state_accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -1498,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_go">
 <a href="#state_accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -1508,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_go">
 <a href="#state_autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -1518,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buttonfield_go">
 <a href="#state_buttonfield_go" style="color: inherit; text-decoration: inherit;">Button<wbr>Field</a>
@@ -1528,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1538,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_go">
 <a href="#state_hideios_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -1548,8 +1429,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_go">
 <a href="#state_hideweb_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -1558,8 +1438,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1568,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1578,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordfield_go">
 <a href="#state_passwordfield_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Field</a>
@@ -1588,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfiguredapp_go">
 <a href="#state_preconfiguredapp_go" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -1598,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_go">
 <a href="#state_signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1608,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1618,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1628,8 +1501,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urlregex_go">
 <a href="#state_urlregex_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
@@ -1638,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_go">
 <a href="#state_usernametemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -1648,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_go">
 <a href="#state_usernametemplatesuffix_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -1658,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatetype_go">
 <a href="#state_usernametemplatetype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -1668,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernamefield_go">
 <a href="#state_usernamefield_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Field</a>
@@ -1678,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1688,13 +1555,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#swauser">[]Swa<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityerrorredirecturl_nodejs">
 <a href="#state_accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -1703,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_nodejs">
 <a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
@@ -1713,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
@@ -1723,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buttonfield_nodejs">
 <a href="#state_buttonfield_nodejs" style="color: inherit; text-decoration: inherit;">button<wbr>Field</a>
@@ -1733,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1743,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_nodejs">
 <a href="#state_hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
@@ -1753,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_nodejs">
 <a href="#state_hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
@@ -1763,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1773,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1783,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordfield_nodejs">
 <a href="#state_passwordfield_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Field</a>
@@ -1793,8 +1649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfiguredapp_nodejs">
 <a href="#state_preconfiguredapp_nodejs" style="color: inherit; text-decoration: inherit;">preconfigured<wbr>App</a>
@@ -1803,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_nodejs">
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
@@ -1813,8 +1667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1823,8 +1676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1833,8 +1685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urlregex_nodejs">
 <a href="#state_urlregex_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
@@ -1843,8 +1694,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_nodejs">
 <a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
@@ -1853,8 +1703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_nodejs">
 <a href="#state_usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -1863,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatetype_nodejs">
 <a href="#state_usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
@@ -1873,8 +1721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernamefield_nodejs">
 <a href="#state_usernamefield_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Field</a>
@@ -1883,8 +1730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1893,13 +1739,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#swauser">Swa<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibility_error_redirect_url_python">
 <a href="#state_accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
@@ -1908,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom error page URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibility_self_service_python">
 <a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
@@ -1918,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self-service. By default, it is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_submit_toolbar_python">
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
@@ -1928,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_button_field_python">
 <a href="#state_button_field_python" style="color: inherit; text-decoration: inherit;">button_<wbr>field</a>
@@ -1938,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login button field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1948,8 +1788,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application. See `okta.app.GroupAssignment` for a more flexible approach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_ios_python">
 <a href="#state_hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
@@ -1958,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_web_python">
 <a href="#state_hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
@@ -1968,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1978,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1988,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_field_python">
 <a href="#state_password_field_python" style="color: inherit; text-decoration: inherit;">password_<wbr>field</a>
@@ -1998,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login password field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfigured_app_python">
 <a href="#state_preconfigured_app_python" style="color: inherit; text-decoration: inherit;">preconfigured_<wbr>app</a>
@@ -2008,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of application from the Okta Integration Network, if not included a custom app will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_on_mode_python">
 <a href="#state_sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
@@ -2018,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2028,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2038,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_regex_python">
 <a href="#state_url_regex_python" style="color: inherit; text-decoration: inherit;">url_<wbr>regex</a>
@@ -2048,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_python">
 <a href="#state_user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
@@ -2058,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username assigned to each user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_suffix_python">
 <a href="#state_user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
@@ -2068,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_type_python">
 <a href="#state_user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
@@ -2078,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username template type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_field_python">
 <a href="#state_username_field_python" style="color: inherit; text-decoration: inherit;">username_<wbr>field</a>
@@ -2088,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Login username field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2098,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#swauser">Sequence[Swa<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. See `okta.app.User` for a more flexible approach.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2114,8 +1938,7 @@ The following state arguments are supported:
 <h4 id="swauser">Swa<wbr>User</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2123,8 +1946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2132,8 +1954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2141,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2150,13 +1970,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2164,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2173,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2182,8 +1998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2191,13 +2006,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2205,8 +2018,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2214,8 +2026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2223,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2232,13 +2042,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2246,8 +2054,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2255,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2264,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2273,8 +2078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

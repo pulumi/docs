@@ -373,8 +373,7 @@ The L7PolicyV2 resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -384,8 +383,7 @@ The L7PolicyV2 resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerid_csharp">
 <a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -395,8 +393,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -406,8 +403,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -416,8 +412,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -427,8 +422,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -437,8 +431,7 @@ to be unique.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectpoolid_csharp">
 <a href="#redirectpoolid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
@@ -448,8 +441,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturl_csharp">
 <a href="#redirecturl_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
@@ -459,8 +451,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -472,8 +463,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -484,13 +474,11 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -500,8 +488,7 @@ other than their own. Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerid_go">
 <a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -511,8 +498,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -522,8 +508,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -532,8 +517,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -543,8 +527,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -553,8 +536,7 @@ to be unique.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectpoolid_go">
 <a href="#redirectpoolid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
@@ -564,8 +546,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturl_go">
 <a href="#redirecturl_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
@@ -575,8 +556,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -588,8 +568,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -600,13 +579,11 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -616,8 +593,7 @@ other than their own. Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerid_nodejs">
 <a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
@@ -627,8 +603,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -638,8 +613,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -648,8 +622,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -659,8 +632,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -669,8 +641,7 @@ to be unique.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectpoolid_nodejs">
 <a href="#redirectpoolid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Pool<wbr>Id</a>
@@ -680,8 +651,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturl_nodejs">
 <a href="#redirecturl_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
@@ -691,8 +661,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -704,8 +673,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -716,13 +684,11 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -732,8 +698,7 @@ other than their own. Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_id_python">
 <a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
@@ -743,8 +708,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -754,8 +718,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -764,8 +727,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -775,8 +737,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -785,8 +746,7 @@ to be unique.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_pool_id_python">
 <a href="#redirect_pool_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>pool_<wbr>id</a>
@@ -796,8 +756,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_url_python">
 <a href="#redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
@@ -807,8 +766,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -820,8 +778,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -832,8 +789,7 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -844,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -853,13 +808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -867,13 +820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,13 +832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -895,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1023,8 +971,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1034,8 +981,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1045,8 +991,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1055,8 +1000,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_csharp">
 <a href="#state_listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -1066,8 +1010,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1077,8 +1020,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_position_csharp">
 <a href="#state_position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1087,8 +1029,7 @@ to be unique.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectpoolid_csharp">
 <a href="#state_redirectpoolid_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
@@ -1098,8 +1039,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecturl_csharp">
 <a href="#state_redirecturl_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
@@ -1109,8 +1049,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1122,8 +1061,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1134,13 +1072,11 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1150,8 +1086,7 @@ other than their own. Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1161,8 +1096,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1171,8 +1105,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_go">
 <a href="#state_listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -1182,8 +1115,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1193,8 +1125,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_position_go">
 <a href="#state_position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1203,8 +1134,7 @@ to be unique.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectpoolid_go">
 <a href="#state_redirectpoolid_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Pool<wbr>Id</a>
@@ -1214,8 +1144,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecturl_go">
 <a href="#state_redirecturl_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Url</a>
@@ -1225,8 +1154,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1238,8 +1166,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1250,13 +1177,11 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1266,8 +1191,7 @@ other than their own. Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1277,8 +1201,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1287,8 +1210,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_nodejs">
 <a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
@@ -1298,8 +1220,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1309,8 +1230,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_position_nodejs">
 <a href="#state_position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1319,8 +1239,7 @@ to be unique.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectpoolid_nodejs">
 <a href="#state_redirectpoolid_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Pool<wbr>Id</a>
@@ -1330,8 +1249,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecturl_nodejs">
 <a href="#state_redirecturl_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Url</a>
@@ -1341,8 +1259,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1354,8 +1271,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1366,13 +1282,11 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1382,8 +1296,7 @@ other than their own. Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}The L7 Policy action - can either be REDIRECT\_TO\_POOL,
 REDIRECT\_TO\_URL or REJECT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1393,8 +1306,7 @@ REDIRECT\_TO\_URL or REJECT.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Policy.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1403,8 +1315,7 @@ A valid value is true (UP) or false (DOWN).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_id_python">
 <a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
@@ -1414,8 +1325,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The Listener on which the L7 Policy will be associated with.
 Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1425,8 +1335,7 @@ Changing this creates a new L7 Policy.
     </dt>
     <dd>{{% md %}}Human-readable name for the L7 Policy. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_position_python">
 <a href="#state_position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1435,8 +1344,7 @@ to be unique.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The position of this policy on the listener. Positions start at 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirect_pool_id_python">
 <a href="#state_redirect_pool_id_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>pool_<wbr>id</a>
@@ -1446,8 +1354,7 @@ to be unique.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirect_url_python">
 <a href="#state_redirect_url_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>url</a>
@@ -1457,8 +1364,7 @@ pool with this ID. Only valid if action is REDIRECT\_TO\_POOL.
     </dt>
     <dd>{{% md %}}Requests matching this policy will be redirected to this URL.
 Only valid if action is REDIRECT\_TO\_URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1470,8 +1376,7 @@ Only valid if action is REDIRECT\_TO\_URL.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1482,8 +1387,7 @@ L7 Policy.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Policy.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

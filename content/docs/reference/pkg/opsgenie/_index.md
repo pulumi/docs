@@ -1,6 +1,6 @@
 ---
-title: "opsgenie"
-title_tag: "Module opsgenie | Package opsgenie"
+title: "Opsgenie"
+title_tag: "opsgenie.Opsgenie"
 meta_desc: "A Pulumi package for creating and managing opsgenie cloud resources."
 menu:
     reference:

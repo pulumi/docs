@@ -324,8 +324,7 @@ The BackendBucketSignedUrlKey resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendbucket_csharp">
 <a href="#backendbucket_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Bucket</a>
@@ -334,8 +333,7 @@ The BackendBucketSignedUrlKey resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -346,8 +344,7 @@ The BackendBucketSignedUrlKey resource accepts the following [input]({{< relref 
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -356,8 +353,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -367,13 +363,11 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendbucket_go">
 <a href="#backendbucket_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Bucket</a>
@@ -382,8 +376,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -394,8 +387,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -404,8 +396,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -415,13 +406,11 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendbucket_nodejs">
 <a href="#backendbucket_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Bucket</a>
@@ -430,8 +419,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -442,8 +430,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -452,8 +439,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -463,13 +449,11 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_bucket_python">
 <a href="#backend_bucket_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>bucket</a>
@@ -478,8 +462,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -490,8 +473,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -500,8 +482,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -511,8 +492,7 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -523,8 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -532,13 +511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -546,13 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -560,13 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -574,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -702,8 +674,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendbucket_csharp">
 <a href="#state_backendbucket_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Bucket</a>
@@ -712,8 +683,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvalue_csharp">
 <a href="#state_keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -724,8 +694,7 @@ The following state arguments are supported:
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -734,8 +703,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -745,13 +713,11 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendbucket_go">
 <a href="#state_backendbucket_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Bucket</a>
@@ -760,8 +726,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvalue_go">
 <a href="#state_keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -772,8 +737,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -782,8 +746,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -793,13 +756,11 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendbucket_nodejs">
 <a href="#state_backendbucket_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Bucket</a>
@@ -808,8 +769,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvalue_nodejs">
 <a href="#state_keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -820,8 +780,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -830,8 +789,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -841,13 +799,11 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_bucket_python">
 <a href="#state_backend_bucket_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>bucket</a>
@@ -856,8 +812,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend bucket this signed URL key belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_value_python">
 <a href="#state_key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -868,8 +823,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -878,8 +832,7 @@ valid RFC 4648 Section 5 base64url encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the signed URL key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -889,8 +842,7 @@ valid RFC 4648 Section 5 base64url encoded string.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

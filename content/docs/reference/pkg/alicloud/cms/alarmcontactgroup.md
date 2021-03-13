@@ -262,8 +262,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarmcontactgroupname_csharp">
 <a href="#alarmcontactgroupname_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Group<wbr>Name</a>
@@ -272,8 +271,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contacts_csharp">
 <a href="#contacts_csharp" style="color: inherit; text-decoration: inherit;">Contacts</a>
@@ -282,8 +280,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="describe_csharp">
 <a href="#describe_csharp" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -292,8 +289,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesubscribed_csharp">
 <a href="#enablesubscribed_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Subscribed</a>
@@ -302,13 +298,11 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarmcontactgroupname_go">
 <a href="#alarmcontactgroupname_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Group<wbr>Name</a>
@@ -317,8 +311,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contacts_go">
 <a href="#contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
@@ -327,8 +320,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="describe_go">
 <a href="#describe_go" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -337,8 +329,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesubscribed_go">
 <a href="#enablesubscribed_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Subscribed</a>
@@ -347,13 +338,11 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarmcontactgroupname_nodejs">
 <a href="#alarmcontactgroupname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Contact<wbr>Group<wbr>Name</a>
@@ -362,8 +351,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contacts_nodejs">
 <a href="#contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
@@ -372,8 +360,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="describe_nodejs">
 <a href="#describe_nodejs" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -382,8 +369,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesubscribed_nodejs">
 <a href="#enablesubscribed_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Subscribed</a>
@@ -392,13 +378,11 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarm_contact_group_name_python">
 <a href="#alarm_contact_group_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>contact_<wbr>group_<wbr>name</a>
@@ -407,8 +391,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contacts_python">
 <a href="#contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
@@ -417,8 +400,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="describe_python">
 <a href="#describe_python" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -427,8 +409,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_subscribed_python">
 <a href="#enable_subscribed_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>subscribed</a>
@@ -437,8 +418,7 @@ The AlarmContactGroup resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -449,8 +429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -458,13 +437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -472,13 +449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -486,13 +461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -500,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -628,8 +600,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmcontactgroupname_csharp">
 <a href="#state_alarmcontactgroupname_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Group<wbr>Name</a>
@@ -638,8 +609,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contacts_csharp">
 <a href="#state_contacts_csharp" style="color: inherit; text-decoration: inherit;">Contacts</a>
@@ -648,8 +618,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_csharp">
 <a href="#state_describe_csharp" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -658,8 +627,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesubscribed_csharp">
 <a href="#state_enablesubscribed_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Subscribed</a>
@@ -668,13 +636,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmcontactgroupname_go">
 <a href="#state_alarmcontactgroupname_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Group<wbr>Name</a>
@@ -683,8 +649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contacts_go">
 <a href="#state_contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
@@ -693,8 +658,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_go">
 <a href="#state_describe_go" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -703,8 +667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesubscribed_go">
 <a href="#state_enablesubscribed_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Subscribed</a>
@@ -713,13 +676,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmcontactgroupname_nodejs">
 <a href="#state_alarmcontactgroupname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Contact<wbr>Group<wbr>Name</a>
@@ -728,8 +689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contacts_nodejs">
 <a href="#state_contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
@@ -738,8 +698,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_nodejs">
 <a href="#state_describe_nodejs" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -748,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesubscribed_nodejs">
 <a href="#state_enablesubscribed_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Subscribed</a>
@@ -758,13 +716,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarm_contact_group_name_python">
 <a href="#state_alarm_contact_group_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>contact_<wbr>group_<wbr>name</a>
@@ -773,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alarm group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contacts_python">
 <a href="#state_contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
@@ -783,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the alert contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_python">
 <a href="#state_describe_python" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -793,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the alert group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_subscribed_python">
 <a href="#state_enable_subscribed_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>subscribed</a>
@@ -803,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to open weekly subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

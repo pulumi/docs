@@ -1,8 +1,8 @@
 
 ---
 title: "OutputsTcpServer"
-title_tag: "Resource OutputsTcpServer | Package Splunk"
-meta_desc: "Explore the OutputsTcpServer resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpServer"
+title_tag: "splunk.OutputsTcpServer"
+meta_desc: "Documentation for the splunk.OutputsTcpServer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Access data forwarding configurations.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -62,9 +71,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -72,9 +84,12 @@ import pulumi_splunk as splunk
 tcp_server = splunk.OutputsTcpServer("tcpServer", ssl_alt_name_to_check="old-host")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -85,9 +100,16 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a OutputsTcpServer Resource {#create}
@@ -112,9 +134,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +142,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +150,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,10 +158,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -171,9 +184,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -181,9 +192,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -191,9 +200,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -201,9 +208,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -211,18 +216,13 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -230,9 +230,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,9 +238,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -250,10 +246,7 @@ const tcpServer = new splunk.OutputsTcpServer("tcp_server", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -268,9 +261,7 @@ The OutputsTcpServer resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -279,8 +270,7 @@ The OutputsTcpServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -289,8 +279,7 @@ The OutputsTcpServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -300,8 +289,7 @@ The OutputsTcpServer resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -310,8 +298,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslaltnametocheck_csharp">
 <a href="#sslaltnametocheck_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Alt<wbr>Name<wbr>To<wbr>Check</a>
@@ -320,8 +307,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertpath_csharp">
 <a href="#sslcertpath_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Path</a>
@@ -330,8 +316,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcipher_csharp">
 <a href="#sslcipher_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -340,8 +325,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcommonnametocheck_csharp">
 <a href="#sslcommonnametocheck_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Common<wbr>Name<wbr>To<wbr>Check</a>
@@ -351,8 +335,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpassword_csharp">
 <a href="#sslpassword_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Password</a>
@@ -362,8 +345,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcapath_csharp">
 <a href="#sslrootcapath_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Root<wbr>Ca<wbr>Path</a>
@@ -372,8 +354,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslverifyservercert_csharp">
 <a href="#sslverifyservercert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Verify<wbr>Server<wbr>Cert</a>
@@ -382,14 +363,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -398,8 +376,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -408,8 +385,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -419,8 +395,7 @@ The default Splunk Enterprise CAcert uses the password "password."
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -429,8 +404,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslaltnametocheck_go">
 <a href="#sslaltnametocheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Alt<wbr>Name<wbr>To<wbr>Check</a>
@@ -439,8 +413,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertpath_go">
 <a href="#sslcertpath_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Path</a>
@@ -449,8 +422,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcipher_go">
 <a href="#sslcipher_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -459,8 +431,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcommonnametocheck_go">
 <a href="#sslcommonnametocheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Common<wbr>Name<wbr>To<wbr>Check</a>
@@ -470,8 +441,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpassword_go">
 <a href="#sslpassword_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Password</a>
@@ -481,8 +451,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcapath_go">
 <a href="#sslrootcapath_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Root<wbr>Ca<wbr>Path</a>
@@ -491,8 +460,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslverifyservercert_go">
 <a href="#sslverifyservercert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Verify<wbr>Server<wbr>Cert</a>
@@ -501,14 +469,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -517,8 +482,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -527,8 +491,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -538,8 +501,7 @@ The default Splunk Enterprise CAcert uses the password "password."
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -548,8 +510,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslaltnametocheck_nodejs">
 <a href="#sslaltnametocheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Alt<wbr>Name<wbr>To<wbr>Check</a>
@@ -558,8 +519,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcertpath_nodejs">
 <a href="#sslcertpath_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Path</a>
@@ -568,8 +528,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcipher_nodejs">
 <a href="#sslcipher_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
@@ -578,8 +537,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcommonnametocheck_nodejs">
 <a href="#sslcommonnametocheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Common<wbr>Name<wbr>To<wbr>Check</a>
@@ -589,8 +547,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpassword_nodejs">
 <a href="#sslpassword_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Password</a>
@@ -600,8 +557,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcapath_nodejs">
 <a href="#sslrootcapath_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Root<wbr>Ca<wbr>Path</a>
@@ -610,8 +566,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslverifyservercert_nodejs">
 <a href="#sslverifyservercert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify<wbr>Server<wbr>Cert</a>
@@ -620,14 +575,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -636,8 +588,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -646,8 +597,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -657,8 +607,7 @@ The default Splunk Enterprise CAcert uses the password "password."
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -667,8 +616,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_alt_name_to_check_python">
 <a href="#ssl_alt_name_to_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>alt_<wbr>name_<wbr>to_<wbr>check</a>
@@ -677,8 +625,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cert_path_python">
 <a href="#ssl_cert_path_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>path</a>
@@ -687,8 +634,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cipher_python">
 <a href="#ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
@@ -697,8 +643,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_common_name_to_check_python">
 <a href="#ssl_common_name_to_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>common_<wbr>name_<wbr>to_<wbr>check</a>
@@ -708,8 +653,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_password_python">
 <a href="#ssl_password_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>password</a>
@@ -719,8 +663,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_root_ca_path_python">
 <a href="#ssl_root_ca_path_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>root_<wbr>ca_<wbr>path</a>
@@ -729,8 +672,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_verify_server_cert_python">
 <a href="#ssl_verify_server_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify_<wbr>server_<wbr>cert</a>
@@ -739,8 +681,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -751,9 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -761,14 +700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -776,14 +712,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -791,14 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -806,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -934,9 +863,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -945,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -955,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_csharp">
 <a href="#state_method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -966,8 +891,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -976,8 +900,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslaltnametocheck_csharp">
 <a href="#state_sslaltnametocheck_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Alt<wbr>Name<wbr>To<wbr>Check</a>
@@ -986,8 +909,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcertpath_csharp">
 <a href="#state_sslcertpath_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Path</a>
@@ -996,8 +918,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcipher_csharp">
 <a href="#state_sslcipher_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -1006,8 +927,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcommonnametocheck_csharp">
 <a href="#state_sslcommonnametocheck_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Common<wbr>Name<wbr>To<wbr>Check</a>
@@ -1017,8 +937,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpassword_csharp">
 <a href="#state_sslpassword_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Password</a>
@@ -1028,8 +947,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslrootcapath_csharp">
 <a href="#state_sslrootcapath_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Root<wbr>Ca<wbr>Path</a>
@@ -1038,8 +956,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslverifyservercert_csharp">
 <a href="#state_sslverifyservercert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Verify<wbr>Server<wbr>Cert</a>
@@ -1048,14 +965,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1064,8 +978,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1074,8 +987,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_go">
 <a href="#state_method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1085,8 +997,7 @@ The default Splunk Enterprise CAcert uses the password "password."
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1095,8 +1006,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslaltnametocheck_go">
 <a href="#state_sslaltnametocheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Alt<wbr>Name<wbr>To<wbr>Check</a>
@@ -1105,8 +1015,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcertpath_go">
 <a href="#state_sslcertpath_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Path</a>
@@ -1115,8 +1024,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcipher_go">
 <a href="#state_sslcipher_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -1125,8 +1033,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcommonnametocheck_go">
 <a href="#state_sslcommonnametocheck_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Common<wbr>Name<wbr>To<wbr>Check</a>
@@ -1136,8 +1043,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpassword_go">
 <a href="#state_sslpassword_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Password</a>
@@ -1147,8 +1053,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslrootcapath_go">
 <a href="#state_sslrootcapath_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Root<wbr>Ca<wbr>Path</a>
@@ -1157,8 +1062,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslverifyservercert_go">
 <a href="#state_sslverifyservercert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Verify<wbr>Server<wbr>Cert</a>
@@ -1167,14 +1071,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1183,8 +1084,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1193,8 +1093,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_nodejs">
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1204,8 +1103,7 @@ The default Splunk Enterprise CAcert uses the password "password."
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1214,8 +1112,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslaltnametocheck_nodejs">
 <a href="#state_sslaltnametocheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Alt<wbr>Name<wbr>To<wbr>Check</a>
@@ -1224,8 +1121,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcertpath_nodejs">
 <a href="#state_sslcertpath_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Path</a>
@@ -1234,8 +1130,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcipher_nodejs">
 <a href="#state_sslcipher_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
@@ -1244,8 +1139,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcommonnametocheck_nodejs">
 <a href="#state_sslcommonnametocheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Common<wbr>Name<wbr>To<wbr>Check</a>
@@ -1255,8 +1149,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpassword_nodejs">
 <a href="#state_sslpassword_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Password</a>
@@ -1266,8 +1159,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslrootcapath_nodejs">
 <a href="#state_sslrootcapath_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Root<wbr>Ca<wbr>Path</a>
@@ -1276,8 +1168,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslverifyservercert_nodejs">
 <a href="#state_sslverifyservercert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify<wbr>Server<wbr>Cert</a>
@@ -1286,14 +1177,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1302,8 +1190,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type"><a href="#outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1312,8 +1199,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_python">
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1323,8 +1209,7 @@ The default Splunk Enterprise CAcert uses the password "password."
     </dt>
     <dd>{{% md %}}Valid values: (clone | balance | autobalance)
 The data distribution method used when two or more servers exist in the same forwarder group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1333,8 +1218,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}<host>:<port> of the Splunk receiver. <host> can be either an ip address or server name. <port> is the that port that the Splunk receiver is listening on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_alt_name_to_check_python">
 <a href="#state_ssl_alt_name_to_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>alt_<wbr>name_<wbr>to_<wbr>check</a>
@@ -1343,8 +1227,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alternate name to match in the remote server's SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_cert_path_python">
 <a href="#state_ssl_cert_path_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>path</a>
@@ -1353,8 +1236,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the client certificate. If specified, connection uses SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_cipher_python">
 <a href="#state_ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
@@ -1363,8 +1245,7 @@ The data distribution method used when two or more servers exist in the same for
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL Cipher in the form ALL:!aNULL:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_common_name_to_check_python">
 <a href="#state_ssl_common_name_to_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>common_<wbr>name_<wbr>to_<wbr>check</a>
@@ -1374,8 +1255,7 @@ The data distribution method used when two or more servers exist in the same for
     </dt>
     <dd>{{% md %}}Check the common name of the server's certificate against this name.
 If there is no match, assume that Splunk Enterprise is not authenticated against this server. You must specify this setting if sslVerifyServerCert is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_password_python">
 <a href="#state_ssl_password_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>password</a>
@@ -1385,8 +1265,7 @@ If there is no match, assume that Splunk Enterprise is not authenticated against
     </dt>
     <dd>{{% md %}}The password associated with the CAcert.
 The default Splunk Enterprise CAcert uses the password "password."
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_root_ca_path_python">
 <a href="#state_ssl_root_ca_path_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>root_<wbr>ca_<wbr>path</a>
@@ -1395,8 +1274,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the root certificate authority file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_verify_server_cert_python">
 <a href="#state_ssl_verify_server_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify_<wbr>server_<wbr>cert</a>
@@ -1405,8 +1283,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, make sure that the server you are connecting to is a valid one (authenticated). Both the common name and the alternate name of the server are then checked for a match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1421,9 +1298,7 @@ The default Splunk Enterprise CAcert uses the password "password."
 <h4 id="outputstcpserveracl">Outputs<wbr>Tcp<wbr>Server<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1431,8 +1306,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1440,8 +1314,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1449,8 +1322,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1458,8 +1330,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1467,8 +1338,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1476,8 +1346,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1485,8 +1354,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1494,8 +1362,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1503,8 +1370,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1512,8 +1378,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1521,14 +1386,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1536,8 +1398,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1545,8 +1406,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1554,8 +1414,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1563,8 +1422,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1572,8 +1430,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1581,8 +1438,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1590,8 +1446,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1599,8 +1454,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1608,8 +1462,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1617,8 +1470,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1626,14 +1478,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1641,8 +1490,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -1650,8 +1498,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -1659,8 +1506,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -1668,8 +1514,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -1677,8 +1522,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -1686,8 +1530,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1695,8 +1538,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1704,8 +1546,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1713,8 +1554,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1722,8 +1562,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1731,14 +1570,11 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1746,8 +1582,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -1755,8 +1590,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -1764,8 +1598,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -1773,8 +1606,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -1782,8 +1614,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -1791,8 +1622,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1800,8 +1630,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1809,8 +1638,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1818,8 +1646,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1827,8 +1654,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1836,8 +1662,7 @@ The default Splunk Enterprise CAcert uses the password "password."
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

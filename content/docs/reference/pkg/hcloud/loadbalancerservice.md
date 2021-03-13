@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerService"
-title_tag: "Resource LoadBalancerService | Package Hetzner Cloud"
-meta_desc: "Explore the LoadBalancerService resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Define services for Hetzner Cloud Load Balancers."
+title_tag: "hcloud.LoadBalancerService"
+meta_desc: "Documentation for the hcloud.LoadBalancerService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the LoadBalancerService resource of the Hetzner Cloud packag
 Define services for Hetzner Cloud Load Balancers.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using HCloud = Pulumi.HCloud;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -73,9 +82,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_hcloud as hcloud
@@ -88,9 +100,12 @@ load_balancer_service = hcloud.LoadBalancerService("loadBalancerService",
     protocol="http")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,9 +121,16 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LoadBalancerService Resource {#create}
@@ -133,9 +155,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -143,9 +163,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -153,9 +171,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -163,10 +179,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +205,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -202,9 +213,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -212,9 +221,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -222,9 +229,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -232,18 +237,13 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +251,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +259,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,10 +267,7 @@ const loadBalancerService = new hcloud.LoadBalancerService("loadBalancerService"
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +282,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -300,8 +291,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -310,8 +300,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_csharp">
 <a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -320,8 +309,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -330,8 +318,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -340,8 +327,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenport_csharp">
 <a href="#listenport_csharp" style="color: inherit; text-decoration: inherit;">Listen<wbr>Port</a>
@@ -350,8 +336,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_csharp">
 <a href="#proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxyprotocol</a>
@@ -360,14 +345,11 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -376,8 +358,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -386,8 +367,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_go">
 <a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -396,8 +376,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -406,8 +385,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -416,8 +394,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenport_go">
 <a href="#listenport_go" style="color: inherit; text-decoration: inherit;">Listen<wbr>Port</a>
@@ -426,8 +403,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_go">
 <a href="#proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxyprotocol</a>
@@ -436,14 +412,11 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -452,8 +425,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -462,8 +434,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_nodejs">
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
@@ -472,8 +443,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
@@ -482,8 +452,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -492,8 +461,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listenport_nodejs">
 <a href="#listenport_nodejs" style="color: inherit; text-decoration: inherit;">listen<wbr>Port</a>
@@ -502,8 +470,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_nodejs">
 <a href="#proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
@@ -512,14 +479,11 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -528,8 +492,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -538,8 +501,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_port_python">
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
@@ -548,8 +510,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_python">
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
@@ -558,8 +519,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -568,8 +528,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listen_port_python">
 <a href="#listen_port_python" style="color: inherit; text-decoration: inherit;">listen_<wbr>port</a>
@@ -578,8 +537,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_python">
 <a href="#proxyprotocol_python" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
@@ -588,8 +546,7 @@ The LoadBalancerService resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -600,9 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -610,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -625,14 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -640,14 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -783,9 +728,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationport_csharp">
 <a href="#state_destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -794,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_csharp">
 <a href="#state_healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -804,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_csharp">
 <a href="#state_http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -814,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenport_csharp">
 <a href="#state_listenport_csharp" style="color: inherit; text-decoration: inherit;">Listen<wbr>Port</a>
@@ -824,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -834,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -844,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_csharp">
 <a href="#state_proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxyprotocol</a>
@@ -854,14 +791,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationport_go">
 <a href="#state_destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -870,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_go">
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -880,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_go">
 <a href="#state_http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -890,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenport_go">
 <a href="#state_listenport_go" style="color: inherit; text-decoration: inherit;">Listen<wbr>Port</a>
@@ -900,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -910,8 +840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -920,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_go">
 <a href="#state_proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxyprotocol</a>
@@ -930,14 +858,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationport_nodejs">
 <a href="#state_destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
@@ -946,8 +871,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_nodejs">
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
@@ -956,8 +880,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_nodejs">
 <a href="#state_http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -966,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenport_nodejs">
 <a href="#state_listenport_nodejs" style="color: inherit; text-decoration: inherit;">listen<wbr>Port</a>
@@ -976,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -986,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -996,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_nodejs">
 <a href="#state_proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
@@ -1006,14 +925,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destination_port_python">
 <a href="#state_destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
@@ -1022,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service connects to the targets on, required if protocol is `tcp`. Can be everything between `1` and `65535`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_python">
 <a href="#state_health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
@@ -1032,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of health check configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_python">
 <a href="#state_http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -1042,8 +956,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations when `protocol` is `http` or `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listen_port_python">
 <a href="#state_listen_port_python" style="color: inherit; text-decoration: inherit;">listen_<wbr>port</a>
@@ -1052,8 +965,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the service listen on, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_id_python">
 <a href="#state_load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -1062,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the load balancer this service belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1072,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol of the service. `http`, `https` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_python">
 <a href="#state_proxyprotocol_python" style="color: inherit; text-decoration: inherit;">proxyprotocol</a>
@@ -1082,8 +992,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable proxyprotocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1098,9 +1007,7 @@ The following state arguments are supported:
 <h4 id="loadbalancerservicehealthcheck">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1109,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1119,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1129,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol the health check uses. `http` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1139,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -1149,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -1159,14 +1061,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1175,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1185,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1195,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol the health check uses. `http` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1205,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -1215,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -1225,14 +1119,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1241,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1251,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1261,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol the health check uses. `http` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1271,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -1281,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -1291,14 +1177,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1307,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval how often the health check will be performed, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1317,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port the health check tries to connect to, required if protocol is `tcp`. Can be everything between `1` and `65535`. Must be unique per Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1327,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol the health check uses. `http` or `tcp`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1337,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout when a health check try will be canceled if there is no response, in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -1347,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of http configurations. Required if `protocol` is `http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -1357,16 +1235,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of tries a health check will be performed until a target will be listed as `unhealthy`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerservicehealthcheckhttp">Load<wbr>Balancer<wbr>Service<wbr>Health<wbr>Check<wbr>Http</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1375,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1385,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -1395,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuscodes_csharp">
 <a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
@@ -1405,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -1415,14 +1286,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS certificate checking.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1431,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1441,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -1451,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuscodes_go">
 <a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
@@ -1461,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -1471,14 +1335,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS certificate checking.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1487,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1497,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -1507,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuscodes_nodejs">
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
@@ -1517,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1527,14 +1384,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable TLS certificate checking.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1543,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1553,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path we try to access when performing the Health Check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -1563,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Response we expect to be included in the Target response when a Health Check was performed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_codes_python">
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
@@ -1573,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}We expect that the target answers with these status codes. If not the target is marked as `unhealthy`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1583,16 +1433,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable TLS certificate checking.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerservicehttp">Load<wbr>Balancer<wbr>Service<wbr>Http</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -1601,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookielifetime_csharp">
 <a href="#cookielifetime_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Lifetime</a>
@@ -1611,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie for sticky session (in seconds). Default: `300`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_csharp">
 <a href="#cookiename_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -1621,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie for sticky session. Default: `HCLBSTICKY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecthttp_csharp">
 <a href="#redirecthttp_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http</a>
@@ -1631,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickysessions_csharp">
 <a href="#stickysessions_csharp" style="color: inherit; text-decoration: inherit;">Sticky<wbr>Sessions</a>
@@ -1641,14 +1484,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable sticky sessions
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -1657,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookielifetime_go">
 <a href="#cookielifetime_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Lifetime</a>
@@ -1667,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie for sticky session (in seconds). Default: `300`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_go">
 <a href="#cookiename_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -1677,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie for sticky session. Default: `HCLBSTICKY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecthttp_go">
 <a href="#redirecthttp_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http</a>
@@ -1687,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickysessions_go">
 <a href="#stickysessions_go" style="color: inherit; text-decoration: inherit;">Sticky<wbr>Sessions</a>
@@ -1697,14 +1533,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable sticky sessions
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1713,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookielifetime_nodejs">
 <a href="#cookielifetime_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Lifetime</a>
@@ -1723,8 +1555,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie for sticky session (in seconds). Default: `300`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_nodejs">
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
@@ -1733,8 +1564,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie for sticky session. Default: `HCLBSTICKY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecthttp_nodejs">
 <a href="#redirecthttp_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http</a>
@@ -1743,8 +1573,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickysessions_nodejs">
 <a href="#stickysessions_nodejs" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
@@ -1753,14 +1582,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable sticky sessions
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1769,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}List of IDs from certificates which the Load Balancer has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_lifetime_python">
 <a href="#cookie_lifetime_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>lifetime</a>
@@ -1779,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of the cookie for sticky session (in seconds). Default: `300`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_name_python">
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
@@ -1789,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie for sticky session. Default: `HCLBSTICKY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_http_python">
 <a href="#redirect_http_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http</a>
@@ -1799,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Redirect HTTP to HTTPS traffic. Only supported for services with `protocol` `https` using the default HTTP port `80`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sticky_sessions_python">
 <a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
@@ -1809,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable sticky sessions
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

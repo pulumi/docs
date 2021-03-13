@@ -399,8 +399,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="externalmemberentityids_csharp">
 <a href="#externalmemberentityids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
@@ -409,8 +408,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalpolicies_csharp">
 <a href="#externalpolicies_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
@@ -419,8 +417,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberentityids_csharp">
 <a href="#memberentityids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
@@ -429,8 +426,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membergroupids_csharp">
 <a href="#membergroupids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
@@ -439,8 +435,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -449,8 +444,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -459,8 +453,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -469,8 +462,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -479,13 +471,11 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="externalmemberentityids_go">
 <a href="#externalmemberentityids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
@@ -494,8 +484,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalpolicies_go">
 <a href="#externalpolicies_go" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
@@ -504,8 +493,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberentityids_go">
 <a href="#memberentityids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
@@ -514,8 +502,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membergroupids_go">
 <a href="#membergroupids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
@@ -524,8 +511,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -534,8 +520,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -544,8 +529,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -554,8 +538,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -564,13 +547,11 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="externalmemberentityids_nodejs">
 <a href="#externalmemberentityids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Member<wbr>Entity<wbr>Ids</a>
@@ -579,8 +560,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalpolicies_nodejs">
 <a href="#externalpolicies_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Policies</a>
@@ -589,8 +569,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberentityids_nodejs">
 <a href="#memberentityids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Entity<wbr>Ids</a>
@@ -599,8 +578,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membergroupids_nodejs">
 <a href="#membergroupids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Group<wbr>Ids</a>
@@ -609,8 +587,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -619,8 +596,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -629,8 +605,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -639,8 +614,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -649,13 +623,11 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="external_member_entity_ids_python">
 <a href="#external_member_entity_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>member_<wbr>entity_<wbr>ids</a>
@@ -664,8 +636,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_policies_python">
 <a href="#external_policies_python" style="color: inherit; text-decoration: inherit;">external_<wbr>policies</a>
@@ -674,8 +645,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_entity_ids_python">
 <a href="#member_entity_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>entity_<wbr>ids</a>
@@ -684,8 +654,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_group_ids_python">
 <a href="#member_group_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>group_<wbr>ids</a>
@@ -694,8 +663,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -704,8 +672,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -714,8 +681,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -724,8 +690,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -734,8 +699,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -746,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -755,13 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -769,13 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -783,13 +742,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -797,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -925,8 +881,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_externalmemberentityids_csharp">
 <a href="#state_externalmemberentityids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
@@ -935,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalpolicies_csharp">
 <a href="#state_externalpolicies_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
@@ -945,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberentityids_csharp">
 <a href="#state_memberentityids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
@@ -955,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membergroupids_csharp">
 <a href="#state_membergroupids_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
@@ -965,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -975,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -985,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -995,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1005,13 +953,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_externalmemberentityids_go">
 <a href="#state_externalmemberentityids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Member<wbr>Entity<wbr>Ids</a>
@@ -1020,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalpolicies_go">
 <a href="#state_externalpolicies_go" style="color: inherit; text-decoration: inherit;">External<wbr>Policies</a>
@@ -1030,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberentityids_go">
 <a href="#state_memberentityids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Entity<wbr>Ids</a>
@@ -1040,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membergroupids_go">
 <a href="#state_membergroupids_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Group<wbr>Ids</a>
@@ -1050,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1060,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1070,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1080,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1090,13 +1029,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_externalmemberentityids_nodejs">
 <a href="#state_externalmemberentityids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Member<wbr>Entity<wbr>Ids</a>
@@ -1105,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalpolicies_nodejs">
 <a href="#state_externalpolicies_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Policies</a>
@@ -1115,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberentityids_nodejs">
 <a href="#state_memberentityids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Entity<wbr>Ids</a>
@@ -1125,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membergroupids_nodejs">
 <a href="#state_membergroupids_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Group<wbr>Ids</a>
@@ -1135,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1145,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1155,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1165,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1175,13 +1105,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_external_member_entity_ids_python">
 <a href="#state_external_member_entity_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>member_<wbr>entity_<wbr>ids</a>
@@ -1190,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any Entity IDs returned from Vault or specified in the resource. You can use `vault.identity.GroupMemberEntityIds` to manage Entity IDs for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_policies_python">
 <a href="#state_external_policies_python" style="color: inherit; text-decoration: inherit;">external_<wbr>policies</a>
@@ -1200,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` by default. If set to `true`, this resource will ignore any policies returned from Vault or specified in the resource. You can use `vault.identity.GroupPolicies` to manage policies for this group in a decoupled manner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_entity_ids_python">
 <a href="#state_member_entity_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>entity_<wbr>ids</a>
@@ -1210,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Entity IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_group_ids_python">
 <a href="#state_member_group_ids_python" style="color: inherit; text-decoration: inherit;">member_<wbr>group_<wbr>ids</a>
@@ -1220,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Group IDs to be assigned as group members. Not allowed on `external` groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1230,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A Map of additional metadata to associate with the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1240,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the identity group to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1250,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of policies to apply to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1260,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the group, internal or external. Defaults to `internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -451,8 +451,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_csharp">
 <a href="#mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -461,8 +460,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -471,8 +469,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncbcs_csharp">
 <a href="#commonencryptioncbcs_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
@@ -481,8 +478,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncenc_csharp">
 <a href="#commonencryptioncenc_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
@@ -491,8 +487,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_csharp">
 <a href="#defaultcontentkeypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -501,8 +496,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -511,8 +505,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noencryptionenabledprotocols_csharp">
 <a href="#noencryptionenabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
@@ -521,13 +514,11 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_go">
 <a href="#mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -536,8 +527,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -546,8 +536,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncbcs_go">
 <a href="#commonencryptioncbcs_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
@@ -556,8 +545,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncenc_go">
 <a href="#commonencryptioncenc_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
@@ -566,8 +554,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_go">
 <a href="#defaultcontentkeypolicyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -576,8 +563,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -586,8 +572,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noencryptionenabledprotocols_go">
 <a href="#noencryptionenabledprotocols_go" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
@@ -596,13 +581,11 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_nodejs">
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -611,8 +594,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -621,8 +603,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncbcs_nodejs">
 <a href="#commonencryptioncbcs_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cbcs</a>
@@ -631,8 +612,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncenc_nodejs">
 <a href="#commonencryptioncenc_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cenc</a>
@@ -641,8 +621,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_nodejs">
 <a href="#defaultcontentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -651,8 +630,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -661,8 +639,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noencryptionenabledprotocols_nodejs">
 <a href="#noencryptionenabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
@@ -671,13 +648,11 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="media_services_account_name_python">
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -686,8 +661,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -696,8 +670,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_encryption_cbcs_python">
 <a href="#common_encryption_cbcs_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cbcs</a>
@@ -706,8 +679,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_encryption_cenc_python">
 <a href="#common_encryption_cenc_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cenc</a>
@@ -716,8 +688,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_content_key_policy_name_python">
 <a href="#default_content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key_<wbr>policy_<wbr>name</a>
@@ -726,8 +697,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -736,8 +706,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_encryption_enabled_protocols_python">
 <a href="#no_encryption_enabled_protocols_python" style="color: inherit; text-decoration: inherit;">no_<wbr>encryption_<wbr>enabled_<wbr>protocols</a>
@@ -746,8 +715,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -758,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -767,13 +734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -781,13 +746,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -795,13 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -809,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -937,8 +897,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commonencryptioncbcs_csharp">
 <a href="#state_commonencryptioncbcs_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
@@ -947,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonencryptioncenc_csharp">
 <a href="#state_commonencryptioncenc_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
@@ -957,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcontentkeypolicyname_csharp">
 <a href="#state_defaultcontentkeypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -967,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_csharp">
 <a href="#state_mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -977,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -987,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noencryptionenabledprotocols_csharp">
 <a href="#state_noencryptionenabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
@@ -997,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1007,13 +960,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commonencryptioncbcs_go">
 <a href="#state_commonencryptioncbcs_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
@@ -1022,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonencryptioncenc_go">
 <a href="#state_commonencryptioncenc_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
@@ -1032,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcontentkeypolicyname_go">
 <a href="#state_defaultcontentkeypolicyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -1042,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_go">
 <a href="#state_mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1052,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1062,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noencryptionenabledprotocols_go">
 <a href="#state_noencryptionenabledprotocols_go" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
@@ -1072,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1082,13 +1027,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_commonencryptioncbcs_nodejs">
 <a href="#state_commonencryptioncbcs_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cbcs</a>
@@ -1097,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonencryptioncenc_nodejs">
 <a href="#state_commonencryptioncenc_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cenc</a>
@@ -1107,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcontentkeypolicyname_nodejs">
 <a href="#state_defaultcontentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -1117,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_nodejs">
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1127,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1137,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noencryptionenabledprotocols_nodejs">
 <a href="#state_noencryptionenabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
@@ -1147,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1157,13 +1094,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_common_encryption_cbcs_python">
 <a href="#state_common_encryption_cbcs_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cbcs</a>
@@ -1172,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_common_encryption_cenc_python">
 <a href="#state_common_encryption_cenc_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cenc</a>
@@ -1182,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_content_key_policy_name_python">
 <a href="#state_default_content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key_<wbr>policy_<wbr>name</a>
@@ -1192,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default Content Key used by current Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_media_services_account_name_python">
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -1202,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1212,8 +1143,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Policy. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_encryption_enabled_protocols_python">
 <a href="#state_no_encryption_enabled_protocols_python" style="color: inherit; text-decoration: inherit;">no_<wbr>encryption_<wbr>enabled_<wbr>protocols</a>
@@ -1222,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1232,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Policy should exist. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1248,8 +1176,7 @@ The following state arguments are supported:
 <h4 id="streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkey_csharp">
 <a href="#defaultcontentkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key</a>
@@ -1258,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmfairplay_csharp">
 <a href="#drmfairplay_csharp" style="color: inherit; text-decoration: inherit;">Drm<wbr>Fairplay</a>
@@ -1268,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
@@ -1278,13 +1203,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkey_go">
 <a href="#defaultcontentkey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key</a>
@@ -1293,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmfairplay_go">
 <a href="#drmfairplay_go" style="color: inherit; text-decoration: inherit;">Drm<wbr>Fairplay</a>
@@ -1303,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
@@ -1313,13 +1234,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkey_nodejs">
 <a href="#defaultcontentkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key</a>
@@ -1328,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmfairplay_nodejs">
 <a href="#drmfairplay_nodejs" style="color: inherit; text-decoration: inherit;">drm<wbr>Fairplay</a>
@@ -1338,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
@@ -1348,13 +1265,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_content_key_python">
 <a href="#default_content_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key</a>
@@ -1363,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drm_fairplay_python">
 <a href="#drm_fairplay_python" style="color: inherit; text-decoration: inherit;">drm_<wbr>fairplay</a>
@@ -1373,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
@@ -1383,15 +1296,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1400,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -1410,13 +1320,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1425,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -1435,13 +1342,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1450,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -1460,13 +1364,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1475,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -1485,15 +1386,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpersistentlicense_csharp">
 <a href="#allowpersistentlicense_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Persistent<wbr>License</a>
@@ -1502,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -1512,13 +1410,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpersistentlicense_go">
 <a href="#allowpersistentlicense_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Persistent<wbr>License</a>
@@ -1527,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -1537,13 +1432,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpersistentlicense_nodejs">
 <a href="#allowpersistentlicense_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Persistent<wbr>License</a>
@@ -1552,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -1562,13 +1454,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_persistent_license_python">
 <a href="#allow_persistent_license_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>persistent_<wbr>license</a>
@@ -1577,8 +1467,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
@@ -1587,15 +1476,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_csharp">
 <a href="#dash_csharp" style="color: inherit; text-decoration: inherit;">Dash</a>
@@ -1604,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_csharp">
 <a href="#download_csharp" style="color: inherit; text-decoration: inherit;">Download</a>
@@ -1614,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_csharp">
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -1624,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -1634,13 +1518,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_go">
 <a href="#dash_go" style="color: inherit; text-decoration: inherit;">Dash</a>
@@ -1649,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_go">
 <a href="#download_go" style="color: inherit; text-decoration: inherit;">Download</a>
@@ -1659,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_go">
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -1669,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -1679,13 +1558,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_nodejs">
 <a href="#dash_nodejs" style="color: inherit; text-decoration: inherit;">dash</a>
@@ -1694,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_nodejs">
 <a href="#download_nodejs" style="color: inherit; text-decoration: inherit;">download</a>
@@ -1704,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_nodejs">
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -1714,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
@@ -1724,13 +1598,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_python">
 <a href="#dash_python" style="color: inherit; text-decoration: inherit;">dash</a>
@@ -1739,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_python">
 <a href="#download_python" style="color: inherit; text-decoration: inherit;">download</a>
@@ -1749,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_python">
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -1759,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
@@ -1769,15 +1638,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkey_csharp">
 <a href="#defaultcontentkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key</a>
@@ -1786,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmplayready_csharp">
 <a href="#drmplayready_csharp" style="color: inherit; text-decoration: inherit;">Drm<wbr>Playready</a>
@@ -1796,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmwidevinecustomlicenseacquisitionurltemplate_csharp">
 <a href="#drmwidevinecustomlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Drm<wbr>Widevine<wbr>Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -1806,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
@@ -1816,13 +1680,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkey_go">
 <a href="#defaultcontentkey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key</a>
@@ -1831,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmplayready_go">
 <a href="#drmplayready_go" style="color: inherit; text-decoration: inherit;">Drm<wbr>Playready</a>
@@ -1841,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmwidevinecustomlicenseacquisitionurltemplate_go">
 <a href="#drmwidevinecustomlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Drm<wbr>Widevine<wbr>Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -1851,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
@@ -1861,13 +1720,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkey_nodejs">
 <a href="#defaultcontentkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key</a>
@@ -1876,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmplayready_nodejs">
 <a href="#drmplayready_nodejs" style="color: inherit; text-decoration: inherit;">drm<wbr>Playready</a>
@@ -1886,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drmwidevinecustomlicenseacquisitionurltemplate_nodejs">
 <a href="#drmwidevinecustomlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">drm<wbr>Widevine<wbr>Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -1896,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
@@ -1906,13 +1760,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_content_key_python">
 <a href="#default_content_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key</a>
@@ -1921,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drm_playready_python">
 <a href="#drm_playready_python" style="color: inherit; text-decoration: inherit;">drm_<wbr>playready</a>
@@ -1931,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drm_widevine_custom_license_acquisition_url_template_python">
 <a href="#drm_widevine_custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">drm_<wbr>widevine_<wbr>custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
@@ -1941,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
@@ -1951,15 +1800,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1968,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -1978,13 +1824,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1993,8 +1837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -2003,13 +1846,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2018,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -2028,13 +1868,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2043,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -2053,15 +1890,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -2070,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -2080,13 +1914,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -2095,8 +1927,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -2105,13 +1936,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -2120,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
@@ -2130,13 +1958,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -2145,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
@@ -2155,15 +1980,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players. Not required when using Azure Media Services for issuing licenses. The template supports replaceable tokens that the service will update at runtime with the value specific to the request. The currently supported token values are `{AlternativeMediaId}`, which is replaced with the value of `StreamingLocatorId.AlternativeMediaId`, and `{ContentKeyId}`, which is replaced with the value of identifier of the key being requested. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_csharp">
 <a href="#dash_csharp" style="color: inherit; text-decoration: inherit;">Dash</a>
@@ -2172,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_csharp">
 <a href="#download_csharp" style="color: inherit; text-decoration: inherit;">Download</a>
@@ -2182,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_csharp">
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -2192,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -2202,13 +2022,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_go">
 <a href="#dash_go" style="color: inherit; text-decoration: inherit;">Dash</a>
@@ -2217,8 +2035,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_go">
 <a href="#download_go" style="color: inherit; text-decoration: inherit;">Download</a>
@@ -2227,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_go">
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -2237,8 +2053,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -2247,13 +2062,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_nodejs">
 <a href="#dash_nodejs" style="color: inherit; text-decoration: inherit;">dash</a>
@@ -2262,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_nodejs">
 <a href="#download_nodejs" style="color: inherit; text-decoration: inherit;">download</a>
@@ -2272,8 +2084,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_nodejs">
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -2282,8 +2093,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
@@ -2292,13 +2102,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_python">
 <a href="#dash_python" style="color: inherit; text-decoration: inherit;">dash</a>
@@ -2307,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_python">
 <a href="#download_python" style="color: inherit; text-decoration: inherit;">download</a>
@@ -2317,8 +2124,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_python">
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -2327,8 +2133,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
@@ -2337,15 +2142,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_csharp">
 <a href="#dash_csharp" style="color: inherit; text-decoration: inherit;">Dash</a>
@@ -2354,8 +2157,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_csharp">
 <a href="#download_csharp" style="color: inherit; text-decoration: inherit;">Download</a>
@@ -2364,8 +2166,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_csharp">
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -2374,8 +2175,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -2384,13 +2184,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_go">
 <a href="#dash_go" style="color: inherit; text-decoration: inherit;">Dash</a>
@@ -2399,8 +2197,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_go">
 <a href="#download_go" style="color: inherit; text-decoration: inherit;">Download</a>
@@ -2409,8 +2206,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_go">
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -2419,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -2429,13 +2224,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_nodejs">
 <a href="#dash_nodejs" style="color: inherit; text-decoration: inherit;">dash</a>
@@ -2444,8 +2237,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_nodejs">
 <a href="#download_nodejs" style="color: inherit; text-decoration: inherit;">download</a>
@@ -2454,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_nodejs">
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -2464,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
@@ -2474,13 +2264,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dash_python">
 <a href="#dash_python" style="color: inherit; text-decoration: inherit;">dash</a>
@@ -2489,8 +2277,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="download_python">
 <a href="#download_python" style="color: inherit; text-decoration: inherit;">download</a>
@@ -2499,8 +2286,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_python">
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -2509,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
@@ -2519,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not. Changing this forces a new Streaming Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

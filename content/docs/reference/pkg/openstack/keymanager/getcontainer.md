@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -156,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -168,13 +166,11 @@ The following arguments are supported:
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
 argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -183,8 +179,7 @@ argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -195,13 +190,11 @@ argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
 argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -210,8 +203,7 @@ argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -222,13 +214,11 @@ argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
 argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -237,8 +227,7 @@ argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -249,8 +238,7 @@ argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a container. If omitted, the `region`
 argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -263,8 +251,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acls_csharp">
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -274,8 +261,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a container. The `read` structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consumers_csharp">
 <a href="#consumers_csharp" style="color: inherit; text-decoration: inherit;">Consumers</a>
@@ -285,8 +271,7 @@ described below.
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerref_csharp">
 <a href="#containerref_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
@@ -295,8 +280,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -305,8 +289,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_csharp">
 <a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -315,8 +298,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +307,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretrefs_csharp">
 <a href="#secretrefs_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
@@ -336,8 +317,7 @@ below.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -346,8 +326,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -356,8 +335,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -366,8 +344,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -376,8 +353,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -386,13 +362,11 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acls_go">
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -402,8 +376,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a container. The `read` structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consumers_go">
 <a href="#consumers_go" style="color: inherit; text-decoration: inherit;">Consumers</a>
@@ -413,8 +386,7 @@ described below.
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerref_go">
 <a href="#containerref_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
@@ -423,8 +395,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -433,8 +404,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_go">
 <a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -443,8 +413,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -453,8 +422,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretrefs_go">
 <a href="#secretrefs_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Refs</a>
@@ -464,8 +432,7 @@ below.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -474,8 +441,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -484,8 +450,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -494,8 +459,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -504,8 +468,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -514,13 +477,11 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acls_nodejs">
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -530,8 +491,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a container. The `read` structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consumers_nodejs">
 <a href="#consumers_nodejs" style="color: inherit; text-decoration: inherit;">consumers</a>
@@ -541,8 +501,7 @@ described below.
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerref_nodejs">
 <a href="#containerref_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Ref</a>
@@ -551,8 +510,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -561,8 +519,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_nodejs">
 <a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -571,8 +528,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -581,8 +537,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretrefs_nodejs">
 <a href="#secretrefs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Refs</a>
@@ -592,8 +547,7 @@ below.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -602,8 +556,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -612,8 +565,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -622,8 +574,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -632,8 +583,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -642,13 +592,11 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acls_python">
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -658,8 +606,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a container. The `read` structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consumers_python">
 <a href="#consumers_python" style="color: inherit; text-decoration: inherit;">consumers</a>
@@ -669,8 +616,7 @@ described below.
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_ref_python">
 <a href="#container_ref_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ref</a>
@@ -679,8 +625,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -689,8 +634,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creator_id_python">
 <a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -699,8 +643,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creator of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -709,8 +652,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_refs_python">
 <a href="#secret_refs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>refs</a>
@@ -720,8 +662,7 @@ below.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -730,8 +671,7 @@ structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -740,8 +680,7 @@ structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -750,8 +689,7 @@ structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -760,8 +698,7 @@ structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the consumer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -770,8 +707,7 @@ structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -785,8 +721,7 @@ structure is described below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="read_csharp">
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -794,13 +729,11 @@ structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="read_go">
 <a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -808,13 +741,11 @@ structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="read_nodejs">
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
@@ -822,13 +753,11 @@ structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="read_python">
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
@@ -836,8 +765,7 @@ structure is described below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read</h4>
@@ -845,8 +773,7 @@ structure is described below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -855,8 +782,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -865,8 +791,7 @@ structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectaccess_csharp">
 <a href="#projectaccess_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
@@ -875,8 +800,7 @@ structure is described below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -886,13 +810,11 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -901,8 +823,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -911,8 +832,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectaccess_go">
 <a href="#projectaccess_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
@@ -921,8 +841,7 @@ when `project_access` is set to `false`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -932,13 +851,11 @@ when `project_access` is set to `false`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -947,8 +864,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -957,8 +873,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectaccess_nodejs">
 <a href="#projectaccess_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
@@ -967,8 +882,7 @@ when `project_access` is set to `false`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -978,13 +892,11 @@ when `project_access` is set to `false`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -993,8 +905,7 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1003,8 +914,7 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_access_python">
 <a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
@@ -1013,8 +923,7 @@ when `project_access` is set to `false`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1024,8 +933,7 @@ when `project_access` is set to `false`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the container,
 when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainerconsumer">Get<wbr>Container<wbr>Consumer</h4>
@@ -1033,8 +941,7 @@ when `project_access` is set to `false`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1043,8 +950,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1053,13 +959,11 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1068,8 +972,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1078,13 +981,11 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1093,8 +994,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1103,13 +1003,11 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1118,8 +1016,7 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1128,8 +1025,7 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The consumer URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainersecretref">Get<wbr>Container<wbr>Secret<wbr>Ref</h4>
@@ -1137,8 +1033,7 @@ when `project_access` is set to `false`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1147,8 +1042,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretref_csharp">
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -1157,13 +1051,11 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1172,8 +1064,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretref_go">
 <a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -1182,13 +1073,11 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1197,8 +1086,7 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretref_nodejs">
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -1207,13 +1095,11 @@ when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1222,8 +1108,7 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Container name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_ref_python">
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -1232,8 +1117,7 @@ when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

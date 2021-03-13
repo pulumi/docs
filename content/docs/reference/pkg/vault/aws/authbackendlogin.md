@@ -248,8 +248,7 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -259,8 +258,7 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamhttprequestmethod_csharp">
 <a href="#iamhttprequestmethod_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
@@ -270,8 +268,7 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequestbody_csharp">
 <a href="#iamrequestbody_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
@@ -281,8 +278,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequestheaders_csharp">
 <a href="#iamrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
@@ -292,8 +288,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequesturl_csharp">
 <a href="#iamrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
@@ -303,8 +298,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -314,8 +308,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_csharp">
 <a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -327,8 +320,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs7_csharp">
 <a href="#pkcs7_csharp" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
@@ -339,8 +331,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -350,8 +341,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_csharp">
 <a href="#signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
@@ -362,13 +352,11 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -378,8 +366,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamhttprequestmethod_go">
 <a href="#iamhttprequestmethod_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
@@ -389,8 +376,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequestbody_go">
 <a href="#iamrequestbody_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
@@ -400,8 +386,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequestheaders_go">
 <a href="#iamrequestheaders_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
@@ -411,8 +396,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequesturl_go">
 <a href="#iamrequesturl_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
@@ -422,8 +406,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -433,8 +416,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_go">
 <a href="#nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -446,8 +428,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs7_go">
 <a href="#pkcs7_go" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
@@ -458,8 +439,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -469,8 +449,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_go">
 <a href="#signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
@@ -481,13 +460,11 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -497,8 +474,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamhttprequestmethod_nodejs">
 <a href="#iamhttprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Http<wbr>Request<wbr>Method</a>
@@ -508,8 +484,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequestbody_nodejs">
 <a href="#iamrequestbody_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Body</a>
@@ -519,8 +494,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequestheaders_nodejs">
 <a href="#iamrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Headers</a>
@@ -530,8 +504,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrequesturl_nodejs">
 <a href="#iamrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Url</a>
@@ -541,8 +514,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -552,8 +524,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_nodejs">
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -565,8 +536,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs7_nodejs">
 <a href="#pkcs7_nodejs" style="color: inherit; text-decoration: inherit;">pkcs7</a>
@@ -577,8 +547,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -588,8 +557,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_nodejs">
 <a href="#signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
@@ -600,13 +568,11 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -616,8 +582,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_http_request_method_python">
 <a href="#iam_http_request_method_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>http_<wbr>request_<wbr>method</a>
@@ -627,8 +592,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_request_body_python">
 <a href="#iam_request_body_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>body</a>
@@ -638,8 +602,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_request_headers_python">
 <a href="#iam_request_headers_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>headers</a>
@@ -649,8 +612,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_request_url_python">
 <a href="#iam_request_url_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>url</a>
@@ -660,8 +622,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -671,8 +632,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonce_python">
 <a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -684,8 +644,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pkcs7_python">
 <a href="#pkcs7_python" style="color: inherit; text-decoration: inherit;">pkcs7</a>
@@ -696,8 +655,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -707,8 +665,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_python">
 <a href="#signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
@@ -719,8 +676,7 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -731,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_csharp">
 <a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -741,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authtype_csharp">
 <a href="#authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
@@ -751,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clienttoken_csharp">
 <a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -761,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -770,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_csharp">
 <a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -781,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_csharp">
 <a href="#leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -791,8 +741,7 @@ to the time in `lease_start_time`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -802,8 +751,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -812,8 +760,7 @@ authentication used to generate this token.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renewable_csharp">
 <a href="#renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -822,13 +769,11 @@ authentication used to generate this token.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_go">
 <a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -837,8 +782,7 @@ authentication used to generate this token.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authtype_go">
 <a href="#authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
@@ -847,8 +791,7 @@ authentication used to generate this token.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clienttoken_go">
 <a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -857,8 +800,7 @@ authentication used to generate this token.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -866,8 +808,7 @@ authentication used to generate this token.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_go">
 <a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -877,8 +818,7 @@ authentication used to generate this token.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_go">
 <a href="#leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -887,8 +827,7 @@ to the time in `lease_start_time`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -898,8 +837,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -908,8 +846,7 @@ authentication used to generate this token.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renewable_go">
 <a href="#renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -918,13 +855,11 @@ authentication used to generate this token.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_nodejs">
 <a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -933,8 +868,7 @@ authentication used to generate this token.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authtype_nodejs">
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
@@ -943,8 +877,7 @@ authentication used to generate this token.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clienttoken_nodejs">
 <a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
@@ -953,8 +886,7 @@ authentication used to generate this token.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -962,8 +894,7 @@ authentication used to generate this token.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_nodejs">
 <a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
@@ -973,8 +904,7 @@ authentication used to generate this token.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_nodejs">
 <a href="#leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
@@ -983,8 +913,7 @@ to the time in `lease_start_time`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -994,8 +923,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1004,8 +932,7 @@ authentication used to generate this token.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renewable_nodejs">
 <a href="#renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -1014,13 +941,11 @@ authentication used to generate this token.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_python">
 <a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1029,8 +954,7 @@ authentication used to generate this token.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auth_type_python">
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
@@ -1039,8 +963,7 @@ authentication used to generate this token.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_token_python">
 <a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
@@ -1049,8 +972,7 @@ authentication used to generate this token.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1058,8 +980,7 @@ authentication used to generate this token.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_duration_python">
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
@@ -1069,8 +990,7 @@ authentication used to generate this token.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_start_time_python">
 <a href="#lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
@@ -1079,8 +999,7 @@ to the time in `lease_start_time`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1090,8 +1009,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1100,8 +1018,7 @@ authentication used to generate this token.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="renewable_python">
 <a href="#renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -1110,8 +1027,7 @@ authentication used to generate this token.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1238,8 +1154,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_csharp">
 <a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -1248,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_csharp">
 <a href="#state_authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
@@ -1258,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1269,8 +1182,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_csharp">
 <a href="#state_clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -1279,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamhttprequestmethod_csharp">
 <a href="#state_iamhttprequestmethod_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
@@ -1290,8 +1201,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestbody_csharp">
 <a href="#state_iamrequestbody_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
@@ -1301,8 +1211,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestheaders_csharp">
 <a href="#state_iamrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
@@ -1312,8 +1221,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequesturl_csharp">
 <a href="#state_iamrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
@@ -1323,8 +1231,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1334,8 +1241,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leaseduration_csharp">
 <a href="#state_leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -1345,8 +1251,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leasestarttime_csharp">
 <a href="#state_leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -1355,8 +1260,7 @@ to the time in `lease_start_time`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1366,8 +1270,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nonce_csharp">
 <a href="#state_nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -1379,8 +1282,7 @@ authentication used to generate this token.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_csharp">
 <a href="#state_pkcs7_csharp" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
@@ -1391,8 +1293,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1401,8 +1302,7 @@ the EC2 metadata server.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_csharp">
 <a href="#state_renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -1411,8 +1311,7 @@ the EC2 metadata server.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1422,8 +1321,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_csharp">
 <a href="#state_signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
@@ -1434,13 +1332,11 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_go">
 <a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -1449,8 +1345,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_go">
 <a href="#state_authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
@@ -1459,8 +1354,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1470,8 +1364,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_go">
 <a href="#state_clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -1480,8 +1373,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamhttprequestmethod_go">
 <a href="#state_iamhttprequestmethod_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
@@ -1491,8 +1383,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestbody_go">
 <a href="#state_iamrequestbody_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
@@ -1502,8 +1393,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestheaders_go">
 <a href="#state_iamrequestheaders_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
@@ -1513,8 +1403,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequesturl_go">
 <a href="#state_iamrequesturl_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
@@ -1524,8 +1413,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1535,8 +1423,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leaseduration_go">
 <a href="#state_leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -1546,8 +1433,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leasestarttime_go">
 <a href="#state_leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -1556,8 +1442,7 @@ to the time in `lease_start_time`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1567,8 +1452,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nonce_go">
 <a href="#state_nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
@@ -1580,8 +1464,7 @@ authentication used to generate this token.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_go">
 <a href="#state_pkcs7_go" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
@@ -1592,8 +1475,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1602,8 +1484,7 @@ the EC2 metadata server.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_go">
 <a href="#state_renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
@@ -1612,8 +1493,7 @@ the EC2 metadata server.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1623,8 +1503,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_go">
 <a href="#state_signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
@@ -1635,13 +1514,11 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_nodejs">
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1650,8 +1527,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_nodejs">
 <a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
@@ -1660,8 +1536,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1671,8 +1546,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_nodejs">
 <a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
@@ -1681,8 +1555,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamhttprequestmethod_nodejs">
 <a href="#state_iamhttprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Http<wbr>Request<wbr>Method</a>
@@ -1692,8 +1565,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestbody_nodejs">
 <a href="#state_iamrequestbody_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Body</a>
@@ -1703,8 +1575,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestheaders_nodejs">
 <a href="#state_iamrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Headers</a>
@@ -1714,8 +1585,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrequesturl_nodejs">
 <a href="#state_iamrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Url</a>
@@ -1725,8 +1595,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1736,8 +1605,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leaseduration_nodejs">
 <a href="#state_leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
@@ -1747,8 +1615,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leasestarttime_nodejs">
 <a href="#state_leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
@@ -1757,8 +1624,7 @@ to the time in `lease_start_time`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1768,8 +1634,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nonce_nodejs">
 <a href="#state_nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -1781,8 +1646,7 @@ authentication used to generate this token.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_nodejs">
 <a href="#state_pkcs7_nodejs" style="color: inherit; text-decoration: inherit;">pkcs7</a>
@@ -1793,8 +1657,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1803,8 +1666,7 @@ the EC2 metadata server.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_nodejs">
 <a href="#state_renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -1813,8 +1675,7 @@ the EC2 metadata server.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1824,8 +1685,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_nodejs">
 <a href="#state_signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
@@ -1836,13 +1696,11 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_python">
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1851,8 +1709,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_type_python">
 <a href="#state_auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
@@ -1861,8 +1718,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1872,8 +1728,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_token_python">
 <a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
@@ -1882,8 +1737,7 @@ removed. Can be retrieved from the EC2 metadata server.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_http_request_method_python">
 <a href="#state_iam_http_request_method_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>http_<wbr>request_<wbr>method</a>
@@ -1893,8 +1747,7 @@ removed. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_request_body_python">
 <a href="#state_iam_request_body_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>body</a>
@@ -1904,8 +1757,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_request_headers_python">
 <a href="#state_iam_request_headers_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>headers</a>
@@ -1915,8 +1767,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_request_url_python">
 <a href="#state_iam_request_url_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>url</a>
@@ -1926,8 +1777,7 @@ representation of the GetCallerIdentity HTTP request headers.
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1937,8 +1787,7 @@ request.
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lease_duration_python">
 <a href="#state_lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
@@ -1948,8 +1797,7 @@ authenticate with. Can be retrieved from the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lease_start_time_python">
 <a href="#state_lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
@@ -1958,8 +1806,7 @@ to the time in `lease_start_time`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1969,8 +1816,7 @@ to the time in `lease_start_time`.
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nonce_python">
 <a href="#state_nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
@@ -1982,8 +1828,7 @@ authentication used to generate this token.
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_python">
 <a href="#state_pkcs7_python" style="color: inherit; text-decoration: inherit;">pkcs7</a>
@@ -1994,8 +1839,7 @@ the whitelist is tidied again unless they keep track of this nonce.
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -2004,8 +1848,7 @@ the EC2 metadata server.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewable_python">
 <a href="#state_renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
@@ -2014,8 +1857,7 @@ the EC2 metadata server.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2025,8 +1867,7 @@ the EC2 metadata server.
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_python">
 <a href="#state_signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
@@ -2037,8 +1878,7 @@ against.
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

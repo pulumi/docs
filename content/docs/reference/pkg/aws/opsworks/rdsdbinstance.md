@@ -274,8 +274,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dbpassword_csharp">
 <a href="#dbpassword_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Password</a>
@@ -284,8 +283,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbuser_csharp">
 <a href="#dbuser_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>User</a>
@@ -294,8 +292,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdsdbinstancearn_csharp">
 <a href="#rdsdbinstancearn_csharp" style="color: inherit; text-decoration: inherit;">Rds<wbr>Db<wbr>Instance<wbr>Arn</a>
@@ -304,8 +301,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stackid_csharp">
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -314,13 +310,11 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dbpassword_go">
 <a href="#dbpassword_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Password</a>
@@ -329,8 +323,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbuser_go">
 <a href="#dbuser_go" style="color: inherit; text-decoration: inherit;">Db<wbr>User</a>
@@ -339,8 +332,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdsdbinstancearn_go">
 <a href="#rdsdbinstancearn_go" style="color: inherit; text-decoration: inherit;">Rds<wbr>Db<wbr>Instance<wbr>Arn</a>
@@ -349,8 +341,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stackid_go">
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -359,13 +350,11 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dbpassword_nodejs">
 <a href="#dbpassword_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Password</a>
@@ -374,8 +363,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbuser_nodejs">
 <a href="#dbuser_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>User</a>
@@ -384,8 +372,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdsdbinstancearn_nodejs">
 <a href="#rdsdbinstancearn_nodejs" style="color: inherit; text-decoration: inherit;">rds<wbr>Db<wbr>Instance<wbr>Arn</a>
@@ -394,8 +381,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stackid_nodejs">
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -404,13 +390,11 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="db_password_python">
 <a href="#db_password_python" style="color: inherit; text-decoration: inherit;">db_<wbr>password</a>
@@ -419,8 +403,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_user_python">
 <a href="#db_user_python" style="color: inherit; text-decoration: inherit;">db_<wbr>user</a>
@@ -429,8 +412,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rds_db_instance_arn_python">
 <a href="#rds_db_instance_arn_python" style="color: inherit; text-decoration: inherit;">rds_<wbr>db_<wbr>instance_<wbr>arn</a>
@@ -439,8 +421,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stack_id_python">
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -449,8 +430,7 @@ The RdsDbInstance resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -461,8 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -470,13 +449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -484,13 +461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -498,13 +473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -512,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -640,8 +612,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dbpassword_csharp">
 <a href="#state_dbpassword_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Password</a>
@@ -650,8 +621,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbuser_csharp">
 <a href="#state_dbuser_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>User</a>
@@ -660,8 +630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rdsdbinstancearn_csharp">
 <a href="#state_rdsdbinstancearn_csharp" style="color: inherit; text-decoration: inherit;">Rds<wbr>Db<wbr>Instance<wbr>Arn</a>
@@ -670,8 +639,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackid_csharp">
 <a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -680,13 +648,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dbpassword_go">
 <a href="#state_dbpassword_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Password</a>
@@ -695,8 +661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbuser_go">
 <a href="#state_dbuser_go" style="color: inherit; text-decoration: inherit;">Db<wbr>User</a>
@@ -705,8 +670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rdsdbinstancearn_go">
 <a href="#state_rdsdbinstancearn_go" style="color: inherit; text-decoration: inherit;">Rds<wbr>Db<wbr>Instance<wbr>Arn</a>
@@ -715,8 +679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackid_go">
 <a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -725,13 +688,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dbpassword_nodejs">
 <a href="#state_dbpassword_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Password</a>
@@ -740,8 +701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbuser_nodejs">
 <a href="#state_dbuser_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>User</a>
@@ -750,8 +710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rdsdbinstancearn_nodejs">
 <a href="#state_rdsdbinstancearn_nodejs" style="color: inherit; text-decoration: inherit;">rds<wbr>Db<wbr>Instance<wbr>Arn</a>
@@ -760,8 +719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackid_nodejs">
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -770,13 +728,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_db_password_python">
 <a href="#state_db_password_python" style="color: inherit; text-decoration: inherit;">db_<wbr>password</a>
@@ -785,8 +741,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A db password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_user_python">
 <a href="#state_db_user_python" style="color: inherit; text-decoration: inherit;">db_<wbr>user</a>
@@ -795,8 +750,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A db username
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rds_db_instance_arn_python">
 <a href="#state_rds_db_instance_arn_python" style="color: inherit; text-decoration: inherit;">rds_<wbr>db_<wbr>instance_<wbr>arn</a>
@@ -805,8 +759,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The db instance to register for this stack. Changing this will force a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stack_id_python">
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -815,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The stack to register a db instance for. Changing this will force a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

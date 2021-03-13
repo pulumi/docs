@@ -162,8 +162,7 @@ The PortSecGroupAssociate resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -172,8 +171,7 @@ The PortSecGroupAssociate resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -184,8 +182,7 @@ The PortSecGroupAssociate resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_csharp">
 <a href="#enforce_csharp" style="color: inherit; text-decoration: inherit;">Enforce</a>
@@ -195,8 +192,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -208,13 +204,11 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -223,8 +217,7 @@ resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -235,8 +228,7 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_go">
 <a href="#enforce_go" style="color: inherit; text-decoration: inherit;">Enforce</a>
@@ -246,8 +238,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -259,13 +250,11 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -274,8 +263,7 @@ resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -286,8 +274,7 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_nodejs">
 <a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
@@ -297,8 +284,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -310,13 +296,11 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -325,8 +309,7 @@ resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -337,8 +320,7 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_python">
 <a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
@@ -348,8 +330,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -361,8 +342,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -373,8 +353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allsecuritygroupids_csharp">
 <a href="#allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -384,8 +363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -393,13 +371,11 @@ which have been explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allsecuritygroupids_go">
 <a href="#allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -409,8 +385,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -418,13 +393,11 @@ which have been explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allsecuritygroupids_nodejs">
 <a href="#allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -434,8 +407,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -443,13 +415,11 @@ which have been explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_security_group_ids_python">
 <a href="#all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -459,8 +429,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -468,8 +437,7 @@ which have been explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -596,8 +564,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allsecuritygroupids_csharp">
 <a href="#state_allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -607,8 +574,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_csharp">
 <a href="#state_enforce_csharp" style="color: inherit; text-decoration: inherit;">Enforce</a>
@@ -618,8 +584,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -628,8 +593,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -641,8 +605,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -653,13 +616,11 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allsecuritygroupids_go">
 <a href="#state_allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -669,8 +630,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_go">
 <a href="#state_enforce_go" style="color: inherit; text-decoration: inherit;">Enforce</a>
@@ -680,8 +640,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -690,8 +649,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -703,8 +661,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -715,13 +672,11 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allsecuritygroupids_nodejs">
 <a href="#state_allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -731,8 +686,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_nodejs">
 <a href="#state_enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
@@ -742,8 +696,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -752,8 +705,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -765,8 +717,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -777,13 +728,11 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_security_group_ids_python">
 <a href="#state_all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -793,8 +742,7 @@ opposed to how they are configured with the Compute Instance).
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_python">
 <a href="#state_enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
@@ -804,8 +752,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Whether to replace or append the list of security
 groups, specified in the `security_group_ids`. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -814,8 +761,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An UUID of the port to apply security groups to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -827,8 +773,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 A networking client is needed to manage a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -839,8 +784,7 @@ resource.
     <dd>{{% md %}}A list of security group IDs to apply to
 the port. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -522,8 +522,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subdomain_csharp">
 <a href="#subdomain_csharp" style="color: inherit; text-decoration: inherit;">Subdomain</a>
@@ -532,8 +531,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitoken_csharp">
 <a href="#apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -542,8 +540,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="individualservices_csharp">
 <a href="#individualservices_csharp" style="color: inherit; text-decoration: inherit;">Individual<wbr>Services</a>
@@ -554,8 +551,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -564,8 +560,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -574,13 +569,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">List&lt;Integration<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subdomain_go">
 <a href="#subdomain_go" style="color: inherit; text-decoration: inherit;">Subdomain</a>
@@ -589,8 +582,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitoken_go">
 <a href="#apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -599,8 +591,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="individualservices_go">
 <a href="#individualservices_go" style="color: inherit; text-decoration: inherit;">Individual<wbr>Services</a>
@@ -611,8 +602,7 @@ resource are to be used. Mutually exclusive with `services` key.
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -621,8 +611,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -631,13 +620,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">[]Integration<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subdomain_nodejs">
 <a href="#subdomain_nodejs" style="color: inherit; text-decoration: inherit;">subdomain</a>
@@ -646,8 +633,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitoken_nodejs">
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
@@ -656,8 +642,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="individualservices_nodejs">
 <a href="#individualservices_nodejs" style="color: inherit; text-decoration: inherit;">individual<wbr>Services</a>
@@ -668,8 +653,7 @@ resource are to be used. Mutually exclusive with `services` key.
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -678,8 +662,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -688,13 +671,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">Integration<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subdomain_python">
 <a href="#subdomain_python" style="color: inherit; text-decoration: inherit;">subdomain</a>
@@ -703,8 +684,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_token_python">
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
@@ -713,8 +693,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="individual_services_python">
 <a href="#individual_services_python" style="color: inherit; text-decoration: inherit;">individual_<wbr>services</a>
@@ -725,8 +704,7 @@ resource are to be used. Mutually exclusive with `services` key.
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -735,8 +713,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -745,8 +722,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">Sequence[Integration<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -757,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -766,13 +741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -780,13 +753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -794,13 +765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -808,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -936,8 +904,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apitoken_csharp">
 <a href="#state_apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -946,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_individualservices_csharp">
 <a href="#state_individualservices_csharp" style="color: inherit; text-decoration: inherit;">Individual<wbr>Services</a>
@@ -958,8 +924,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_csharp">
 <a href="#state_schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -968,8 +933,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_services_csharp">
 <a href="#state_services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -978,8 +942,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">List&lt;Integration<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdomain_csharp">
 <a href="#state_subdomain_csharp" style="color: inherit; text-decoration: inherit;">Subdomain</a>
@@ -988,13 +951,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apitoken_go">
 <a href="#state_apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -1003,8 +964,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_individualservices_go">
 <a href="#state_individualservices_go" style="color: inherit; text-decoration: inherit;">Individual<wbr>Services</a>
@@ -1015,8 +975,7 @@ resource are to be used. Mutually exclusive with `services` key.
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_go">
 <a href="#state_schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -1025,8 +984,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_services_go">
 <a href="#state_services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -1035,8 +993,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">[]Integration<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdomain_go">
 <a href="#state_subdomain_go" style="color: inherit; text-decoration: inherit;">Subdomain</a>
@@ -1045,13 +1002,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apitoken_nodejs">
 <a href="#state_apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
@@ -1060,8 +1015,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_individualservices_nodejs">
 <a href="#state_individualservices_nodejs" style="color: inherit; text-decoration: inherit;">individual<wbr>Services</a>
@@ -1072,8 +1026,7 @@ resource are to be used. Mutually exclusive with `services` key.
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_nodejs">
 <a href="#state_schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -1082,8 +1035,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_services_nodejs">
 <a href="#state_services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -1092,8 +1044,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">Integration<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdomain_nodejs">
 <a href="#state_subdomain_nodejs" style="color: inherit; text-decoration: inherit;">subdomain</a>
@@ -1102,13 +1053,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_token_python">
 <a href="#state_api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
@@ -1117,8 +1066,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty API token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_individual_services_python">
 <a href="#state_individual_services_python" style="color: inherit; text-decoration: inherit;">individual_<wbr>services</a>
@@ -1129,8 +1077,7 @@ resource are to be used. Mutually exclusive with `services` key.
     <dd>{{% md %}}Boolean to specify whether or not individual service objects specified by
 [datadog_integration_pagerduty_service_object](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/integration_pagerduty_service_object)
 resource are to be used. Mutually exclusive with `services` key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_python">
 <a href="#state_schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -1139,8 +1086,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of your schedule URLs.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_services_python">
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -1149,8 +1095,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type"><a href="#integrationservice">Sequence[Integration<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of service names and service keys.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}set &#34;individual_services&#34; to true and use datadog_pagerduty_integration_service_object{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdomain_python">
 <a href="#state_subdomain_python" style="color: inherit; text-decoration: inherit;">subdomain</a>
@@ -1159,8 +1104,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your PagerDuty account’s personalized subdomain name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1175,8 +1119,7 @@ resource are to be used. Mutually exclusive with `services` key.
 <h4 id="integrationservice">Integration<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicekey_csharp">
 <a href="#servicekey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Key</a>
@@ -1184,8 +1127,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1193,13 +1135,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicekey_go">
 <a href="#servicekey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Key</a>
@@ -1207,8 +1147,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1216,13 +1155,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicekey_nodejs">
 <a href="#servicekey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
@@ -1230,8 +1167,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1239,13 +1175,11 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_key_python">
 <a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
@@ -1253,8 +1187,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1262,8 +1195,7 @@ resource are to be used. Mutually exclusive with `services` key.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

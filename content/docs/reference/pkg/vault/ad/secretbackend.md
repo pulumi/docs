@@ -170,8 +170,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binddn_csharp">
 <a href="#binddn_csharp" style="color: inherit; text-decoration: inherit;">Binddn</a>
@@ -180,8 +179,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindpass_csharp">
 <a href="#bindpass_csharp" style="color: inherit; text-decoration: inherit;">Bindpass</a>
@@ -190,8 +188,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousgroupsearch_csharp">
 <a href="#anonymousgroupsearch_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Group<wbr>Search</a>
@@ -201,8 +198,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -212,8 +208,7 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="casesensitivenames_csharp">
 <a href="#casesensitivenames_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive<wbr>Names</a>
@@ -223,8 +218,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -234,8 +228,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlscert_csharp">
 <a href="#clienttlscert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Cert</a>
@@ -244,8 +237,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlskey_csharp">
 <a href="#clienttlskey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Key</a>
@@ -254,8 +246,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_csharp">
 <a href="#defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -264,8 +255,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denynullbind_csharp">
 <a href="#denynullbind_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
@@ -275,8 +265,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -285,8 +274,7 @@ defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverdn_csharp">
 <a href="#discoverdn_csharp" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
@@ -295,8 +283,7 @@ defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="formatter_csharp">
 <a href="#formatter_csharp" style="color: inherit; text-decoration: inherit;">Formatter</a>
@@ -306,8 +293,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupattr_csharp">
 <a href="#groupattr_csharp" style="color: inherit; text-decoration: inherit;">Groupattr</a>
@@ -317,8 +303,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdn_csharp">
 <a href="#groupdn_csharp" style="color: inherit; text-decoration: inherit;">Groupdn</a>
@@ -327,8 +312,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupfilter_csharp">
 <a href="#groupfilter_csharp" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
@@ -338,8 +322,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretls_csharp">
 <a href="#insecuretls_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
@@ -349,8 +332,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastrotationtolerance_csharp">
 <a href="#lastrotationtolerance_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Rotation<wbr>Tolerance</a>
@@ -360,8 +342,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="length_csharp">
 <a href="#length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -371,8 +352,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="local_csharp">
 <a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -382,8 +362,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_csharp">
 <a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -392,8 +371,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -402,8 +380,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_csharp">
 <a href="#passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -412,8 +389,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_csharp">
 <a href="#requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -423,8 +399,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_csharp">
 <a href="#starttls_csharp" style="color: inherit; text-decoration: inherit;">Starttls</a>
@@ -433,8 +408,7 @@ before returning back an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsmaxversion_csharp">
 <a href="#tlsmaxversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
@@ -444,8 +418,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_csharp">
 <a href="#tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
@@ -455,8 +428,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -465,8 +437,7 @@ before returning back an error.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upndomain_csharp">
 <a href="#upndomain_csharp" style="color: inherit; text-decoration: inherit;">Upndomain</a>
@@ -475,8 +446,7 @@ before returning back an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -486,8 +456,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepre111groupcnbehavior_csharp">
 <a href="#usepre111groupcnbehavior_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
@@ -501,8 +470,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetokengroups_csharp">
 <a href="#usetokengroups_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
@@ -512,8 +480,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userattr_csharp">
 <a href="#userattr_csharp" style="color: inherit; text-decoration: inherit;">Userattr</a>
@@ -522,8 +489,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdn_csharp">
 <a href="#userdn_csharp" style="color: inherit; text-decoration: inherit;">Userdn</a>
@@ -532,13 +498,11 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binddn_go">
 <a href="#binddn_go" style="color: inherit; text-decoration: inherit;">Binddn</a>
@@ -547,8 +511,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindpass_go">
 <a href="#bindpass_go" style="color: inherit; text-decoration: inherit;">Bindpass</a>
@@ -557,8 +520,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousgroupsearch_go">
 <a href="#anonymousgroupsearch_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Group<wbr>Search</a>
@@ -568,8 +530,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -579,8 +540,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="casesensitivenames_go">
 <a href="#casesensitivenames_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive<wbr>Names</a>
@@ -590,8 +550,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -601,8 +560,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlscert_go">
 <a href="#clienttlscert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Cert</a>
@@ -611,8 +569,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlskey_go">
 <a href="#clienttlskey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Key</a>
@@ -621,8 +578,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_go">
 <a href="#defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -631,8 +587,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denynullbind_go">
 <a href="#denynullbind_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
@@ -642,8 +597,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -652,8 +606,7 @@ defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverdn_go">
 <a href="#discoverdn_go" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
@@ -662,8 +615,7 @@ defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="formatter_go">
 <a href="#formatter_go" style="color: inherit; text-decoration: inherit;">Formatter</a>
@@ -673,8 +625,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupattr_go">
 <a href="#groupattr_go" style="color: inherit; text-decoration: inherit;">Groupattr</a>
@@ -684,8 +635,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdn_go">
 <a href="#groupdn_go" style="color: inherit; text-decoration: inherit;">Groupdn</a>
@@ -694,8 +644,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupfilter_go">
 <a href="#groupfilter_go" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
@@ -705,8 +654,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretls_go">
 <a href="#insecuretls_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
@@ -716,8 +664,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastrotationtolerance_go">
 <a href="#lastrotationtolerance_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Rotation<wbr>Tolerance</a>
@@ -727,8 +674,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="length_go">
 <a href="#length_go" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -738,8 +684,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="local_go">
 <a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -749,8 +694,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_go">
 <a href="#maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -759,8 +703,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -769,8 +712,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_go">
 <a href="#passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -779,8 +721,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_go">
 <a href="#requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -790,8 +731,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_go">
 <a href="#starttls_go" style="color: inherit; text-decoration: inherit;">Starttls</a>
@@ -800,8 +740,7 @@ before returning back an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsmaxversion_go">
 <a href="#tlsmaxversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
@@ -811,8 +750,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_go">
 <a href="#tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
@@ -822,8 +760,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -832,8 +769,7 @@ before returning back an error.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upndomain_go">
 <a href="#upndomain_go" style="color: inherit; text-decoration: inherit;">Upndomain</a>
@@ -842,8 +778,7 @@ before returning back an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -853,8 +788,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepre111groupcnbehavior_go">
 <a href="#usepre111groupcnbehavior_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
@@ -868,8 +802,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetokengroups_go">
 <a href="#usetokengroups_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
@@ -879,8 +812,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userattr_go">
 <a href="#userattr_go" style="color: inherit; text-decoration: inherit;">Userattr</a>
@@ -889,8 +821,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdn_go">
 <a href="#userdn_go" style="color: inherit; text-decoration: inherit;">Userdn</a>
@@ -899,13 +830,11 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binddn_nodejs">
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
@@ -914,8 +843,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindpass_nodejs">
 <a href="#bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
@@ -924,8 +852,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymousgroupsearch_nodejs">
 <a href="#anonymousgroupsearch_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>Group<wbr>Search</a>
@@ -935,8 +862,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -946,8 +872,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="casesensitivenames_nodejs">
 <a href="#casesensitivenames_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive<wbr>Names</a>
@@ -957,8 +882,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -968,8 +892,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlscert_nodejs">
 <a href="#clienttlscert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Cert</a>
@@ -978,8 +901,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlskey_nodejs">
 <a href="#clienttlskey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Key</a>
@@ -988,8 +910,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_nodejs">
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -998,8 +919,7 @@ x509 PEM encoded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denynullbind_nodejs">
 <a href="#denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
@@ -1009,8 +929,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1019,8 +938,7 @@ defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverdn_nodejs">
 <a href="#discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
@@ -1029,8 +947,7 @@ defaults to true.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="formatter_nodejs">
 <a href="#formatter_nodejs" style="color: inherit; text-decoration: inherit;">formatter</a>
@@ -1040,8 +957,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupattr_nodejs">
 <a href="#groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
@@ -1051,8 +967,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdn_nodejs">
 <a href="#groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
@@ -1061,8 +976,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupfilter_nodejs">
 <a href="#groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
@@ -1072,8 +986,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretls_nodejs">
 <a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
@@ -1083,8 +996,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastrotationtolerance_nodejs">
 <a href="#lastrotationtolerance_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Rotation<wbr>Tolerance</a>
@@ -1094,8 +1006,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="length_nodejs">
 <a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
@@ -1105,8 +1016,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="local_nodejs">
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
@@ -1116,8 +1026,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_nodejs">
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1126,8 +1035,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -1136,8 +1044,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_nodejs">
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -1146,8 +1053,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_nodejs">
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
@@ -1157,8 +1063,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_nodejs">
 <a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
@@ -1167,8 +1072,7 @@ before returning back an error.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsmaxversion_nodejs">
 <a href="#tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
@@ -1178,8 +1082,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_nodejs">
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
@@ -1189,8 +1092,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1199,8 +1101,7 @@ before returning back an error.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upndomain_nodejs">
 <a href="#upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
@@ -1209,8 +1110,7 @@ before returning back an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1220,8 +1120,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepre111groupcnbehavior_nodejs">
 <a href="#usepre111groupcnbehavior_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
@@ -1235,8 +1134,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetokengroups_nodejs">
 <a href="#usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
@@ -1246,8 +1144,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userattr_nodejs">
 <a href="#userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
@@ -1256,8 +1153,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdn_nodejs">
 <a href="#userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
@@ -1266,13 +1162,11 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="binddn_python">
 <a href="#binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
@@ -1281,8 +1175,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindpass_python">
 <a href="#bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
@@ -1291,8 +1184,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonymous_group_search_python">
 <a href="#anonymous_group_search_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>group_<wbr>search</a>
@@ -1302,8 +1194,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1313,8 +1204,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="case_sensitive_names_python">
 <a href="#case_sensitive_names_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive_<wbr>names</a>
@@ -1324,8 +1214,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1335,8 +1224,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_tls_cert_python">
 <a href="#client_tls_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>cert</a>
@@ -1345,8 +1233,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_tls_key_python">
 <a href="#client_tls_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>key</a>
@@ -1355,8 +1242,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_lease_ttl_seconds_python">
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -1365,8 +1251,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_null_bind_python">
 <a href="#deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
@@ -1376,8 +1261,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1386,8 +1270,7 @@ defaults to true.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoverdn_python">
 <a href="#discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
@@ -1396,8 +1279,7 @@ defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="formatter_python">
 <a href="#formatter_python" style="color: inherit; text-decoration: inherit;">formatter</a>
@@ -1407,8 +1289,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="groupattr_python">
 <a href="#groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
@@ -1418,8 +1299,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupdn_python">
 <a href="#groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
@@ -1428,8 +1308,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupfilter_python">
 <a href="#groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
@@ -1439,8 +1318,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_tls_python">
 <a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
@@ -1450,8 +1328,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_rotation_tolerance_python">
 <a href="#last_rotation_tolerance_python" style="color: inherit; text-decoration: inherit;">last_<wbr>rotation_<wbr>tolerance</a>
@@ -1461,8 +1338,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="length_python">
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
@@ -1472,8 +1348,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="local_python">
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
@@ -1483,8 +1358,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_lease_ttl_seconds_python">
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -1493,8 +1367,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1503,8 +1376,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_policy_python">
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
@@ -1513,8 +1385,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_timeout_python">
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
@@ -1524,8 +1395,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_python">
 <a href="#starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
@@ -1534,8 +1404,7 @@ before returning back an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_max_version_python">
 <a href="#tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
@@ -1545,8 +1414,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_min_version_python">
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
@@ -1556,8 +1424,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1566,8 +1433,7 @@ before returning back an error.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upndomain_python">
 <a href="#upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
@@ -1576,8 +1442,7 @@ before returning back an error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1587,8 +1452,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_pre111_group_cn_behavior_python">
 <a href="#use_pre111_group_cn_behavior_python" style="color: inherit; text-decoration: inherit;">use_<wbr>pre111_<wbr>group_<wbr>cn_<wbr>behavior</a>
@@ -1602,8 +1466,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_token_groups_python">
 <a href="#use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
@@ -1613,8 +1476,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userattr_python">
 <a href="#userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
@@ -1623,8 +1485,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdn_python">
 <a href="#userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
@@ -1633,8 +1494,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1645,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1654,13 +1513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1668,13 +1525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1682,13 +1537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1696,8 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1824,8 +1676,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_anonymousgroupsearch_csharp">
 <a href="#state_anonymousgroupsearch_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Group<wbr>Search</a>
@@ -1835,8 +1686,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1846,8 +1696,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binddn_csharp">
 <a href="#state_binddn_csharp" style="color: inherit; text-decoration: inherit;">Binddn</a>
@@ -1856,8 +1705,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_csharp">
 <a href="#state_bindpass_csharp" style="color: inherit; text-decoration: inherit;">Bindpass</a>
@@ -1866,8 +1714,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_casesensitivenames_csharp">
 <a href="#state_casesensitivenames_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive<wbr>Names</a>
@@ -1877,8 +1724,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1888,8 +1734,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttlscert_csharp">
 <a href="#state_clienttlscert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Cert</a>
@@ -1898,8 +1743,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttlskey_csharp">
 <a href="#state_clienttlskey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Key</a>
@@ -1908,8 +1752,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_csharp">
 <a href="#state_defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1918,8 +1761,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denynullbind_csharp">
 <a href="#state_denynullbind_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
@@ -1929,8 +1771,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1939,8 +1780,7 @@ defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_csharp">
 <a href="#state_discoverdn_csharp" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
@@ -1949,8 +1789,7 @@ defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_formatter_csharp">
 <a href="#state_formatter_csharp" style="color: inherit; text-decoration: inherit;">Formatter</a>
@@ -1960,8 +1799,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_csharp">
 <a href="#state_groupattr_csharp" style="color: inherit; text-decoration: inherit;">Groupattr</a>
@@ -1971,8 +1809,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_csharp">
 <a href="#state_groupdn_csharp" style="color: inherit; text-decoration: inherit;">Groupdn</a>
@@ -1981,8 +1818,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_csharp">
 <a href="#state_groupfilter_csharp" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
@@ -1992,8 +1828,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecuretls_csharp">
 <a href="#state_insecuretls_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
@@ -2003,8 +1838,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastrotationtolerance_csharp">
 <a href="#state_lastrotationtolerance_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Rotation<wbr>Tolerance</a>
@@ -2014,8 +1848,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_length_csharp">
 <a href="#state_length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -2025,8 +1858,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_csharp">
 <a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -2036,8 +1868,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_csharp">
 <a href="#state_maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -2046,8 +1877,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -2056,8 +1886,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_csharp">
 <a href="#state_passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -2066,8 +1895,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requesttimeout_csharp">
 <a href="#state_requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -2077,8 +1905,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttls_csharp">
 <a href="#state_starttls_csharp" style="color: inherit; text-decoration: inherit;">Starttls</a>
@@ -2087,8 +1914,7 @@ before returning back an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsmaxversion_csharp">
 <a href="#state_tlsmaxversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
@@ -2098,8 +1924,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_csharp">
 <a href="#state_tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
@@ -2109,8 +1934,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -2119,8 +1943,7 @@ before returning back an error.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_csharp">
 <a href="#state_upndomain_csharp" style="color: inherit; text-decoration: inherit;">Upndomain</a>
@@ -2129,8 +1952,7 @@ before returning back an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2140,8 +1962,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usepre111groupcnbehavior_csharp">
 <a href="#state_usepre111groupcnbehavior_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
@@ -2155,8 +1976,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetokengroups_csharp">
 <a href="#state_usetokengroups_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
@@ -2166,8 +1986,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userattr_csharp">
 <a href="#state_userattr_csharp" style="color: inherit; text-decoration: inherit;">Userattr</a>
@@ -2176,8 +1995,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdn_csharp">
 <a href="#state_userdn_csharp" style="color: inherit; text-decoration: inherit;">Userdn</a>
@@ -2186,13 +2004,11 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_anonymousgroupsearch_go">
 <a href="#state_anonymousgroupsearch_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>Group<wbr>Search</a>
@@ -2202,8 +2018,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -2213,8 +2028,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binddn_go">
 <a href="#state_binddn_go" style="color: inherit; text-decoration: inherit;">Binddn</a>
@@ -2223,8 +2037,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_go">
 <a href="#state_bindpass_go" style="color: inherit; text-decoration: inherit;">Bindpass</a>
@@ -2233,8 +2046,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_casesensitivenames_go">
 <a href="#state_casesensitivenames_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive<wbr>Names</a>
@@ -2244,8 +2056,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2255,8 +2066,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttlscert_go">
 <a href="#state_clienttlscert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Cert</a>
@@ -2265,8 +2075,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttlskey_go">
 <a href="#state_clienttlskey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Key</a>
@@ -2275,8 +2084,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_go">
 <a href="#state_defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -2285,8 +2093,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denynullbind_go">
 <a href="#state_denynullbind_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
@@ -2296,8 +2103,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2306,8 +2112,7 @@ defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_go">
 <a href="#state_discoverdn_go" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
@@ -2316,8 +2121,7 @@ defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_formatter_go">
 <a href="#state_formatter_go" style="color: inherit; text-decoration: inherit;">Formatter</a>
@@ -2327,8 +2131,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_go">
 <a href="#state_groupattr_go" style="color: inherit; text-decoration: inherit;">Groupattr</a>
@@ -2338,8 +2141,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_go">
 <a href="#state_groupdn_go" style="color: inherit; text-decoration: inherit;">Groupdn</a>
@@ -2348,8 +2150,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_go">
 <a href="#state_groupfilter_go" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
@@ -2359,8 +2160,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecuretls_go">
 <a href="#state_insecuretls_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
@@ -2370,8 +2170,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastrotationtolerance_go">
 <a href="#state_lastrotationtolerance_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Rotation<wbr>Tolerance</a>
@@ -2381,8 +2180,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_length_go">
 <a href="#state_length_go" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -2392,8 +2190,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_go">
 <a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -2403,8 +2200,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_go">
 <a href="#state_maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -2413,8 +2209,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -2423,8 +2218,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_go">
 <a href="#state_passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -2433,8 +2227,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requesttimeout_go">
 <a href="#state_requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -2444,8 +2237,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttls_go">
 <a href="#state_starttls_go" style="color: inherit; text-decoration: inherit;">Starttls</a>
@@ -2454,8 +2246,7 @@ before returning back an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsmaxversion_go">
 <a href="#state_tlsmaxversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
@@ -2465,8 +2256,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_go">
 <a href="#state_tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
@@ -2476,8 +2266,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -2486,8 +2275,7 @@ before returning back an error.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_go">
 <a href="#state_upndomain_go" style="color: inherit; text-decoration: inherit;">Upndomain</a>
@@ -2496,8 +2284,7 @@ before returning back an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2507,8 +2294,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usepre111groupcnbehavior_go">
 <a href="#state_usepre111groupcnbehavior_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
@@ -2522,8 +2308,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetokengroups_go">
 <a href="#state_usetokengroups_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
@@ -2533,8 +2318,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userattr_go">
 <a href="#state_userattr_go" style="color: inherit; text-decoration: inherit;">Userattr</a>
@@ -2543,8 +2327,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdn_go">
 <a href="#state_userdn_go" style="color: inherit; text-decoration: inherit;">Userdn</a>
@@ -2553,13 +2336,11 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_anonymousgroupsearch_nodejs">
 <a href="#state_anonymousgroupsearch_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>Group<wbr>Search</a>
@@ -2569,8 +2350,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -2580,8 +2360,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binddn_nodejs">
 <a href="#state_binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
@@ -2590,8 +2369,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_nodejs">
 <a href="#state_bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
@@ -2600,8 +2378,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_casesensitivenames_nodejs">
 <a href="#state_casesensitivenames_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive<wbr>Names</a>
@@ -2611,8 +2388,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2622,8 +2398,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttlscert_nodejs">
 <a href="#state_clienttlscert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Cert</a>
@@ -2632,8 +2407,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttlskey_nodejs">
 <a href="#state_clienttlskey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Key</a>
@@ -2642,8 +2416,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_nodejs">
 <a href="#state_defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -2652,8 +2425,7 @@ x509 PEM encoded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denynullbind_nodejs">
 <a href="#state_denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
@@ -2663,8 +2435,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2673,8 +2444,7 @@ defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_nodejs">
 <a href="#state_discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
@@ -2683,8 +2453,7 @@ defaults to true.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_formatter_nodejs">
 <a href="#state_formatter_nodejs" style="color: inherit; text-decoration: inherit;">formatter</a>
@@ -2694,8 +2463,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_nodejs">
 <a href="#state_groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
@@ -2705,8 +2473,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_nodejs">
 <a href="#state_groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
@@ -2715,8 +2482,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_nodejs">
 <a href="#state_groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
@@ -2726,8 +2492,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecuretls_nodejs">
 <a href="#state_insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
@@ -2737,8 +2502,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastrotationtolerance_nodejs">
 <a href="#state_lastrotationtolerance_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Rotation<wbr>Tolerance</a>
@@ -2748,8 +2512,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_length_nodejs">
 <a href="#state_length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
@@ -2759,8 +2522,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_nodejs">
 <a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
@@ -2770,8 +2532,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_nodejs">
 <a href="#state_maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -2780,8 +2541,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -2790,8 +2550,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_nodejs">
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -2800,8 +2559,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requesttimeout_nodejs">
 <a href="#state_requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
@@ -2811,8 +2569,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttls_nodejs">
 <a href="#state_starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
@@ -2821,8 +2578,7 @@ before returning back an error.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsmaxversion_nodejs">
 <a href="#state_tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
@@ -2832,8 +2588,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_nodejs">
 <a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
@@ -2843,8 +2598,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -2853,8 +2607,7 @@ before returning back an error.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_nodejs">
 <a href="#state_upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
@@ -2863,8 +2616,7 @@ before returning back an error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2874,8 +2626,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usepre111groupcnbehavior_nodejs">
 <a href="#state_usepre111groupcnbehavior_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
@@ -2889,8 +2640,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetokengroups_nodejs">
 <a href="#state_usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
@@ -2900,8 +2650,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userattr_nodejs">
 <a href="#state_userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
@@ -2910,8 +2659,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdn_nodejs">
 <a href="#state_userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
@@ -2920,13 +2668,11 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_anonymous_group_search_python">
 <a href="#state_anonymous_group_search_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>group_<wbr>search</a>
@@ -2936,8 +2682,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -2947,8 +2692,7 @@ user to find the group memberships. This will find all security groups including
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binddn_python">
 <a href="#state_binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
@@ -2957,8 +2701,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_python">
 <a href="#state_bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
@@ -2967,8 +2710,7 @@ not begin or end with a `/`. Defaults to `ad`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_case_sensitive_names_python">
 <a href="#state_case_sensitive_names_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive_<wbr>names</a>
@@ -2978,8 +2720,7 @@ not begin or end with a `/`. Defaults to `ad`.
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2989,8 +2730,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_tls_cert_python">
 <a href="#state_client_tls_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>cert</a>
@@ -2999,8 +2739,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_tls_key_python">
 <a href="#state_client_tls_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>key</a>
@@ -3009,8 +2748,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_lease_ttl_seconds_python">
 <a href="#state_default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -3019,8 +2757,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deny_null_bind_python">
 <a href="#state_deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
@@ -3030,8 +2767,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3040,8 +2776,7 @@ defaults to true.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_python">
 <a href="#state_discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
@@ -3050,8 +2785,7 @@ defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_formatter_python">
 <a href="#state_formatter_python" style="color: inherit; text-decoration: inherit;">formatter</a>
@@ -3061,8 +2795,7 @@ defaults to true.
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Formatter is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_python">
 <a href="#state_groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
@@ -3072,8 +2805,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_python">
 <a href="#state_groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
@@ -3082,8 +2814,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_python">
 <a href="#state_groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
@@ -3093,8 +2824,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insecure_tls_python">
 <a href="#state_insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
@@ -3104,8 +2834,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_rotation_tolerance_python">
 <a href="#state_last_rotation_tolerance_python" style="color: inherit; text-decoration: inherit;">last_<wbr>rotation_<wbr>tolerance</a>
@@ -3115,8 +2844,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_length_python">
 <a href="#state_length_python" style="color: inherit; text-decoration: inherit;">length</a>
@@ -3126,8 +2854,7 @@ shows a later rotation, it should be considered out-of-band
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Length is deprecated and password_policy should be used with Vault &gt;= 1.5.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_python">
 <a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
@@ -3137,8 +2864,7 @@ setting is deprecated and should instead use `password_policy`.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_lease_ttl_seconds_python">
 <a href="#state_max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -3147,8 +2873,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -3157,8 +2882,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_policy_python">
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
@@ -3167,8 +2891,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_timeout_python">
 <a href="#state_request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
@@ -3178,8 +2901,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttls_python">
 <a href="#state_starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
@@ -3188,8 +2910,7 @@ before returning back an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_max_version_python">
 <a href="#state_tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
@@ -3199,8 +2920,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_min_version_python">
 <a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
@@ -3210,8 +2930,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -3220,8 +2939,7 @@ before returning back an error.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_python">
 <a href="#state_upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
@@ -3230,8 +2948,7 @@ before returning back an error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3241,8 +2958,7 @@ before returning back an error.
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_pre111_group_cn_behavior_python">
 <a href="#state_use_pre111_group_cn_behavior_python" style="color: inherit; text-decoration: inherit;">use_<wbr>pre111_<wbr>group_<wbr>cn_<wbr>behavior</a>
@@ -3256,8 +2972,7 @@ to not be found due to a change in the resulting name. If set true, the pre-1.1.
 matching group CNs will be used. This is only needed in some upgrade scenarios for backwards
 compatibility. It is enabled by default if the config is upgraded but disabled by default on
 new configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_token_groups_python">
 <a href="#state_use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
@@ -3267,8 +2982,7 @@ new configurations.
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userattr_python">
 <a href="#state_userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
@@ -3277,8 +2991,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdn_python">
 <a href="#state_userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
@@ -3287,8 +3000,7 @@ user to find the group memberships. This will find all security groups including
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

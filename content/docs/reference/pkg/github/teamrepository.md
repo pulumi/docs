@@ -301,8 +301,7 @@ The TeamRepository resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -311,8 +310,7 @@ The TeamRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_csharp">
 <a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -321,8 +319,7 @@ The TeamRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_csharp">
 <a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -332,13 +329,11 @@ The TeamRepository resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -347,8 +342,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_go">
 <a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -357,8 +351,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_go">
 <a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -368,13 +361,11 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -383,8 +374,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_nodejs">
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -393,8 +383,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_nodejs">
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -404,13 +393,11 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -419,8 +406,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="team_id_python">
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -429,8 +415,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_python">
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -440,8 +425,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -452,8 +436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -461,8 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -470,13 +452,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -484,8 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -493,13 +472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -507,8 +484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -516,13 +492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -530,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -539,8 +512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -667,8 +639,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -676,8 +647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_csharp">
 <a href="#state_permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -687,8 +657,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_csharp">
 <a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -697,8 +666,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_csharp">
 <a href="#state_teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -707,13 +675,11 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -721,8 +687,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_go">
 <a href="#state_permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -732,8 +697,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_go">
 <a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -742,8 +706,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_go">
 <a href="#state_teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -752,13 +715,11 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -766,8 +727,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_nodejs">
 <a href="#state_permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -777,8 +737,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_nodejs">
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -787,8 +746,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_nodejs">
 <a href="#state_teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -797,13 +755,11 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -811,8 +767,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_python">
 <a href="#state_permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -822,8 +777,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
     </dt>
     <dd>{{% md %}}The permissions of team members regarding the repository.
 Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pull`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_python">
 <a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -832,8 +786,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository to add to the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_team_id_python">
 <a href="#state_team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -842,8 +795,7 @@ Must be one of `pull`, `triage`, `push`, `maintain`, or `admin`. Defaults to `pu
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub team id or the GitHub team slug
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

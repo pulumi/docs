@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerTarget"
-title_tag: "Resource LoadBalancerTarget | Package Hetzner Cloud"
-meta_desc: "Explore the LoadBalancerTarget resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Adds a target to a Hetzner Cloud Load Balancer."
+title_tag: "hcloud.LoadBalancerTarget"
+meta_desc: "Documentation for the hcloud.LoadBalancerTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -14,11 +14,17 @@ Adds a target to a Hetzner Cloud Load Balancer.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using HCloud = Pulumi.HCloud;
@@ -48,9 +54,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -88,9 +97,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_hcloud as hcloud
@@ -107,9 +119,12 @@ load_balancer_target = hcloud.LoadBalancerTarget("loadBalancerTarget",
     server_id=my_server.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -130,9 +145,16 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LoadBalancerTarget Resource {#create}
@@ -157,9 +179,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -167,9 +187,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -177,9 +195,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -187,10 +203,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -216,9 +229,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -226,9 +237,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,9 +245,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -246,9 +253,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,18 +261,13 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +275,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +283,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,10 +291,7 @@ const loadBalancerTarget = new hcloud.LoadBalancerTarget("loadBalancerTarget", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -313,9 +306,7 @@ The LoadBalancerTarget resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -325,8 +316,7 @@ The LoadBalancerTarget resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -336,8 +326,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -347,8 +336,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelselector_csharp">
 <a href="#labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
@@ -358,8 +346,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -369,8 +356,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateip_csharp">
 <a href="#useprivateip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -381,14 +367,11 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -398,8 +381,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -409,8 +391,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -420,8 +401,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelselector_go">
 <a href="#labelselector_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
@@ -431,8 +411,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -442,8 +421,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateip_go">
 <a href="#useprivateip_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -454,14 +432,11 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -471,8 +446,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -482,8 +456,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -493,8 +466,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelselector_nodejs">
 <a href="#labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
@@ -504,8 +476,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -515,8 +486,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateip_nodejs">
 <a href="#useprivateip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
@@ -527,14 +497,11 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -544,8 +511,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -555,8 +521,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -566,8 +531,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_selector_python">
 <a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
@@ -577,8 +541,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_id_python">
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -588,8 +551,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_private_ip_python">
 <a href="#use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>
@@ -600,8 +562,7 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -612,9 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -622,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -637,14 +593,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -652,14 +605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -667,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -795,9 +744,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ip_csharp">
 <a href="#state_ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -807,8 +754,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelselector_csharp">
 <a href="#state_labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
@@ -818,8 +764,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -829,8 +774,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_csharp">
 <a href="#state_serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -840,8 +784,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -851,8 +794,7 @@ target for this Load Balancer. Required if `type` is `server`
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useprivateip_csharp">
 <a href="#state_useprivateip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -863,14 +805,11 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ip_go">
 <a href="#state_ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -880,8 +819,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelselector_go">
 <a href="#state_labelselector_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
@@ -891,8 +829,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -902,8 +839,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_go">
 <a href="#state_serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -913,8 +849,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -924,8 +859,7 @@ target for this Load Balancer. Required if `type` is `server`
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useprivateip_go">
 <a href="#state_useprivateip_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -936,14 +870,11 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ip_nodejs">
 <a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -953,8 +884,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelselector_nodejs">
 <a href="#state_labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
@@ -964,8 +894,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -975,8 +904,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_nodejs">
 <a href="#state_serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -986,8 +914,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -997,8 +924,7 @@ target for this Load Balancer. Required if `type` is `server`
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useprivateip_nodejs">
 <a href="#state_useprivateip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
@@ -1009,14 +935,11 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ip_python">
 <a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1026,8 +949,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}IP address for an IP Target. Required if
 `type` is `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_selector_python">
 <a href="#state_label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
@@ -1037,8 +959,7 @@ Load Balancer targets. Only allowed if type is `server` or
     </dt>
     <dd>{{% md %}}Label Selector selecting targets
 for this Load Balancer. Required if `type` is `label_selector`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_id_python">
 <a href="#state_load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -1048,8 +969,7 @@ for this Load Balancer. Required if `type` is `label_selector`.
     </dt>
     <dd>{{% md %}}ID of the Load Balancer to which
 the target gets attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_id_python">
 <a href="#state_server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -1059,8 +979,7 @@ the target gets attached.
     </dt>
     <dd>{{% md %}}ID of the server which should be a
 target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1070,8 +989,7 @@ target for this Load Balancer. Required if `type` is `server`
     </dt>
     <dd>{{% md %}}Type of the target. Possible values
 `server`, `label_selector`, `ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_private_ip_python">
 <a href="#state_use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>
@@ -1082,8 +1000,7 @@ target for this Load Balancer. Required if `type` is `server`
     <dd>{{% md %}}use the private IP to connect to
 Load Balancer targets. Only allowed if type is `server` or
 `label_selector`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

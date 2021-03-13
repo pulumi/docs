@@ -390,8 +390,7 @@ The OrderV1 resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -400,8 +399,7 @@ The OrderV1 resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#orderv1meta">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Order<wbr>V1Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -410,8 +408,7 @@ The OrderV1 resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -423,13 +420,11 @@ The OrderV1 resource accepts the following [input]({{< relref "/docs/intro/conce
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -438,8 +433,7 @@ V1 order.
         <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -448,8 +442,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -461,13 +454,11 @@ V1 order.
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -476,8 +467,7 @@ V1 order.
         <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -486,8 +476,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -499,13 +488,11 @@ V1 order.
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -514,8 +501,7 @@ V1 order.
         <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -524,8 +510,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -537,8 +522,7 @@ V1 order.
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -549,8 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="containerref_csharp">
 <a href="#containerref_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
@@ -559,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -569,8 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_csharp">
 <a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -579,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,8 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderref_csharp">
 <a href="#orderref_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Ref</a>
@@ -598,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretref_csharp">
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -608,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -618,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="substatus_csharp">
 <a href="#substatus_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -628,8 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="substatusmessage_csharp">
 <a href="#substatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status<wbr>Message</a>
@@ -638,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -648,13 +622,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="containerref_go">
 <a href="#containerref_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
@@ -663,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -673,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_go">
 <a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -683,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -692,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderref_go">
 <a href="#orderref_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Ref</a>
@@ -702,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretref_go">
 <a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -712,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -722,8 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="substatus_go">
 <a href="#substatus_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -732,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="substatusmessage_go">
 <a href="#substatusmessage_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status<wbr>Message</a>
@@ -742,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -752,13 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="containerref_nodejs">
 <a href="#containerref_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Ref</a>
@@ -767,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -777,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_nodejs">
 <a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -787,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -796,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderref_nodejs">
 <a href="#orderref_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Ref</a>
@@ -806,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretref_nodejs">
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -816,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -826,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="substatus_nodejs">
 <a href="#substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
@@ -836,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="substatusmessage_nodejs">
 <a href="#substatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status<wbr>Message</a>
@@ -846,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -856,13 +808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="container_ref_python">
 <a href="#container_ref_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ref</a>
@@ -871,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -881,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creator_id_python">
 <a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -891,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="order_ref_python">
 <a href="#order_ref_python" style="color: inherit; text-decoration: inherit;">order_<wbr>ref</a>
@@ -910,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_ref_python">
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -920,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -930,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sub_status_python">
 <a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
@@ -940,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sub_status_message_python">
 <a href="#sub_status_message_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status_<wbr>message</a>
@@ -950,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -960,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1088,8 +1028,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerref_csharp">
 <a href="#state_containerref_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
@@ -1098,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1108,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creatorid_csharp">
 <a href="#state_creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -1118,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_csharp">
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1128,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderv1meta">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Order<wbr>V1Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderref_csharp">
 <a href="#state_orderref_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Ref</a>
@@ -1138,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1151,8 +1085,7 @@ The following state arguments are supported:
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretref_csharp">
 <a href="#state_secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -1161,8 +1094,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1171,8 +1103,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substatus_csharp">
 <a href="#state_substatus_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -1181,8 +1112,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substatusmessage_csharp">
 <a href="#state_substatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status<wbr>Message</a>
@@ -1191,8 +1121,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1201,8 +1130,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_csharp">
 <a href="#state_updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1211,13 +1139,11 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerref_go">
 <a href="#state_containerref_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Ref</a>
@@ -1226,8 +1152,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1236,8 +1161,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creatorid_go">
 <a href="#state_creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -1246,8 +1170,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_go">
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1256,8 +1179,7 @@ V1 order.
         <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderref_go">
 <a href="#state_orderref_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Ref</a>
@@ -1266,8 +1188,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1279,8 +1200,7 @@ V1 order.
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretref_go">
 <a href="#state_secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -1289,8 +1209,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1299,8 +1218,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substatus_go">
 <a href="#state_substatus_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -1309,8 +1227,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substatusmessage_go">
 <a href="#state_substatusmessage_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status<wbr>Message</a>
@@ -1319,8 +1236,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1329,8 +1245,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_go">
 <a href="#state_updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1339,13 +1254,11 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerref_nodejs">
 <a href="#state_containerref_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Ref</a>
@@ -1354,8 +1267,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1364,8 +1276,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creatorid_nodejs">
 <a href="#state_creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -1374,8 +1285,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_nodejs">
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1384,8 +1294,7 @@ V1 order.
         <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderref_nodejs">
 <a href="#state_orderref_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Ref</a>
@@ -1394,8 +1303,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1407,8 +1315,7 @@ V1 order.
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretref_nodejs">
 <a href="#state_secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -1417,8 +1324,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1427,8 +1333,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substatus_nodejs">
 <a href="#state_substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
@@ -1437,8 +1342,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_substatusmessage_nodejs">
 <a href="#state_substatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status<wbr>Message</a>
@@ -1447,8 +1351,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1457,8 +1360,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_nodejs">
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1467,13 +1369,11 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_ref_python">
 <a href="#state_container_ref_python" style="color: inherit; text-decoration: inherit;">container_<wbr>ref</a>
@@ -1482,8 +1382,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1492,8 +1391,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the order was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creator_id_python">
 <a href="#state_creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -1502,8 +1400,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creator of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_python">
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1512,8 +1409,7 @@ V1 order.
         <span class="property-type"><a href="#orderv1meta">Order<wbr>V1Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary containing the order metadata used to generate the order. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_ref_python">
 <a href="#state_order_ref_python" style="color: inherit; text-decoration: inherit;">order_<wbr>ref</a>
@@ -1522,8 +1418,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The order reference / where to find the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1535,8 +1430,7 @@ V1 order.
 A KeyManager client is needed to create a order. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_ref_python">
 <a href="#state_secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -1545,8 +1439,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1555,8 +1448,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sub_status_python">
 <a href="#state_sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
@@ -1565,8 +1457,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sub status of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sub_status_message_python">
 <a href="#state_sub_status_message_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status_<wbr>message</a>
@@ -1575,8 +1466,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sub status message of the order.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1585,8 +1475,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of key to be generated. Must be one of `asymmetric`, `key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_python">
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1595,8 +1484,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the order was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1611,8 +1499,7 @@ V1 order.
 <h4 id="orderv1meta">Order<wbr>V1Meta</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1621,8 +1508,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Algorithm to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bitlength_csharp">
 <a href="#bitlength_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Length</a>
@@ -1631,8 +1517,7 @@ V1 order.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Bit lenght of key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1641,8 +1526,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1651,8 +1535,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1661,8 +1544,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret set by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontenttype_csharp">
 <a href="#payloadcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Type</a>
@@ -1671,13 +1553,11 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The media type for the content of the secrets payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1686,8 +1566,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Algorithm to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bitlength_go">
 <a href="#bitlength_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Length</a>
@@ -1696,8 +1575,7 @@ V1 order.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Bit lenght of key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1706,8 +1584,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1716,8 +1593,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1726,8 +1602,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret set by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontenttype_go">
 <a href="#payloadcontenttype_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Type</a>
@@ -1736,13 +1611,11 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The media type for the content of the secrets payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1751,8 +1624,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Algorithm to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bitlength_nodejs">
 <a href="#bitlength_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Length</a>
@@ -1761,8 +1633,7 @@ V1 order.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Bit lenght of key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1771,8 +1642,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1781,8 +1651,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1791,8 +1660,7 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret set by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontenttype_nodejs">
 <a href="#payloadcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Content<wbr>Type</a>
@@ -1801,13 +1669,11 @@ V1 order.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The media type for the content of the secrets payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1816,8 +1682,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Algorithm to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bit_length_python">
 <a href="#bit_length_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>length</a>
@@ -1826,8 +1691,7 @@ V1 order.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Bit lenght of key to be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1836,8 +1700,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a UTC timestamp in ISO 8601 format YYYY-MM-DDTHH:MM:SSZ. If set, the secret will not be available after this time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1846,8 +1709,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode to use for key generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1856,8 +1718,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the secret set by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_content_type_python">
 <a href="#payload_content_type_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>content_<wbr>type</a>
@@ -1866,8 +1727,7 @@ V1 order.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The media type for the content of the secrets payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

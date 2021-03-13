@@ -271,8 +271,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -281,8 +280,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditauthorizationsuccess_csharp">
 <a href="#auditauthorizationsuccess_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Authorization<wbr>Success</a>
@@ -291,8 +289,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditfilter_csharp">
 <a href="#auditfilter_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Filter</a>
@@ -301,8 +298,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -311,13 +307,11 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -326,8 +320,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditauthorizationsuccess_go">
 <a href="#auditauthorizationsuccess_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Authorization<wbr>Success</a>
@@ -336,8 +329,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditfilter_go">
 <a href="#auditfilter_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Filter</a>
@@ -346,8 +338,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -356,13 +347,11 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -371,8 +360,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditauthorizationsuccess_nodejs">
 <a href="#auditauthorizationsuccess_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Authorization<wbr>Success</a>
@@ -381,8 +369,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditfilter_nodejs">
 <a href="#auditfilter_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Filter</a>
@@ -391,8 +378,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -401,13 +387,11 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -416,8 +400,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audit_authorization_success_python">
 <a href="#audit_authorization_success_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>authorization_<wbr>success</a>
@@ -426,8 +409,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audit_filter_python">
 <a href="#audit_filter_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>filter</a>
@@ -436,8 +418,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -446,8 +427,7 @@ The Auditing resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -458,8 +438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configurationtype_csharp">
 <a href="#configurationtype_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -471,8 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -480,13 +458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configurationtype_go">
 <a href="#configurationtype_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -498,8 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -507,13 +482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configurationtype_nodejs">
 <a href="#configurationtype_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Type</a>
@@ -525,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -534,13 +506,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configuration_type_python">
 <a href="#configuration_type_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>type</a>
@@ -552,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -689,8 +657,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auditauthorizationsuccess_csharp">
 <a href="#state_auditauthorizationsuccess_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Authorization<wbr>Success</a>
@@ -699,8 +666,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auditfilter_csharp">
 <a href="#state_auditfilter_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Filter</a>
@@ -709,8 +675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationtype_csharp">
 <a href="#state_configurationtype_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -722,8 +687,7 @@ The following state arguments are supported:
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -732,8 +696,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -742,13 +705,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auditauthorizationsuccess_go">
 <a href="#state_auditauthorizationsuccess_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Authorization<wbr>Success</a>
@@ -757,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auditfilter_go">
 <a href="#state_auditfilter_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Filter</a>
@@ -767,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationtype_go">
 <a href="#state_configurationtype_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Type</a>
@@ -780,8 +739,7 @@ The following state arguments are supported:
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -790,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -800,13 +757,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auditauthorizationsuccess_nodejs">
 <a href="#state_auditauthorizationsuccess_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Authorization<wbr>Success</a>
@@ -815,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auditfilter_nodejs">
 <a href="#state_auditfilter_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Filter</a>
@@ -825,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationtype_nodejs">
 <a href="#state_configurationtype_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Type</a>
@@ -838,8 +791,7 @@ The following state arguments are supported:
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -848,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -858,13 +809,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_audit_authorization_success_python">
 <a href="#state_audit_authorization_success_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>authorization_<wbr>success</a>
@@ -873,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}JSON-formatted audit filter used by the project
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audit_filter_python">
 <a href="#state_audit_filter_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>filter</a>
@@ -883,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the auditing system captures successful authentication attempts for audit filters using the "atype" : "authCheck" auditing event. For more information, see auditAuthorizationSuccess
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_type_python">
 <a href="#state_configuration_type_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>type</a>
@@ -896,8 +843,7 @@ The following state arguments are supported:
 * NONE - auditing not configured for the project.
 * FILTER_BUILDER - auditing configured via Atlas UI filter builder.
 * FILTER_JSON - auditing configured via Atlas custom filter or API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -906,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether or not the project associated with the {project_id} has database auditing enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -916,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to configure auditing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

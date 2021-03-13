@@ -365,8 +365,7 @@ The Shovel resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_csharp">
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -376,8 +375,7 @@ The Shovel resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_csharp">
 <a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -386,8 +384,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -396,13 +393,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_go">
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -412,8 +407,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_go">
 <a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -422,8 +416,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -432,13 +425,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_nodejs">
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
@@ -448,8 +439,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_nodejs">
 <a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -458,8 +448,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -468,13 +457,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_python">
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
@@ -484,8 +471,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_python">
 <a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -494,8 +480,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -504,8 +489,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -516,8 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -525,13 +508,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -539,13 +520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -553,13 +532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -567,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -695,8 +671,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_info_csharp">
 <a href="#state_info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -706,8 +681,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -716,8 +690,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
 <a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -726,13 +699,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_info_go">
 <a href="#state_info_go" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -742,8 +713,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -752,8 +722,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
 <a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -762,13 +731,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_info_nodejs">
 <a href="#state_info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
@@ -778,8 +745,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -788,8 +754,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
 <a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -798,13 +763,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_info_python">
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">info</a>
@@ -814,8 +777,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the shovel. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -824,8 +786,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shovel name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
 <a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -834,8 +795,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -850,8 +810,7 @@ described below.
 <h4 id="shovelinfo">Shovel<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationuri_csharp">
 <a href="#destinationuri_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Uri</a>
@@ -860,8 +819,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -870,8 +828,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ackmode_csharp">
 <a href="#ackmode_csharp" style="color: inherit; text-decoration: inherit;">Ack<wbr>Mode</a>
@@ -881,8 +838,7 @@ described below.
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addforwardheaders_csharp">
 <a href="#addforwardheaders_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Forward<wbr>Headers</a>
@@ -892,8 +848,7 @@ Defaults to `on-confirm`.
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_csharp">
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -903,8 +858,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationexchange_csharp">
 <a href="#destinationexchange_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange</a>
@@ -914,8 +868,7 @@ Defaults to `never`.
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationexchangekey_csharp">
 <a href="#destinationexchangekey_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange<wbr>Key</a>
@@ -924,8 +877,7 @@ Either this or destination_queue must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationqueue_csharp">
 <a href="#destinationqueue_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Queue</a>
@@ -935,8 +887,7 @@ Either this or destination_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefetchcount_csharp">
 <a href="#prefetchcount_csharp" style="color: inherit; text-decoration: inherit;">Prefetch<wbr>Count</a>
@@ -946,8 +897,7 @@ Either this or destination_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reconnectdelay_csharp">
 <a href="#reconnectdelay_csharp" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Delay</a>
@@ -957,8 +907,7 @@ Defaults to `1000`.
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceexchange_csharp">
 <a href="#sourceexchange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange</a>
@@ -968,8 +917,7 @@ Defaults to `1`.
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceexchangekey_csharp">
 <a href="#sourceexchangekey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange<wbr>Key</a>
@@ -978,8 +926,7 @@ Either this or source_queue must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcequeue_csharp">
 <a href="#sourcequeue_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Queue</a>
@@ -989,13 +936,11 @@ Either this or source_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationuri_go">
 <a href="#destinationuri_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Uri</a>
@@ -1004,8 +949,7 @@ Either this or source_exchange must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1014,8 +958,7 @@ Either this or source_exchange must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ackmode_go">
 <a href="#ackmode_go" style="color: inherit; text-decoration: inherit;">Ack<wbr>Mode</a>
@@ -1025,8 +968,7 @@ Either this or source_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addforwardheaders_go">
 <a href="#addforwardheaders_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Forward<wbr>Headers</a>
@@ -1036,8 +978,7 @@ Defaults to `on-confirm`.
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_go">
 <a href="#deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1047,8 +988,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationexchange_go">
 <a href="#destinationexchange_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange</a>
@@ -1058,8 +998,7 @@ Defaults to `never`.
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationexchangekey_go">
 <a href="#destinationexchangekey_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Exchange<wbr>Key</a>
@@ -1068,8 +1007,7 @@ Either this or destination_queue must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationqueue_go">
 <a href="#destinationqueue_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Queue</a>
@@ -1079,8 +1017,7 @@ Either this or destination_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefetchcount_go">
 <a href="#prefetchcount_go" style="color: inherit; text-decoration: inherit;">Prefetch<wbr>Count</a>
@@ -1090,8 +1027,7 @@ Either this or destination_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reconnectdelay_go">
 <a href="#reconnectdelay_go" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Delay</a>
@@ -1101,8 +1037,7 @@ Defaults to `1000`.
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceexchange_go">
 <a href="#sourceexchange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange</a>
@@ -1112,8 +1047,7 @@ Defaults to `1`.
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceexchangekey_go">
 <a href="#sourceexchangekey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Exchange<wbr>Key</a>
@@ -1122,8 +1056,7 @@ Either this or source_queue must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcequeue_go">
 <a href="#sourcequeue_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Queue</a>
@@ -1133,13 +1066,11 @@ Either this or source_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationuri_nodejs">
 <a href="#destinationuri_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Uri</a>
@@ -1148,8 +1079,7 @@ Either this or source_exchange must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
@@ -1158,8 +1088,7 @@ Either this or source_exchange must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ackmode_nodejs">
 <a href="#ackmode_nodejs" style="color: inherit; text-decoration: inherit;">ack<wbr>Mode</a>
@@ -1169,8 +1098,7 @@ Either this or source_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addforwardheaders_nodejs">
 <a href="#addforwardheaders_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Forward<wbr>Headers</a>
@@ -1180,8 +1108,7 @@ Defaults to `on-confirm`.
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_nodejs">
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
@@ -1191,8 +1118,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationexchange_nodejs">
 <a href="#destinationexchange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Exchange</a>
@@ -1202,8 +1128,7 @@ Defaults to `never`.
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationexchangekey_nodejs">
 <a href="#destinationexchangekey_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Exchange<wbr>Key</a>
@@ -1212,8 +1137,7 @@ Either this or destination_queue must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationqueue_nodejs">
 <a href="#destinationqueue_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Queue</a>
@@ -1223,8 +1147,7 @@ Either this or destination_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefetchcount_nodejs">
 <a href="#prefetchcount_nodejs" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Count</a>
@@ -1234,8 +1157,7 @@ Either this or destination_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reconnectdelay_nodejs">
 <a href="#reconnectdelay_nodejs" style="color: inherit; text-decoration: inherit;">reconnect<wbr>Delay</a>
@@ -1245,8 +1167,7 @@ Defaults to `1000`.
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceexchange_nodejs">
 <a href="#sourceexchange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Exchange</a>
@@ -1256,8 +1177,7 @@ Defaults to `1`.
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceexchangekey_nodejs">
 <a href="#sourceexchangekey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Exchange<wbr>Key</a>
@@ -1266,8 +1186,7 @@ Either this or source_queue must be specified but not both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcequeue_nodejs">
 <a href="#sourcequeue_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Queue</a>
@@ -1277,13 +1196,11 @@ Either this or source_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_uri_python">
 <a href="#destination_uri_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uri</a>
@@ -1292,8 +1209,7 @@ Either this or source_exchange must be specified but not both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the destination .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
@@ -1302,8 +1218,7 @@ Either this or source_exchange must be specified but not both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amqp uri for the source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ack_mode_python">
 <a href="#ack_mode_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>mode</a>
@@ -1313,8 +1228,7 @@ Either this or source_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}Determines how the shovel should acknowledge messages.
 Defaults to `on-confirm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_forward_headers_python">
 <a href="#add_forward_headers_python" style="color: inherit; text-decoration: inherit;">add_<wbr>forward_<wbr>headers</a>
@@ -1324,8 +1238,7 @@ Defaults to `on-confirm`.
     </dt>
     <dd>{{% md %}}Whether to amqp shovel headers.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_after_python">
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
@@ -1335,8 +1248,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Determines when (if ever) the shovel should delete itself .
 Defaults to `never`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_exchange_python">
 <a href="#destination_exchange_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>exchange</a>
@@ -1346,8 +1258,7 @@ Defaults to `never`.
     </dt>
     <dd>{{% md %}}The exchange to which messages should be published.
 Either this or destination_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_exchange_key_python">
 <a href="#destination_exchange_key_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>exchange_<wbr>key</a>
@@ -1356,8 +1267,7 @@ Either this or destination_queue must be specified but not both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The routing key when using destination_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_queue_python">
 <a href="#destination_queue_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>queue</a>
@@ -1367,8 +1277,7 @@ Either this or destination_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue to which messages should be published.
 Either this or destination_exchange must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefetch_count_python">
 <a href="#prefetch_count_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>count</a>
@@ -1378,8 +1287,7 @@ Either this or destination_exchange must be specified but not both.
     </dt>
     <dd>{{% md %}}The maximum number of unacknowledged messages copied over a shovel at any one time.
 Defaults to `1000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reconnect_delay_python">
 <a href="#reconnect_delay_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>delay</a>
@@ -1389,8 +1297,7 @@ Defaults to `1000`.
     </dt>
     <dd>{{% md %}}The duration in seconds to reconnect to a broker after disconnected.
 Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_exchange_python">
 <a href="#source_exchange_python" style="color: inherit; text-decoration: inherit;">source_<wbr>exchange</a>
@@ -1400,8 +1307,7 @@ Defaults to `1`.
     </dt>
     <dd>{{% md %}}The exchange from which to consume.
 Either this or source_queue must be specified but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_exchange_key_python">
 <a href="#source_exchange_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>exchange_<wbr>key</a>
@@ -1410,8 +1316,7 @@ Either this or source_queue must be specified but not both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The routing key when using source_exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_queue_python">
 <a href="#source_queue_python" style="color: inherit; text-decoration: inherit;">source_<wbr>queue</a>
@@ -1421,8 +1326,7 @@ Either this or source_queue must be specified but not both.
     </dt>
     <dd>{{% md %}}The queue from which to consume.
 Either this or source_exchange must be specified but not both.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

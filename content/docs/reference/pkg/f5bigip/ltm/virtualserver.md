@@ -393,8 +393,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -403,8 +402,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -413,8 +411,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -423,8 +420,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprofiles_csharp">
 <a href="#clientprofiles_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Profiles</a>
@@ -433,8 +429,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpersistenceprofile_csharp">
 <a href="#defaultpersistenceprofile_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Persistence<wbr>Profile</a>
@@ -442,8 +437,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -452,8 +446,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackpersistenceprofile_csharp">
 <a href="#fallbackpersistenceprofile_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Persistence<wbr>Profile</a>
@@ -462,8 +455,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -472,8 +464,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="irules_csharp">
 <a href="#irules_csharp" style="color: inherit; text-decoration: inherit;">Irules</a>
@@ -482,8 +473,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_csharp">
 <a href="#mask_csharp" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -492,8 +482,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistenceprofiles_csharp">
 <a href="#persistenceprofiles_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Profiles</a>
@@ -502,8 +491,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -511,8 +499,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_csharp">
 <a href="#pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -521,8 +508,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profiles_csharp">
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
@@ -531,8 +517,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverprofiles_csharp">
 <a href="#serverprofiles_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -541,8 +526,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_csharp">
 <a href="#snatpool_csharp" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -551,8 +535,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -561,8 +544,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresstranslation_csharp">
 <a href="#sourceaddresstranslation_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Translation</a>
@@ -571,8 +553,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -581,8 +562,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translateaddress_csharp">
 <a href="#translateaddress_csharp" style="color: inherit; text-decoration: inherit;">Translate<wbr>Address</a>
@@ -591,8 +571,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translateport_csharp">
 <a href="#translateport_csharp" style="color: inherit; text-decoration: inherit;">Translate<wbr>Port</a>
@@ -601,8 +580,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_csharp">
 <a href="#vlans_csharp" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -611,8 +589,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansenabled_csharp">
 <a href="#vlansenabled_csharp" style="color: inherit; text-decoration: inherit;">Vlans<wbr>Enabled</a>
@@ -621,13 +598,11 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -636,8 +611,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -646,8 +620,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -656,8 +629,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprofiles_go">
 <a href="#clientprofiles_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Profiles</a>
@@ -666,8 +638,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpersistenceprofile_go">
 <a href="#defaultpersistenceprofile_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Persistence<wbr>Profile</a>
@@ -675,8 +646,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -685,8 +655,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackpersistenceprofile_go">
 <a href="#fallbackpersistenceprofile_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Persistence<wbr>Profile</a>
@@ -695,8 +664,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -705,8 +673,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="irules_go">
 <a href="#irules_go" style="color: inherit; text-decoration: inherit;">Irules</a>
@@ -715,8 +682,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_go">
 <a href="#mask_go" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -725,8 +691,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistenceprofiles_go">
 <a href="#persistenceprofiles_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Profiles</a>
@@ -735,8 +700,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -744,8 +708,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_go">
 <a href="#pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -754,8 +717,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profiles_go">
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
@@ -764,8 +726,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverprofiles_go">
 <a href="#serverprofiles_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -774,8 +735,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_go">
 <a href="#snatpool_go" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -784,8 +744,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -794,8 +753,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresstranslation_go">
 <a href="#sourceaddresstranslation_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Translation</a>
@@ -804,8 +762,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -814,8 +771,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translateaddress_go">
 <a href="#translateaddress_go" style="color: inherit; text-decoration: inherit;">Translate<wbr>Address</a>
@@ -824,8 +780,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translateport_go">
 <a href="#translateport_go" style="color: inherit; text-decoration: inherit;">Translate<wbr>Port</a>
@@ -834,8 +789,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_go">
 <a href="#vlans_go" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -844,8 +798,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansenabled_go">
 <a href="#vlansenabled_go" style="color: inherit; text-decoration: inherit;">Vlans<wbr>Enabled</a>
@@ -854,13 +807,11 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -869,8 +820,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +829,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -889,8 +838,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprofiles_nodejs">
 <a href="#clientprofiles_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Profiles</a>
@@ -899,8 +847,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpersistenceprofile_nodejs">
 <a href="#defaultpersistenceprofile_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Persistence<wbr>Profile</a>
@@ -908,8 +855,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -918,8 +864,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackpersistenceprofile_nodejs">
 <a href="#fallbackpersistenceprofile_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Persistence<wbr>Profile</a>
@@ -928,8 +873,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -938,8 +882,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="irules_nodejs">
 <a href="#irules_nodejs" style="color: inherit; text-decoration: inherit;">irules</a>
@@ -948,8 +891,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_nodejs">
 <a href="#mask_nodejs" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -958,8 +900,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistenceprofiles_nodejs">
 <a href="#persistenceprofiles_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Profiles</a>
@@ -968,8 +909,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -977,8 +917,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_nodejs">
 <a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -987,8 +926,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profiles_nodejs">
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
@@ -997,8 +935,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverprofiles_nodejs">
 <a href="#serverprofiles_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Profiles</a>
@@ -1007,8 +944,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_nodejs">
 <a href="#snatpool_nodejs" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -1017,8 +953,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1027,8 +962,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresstranslation_nodejs">
 <a href="#sourceaddresstranslation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Translation</a>
@@ -1037,8 +971,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1047,8 +980,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translateaddress_nodejs">
 <a href="#translateaddress_nodejs" style="color: inherit; text-decoration: inherit;">translate<wbr>Address</a>
@@ -1057,8 +989,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translateport_nodejs">
 <a href="#translateport_nodejs" style="color: inherit; text-decoration: inherit;">translate<wbr>Port</a>
@@ -1067,8 +998,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_nodejs">
 <a href="#vlans_nodejs" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -1077,8 +1007,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansenabled_nodejs">
 <a href="#vlansenabled_nodejs" style="color: inherit; text-decoration: inherit;">vlans<wbr>Enabled</a>
@@ -1087,13 +1016,11 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1102,8 +1029,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1112,8 +1038,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1122,8 +1047,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_profiles_python">
 <a href="#client_profiles_python" style="color: inherit; text-decoration: inherit;">client_<wbr>profiles</a>
@@ -1132,8 +1056,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_persistence_profile_python">
 <a href="#default_persistence_profile_python" style="color: inherit; text-decoration: inherit;">default_<wbr>persistence_<wbr>profile</a>
@@ -1141,8 +1064,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1151,8 +1073,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_persistence_profile_python">
 <a href="#fallback_persistence_profile_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>persistence_<wbr>profile</a>
@@ -1161,8 +1082,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -1171,8 +1091,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="irules_python">
 <a href="#irules_python" style="color: inherit; text-decoration: inherit;">irules</a>
@@ -1181,8 +1100,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_python">
 <a href="#mask_python" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -1191,8 +1109,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_profiles_python">
 <a href="#persistence_profiles_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>profiles</a>
@@ -1201,8 +1118,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1210,8 +1126,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_python">
 <a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -1220,8 +1135,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profiles_python">
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
@@ -1230,8 +1144,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_profiles_python">
 <a href="#server_profiles_python" style="color: inherit; text-decoration: inherit;">server_<wbr>profiles</a>
@@ -1240,8 +1153,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_python">
 <a href="#snatpool_python" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -1250,8 +1162,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1260,8 +1171,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_address_translation_python">
 <a href="#source_address_translation_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>translation</a>
@@ -1270,8 +1180,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1280,8 +1189,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translate_address_python">
 <a href="#translate_address_python" style="color: inherit; text-decoration: inherit;">translate_<wbr>address</a>
@@ -1290,8 +1198,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translate_port_python">
 <a href="#translate_port_python" style="color: inherit; text-decoration: inherit;">translate_<wbr>port</a>
@@ -1300,8 +1207,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_python">
 <a href="#vlans_python" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -1310,8 +1216,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_enabled_python">
 <a href="#vlans_enabled_python" style="color: inherit; text-decoration: inherit;">vlans_<wbr>enabled</a>
@@ -1320,8 +1225,7 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1332,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1341,13 +1244,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1355,13 +1256,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1369,13 +1268,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1383,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1511,8 +1407,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientprofiles_csharp">
 <a href="#state_clientprofiles_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Profiles</a>
@@ -1521,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpersistenceprofile_csharp">
 <a href="#state_defaultpersistenceprofile_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Persistence<wbr>Profile</a>
@@ -1530,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1540,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1550,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackpersistenceprofile_csharp">
 <a href="#state_fallbackpersistenceprofile_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Persistence<wbr>Profile</a>
@@ -1560,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_csharp">
 <a href="#state_ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1570,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_irules_csharp">
 <a href="#state_irules_csharp" style="color: inherit; text-decoration: inherit;">Irules</a>
@@ -1580,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_csharp">
 <a href="#state_mask_csharp" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -1590,8 +1478,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1600,8 +1487,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistenceprofiles_csharp">
 <a href="#state_persistenceprofiles_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Profiles</a>
@@ -1610,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1619,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_csharp">
 <a href="#state_pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -1629,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1639,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profiles_csharp">
 <a href="#state_profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
@@ -1649,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverprofiles_csharp">
 <a href="#state_serverprofiles_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -1659,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_csharp">
 <a href="#state_snatpool_csharp" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -1669,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1679,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceaddresstranslation_csharp">
 <a href="#state_sourceaddresstranslation_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Translation</a>
@@ -1689,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1699,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translateaddress_csharp">
 <a href="#state_translateaddress_csharp" style="color: inherit; text-decoration: inherit;">Translate<wbr>Address</a>
@@ -1709,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translateport_csharp">
 <a href="#state_translateport_csharp" style="color: inherit; text-decoration: inherit;">Translate<wbr>Port</a>
@@ -1719,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_csharp">
 <a href="#state_vlans_csharp" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -1729,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansenabled_csharp">
 <a href="#state_vlansenabled_csharp" style="color: inherit; text-decoration: inherit;">Vlans<wbr>Enabled</a>
@@ -1739,13 +1612,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientprofiles_go">
 <a href="#state_clientprofiles_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Profiles</a>
@@ -1754,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpersistenceprofile_go">
 <a href="#state_defaultpersistenceprofile_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Persistence<wbr>Profile</a>
@@ -1763,8 +1633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1773,8 +1642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1783,8 +1651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackpersistenceprofile_go">
 <a href="#state_fallbackpersistenceprofile_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Persistence<wbr>Profile</a>
@@ -1793,8 +1660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_go">
 <a href="#state_ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1803,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_irules_go">
 <a href="#state_irules_go" style="color: inherit; text-decoration: inherit;">Irules</a>
@@ -1813,8 +1678,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_go">
 <a href="#state_mask_go" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -1823,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1833,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistenceprofiles_go">
 <a href="#state_persistenceprofiles_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Profiles</a>
@@ -1843,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1852,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_go">
 <a href="#state_pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -1862,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1872,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profiles_go">
 <a href="#state_profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
@@ -1882,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverprofiles_go">
 <a href="#state_serverprofiles_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -1892,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_go">
 <a href="#state_snatpool_go" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -1902,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1912,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceaddresstranslation_go">
 <a href="#state_sourceaddresstranslation_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Address<wbr>Translation</a>
@@ -1922,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1932,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translateaddress_go">
 <a href="#state_translateaddress_go" style="color: inherit; text-decoration: inherit;">Translate<wbr>Address</a>
@@ -1942,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translateport_go">
 <a href="#state_translateport_go" style="color: inherit; text-decoration: inherit;">Translate<wbr>Port</a>
@@ -1952,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_go">
 <a href="#state_vlans_go" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -1962,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansenabled_go">
 <a href="#state_vlansenabled_go" style="color: inherit; text-decoration: inherit;">Vlans<wbr>Enabled</a>
@@ -1972,13 +1821,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientprofiles_nodejs">
 <a href="#state_clientprofiles_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Profiles</a>
@@ -1987,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpersistenceprofile_nodejs">
 <a href="#state_defaultpersistenceprofile_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Persistence<wbr>Profile</a>
@@ -1996,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2006,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -2016,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackpersistenceprofile_nodejs">
 <a href="#state_fallbackpersistenceprofile_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Persistence<wbr>Profile</a>
@@ -2026,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_nodejs">
 <a href="#state_ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -2036,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_irules_nodejs">
 <a href="#state_irules_nodejs" style="color: inherit; text-decoration: inherit;">irules</a>
@@ -2046,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_nodejs">
 <a href="#state_mask_nodejs" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -2056,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2066,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistenceprofiles_nodejs">
 <a href="#state_persistenceprofiles_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Profiles</a>
@@ -2076,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -2085,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_nodejs">
 <a href="#state_pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -2095,8 +1931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2105,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profiles_nodejs">
 <a href="#state_profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
@@ -2115,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverprofiles_nodejs">
 <a href="#state_serverprofiles_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Profiles</a>
@@ -2125,8 +1958,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_nodejs">
 <a href="#state_snatpool_nodejs" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -2135,8 +1967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2145,8 +1976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceaddresstranslation_nodejs">
 <a href="#state_sourceaddresstranslation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Translation</a>
@@ -2155,8 +1985,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2165,8 +1994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translateaddress_nodejs">
 <a href="#state_translateaddress_nodejs" style="color: inherit; text-decoration: inherit;">translate<wbr>Address</a>
@@ -2175,8 +2003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translateport_nodejs">
 <a href="#state_translateport_nodejs" style="color: inherit; text-decoration: inherit;">translate<wbr>Port</a>
@@ -2185,8 +2012,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_nodejs">
 <a href="#state_vlans_nodejs" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -2195,8 +2021,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansenabled_nodejs">
 <a href="#state_vlansenabled_nodejs" style="color: inherit; text-decoration: inherit;">vlans<wbr>Enabled</a>
@@ -2205,13 +2030,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_client_profiles_python">
 <a href="#state_client_profiles_python" style="color: inherit; text-decoration: inherit;">client_<wbr>profiles</a>
@@ -2220,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of client context profiles associated on the virtual server. Not mutually exclusive with profiles and server_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_persistence_profile_python">
 <a href="#state_default_persistence_profile_python" style="color: inherit; text-decoration: inherit;">default_<wbr>persistence_<wbr>profile</a>
@@ -2229,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2239,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -2249,8 +2069,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_persistence_profile_python">
 <a href="#state_fallback_persistence_profile_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>persistence_<wbr>profile</a>
@@ -2259,8 +2078,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fallback persistence profile for the Virtual Server to use when the default persistence profile is not available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_protocol_python">
 <a href="#state_ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -2269,8 +2087,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the IP protocol to use with the the virtual server (all, tcp, or udp are valid)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_irules_python">
 <a href="#state_irules_python" style="color: inherit; text-decoration: inherit;">irules</a>
@@ -2279,8 +2096,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The iRules list you want run on this virtual server. iRules help automate the intercepting, processing, and routing of application traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_python">
 <a href="#state_mask_python" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -2289,8 +2105,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mask can either be in CIDR notation or decimal, i.e.: 24 or 255.255.255.0. A CIDR mask of 0 is the same as 0.0.0.0
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2299,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_profiles_python">
 <a href="#state_persistence_profiles_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>profiles</a>
@@ -2309,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of persistence profiles associated with the Virtual Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -2318,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_python">
 <a href="#state_pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -2328,8 +2140,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default pool name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2338,8 +2149,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listen port for the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profiles_python">
 <a href="#state_profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
@@ -2348,8 +2158,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of profiles associated both client and server contexts on the virtual server. This includes protocol, ssl, http, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_profiles_python">
 <a href="#state_server_profiles_python" style="color: inherit; text-decoration: inherit;">server_<wbr>profiles</a>
@@ -2358,8 +2167,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of server context profiles associated on the virtual server. Not mutually exclusive with profiles and client_profiles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_python">
 <a href="#state_snatpool_python" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -2368,8 +2176,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of an existing SNAT pool that you want the virtual server to use to implement selective and intelligent SNATs. DEPRECATED - see Virtual Server Property Groups source-address-translation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2378,8 +2185,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an IP address or network from which the virtual server will accept traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_address_translation_python">
 <a href="#state_source_address_translation_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>translation</a>
@@ -2388,8 +2194,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be either omitted for none or the values automap or snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2398,8 +2203,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual server and its resources are available for load balancing. The default is Enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translate_address_python">
 <a href="#state_translate_address_python" style="color: inherit; text-decoration: inherit;">translate_<wbr>address</a>
@@ -2408,8 +2212,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables address translation for the virtual server. Turn address translation off for a virtual server if you want to use the virtual server to load balance connections to any address. This option is useful when the system is load balancing devices that have the same IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translate_port_python">
 <a href="#state_translate_port_python" style="color: inherit; text-decoration: inherit;">translate_<wbr>port</a>
@@ -2418,8 +2221,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables port translation. Turn port translation off for a virtual server if you want to use the virtual server to load balance connections to any service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_python">
 <a href="#state_vlans_python" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -2428,8 +2230,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The virtual server is enabled/disabled on this set of VLANs. See vlans-disabled and vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_enabled_python">
 <a href="#state_vlans_enabled_python" style="color: inherit; text-decoration: inherit;">vlans_<wbr>enabled</a>
@@ -2438,8 +2239,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the virtual server on the VLANs specified by the VLANs option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -580,8 +580,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -593,8 +592,7 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -604,8 +602,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -616,8 +613,7 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -629,8 +625,7 @@ creation time.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -645,8 +640,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_csharp">
 <a href="#privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -656,8 +650,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipv6googleaccess_csharp">
 <a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
@@ -666,8 +659,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -677,8 +669,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_csharp">
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -693,8 +684,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -703,8 +693,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -718,8 +707,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryipranges_csharp">
 <a href="#secondaryipranges_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
@@ -731,13 +719,11 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -749,8 +735,7 @@ to either primary or secondary ranges. Structure is documented below.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -760,8 +745,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -772,8 +756,7 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -785,8 +768,7 @@ creation time.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -801,8 +783,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_go">
 <a href="#privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -812,8 +793,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipv6googleaccess_go">
 <a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
@@ -822,8 +802,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -833,8 +812,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_go">
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -849,8 +827,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -859,8 +836,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -874,8 +850,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryipranges_go">
 <a href="#secondaryipranges_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
@@ -887,13 +862,11 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
@@ -905,8 +878,7 @@ to either primary or secondary ranges. Structure is documented below.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -916,8 +888,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -928,8 +899,7 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -941,8 +911,7 @@ creation time.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -957,8 +926,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_nodejs">
 <a href="#privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -968,8 +936,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipv6googleaccess_nodejs">
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
@@ -978,8 +945,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -989,8 +955,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_nodejs">
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -1005,8 +970,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1015,8 +979,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1030,8 +993,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryipranges_nodejs">
 <a href="#secondaryipranges_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Ranges</a>
@@ -1043,13 +1005,11 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
@@ -1061,8 +1021,7 @@ to either primary or secondary ranges. Structure is documented below.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1072,8 +1031,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1084,8 +1042,7 @@ Only networks that are in the distributed mode can have subnetworks.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -1097,8 +1054,7 @@ creation time.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1113,8 +1069,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_google_access_python">
 <a href="#private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>
@@ -1124,8 +1079,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ipv6_google_access_python">
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
@@ -1134,8 +1088,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1145,8 +1098,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_python">
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -1161,8 +1113,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1171,8 +1122,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1186,8 +1136,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_ip_ranges_python">
 <a href="#secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
@@ -1199,8 +1148,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1211,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1221,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1231,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="gatewayaddress_csharp">
 <a href="#gatewayaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
@@ -1241,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1250,8 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1260,13 +1203,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1275,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1285,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="gatewayaddress_go">
 <a href="#gatewayaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
@@ -1295,8 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1304,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1314,13 +1251,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1329,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1339,8 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="gatewayaddress_nodejs">
 <a href="#gatewayaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Address</a>
@@ -1349,8 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1358,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1368,13 +1299,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1383,8 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1393,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="gateway_address_python">
 <a href="#gateway_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>address</a>
@@ -1403,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1412,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1422,8 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1550,8 +1474,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1560,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1572,8 +1494,7 @@ The following state arguments are supported:
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1582,8 +1503,7 @@ creation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayaddress_csharp">
 <a href="#state_gatewayaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
@@ -1592,8 +1512,7 @@ creation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipcidrrange_csharp">
 <a href="#state_ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -1605,8 +1524,7 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
 <a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1618,8 +1536,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1634,8 +1551,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1645,8 +1561,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipgoogleaccess_csharp">
 <a href="#state_privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -1656,8 +1571,7 @@ Only networks that are in the distributed mode can have subnetworks.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipv6googleaccess_csharp">
 <a href="#state_privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
@@ -1666,8 +1580,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1677,8 +1590,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_csharp">
 <a href="#state_purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -1693,8 +1605,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1703,8 +1614,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1718,8 +1628,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryipranges_csharp">
 <a href="#state_secondaryipranges_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
@@ -1731,8 +1640,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1741,13 +1649,11 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1756,8 +1662,7 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1768,8 +1673,7 @@ to either primary or secondary ranges. Structure is documented below.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1778,8 +1682,7 @@ creation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayaddress_go">
 <a href="#state_gatewayaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
@@ -1788,8 +1691,7 @@ creation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipcidrrange_go">
 <a href="#state_ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -1801,8 +1703,7 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1814,8 +1715,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1830,8 +1730,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1841,8 +1740,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipgoogleaccess_go">
 <a href="#state_privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -1852,8 +1750,7 @@ Only networks that are in the distributed mode can have subnetworks.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipv6googleaccess_go">
 <a href="#state_privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
@@ -1862,8 +1759,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1873,8 +1769,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_go">
 <a href="#state_purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -1889,8 +1784,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1899,8 +1793,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1914,8 +1807,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryipranges_go">
 <a href="#state_secondaryipranges_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
@@ -1927,8 +1819,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1937,13 +1828,11 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1952,8 +1841,7 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1964,8 +1852,7 @@ to either primary or secondary ranges. Structure is documented below.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1974,8 +1861,7 @@ creation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayaddress_nodejs">
 <a href="#state_gatewayaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Address</a>
@@ -1984,8 +1870,7 @@ creation time.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipcidrrange_nodejs">
 <a href="#state_ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
@@ -1997,8 +1882,7 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -2010,8 +1894,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2026,8 +1909,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2037,8 +1919,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipgoogleaccess_nodejs">
 <a href="#state_privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
@@ -2048,8 +1929,7 @@ Only networks that are in the distributed mode can have subnetworks.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipv6googleaccess_nodejs">
 <a href="#state_privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
@@ -2058,8 +1938,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2069,8 +1948,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_nodejs">
 <a href="#state_purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -2085,8 +1963,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2095,8 +1972,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2110,8 +1986,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryipranges_nodejs">
 <a href="#state_secondaryipranges_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Ranges</a>
@@ -2123,8 +1998,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2133,13 +2007,11 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -2148,8 +2020,7 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2160,8 +2031,7 @@ to either primary or secondary ranges. Structure is documented below.
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -2170,8 +2040,7 @@ creation time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_address_python">
 <a href="#state_gateway_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>address</a>
@@ -2180,8 +2049,7 @@ creation time.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_cidr_range_python">
 <a href="#state_ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
@@ -2193,8 +2061,7 @@ creation time.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -2206,8 +2073,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
 subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2222,8 +2088,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2233,8 +2098,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_google_access_python">
 <a href="#state_private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>
@@ -2244,8 +2108,7 @@ Only networks that are in the distributed mode can have subnetworks.
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ipv6_google_access_python">
 <a href="#state_private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
@@ -2254,8 +2117,7 @@ access Google APIs and services by using Private Google Access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2265,8 +2127,7 @@ access Google APIs and services by using Private Google Access.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_python">
 <a href="#state_purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -2281,8 +2142,7 @@ reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
 Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2291,8 +2151,7 @@ Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -2306,8 +2165,7 @@ or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
 Possible values are `ACTIVE` and `BACKUP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_ip_ranges_python">
 <a href="#state_secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
@@ -2319,8 +2177,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2329,8 +2186,7 @@ to either primary or secondary ranges. Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2345,8 +2201,7 @@ to either primary or secondary ranges. Structure is documented below.
 <h4 id="subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregationinterval_csharp">
 <a href="#aggregationinterval_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
@@ -2360,8 +2215,7 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterexpr_csharp">
 <a href="#filterexpr_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Expr</a>
@@ -2372,8 +2226,7 @@ Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTE
     <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
 https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 The default value is 'true', which evaluates to include everything.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowsampling_csharp">
 <a href="#flowsampling_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Sampling</a>
@@ -2386,8 +2239,7 @@ The value of the field must be in [0, 1]. Set the sampling rate of VPC
 flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2400,8 +2252,7 @@ Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
 Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafields_csharp">
 <a href="#metadatafields_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fields</a>
@@ -2411,13 +2262,11 @@ Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_
     </dt>
     <dd>{{% md %}}List of metadata fields that should be added to reported logs.
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregationinterval_go">
 <a href="#aggregationinterval_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
@@ -2431,8 +2280,7 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterexpr_go">
 <a href="#filterexpr_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Expr</a>
@@ -2443,8 +2291,7 @@ Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTE
     <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
 https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 The default value is 'true', which evaluates to include everything.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowsampling_go">
 <a href="#flowsampling_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Sampling</a>
@@ -2457,8 +2304,7 @@ The value of the field must be in [0, 1]. Set the sampling rate of VPC
 flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2471,8 +2317,7 @@ Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
 Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafields_go">
 <a href="#metadatafields_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fields</a>
@@ -2482,13 +2327,11 @@ Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_
     </dt>
     <dd>{{% md %}}List of metadata fields that should be added to reported logs.
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregationinterval_nodejs">
 <a href="#aggregationinterval_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Interval</a>
@@ -2502,8 +2345,7 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterexpr_nodejs">
 <a href="#filterexpr_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Expr</a>
@@ -2514,8 +2356,7 @@ Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTE
     <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
 https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 The default value is 'true', which evaluates to include everything.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flowsampling_nodejs">
 <a href="#flowsampling_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Sampling</a>
@@ -2528,8 +2369,7 @@ The value of the field must be in [0, 1]. Set the sampling rate of VPC
 flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2542,8 +2382,7 @@ Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
 Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafields_nodejs">
 <a href="#metadatafields_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fields</a>
@@ -2553,13 +2392,11 @@ Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_
     </dt>
     <dd>{{% md %}}List of metadata fields that should be added to reported logs.
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_interval_python">
 <a href="#aggregation_interval_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>interval</a>
@@ -2573,8 +2410,7 @@ interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
 Default value is `INTERVAL_5_SEC`.
 Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_expr_python">
 <a href="#filter_expr_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>expr</a>
@@ -2585,8 +2421,7 @@ Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTE
     <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
 https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 The default value is 'true', which evaluates to include everything.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flow_sampling_python">
 <a href="#flow_sampling_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>sampling</a>
@@ -2599,8 +2434,7 @@ The value of the field must be in [0, 1]. Set the sampling rate of VPC
 flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2613,8 +2447,7 @@ Configures whether metadata fields should be added to the reported VPC
 flow logs.
 Default value is `INCLUDE_ALL_METADATA`.
 Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_fields_python">
 <a href="#metadata_fields_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fields</a>
@@ -2624,15 +2457,13 @@ Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_
     </dt>
     <dd>{{% md %}}List of metadata fields that should be added to reported logs.
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetworksecondaryiprange">Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -2644,8 +2475,7 @@ Can only be specified if VPC flow logs for this subnetwork is enabled and "metad
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rangename_csharp">
 <a href="#rangename_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Name</a>
@@ -2657,13 +2487,11 @@ secondary IP ranges within a network. Only IPv4 is supported.
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -2675,8 +2503,7 @@ must be unique within the subnetwork.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rangename_go">
 <a href="#rangename_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Name</a>
@@ -2688,13 +2515,11 @@ secondary IP ranges within a network. Only IPv4 is supported.
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
@@ -2706,8 +2531,7 @@ must be unique within the subnetwork.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rangename_nodejs">
 <a href="#rangename_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Name</a>
@@ -2719,13 +2543,11 @@ secondary IP ranges within a network. Only IPv4 is supported.
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
@@ -2737,8 +2559,7 @@ must be unique within the subnetwork.
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_name_python">
 <a href="#range_name_python" style="color: inherit; text-decoration: inherit;">range_<wbr>name</a>
@@ -2750,8 +2571,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

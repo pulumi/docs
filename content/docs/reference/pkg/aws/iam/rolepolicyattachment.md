@@ -170,8 +170,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyarn_csharp">
 <a href="#policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
@@ -180,8 +179,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -190,13 +188,11 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyarn_go">
 <a href="#policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
@@ -205,8 +201,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -215,13 +210,11 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyarn_nodejs">
 <a href="#policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
@@ -230,8 +223,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -240,13 +232,11 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string | Role</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_arn_python">
 <a href="#policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
@@ -255,8 +245,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -265,8 +254,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -277,8 +265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -286,13 +273,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -300,13 +285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -314,13 +297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -328,8 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -456,8 +436,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_policyarn_csharp">
 <a href="#state_policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
@@ -466,8 +445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -476,13 +454,11 @@ The following state arguments are supported:
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_policyarn_go">
 <a href="#state_policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
@@ -491,8 +467,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -501,13 +476,11 @@ The following state arguments are supported:
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_policyarn_nodejs">
 <a href="#state_policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
@@ -516,8 +489,7 @@ The following state arguments are supported:
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -526,13 +498,11 @@ The following state arguments are supported:
         <span class="property-type">string | Role</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_policy_arn_python">
 <a href="#state_policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
@@ -541,8 +511,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -551,8 +520,7 @@ The following state arguments are supported:
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The name of the IAM role to which the policy should be applied
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

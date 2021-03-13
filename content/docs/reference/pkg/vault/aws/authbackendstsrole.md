@@ -170,8 +170,7 @@ The AuthBackendStsRole resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -180,8 +179,7 @@ The AuthBackendStsRole resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stsrole_csharp">
 <a href="#stsrole_csharp" style="color: inherit; text-decoration: inherit;">Sts<wbr>Role</a>
@@ -191,8 +189,7 @@ The AuthBackendStsRole resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -202,13 +199,11 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -217,8 +212,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stsrole_go">
 <a href="#stsrole_go" style="color: inherit; text-decoration: inherit;">Sts<wbr>Role</a>
@@ -228,8 +222,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -239,13 +232,11 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -254,8 +245,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stsrole_nodejs">
 <a href="#stsrole_nodejs" style="color: inherit; text-decoration: inherit;">sts<wbr>Role</a>
@@ -265,8 +255,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -276,13 +265,11 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -291,8 +278,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sts_role_python">
 <a href="#sts_role_python" style="color: inherit; text-decoration: inherit;">sts_<wbr>role</a>
@@ -302,8 +288,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -313,8 +298,7 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -325,8 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -334,13 +317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -348,13 +329,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -362,13 +341,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,8 +353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -504,8 +480,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -514,8 +489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -525,8 +499,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsrole_csharp">
 <a href="#state_stsrole_csharp" style="color: inherit; text-decoration: inherit;">Sts<wbr>Role</a>
@@ -536,13 +509,11 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -551,8 +522,7 @@ by EC2 instances in the account specified by `account_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -562,8 +532,7 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsrole_go">
 <a href="#state_stsrole_go" style="color: inherit; text-decoration: inherit;">Sts<wbr>Role</a>
@@ -573,13 +542,11 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -588,8 +555,7 @@ by EC2 instances in the account specified by `account_id`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -599,8 +565,7 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stsrole_nodejs">
 <a href="#state_stsrole_nodejs" style="color: inherit; text-decoration: inherit;">sts<wbr>Role</a>
@@ -610,13 +575,11 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -625,8 +588,7 @@ by EC2 instances in the account specified by `account_id`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID to configure the STS role for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -636,8 +598,7 @@ by EC2 instances in the account specified by `account_id`.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sts_role_python">
 <a href="#state_sts_role_python" style="color: inherit; text-decoration: inherit;">sts_<wbr>role</a>
@@ -647,8 +608,7 @@ mounted at.  Defaults to `aws`.
     </dt>
     <dd>{{% md %}}The STS role to assume when verifying requests made
 by EC2 instances in the account specified by `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

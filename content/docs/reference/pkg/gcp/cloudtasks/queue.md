@@ -428,8 +428,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -438,8 +437,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appengineroutingoverride_csharp">
 <a href="#appengineroutingoverride_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
@@ -450,8 +448,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -460,8 +457,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -471,8 +467,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimits_csharp">
 <a href="#ratelimits_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
@@ -488,8 +483,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconfig_csharp">
 <a href="#retryconfig_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
@@ -499,8 +493,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackdriverloggingconfig_csharp">
 <a href="#stackdriverloggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
@@ -510,13 +503,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -525,8 +516,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appengineroutingoverride_go">
 <a href="#appengineroutingoverride_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
@@ -537,8 +527,7 @@ Structure is documented below.
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +536,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -558,8 +546,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimits_go">
 <a href="#ratelimits_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
@@ -575,8 +562,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconfig_go">
 <a href="#retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
@@ -586,8 +572,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackdriverloggingconfig_go">
 <a href="#stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
@@ -597,13 +582,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -612,8 +595,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appengineroutingoverride_nodejs">
 <a href="#appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
@@ -624,8 +606,7 @@ Structure is documented below.
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -634,8 +615,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -645,8 +625,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimits_nodejs">
 <a href="#ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
@@ -662,8 +641,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconfig_nodejs">
 <a href="#retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
@@ -673,8 +651,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackdriverloggingconfig_nodejs">
 <a href="#stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
@@ -684,13 +661,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -699,8 +674,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_engine_routing_override_python">
 <a href="#app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
@@ -711,8 +685,7 @@ Structure is documented below.
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -721,8 +694,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -732,8 +704,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rate_limits_python">
 <a href="#rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
@@ -749,8 +720,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_config_python">
 <a href="#retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
@@ -760,8 +730,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackdriver_logging_config_python">
 <a href="#stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
@@ -771,8 +740,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -783,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -792,13 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -806,13 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -820,13 +783,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -834,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -962,8 +922,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appengineroutingoverride_csharp">
 <a href="#state_appengineroutingoverride_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
@@ -974,8 +933,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -984,8 +942,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -994,8 +951,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1005,8 +961,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratelimits_csharp">
 <a href="#state_ratelimits_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
@@ -1022,8 +977,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryconfig_csharp">
 <a href="#state_retryconfig_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
@@ -1033,8 +987,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackdriverloggingconfig_csharp">
 <a href="#state_stackdriverloggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
@@ -1044,13 +997,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appengineroutingoverride_go">
 <a href="#state_appengineroutingoverride_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
@@ -1061,8 +1012,7 @@ Structure is documented below.
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1071,8 +1021,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1081,8 +1030,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1092,8 +1040,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratelimits_go">
 <a href="#state_ratelimits_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
@@ -1109,8 +1056,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryconfig_go">
 <a href="#state_retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
@@ -1120,8 +1066,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackdriverloggingconfig_go">
 <a href="#state_stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
@@ -1131,13 +1076,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appengineroutingoverride_nodejs">
 <a href="#state_appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
@@ -1148,8 +1091,7 @@ Structure is documented below.
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1158,8 +1100,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1168,8 +1109,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1179,8 +1119,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratelimits_nodejs">
 <a href="#state_ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
@@ -1196,8 +1135,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryconfig_nodejs">
 <a href="#state_retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
@@ -1207,8 +1145,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackdriverloggingconfig_nodejs">
 <a href="#state_stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
@@ -1218,13 +1155,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_engine_routing_override_python">
 <a href="#state_app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
@@ -1235,8 +1170,7 @@ Structure is documented below.
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1245,8 +1179,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the queue
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1255,8 +1188,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1266,8 +1198,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rate_limits_python">
 <a href="#state_rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
@@ -1283,8 +1214,7 @@ The queue's actual dispatch rate is the result of:
 Unavailable) responses from the worker, high error rates, or to
 smooth sudden large traffic spikes.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retry_config_python">
 <a href="#state_retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
@@ -1294,8 +1224,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackdriver_logging_config_python">
 <a href="#state_stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
@@ -1305,8 +1234,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1321,8 +1249,7 @@ Structure is documented below.
 <h4 id="queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1332,8 +1259,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1343,8 +1269,7 @@ The host that the task is sent to.
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1354,8 +1279,7 @@ By default, the task is sent to an instance which is available when the task is 
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1365,13 +1289,11 @@ By default, the task is sent to the service which is the default service when th
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1381,8 +1303,7 @@ By default, the task is sent to the version which is the default version when th
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1392,8 +1313,7 @@ The host that the task is sent to.
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1403,8 +1323,7 @@ By default, the task is sent to an instance which is available when the task is 
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1414,13 +1333,11 @@ By default, the task is sent to the service which is the default service when th
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1430,8 +1347,7 @@ By default, the task is sent to the version which is the default version when th
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1441,8 +1357,7 @@ The host that the task is sent to.
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1452,8 +1367,7 @@ By default, the task is sent to an instance which is available when the task is 
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1463,13 +1377,11 @@ By default, the task is sent to the service which is the default service when th
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1479,8 +1391,7 @@ By default, the task is sent to the version which is the default version when th
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1490,8 +1401,7 @@ The host that the task is sent to.
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1501,8 +1411,7 @@ By default, the task is sent to an instance which is available when the task is 
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1512,15 +1421,13 @@ By default, the task is sent to the service which is the default service when th
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="queueratelimits">Queue<wbr>Rate<wbr>Limits</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxburstsize_csharp">
 <a href="#maxburstsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Size</a>
@@ -1534,8 +1441,7 @@ Max burst size limits how fast tasks in queue are processed when many tasks are
 in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentdispatches_csharp">
 <a href="#maxconcurrentdispatches_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Dispatches</a>
@@ -1547,8 +1453,7 @@ resource usage when many tasks are enqueued in a short period of time.
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdispatchespersecond_csharp">
 <a href="#maxdispatchespersecond_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Dispatches<wbr>Per<wbr>Second</a>
@@ -1558,13 +1463,11 @@ concurrent requests decreases.
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxburstsize_go">
 <a href="#maxburstsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Size</a>
@@ -1578,8 +1481,7 @@ Max burst size limits how fast tasks in queue are processed when many tasks are
 in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentdispatches_go">
 <a href="#maxconcurrentdispatches_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Dispatches</a>
@@ -1591,8 +1493,7 @@ resource usage when many tasks are enqueued in a short period of time.
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdispatchespersecond_go">
 <a href="#maxdispatchespersecond_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Dispatches<wbr>Per<wbr>Second</a>
@@ -1602,13 +1503,11 @@ concurrent requests decreases.
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxburstsize_nodejs">
 <a href="#maxburstsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
@@ -1622,8 +1521,7 @@ Max burst size limits how fast tasks in queue are processed when many tasks are
 in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentdispatches_nodejs">
 <a href="#maxconcurrentdispatches_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Dispatches</a>
@@ -1635,8 +1533,7 @@ resource usage when many tasks are enqueued in a short period of time.
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdispatchespersecond_nodejs">
 <a href="#maxdispatchespersecond_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Dispatches<wbr>Per<wbr>Second</a>
@@ -1646,13 +1543,11 @@ concurrent requests decreases.
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_burst_size_python">
 <a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
@@ -1666,8 +1561,7 @@ Max burst size limits how fast tasks in queue are processed when many tasks are
 in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_dispatches_python">
 <a href="#max_concurrent_dispatches_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>dispatches</a>
@@ -1679,8 +1573,7 @@ resource usage when many tasks are enqueued in a short period of time.
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_dispatches_per_second_python">
 <a href="#max_dispatches_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>dispatches_<wbr>per_<wbr>second</a>
@@ -1690,15 +1583,13 @@ concurrent requests decreases.
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="queueretryconfig">Queue<wbr>Retry<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxattempts_csharp">
 <a href="#maxattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
@@ -1713,8 +1604,7 @@ retries). Must be >= -1.
 If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_csharp">
 <a href="#maxbackoff_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Backoff</a>
@@ -1725,8 +1615,7 @@ the default.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdoublings_csharp">
 <a href="#maxdoublings_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Doublings</a>
@@ -1738,8 +1627,7 @@ specifies that the task should be retried.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretryduration_csharp">
 <a href="#maxretryduration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Duration</a>
@@ -1753,8 +1641,7 @@ attempted. Once maxRetryDuration time has passed and the task has
 been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minbackoff_csharp">
 <a href="#minbackoff_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Backoff</a>
@@ -1765,13 +1652,11 @@ If zero, then the task age is unlimited.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxattempts_go">
 <a href="#maxattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
@@ -1786,8 +1671,7 @@ retries). Must be >= -1.
 If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_go">
 <a href="#maxbackoff_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Backoff</a>
@@ -1798,8 +1682,7 @@ the default.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdoublings_go">
 <a href="#maxdoublings_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Doublings</a>
@@ -1811,8 +1694,7 @@ specifies that the task should be retried.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretryduration_go">
 <a href="#maxretryduration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Duration</a>
@@ -1826,8 +1708,7 @@ attempted. Once maxRetryDuration time has passed and the task has
 been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minbackoff_go">
 <a href="#minbackoff_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Backoff</a>
@@ -1838,13 +1719,11 @@ If zero, then the task age is unlimited.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxattempts_nodejs">
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
@@ -1859,8 +1738,7 @@ retries). Must be >= -1.
 If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_nodejs">
 <a href="#maxbackoff_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
@@ -1871,8 +1749,7 @@ the default.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdoublings_nodejs">
 <a href="#maxdoublings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
@@ -1884,8 +1761,7 @@ specifies that the task should be retried.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretryduration_nodejs">
 <a href="#maxretryduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
@@ -1899,8 +1775,7 @@ attempted. Once maxRetryDuration time has passed and the task has
 been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minbackoff_nodejs">
 <a href="#minbackoff_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
@@ -1911,13 +1786,11 @@ If zero, then the task age is unlimited.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_attempts_python">
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
@@ -1932,8 +1805,7 @@ retries). Must be >= -1.
 If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_backoff_python">
 <a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
@@ -1944,8 +1816,7 @@ the default.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_doublings_python">
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
@@ -1957,8 +1828,7 @@ specifies that the task should be retried.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retry_duration_python">
 <a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
@@ -1972,8 +1842,7 @@ attempted. Once maxRetryDuration time has passed and the task has
 been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_backoff_python">
 <a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
@@ -1984,15 +1853,13 @@ If zero, then the task age is unlimited.
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="samplingratio_csharp">
 <a href="#samplingratio_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Ratio</a>
@@ -2003,13 +1870,11 @@ specifies that the task should be retried.
     <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="samplingratio_go">
 <a href="#samplingratio_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Ratio</a>
@@ -2020,13 +1885,11 @@ default and means that no operations are logged.
     <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="samplingratio_nodejs">
 <a href="#samplingratio_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Ratio</a>
@@ -2037,13 +1900,11 @@ default and means that no operations are logged.
     <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sampling_ratio_python">
 <a href="#sampling_ratio_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>ratio</a>
@@ -2054,8 +1915,7 @@ default and means that no operations are logged.
     <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

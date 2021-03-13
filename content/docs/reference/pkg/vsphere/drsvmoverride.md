@@ -162,8 +162,7 @@ The DrsVmOverride resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_csharp">
 <a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -174,8 +173,7 @@ The DrsVmOverride resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -185,8 +183,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsautomationlevel_csharp">
 <a href="#drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -197,8 +194,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenabled_csharp">
 <a href="#drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -208,13 +204,11 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_go">
 <a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -225,8 +219,7 @@ machine. Can be either `true` or `false`. Default: `false`.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -236,8 +229,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsautomationlevel_go">
 <a href="#drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -248,8 +240,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenabled_go">
 <a href="#drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -259,13 +250,11 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_nodejs">
 <a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -276,8 +265,7 @@ machine. Can be either `true` or `false`. Default: `false`.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -287,8 +275,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsautomationlevel_nodejs">
 <a href="#drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
@@ -299,8 +286,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenabled_nodejs">
 <a href="#drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
@@ -310,13 +296,11 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_cluster_id_python">
 <a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -327,8 +311,7 @@ machine. Can be either `true` or `false`. Default: `false`.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -338,8 +321,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_automation_level_python">
 <a href="#drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
@@ -350,8 +332,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_enabled_python">
 <a href="#drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
@@ -361,8 +342,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -373,8 +353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -382,13 +361,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -396,13 +373,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -410,13 +385,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -424,8 +397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -552,8 +524,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_csharp">
 <a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -564,8 +535,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsautomationlevel_csharp">
 <a href="#state_drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -576,8 +546,7 @@ resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenabled_csharp">
 <a href="#state_drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -587,8 +556,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_csharp">
 <a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -598,13 +566,11 @@ machine. Can be either `true` or `false`. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_go">
 <a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -615,8 +581,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsautomationlevel_go">
 <a href="#state_drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -627,8 +592,7 @@ resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenabled_go">
 <a href="#state_drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -638,8 +602,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_go">
 <a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -649,13 +612,11 @@ machine. Can be either `true` or `false`. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_nodejs">
 <a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -666,8 +627,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsautomationlevel_nodejs">
 <a href="#state_drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
@@ -678,8 +638,7 @@ resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenabled_nodejs">
 <a href="#state_drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
@@ -689,8 +648,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_nodejs">
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -700,13 +658,11 @@ machine. Can be either `true` or `false`. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_cluster_id_python">
 <a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -717,8 +673,7 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_automation_level_python">
 <a href="#state_drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
@@ -729,8 +684,7 @@ resource if changed.
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_enabled_python">
 <a href="#state_drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
@@ -740,8 +694,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_id_python">
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -751,8 +704,7 @@ machine. Can be either `true` or `false`. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

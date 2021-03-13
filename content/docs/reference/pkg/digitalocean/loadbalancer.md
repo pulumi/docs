@@ -296,8 +296,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forwardingrules_csharp">
 <a href="#forwardingrules_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rules</a>
@@ -307,8 +306,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -317,8 +315,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -329,8 +326,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropletids_csharp">
 <a href="#dropletids_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -339,8 +335,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="droplettag_csharp">
 <a href="#droplettag_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Tag</a>
@@ -349,8 +344,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendkeepalive_csharp">
 <a href="#enablebackendkeepalive_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Keepalive</a>
@@ -359,8 +353,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableproxyprotocol_csharp">
 <a href="#enableproxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
@@ -371,8 +364,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -382,8 +374,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -392,8 +383,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecthttptohttps_csharp">
 <a href="#redirecthttptohttps_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>To<wbr>Https</a>
@@ -404,8 +394,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -414,8 +403,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickysessions_csharp">
 <a href="#stickysessions_csharp" style="color: inherit; text-decoration: inherit;">Sticky<wbr>Sessions</a>
@@ -425,8 +413,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcuuid_csharp">
 <a href="#vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -435,13 +422,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forwardingrules_go">
 <a href="#forwardingrules_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rules</a>
@@ -451,8 +436,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -461,8 +445,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -473,8 +456,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropletids_go">
 <a href="#dropletids_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -483,8 +465,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="droplettag_go">
 <a href="#droplettag_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Tag</a>
@@ -493,8 +474,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendkeepalive_go">
 <a href="#enablebackendkeepalive_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Keepalive</a>
@@ -503,8 +483,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableproxyprotocol_go">
 <a href="#enableproxyprotocol_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
@@ -515,8 +494,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -526,8 +504,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -536,8 +513,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecthttptohttps_go">
 <a href="#redirecthttptohttps_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>To<wbr>Https</a>
@@ -548,8 +524,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -558,8 +533,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickysessions_go">
 <a href="#stickysessions_go" style="color: inherit; text-decoration: inherit;">Sticky<wbr>Sessions</a>
@@ -569,8 +543,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcuuid_go">
 <a href="#vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -579,13 +552,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forwardingrules_nodejs">
 <a href="#forwardingrules_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rules</a>
@@ -595,8 +566,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -605,8 +575,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -617,8 +586,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropletids_nodejs">
 <a href="#dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
@@ -627,8 +595,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="droplettag_nodejs">
 <a href="#droplettag_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Tag</a>
@@ -637,8 +604,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendkeepalive_nodejs">
 <a href="#enablebackendkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Keepalive</a>
@@ -647,8 +613,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableproxyprotocol_nodejs">
 <a href="#enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
@@ -659,8 +624,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -670,8 +634,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -680,8 +643,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecthttptohttps_nodejs">
 <a href="#redirecthttptohttps_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>To<wbr>Https</a>
@@ -692,8 +654,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -702,8 +663,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickysessions_nodejs">
 <a href="#stickysessions_nodejs" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
@@ -713,8 +673,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcuuid_nodejs">
 <a href="#vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
@@ -723,13 +682,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forwarding_rules_python">
 <a href="#forwarding_rules_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rules</a>
@@ -739,8 +696,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -749,8 +705,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -761,8 +716,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="droplet_ids_python">
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
@@ -771,8 +725,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="droplet_tag_python">
 <a href="#droplet_tag_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>tag</a>
@@ -781,8 +734,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_backend_keepalive_python">
 <a href="#enable_backend_keepalive_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>keepalive</a>
@@ -791,8 +743,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_proxy_protocol_python">
 <a href="#enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
@@ -803,8 +754,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_python">
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -814,8 +764,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -824,8 +773,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_http_to_https_python">
 <a href="#redirect_http_to_https_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>to_<wbr>https</a>
@@ -836,8 +784,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -846,8 +793,7 @@ Default value is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sticky_sessions_python">
 <a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
@@ -857,8 +803,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_uuid_python">
 <a href="#vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
@@ -867,8 +812,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -879,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -888,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -897,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancerurn_csharp">
 <a href="#loadbalancerurn_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
@@ -907,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -916,13 +856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -930,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -939,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancerurn_go">
 <a href="#loadbalancerurn_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
@@ -949,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -958,13 +893,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -972,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -981,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancerurn_nodejs">
 <a href="#loadbalancerurn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Urn</a>
@@ -991,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1000,13 +930,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1014,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1023,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="load_balancer_urn_python">
 <a href="#load_balancer_urn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>urn</a>
@@ -1033,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1042,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1170,8 +1094,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_csharp">
 <a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1182,8 +1105,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropletids_csharp">
 <a href="#state_dropletids_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -1192,8 +1114,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplettag_csharp">
 <a href="#state_droplettag_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Tag</a>
@@ -1202,8 +1123,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackendkeepalive_csharp">
 <a href="#state_enablebackendkeepalive_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Keepalive</a>
@@ -1212,8 +1132,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableproxyprotocol_csharp">
 <a href="#state_enableproxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
@@ -1224,8 +1143,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forwardingrules_csharp">
 <a href="#state_forwardingrules_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rules</a>
@@ -1235,8 +1153,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_csharp">
 <a href="#state_healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -1246,8 +1163,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_csharp">
 <a href="#state_ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -1255,8 +1171,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerurn_csharp">
 <a href="#state_loadbalancerurn_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
@@ -1265,8 +1180,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1275,8 +1189,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecthttptohttps_csharp">
 <a href="#state_redirecthttptohttps_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>To<wbr>Https</a>
@@ -1287,8 +1200,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1297,8 +1209,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1307,8 +1218,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1316,8 +1226,7 @@ Default value is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickysessions_csharp">
 <a href="#state_stickysessions_csharp" style="color: inherit; text-decoration: inherit;">Sticky<wbr>Sessions</a>
@@ -1327,8 +1236,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcuuid_csharp">
 <a href="#state_vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -1337,13 +1245,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_go">
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1354,8 +1260,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropletids_go">
 <a href="#state_dropletids_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -1364,8 +1269,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplettag_go">
 <a href="#state_droplettag_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Tag</a>
@@ -1374,8 +1278,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackendkeepalive_go">
 <a href="#state_enablebackendkeepalive_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Keepalive</a>
@@ -1384,8 +1287,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableproxyprotocol_go">
 <a href="#state_enableproxyprotocol_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy<wbr>Protocol</a>
@@ -1396,8 +1298,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forwardingrules_go">
 <a href="#state_forwardingrules_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Rules</a>
@@ -1407,8 +1308,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_go">
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -1418,8 +1318,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_go">
 <a href="#state_ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -1427,8 +1326,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerurn_go">
 <a href="#state_loadbalancerurn_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Urn</a>
@@ -1437,8 +1335,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1447,8 +1344,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecthttptohttps_go">
 <a href="#state_redirecthttptohttps_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>To<wbr>Https</a>
@@ -1459,8 +1355,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1469,8 +1364,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1479,8 +1373,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1488,8 +1381,7 @@ Default value is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickysessions_go">
 <a href="#state_stickysessions_go" style="color: inherit; text-decoration: inherit;">Sticky<wbr>Sessions</a>
@@ -1499,8 +1391,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcuuid_go">
 <a href="#state_vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -1509,13 +1400,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_nodejs">
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1526,8 +1415,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropletids_nodejs">
 <a href="#state_dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
@@ -1536,8 +1424,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplettag_nodejs">
 <a href="#state_droplettag_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Tag</a>
@@ -1546,8 +1433,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackendkeepalive_nodejs">
 <a href="#state_enablebackendkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Keepalive</a>
@@ -1556,8 +1442,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableproxyprotocol_nodejs">
 <a href="#state_enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
@@ -1568,8 +1453,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forwardingrules_nodejs">
 <a href="#state_forwardingrules_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rules</a>
@@ -1579,8 +1463,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_nodejs">
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -1590,8 +1473,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_nodejs">
 <a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1599,8 +1481,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerurn_nodejs">
 <a href="#state_loadbalancerurn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Urn</a>
@@ -1609,8 +1490,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1619,8 +1499,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecthttptohttps_nodejs">
 <a href="#state_redirecthttptohttps_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>To<wbr>Https</a>
@@ -1631,8 +1510,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1641,8 +1519,7 @@ Default value is `false`.
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1651,8 +1528,7 @@ Default value is `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1660,8 +1536,7 @@ Default value is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickysessions_nodejs">
 <a href="#state_stickysessions_nodejs" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
@@ -1671,8 +1546,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcuuid_nodejs">
 <a href="#state_vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
@@ -1681,13 +1555,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_python">
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1698,8 +1570,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
 or `least_connections`. The default value is `round_robin`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplet_ids_python">
 <a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
@@ -1708,8 +1579,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplet_tag_python">
 <a href="#state_droplet_tag_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>tag</a>
@@ -1718,8 +1588,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_backend_keepalive_python">
 <a href="#state_enable_backend_keepalive_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>keepalive</a>
@@ -1728,8 +1597,7 @@ or `least_connections`. The default value is `round_robin`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_proxy_protocol_python">
 <a href="#state_enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
@@ -1740,8 +1608,7 @@ or `least_connections`. The default value is `round_robin`.
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
 the backend service. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forwarding_rules_python">
 <a href="#state_forwarding_rules_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rules</a>
@@ -1751,8 +1618,7 @@ the backend service. Default value is `false`.
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheck_python">
 <a href="#state_healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -1762,8 +1628,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_python">
 <a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1771,8 +1636,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_urn_python">
 <a href="#state_load_balancer_urn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>urn</a>
@@ -1781,8 +1645,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1791,8 +1654,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirect_http_to_https_python">
 <a href="#state_redirect_http_to_https_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>to_<wbr>https</a>
@@ -1803,8 +1665,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
 Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1813,8 +1674,7 @@ Default value is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to start in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1823,8 +1683,7 @@ Default value is `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1832,8 +1691,7 @@ Default value is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sticky_sessions_python">
 <a href="#state_sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
@@ -1843,8 +1701,7 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_uuid_python">
 <a href="#state_vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
@@ -1853,8 +1710,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1869,8 +1725,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <h4 id="loadbalancerforwardingrule">Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entryport_csharp">
 <a href="#entryport_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Port</a>
@@ -1879,8 +1734,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on which the Load Balancer instance will listen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entryprotocol_csharp">
 <a href="#entryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Protocol</a>
@@ -1889,8 +1743,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetport_csharp">
 <a href="#targetport_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Port</a>
@@ -1899,8 +1752,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetprotocol_csharp">
 <a href="#targetprotocol_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Protocol</a>
@@ -1909,8 +1761,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="certificateid_csharp">
 <a href="#certificateid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
@@ -1919,8 +1770,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_csharp">
 <a href="#certificatename_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -1929,8 +1779,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlspassthrough_csharp">
 <a href="#tlspassthrough_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Passthrough</a>
@@ -1939,13 +1788,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entryport_go">
 <a href="#entryport_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Port</a>
@@ -1954,8 +1801,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on which the Load Balancer instance will listen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entryprotocol_go">
 <a href="#entryprotocol_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Protocol</a>
@@ -1964,8 +1810,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetport_go">
 <a href="#targetport_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Port</a>
@@ -1974,8 +1819,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetprotocol_go">
 <a href="#targetprotocol_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Protocol</a>
@@ -1984,8 +1828,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="certificateid_go">
 <a href="#certificateid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
@@ -1994,8 +1837,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_go">
 <a href="#certificatename_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -2004,8 +1846,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlspassthrough_go">
 <a href="#tlspassthrough_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Passthrough</a>
@@ -2014,13 +1855,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entryport_nodejs">
 <a href="#entryport_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Port</a>
@@ -2029,8 +1868,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on which the Load Balancer instance will listen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entryprotocol_nodejs">
 <a href="#entryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Protocol</a>
@@ -2039,8 +1877,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetport_nodejs">
 <a href="#targetport_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Port</a>
@@ -2049,8 +1886,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetprotocol_nodejs">
 <a href="#targetprotocol_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Protocol</a>
@@ -2059,8 +1895,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="certificateid_nodejs">
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
@@ -2069,8 +1904,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_nodejs">
 <a href="#certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
@@ -2079,8 +1913,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlspassthrough_nodejs">
 <a href="#tlspassthrough_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Passthrough</a>
@@ -2089,13 +1922,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entry_port_python">
 <a href="#entry_port_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>port</a>
@@ -2104,8 +1935,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on which the Load Balancer instance will listen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entry_protocol_python">
 <a href="#entry_protocol_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>protocol</a>
@@ -2114,8 +1944,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_port_python">
 <a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
@@ -2124,8 +1953,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_protocol_python">
 <a href="#target_protocol_python" style="color: inherit; text-decoration: inherit;">target_<wbr>protocol</a>
@@ -2134,8 +1962,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="certificate_id_python">
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
@@ -2144,8 +1971,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_name_python">
 <a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
@@ -2154,8 +1980,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_passthrough_python">
 <a href="#tls_passthrough_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>passthrough</a>
@@ -2164,15 +1989,13 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2181,8 +2004,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2191,8 +2013,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkintervalseconds_csharp">
 <a href="#checkintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval<wbr>Seconds</a>
@@ -2201,8 +2022,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_csharp">
 <a href="#healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -2211,8 +2031,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2221,8 +2040,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the backend Droplets to which the Load Balancer instance will send a request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetimeoutseconds_csharp">
 <a href="#responsetimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Timeout<wbr>Seconds</a>
@@ -2231,8 +2049,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_csharp">
 <a href="#unhealthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -2241,13 +2058,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2256,8 +2071,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2266,8 +2080,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkintervalseconds_go">
 <a href="#checkintervalseconds_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval<wbr>Seconds</a>
@@ -2276,8 +2089,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_go">
 <a href="#healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -2286,8 +2098,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2296,8 +2107,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the backend Droplets to which the Load Balancer instance will send a request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetimeoutseconds_go">
 <a href="#responsetimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Timeout<wbr>Seconds</a>
@@ -2306,8 +2116,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_go">
 <a href="#unhealthythreshold_go" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -2316,13 +2125,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2331,8 +2138,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2341,8 +2147,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkintervalseconds_nodejs">
 <a href="#checkintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Seconds</a>
@@ -2351,8 +2156,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_nodejs">
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
@@ -2361,8 +2165,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2371,8 +2174,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the backend Droplets to which the Load Balancer instance will send a request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetimeoutseconds_nodejs">
 <a href="#responsetimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Timeout<wbr>Seconds</a>
@@ -2381,8 +2183,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthythreshold_nodejs">
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
@@ -2391,13 +2192,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2406,8 +2205,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets on which the health check will attempt a connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2416,8 +2214,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_interval_seconds_python">
 <a href="#check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>seconds</a>
@@ -2426,8 +2223,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthy_threshold_python">
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
@@ -2436,8 +2232,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2446,8 +2241,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path on the backend Droplets to which the Load Balancer instance will send a request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_timeout_seconds_python">
 <a href="#response_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>timeout_<wbr>seconds</a>
@@ -2456,8 +2250,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unhealthy_threshold_python">
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
@@ -2466,15 +2259,13 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cookiename_csharp">
 <a href="#cookiename_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -2483,8 +2274,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiettlseconds_csharp">
 <a href="#cookiettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Ttl<wbr>Seconds</a>
@@ -2493,8 +2283,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2503,13 +2292,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cookiename_go">
 <a href="#cookiename_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -2518,8 +2305,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiettlseconds_go">
 <a href="#cookiettlseconds_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Ttl<wbr>Seconds</a>
@@ -2528,8 +2314,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2538,13 +2323,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cookiename_nodejs">
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
@@ -2553,8 +2336,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiettlseconds_nodejs">
 <a href="#cookiettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Ttl<wbr>Seconds</a>
@@ -2563,8 +2345,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2573,13 +2354,11 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cookie_name_python">
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
@@ -2588,8 +2367,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_ttl_seconds_python">
 <a href="#cookie_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>ttl_<wbr>seconds</a>
@@ -2598,8 +2376,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2608,8 +2385,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -111,8 +111,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -121,8 +120,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -131,8 +129,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -142,8 +139,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A filter expression to refine the list of results, see
 https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-docs/health#filtering-2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_csharp">
 <a href="#near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -153,8 +149,7 @@ https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_csharp">
 <a href="#nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -164,8 +159,7 @@ based on the estimated round trip time from that node.
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passing_csharp">
 <a href="#passing_csharp" style="color: inherit; text-decoration: inherit;">Passing</a>
@@ -175,8 +169,7 @@ pairs.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -186,8 +179,7 @@ passing state. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfor_csharp">
 <a href="#waitfor_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For</a>
@@ -195,13 +187,11 @@ based on a single matching tag.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -210,8 +200,7 @@ based on a single matching tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -220,8 +209,7 @@ based on a single matching tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -231,8 +219,7 @@ based on a single matching tag.
     </dt>
     <dd>{{% md %}}A filter expression to refine the list of results, see
 https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-docs/health#filtering-2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_go">
 <a href="#near_go" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -242,8 +229,7 @@ https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_go">
 <a href="#nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -253,8 +239,7 @@ based on the estimated round trip time from that node.
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passing_go">
 <a href="#passing_go" style="color: inherit; text-decoration: inherit;">Passing</a>
@@ -264,8 +249,7 @@ pairs.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -275,8 +259,7 @@ passing state. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfor_go">
 <a href="#waitfor_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For</a>
@@ -284,13 +267,11 @@ based on a single matching tag.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -299,8 +280,7 @@ based on a single matching tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -309,8 +289,7 @@ based on a single matching tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -320,8 +299,7 @@ based on a single matching tag.
     </dt>
     <dd>{{% md %}}A filter expression to refine the list of results, see
 https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-docs/health#filtering-2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_nodejs">
 <a href="#near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
@@ -331,8 +309,7 @@ https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_nodejs">
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
@@ -342,8 +319,7 @@ based on the estimated round trip time from that node.
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passing_nodejs">
 <a href="#passing_nodejs" style="color: inherit; text-decoration: inherit;">passing</a>
@@ -353,8 +329,7 @@ pairs.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -364,8 +339,7 @@ passing state. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfor_nodejs">
 <a href="#waitfor_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For</a>
@@ -373,13 +347,11 @@ based on a single matching tag.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -388,8 +360,7 @@ based on a single matching tag.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -398,8 +369,7 @@ based on a single matching tag.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -409,8 +379,7 @@ based on a single matching tag.
     </dt>
     <dd>{{% md %}}A filter expression to refine the list of results, see
 https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-docs/health#filtering-2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_python">
 <a href="#near_python" style="color: inherit; text-decoration: inherit;">near</a>
@@ -420,8 +389,7 @@ https://www.consul.io/api-docs/features/filtering and https://www.consul.io/api-
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_meta_python">
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
@@ -431,8 +399,7 @@ based on the estimated round trip time from that node.
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passing_python">
 <a href="#passing_python" style="color: inherit; text-decoration: inherit;">passing</a>
@@ -442,8 +409,7 @@ pairs.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -453,8 +419,7 @@ passing state. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_python">
 <a href="#wait_for_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for</a>
@@ -462,8 +427,7 @@ based on a single matching tag.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -476,8 +440,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -486,8 +449,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -496,8 +458,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="results_csharp">
 <a href="#results_csharp" style="color: inherit; text-decoration: inherit;">Results</a>
@@ -508,8 +469,7 @@ The following output properties are available:
     <dd>{{% md %}}A list of entries and details about each endpoint advertising a
 service.  Each element in the list has three attributes: `node`, `service` and
 `checks`.  The list of the attributes of each one is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -520,8 +480,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
     <dd>{{% md %}}The datacenter in which the node is running.
 * [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
 List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -529,8 +488,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="near_csharp">
 <a href="#near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -539,8 +497,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node to which the result must be sorted to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodemeta_csharp">
 <a href="#nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -549,8 +506,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of metadata to filter the nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passing_csharp">
 <a href="#passing_csharp" style="color: inherit; text-decoration: inherit;">Passing</a>
@@ -560,8 +516,7 @@ List of explicit LAN and WAN IP addresses for the agent.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -570,8 +525,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="waitfor_csharp">
 <a href="#waitfor_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For</a>
@@ -579,13 +533,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -594,8 +546,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -604,8 +555,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="results_go">
 <a href="#results_go" style="color: inherit; text-decoration: inherit;">Results</a>
@@ -616,8 +566,7 @@ passing state.
     <dd>{{% md %}}A list of entries and details about each endpoint advertising a
 service.  Each element in the list has three attributes: `node`, `service` and
 `checks`.  The list of the attributes of each one is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -628,8 +577,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
     <dd>{{% md %}}The datacenter in which the node is running.
 * [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
 List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -637,8 +585,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="near_go">
 <a href="#near_go" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -647,8 +594,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node to which the result must be sorted to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodemeta_go">
 <a href="#nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -657,8 +603,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The list of metadata to filter the nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passing_go">
 <a href="#passing_go" style="color: inherit; text-decoration: inherit;">Passing</a>
@@ -668,8 +613,7 @@ List of explicit LAN and WAN IP addresses for the agent.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -678,8 +622,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="waitfor_go">
 <a href="#waitfor_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For</a>
@@ -687,13 +630,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -702,8 +643,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -712,8 +652,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="results_nodejs">
 <a href="#results_nodejs" style="color: inherit; text-decoration: inherit;">results</a>
@@ -724,8 +663,7 @@ passing state.
     <dd>{{% md %}}A list of entries and details about each endpoint advertising a
 service.  Each element in the list has three attributes: `node`, `service` and
 `checks`.  The list of the attributes of each one is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -736,8 +674,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
     <dd>{{% md %}}The datacenter in which the node is running.
 * [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
 List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -745,8 +682,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="near_nodejs">
 <a href="#near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
@@ -755,8 +691,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node to which the result must be sorted to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodemeta_nodejs">
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
@@ -765,8 +700,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of metadata to filter the nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passing_nodejs">
 <a href="#passing_nodejs" style="color: inherit; text-decoration: inherit;">passing</a>
@@ -776,8 +710,7 @@ List of explicit LAN and WAN IP addresses for the agent.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -786,8 +719,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="waitfor_nodejs">
 <a href="#waitfor_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For</a>
@@ -795,13 +727,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -810,8 +740,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -820,8 +749,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="results_python">
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
@@ -832,8 +760,7 @@ passing state.
     <dd>{{% md %}}A list of entries and details about each endpoint advertising a
 service.  Each element in the list has three attributes: `node`, `service` and
 `checks`.  The list of the attributes of each one is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -844,8 +771,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
     <dd>{{% md %}}The datacenter in which the node is running.
 * [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
 List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -853,8 +779,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="near_python">
 <a href="#near_python" style="color: inherit; text-decoration: inherit;">near</a>
@@ -863,8 +788,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node to which the result must be sorted to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_meta_python">
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
@@ -873,8 +797,7 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of metadata to filter the nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passing_python">
 <a href="#passing_python" style="color: inherit; text-decoration: inherit;">passing</a>
@@ -884,8 +807,7 @@ List of explicit LAN and WAN IP addresses for the agent.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -894,8 +816,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="wait_for_python">
 <a href="#wait_for_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for</a>
@@ -903,8 +824,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -918,8 +838,7 @@ passing state.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checks_csharp">
 <a href="#checks_csharp" style="color: inherit; text-decoration: inherit;">Checks</a>
@@ -927,8 +846,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultcheck">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -937,8 +855,7 @@ passing state.
         <span class="property-type"><a href="#getservicehealthresultnode">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -946,13 +863,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultservice">List&lt;Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checks_go">
 <a href="#checks_go" style="color: inherit; text-decoration: inherit;">Checks</a>
@@ -960,8 +875,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultcheck">[]Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -970,8 +884,7 @@ passing state.
         <span class="property-type"><a href="#getservicehealthresultnode">[]Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -979,13 +892,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultservice">[]Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checks_nodejs">
 <a href="#checks_nodejs" style="color: inherit; text-decoration: inherit;">checks</a>
@@ -993,8 +904,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultcheck">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1003,8 +913,7 @@ passing state.
         <span class="property-type"><a href="#getservicehealthresultnode">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -1012,13 +921,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultservice">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checks_python">
 <a href="#checks_python" style="color: inherit; text-decoration: inherit;">checks</a>
@@ -1026,8 +933,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultcheck">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1036,8 +942,7 @@ passing state.
         <span class="property-type"><a href="#getservicehealthresultnode">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -1045,8 +950,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicehealthresultservice">Sequence[Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getservicehealthresultcheck">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check</h4>
@@ -1054,8 +958,7 @@ passing state.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1064,8 +967,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1074,8 +976,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_csharp">
 <a href="#node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -1084,8 +985,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1094,8 +994,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable description of the current state of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -1104,8 +1003,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_csharp">
 <a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -1114,8 +1012,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service associated to this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1124,8 +1021,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetags_csharp">
 <a href="#servicetags_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tags</a>
@@ -1134,8 +1030,7 @@ passing state.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1144,13 +1039,11 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this health-check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1159,8 +1052,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1169,8 +1061,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_go">
 <a href="#node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -1179,8 +1070,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1189,8 +1079,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable description of the current state of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -1199,8 +1088,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_go">
 <a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -1209,8 +1097,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service associated to this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1219,8 +1106,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetags_go">
 <a href="#servicetags_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tags</a>
@@ -1229,8 +1115,7 @@ passing state.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1239,13 +1124,11 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this health-check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1254,8 +1137,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1264,8 +1146,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_nodejs">
 <a href="#node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -1274,8 +1155,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1284,8 +1164,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human readable description of the current state of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -1294,8 +1173,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_nodejs">
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -1304,8 +1182,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service associated to this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1314,8 +1191,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetags_nodejs">
 <a href="#servicetags_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tags</a>
@@ -1324,8 +1200,7 @@ passing state.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1334,13 +1209,11 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this health-check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1349,8 +1222,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1359,8 +1231,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_python">
 <a href="#node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -1369,8 +1240,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the node associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1379,8 +1249,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human readable description of the current state of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -1389,8 +1258,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output of the health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_id_python">
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -1399,8 +1267,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service associated to this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1409,8 +1276,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_tags_python">
 <a href="#service_tags_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tags</a>
@@ -1419,8 +1285,7 @@ passing state.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1429,8 +1294,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of this health-check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getservicehealthresultnode">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node</h4>
@@ -1438,8 +1302,7 @@ passing state.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1448,8 +1311,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1458,8 +1320,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1468,8 +1329,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1478,8 +1338,7 @@ passing state.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1488,8 +1347,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taggedaddresses_csharp">
 <a href="#taggedaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tagged<wbr>Addresses</a>
@@ -1497,13 +1355,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1512,8 +1368,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1522,8 +1377,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1532,8 +1386,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1542,8 +1395,7 @@ passing state.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1552,8 +1404,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taggedaddresses_go">
 <a href="#taggedaddresses_go" style="color: inherit; text-decoration: inherit;">Tagged<wbr>Addresses</a>
@@ -1561,13 +1412,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1576,8 +1425,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1586,8 +1434,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1596,8 +1443,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1606,8 +1452,7 @@ passing state.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1616,8 +1461,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taggedaddresses_nodejs">
 <a href="#taggedaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tagged<wbr>Addresses</a>
@@ -1625,13 +1469,11 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1640,8 +1482,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1650,8 +1491,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1660,8 +1500,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1670,8 +1509,7 @@ passing state.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1680,8 +1518,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagged_addresses_python">
 <a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
@@ -1689,8 +1526,7 @@ passing state.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getservicehealthresultservice">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service</h4>
@@ -1698,8 +1534,7 @@ passing state.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1708,8 +1543,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1718,8 +1552,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1728,8 +1561,7 @@ passing state.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1738,8 +1570,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1748,8 +1579,7 @@ passing state.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1758,13 +1588,11 @@ passing state.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1773,8 +1601,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1783,8 +1610,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1793,8 +1619,7 @@ passing state.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1803,8 +1628,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1813,8 +1637,7 @@ passing state.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1823,13 +1646,11 @@ passing state.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1838,8 +1659,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1848,8 +1668,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1858,8 +1677,7 @@ passing state.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1868,8 +1686,7 @@ passing state.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1878,8 +1695,7 @@ passing state.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1888,13 +1704,11 @@ passing state.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1903,8 +1717,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1913,8 +1726,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this health-check.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1923,8 +1735,7 @@ passing state.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1933,8 +1744,7 @@ passing state.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1943,8 +1753,7 @@ passing state.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1953,8 +1762,7 @@ passing state.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

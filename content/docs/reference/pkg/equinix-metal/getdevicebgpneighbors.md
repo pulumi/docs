@@ -155,8 +155,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -165,13 +164,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of BGP-enabled device whose neighbors to list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -180,13 +177,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of BGP-enabled device whose neighbors to list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -195,13 +190,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of BGP-enabled device whose neighbors to list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -210,8 +203,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of BGP-enabled device whose neighbors to list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -224,8 +216,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bgpneighbors_csharp">
 <a href="#bgpneighbors_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Neighbors</a>
@@ -234,8 +225,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Outputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor&gt;</a></span>
     </dt>
     <dd>{{% md %}}array of BGP neighbor records with attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -243,8 +233,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -253,13 +242,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bgpneighbors_go">
 <a href="#bgpneighbors_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Neighbors</a>
@@ -268,8 +255,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">[]Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor</a></span>
     </dt>
     <dd>{{% md %}}array of BGP neighbor records with attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -277,8 +263,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -287,13 +272,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bgpneighbors_nodejs">
 <a href="#bgpneighbors_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Neighbors</a>
@@ -302,8 +285,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor[]</a></span>
     </dt>
     <dd>{{% md %}}array of BGP neighbor records with attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -311,8 +293,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -321,13 +302,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bgp_neighbors_python">
 <a href="#bgp_neighbors_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>neighbors</a>
@@ -336,8 +315,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighbor">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor]</a></span>
     </dt>
     <dd>{{% md %}}array of BGP neighbor records with attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -345,8 +323,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -355,8 +332,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -370,8 +346,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addressfamily_csharp">
 <a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -380,8 +355,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP address version, 4 or 6
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customeras_csharp">
 <a href="#customeras_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>As</a>
@@ -390,8 +364,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local autonomous system number
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customerip_csharp">
 <a href="#customerip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Ip</a>
@@ -400,8 +373,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local used peer IP address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5enabled_csharp">
 <a href="#md5enabled_csharp" style="color: inherit; text-decoration: inherit;">Md5Enabled</a>
@@ -410,8 +382,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether BGP session is password enabled
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5password_csharp">
 <a href="#md5password_csharp" style="color: inherit; text-decoration: inherit;">Md5Password</a>
@@ -420,8 +391,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BGP session password in plaintext (not a checksum)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multihop_csharp">
 <a href="#multihop_csharp" style="color: inherit; text-decoration: inherit;">Multihop</a>
@@ -430,8 +400,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the neighbor is in EBGP multihop session
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeras_csharp">
 <a href="#peeras_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>As</a>
@@ -440,8 +409,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Peer AS number (different than customer_as for EBGP)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routesins_csharp">
 <a href="#routesins_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Ins</a>
@@ -450,8 +418,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routesouts_csharp">
 <a href="#routesouts_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Outs</a>
@@ -460,8 +427,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerips_csharp">
 <a href="#peerips_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ips</a>
@@ -470,13 +436,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of IP addresses of this neighbor's peers
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addressfamily_go">
 <a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -485,8 +449,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP address version, 4 or 6
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customeras_go">
 <a href="#customeras_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>As</a>
@@ -495,8 +458,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local autonomous system number
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customerip_go">
 <a href="#customerip_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Ip</a>
@@ -505,8 +467,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local used peer IP address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5enabled_go">
 <a href="#md5enabled_go" style="color: inherit; text-decoration: inherit;">Md5Enabled</a>
@@ -515,8 +476,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether BGP session is password enabled
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5password_go">
 <a href="#md5password_go" style="color: inherit; text-decoration: inherit;">Md5Password</a>
@@ -525,8 +485,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BGP session password in plaintext (not a checksum)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multihop_go">
 <a href="#multihop_go" style="color: inherit; text-decoration: inherit;">Multihop</a>
@@ -535,8 +494,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the neighbor is in EBGP multihop session
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeras_go">
 <a href="#peeras_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>As</a>
@@ -545,8 +503,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Peer AS number (different than customer_as for EBGP)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routesins_go">
 <a href="#routesins_go" style="color: inherit; text-decoration: inherit;">Routes<wbr>Ins</a>
@@ -555,8 +512,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">[]Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routesouts_go">
 <a href="#routesouts_go" style="color: inherit; text-decoration: inherit;">Routes<wbr>Outs</a>
@@ -565,8 +521,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">[]Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerips_go">
 <a href="#peerips_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ips</a>
@@ -575,13 +530,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of IP addresses of this neighbor's peers
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addressfamily_nodejs">
 <a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
@@ -590,8 +543,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP address version, 4 or 6
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customeras_nodejs">
 <a href="#customeras_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>As</a>
@@ -600,8 +552,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Local autonomous system number
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customerip_nodejs">
 <a href="#customerip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Ip</a>
@@ -610,8 +561,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local used peer IP address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5enabled_nodejs">
 <a href="#md5enabled_nodejs" style="color: inherit; text-decoration: inherit;">md5Enabled</a>
@@ -620,8 +570,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether BGP session is password enabled
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5password_nodejs">
 <a href="#md5password_nodejs" style="color: inherit; text-decoration: inherit;">md5Password</a>
@@ -630,8 +579,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BGP session password in plaintext (not a checksum)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multihop_nodejs">
 <a href="#multihop_nodejs" style="color: inherit; text-decoration: inherit;">multihop</a>
@@ -640,8 +588,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the neighbor is in EBGP multihop session
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeras_nodejs">
 <a href="#peeras_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>As</a>
@@ -650,8 +597,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Peer AS number (different than customer_as for EBGP)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routesins_nodejs">
 <a href="#routesins_nodejs" style="color: inherit; text-decoration: inherit;">routes<wbr>Ins</a>
@@ -660,8 +606,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routesouts_nodejs">
 <a href="#routesouts_nodejs" style="color: inherit; text-decoration: inherit;">routes<wbr>Outs</a>
@@ -670,8 +615,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out[]</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerips_nodejs">
 <a href="#peerips_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ips</a>
@@ -680,13 +624,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of IP addresses of this neighbor's peers
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_family_python">
 <a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
@@ -695,8 +637,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP address version, 4 or 6
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customer_as_python">
 <a href="#customer_as_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>as</a>
@@ -705,8 +646,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local autonomous system number
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customer_ip_python">
 <a href="#customer_ip_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>ip</a>
@@ -715,8 +655,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local used peer IP address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5_enabled_python">
 <a href="#md5_enabled_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>enabled</a>
@@ -725,8 +664,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether BGP session is password enabled
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="md5_password_python">
 <a href="#md5_password_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>password</a>
@@ -735,8 +673,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BGP session password in plaintext (not a checksum)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="multihop_python">
 <a href="#multihop_python" style="color: inherit; text-decoration: inherit;">multihop</a>
@@ -745,8 +682,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the neighbor is in EBGP multihop session
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_as_python">
 <a href="#peer_as_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>as</a>
@@ -755,8 +691,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Peer AS number (different than customer_as for EBGP)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routes_ins_python">
 <a href="#routes_ins_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>ins</a>
@@ -765,8 +700,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routes_outs_python">
 <a href="#routes_outs_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>outs</a>
@@ -775,8 +709,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_ips_python">
 <a href="#peer_ips_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ips</a>
@@ -785,8 +718,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of IP addresses of this neighbor's peers
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdevicebgpneighborsbgpneighborroutesin">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In</h4>
@@ -794,8 +726,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_csharp">
 <a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
@@ -804,8 +735,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -814,13 +744,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_go">
 <a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
@@ -829,8 +757,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -839,13 +766,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_nodejs">
 <a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
@@ -854,8 +779,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -864,13 +788,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_python">
 <a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
@@ -879,8 +801,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -889,8 +810,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdevicebgpneighborsbgpneighborroutesout">Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out</h4>
@@ -898,8 +818,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_csharp">
 <a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
@@ -908,8 +827,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -918,13 +836,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_go">
 <a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
@@ -933,8 +849,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -943,13 +858,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_nodejs">
 <a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
@@ -958,8 +871,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -968,13 +880,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exact_python">
 <a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
@@ -983,8 +893,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(bool) Whether the route is exact
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -993,8 +902,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR expression of route (IP/mask)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

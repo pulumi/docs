@@ -162,8 +162,7 @@ The AccessApprovalSettings resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enrolledservices_csharp">
 <a href="#enrolledservices_csharp" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Services</a>
@@ -175,8 +174,7 @@ The AccessApprovalSettings resource accepts the following [input]({{< relref "/d
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -185,8 +183,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationemails_csharp">
 <a href="#notificationemails_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Emails</a>
@@ -197,8 +194,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -207,13 +203,11 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enrolledservices_go">
 <a href="#enrolledservices_go" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Services</a>
@@ -225,8 +219,7 @@ addresses are allowed.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -235,8 +228,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationemails_go">
 <a href="#notificationemails_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Emails</a>
@@ -247,8 +239,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -257,13 +248,11 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enrolledservices_nodejs">
 <a href="#enrolledservices_nodejs" style="color: inherit; text-decoration: inherit;">enrolled<wbr>Services</a>
@@ -275,8 +264,7 @@ addresses are allowed.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -285,8 +273,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationemails_nodejs">
 <a href="#notificationemails_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Emails</a>
@@ -297,8 +284,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -307,13 +293,11 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enrolled_services_python">
 <a href="#enrolled_services_python" style="color: inherit; text-decoration: inherit;">enrolled_<wbr>services</a>
@@ -325,8 +309,7 @@ addresses are allowed.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -335,8 +318,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_emails_python">
 <a href="#notification_emails_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>emails</a>
@@ -347,8 +329,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -357,8 +338,7 @@ addresses are allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -369,8 +349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="enrolledancestor_csharp">
 <a href="#enrolledancestor_csharp" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Ancestor</a>
@@ -380,8 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -389,8 +367,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -399,13 +376,11 @@ of the Project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="enrolledancestor_go">
 <a href="#enrolledancestor_go" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Ancestor</a>
@@ -415,8 +390,7 @@ of the Project.
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,8 +398,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -434,13 +407,11 @@ of the Project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="enrolledancestor_nodejs">
 <a href="#enrolledancestor_nodejs" style="color: inherit; text-decoration: inherit;">enrolled<wbr>Ancestor</a>
@@ -450,8 +421,7 @@ of the Project.
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -459,8 +429,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -469,13 +438,11 @@ of the Project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="enrolled_ancestor_python">
 <a href="#enrolled_ancestor_python" style="color: inherit; text-decoration: inherit;">enrolled_<wbr>ancestor</a>
@@ -485,8 +452,7 @@ of the Project.
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -494,8 +460,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -504,8 +469,7 @@ of the Project.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -632,8 +596,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrolledancestor_csharp">
 <a href="#state_enrolledancestor_csharp" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Ancestor</a>
@@ -643,8 +606,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrolledservices_csharp">
 <a href="#state_enrolledservices_csharp" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Services</a>
@@ -656,8 +618,7 @@ of the Project.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -666,8 +627,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationemails_csharp">
 <a href="#state_notificationemails_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Emails</a>
@@ -678,8 +638,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -688,8 +647,7 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -698,13 +656,11 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrolledancestor_go">
 <a href="#state_enrolledancestor_go" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Ancestor</a>
@@ -714,8 +670,7 @@ addresses are allowed.
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrolledservices_go">
 <a href="#state_enrolledservices_go" style="color: inherit; text-decoration: inherit;">Enrolled<wbr>Services</a>
@@ -727,8 +682,7 @@ of the Project.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -737,8 +691,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationemails_go">
 <a href="#state_notificationemails_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Emails</a>
@@ -749,8 +702,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -759,8 +711,7 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -769,13 +720,11 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrolledancestor_nodejs">
 <a href="#state_enrolledancestor_nodejs" style="color: inherit; text-decoration: inherit;">enrolled<wbr>Ancestor</a>
@@ -785,8 +734,7 @@ addresses are allowed.
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrolledservices_nodejs">
 <a href="#state_enrolledservices_nodejs" style="color: inherit; text-decoration: inherit;">enrolled<wbr>Services</a>
@@ -798,8 +746,7 @@ of the Project.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -808,8 +755,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationemails_nodejs">
 <a href="#state_notificationemails_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Emails</a>
@@ -820,8 +766,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -830,8 +775,7 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -840,13 +784,11 @@ addresses are allowed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrolled_ancestor_python">
 <a href="#state_enrolled_ancestor_python" style="color: inherit; text-decoration: inherit;">enrolled_<wbr>ancestor</a>
@@ -856,8 +798,7 @@ addresses are allowed.
     </dt>
     <dd>{{% md %}}If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
 of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrolled_services_python">
 <a href="#state_enrolled_services_python" style="color: inherit; text-decoration: inherit;">enrolled_<wbr>services</a>
@@ -869,8 +810,7 @@ of the Project.
 resource given by name against any of these services contained here will be required to have explicit approval.
 Enrollment can only be done on an all or nothing basis. A maximum of 10 enrolled services will be enforced, to be
 expanded as the set of supported services is expanded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +819,7 @@ expanded as the set of supported services is expanded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_emails_python">
 <a href="#state_notification_emails_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>emails</a>
@@ -891,8 +830,7 @@ expanded as the set of supported services is expanded.
     <dd>{{% md %}}A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -901,8 +839,7 @@ addresses are allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of 'project_id'
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -911,8 +848,7 @@ addresses are allowed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project of the access approval settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -927,8 +863,7 @@ addresses are allowed.
 <h4 id="accessapprovalsettingsenrolledservice">Access<wbr>Approval<wbr>Settings<wbr>Enrolled<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloudproduct_csharp">
 <a href="#cloudproduct_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Product</a>
@@ -936,8 +871,7 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentlevel_csharp">
 <a href="#enrollmentlevel_csharp" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Level</a>
@@ -945,13 +879,11 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloudproduct_go">
 <a href="#cloudproduct_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Product</a>
@@ -959,8 +891,7 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentlevel_go">
 <a href="#enrollmentlevel_go" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Level</a>
@@ -968,13 +899,11 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloudproduct_nodejs">
 <a href="#cloudproduct_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Product</a>
@@ -982,8 +911,7 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentlevel_nodejs">
 <a href="#enrollmentlevel_nodejs" style="color: inherit; text-decoration: inherit;">enrollment<wbr>Level</a>
@@ -991,13 +919,11 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloud_product_python">
 <a href="#cloud_product_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>product</a>
@@ -1005,8 +931,7 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollment_level_python">
 <a href="#enrollment_level_python" style="color: inherit; text-decoration: inherit;">enrollment_<wbr>level</a>
@@ -1014,8 +939,7 @@ addresses are allowed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

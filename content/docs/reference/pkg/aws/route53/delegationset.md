@@ -280,8 +280,7 @@ The DelegationSet resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="referencename_csharp">
 <a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -291,13 +290,11 @@ The DelegationSet resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="referencename_go">
 <a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -307,13 +304,11 @@ The DelegationSet resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="referencename_nodejs">
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -323,13 +318,11 @@ The DelegationSet resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="reference_name_python">
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -339,8 +332,7 @@ The DelegationSet resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -351,8 +343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -360,8 +351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameservers_csharp">
 <a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -371,13 +361,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -385,8 +373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameservers_go">
 <a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -396,13 +383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -410,8 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameservers_nodejs">
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
@@ -421,13 +405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -435,8 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_servers_python">
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
@@ -446,8 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -574,8 +554,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_nameservers_csharp">
 <a href="#state_nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -585,8 +564,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencename_csharp">
 <a href="#state_referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -596,13 +574,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_nameservers_go">
 <a href="#state_nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -612,8 +588,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencename_go">
 <a href="#state_referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -623,13 +598,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_nameservers_nodejs">
 <a href="#state_nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
@@ -639,8 +612,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencename_nodejs">
 <a href="#state_referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -650,13 +622,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_servers_python">
 <a href="#state_name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
@@ -666,8 +636,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_name_python">
 <a href="#state_reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -677,8 +646,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

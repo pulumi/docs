@@ -275,8 +275,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -285,8 +284,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -296,8 +294,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -306,8 +303,7 @@ namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefaults_csharp">
 <a href="#policydefaults_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Defaults</a>
@@ -317,8 +313,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roledefaults_csharp">
 <a href="#roledefaults_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Defaults</a>
@@ -328,13 +323,11 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -343,8 +336,7 @@ to all tokens created in this namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -354,8 +346,7 @@ to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -364,8 +355,7 @@ namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefaults_go">
 <a href="#policydefaults_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Defaults</a>
@@ -375,8 +365,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roledefaults_go">
 <a href="#roledefaults_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Defaults</a>
@@ -386,13 +375,11 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -401,8 +388,7 @@ to all tokens created in this namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -412,8 +398,7 @@ to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -422,8 +407,7 @@ namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefaults_nodejs">
 <a href="#policydefaults_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Defaults</a>
@@ -433,8 +417,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roledefaults_nodejs">
 <a href="#roledefaults_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Defaults</a>
@@ -444,13 +427,11 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -459,8 +440,7 @@ to all tokens created in this namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -470,8 +450,7 @@ to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -480,8 +459,7 @@ namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_defaults_python">
 <a href="#policy_defaults_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>defaults</a>
@@ -491,8 +469,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_defaults_python">
 <a href="#role_defaults_python" style="color: inherit; text-decoration: inherit;">role_<wbr>defaults</a>
@@ -502,8 +479,7 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -523,13 +498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -537,13 +510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -551,13 +522,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -565,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -693,8 +661,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -703,8 +670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_csharp">
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -714,8 +680,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -724,8 +689,7 @@ namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefaults_csharp">
 <a href="#state_policydefaults_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Defaults</a>
@@ -735,8 +699,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roledefaults_csharp">
 <a href="#state_roledefaults_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Defaults</a>
@@ -746,13 +709,11 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -761,8 +722,7 @@ to all tokens created in this namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_go">
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -772,8 +732,7 @@ to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -782,8 +741,7 @@ namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefaults_go">
 <a href="#state_policydefaults_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Defaults</a>
@@ -793,8 +751,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roledefaults_go">
 <a href="#state_roledefaults_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Defaults</a>
@@ -804,13 +761,11 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -819,8 +774,7 @@ to all tokens created in this namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_nodejs">
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -830,8 +784,7 @@ to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -840,8 +793,7 @@ namespace.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefaults_nodejs">
 <a href="#state_policydefaults_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Defaults</a>
@@ -851,8 +803,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roledefaults_nodejs">
 <a href="#state_roledefaults_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Defaults</a>
@@ -862,13 +813,11 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -877,8 +826,7 @@ to all tokens created in this namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free form namespace description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_python">
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -888,8 +836,7 @@ to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}Specifies arbitrary KV metadata to associate with the
 namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -898,8 +845,7 @@ namespace.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_defaults_python">
 <a href="#state_policy_defaults_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>defaults</a>
@@ -909,8 +855,7 @@ namespace.
     </dt>
     <dd>{{% md %}}The list of default policies that should be
 applied to all tokens created in this namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_defaults_python">
 <a href="#state_role_defaults_python" style="color: inherit; text-decoration: inherit;">role_<wbr>defaults</a>
@@ -920,8 +865,7 @@ applied to all tokens created in this namespace.
     </dt>
     <dd>{{% md %}}The list of default roles that should be applied
 to all tokens created in this namespace.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

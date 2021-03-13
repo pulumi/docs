@@ -275,8 +275,7 @@ The RandomUuid resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_csharp">
 <a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -287,13 +286,11 @@ The RandomUuid resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_go">
 <a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -304,13 +301,11 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_nodejs">
 <a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -321,13 +316,11 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_python">
 <a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -338,8 +331,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -350,8 +342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -359,8 +350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="result_csharp">
 <a href="#result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
@@ -369,13 +359,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -383,8 +371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="result_go">
 <a href="#result_go" style="color: inherit; text-decoration: inherit;">Result</a>
@@ -393,13 +380,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -407,8 +392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="result_nodejs">
 <a href="#result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
@@ -417,13 +401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -431,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="result_python">
 <a href="#result_python" style="color: inherit; text-decoration: inherit;">result</a>
@@ -441,8 +422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -569,8 +549,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_csharp">
 <a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -581,8 +560,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_result_csharp">
 <a href="#state_result_csharp" style="color: inherit; text-decoration: inherit;">Result</a>
@@ -591,13 +569,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_go">
 <a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -608,8 +584,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_result_go">
 <a href="#state_result_go" style="color: inherit; text-decoration: inherit;">Result</a>
@@ -618,13 +593,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_nodejs">
 <a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -635,8 +608,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_result_nodejs">
 <a href="#state_result_nodejs" style="color: inherit; text-decoration: inherit;">result</a>
@@ -645,13 +617,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_python">
 <a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -662,8 +632,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_result_python">
 <a href="#state_result_python" style="color: inherit; text-decoration: inherit;">result</a>
@@ -672,8 +641,7 @@ the main provider documentation for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The generated uuid presented in string format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -273,8 +273,7 @@ The Intention resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -283,8 +282,7 @@ The Intention resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationname_csharp">
 <a href="#destinationname_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
@@ -294,8 +292,7 @@ The Intention resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcename_csharp">
 <a href="#sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -305,8 +302,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -316,8 +312,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -327,8 +322,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationnamespace_csharp">
 <a href="#destinationnamespace_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Namespace</a>
@@ -338,8 +332,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -349,8 +342,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenamespace_csharp">
 <a href="#sourcenamespace_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Namespace</a>
@@ -360,13 +352,11 @@ with the intention.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -375,8 +365,7 @@ intention.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationname_go">
 <a href="#destinationname_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
@@ -386,8 +375,7 @@ intention.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcename_go">
 <a href="#sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -397,8 +385,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -408,8 +395,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -419,8 +405,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationnamespace_go">
 <a href="#destinationnamespace_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Namespace</a>
@@ -430,8 +415,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -441,8 +425,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenamespace_go">
 <a href="#sourcenamespace_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Namespace</a>
@@ -452,13 +435,11 @@ with the intention.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -467,8 +448,7 @@ intention.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationname_nodejs">
 <a href="#destinationname_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Name</a>
@@ -478,8 +458,7 @@ intention.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcename_nodejs">
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -489,8 +468,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -500,8 +478,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -511,8 +488,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationnamespace_nodejs">
 <a href="#destinationnamespace_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Namespace</a>
@@ -522,8 +498,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -533,8 +508,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenamespace_nodejs">
 <a href="#sourcenamespace_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Namespace</a>
@@ -544,13 +518,11 @@ with the intention.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -559,8 +531,7 @@ intention.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_name_python">
 <a href="#destination_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>name</a>
@@ -570,8 +541,7 @@ intention.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_name_python">
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -581,8 +551,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -592,8 +561,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -603,8 +571,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_namespace_python">
 <a href="#destination_namespace_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>namespace</a>
@@ -614,8 +581,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -625,8 +591,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_namespace_python">
 <a href="#source_namespace_python" style="color: inherit; text-decoration: inherit;">source_<wbr>namespace</a>
@@ -636,8 +601,7 @@ with the intention.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -648,8 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -657,13 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -671,13 +632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -685,13 +644,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -699,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -827,8 +783,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -837,8 +792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -848,8 +802,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -859,8 +812,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationname_csharp">
 <a href="#state_destinationname_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
@@ -870,8 +822,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationnamespace_csharp">
 <a href="#state_destinationnamespace_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Namespace</a>
@@ -881,8 +832,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_csharp">
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -892,8 +842,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcename_csharp">
 <a href="#state_sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -903,8 +852,7 @@ with the intention.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcenamespace_csharp">
 <a href="#state_sourcenamespace_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Namespace</a>
@@ -914,13 +862,11 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -929,8 +875,7 @@ intention.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -940,8 +885,7 @@ intention.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -951,8 +895,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationname_go">
 <a href="#state_destinationname_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Name</a>
@@ -962,8 +905,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationnamespace_go">
 <a href="#state_destinationnamespace_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Namespace</a>
@@ -973,8 +915,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_go">
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -984,8 +925,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcename_go">
 <a href="#state_sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -995,8 +935,7 @@ with the intention.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcenamespace_go">
 <a href="#state_sourcenamespace_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Namespace</a>
@@ -1006,13 +945,11 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1021,8 +958,7 @@ intention.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1032,8 +968,7 @@ intention.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1043,8 +978,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationname_nodejs">
 <a href="#state_destinationname_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Name</a>
@@ -1054,8 +988,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationnamespace_nodejs">
 <a href="#state_destinationnamespace_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Namespace</a>
@@ -1065,8 +998,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_nodejs">
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1076,8 +1008,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcename_nodejs">
 <a href="#state_sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -1087,8 +1018,7 @@ with the intention.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcenamespace_nodejs">
 <a href="#state_sourcenamespace_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Namespace</a>
@@ -1098,13 +1028,11 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1113,8 +1041,7 @@ intention.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The intention action. Must be one of `allow` or `deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1124,8 +1051,7 @@ intention.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1135,8 +1061,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Optional description that can be used by Consul
 tooling, but is not used internally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_name_python">
 <a href="#state_destination_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>name</a>
@@ -1146,8 +1071,7 @@ tooling, but is not used internally.
     </dt>
     <dd>{{% md %}}The name of the destination service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_namespace_python">
 <a href="#state_destination_namespace_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>namespace</a>
@@ -1157,8 +1081,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The destination
 namespace of the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meta_python">
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1168,8 +1091,7 @@ namespace of the intention.
     </dt>
     <dd>{{% md %}}Key/value pairs that are opaque to Consul and are associated
 with the intention.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_name_python">
 <a href="#state_source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -1179,8 +1101,7 @@ with the intention.
     </dt>
     <dd>{{% md %}}The name of the source service for the intention. This
 service does not have to exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_namespace_python">
 <a href="#state_source_namespace_python" style="color: inherit; text-decoration: inherit;">source_<wbr>namespace</a>
@@ -1190,8 +1111,7 @@ service does not have to exist.
     </dt>
     <dd>{{% md %}}The source namespace of the
 intention.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

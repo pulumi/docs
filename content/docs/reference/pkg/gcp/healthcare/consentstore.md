@@ -178,8 +178,7 @@ The ConsentStore resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -189,8 +188,7 @@ The ConsentStore resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultconsentttl_csharp">
 <a href="#defaultconsentttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
@@ -200,8 +198,7 @@ The ConsentStore resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableconsentcreateonupdate_csharp">
 <a href="#enableconsentcreateonupdate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
@@ -210,8 +207,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -227,8 +223,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -238,13 +233,11 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -254,8 +247,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultconsentttl_go">
 <a href="#defaultconsentttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
@@ -265,8 +257,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableconsentcreateonupdate_go">
 <a href="#enableconsentcreateonupdate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
@@ -275,8 +266,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -292,8 +282,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -303,13 +292,11 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -319,8 +306,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultconsentttl_nodejs">
 <a href="#defaultconsentttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consent<wbr>Ttl</a>
@@ -330,8 +316,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableconsentcreateonupdate_nodejs">
 <a href="#enableconsentcreateonupdate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
@@ -340,8 +325,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -357,8 +341,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -368,13 +351,11 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -384,8 +365,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_consent_ttl_python">
 <a href="#default_consent_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consent_<wbr>ttl</a>
@@ -395,8 +375,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_consent_create_on_update_python">
 <a href="#enable_consent_create_on_update_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>consent_<wbr>create_<wbr>on_<wbr>update</a>
@@ -405,8 +384,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -422,8 +400,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -433,8 +410,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -445,8 +421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -454,13 +429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -468,13 +441,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -482,13 +453,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -496,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -624,8 +592,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_csharp">
 <a href="#state_dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -635,8 +602,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultconsentttl_csharp">
 <a href="#state_defaultconsentttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
@@ -646,8 +612,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableconsentcreateonupdate_csharp">
 <a href="#state_enableconsentcreateonupdate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
@@ -656,8 +621,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -673,8 +637,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -684,13 +647,11 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_go">
 <a href="#state_dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -700,8 +661,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultconsentttl_go">
 <a href="#state_defaultconsentttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
@@ -711,8 +671,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableconsentcreateonupdate_go">
 <a href="#state_enableconsentcreateonupdate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
@@ -721,8 +680,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -738,8 +696,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -749,13 +706,11 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_nodejs">
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -765,8 +720,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultconsentttl_nodejs">
 <a href="#state_defaultconsentttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consent<wbr>Ttl</a>
@@ -776,8 +730,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableconsentcreateonupdate_nodejs">
 <a href="#state_enableconsentcreateonupdate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
@@ -786,8 +739,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -803,8 +755,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -814,13 +765,11 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_python">
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -830,8 +779,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_consent_ttl_python">
 <a href="#state_default_consent_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consent_<wbr>ttl</a>
@@ -841,8 +789,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_consent_create_on_update_python">
 <a href="#state_enable_consent_create_on_update_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>consent_<wbr>create_<wbr>on_<wbr>update</a>
@@ -851,8 +798,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -868,8 +814,7 @@ bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +824,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

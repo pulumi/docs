@@ -162,8 +162,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypassrowlevelsecurity_csharp">
 <a href="#bypassrowlevelsecurity_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
@@ -173,8 +172,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_csharp">
 <a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -185,8 +183,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdatabase_csharp">
 <a href="#createdatabase_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
@@ -196,8 +193,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createrole_csharp">
 <a href="#createrole_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
@@ -208,8 +204,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -217,8 +212,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="encryptedpassword_csharp">
 <a href="#encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -231,8 +225,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_csharp">
 <a href="#inherit_csharp" style="color: inherit; text-decoration: inherit;">Inherit</a>
@@ -242,8 +235,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -254,8 +246,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +256,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -276,8 +266,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_csharp">
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -288,8 +277,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -298,8 +286,7 @@ value is `false`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_csharp">
 <a href="#searchpaths_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -310,8 +297,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdroprole_csharp">
 <a href="#skipdroprole_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
@@ -326,8 +312,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipreassignowned_csharp">
 <a href="#skipreassignowned_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
@@ -343,8 +328,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statementtimeout_csharp">
 <a href="#statementtimeout_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
@@ -353,8 +337,7 @@ an implicit
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_csharp">
 <a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Superuser</a>
@@ -365,8 +348,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_csharp">
 <a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -379,13 +361,11 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypassrowlevelsecurity_go">
 <a href="#bypassrowlevelsecurity_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
@@ -395,8 +375,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_go">
 <a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -407,8 +386,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdatabase_go">
 <a href="#createdatabase_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
@@ -418,8 +396,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createrole_go">
 <a href="#createrole_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
@@ -430,8 +407,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -439,8 +415,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="encryptedpassword_go">
 <a href="#encryptedpassword_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -453,8 +428,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_go">
 <a href="#inherit_go" style="color: inherit; text-decoration: inherit;">Inherit</a>
@@ -464,8 +438,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -476,8 +449,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -487,8 +459,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -498,8 +469,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_go">
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -510,8 +480,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -520,8 +489,7 @@ value is `false`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_go">
 <a href="#searchpaths_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -532,8 +500,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdroprole_go">
 <a href="#skipdroprole_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
@@ -548,8 +515,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipreassignowned_go">
 <a href="#skipreassignowned_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
@@ -565,8 +531,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statementtimeout_go">
 <a href="#statementtimeout_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
@@ -575,8 +540,7 @@ an implicit
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_go">
 <a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Superuser</a>
@@ -587,8 +551,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_go">
 <a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -601,13 +564,11 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypassrowlevelsecurity_nodejs">
 <a href="#bypassrowlevelsecurity_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Row<wbr>Level<wbr>Security</a>
@@ -617,8 +578,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_nodejs">
 <a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -629,8 +589,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdatabase_nodejs">
 <a href="#createdatabase_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database</a>
@@ -640,8 +599,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createrole_nodejs">
 <a href="#createrole_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Role</a>
@@ -652,8 +610,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -661,8 +618,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="encryptedpassword_nodejs">
 <a href="#encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
@@ -675,8 +631,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_nodejs">
 <a href="#inherit_nodejs" style="color: inherit; text-decoration: inherit;">inherit</a>
@@ -686,8 +641,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -698,8 +652,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -709,8 +662,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -720,8 +672,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_nodejs">
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -732,8 +683,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -742,8 +692,7 @@ value is `false`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_nodejs">
 <a href="#searchpaths_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
@@ -754,8 +703,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdroprole_nodejs">
 <a href="#skipdroprole_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Drop<wbr>Role</a>
@@ -770,8 +718,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipreassignowned_nodejs">
 <a href="#skipreassignowned_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Reassign<wbr>Owned</a>
@@ -787,8 +734,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statementtimeout_nodejs">
 <a href="#statementtimeout_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout</a>
@@ -797,8 +743,7 @@ an implicit
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_nodejs">
 <a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">superuser</a>
@@ -809,8 +754,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_nodejs">
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -823,13 +767,11 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_row_level_security_python">
 <a href="#bypass_row_level_security_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>row_<wbr>level_<wbr>security</a>
@@ -839,8 +781,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_limit_python">
 <a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -851,8 +792,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_database_python">
 <a href="#create_database_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database</a>
@@ -862,8 +802,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_role_python">
 <a href="#create_role_python" style="color: inherit; text-decoration: inherit;">create_<wbr>role</a>
@@ -874,8 +813,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -883,8 +821,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_password_python">
 <a href="#encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
@@ -897,8 +834,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_python">
 <a href="#inherit_python" style="color: inherit; text-decoration: inherit;">inherit</a>
@@ -908,8 +844,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -920,8 +855,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -931,8 +865,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -942,8 +875,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_python">
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -954,8 +886,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -964,8 +895,7 @@ value is `false`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_paths_python">
 <a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
@@ -976,8 +906,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_drop_role_python">
 <a href="#skip_drop_role_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>drop_<wbr>role</a>
@@ -992,8 +921,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_reassign_owned_python">
 <a href="#skip_reassign_owned_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>reassign_<wbr>owned</a>
@@ -1009,8 +937,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statement_timeout_python">
 <a href="#statement_timeout_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout</a>
@@ -1019,8 +946,7 @@ an implicit
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_python">
 <a href="#superuser_python" style="color: inherit; text-decoration: inherit;">superuser</a>
@@ -1031,8 +957,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_until_python">
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -1045,8 +970,7 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1057,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1066,13 +989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1080,13 +1001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1094,13 +1013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1108,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1236,8 +1152,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypassrowlevelsecurity_csharp">
 <a href="#state_bypassrowlevelsecurity_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
@@ -1247,8 +1162,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_csharp">
 <a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -1259,8 +1173,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdatabase_csharp">
 <a href="#state_createdatabase_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
@@ -1270,8 +1183,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createrole_csharp">
 <a href="#state_createrole_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
@@ -1282,8 +1194,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_encrypted_csharp">
 <a href="#state_encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -1291,8 +1202,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedpassword_csharp">
 <a href="#state_encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -1305,8 +1215,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherit_csharp">
 <a href="#state_inherit_csharp" style="color: inherit; text-decoration: inherit;">Inherit</a>
@@ -1316,8 +1225,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_csharp">
 <a href="#state_login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1328,8 +1236,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1339,8 +1246,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1350,8 +1256,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_csharp">
 <a href="#state_replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -1362,8 +1267,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1372,8 +1276,7 @@ value is `false`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchpaths_csharp">
 <a href="#state_searchpaths_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -1384,8 +1287,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipdroprole_csharp">
 <a href="#state_skipdroprole_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
@@ -1400,8 +1302,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipreassignowned_csharp">
 <a href="#state_skipreassignowned_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
@@ -1417,8 +1318,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statementtimeout_csharp">
 <a href="#state_statementtimeout_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
@@ -1427,8 +1327,7 @@ an implicit
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_superuser_csharp">
 <a href="#state_superuser_csharp" style="color: inherit; text-decoration: inherit;">Superuser</a>
@@ -1439,8 +1338,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_csharp">
 <a href="#state_validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -1453,13 +1351,11 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypassrowlevelsecurity_go">
 <a href="#state_bypassrowlevelsecurity_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Row<wbr>Level<wbr>Security</a>
@@ -1469,8 +1365,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_go">
 <a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -1481,8 +1376,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdatabase_go">
 <a href="#state_createdatabase_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database</a>
@@ -1492,8 +1386,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createrole_go">
 <a href="#state_createrole_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Role</a>
@@ -1504,8 +1397,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_encrypted_go">
 <a href="#state_encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -1513,8 +1405,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedpassword_go">
 <a href="#state_encryptedpassword_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -1527,8 +1418,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherit_go">
 <a href="#state_inherit_go" style="color: inherit; text-decoration: inherit;">Inherit</a>
@@ -1538,8 +1428,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_go">
 <a href="#state_login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -1550,8 +1439,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1561,8 +1449,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1572,8 +1459,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_go">
 <a href="#state_replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -1584,8 +1470,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1594,8 +1479,7 @@ value is `false`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchpaths_go">
 <a href="#state_searchpaths_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -1606,8 +1490,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipdroprole_go">
 <a href="#state_skipdroprole_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Drop<wbr>Role</a>
@@ -1622,8 +1505,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipreassignowned_go">
 <a href="#state_skipreassignowned_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Reassign<wbr>Owned</a>
@@ -1639,8 +1521,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statementtimeout_go">
 <a href="#state_statementtimeout_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout</a>
@@ -1649,8 +1530,7 @@ an implicit
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_superuser_go">
 <a href="#state_superuser_go" style="color: inherit; text-decoration: inherit;">Superuser</a>
@@ -1661,8 +1541,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_go">
 <a href="#state_validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -1675,13 +1554,11 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypassrowlevelsecurity_nodejs">
 <a href="#state_bypassrowlevelsecurity_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Row<wbr>Level<wbr>Security</a>
@@ -1691,8 +1568,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_nodejs">
 <a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -1703,8 +1579,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdatabase_nodejs">
 <a href="#state_createdatabase_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database</a>
@@ -1714,8 +1589,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createrole_nodejs">
 <a href="#state_createrole_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Role</a>
@@ -1726,8 +1600,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_encrypted_nodejs">
 <a href="#state_encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -1735,8 +1608,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedpassword_nodejs">
 <a href="#state_encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
@@ -1749,8 +1621,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherit_nodejs">
 <a href="#state_inherit_nodejs" style="color: inherit; text-decoration: inherit;">inherit</a>
@@ -1760,8 +1631,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_nodejs">
 <a href="#state_login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1772,8 +1642,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1783,8 +1652,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1794,8 +1662,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_nodejs">
 <a href="#state_replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -1806,8 +1673,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1816,8 +1682,7 @@ value is `false`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchpaths_nodejs">
 <a href="#state_searchpaths_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
@@ -1828,8 +1693,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipdroprole_nodejs">
 <a href="#state_skipdroprole_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Drop<wbr>Role</a>
@@ -1844,8 +1708,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipreassignowned_nodejs">
 <a href="#state_skipreassignowned_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Reassign<wbr>Owned</a>
@@ -1861,8 +1724,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statementtimeout_nodejs">
 <a href="#state_statementtimeout_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout</a>
@@ -1871,8 +1733,7 @@ an implicit
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_superuser_nodejs">
 <a href="#state_superuser_nodejs" style="color: inherit; text-decoration: inherit;">superuser</a>
@@ -1883,8 +1744,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_nodejs">
 <a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -1897,13 +1757,11 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypass_row_level_security_python">
 <a href="#state_bypass_row_level_security_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>row_<wbr>level_<wbr>security</a>
@@ -1913,8 +1771,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
     </dt>
     <dd>{{% md %}}Defines whether a role bypasses every
 row-level security (RLS) policy.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_limit_python">
 <a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -1925,8 +1782,7 @@ row-level security (RLS) policy.  Default value is `false`.
     <dd>{{% md %}}If this role can log in, this specifies how
 many concurrent connections the role can establish. `-1` (the default) means no
 limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_database_python">
 <a href="#state_create_database_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database</a>
@@ -1936,8 +1792,7 @@ limit.
     </dt>
     <dd>{{% md %}}Defines a role's ability to execute `CREATE
 DATABASE`.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_role_python">
 <a href="#state_create_role_python" style="color: inherit; text-decoration: inherit;">create_<wbr>role</a>
@@ -1948,8 +1803,7 @@ DATABASE`.  Default value is `false`.
     <dd>{{% md %}}Defines a role's ability to execute `CREATE ROLE`.
 A role with this privilege can also alter and drop other roles.  Default value
 is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_encrypted_python">
 <a href="#state_encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -1957,8 +1811,7 @@ is `false`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL role resource attribute &#34;encrypted&#34; to &#34;encrypted_password&#34;{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_password_python">
 <a href="#state_encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
@@ -1971,8 +1824,7 @@ encrypted in the system catalogs.  Default value is `true`.  NOTE: this value
 is always set (to the conservative and safe value), but may interfere with the
 behavior of
 [PostgreSQL's `password_encryption` setting](https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherit_python">
 <a href="#state_inherit_python" style="color: inherit; text-decoration: inherit;">inherit</a>
@@ -1982,8 +1834,7 @@ behavior of
     </dt>
     <dd>{{% md %}}Defines whether a role "inherits" the privileges of
 roles it is a member of.  Default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_python">
 <a href="#state_login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -1994,8 +1845,7 @@ roles it is a member of.  Default value is `true`.
     <dd>{{% md %}}Defines whether role is allowed to log in.  Roles without
 this attribute are useful for managing database privileges, but are not users
 in the usual sense of the word.  Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2005,8 +1855,7 @@ in the usual sense of the word.  Default value is `false`.
     </dt>
     <dd>{{% md %}}The name of the role. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2016,8 +1865,7 @@ server instance where it is configured.
     </dt>
     <dd>{{% md %}}Sets the role's password. A password is only of use
 for roles having the `login` attribute set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_python">
 <a href="#state_replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -2028,8 +1876,7 @@ for roles having the `login` attribute set to true.
     <dd>{{% md %}}Defines whether a role is allowed to initiate
 streaming replication or put the system in and out of backup mode.  Default
 value is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -2038,8 +1885,7 @@ value is `false`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines list of roles which will be granted to this new role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_paths_python">
 <a href="#state_search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
@@ -2050,8 +1896,7 @@ value is `false`
     <dd>{{% md %}}Alters the search path of this new role. Note that
 due to limitations in the implementation, values cannot contain the substring
 `", "`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skip_drop_role_python">
 <a href="#state_skip_drop_role_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>drop_<wbr>role</a>
@@ -2066,8 +1911,7 @@ in each of the respective databases must occur before the ROLE can be dropped
 from the catalog.  Set this option to true when there are multiple databases
 in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
 This is the third and final step taken when removing a ROLE from a database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skip_reassign_owned_python">
 <a href="#state_skip_reassign_owned_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>reassign_<wbr>owned</a>
@@ -2083,8 +1927,7 @@ can be executed to dropped the ROLE from the catalog.  This is the first and
 second steps taken when removing a ROLE from a database (the second step being
 an implicit
 [`DROP OWNED`](https://www.postgresql.org/docs/current/static/sql-drop-owned.html)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statement_timeout_python">
 <a href="#state_statement_timeout_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout</a>
@@ -2093,8 +1936,7 @@ an implicit
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines [`statement_timeout`](https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT) setting for this role which allows to abort any statement that takes more than the specified amount of time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_superuser_python">
 <a href="#state_superuser_python" style="color: inherit; text-decoration: inherit;">superuser</a>
@@ -2105,8 +1947,7 @@ an implicit
     <dd>{{% md %}}Defines whether the role is a "superuser", and
 therefore can override all access restrictions within the database.  Default
 value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_until_python">
 <a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -2119,8 +1960,7 @@ password is no longer valid.  Established connections past this `valid_time`
 will have to be manually terminated.  This value corresponds to a PostgreSQL
 datetime. If omitted or the magic value `NULL` is used, `valid_until` will be
 set to `infinity`.  Default is `NULL`, therefore `infinity`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

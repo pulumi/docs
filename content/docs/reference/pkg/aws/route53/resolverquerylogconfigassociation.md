@@ -263,8 +263,7 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resolverquerylogconfigid_csharp">
 <a href="#resolverquerylogconfigid_csharp" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Query<wbr>Log<wbr>Config<wbr>Id</a>
@@ -273,8 +272,7 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -283,13 +281,11 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resolverquerylogconfigid_go">
 <a href="#resolverquerylogconfigid_go" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Query<wbr>Log<wbr>Config<wbr>Id</a>
@@ -298,8 +294,7 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -308,13 +303,11 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resolverquerylogconfigid_nodejs">
 <a href="#resolverquerylogconfigid_nodejs" style="color: inherit; text-decoration: inherit;">resolver<wbr>Query<wbr>Log<wbr>Config<wbr>Id</a>
@@ -323,8 +316,7 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -333,13 +325,11 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resolver_query_log_config_id_python">
 <a href="#resolver_query_log_config_id_python" style="color: inherit; text-decoration: inherit;">resolver_<wbr>query_<wbr>log_<wbr>config_<wbr>id</a>
@@ -348,8 +338,7 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -358,8 +347,7 @@ The ResolverQueryLogConfigAssociation resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -370,8 +358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -379,13 +366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -393,13 +378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -407,13 +390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -421,8 +402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -549,8 +529,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_resolverquerylogconfigid_csharp">
 <a href="#state_resolverquerylogconfigid_csharp" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Query<wbr>Log<wbr>Config<wbr>Id</a>
@@ -559,8 +538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -569,13 +547,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_resolverquerylogconfigid_go">
 <a href="#state_resolverquerylogconfigid_go" style="color: inherit; text-decoration: inherit;">Resolver<wbr>Query<wbr>Log<wbr>Config<wbr>Id</a>
@@ -584,8 +560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -594,13 +569,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_resolverquerylogconfigid_nodejs">
 <a href="#state_resolverquerylogconfigid_nodejs" style="color: inherit; text-decoration: inherit;">resolver<wbr>Query<wbr>Log<wbr>Config<wbr>Id</a>
@@ -609,8 +582,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -619,13 +591,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_resolver_query_log_config_id_python">
 <a href="#state_resolver_query_log_config_id_python" style="color: inherit; text-decoration: inherit;">resolver_<wbr>query_<wbr>log_<wbr>config_<wbr>id</a>
@@ -634,8 +604,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -644,8 +613,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC that you want this query logging configuration to log queries for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -313,8 +313,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="administrative_csharp">
 <a href="#administrative_csharp" style="color: inherit; text-decoration: inherit;">Administrative</a>
@@ -323,8 +322,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -333,8 +331,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -343,8 +340,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrole_csharp">
 <a href="#defaultrole_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -353,8 +349,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -363,8 +358,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -373,8 +367,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_csharp">
 <a href="#hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -383,8 +376,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -393,8 +385,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -403,8 +394,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -413,8 +403,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletemplateids_csharp">
 <a href="#roletemplateids_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Ids</a>
@@ -423,8 +412,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -433,13 +421,11 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="administrative_go">
 <a href="#administrative_go" style="color: inherit; text-decoration: inherit;">Administrative</a>
@@ -448,8 +434,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -458,8 +443,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -468,8 +452,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrole_go">
 <a href="#defaultrole_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -478,8 +461,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -488,8 +470,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -498,8 +479,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_go">
 <a href="#hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -508,8 +488,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -518,8 +497,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -528,8 +506,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -538,8 +515,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletemplateids_go">
 <a href="#roletemplateids_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Ids</a>
@@ -548,8 +524,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -558,13 +533,11 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#roletempalterule">[]Role<wbr>Tempalte<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="administrative_nodejs">
 <a href="#administrative_nodejs" style="color: inherit; text-decoration: inherit;">administrative</a>
@@ -573,8 +546,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -583,8 +555,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
@@ -593,8 +564,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrole_nodejs">
 <a href="#defaultrole_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Role</a>
@@ -603,8 +573,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -613,8 +582,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -623,8 +591,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_nodejs">
 <a href="#hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -633,8 +600,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -643,8 +609,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -653,8 +618,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -663,8 +627,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletemplateids_nodejs">
 <a href="#roletemplateids_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Template<wbr>Ids</a>
@@ -673,8 +636,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -683,13 +645,11 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="administrative_python">
 <a href="#administrative_python" style="color: inherit; text-decoration: inherit;">administrative</a>
@@ -698,8 +658,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -708,8 +667,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
@@ -718,8 +676,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_role_python">
 <a href="#default_role_python" style="color: inherit; text-decoration: inherit;">default_<wbr>role</a>
@@ -728,8 +685,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -738,8 +694,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -748,8 +703,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_python">
 <a href="#hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -758,8 +712,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -768,8 +721,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -778,8 +730,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -788,8 +739,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_template_ids_python">
 <a href="#role_template_ids_python" style="color: inherit; text-decoration: inherit;">role_<wbr>template_<wbr>ids</a>
@@ -798,8 +748,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -808,8 +757,7 @@ The RoleTempalte resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#roletempalterule">Sequence[Role<wbr>Tempalte<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -820,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="builtin_csharp">
 <a href="#builtin_csharp" style="color: inherit; text-decoration: inherit;">Builtin</a>
@@ -830,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -839,13 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="builtin_go">
 <a href="#builtin_go" style="color: inherit; text-decoration: inherit;">Builtin</a>
@@ -854,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -863,13 +806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="builtin_nodejs">
 <a href="#builtin_nodejs" style="color: inherit; text-decoration: inherit;">builtin</a>
@@ -878,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -887,13 +827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="builtin_python">
 <a href="#builtin_python" style="color: inherit; text-decoration: inherit;">builtin</a>
@@ -902,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1039,8 +975,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_administrative_csharp">
 <a href="#state_administrative_csharp" style="color: inherit; text-decoration: inherit;">Administrative</a>
@@ -1049,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1059,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtin_csharp">
 <a href="#state_builtin_csharp" style="color: inherit; text-decoration: inherit;">Builtin</a>
@@ -1069,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_context_csharp">
 <a href="#state_context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -1079,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrole_csharp">
 <a href="#state_defaultrole_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -1089,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1099,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_csharp">
 <a href="#state_external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -1109,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_csharp">
 <a href="#state_hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -1119,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1129,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
 <a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1139,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1149,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletemplateids_csharp">
 <a href="#state_roletemplateids_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Ids</a>
@@ -1159,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1169,13 +1092,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#roletempalterule">List&lt;Role<wbr>Tempalte<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_administrative_go">
 <a href="#state_administrative_go" style="color: inherit; text-decoration: inherit;">Administrative</a>
@@ -1184,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1194,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtin_go">
 <a href="#state_builtin_go" style="color: inherit; text-decoration: inherit;">Builtin</a>
@@ -1204,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_context_go">
 <a href="#state_context_go" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -1214,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrole_go">
 <a href="#state_defaultrole_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -1224,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1234,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_go">
 <a href="#state_external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -1244,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_go">
 <a href="#state_hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -1254,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1264,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
 <a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1274,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1284,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletemplateids_go">
 <a href="#state_roletemplateids_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Template<wbr>Ids</a>
@@ -1294,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1304,13 +1213,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#roletempalterule">[]Role<wbr>Tempalte<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_administrative_nodejs">
 <a href="#state_administrative_nodejs" style="color: inherit; text-decoration: inherit;">administrative</a>
@@ -1319,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1329,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtin_nodejs">
 <a href="#state_builtin_nodejs" style="color: inherit; text-decoration: inherit;">builtin</a>
@@ -1339,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_context_nodejs">
 <a href="#state_context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
@@ -1349,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrole_nodejs">
 <a href="#state_defaultrole_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Role</a>
@@ -1359,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1369,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_nodejs">
 <a href="#state_external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -1379,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_nodejs">
 <a href="#state_hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -1389,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1399,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1409,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1419,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletemplateids_nodejs">
 <a href="#state_roletemplateids_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Template<wbr>Ids</a>
@@ -1429,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1439,13 +1334,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#roletempalterule">Role<wbr>Tempalte<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_administrative_python">
 <a href="#state_administrative_python" style="color: inherit; text-decoration: inherit;">administrative</a>
@@ -1454,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1464,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_builtin_python">
 <a href="#state_builtin_python" style="color: inherit; text-decoration: inherit;">builtin</a>
@@ -1474,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Computed) Builtin role template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_context_python">
 <a href="#state_context_python" style="color: inherit; text-decoration: inherit;">context</a>
@@ -1484,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role template context. `cluster` and `project` values are supported. Default: `cluster` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_role_python">
 <a href="#state_default_role_python" style="color: inherit; text-decoration: inherit;">default_<wbr>role</a>
@@ -1494,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default role template for new created cluster or project. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1504,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role template description (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_python">
 <a href="#state_external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -1514,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}External role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_python">
 <a href="#state_hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -1524,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hidden role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1534,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for role template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1544,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Locked role template. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1554,8 +1437,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_template_ids_python">
 <a href="#state_role_template_ids_python" style="color: inherit; text-decoration: inherit;">role_<wbr>template_<wbr>ids</a>
@@ -1564,8 +1446,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Inherit role template IDs (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1574,8 +1455,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#roletempalterule">Sequence[Role<wbr>Tempalte<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Role template policy rules (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1590,8 +1470,7 @@ The following state arguments are supported:
 <h4 id="roletempalterule">Role<wbr>Tempalte<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apigroups_csharp">
 <a href="#apigroups_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Groups</a>
@@ -1600,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule api groups (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonresourceurls_csharp">
 <a href="#nonresourceurls_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Resource<wbr>Urls</a>
@@ -1610,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule non resource urls (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcenames_csharp">
 <a href="#resourcenames_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Names</a>
@@ -1620,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule resource names (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1630,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule resources (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbs_csharp">
 <a href="#verbs_csharp" style="color: inherit; text-decoration: inherit;">Verbs</a>
@@ -1640,13 +1515,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule verbs. `create`, `delete`, `get`, `list`, `patch`, `update`, `view`, `watch` and `*` values are supported (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apigroups_go">
 <a href="#apigroups_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Groups</a>
@@ -1655,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Policy rule api groups (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonresourceurls_go">
 <a href="#nonresourceurls_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Resource<wbr>Urls</a>
@@ -1665,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Policy rule non resource urls (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcenames_go">
 <a href="#resourcenames_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Names</a>
@@ -1675,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Policy rule resource names (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1685,8 +1555,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Policy rule resources (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbs_go">
 <a href="#verbs_go" style="color: inherit; text-decoration: inherit;">Verbs</a>
@@ -1695,13 +1564,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Policy rule verbs. `create`, `delete`, `get`, `list`, `patch`, `update`, `view`, `watch` and `*` values are supported (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apigroups_nodejs">
 <a href="#apigroups_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Groups</a>
@@ -1710,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule api groups (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nonresourceurls_nodejs">
 <a href="#nonresourceurls_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Resource<wbr>Urls</a>
@@ -1720,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule non resource urls (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcenames_nodejs">
 <a href="#resourcenames_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Names</a>
@@ -1730,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule resource names (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1740,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule resources (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbs_nodejs">
 <a href="#verbs_nodejs" style="color: inherit; text-decoration: inherit;">verbs</a>
@@ -1750,13 +1613,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Policy rule verbs. `create`, `delete`, `get`, `list`, `patch`, `update`, `view`, `watch` and `*` values are supported (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_groups_python">
 <a href="#api_groups_python" style="color: inherit; text-decoration: inherit;">api_<wbr>groups</a>
@@ -1765,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Policy rule api groups (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="non_resource_urls_python">
 <a href="#non_resource_urls_python" style="color: inherit; text-decoration: inherit;">non_<wbr>resource_<wbr>urls</a>
@@ -1775,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Policy rule non resource urls (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_names_python">
 <a href="#resource_names_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>names</a>
@@ -1785,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Policy rule resource names (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1795,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Policy rule resources (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbs_python">
 <a href="#verbs_python" style="color: inherit; text-decoration: inherit;">verbs</a>
@@ -1805,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Policy rule verbs. `create`, `delete`, `get`, `list`, `patch`, `update`, `view`, `watch` and `*` values are supported (list)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -1,8 +1,8 @@
 
 ---
 title: "GlobalClient"
-title_tag: "Resource GlobalClient | Package Auth0"
-meta_desc: "Explore the GlobalClient resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "auth0.GlobalClient"
+meta_desc: "Documentation for the auth0.GlobalClient resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -35,9 +35,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addons_csharp">
 <a href="#addons_csharp" style="color: inherit; text-decoration: inherit;">Addons</a>
@@ -201,8 +170,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedlogouturls_csharp">
 <a href="#allowedlogouturls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -210,8 +178,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -219,8 +186,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apptype_csharp">
 <a href="#apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -228,8 +194,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbacks_csharp">
 <a href="#callbacks_csharp" style="color: inherit; text-decoration: inherit;">Callbacks</a>
@@ -237,8 +202,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -246,8 +210,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientmetadata_csharp">
 <a href="#clientmetadata_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Metadata</a>
@@ -255,8 +218,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -264,8 +226,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecretrotationtrigger_csharp">
 <a href="#clientsecretrotationtrigger_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -273,8 +234,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossoriginauth_csharp">
 <a href="#crossoriginauth_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Auth</a>
@@ -282,8 +242,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossoriginloc_csharp">
 <a href="#crossoriginloc_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Loc</a>
@@ -291,8 +250,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpage_csharp">
 <a href="#customloginpage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page</a>
@@ -300,8 +258,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpageon_csharp">
 <a href="#customloginpageon_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>On</a>
@@ -309,8 +266,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpagepreview_csharp">
 <a href="#customloginpagepreview_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>Preview</a>
@@ -318,8 +274,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -327,8 +282,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -336,8 +290,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formtemplate_csharp">
 <a href="#formtemplate_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Template</a>
@@ -345,8 +298,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granttypes_csharp">
 <a href="#granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -354,8 +306,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiateloginuri_csharp">
 <a href="#initiateloginuri_csharp" style="color: inherit; text-decoration: inherit;">Initiate<wbr>Login<wbr>Uri</a>
@@ -363,8 +314,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfirstparty_csharp">
 <a href="#isfirstparty_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>First<wbr>Party</a>
@@ -372,8 +322,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istokenendpointipheadertrusted_csharp">
 <a href="#istokenendpointipheadertrusted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
@@ -381,8 +330,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtconfiguration_csharp">
 <a href="#jwtconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
@@ -390,8 +338,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_csharp">
 <a href="#logouri_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -399,8 +346,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_csharp">
 <a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -408,8 +354,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -417,8 +362,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcconformant_csharp">
 <a href="#oidcconformant_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Conformant</a>
@@ -426,8 +370,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_csharp">
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -435,8 +378,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_csharp">
 <a href="#sso_csharp" style="color: inherit; text-decoration: inherit;">Sso</a>
@@ -444,8 +386,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssodisabled_csharp">
 <a href="#ssodisabled_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Disabled</a>
@@ -453,8 +394,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpointauthmethod_csharp">
 <a href="#tokenendpointauthmethod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -462,8 +402,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weborigins_csharp">
 <a href="#weborigins_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
@@ -471,14 +410,11 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addons_go">
 <a href="#addons_go" style="color: inherit; text-decoration: inherit;">Addons</a>
@@ -486,8 +422,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedlogouturls_go">
 <a href="#allowedlogouturls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -495,8 +430,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -504,8 +438,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apptype_go">
 <a href="#apptype_go" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -513,8 +446,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbacks_go">
 <a href="#callbacks_go" style="color: inherit; text-decoration: inherit;">Callbacks</a>
@@ -522,8 +454,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -531,8 +462,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientmetadata_go">
 <a href="#clientmetadata_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Metadata</a>
@@ -540,8 +470,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -549,8 +478,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecretrotationtrigger_go">
 <a href="#clientsecretrotationtrigger_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -558,8 +486,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossoriginauth_go">
 <a href="#crossoriginauth_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Auth</a>
@@ -567,8 +494,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossoriginloc_go">
 <a href="#crossoriginloc_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Loc</a>
@@ -576,8 +502,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpage_go">
 <a href="#customloginpage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page</a>
@@ -585,8 +510,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpageon_go">
 <a href="#customloginpageon_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>On</a>
@@ -594,8 +518,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpagepreview_go">
 <a href="#customloginpagepreview_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>Preview</a>
@@ -603,8 +526,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -612,8 +534,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -621,8 +542,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formtemplate_go">
 <a href="#formtemplate_go" style="color: inherit; text-decoration: inherit;">Form<wbr>Template</a>
@@ -630,8 +550,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granttypes_go">
 <a href="#granttypes_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -639,8 +558,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiateloginuri_go">
 <a href="#initiateloginuri_go" style="color: inherit; text-decoration: inherit;">Initiate<wbr>Login<wbr>Uri</a>
@@ -648,8 +566,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfirstparty_go">
 <a href="#isfirstparty_go" style="color: inherit; text-decoration: inherit;">Is<wbr>First<wbr>Party</a>
@@ -657,8 +574,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istokenendpointipheadertrusted_go">
 <a href="#istokenendpointipheadertrusted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
@@ -666,8 +582,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtconfiguration_go">
 <a href="#jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
@@ -675,8 +590,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_go">
 <a href="#logouri_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -684,8 +598,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_go">
 <a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -693,8 +606,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -702,8 +614,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcconformant_go">
 <a href="#oidcconformant_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Conformant</a>
@@ -711,8 +622,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_go">
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -720,8 +630,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_go">
 <a href="#sso_go" style="color: inherit; text-decoration: inherit;">Sso</a>
@@ -729,8 +638,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssodisabled_go">
 <a href="#ssodisabled_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Disabled</a>
@@ -738,8 +646,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpointauthmethod_go">
 <a href="#tokenendpointauthmethod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -747,8 +654,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weborigins_go">
 <a href="#weborigins_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
@@ -756,14 +662,11 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addons_nodejs">
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
@@ -771,8 +674,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedlogouturls_nodejs">
 <a href="#allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
@@ -780,8 +682,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -789,8 +690,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apptype_nodejs">
 <a href="#apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
@@ -798,8 +698,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbacks_nodejs">
 <a href="#callbacks_nodejs" style="color: inherit; text-decoration: inherit;">callbacks</a>
@@ -807,8 +706,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -816,8 +714,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientmetadata_nodejs">
 <a href="#clientmetadata_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Metadata</a>
@@ -825,8 +722,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -834,8 +730,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecretrotationtrigger_nodejs">
 <a href="#clientsecretrotationtrigger_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -843,8 +738,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossoriginauth_nodejs">
 <a href="#crossoriginauth_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Auth</a>
@@ -852,8 +746,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crossoriginloc_nodejs">
 <a href="#crossoriginloc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Loc</a>
@@ -861,8 +754,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpage_nodejs">
 <a href="#customloginpage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page</a>
@@ -870,8 +762,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpageon_nodejs">
 <a href="#customloginpageon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>On</a>
@@ -879,8 +770,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customloginpagepreview_nodejs">
 <a href="#customloginpagepreview_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>Preview</a>
@@ -888,8 +778,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -897,8 +786,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -906,8 +794,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formtemplate_nodejs">
 <a href="#formtemplate_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Template</a>
@@ -915,8 +802,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granttypes_nodejs">
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
@@ -924,8 +810,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiateloginuri_nodejs">
 <a href="#initiateloginuri_nodejs" style="color: inherit; text-decoration: inherit;">initiate<wbr>Login<wbr>Uri</a>
@@ -933,8 +818,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfirstparty_nodejs">
 <a href="#isfirstparty_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>First<wbr>Party</a>
@@ -942,8 +826,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istokenendpointipheadertrusted_nodejs">
 <a href="#istokenendpointipheadertrusted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
@@ -951,8 +834,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtconfiguration_nodejs">
 <a href="#jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
@@ -960,8 +842,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_nodejs">
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
@@ -969,8 +850,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_nodejs">
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -978,8 +858,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -987,8 +866,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcconformant_nodejs">
 <a href="#oidcconformant_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Conformant</a>
@@ -996,8 +874,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_nodejs">
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
@@ -1005,8 +882,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_nodejs">
 <a href="#sso_nodejs" style="color: inherit; text-decoration: inherit;">sso</a>
@@ -1014,8 +890,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssodisabled_nodejs">
 <a href="#ssodisabled_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Disabled</a>
@@ -1023,8 +898,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpointauthmethod_nodejs">
 <a href="#tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -1032,8 +906,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weborigins_nodejs">
 <a href="#weborigins_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Origins</a>
@@ -1041,14 +914,11 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addons_python">
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
@@ -1056,8 +926,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_logout_urls_python">
 <a href="#allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
@@ -1065,8 +934,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -1074,8 +942,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_type_python">
 <a href="#app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
@@ -1083,8 +950,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callbacks_python">
 <a href="#callbacks_python" style="color: inherit; text-decoration: inherit;">callbacks</a>
@@ -1092,8 +958,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1101,8 +966,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_metadata_python">
 <a href="#client_metadata_python" style="color: inherit; text-decoration: inherit;">client_<wbr>metadata</a>
@@ -1110,8 +974,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -1119,8 +982,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_rotation_trigger_python">
 <a href="#client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>
@@ -1128,8 +990,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cross_origin_auth_python">
 <a href="#cross_origin_auth_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>auth</a>
@@ -1137,8 +998,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cross_origin_loc_python">
 <a href="#cross_origin_loc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>loc</a>
@@ -1146,8 +1006,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_login_page_python">
 <a href="#custom_login_page_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page</a>
@@ -1155,8 +1014,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_login_page_on_python">
 <a href="#custom_login_page_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>on</a>
@@ -1164,8 +1022,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_login_page_preview_python">
 <a href="#custom_login_page_preview_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>preview</a>
@@ -1173,8 +1030,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1182,8 +1038,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -1191,8 +1046,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="form_template_python">
 <a href="#form_template_python" style="color: inherit; text-decoration: inherit;">form_<wbr>template</a>
@@ -1200,8 +1054,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grant_types_python">
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
@@ -1209,8 +1062,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiate_login_uri_python">
 <a href="#initiate_login_uri_python" style="color: inherit; text-decoration: inherit;">initiate_<wbr>login_<wbr>uri</a>
@@ -1218,8 +1070,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_first_party_python">
 <a href="#is_first_party_python" style="color: inherit; text-decoration: inherit;">is_<wbr>first_<wbr>party</a>
@@ -1227,8 +1078,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_token_endpoint_ip_header_trusted_python">
 <a href="#is_token_endpoint_ip_header_trusted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>token_<wbr>endpoint_<wbr>ip_<wbr>header_<wbr>trusted</a>
@@ -1236,8 +1086,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwt_configuration_python">
 <a href="#jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
@@ -1245,8 +1094,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logo_uri_python">
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
@@ -1254,8 +1102,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_python">
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -1263,8 +1110,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1272,8 +1118,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_conformant_python">
 <a href="#oidc_conformant_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>conformant</a>
@@ -1281,8 +1126,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_python">
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
@@ -1290,8 +1134,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_python">
 <a href="#sso_python" style="color: inherit; text-decoration: inherit;">sso</a>
@@ -1299,8 +1142,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_disabled_python">
 <a href="#sso_disabled_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>disabled</a>
@@ -1308,8 +1150,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_endpoint_auth_method_python">
 <a href="#token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
@@ -1317,8 +1158,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_origins_python">
 <a href="#web_origins_python" style="color: inherit; text-decoration: inherit;">web_<wbr>origins</a>
@@ -1326,8 +1166,7 @@ The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1338,9 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1348,14 +1185,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1363,14 +1197,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1378,14 +1209,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1393,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1521,9 +1348,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addons_csharp">
 <a href="#state_addons_csharp" style="color: inherit; text-decoration: inherit;">Addons</a>
@@ -1531,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedlogouturls_csharp">
 <a href="#state_allowedlogouturls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -1540,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedorigins_csharp">
 <a href="#state_allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1549,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apptype_csharp">
 <a href="#state_apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -1558,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbacks_csharp">
 <a href="#state_callbacks_csharp" style="color: inherit; text-decoration: inherit;">Callbacks</a>
@@ -1567,8 +1388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1576,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientmetadata_csharp">
 <a href="#state_clientmetadata_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Metadata</a>
@@ -1585,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_csharp">
 <a href="#state_clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1594,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecretrotationtrigger_csharp">
 <a href="#state_clientsecretrotationtrigger_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -1603,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crossoriginauth_csharp">
 <a href="#state_crossoriginauth_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Auth</a>
@@ -1612,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crossoriginloc_csharp">
 <a href="#state_crossoriginloc_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Loc</a>
@@ -1621,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpage_csharp">
 <a href="#state_customloginpage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page</a>
@@ -1630,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpageon_csharp">
 <a href="#state_customloginpageon_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>On</a>
@@ -1639,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpagepreview_csharp">
 <a href="#state_customloginpagepreview_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>Preview</a>
@@ -1648,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1657,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkey_csharp">
 <a href="#state_encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -1666,8 +1476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_formtemplate_csharp">
 <a href="#state_formtemplate_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Template</a>
@@ -1675,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypes_csharp">
 <a href="#state_granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -1684,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiateloginuri_csharp">
 <a href="#state_initiateloginuri_csharp" style="color: inherit; text-decoration: inherit;">Initiate<wbr>Login<wbr>Uri</a>
@@ -1693,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isfirstparty_csharp">
 <a href="#state_isfirstparty_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>First<wbr>Party</a>
@@ -1702,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istokenendpointipheadertrusted_csharp">
 <a href="#state_istokenendpointipheadertrusted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
@@ -1711,8 +1516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtconfiguration_csharp">
 <a href="#state_jwtconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
@@ -1720,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_csharp">
 <a href="#state_logouri_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -1729,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mobile_csharp">
 <a href="#state_mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -1738,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1747,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcconformant_csharp">
 <a href="#state_oidcconformant_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Conformant</a>
@@ -1756,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtoken_csharp">
 <a href="#state_refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -1765,8 +1564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_csharp">
 <a href="#state_sso_csharp" style="color: inherit; text-decoration: inherit;">Sso</a>
@@ -1774,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssodisabled_csharp">
 <a href="#state_ssodisabled_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Disabled</a>
@@ -1783,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenendpointauthmethod_csharp">
 <a href="#state_tokenendpointauthmethod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -1792,8 +1588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weborigins_csharp">
 <a href="#state_weborigins_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
@@ -1801,14 +1596,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addons_go">
 <a href="#state_addons_go" style="color: inherit; text-decoration: inherit;">Addons</a>
@@ -1816,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedlogouturls_go">
 <a href="#state_allowedlogouturls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -1825,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedorigins_go">
 <a href="#state_allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1834,8 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apptype_go">
 <a href="#state_apptype_go" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -1843,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbacks_go">
 <a href="#state_callbacks_go" style="color: inherit; text-decoration: inherit;">Callbacks</a>
@@ -1852,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1861,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientmetadata_go">
 <a href="#state_clientmetadata_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Metadata</a>
@@ -1870,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_go">
 <a href="#state_clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1879,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecretrotationtrigger_go">
 <a href="#state_clientsecretrotationtrigger_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -1888,8 +1672,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crossoriginauth_go">
 <a href="#state_crossoriginauth_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Auth</a>
@@ -1897,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crossoriginloc_go">
 <a href="#state_crossoriginloc_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Origin<wbr>Loc</a>
@@ -1906,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpage_go">
 <a href="#state_customloginpage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page</a>
@@ -1915,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpageon_go">
 <a href="#state_customloginpageon_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>On</a>
@@ -1924,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpagepreview_go">
 <a href="#state_customloginpagepreview_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Login<wbr>Page<wbr>Preview</a>
@@ -1933,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1942,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkey_go">
 <a href="#state_encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -1951,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_formtemplate_go">
 <a href="#state_formtemplate_go" style="color: inherit; text-decoration: inherit;">Form<wbr>Template</a>
@@ -1960,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypes_go">
 <a href="#state_granttypes_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -1969,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiateloginuri_go">
 <a href="#state_initiateloginuri_go" style="color: inherit; text-decoration: inherit;">Initiate<wbr>Login<wbr>Uri</a>
@@ -1978,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isfirstparty_go">
 <a href="#state_isfirstparty_go" style="color: inherit; text-decoration: inherit;">Is<wbr>First<wbr>Party</a>
@@ -1987,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istokenendpointipheadertrusted_go">
 <a href="#state_istokenendpointipheadertrusted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
@@ -1996,8 +1768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtconfiguration_go">
 <a href="#state_jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
@@ -2005,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_go">
 <a href="#state_logouri_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -2014,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mobile_go">
 <a href="#state_mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -2023,8 +1792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2032,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcconformant_go">
 <a href="#state_oidcconformant_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Conformant</a>
@@ -2041,8 +1808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtoken_go">
 <a href="#state_refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -2050,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_go">
 <a href="#state_sso_go" style="color: inherit; text-decoration: inherit;">Sso</a>
@@ -2059,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssodisabled_go">
 <a href="#state_ssodisabled_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Disabled</a>
@@ -2068,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenendpointauthmethod_go">
 <a href="#state_tokenendpointauthmethod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -2077,8 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weborigins_go">
 <a href="#state_weborigins_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Origins</a>
@@ -2086,14 +1848,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addons_nodejs">
 <a href="#state_addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
@@ -2101,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedlogouturls_nodejs">
 <a href="#state_allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
@@ -2110,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedorigins_nodejs">
 <a href="#state_allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -2119,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apptype_nodejs">
 <a href="#state_apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
@@ -2128,8 +1884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbacks_nodejs">
 <a href="#state_callbacks_nodejs" style="color: inherit; text-decoration: inherit;">callbacks</a>
@@ -2137,8 +1892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -2146,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientmetadata_nodejs">
 <a href="#state_clientmetadata_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Metadata</a>
@@ -2155,8 +1908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_nodejs">
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -2164,8 +1916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecretrotationtrigger_nodejs">
 <a href="#state_clientsecretrotationtrigger_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Rotation<wbr>Trigger</a>
@@ -2173,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crossoriginauth_nodejs">
 <a href="#state_crossoriginauth_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Auth</a>
@@ -2182,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crossoriginloc_nodejs">
 <a href="#state_crossoriginloc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Origin<wbr>Loc</a>
@@ -2191,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpage_nodejs">
 <a href="#state_customloginpage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page</a>
@@ -2200,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpageon_nodejs">
 <a href="#state_customloginpageon_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>On</a>
@@ -2209,8 +1956,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customloginpagepreview_nodejs">
 <a href="#state_customloginpagepreview_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Login<wbr>Page<wbr>Preview</a>
@@ -2218,8 +1964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2227,8 +1972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkey_nodejs">
 <a href="#state_encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -2236,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_formtemplate_nodejs">
 <a href="#state_formtemplate_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Template</a>
@@ -2245,8 +1988,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypes_nodejs">
 <a href="#state_granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
@@ -2254,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiateloginuri_nodejs">
 <a href="#state_initiateloginuri_nodejs" style="color: inherit; text-decoration: inherit;">initiate<wbr>Login<wbr>Uri</a>
@@ -2263,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isfirstparty_nodejs">
 <a href="#state_isfirstparty_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>First<wbr>Party</a>
@@ -2272,8 +2012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istokenendpointipheadertrusted_nodejs">
 <a href="#state_istokenendpointipheadertrusted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Token<wbr>Endpoint<wbr>Ip<wbr>Header<wbr>Trusted</a>
@@ -2281,8 +2020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtconfiguration_nodejs">
 <a href="#state_jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
@@ -2290,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_nodejs">
 <a href="#state_logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
@@ -2299,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mobile_nodejs">
 <a href="#state_mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -2308,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2317,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcconformant_nodejs">
 <a href="#state_oidcconformant_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Conformant</a>
@@ -2326,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtoken_nodejs">
 <a href="#state_refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
@@ -2335,8 +2068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_nodejs">
 <a href="#state_sso_nodejs" style="color: inherit; text-decoration: inherit;">sso</a>
@@ -2344,8 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssodisabled_nodejs">
 <a href="#state_ssodisabled_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Disabled</a>
@@ -2353,8 +2084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenendpointauthmethod_nodejs">
 <a href="#state_tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -2362,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weborigins_nodejs">
 <a href="#state_weborigins_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Origins</a>
@@ -2371,14 +2100,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addons_python">
 <a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
@@ -2386,8 +2112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddons">Global<wbr>Client<wbr>Addons<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_logout_urls_python">
 <a href="#state_allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
@@ -2395,8 +2120,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_origins_python">
 <a href="#state_allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -2404,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_type_python">
 <a href="#state_app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
@@ -2413,8 +2136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callbacks_python">
 <a href="#state_callbacks_python" style="color: inherit; text-decoration: inherit;">callbacks</a>
@@ -2422,8 +2144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -2431,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_metadata_python">
 <a href="#state_client_metadata_python" style="color: inherit; text-decoration: inherit;">client_<wbr>metadata</a>
@@ -2440,8 +2160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_python">
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -2449,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_rotation_trigger_python">
 <a href="#state_client_secret_rotation_trigger_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>rotation_<wbr>trigger</a>
@@ -2458,8 +2176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cross_origin_auth_python">
 <a href="#state_cross_origin_auth_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>auth</a>
@@ -2467,8 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cross_origin_loc_python">
 <a href="#state_cross_origin_loc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>origin_<wbr>loc</a>
@@ -2476,8 +2192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_login_page_python">
 <a href="#state_custom_login_page_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page</a>
@@ -2485,8 +2200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_login_page_on_python">
 <a href="#state_custom_login_page_on_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>on</a>
@@ -2494,8 +2208,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_login_page_preview_python">
 <a href="#state_custom_login_page_preview_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>login_<wbr>page_<wbr>preview</a>
@@ -2503,8 +2216,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2512,8 +2224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_key_python">
 <a href="#state_encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -2521,8 +2232,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_form_template_python">
 <a href="#state_form_template_python" style="color: inherit; text-decoration: inherit;">form_<wbr>template</a>
@@ -2530,8 +2240,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grant_types_python">
 <a href="#state_grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
@@ -2539,8 +2248,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiate_login_uri_python">
 <a href="#state_initiate_login_uri_python" style="color: inherit; text-decoration: inherit;">initiate_<wbr>login_<wbr>uri</a>
@@ -2548,8 +2256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_first_party_python">
 <a href="#state_is_first_party_python" style="color: inherit; text-decoration: inherit;">is_<wbr>first_<wbr>party</a>
@@ -2557,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_token_endpoint_ip_header_trusted_python">
 <a href="#state_is_token_endpoint_ip_header_trusted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>token_<wbr>endpoint_<wbr>ip_<wbr>header_<wbr>trusted</a>
@@ -2566,8 +2272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwt_configuration_python">
 <a href="#state_jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
@@ -2575,8 +2280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_uri_python">
 <a href="#state_logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
@@ -2584,8 +2288,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mobile_python">
 <a href="#state_mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -2593,8 +2296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobile">Global<wbr>Client<wbr>Mobile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2602,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_conformant_python">
 <a href="#state_oidc_conformant_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>conformant</a>
@@ -2611,8 +2312,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_token_python">
 <a href="#state_refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
@@ -2620,8 +2320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_python">
 <a href="#state_sso_python" style="color: inherit; text-decoration: inherit;">sso</a>
@@ -2629,8 +2328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_disabled_python">
 <a href="#state_sso_disabled_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>disabled</a>
@@ -2638,8 +2336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_endpoint_auth_method_python">
 <a href="#state_token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
@@ -2647,8 +2344,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_origins_python">
 <a href="#state_web_origins_python" style="color: inherit; text-decoration: inherit;">web_<wbr>origins</a>
@@ -2656,8 +2352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2672,9 +2367,7 @@ The following state arguments are supported:
 <h4 id="globalclientaddons">Global<wbr>Client<wbr>Addons</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aws_csharp">
 <a href="#aws_csharp" style="color: inherit; text-decoration: inherit;">Aws</a>
@@ -2682,8 +2375,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureblob_csharp">
 <a href="#azureblob_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob</a>
@@ -2691,8 +2383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuresb_csharp">
 <a href="#azuresb_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sb</a>
@@ -2700,8 +2391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="box_csharp">
 <a href="#box_csharp" style="color: inherit; text-decoration: inherit;">Box</a>
@@ -2709,8 +2399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbees_csharp">
 <a href="#cloudbees_csharp" style="color: inherit; text-decoration: inherit;">Cloudbees</a>
@@ -2718,8 +2407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concur_csharp">
 <a href="#concur_csharp" style="color: inherit; text-decoration: inherit;">Concur</a>
@@ -2727,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropbox_csharp">
 <a href="#dropbox_csharp" style="color: inherit; text-decoration: inherit;">Dropbox</a>
@@ -2736,8 +2423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="echosign_csharp">
 <a href="#echosign_csharp" style="color: inherit; text-decoration: inherit;">Echosign</a>
@@ -2745,8 +2431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egnyte_csharp">
 <a href="#egnyte_csharp" style="color: inherit; text-decoration: inherit;">Egnyte</a>
@@ -2754,8 +2439,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebase_csharp">
 <a href="#firebase_csharp" style="color: inherit; text-decoration: inherit;">Firebase</a>
@@ -2763,8 +2447,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer_csharp">
 <a href="#layer_csharp" style="color: inherit; text-decoration: inherit;">Layer</a>
@@ -2772,8 +2455,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mscrm_csharp">
 <a href="#mscrm_csharp" style="color: inherit; text-decoration: inherit;">Mscrm</a>
@@ -2781,8 +2463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newrelic_csharp">
 <a href="#newrelic_csharp" style="color: inherit; text-decoration: inherit;">Newrelic</a>
@@ -2790,8 +2471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="office365_csharp">
 <a href="#office365_csharp" style="color: inherit; text-decoration: inherit;">Office365</a>
@@ -2799,8 +2479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rms_csharp">
 <a href="#rms_csharp" style="color: inherit; text-decoration: inherit;">Rms</a>
@@ -2808,8 +2487,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforce_csharp">
 <a href="#salesforce_csharp" style="color: inherit; text-decoration: inherit;">Salesforce</a>
@@ -2817,8 +2495,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforceapi_csharp">
 <a href="#salesforceapi_csharp" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Api</a>
@@ -2826,8 +2503,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforcesandboxapi_csharp">
 <a href="#salesforcesandboxapi_csharp" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Sandbox<wbr>Api</a>
@@ -2835,8 +2511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlp_csharp">
 <a href="#samlp_csharp" style="color: inherit; text-decoration: inherit;">Samlp</a>
@@ -2844,8 +2519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sapapi_csharp">
 <a href="#sapapi_csharp" style="color: inherit; text-decoration: inherit;">Sap<wbr>Api</a>
@@ -2853,8 +2527,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sentry_csharp">
 <a href="#sentry_csharp" style="color: inherit; text-decoration: inherit;">Sentry</a>
@@ -2862,8 +2535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepoint_csharp">
 <a href="#sharepoint_csharp" style="color: inherit; text-decoration: inherit;">Sharepoint</a>
@@ -2871,8 +2543,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slack_csharp">
 <a href="#slack_csharp" style="color: inherit; text-decoration: inherit;">Slack</a>
@@ -2880,8 +2551,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="springcm_csharp">
 <a href="#springcm_csharp" style="color: inherit; text-decoration: inherit;">Springcm</a>
@@ -2889,8 +2559,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wams_csharp">
 <a href="#wams_csharp" style="color: inherit; text-decoration: inherit;">Wams</a>
@@ -2898,8 +2567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfed_csharp">
 <a href="#wsfed_csharp" style="color: inherit; text-decoration: inherit;">Wsfed</a>
@@ -2907,8 +2575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zendesk_csharp">
 <a href="#zendesk_csharp" style="color: inherit; text-decoration: inherit;">Zendesk</a>
@@ -2916,8 +2583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoom_csharp">
 <a href="#zoom_csharp" style="color: inherit; text-decoration: inherit;">Zoom</a>
@@ -2925,14 +2591,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aws_go">
 <a href="#aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
@@ -2940,8 +2603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureblob_go">
 <a href="#azureblob_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob</a>
@@ -2949,8 +2611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuresb_go">
 <a href="#azuresb_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sb</a>
@@ -2958,8 +2619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="box_go">
 <a href="#box_go" style="color: inherit; text-decoration: inherit;">Box</a>
@@ -2967,8 +2627,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbees_go">
 <a href="#cloudbees_go" style="color: inherit; text-decoration: inherit;">Cloudbees</a>
@@ -2976,8 +2635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concur_go">
 <a href="#concur_go" style="color: inherit; text-decoration: inherit;">Concur</a>
@@ -2985,8 +2643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropbox_go">
 <a href="#dropbox_go" style="color: inherit; text-decoration: inherit;">Dropbox</a>
@@ -2994,8 +2651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="echosign_go">
 <a href="#echosign_go" style="color: inherit; text-decoration: inherit;">Echosign</a>
@@ -3003,8 +2659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egnyte_go">
 <a href="#egnyte_go" style="color: inherit; text-decoration: inherit;">Egnyte</a>
@@ -3012,8 +2667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebase_go">
 <a href="#firebase_go" style="color: inherit; text-decoration: inherit;">Firebase</a>
@@ -3021,8 +2675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer_go">
 <a href="#layer_go" style="color: inherit; text-decoration: inherit;">Layer</a>
@@ -3030,8 +2683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mscrm_go">
 <a href="#mscrm_go" style="color: inherit; text-decoration: inherit;">Mscrm</a>
@@ -3039,8 +2691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newrelic_go">
 <a href="#newrelic_go" style="color: inherit; text-decoration: inherit;">Newrelic</a>
@@ -3048,8 +2699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="office365_go">
 <a href="#office365_go" style="color: inherit; text-decoration: inherit;">Office365</a>
@@ -3057,8 +2707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rms_go">
 <a href="#rms_go" style="color: inherit; text-decoration: inherit;">Rms</a>
@@ -3066,8 +2715,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforce_go">
 <a href="#salesforce_go" style="color: inherit; text-decoration: inherit;">Salesforce</a>
@@ -3075,8 +2723,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforceapi_go">
 <a href="#salesforceapi_go" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Api</a>
@@ -3084,8 +2731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforcesandboxapi_go">
 <a href="#salesforcesandboxapi_go" style="color: inherit; text-decoration: inherit;">Salesforce<wbr>Sandbox<wbr>Api</a>
@@ -3093,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlp_go">
 <a href="#samlp_go" style="color: inherit; text-decoration: inherit;">Samlp</a>
@@ -3102,8 +2747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sapapi_go">
 <a href="#sapapi_go" style="color: inherit; text-decoration: inherit;">Sap<wbr>Api</a>
@@ -3111,8 +2755,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sentry_go">
 <a href="#sentry_go" style="color: inherit; text-decoration: inherit;">Sentry</a>
@@ -3120,8 +2763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepoint_go">
 <a href="#sharepoint_go" style="color: inherit; text-decoration: inherit;">Sharepoint</a>
@@ -3129,8 +2771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slack_go">
 <a href="#slack_go" style="color: inherit; text-decoration: inherit;">Slack</a>
@@ -3138,8 +2779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="springcm_go">
 <a href="#springcm_go" style="color: inherit; text-decoration: inherit;">Springcm</a>
@@ -3147,8 +2787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wams_go">
 <a href="#wams_go" style="color: inherit; text-decoration: inherit;">Wams</a>
@@ -3156,8 +2795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfed_go">
 <a href="#wsfed_go" style="color: inherit; text-decoration: inherit;">Wsfed</a>
@@ -3165,8 +2803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zendesk_go">
 <a href="#zendesk_go" style="color: inherit; text-decoration: inherit;">Zendesk</a>
@@ -3174,8 +2811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoom_go">
 <a href="#zoom_go" style="color: inherit; text-decoration: inherit;">Zoom</a>
@@ -3183,14 +2819,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aws_nodejs">
 <a href="#aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
@@ -3198,8 +2831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureblob_nodejs">
 <a href="#azureblob_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob</a>
@@ -3207,8 +2839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuresb_nodejs">
 <a href="#azuresb_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Sb</a>
@@ -3216,8 +2847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="box_nodejs">
 <a href="#box_nodejs" style="color: inherit; text-decoration: inherit;">box</a>
@@ -3225,8 +2855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbees_nodejs">
 <a href="#cloudbees_nodejs" style="color: inherit; text-decoration: inherit;">cloudbees</a>
@@ -3234,8 +2863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concur_nodejs">
 <a href="#concur_nodejs" style="color: inherit; text-decoration: inherit;">concur</a>
@@ -3243,8 +2871,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropbox_nodejs">
 <a href="#dropbox_nodejs" style="color: inherit; text-decoration: inherit;">dropbox</a>
@@ -3252,8 +2879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="echosign_nodejs">
 <a href="#echosign_nodejs" style="color: inherit; text-decoration: inherit;">echosign</a>
@@ -3261,8 +2887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egnyte_nodejs">
 <a href="#egnyte_nodejs" style="color: inherit; text-decoration: inherit;">egnyte</a>
@@ -3270,8 +2895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebase_nodejs">
 <a href="#firebase_nodejs" style="color: inherit; text-decoration: inherit;">firebase</a>
@@ -3279,8 +2903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer_nodejs">
 <a href="#layer_nodejs" style="color: inherit; text-decoration: inherit;">layer</a>
@@ -3288,8 +2911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mscrm_nodejs">
 <a href="#mscrm_nodejs" style="color: inherit; text-decoration: inherit;">mscrm</a>
@@ -3297,8 +2919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newrelic_nodejs">
 <a href="#newrelic_nodejs" style="color: inherit; text-decoration: inherit;">newrelic</a>
@@ -3306,8 +2927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="office365_nodejs">
 <a href="#office365_nodejs" style="color: inherit; text-decoration: inherit;">office365</a>
@@ -3315,8 +2935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rms_nodejs">
 <a href="#rms_nodejs" style="color: inherit; text-decoration: inherit;">rms</a>
@@ -3324,8 +2943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforce_nodejs">
 <a href="#salesforce_nodejs" style="color: inherit; text-decoration: inherit;">salesforce</a>
@@ -3333,8 +2951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforceapi_nodejs">
 <a href="#salesforceapi_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Api</a>
@@ -3342,8 +2959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforcesandboxapi_nodejs">
 <a href="#salesforcesandboxapi_nodejs" style="color: inherit; text-decoration: inherit;">salesforce<wbr>Sandbox<wbr>Api</a>
@@ -3351,8 +2967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlp_nodejs">
 <a href="#samlp_nodejs" style="color: inherit; text-decoration: inherit;">samlp</a>
@@ -3360,8 +2975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sapapi_nodejs">
 <a href="#sapapi_nodejs" style="color: inherit; text-decoration: inherit;">sap<wbr>Api</a>
@@ -3369,8 +2983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sentry_nodejs">
 <a href="#sentry_nodejs" style="color: inherit; text-decoration: inherit;">sentry</a>
@@ -3378,8 +2991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepoint_nodejs">
 <a href="#sharepoint_nodejs" style="color: inherit; text-decoration: inherit;">sharepoint</a>
@@ -3387,8 +2999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slack_nodejs">
 <a href="#slack_nodejs" style="color: inherit; text-decoration: inherit;">slack</a>
@@ -3396,8 +3007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="springcm_nodejs">
 <a href="#springcm_nodejs" style="color: inherit; text-decoration: inherit;">springcm</a>
@@ -3405,8 +3015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wams_nodejs">
 <a href="#wams_nodejs" style="color: inherit; text-decoration: inherit;">wams</a>
@@ -3414,8 +3023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfed_nodejs">
 <a href="#wsfed_nodejs" style="color: inherit; text-decoration: inherit;">wsfed</a>
@@ -3423,8 +3031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zendesk_nodejs">
 <a href="#zendesk_nodejs" style="color: inherit; text-decoration: inherit;">zendesk</a>
@@ -3432,8 +3039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoom_nodejs">
 <a href="#zoom_nodejs" style="color: inherit; text-decoration: inherit;">zoom</a>
@@ -3441,14 +3047,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aws_python">
 <a href="#aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
@@ -3456,8 +3059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_python">
 <a href="#azure_blob_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob</a>
@@ -3465,8 +3067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_sb_python">
 <a href="#azure_sb_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sb</a>
@@ -3474,8 +3075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="box_python">
 <a href="#box_python" style="color: inherit; text-decoration: inherit;">box</a>
@@ -3483,8 +3083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudbees_python">
 <a href="#cloudbees_python" style="color: inherit; text-decoration: inherit;">cloudbees</a>
@@ -3492,8 +3091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concur_python">
 <a href="#concur_python" style="color: inherit; text-decoration: inherit;">concur</a>
@@ -3501,8 +3099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropbox_python">
 <a href="#dropbox_python" style="color: inherit; text-decoration: inherit;">dropbox</a>
@@ -3510,8 +3107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="echosign_python">
 <a href="#echosign_python" style="color: inherit; text-decoration: inherit;">echosign</a>
@@ -3519,8 +3115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egnyte_python">
 <a href="#egnyte_python" style="color: inherit; text-decoration: inherit;">egnyte</a>
@@ -3528,8 +3123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firebase_python">
 <a href="#firebase_python" style="color: inherit; text-decoration: inherit;">firebase</a>
@@ -3537,8 +3131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="layer_python">
 <a href="#layer_python" style="color: inherit; text-decoration: inherit;">layer</a>
@@ -3546,8 +3139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mscrm_python">
 <a href="#mscrm_python" style="color: inherit; text-decoration: inherit;">mscrm</a>
@@ -3555,8 +3147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newrelic_python">
 <a href="#newrelic_python" style="color: inherit; text-decoration: inherit;">newrelic</a>
@@ -3564,8 +3155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="office365_python">
 <a href="#office365_python" style="color: inherit; text-decoration: inherit;">office365</a>
@@ -3573,8 +3163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rms_python">
 <a href="#rms_python" style="color: inherit; text-decoration: inherit;">rms</a>
@@ -3582,8 +3171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforce_python">
 <a href="#salesforce_python" style="color: inherit; text-decoration: inherit;">salesforce</a>
@@ -3591,8 +3179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforce_api_python">
 <a href="#salesforce_api_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>api</a>
@@ -3600,8 +3187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salesforce_sandbox_api_python">
 <a href="#salesforce_sandbox_api_python" style="color: inherit; text-decoration: inherit;">salesforce_<wbr>sandbox_<wbr>api</a>
@@ -3609,8 +3195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlp_python">
 <a href="#samlp_python" style="color: inherit; text-decoration: inherit;">samlp</a>
@@ -3618,8 +3203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sap_api_python">
 <a href="#sap_api_python" style="color: inherit; text-decoration: inherit;">sap_<wbr>api</a>
@@ -3627,8 +3211,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sentry_python">
 <a href="#sentry_python" style="color: inherit; text-decoration: inherit;">sentry</a>
@@ -3636,8 +3219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepoint_python">
 <a href="#sharepoint_python" style="color: inherit; text-decoration: inherit;">sharepoint</a>
@@ -3645,8 +3227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slack_python">
 <a href="#slack_python" style="color: inherit; text-decoration: inherit;">slack</a>
@@ -3654,8 +3235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="springcm_python">
 <a href="#springcm_python" style="color: inherit; text-decoration: inherit;">springcm</a>
@@ -3663,8 +3243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wams_python">
 <a href="#wams_python" style="color: inherit; text-decoration: inherit;">wams</a>
@@ -3672,8 +3251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfed_python">
 <a href="#wsfed_python" style="color: inherit; text-decoration: inherit;">wsfed</a>
@@ -3681,8 +3259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zendesk_python">
 <a href="#zendesk_python" style="color: inherit; text-decoration: inherit;">zendesk</a>
@@ -3690,8 +3267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoom_python">
 <a href="#zoom_python" style="color: inherit; text-decoration: inherit;">zoom</a>
@@ -3699,16 +3275,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -3716,8 +3289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authncontextclassref_csharp">
 <a href="#authncontextclassref_csharp" style="color: inherit; text-decoration: inherit;">Authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -3725,8 +3297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_csharp">
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -3734,8 +3305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createupnclaim_csharp">
 <a href="#createupnclaim_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Upn<wbr>Claim</a>
@@ -3743,8 +3313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -3752,8 +3321,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digestalgorithm_csharp">
 <a href="#digestalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
@@ -3761,8 +3329,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeattributenameformat_csharp">
 <a href="#includeattributenameformat_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Attribute<wbr>Name<wbr>Format</a>
@@ -3770,8 +3337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeinseconds_csharp">
 <a href="#lifetimeinseconds_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>In<wbr>Seconds</a>
@@ -3779,8 +3345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_csharp">
 <a href="#logout_csharp" style="color: inherit; text-decoration: inherit;">Logout</a>
@@ -3788,8 +3353,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapidentities_csharp">
 <a href="#mapidentities_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Identities</a>
@@ -3797,8 +3361,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapunknownclaimsasis_csharp">
 <a href="#mapunknownclaimsasis_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Unknown<wbr>Claims<wbr>As<wbr>Is</a>
@@ -3806,8 +3369,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_csharp">
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -3815,8 +3377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidentifierformat_csharp">
 <a href="#nameidentifierformat_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Identifier<wbr>Format</a>
@@ -3824,8 +3385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidentifierprobes_csharp">
 <a href="#nameidentifierprobes_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Identifier<wbr>Probes</a>
@@ -3833,8 +3393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughclaimswithnomapping_csharp">
 <a href="#passthroughclaimswithnomapping_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Claims<wbr>With<wbr>No<wbr>Mapping</a>
@@ -3842,8 +3401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_csharp">
 <a href="#recipient_csharp" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -3851,8 +3409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signresponse_csharp">
 <a href="#signresponse_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Response</a>
@@ -3860,8 +3417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -3869,8 +3425,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typedattributes_csharp">
 <a href="#typedattributes_csharp" style="color: inherit; text-decoration: inherit;">Typed<wbr>Attributes</a>
@@ -3878,14 +3433,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -3893,8 +3445,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authncontextclassref_go">
 <a href="#authncontextclassref_go" style="color: inherit; text-decoration: inherit;">Authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -3902,8 +3453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_go">
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -3911,8 +3461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createupnclaim_go">
 <a href="#createupnclaim_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Upn<wbr>Claim</a>
@@ -3920,8 +3469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -3929,8 +3477,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digestalgorithm_go">
 <a href="#digestalgorithm_go" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
@@ -3938,8 +3485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeattributenameformat_go">
 <a href="#includeattributenameformat_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Attribute<wbr>Name<wbr>Format</a>
@@ -3947,8 +3493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeinseconds_go">
 <a href="#lifetimeinseconds_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>In<wbr>Seconds</a>
@@ -3956,8 +3501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_go">
 <a href="#logout_go" style="color: inherit; text-decoration: inherit;">Logout</a>
@@ -3965,8 +3509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapidentities_go">
 <a href="#mapidentities_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Identities</a>
@@ -3974,8 +3517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapunknownclaimsasis_go">
 <a href="#mapunknownclaimsasis_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Unknown<wbr>Claims<wbr>As<wbr>Is</a>
@@ -3983,8 +3525,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_go">
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -3992,8 +3533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidentifierformat_go">
 <a href="#nameidentifierformat_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Identifier<wbr>Format</a>
@@ -4001,8 +3541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidentifierprobes_go">
 <a href="#nameidentifierprobes_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Identifier<wbr>Probes</a>
@@ -4010,8 +3549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughclaimswithnomapping_go">
 <a href="#passthroughclaimswithnomapping_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Claims<wbr>With<wbr>No<wbr>Mapping</a>
@@ -4019,8 +3557,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_go">
 <a href="#recipient_go" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -4028,8 +3565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signresponse_go">
 <a href="#signresponse_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Response</a>
@@ -4037,8 +3573,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -4046,8 +3581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typedattributes_go">
 <a href="#typedattributes_go" style="color: inherit; text-decoration: inherit;">Typed<wbr>Attributes</a>
@@ -4055,14 +3589,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -4070,8 +3601,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authncontextclassref_nodejs">
 <a href="#authncontextclassref_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -4079,8 +3609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_nodejs">
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -4088,8 +3617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createupnclaim_nodejs">
 <a href="#createupnclaim_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Upn<wbr>Claim</a>
@@ -4097,8 +3625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -4106,8 +3633,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digestalgorithm_nodejs">
 <a href="#digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
@@ -4115,8 +3641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeattributenameformat_nodejs">
 <a href="#includeattributenameformat_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Attribute<wbr>Name<wbr>Format</a>
@@ -4124,8 +3649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeinseconds_nodejs">
 <a href="#lifetimeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>In<wbr>Seconds</a>
@@ -4133,8 +3657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_nodejs">
 <a href="#logout_nodejs" style="color: inherit; text-decoration: inherit;">logout</a>
@@ -4142,8 +3665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapidentities_nodejs">
 <a href="#mapidentities_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Identities</a>
@@ -4151,8 +3673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapunknownclaimsasis_nodejs">
 <a href="#mapunknownclaimsasis_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Unknown<wbr>Claims<wbr>As<wbr>Is</a>
@@ -4160,8 +3681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_nodejs">
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -4169,8 +3689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidentifierformat_nodejs">
 <a href="#nameidentifierformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Identifier<wbr>Format</a>
@@ -4178,8 +3697,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidentifierprobes_nodejs">
 <a href="#nameidentifierprobes_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Identifier<wbr>Probes</a>
@@ -4187,8 +3705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughclaimswithnomapping_nodejs">
 <a href="#passthroughclaimswithnomapping_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Claims<wbr>With<wbr>No<wbr>Mapping</a>
@@ -4196,8 +3713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_nodejs">
 <a href="#recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -4205,8 +3721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signresponse_nodejs">
 <a href="#signresponse_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Response</a>
@@ -4214,8 +3729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
@@ -4223,8 +3737,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typedattributes_nodejs">
 <a href="#typedattributes_nodejs" style="color: inherit; text-decoration: inherit;">typed<wbr>Attributes</a>
@@ -4232,14 +3745,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -4247,8 +3757,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authn_context_class_ref_python">
 <a href="#authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
@@ -4256,8 +3765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_python">
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -4265,8 +3773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_upn_claim_python">
 <a href="#create_upn_claim_python" style="color: inherit; text-decoration: inherit;">create_<wbr>upn_<wbr>claim</a>
@@ -4274,8 +3781,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -4283,8 +3789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digest_algorithm_python">
 <a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
@@ -4292,8 +3797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_attribute_name_format_python">
 <a href="#include_attribute_name_format_python" style="color: inherit; text-decoration: inherit;">include_<wbr>attribute_<wbr>name_<wbr>format</a>
@@ -4301,8 +3805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_in_seconds_python">
 <a href="#lifetime_in_seconds_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>in_<wbr>seconds</a>
@@ -4310,8 +3813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logout_python">
 <a href="#logout_python" style="color: inherit; text-decoration: inherit;">logout</a>
@@ -4319,8 +3821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="map_identities_python">
 <a href="#map_identities_python" style="color: inherit; text-decoration: inherit;">map_<wbr>identities</a>
@@ -4328,8 +3829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="map_unknown_claims_as_is_python">
 <a href="#map_unknown_claims_as_is_python" style="color: inherit; text-decoration: inherit;">map_<wbr>unknown_<wbr>claims_<wbr>as_<wbr>is</a>
@@ -4337,8 +3837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_python">
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -4346,8 +3845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_identifier_format_python">
 <a href="#name_identifier_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>identifier_<wbr>format</a>
@@ -4355,8 +3853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_identifier_probes_python">
 <a href="#name_identifier_probes_python" style="color: inherit; text-decoration: inherit;">name_<wbr>identifier_<wbr>probes</a>
@@ -4364,8 +3861,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthrough_claims_with_no_mapping_python">
 <a href="#passthrough_claims_with_no_mapping_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>claims_<wbr>with_<wbr>no_<wbr>mapping</a>
@@ -4373,8 +3869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_python">
 <a href="#recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -4382,8 +3877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_response_python">
 <a href="#sign_response_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>response</a>
@@ -4391,8 +3885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
@@ -4400,8 +3893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typed_attributes_python">
 <a href="#typed_attributes_python" style="color: inherit; text-decoration: inherit;">typed_<wbr>attributes</a>
@@ -4409,16 +3901,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="callback_csharp">
 <a href="#callback_csharp" style="color: inherit; text-decoration: inherit;">Callback</a>
@@ -4426,8 +3915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sloenabled_csharp">
 <a href="#sloenabled_csharp" style="color: inherit; text-decoration: inherit;">Slo<wbr>Enabled</a>
@@ -4435,14 +3923,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="callback_go">
 <a href="#callback_go" style="color: inherit; text-decoration: inherit;">Callback</a>
@@ -4450,8 +3935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sloenabled_go">
 <a href="#sloenabled_go" style="color: inherit; text-decoration: inherit;">Slo<wbr>Enabled</a>
@@ -4459,14 +3943,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="callback_nodejs">
 <a href="#callback_nodejs" style="color: inherit; text-decoration: inherit;">callback</a>
@@ -4474,8 +3955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sloenabled_nodejs">
 <a href="#sloenabled_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Enabled</a>
@@ -4483,14 +3963,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="callback_python">
 <a href="#callback_python" style="color: inherit; text-decoration: inherit;">callback</a>
@@ -4498,8 +3975,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slo_enabled_python">
 <a href="#slo_enabled_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>enabled</a>
@@ -4507,16 +3983,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alg_csharp">
 <a href="#alg_csharp" style="color: inherit; text-decoration: inherit;">Alg</a>
@@ -4524,8 +3997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeinseconds_csharp">
 <a href="#lifetimeinseconds_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>In<wbr>Seconds</a>
@@ -4533,8 +4005,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -4542,8 +4013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretencoded_csharp">
 <a href="#secretencoded_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Encoded</a>
@@ -4551,14 +4021,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alg_go">
 <a href="#alg_go" style="color: inherit; text-decoration: inherit;">Alg</a>
@@ -4566,8 +4033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeinseconds_go">
 <a href="#lifetimeinseconds_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>In<wbr>Seconds</a>
@@ -4575,8 +4041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -4584,8 +4049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretencoded_go">
 <a href="#secretencoded_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Encoded</a>
@@ -4593,14 +4057,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alg_nodejs">
 <a href="#alg_nodejs" style="color: inherit; text-decoration: inherit;">alg</a>
@@ -4608,8 +4069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeinseconds_nodejs">
 <a href="#lifetimeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>In<wbr>Seconds</a>
@@ -4617,8 +4077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -4626,8 +4085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretencoded_nodejs">
 <a href="#secretencoded_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Encoded</a>
@@ -4635,14 +4093,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alg_python">
 <a href="#alg_python" style="color: inherit; text-decoration: inherit;">alg</a>
@@ -4650,8 +4105,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_in_seconds_python">
 <a href="#lifetime_in_seconds_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>in_<wbr>seconds</a>
@@ -4659,8 +4113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -4668,8 +4121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_encoded_python">
 <a href="#secret_encoded_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>encoded</a>
@@ -4677,16 +4129,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientmobile">Global<wbr>Client<wbr>Mobile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="android_csharp">
 <a href="#android_csharp" style="color: inherit; text-decoration: inherit;">Android</a>
@@ -4694,8 +4143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ios_csharp">
 <a href="#ios_csharp" style="color: inherit; text-decoration: inherit;">Ios</a>
@@ -4703,14 +4151,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="android_go">
 <a href="#android_go" style="color: inherit; text-decoration: inherit;">Android</a>
@@ -4718,8 +4163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ios_go">
 <a href="#ios_go" style="color: inherit; text-decoration: inherit;">Ios</a>
@@ -4727,14 +4171,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="android_nodejs">
 <a href="#android_nodejs" style="color: inherit; text-decoration: inherit;">android</a>
@@ -4742,8 +4183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ios_nodejs">
 <a href="#ios_nodejs" style="color: inherit; text-decoration: inherit;">ios</a>
@@ -4751,14 +4191,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="android_python">
 <a href="#android_python" style="color: inherit; text-decoration: inherit;">android</a>
@@ -4766,8 +4203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ios_python">
 <a href="#ios_python" style="color: inherit; text-decoration: inherit;">ios</a>
@@ -4775,16 +4211,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apppackagename_csharp">
 <a href="#apppackagename_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Package<wbr>Name</a>
@@ -4792,8 +4225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256certfingerprints_csharp">
 <a href="#sha256certfingerprints_csharp" style="color: inherit; text-decoration: inherit;">Sha256Cert<wbr>Fingerprints</a>
@@ -4801,14 +4233,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apppackagename_go">
 <a href="#apppackagename_go" style="color: inherit; text-decoration: inherit;">App<wbr>Package<wbr>Name</a>
@@ -4816,8 +4245,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256certfingerprints_go">
 <a href="#sha256certfingerprints_go" style="color: inherit; text-decoration: inherit;">Sha256Cert<wbr>Fingerprints</a>
@@ -4825,14 +4253,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apppackagename_nodejs">
 <a href="#apppackagename_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Package<wbr>Name</a>
@@ -4840,8 +4265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256certfingerprints_nodejs">
 <a href="#sha256certfingerprints_nodejs" style="color: inherit; text-decoration: inherit;">sha256Cert<wbr>Fingerprints</a>
@@ -4849,14 +4273,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_package_name_python">
 <a href="#app_package_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>package_<wbr>name</a>
@@ -4864,8 +4285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_cert_fingerprints_python">
 <a href="#sha256_cert_fingerprints_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>cert_<wbr>fingerprints</a>
@@ -4873,16 +4293,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appbundleidentifier_csharp">
 <a href="#appbundleidentifier_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Bundle<wbr>Identifier</a>
@@ -4890,8 +4307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamid_csharp">
 <a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -4899,14 +4315,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appbundleidentifier_go">
 <a href="#appbundleidentifier_go" style="color: inherit; text-decoration: inherit;">App<wbr>Bundle<wbr>Identifier</a>
@@ -4914,8 +4327,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamid_go">
 <a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -4923,14 +4335,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appbundleidentifier_nodejs">
 <a href="#appbundleidentifier_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Bundle<wbr>Identifier</a>
@@ -4938,8 +4347,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamid_nodejs">
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -4947,14 +4355,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_bundle_identifier_python">
 <a href="#app_bundle_identifier_python" style="color: inherit; text-decoration: inherit;">app_<wbr>bundle_<wbr>identifier</a>
@@ -4962,8 +4367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_id_python">
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -4971,16 +4375,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expirationtype_csharp">
 <a href="#expirationtype_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Type</a>
@@ -4988,8 +4389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rotationtype_csharp">
 <a href="#rotationtype_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Type</a>
@@ -4997,8 +4397,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletokenlifetime_csharp">
 <a href="#idletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
@@ -5006,8 +4405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infiniteidletokenlifetime_csharp">
 <a href="#infiniteidletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
@@ -5015,8 +4413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infinitetokenlifetime_csharp">
 <a href="#infinitetokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
@@ -5024,8 +4421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leeway_csharp">
 <a href="#leeway_csharp" style="color: inherit; text-decoration: inherit;">Leeway</a>
@@ -5033,8 +4429,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenlifetime_csharp">
 <a href="#tokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime</a>
@@ -5042,14 +4437,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expirationtype_go">
 <a href="#expirationtype_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Type</a>
@@ -5057,8 +4449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rotationtype_go">
 <a href="#rotationtype_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Type</a>
@@ -5066,8 +4457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletokenlifetime_go">
 <a href="#idletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
@@ -5075,8 +4465,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infiniteidletokenlifetime_go">
 <a href="#infiniteidletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
@@ -5084,8 +4473,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infinitetokenlifetime_go">
 <a href="#infinitetokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
@@ -5093,8 +4481,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leeway_go">
 <a href="#leeway_go" style="color: inherit; text-decoration: inherit;">Leeway</a>
@@ -5102,8 +4489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenlifetime_go">
 <a href="#tokenlifetime_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Lifetime</a>
@@ -5111,14 +4497,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expirationtype_nodejs">
 <a href="#expirationtype_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Type</a>
@@ -5126,8 +4509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rotationtype_nodejs">
 <a href="#rotationtype_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Type</a>
@@ -5135,8 +4517,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletokenlifetime_nodejs">
 <a href="#idletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Token<wbr>Lifetime</a>
@@ -5144,8 +4525,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infiniteidletokenlifetime_nodejs">
 <a href="#infiniteidletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
@@ -5153,8 +4533,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infinitetokenlifetime_nodejs">
 <a href="#infinitetokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Token<wbr>Lifetime</a>
@@ -5162,8 +4541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leeway_nodejs">
 <a href="#leeway_nodejs" style="color: inherit; text-decoration: inherit;">leeway</a>
@@ -5171,8 +4549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenlifetime_nodejs">
 <a href="#tokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Lifetime</a>
@@ -5180,14 +4557,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expiration_type_python">
 <a href="#expiration_type_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>type</a>
@@ -5195,8 +4569,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rotation_type_python">
 <a href="#rotation_type_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>type</a>
@@ -5204,8 +4577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_token_lifetime_python">
 <a href="#idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>token_<wbr>lifetime</a>
@@ -5213,8 +4585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infinite_idle_token_lifetime_python">
 <a href="#infinite_idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>idle_<wbr>token_<wbr>lifetime</a>
@@ -5222,8 +4593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infinite_token_lifetime_python">
 <a href="#infinite_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>token_<wbr>lifetime</a>
@@ -5231,8 +4601,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leeway_python">
 <a href="#leeway_python" style="color: inherit; text-decoration: inherit;">leeway</a>
@@ -5240,8 +4609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_lifetime_python">
 <a href="#token_lifetime_python" style="color: inherit; text-decoration: inherit;">token_<wbr>lifetime</a>
@@ -5249,8 +4617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

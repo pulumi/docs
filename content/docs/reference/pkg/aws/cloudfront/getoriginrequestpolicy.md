@@ -145,8 +145,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -155,8 +154,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -165,13 +163,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -180,8 +176,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -190,13 +185,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -205,8 +198,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -215,13 +207,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -230,8 +220,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -240,8 +229,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -254,8 +242,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -264,8 +251,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cookiesconfigs_csharp">
 <a href="#cookiesconfigs_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Configs</a>
@@ -274,8 +260,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfig">List&lt;Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -284,8 +269,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="headersconfigs_csharp">
 <a href="#headersconfigs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>Configs</a>
@@ -294,8 +278,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfig">List&lt;Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="querystringsconfigs_csharp">
 <a href="#querystringsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Configs</a>
@@ -304,8 +287,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfig">List&lt;Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -313,8 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -322,13 +303,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -337,8 +316,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cookiesconfigs_go">
 <a href="#cookiesconfigs_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Configs</a>
@@ -347,8 +325,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfig">[]Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -357,8 +334,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="headersconfigs_go">
 <a href="#headersconfigs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>Configs</a>
@@ -367,8 +343,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfig">[]Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="querystringsconfigs_go">
 <a href="#querystringsconfigs_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Configs</a>
@@ -377,8 +352,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfig">[]Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -395,13 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -410,8 +381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cookiesconfigs_nodejs">
 <a href="#cookiesconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Configs</a>
@@ -420,8 +390,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -430,8 +399,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="headersconfigs_nodejs">
 <a href="#headersconfigs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>Configs</a>
@@ -440,8 +408,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="querystringsconfigs_nodejs">
 <a href="#querystringsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings<wbr>Configs</a>
@@ -450,8 +417,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -459,8 +425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -468,13 +433,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -483,8 +446,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cookies_configs_python">
 <a href="#cookies_configs_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>configs</a>
@@ -493,8 +455,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfig">Sequence[Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -503,8 +464,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="headers_configs_python">
 <a href="#headers_configs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>configs</a>
@@ -513,8 +473,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfig">Sequence[Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_strings_configs_python">
 <a href="#query_strings_configs_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings_<wbr>configs</a>
@@ -523,8 +482,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfig">Sequence[Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -532,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -541,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -556,8 +512,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiebehavior_csharp">
 <a href="#cookiebehavior_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
@@ -565,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cookies_csharp">
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -574,13 +528,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfigcookie">List&lt;Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookie<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiebehavior_go">
 <a href="#cookiebehavior_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
@@ -588,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cookies_go">
 <a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -597,13 +548,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfigcookie">[]Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookie</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiebehavior_nodejs">
 <a href="#cookiebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Behavior</a>
@@ -611,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cookies_nodejs">
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -620,13 +568,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfigcookie">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookie[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookie_behavior_python">
 <a href="#cookie_behavior_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>behavior</a>
@@ -634,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cookies_python">
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -643,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicycookiesconfigcookie">Sequence[Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookie<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicycookiesconfigcookie">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookie</h4>
@@ -652,8 +596,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -661,13 +604,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -675,13 +616,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -689,13 +628,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -703,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyheadersconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</h4>
@@ -712,8 +648,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headerbehavior_csharp">
 <a href="#headerbehavior_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
@@ -721,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -730,13 +664,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfigheader">List&lt;Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headerbehavior_go">
 <a href="#headerbehavior_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
@@ -744,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -753,13 +684,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfigheader">[]Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Header</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headerbehavior_nodejs">
 <a href="#headerbehavior_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Behavior</a>
@@ -767,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -776,13 +704,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfigheader">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Header[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_behavior_python">
 <a href="#header_behavior_python" style="color: inherit; text-decoration: inherit;">header_<wbr>behavior</a>
@@ -790,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -799,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyheadersconfigheader">Sequence[Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Header<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyheadersconfigheader">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Header</h4>
@@ -808,8 +732,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -817,13 +740,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -831,13 +752,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -845,13 +764,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -859,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyquerystringsconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</h4>
@@ -868,8 +784,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystringbehavior_csharp">
 <a href="#querystringbehavior_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
@@ -877,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystrings_csharp">
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -886,13 +800,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfigquerystring">List&lt;Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystringbehavior_go">
 <a href="#querystringbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
@@ -900,8 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystrings_go">
 <a href="#querystrings_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -909,13 +820,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfigquerystring">[]Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystringbehavior_nodejs">
 <a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
@@ -923,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystrings_nodejs">
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
@@ -932,13 +840,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfigquerystring">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_string_behavior_python">
 <a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
@@ -946,8 +852,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_strings_python">
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
@@ -955,8 +860,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getoriginrequestpolicyquerystringsconfigquerystring">Sequence[Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyquerystringsconfigquerystring">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String</h4>
@@ -964,8 +868,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -973,13 +876,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -987,13 +888,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1001,13 +900,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1015,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

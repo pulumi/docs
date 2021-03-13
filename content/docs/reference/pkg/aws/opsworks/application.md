@@ -329,8 +329,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stackid_csharp">
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -339,8 +338,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -349,8 +347,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsources_csharp">
 <a href="#appsources_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Sources</a>
@@ -359,8 +356,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autobundleondeploy_csharp">
 <a href="#autobundleondeploy_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Bundle<wbr>On<wbr>Deploy</a>
@@ -369,8 +365,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsflowrubysettings_csharp">
 <a href="#awsflowrubysettings_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Flow<wbr>Ruby<wbr>Settings</a>
@@ -379,8 +374,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcearn_csharp">
 <a href="#datasourcearn_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Arn</a>
@@ -389,8 +383,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcedatabasename_csharp">
 <a href="#datasourcedatabasename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Database<wbr>Name</a>
@@ -399,8 +392,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcetype_csharp">
 <a href="#datasourcetype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
@@ -409,8 +401,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -419,8 +410,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentroot_csharp">
 <a href="#documentroot_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Root</a>
@@ -429,8 +419,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domains_csharp">
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -439,8 +428,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_csharp">
 <a href="#enablessl_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -449,8 +437,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environments_csharp">
 <a href="#environments_csharp" style="color: inherit; text-decoration: inherit;">Environments</a>
@@ -459,8 +446,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -469,8 +455,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="railsenv_csharp">
 <a href="#railsenv_csharp" style="color: inherit; text-decoration: inherit;">Rails<wbr>Env</a>
@@ -479,8 +464,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortname_csharp">
 <a href="#shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -489,8 +473,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconfigurations_csharp">
 <a href="#sslconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configurations</a>
@@ -499,13 +482,11 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stackid_go">
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -514,8 +495,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -524,8 +504,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsources_go">
 <a href="#appsources_go" style="color: inherit; text-decoration: inherit;">App<wbr>Sources</a>
@@ -534,8 +513,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autobundleondeploy_go">
 <a href="#autobundleondeploy_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Bundle<wbr>On<wbr>Deploy</a>
@@ -544,8 +522,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsflowrubysettings_go">
 <a href="#awsflowrubysettings_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Flow<wbr>Ruby<wbr>Settings</a>
@@ -554,8 +531,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcearn_go">
 <a href="#datasourcearn_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Arn</a>
@@ -564,8 +540,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcedatabasename_go">
 <a href="#datasourcedatabasename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Database<wbr>Name</a>
@@ -574,8 +549,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcetype_go">
 <a href="#datasourcetype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
@@ -584,8 +558,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -594,8 +567,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentroot_go">
 <a href="#documentroot_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Root</a>
@@ -604,8 +576,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domains_go">
 <a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -614,8 +585,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_go">
 <a href="#enablessl_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -624,8 +594,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environments_go">
 <a href="#environments_go" style="color: inherit; text-decoration: inherit;">Environments</a>
@@ -634,8 +603,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -644,8 +612,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="railsenv_go">
 <a href="#railsenv_go" style="color: inherit; text-decoration: inherit;">Rails<wbr>Env</a>
@@ -654,8 +621,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortname_go">
 <a href="#shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -664,8 +630,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconfigurations_go">
 <a href="#sslconfigurations_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configurations</a>
@@ -674,13 +639,11 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stackid_nodejs">
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -689,8 +652,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -699,8 +661,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsources_nodejs">
 <a href="#appsources_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Sources</a>
@@ -709,8 +670,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationappsource">Application<wbr>App<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autobundleondeploy_nodejs">
 <a href="#autobundleondeploy_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Bundle<wbr>On<wbr>Deploy</a>
@@ -719,8 +679,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsflowrubysettings_nodejs">
 <a href="#awsflowrubysettings_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Flow<wbr>Ruby<wbr>Settings</a>
@@ -729,8 +688,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcearn_nodejs">
 <a href="#datasourcearn_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Arn</a>
@@ -739,8 +697,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcedatabasename_nodejs">
 <a href="#datasourcedatabasename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Database<wbr>Name</a>
@@ -749,8 +706,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasourcetype_nodejs">
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Type</a>
@@ -759,8 +715,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -769,8 +724,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="documentroot_nodejs">
 <a href="#documentroot_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Root</a>
@@ -779,8 +733,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domains_nodejs">
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -789,8 +742,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablessl_nodejs">
 <a href="#enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
@@ -799,8 +751,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environments_nodejs">
 <a href="#environments_nodejs" style="color: inherit; text-decoration: inherit;">environments</a>
@@ -809,8 +760,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -819,8 +769,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="railsenv_nodejs">
 <a href="#railsenv_nodejs" style="color: inherit; text-decoration: inherit;">rails<wbr>Env</a>
@@ -829,8 +778,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortname_nodejs">
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -839,8 +787,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconfigurations_nodejs">
 <a href="#sslconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configurations</a>
@@ -849,13 +796,11 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stack_id_python">
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -864,8 +809,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -874,8 +818,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_sources_python">
 <a href="#app_sources_python" style="color: inherit; text-decoration: inherit;">app_<wbr>sources</a>
@@ -884,8 +827,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationappsource">Sequence[Application<wbr>App<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_bundle_on_deploy_python">
 <a href="#auto_bundle_on_deploy_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>bundle_<wbr>on_<wbr>deploy</a>
@@ -894,8 +836,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_flow_ruby_settings_python">
 <a href="#aws_flow_ruby_settings_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>flow_<wbr>ruby_<wbr>settings</a>
@@ -904,8 +845,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_arn_python">
 <a href="#data_source_arn_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>arn</a>
@@ -914,8 +854,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_database_name_python">
 <a href="#data_source_database_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>database_<wbr>name</a>
@@ -924,8 +863,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_type_python">
 <a href="#data_source_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>type</a>
@@ -934,8 +872,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -944,8 +881,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="document_root_python">
 <a href="#document_root_python" style="color: inherit; text-decoration: inherit;">document_<wbr>root</a>
@@ -954,8 +890,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domains_python">
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -964,8 +899,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_ssl_python">
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
@@ -974,8 +908,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environments_python">
 <a href="#environments_python" style="color: inherit; text-decoration: inherit;">environments</a>
@@ -984,8 +917,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationenvironment">Sequence[Application<wbr>Environment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -994,8 +926,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rails_env_python">
 <a href="#rails_env_python" style="color: inherit; text-decoration: inherit;">rails_<wbr>env</a>
@@ -1004,8 +935,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="short_name_python">
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
@@ -1014,8 +944,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_configurations_python">
 <a href="#ssl_configurations_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configurations</a>
@@ -1024,8 +953,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#applicationsslconfiguration">Sequence[Application<wbr>Ssl<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1036,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1045,13 +972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1059,13 +984,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1073,13 +996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1087,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1215,8 +1135,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appsources_csharp">
 <a href="#state_appsources_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Sources</a>
@@ -1225,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autobundleondeploy_csharp">
 <a href="#state_autobundleondeploy_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Bundle<wbr>On<wbr>Deploy</a>
@@ -1235,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_awsflowrubysettings_csharp">
 <a href="#state_awsflowrubysettings_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Flow<wbr>Ruby<wbr>Settings</a>
@@ -1245,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcearn_csharp">
 <a href="#state_datasourcearn_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Arn</a>
@@ -1255,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcedatabasename_csharp">
 <a href="#state_datasourcedatabasename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Database<wbr>Name</a>
@@ -1265,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcetype_csharp">
 <a href="#state_datasourcetype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
@@ -1275,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1285,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_documentroot_csharp">
 <a href="#state_documentroot_csharp" style="color: inherit; text-decoration: inherit;">Document<wbr>Root</a>
@@ -1295,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_csharp">
 <a href="#state_domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -1305,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_csharp">
 <a href="#state_enablessl_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -1315,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environments_csharp">
 <a href="#state_environments_csharp" style="color: inherit; text-decoration: inherit;">Environments</a>
@@ -1325,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1335,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_railsenv_csharp">
 <a href="#state_railsenv_csharp" style="color: inherit; text-decoration: inherit;">Rails<wbr>Env</a>
@@ -1345,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_csharp">
 <a href="#state_shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -1355,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslconfigurations_csharp">
 <a href="#state_sslconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configurations</a>
@@ -1365,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackid_csharp">
 <a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -1375,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1385,13 +1288,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appsources_go">
 <a href="#state_appsources_go" style="color: inherit; text-decoration: inherit;">App<wbr>Sources</a>
@@ -1400,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autobundleondeploy_go">
 <a href="#state_autobundleondeploy_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Bundle<wbr>On<wbr>Deploy</a>
@@ -1410,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_awsflowrubysettings_go">
 <a href="#state_awsflowrubysettings_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Flow<wbr>Ruby<wbr>Settings</a>
@@ -1420,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcearn_go">
 <a href="#state_datasourcearn_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Arn</a>
@@ -1430,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcedatabasename_go">
 <a href="#state_datasourcedatabasename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Database<wbr>Name</a>
@@ -1440,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcetype_go">
 <a href="#state_datasourcetype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
@@ -1450,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1460,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_documentroot_go">
 <a href="#state_documentroot_go" style="color: inherit; text-decoration: inherit;">Document<wbr>Root</a>
@@ -1470,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_go">
 <a href="#state_domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -1480,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_go">
 <a href="#state_enablessl_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl</a>
@@ -1490,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environments_go">
 <a href="#state_environments_go" style="color: inherit; text-decoration: inherit;">Environments</a>
@@ -1500,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1510,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_railsenv_go">
 <a href="#state_railsenv_go" style="color: inherit; text-decoration: inherit;">Rails<wbr>Env</a>
@@ -1520,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_go">
 <a href="#state_shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -1530,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslconfigurations_go">
 <a href="#state_sslconfigurations_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configurations</a>
@@ -1540,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackid_go">
 <a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
@@ -1550,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1560,13 +1445,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appsources_nodejs">
 <a href="#state_appsources_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Sources</a>
@@ -1575,8 +1458,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationappsource">Application<wbr>App<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autobundleondeploy_nodejs">
 <a href="#state_autobundleondeploy_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Bundle<wbr>On<wbr>Deploy</a>
@@ -1585,8 +1467,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_awsflowrubysettings_nodejs">
 <a href="#state_awsflowrubysettings_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Flow<wbr>Ruby<wbr>Settings</a>
@@ -1595,8 +1476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcearn_nodejs">
 <a href="#state_datasourcearn_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Arn</a>
@@ -1605,8 +1485,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcedatabasename_nodejs">
 <a href="#state_datasourcedatabasename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Database<wbr>Name</a>
@@ -1615,8 +1494,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourcetype_nodejs">
 <a href="#state_datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Type</a>
@@ -1625,8 +1503,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1635,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_documentroot_nodejs">
 <a href="#state_documentroot_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Root</a>
@@ -1645,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_nodejs">
 <a href="#state_domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -1655,8 +1530,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablessl_nodejs">
 <a href="#state_enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
@@ -1665,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environments_nodejs">
 <a href="#state_environments_nodejs" style="color: inherit; text-decoration: inherit;">environments</a>
@@ -1675,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1685,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_railsenv_nodejs">
 <a href="#state_railsenv_nodejs" style="color: inherit; text-decoration: inherit;">rails<wbr>Env</a>
@@ -1695,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_nodejs">
 <a href="#state_shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -1705,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslconfigurations_nodejs">
 <a href="#state_sslconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configurations</a>
@@ -1715,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stackid_nodejs">
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
@@ -1725,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1735,13 +1602,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_sources_python">
 <a href="#state_app_sources_python" style="color: inherit; text-decoration: inherit;">app_<wbr>sources</a>
@@ -1750,8 +1615,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationappsource">Sequence[Application<wbr>App<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_bundle_on_deploy_python">
 <a href="#state_auto_bundle_on_deploy_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>bundle_<wbr>on_<wbr>deploy</a>
@@ -1760,8 +1624,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aws_flow_ruby_settings_python">
 <a href="#state_aws_flow_ruby_settings_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>flow_<wbr>ruby_<wbr>settings</a>
@@ -1770,8 +1633,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_source_arn_python">
 <a href="#state_data_source_arn_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>arn</a>
@@ -1780,8 +1642,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_source_database_name_python">
 <a href="#state_data_source_database_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>database_<wbr>name</a>
@@ -1790,8 +1651,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_source_type_python">
 <a href="#state_data_source_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>type</a>
@@ -1800,8 +1660,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1810,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_document_root_python">
 <a href="#state_document_root_python" style="color: inherit; text-decoration: inherit;">document_<wbr>root</a>
@@ -1820,8 +1678,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_python">
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -1830,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_ssl_python">
 <a href="#state_enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
@@ -1840,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environments_python">
 <a href="#state_environments_python" style="color: inherit; text-decoration: inherit;">environments</a>
@@ -1850,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationenvironment">Sequence[Application<wbr>Environment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1860,8 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rails_env_python">
 <a href="#state_rails_env_python" style="color: inherit; text-decoration: inherit;">rails_<wbr>env</a>
@@ -1870,8 +1723,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_short_name_python">
 <a href="#state_short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
@@ -1880,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_configurations_python">
 <a href="#state_ssl_configurations_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configurations</a>
@@ -1890,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationsslconfiguration">Sequence[Application<wbr>Ssl<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stack_id_python">
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
@@ -1900,8 +1750,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1910,8 +1759,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1926,8 +1774,7 @@ The following state arguments are supported:
 <h4 id="applicationappsource">Application<wbr>App<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1936,8 +1783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1946,8 +1792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -1956,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkey_csharp">
 <a href="#sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
@@ -1966,8 +1810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1976,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1986,13 +1828,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2001,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2011,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2021,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkey_go">
 <a href="#sshkey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
@@ -2031,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2041,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2051,13 +1886,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2066,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2076,8 +1908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2086,8 +1917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkey_nodejs">
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
@@ -2096,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2106,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2116,13 +1944,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2131,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of source to use. For example, "archive".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2141,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2151,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_key_python">
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
@@ -2161,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2171,8 +1993,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2181,15 +2002,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationenvironment">Application<wbr>Environment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2198,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2208,8 +2026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_csharp">
 <a href="#secure_csharp" style="color: inherit; text-decoration: inherit;">Secure</a>
@@ -2218,13 +2035,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2233,8 +2048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2243,8 +2057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_go">
 <a href="#secure_go" style="color: inherit; text-decoration: inherit;">Secure</a>
@@ -2253,13 +2066,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2268,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2278,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_nodejs">
 <a href="#secure_nodejs" style="color: inherit; text-decoration: inherit;">secure</a>
@@ -2288,13 +2097,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2303,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2313,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_python">
 <a href="#secure_python" style="color: inherit; text-decoration: inherit;">secure</a>
@@ -2323,15 +2128,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2340,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2350,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chain_csharp">
 <a href="#chain_csharp" style="color: inherit; text-decoration: inherit;">Chain</a>
@@ -2360,13 +2161,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2375,8 +2174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2385,8 +2183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chain_go">
 <a href="#chain_go" style="color: inherit; text-decoration: inherit;">Chain</a>
@@ -2395,13 +2192,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2410,8 +2205,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -2420,8 +2214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chain_nodejs">
 <a href="#chain_nodejs" style="color: inherit; text-decoration: inherit;">chain</a>
@@ -2430,13 +2223,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2445,8 +2236,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -2455,8 +2245,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chain_python">
 <a href="#chain_python" style="color: inherit; text-decoration: inherit;">chain</a>
@@ -2465,8 +2254,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

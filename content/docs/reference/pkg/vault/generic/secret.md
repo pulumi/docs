@@ -170,8 +170,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datajson_csharp">
 <a href="#datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
@@ -181,8 +180,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -195,8 +193,7 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableread_csharp">
 <a href="#disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
@@ -207,13 +204,11 @@ endpoints support the `PUT` and `DELETE` methods.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datajson_go">
 <a href="#datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
@@ -223,8 +218,7 @@ break drift detection. Defaults to false.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -237,8 +231,7 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableread_go">
 <a href="#disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
@@ -249,13 +242,11 @@ endpoints support the `PUT` and `DELETE` methods.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datajson_nodejs">
 <a href="#datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
@@ -265,8 +256,7 @@ break drift detection. Defaults to false.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -279,8 +269,7 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableread_nodejs">
 <a href="#disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
@@ -291,13 +280,11 @@ endpoints support the `PUT` and `DELETE` methods.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_json_python">
 <a href="#data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
@@ -307,8 +294,7 @@ break drift detection. Defaults to false.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -321,8 +307,7 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_read_python">
 <a href="#disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
@@ -333,8 +318,7 @@ endpoints support the `PUT` and `DELETE` methods.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -345,8 +329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -358,8 +341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -367,13 +349,11 @@ serialized as JSON.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -385,8 +365,7 @@ serialized as JSON.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -394,13 +373,11 @@ serialized as JSON.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -412,8 +389,7 @@ serialized as JSON.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -421,13 +397,11 @@ serialized as JSON.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -439,8 +413,7 @@ serialized as JSON.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +421,7 @@ serialized as JSON.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -576,8 +548,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_data_csharp">
 <a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -589,8 +560,7 @@ The following state arguments are supported:
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datajson_csharp">
 <a href="#state_datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
@@ -600,8 +570,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableread_csharp">
 <a href="#state_disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
@@ -612,8 +581,7 @@ written as the secret data at the given path.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -626,13 +594,11 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_data_go">
 <a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -644,8 +610,7 @@ endpoints support the `PUT` and `DELETE` methods.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datajson_go">
 <a href="#state_datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
@@ -655,8 +620,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableread_go">
 <a href="#state_disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
@@ -667,8 +631,7 @@ written as the secret data at the given path.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -681,13 +644,11 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_data_nodejs">
 <a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -699,8 +660,7 @@ endpoints support the `PUT` and `DELETE` methods.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datajson_nodejs">
 <a href="#state_datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
@@ -710,8 +670,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableread_nodejs">
 <a href="#state_disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
@@ -722,8 +681,7 @@ written as the secret data at the given path.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -736,13 +694,11 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_data_python">
 <a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -754,8 +710,7 @@ endpoints support the `PUT` and `DELETE` methods.
 Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_json_python">
 <a href="#state_data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
@@ -765,8 +720,7 @@ serialized as JSON.
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_read_python">
 <a href="#state_disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
@@ -777,8 +731,7 @@ written as the secret data at the given path.
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -791,8 +744,7 @@ To write data into the "generic" secret backend mounted in Vault by default,
 this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

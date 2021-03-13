@@ -329,8 +329,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -339,8 +338,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -349,8 +347,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -360,8 +357,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -370,8 +366,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenonsslport_csharp">
 <a href="#enablenonsslport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Non<wbr>Ssl<wbr>Port</a>
@@ -380,8 +375,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -390,8 +384,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumtlsversion_csharp">
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
@@ -400,8 +393,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -411,8 +403,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchschedules_csharp">
 <a href="#patchschedules_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Schedules</a>
@@ -421,8 +412,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">List&lt;Cache<wbr>Patch<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatestaticipaddress_csharp">
 <a href="#privatestaticipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Static<wbr>Ip<wbr>Address</a>
@@ -431,8 +421,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_csharp">
 <a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
@@ -441,8 +430,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisconfiguration_csharp">
 <a href="#redisconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
@@ -451,8 +439,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_csharp">
 <a href="#shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -461,8 +448,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -471,8 +457,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -481,8 +466,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -491,13 +475,11 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -506,8 +488,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -516,8 +497,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -527,8 +507,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_go">
 <a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -537,8 +516,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenonsslport_go">
 <a href="#enablenonsslport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Non<wbr>Ssl<wbr>Port</a>
@@ -547,8 +525,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -557,8 +534,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumtlsversion_go">
 <a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
@@ -567,8 +543,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -578,8 +553,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchschedules_go">
 <a href="#patchschedules_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Schedules</a>
@@ -588,8 +562,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatestaticipaddress_go">
 <a href="#privatestaticipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Static<wbr>Ip<wbr>Address</a>
@@ -598,8 +571,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_go">
 <a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
@@ -608,8 +580,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisconfiguration_go">
 <a href="#redisconfiguration_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
@@ -618,8 +589,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_go">
 <a href="#shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -628,8 +598,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -638,8 +607,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -648,8 +616,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -658,13 +625,11 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -673,8 +638,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -683,8 +647,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -694,8 +657,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -704,8 +666,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenonsslport_nodejs">
 <a href="#enablenonsslport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Non<wbr>Ssl<wbr>Port</a>
@@ -714,8 +675,7 @@ create the Redis instance.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -724,8 +684,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumtlsversion_nodejs">
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
@@ -734,8 +693,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -745,8 +703,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchschedules_nodejs">
 <a href="#patchschedules_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Schedules</a>
@@ -755,8 +712,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatestaticipaddress_nodejs">
 <a href="#privatestaticipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Static<wbr>Ip<wbr>Address</a>
@@ -765,8 +721,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccessenabled_nodejs">
 <a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
@@ -775,8 +730,7 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisconfiguration_nodejs">
 <a href="#redisconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configuration</a>
@@ -785,8 +739,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_nodejs">
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
@@ -795,8 +748,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -805,8 +757,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -815,8 +766,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -825,13 +775,11 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -840,8 +788,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -850,8 +797,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -861,8 +807,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_name_python">
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -871,8 +816,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_non_ssl_port_python">
 <a href="#enable_non_ssl_port_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>non_<wbr>ssl_<wbr>port</a>
@@ -881,8 +825,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -891,8 +834,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_tls_version_python">
 <a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
@@ -901,8 +843,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -912,8 +853,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patch_schedules_python">
 <a href="#patch_schedules_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>schedules</a>
@@ -922,8 +862,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">Sequence[Cache<wbr>Patch<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_static_ip_address_python">
 <a href="#private_static_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>static_<wbr>ip_<wbr>address</a>
@@ -932,8 +871,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_enabled_python">
 <a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
@@ -942,8 +880,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_configuration_python">
 <a href="#redis_configuration_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configuration</a>
@@ -952,8 +889,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shard_count_python">
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
@@ -962,8 +898,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -972,8 +907,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -982,8 +916,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -992,8 +925,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1004,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1014,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1023,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1033,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_csharp">
 <a href="#primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -1043,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_csharp">
 <a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1053,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_csharp">
 <a href="#secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1063,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1073,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslport_csharp">
 <a href="#sslport_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Port</a>
@@ -1083,13 +1007,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1098,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1107,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1117,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_go">
 <a href="#primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -1127,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_go">
 <a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1137,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_go">
 <a href="#secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1147,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1157,8 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslport_go">
 <a href="#sslport_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Port</a>
@@ -1167,13 +1082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1182,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1191,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1201,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_nodejs">
 <a href="#primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
@@ -1211,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_nodejs">
 <a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -1221,8 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_nodejs">
 <a href="#secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
@@ -1231,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -1241,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslport_nodejs">
 <a href="#sslport_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Port</a>
@@ -1251,13 +1157,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1266,8 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1275,8 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1285,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_access_key_python">
 <a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
@@ -1295,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_connection_string_python">
 <a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -1305,8 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_access_key_python">
 <a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
@@ -1315,8 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_connection_string_python">
 <a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -1325,8 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_port_python">
 <a href="#ssl_port_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>port</a>
@@ -1335,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1463,8 +1359,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_csharp">
 <a href="#state_capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1473,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablenonsslport_csharp">
 <a href="#state_enablenonsslport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Non<wbr>Ssl<wbr>Port</a>
@@ -1483,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_csharp">
 <a href="#state_family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1493,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1503,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1513,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumtlsversion_csharp">
 <a href="#state_minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
@@ -1523,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1534,8 +1423,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchschedules_csharp">
 <a href="#state_patchschedules_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Schedules</a>
@@ -1544,8 +1432,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">List&lt;Cache<wbr>Patch<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1554,8 +1441,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_csharp">
 <a href="#state_primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -1564,8 +1450,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_csharp">
 <a href="#state_primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1574,8 +1459,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatestaticipaddress_csharp">
 <a href="#state_privatestaticipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Static<wbr>Ip<wbr>Address</a>
@@ -1584,8 +1468,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicnetworkaccessenabled_csharp">
 <a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
@@ -1594,8 +1477,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisconfiguration_csharp">
 <a href="#state_redisconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
@@ -1604,8 +1486,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1615,8 +1496,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryaccesskey_csharp">
 <a href="#state_secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1625,8 +1505,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_csharp">
 <a href="#state_secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1635,8 +1514,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardcount_csharp">
 <a href="#state_shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -1645,8 +1523,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1655,8 +1532,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslport_csharp">
 <a href="#state_sslport_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Port</a>
@@ -1665,8 +1541,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1675,8 +1550,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1685,8 +1559,7 @@ create the Redis instance.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_csharp">
 <a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -1695,13 +1568,11 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_go">
 <a href="#state_capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1710,8 +1581,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablenonsslport_go">
 <a href="#state_enablenonsslport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Non<wbr>Ssl<wbr>Port</a>
@@ -1720,8 +1590,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_go">
 <a href="#state_family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1730,8 +1599,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1740,8 +1608,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1750,8 +1617,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumtlsversion_go">
 <a href="#state_minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
@@ -1760,8 +1626,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1771,8 +1636,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchschedules_go">
 <a href="#state_patchschedules_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Schedules</a>
@@ -1781,8 +1645,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1791,8 +1654,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_go">
 <a href="#state_primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -1801,8 +1663,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_go">
 <a href="#state_primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1811,8 +1672,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatestaticipaddress_go">
 <a href="#state_privatestaticipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Static<wbr>Ip<wbr>Address</a>
@@ -1821,8 +1681,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicnetworkaccessenabled_go">
 <a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
@@ -1831,8 +1690,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisconfiguration_go">
 <a href="#state_redisconfiguration_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
@@ -1841,8 +1699,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1852,8 +1709,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryaccesskey_go">
 <a href="#state_secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1862,8 +1718,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_go">
 <a href="#state_secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1872,8 +1727,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardcount_go">
 <a href="#state_shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -1882,8 +1736,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1892,8 +1745,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslport_go">
 <a href="#state_sslport_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Port</a>
@@ -1902,8 +1754,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1912,8 +1763,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1922,8 +1772,7 @@ create the Redis instance.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_go">
 <a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -1932,13 +1781,11 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_nodejs">
 <a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1947,8 +1794,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablenonsslport_nodejs">
 <a href="#state_enablenonsslport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Non<wbr>Ssl<wbr>Port</a>
@@ -1957,8 +1803,7 @@ create the Redis instance.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_nodejs">
 <a href="#state_family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1967,8 +1812,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1977,8 +1821,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1987,8 +1830,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumtlsversion_nodejs">
 <a href="#state_minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
@@ -1997,8 +1839,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2008,8 +1849,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchschedules_nodejs">
 <a href="#state_patchschedules_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Schedules</a>
@@ -2018,8 +1858,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2028,8 +1867,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_nodejs">
 <a href="#state_primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
@@ -2038,8 +1876,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_nodejs">
 <a href="#state_primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -2048,8 +1885,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatestaticipaddress_nodejs">
 <a href="#state_privatestaticipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Static<wbr>Ip<wbr>Address</a>
@@ -2058,8 +1894,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicnetworkaccessenabled_nodejs">
 <a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
@@ -2068,8 +1903,7 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisconfiguration_nodejs">
 <a href="#state_redisconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configuration</a>
@@ -2078,8 +1912,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2089,8 +1922,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryaccesskey_nodejs">
 <a href="#state_secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
@@ -2099,8 +1931,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_nodejs">
 <a href="#state_secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -2109,8 +1940,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardcount_nodejs">
 <a href="#state_shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
@@ -2119,8 +1949,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -2129,8 +1958,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslport_nodejs">
 <a href="#state_sslport_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Port</a>
@@ -2139,8 +1967,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2149,8 +1976,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2159,8 +1985,7 @@ create the Redis instance.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_nodejs">
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -2169,13 +1994,11 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_python">
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -2184,8 +2007,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_non_ssl_port_python">
 <a href="#state_enable_non_ssl_port_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>non_<wbr>ssl_<wbr>port</a>
@@ -2194,8 +2016,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the non-SSL port (6379) - disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_python">
 <a href="#state_family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -2204,8 +2025,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -2214,8 +2034,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2224,8 +2043,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_tls_version_python">
 <a href="#state_minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
@@ -2234,8 +2052,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum TLS version.  Defaults to `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2245,8 +2062,7 @@ create the Redis instance.
     </dt>
     <dd>{{% md %}}The name of the Redis instance. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patch_schedules_python">
 <a href="#state_patch_schedules_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>schedules</a>
@@ -2255,8 +2071,7 @@ new resource to be created.
         <span class="property-type"><a href="#cachepatchschedule">Sequence[Cache<wbr>Patch<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2265,8 +2080,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The non-SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_access_key_python">
 <a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
@@ -2275,8 +2089,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_connection_string_python">
 <a href="#state_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -2285,8 +2098,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_static_ip_address_python">
 <a href="#state_private_static_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>static_<wbr>ip_<wbr>address</a>
@@ -2295,8 +2107,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_network_access_enabled_python">
 <a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
@@ -2305,8 +2116,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this Redis Cache. `true` means this resource could be accessed by both public and private endpoint. `false` means only private endpoint access is allowed. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redis_configuration_python">
 <a href="#state_redis_configuration_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configuration</a>
@@ -2315,8 +2125,7 @@ new resource to be created.
         <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2326,8 +2135,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Redis instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_access_key_python">
 <a href="#state_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
@@ -2336,8 +2144,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Access Key for the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_connection_string_python">
 <a href="#state_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -2346,8 +2153,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Redis Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shard_count_python">
 <a href="#state_shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
@@ -2356,8 +2162,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -2366,8 +2171,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_port_python">
 <a href="#state_ssl_port_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>port</a>
@@ -2376,8 +2180,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SSL Port of the Redis Instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -2386,8 +2189,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Only available when using the Premium SKU* The ID of the Subnet within which the Redis Cache should be deployed. This Subnet must only contain Azure Cache for Redis instances without any other type of resources. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2396,8 +2198,7 @@ create the Redis instance.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_python">
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -2406,8 +2207,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of a one or more Availability Zones, where the Redis Cache should be allocated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2422,8 +2222,7 @@ create the Redis instance.
 <h4 id="cachepatchschedule">Cache<wbr>Patch<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -2431,8 +2230,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starthourutc_csharp">
 <a href="#starthourutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
@@ -2440,13 +2238,11 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -2454,8 +2250,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starthourutc_go">
 <a href="#starthourutc_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
@@ -2463,13 +2258,11 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -2477,8 +2270,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starthourutc_nodejs">
 <a href="#starthourutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
@@ -2486,13 +2278,11 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -2500,8 +2290,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_hour_utc_python">
 <a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
@@ -2509,15 +2298,13 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofbackupenabled_csharp">
 <a href="#aofbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Backup<wbr>Enabled</a>
@@ -2525,8 +2312,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_csharp">
 <a href="#aofstorageconnectionstring0_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2534,8 +2320,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_csharp">
 <a href="#aofstorageconnectionstring1_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2543,8 +2328,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_csharp">
 <a href="#enableauthentication_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Authentication</a>
@@ -2553,8 +2337,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, the Redis instance will be accessible without authentication. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclients_csharp">
 <a href="#maxclients_csharp" style="color: inherit; text-decoration: inherit;">Maxclients</a>
@@ -2563,8 +2346,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Returns the max number of connected clients at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfragmentationmemoryreserved_csharp">
 <a href="#maxfragmentationmemoryreserved_csharp" style="color: inherit; text-decoration: inherit;">Maxfragmentationmemory<wbr>Reserved</a>
@@ -2573,8 +2355,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved to accommodate for memory fragmentation. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemorydelta_csharp">
 <a href="#maxmemorydelta_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Delta</a>
@@ -2583,8 +2364,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max-memory delta for this Redis instance. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemorypolicy_csharp">
 <a href="#maxmemorypolicy_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Policy</a>
@@ -2593,8 +2373,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How Redis will select what to remove when `maxmemory` is reached. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemoryreserved_csharp">
 <a href="#maxmemoryreserved_csharp" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Reserved</a>
@@ -2603,8 +2382,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved for non-cache usage e.g. failover. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifykeyspaceevents_csharp">
 <a href="#notifykeyspaceevents_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Keyspace<wbr>Events</a>
@@ -2613,8 +2391,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyspace notifications allows clients to subscribe to Pub/Sub channels in order to receive events affecting the Redis data set in some way. [Reference](https://redis.io/topics/notifications#configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupenabled_csharp">
 <a href="#rdbbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Enabled</a>
@@ -2623,8 +2400,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Backup Enabled? Only supported on Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupfrequency_csharp">
 <a href="#rdbbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Frequency</a>
@@ -2633,8 +2409,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Backup Frequency in Minutes. Only supported on Premium SKU's. Possible values are: `15`, `30`, `60`, `360`, `720` and `1440`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupmaxsnapshotcount_csharp">
 <a href="#rdbbackupmaxsnapshotcount_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
@@ -2643,8 +2418,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of snapshots to create as a backup. Only supported for Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbstorageconnectionstring_csharp">
 <a href="#rdbstorageconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Storage<wbr>Connection<wbr>String</a>
@@ -2653,13 +2427,11 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String to the Storage Account. Only supported for Premium SKU's. In the format: `DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofbackupenabled_go">
 <a href="#aofbackupenabled_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Backup<wbr>Enabled</a>
@@ -2667,8 +2439,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_go">
 <a href="#aofstorageconnectionstring0_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2676,8 +2447,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_go">
 <a href="#aofstorageconnectionstring1_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2685,8 +2455,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_go">
 <a href="#enableauthentication_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Authentication</a>
@@ -2695,8 +2464,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, the Redis instance will be accessible without authentication. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclients_go">
 <a href="#maxclients_go" style="color: inherit; text-decoration: inherit;">Maxclients</a>
@@ -2705,8 +2473,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Returns the max number of connected clients at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfragmentationmemoryreserved_go">
 <a href="#maxfragmentationmemoryreserved_go" style="color: inherit; text-decoration: inherit;">Maxfragmentationmemory<wbr>Reserved</a>
@@ -2715,8 +2482,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved to accommodate for memory fragmentation. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemorydelta_go">
 <a href="#maxmemorydelta_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Delta</a>
@@ -2725,8 +2491,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max-memory delta for this Redis instance. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemorypolicy_go">
 <a href="#maxmemorypolicy_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Policy</a>
@@ -2735,8 +2500,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How Redis will select what to remove when `maxmemory` is reached. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemoryreserved_go">
 <a href="#maxmemoryreserved_go" style="color: inherit; text-decoration: inherit;">Maxmemory<wbr>Reserved</a>
@@ -2745,8 +2509,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved for non-cache usage e.g. failover. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifykeyspaceevents_go">
 <a href="#notifykeyspaceevents_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Keyspace<wbr>Events</a>
@@ -2755,8 +2518,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyspace notifications allows clients to subscribe to Pub/Sub channels in order to receive events affecting the Redis data set in some way. [Reference](https://redis.io/topics/notifications#configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupenabled_go">
 <a href="#rdbbackupenabled_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Enabled</a>
@@ -2765,8 +2527,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Backup Enabled? Only supported on Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupfrequency_go">
 <a href="#rdbbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Frequency</a>
@@ -2775,8 +2536,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Backup Frequency in Minutes. Only supported on Premium SKU's. Possible values are: `15`, `30`, `60`, `360`, `720` and `1440`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupmaxsnapshotcount_go">
 <a href="#rdbbackupmaxsnapshotcount_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
@@ -2785,8 +2545,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of snapshots to create as a backup. Only supported for Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbstorageconnectionstring_go">
 <a href="#rdbstorageconnectionstring_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Storage<wbr>Connection<wbr>String</a>
@@ -2795,13 +2554,11 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String to the Storage Account. Only supported for Premium SKU's. In the format: `DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofbackupenabled_nodejs">
 <a href="#aofbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Backup<wbr>Enabled</a>
@@ -2809,8 +2566,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring0_nodejs">
 <a href="#aofstorageconnectionstring0_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String0</a>
@@ -2818,8 +2574,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aofstorageconnectionstring1_nodejs">
 <a href="#aofstorageconnectionstring1_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String1</a>
@@ -2827,8 +2582,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableauthentication_nodejs">
 <a href="#enableauthentication_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Authentication</a>
@@ -2837,8 +2591,7 @@ create the Redis instance.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `false`, the Redis instance will be accessible without authentication. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclients_nodejs">
 <a href="#maxclients_nodejs" style="color: inherit; text-decoration: inherit;">maxclients</a>
@@ -2847,8 +2600,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Returns the max number of connected clients at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfragmentationmemoryreserved_nodejs">
 <a href="#maxfragmentationmemoryreserved_nodejs" style="color: inherit; text-decoration: inherit;">maxfragmentationmemory<wbr>Reserved</a>
@@ -2857,8 +2609,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved to accommodate for memory fragmentation. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemorydelta_nodejs">
 <a href="#maxmemorydelta_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Delta</a>
@@ -2867,8 +2618,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max-memory delta for this Redis instance. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemorypolicy_nodejs">
 <a href="#maxmemorypolicy_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Policy</a>
@@ -2877,8 +2627,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How Redis will select what to remove when `maxmemory` is reached. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemoryreserved_nodejs">
 <a href="#maxmemoryreserved_nodejs" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Reserved</a>
@@ -2887,8 +2636,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved for non-cache usage e.g. failover. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifykeyspaceevents_nodejs">
 <a href="#notifykeyspaceevents_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Keyspace<wbr>Events</a>
@@ -2897,8 +2645,7 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyspace notifications allows clients to subscribe to Pub/Sub channels in order to receive events affecting the Redis data set in some way. [Reference](https://redis.io/topics/notifications#configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupenabled_nodejs">
 <a href="#rdbbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Enabled</a>
@@ -2907,8 +2654,7 @@ create the Redis instance.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Backup Enabled? Only supported on Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupfrequency_nodejs">
 <a href="#rdbbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Frequency</a>
@@ -2917,8 +2663,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Backup Frequency in Minutes. Only supported on Premium SKU's. Possible values are: `15`, `30`, `60`, `360`, `720` and `1440`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbbackupmaxsnapshotcount_nodejs">
 <a href="#rdbbackupmaxsnapshotcount_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
@@ -2927,8 +2672,7 @@ create the Redis instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of snapshots to create as a backup. Only supported for Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbstorageconnectionstring_nodejs">
 <a href="#rdbstorageconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Storage<wbr>Connection<wbr>String</a>
@@ -2937,13 +2681,11 @@ create the Redis instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String to the Storage Account. Only supported for Premium SKU's. In the format: `DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aof_backup_enabled_python">
 <a href="#aof_backup_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>backup_<wbr>enabled</a>
@@ -2951,8 +2693,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_storage_connection_string0_python">
 <a href="#aof_storage_connection_string0_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string0</a>
@@ -2960,8 +2701,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_storage_connection_string1_python">
 <a href="#aof_storage_connection_string1_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string1</a>
@@ -2969,8 +2709,7 @@ create the Redis instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_authentication_python">
 <a href="#enable_authentication_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>authentication</a>
@@ -2979,8 +2718,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, the Redis instance will be accessible without authentication. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxclients_python">
 <a href="#maxclients_python" style="color: inherit; text-decoration: inherit;">maxclients</a>
@@ -2989,8 +2727,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Returns the max number of connected clients at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfragmentationmemory_reserved_python">
 <a href="#maxfragmentationmemory_reserved_python" style="color: inherit; text-decoration: inherit;">maxfragmentationmemory_<wbr>reserved</a>
@@ -2999,8 +2736,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved to accommodate for memory fragmentation. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemory_delta_python">
 <a href="#maxmemory_delta_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>delta</a>
@@ -3009,8 +2745,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max-memory delta for this Redis instance. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemory_policy_python">
 <a href="#maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>policy</a>
@@ -3019,8 +2754,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How Redis will select what to remove when `maxmemory` is reached. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemory_reserved_python">
 <a href="#maxmemory_reserved_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>reserved</a>
@@ -3029,8 +2763,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value in megabytes reserved for non-cache usage e.g. failover. Defaults are shown below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_keyspace_events_python">
 <a href="#notify_keyspace_events_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>keyspace_<wbr>events</a>
@@ -3039,8 +2772,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyspace notifications allows clients to subscribe to Pub/Sub channels in order to receive events affecting the Redis data set in some way. [Reference](https://redis.io/topics/notifications#configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_backup_enabled_python">
 <a href="#rdb_backup_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>enabled</a>
@@ -3049,8 +2781,7 @@ create the Redis instance.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Backup Enabled? Only supported on Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_backup_frequency_python">
 <a href="#rdb_backup_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>frequency</a>
@@ -3059,8 +2790,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Backup Frequency in Minutes. Only supported on Premium SKU's. Possible values are: `15`, `30`, `60`, `360`, `720` and `1440`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_backup_max_snapshot_count_python">
 <a href="#rdb_backup_max_snapshot_count_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>max_<wbr>snapshot_<wbr>count</a>
@@ -3069,8 +2799,7 @@ create the Redis instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of snapshots to create as a backup. Only supported for Premium SKU's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_storage_connection_string_python">
 <a href="#rdb_storage_connection_string_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>storage_<wbr>connection_<wbr>string</a>
@@ -3079,8 +2808,7 @@ create the Redis instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String to the Storage Account. Only supported for Premium SKU's. In the format: `DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

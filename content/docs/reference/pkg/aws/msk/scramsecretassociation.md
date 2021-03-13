@@ -170,8 +170,7 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterarn_csharp">
 <a href="#clusterarn_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Arn</a>
@@ -180,8 +179,7 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretarnlists_csharp">
 <a href="#secretarnlists_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn<wbr>Lists</a>
@@ -190,13 +188,11 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterarn_go">
 <a href="#clusterarn_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Arn</a>
@@ -205,8 +201,7 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretarnlists_go">
 <a href="#secretarnlists_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn<wbr>Lists</a>
@@ -215,13 +210,11 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterarn_nodejs">
 <a href="#clusterarn_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Arn</a>
@@ -230,8 +223,7 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretarnlists_nodejs">
 <a href="#secretarnlists_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Arn<wbr>Lists</a>
@@ -240,13 +232,11 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_arn_python">
 <a href="#cluster_arn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>arn</a>
@@ -255,8 +245,7 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_arn_lists_python">
 <a href="#secret_arn_lists_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>arn_<wbr>lists</a>
@@ -265,8 +254,7 @@ The ScramSecretAssociation resource accepts the following [input]({{< relref "/d
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -277,8 +265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -286,13 +273,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -300,13 +285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -314,13 +297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -328,8 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -456,8 +436,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterarn_csharp">
 <a href="#state_clusterarn_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Arn</a>
@@ -466,8 +445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretarnlists_csharp">
 <a href="#state_secretarnlists_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn<wbr>Lists</a>
@@ -476,13 +454,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterarn_go">
 <a href="#state_clusterarn_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Arn</a>
@@ -491,8 +467,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretarnlists_go">
 <a href="#state_secretarnlists_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn<wbr>Lists</a>
@@ -501,13 +476,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterarn_nodejs">
 <a href="#state_clusterarn_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Arn</a>
@@ -516,8 +489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretarnlists_nodejs">
 <a href="#state_secretarnlists_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Arn<wbr>Lists</a>
@@ -526,13 +498,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_arn_python">
 <a href="#state_cluster_arn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>arn</a>
@@ -541,8 +511,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_arn_lists_python">
 <a href="#state_secret_arn_lists_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>arn_<wbr>lists</a>
@@ -551,8 +520,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS Secrets Manager secret ARNs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

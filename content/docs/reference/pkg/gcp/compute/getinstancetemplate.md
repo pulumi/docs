@@ -112,8 +112,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -123,8 +122,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `project` is not provideded, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -135,8 +133,7 @@ If `project` is not provideded, the provider project is used.
     <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mostrecent_csharp">
 <a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
@@ -145,8 +142,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -155,13 +151,11 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -171,8 +165,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `project` is not provideded, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -183,8 +176,7 @@ If `project` is not provideded, the provider project is used.
     <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mostrecent_go">
 <a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
@@ -193,8 +185,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -203,13 +194,11 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -219,8 +208,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `project` is not provideded, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -231,8 +219,7 @@ If `project` is not provideded, the provider project is used.
     <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mostrecent_nodejs">
 <a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
@@ -241,8 +228,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -251,13 +237,11 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -267,8 +251,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `project` is not provideded, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -279,8 +262,7 @@ If `project` is not provideded, the provider project is used.
     <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="most_recent_python">
 <a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
@@ -289,8 +271,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -299,8 +280,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -313,8 +293,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canipforward_csharp">
 <a href="#canipforward_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -324,8 +303,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidentialinstanceconfigs_csharp">
 <a href="#confidentialinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
@@ -334,8 +312,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -344,8 +321,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -356,8 +332,7 @@ packets with non-matching source or destination IPs. This defaults to false.
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledisplay_csharp">
 <a href="#enabledisplay_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Display</a>
@@ -367,8 +342,7 @@ documented below.
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
@@ -377,8 +351,7 @@ documented below.
         <span class="property-type"><a href="#getinstancetemplateguestaccelerator">List&lt;Get<wbr>Instance<wbr>Template<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -387,8 +360,7 @@ documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancedescription_csharp">
 <a href="#instancedescription_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Description</a>
@@ -398,8 +370,7 @@ documented below.
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -409,8 +380,7 @@ created from this template.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -419,8 +389,7 @@ created from this template,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -430,8 +399,7 @@ created from this template,
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatafingerprint_csharp">
 <a href="#metadatafingerprint_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fingerprint</a>
@@ -440,8 +408,7 @@ within instances created from this template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatastartupscript_csharp">
 <a href="#metadatastartupscript_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Startup<wbr>Script</a>
@@ -453,8 +420,7 @@ within instances created from this template.
 startup-script metadata key, mostly to match the compute_instance resource.
 This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -464,8 +430,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -475,8 +440,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -487,8 +451,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -498,8 +461,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -513,8 +475,7 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_csharp">
 <a href="#schedulings_csharp" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -524,8 +485,7 @@ Provider if no value is given.
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -534,8 +494,7 @@ this configuration option are detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_csharp">
 <a href="#serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -544,8 +503,7 @@ this configuration option are detailed below.
         <span class="property-type"><a href="#getinstancetemplateserviceaccount">List&lt;Get<wbr>Instance<wbr>Template<wbr>Service<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_csharp">
 <a href="#shieldedinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
@@ -555,8 +513,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -565,8 +522,7 @@ this configuration option are detailed below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfingerprint_csharp">
 <a href="#tagsfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Fingerprint</a>
@@ -575,8 +531,7 @@ this configuration option are detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -584,8 +539,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mostrecent_csharp">
 <a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
@@ -593,8 +547,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -602,13 +555,11 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canipforward_go">
 <a href="#canipforward_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -618,8 +569,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidentialinstanceconfigs_go">
 <a href="#confidentialinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
@@ -628,8 +578,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">[]Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -638,8 +587,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -650,8 +598,7 @@ packets with non-matching source or destination IPs. This defaults to false.
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledisplay_go">
 <a href="#enabledisplay_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Display</a>
@@ -661,8 +608,7 @@ documented below.
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
@@ -671,8 +617,7 @@ documented below.
         <span class="property-type"><a href="#getinstancetemplateguestaccelerator">[]Get<wbr>Instance<wbr>Template<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -681,8 +626,7 @@ documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancedescription_go">
 <a href="#instancedescription_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Description</a>
@@ -692,8 +636,7 @@ documented below.
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -703,8 +646,7 @@ created from this template.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -713,8 +655,7 @@ created from this template,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -724,8 +665,7 @@ created from this template,
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatafingerprint_go">
 <a href="#metadatafingerprint_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fingerprint</a>
@@ -734,8 +674,7 @@ within instances created from this template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatastartupscript_go">
 <a href="#metadatastartupscript_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Startup<wbr>Script</a>
@@ -747,8 +686,7 @@ within instances created from this template.
 startup-script metadata key, mostly to match the compute_instance resource.
 This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -758,8 +696,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -769,8 +706,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -781,8 +717,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -792,8 +727,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -807,8 +741,7 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_go">
 <a href="#schedulings_go" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -818,8 +751,7 @@ Provider if no value is given.
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -828,8 +760,7 @@ this configuration option are detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_go">
 <a href="#serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -838,8 +769,7 @@ this configuration option are detailed below.
         <span class="property-type"><a href="#getinstancetemplateserviceaccount">[]Get<wbr>Instance<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_go">
 <a href="#shieldedinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
@@ -849,8 +779,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -859,8 +788,7 @@ this configuration option are detailed below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfingerprint_go">
 <a href="#tagsfingerprint_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Fingerprint</a>
@@ -869,8 +797,7 @@ this configuration option are detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -878,8 +805,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mostrecent_go">
 <a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
@@ -887,8 +813,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -896,13 +821,11 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canipforward_nodejs">
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
@@ -912,8 +835,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidentialinstanceconfigs_nodejs">
 <a href="#confidentialinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Configs</a>
@@ -922,8 +844,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -932,8 +853,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -944,8 +864,7 @@ packets with non-matching source or destination IPs. This defaults to false.
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledisplay_nodejs">
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
@@ -955,8 +874,7 @@ documented below.
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
@@ -965,8 +883,7 @@ documented below.
         <span class="property-type"><a href="#getinstancetemplateguestaccelerator">Get<wbr>Instance<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -975,8 +892,7 @@ documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancedescription_nodejs">
 <a href="#instancedescription_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Description</a>
@@ -986,8 +902,7 @@ documented below.
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -997,8 +912,7 @@ created from this template.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -1007,8 +921,7 @@ created from this template,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1018,8 +931,7 @@ created from this template,
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatafingerprint_nodejs">
 <a href="#metadatafingerprint_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fingerprint</a>
@@ -1028,8 +940,7 @@ within instances created from this template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatastartupscript_nodejs">
 <a href="#metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
@@ -1041,8 +952,7 @@ within instances created from this template.
 startup-script metadata key, mostly to match the compute_instance resource.
 This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
@@ -1052,8 +962,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -1063,8 +972,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -1075,8 +983,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1086,8 +993,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1101,8 +1007,7 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_nodejs">
 <a href="#schedulings_nodejs" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -1112,8 +1017,7 @@ Provider if no value is given.
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1122,8 +1026,7 @@ this configuration option are detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_nodejs">
 <a href="#serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
@@ -1132,8 +1035,7 @@ this configuration option are detailed below.
         <span class="property-type"><a href="#getinstancetemplateserviceaccount">Get<wbr>Instance<wbr>Template<wbr>Service<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_nodejs">
 <a href="#shieldedinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Configs</a>
@@ -1143,8 +1045,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1153,8 +1054,7 @@ this configuration option are detailed below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfingerprint_nodejs">
 <a href="#tagsfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Fingerprint</a>
@@ -1163,8 +1063,7 @@ this configuration option are detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1172,8 +1071,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mostrecent_nodejs">
 <a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
@@ -1181,8 +1079,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1190,13 +1087,11 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="can_ip_forward_python">
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
@@ -1206,8 +1101,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidential_instance_configs_python">
 <a href="#confidential_instance_configs_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>configs</a>
@@ -1216,8 +1110,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type"><a href="#getinstancetemplateconfidentialinstanceconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1226,8 +1119,7 @@ packets with non-matching source or destination IPs. This defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -1238,8 +1130,7 @@ packets with non-matching source or destination IPs. This defaults to false.
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_display_python">
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
@@ -1249,8 +1140,7 @@ documented below.
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
@@ -1259,8 +1149,7 @@ documented below.
         <span class="property-type"><a href="#getinstancetemplateguestaccelerator">Sequence[Get<wbr>Instance<wbr>Template<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1269,8 +1158,7 @@ documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_description_python">
 <a href="#instance_description_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>description</a>
@@ -1280,8 +1168,7 @@ documented below.
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1291,8 +1178,7 @@ created from this template.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -1301,8 +1187,7 @@ created from this template,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1312,8 +1197,7 @@ created from this template,
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_fingerprint_python">
 <a href="#metadata_fingerprint_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fingerprint</a>
@@ -1322,8 +1206,7 @@ within instances created from this template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_startup_script_python">
 <a href="#metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
@@ -1335,8 +1218,7 @@ within instances created from this template.
 startup-script metadata key, mostly to match the compute_instance resource.
 This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
@@ -1346,8 +1228,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -1357,8 +1238,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -1369,8 +1249,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1380,8 +1259,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1395,8 +1273,7 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom `subnetwork`
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_python">
 <a href="#schedulings_python" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -1406,8 +1283,7 @@ Provider if no value is given.
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1416,8 +1292,7 @@ this configuration option are detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_accounts_python">
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
@@ -1426,8 +1301,7 @@ this configuration option are detailed below.
         <span class="property-type"><a href="#getinstancetemplateserviceaccount">Sequence[Get<wbr>Instance<wbr>Template<wbr>Service<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shielded_instance_configs_python">
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
@@ -1437,8 +1311,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1447,8 +1320,7 @@ this configuration option are detailed below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_fingerprint_python">
 <a href="#tags_fingerprint_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>fingerprint</a>
@@ -1457,8 +1329,7 @@ this configuration option are detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1466,8 +1337,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="most_recent_python">
 <a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
@@ -1475,8 +1345,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1484,8 +1353,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1499,8 +1367,7 @@ this configuration option are detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_csharp">
 <a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
@@ -1508,13 +1375,11 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_go">
 <a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
@@ -1522,13 +1387,11 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_nodejs">
 <a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
@@ -1536,13 +1399,11 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_confidential_compute_python">
 <a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
@@ -1550,8 +1411,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatedisk">Get<wbr>Instance<wbr>Template<wbr>Disk</h4>
@@ -1559,8 +1419,7 @@ this configuration option are detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autodelete_csharp">
 <a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -1570,8 +1429,7 @@ this configuration option are detailed below.
     </dt>
     <dd>{{% md %}}Whether or not the disk should be auto-deleted.
 This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="boot_csharp">
 <a href="#boot_csharp" style="color: inherit; text-decoration: inherit;">Boot</a>
@@ -1580,8 +1438,7 @@ This defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1592,8 +1449,7 @@ This defaults to true.
     <dd>{{% md %}}A unique device name that is reflected into the
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeys_csharp">
 <a href="#diskencryptionkeys_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Keys</a>
@@ -1602,8 +1458,7 @@ specified, the server chooses a default device name to apply to this disk.
         <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">List&lt;Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskname_csharp">
 <a href="#diskname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
@@ -1613,8 +1468,7 @@ specified, the server chooses a default device name to apply to this disk.
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1625,8 +1479,7 @@ to the name of the instance.
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
 the size must be exactly 375GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -1636,8 +1489,7 @@ the size must be exactly 375GB.
     </dt>
     <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
 `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1649,8 +1501,7 @@ the size must be exactly 375GB.
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1660,8 +1511,7 @@ than SCSI. Local SSDs can use either NVME or SCSI.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1672,8 +1522,7 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -1681,8 +1530,7 @@ read-write mode.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1693,8 +1541,7 @@ read-write mode.
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceimage_csharp">
 <a href="#sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
@@ -1709,8 +1556,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1719,13 +1565,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autodelete_go">
 <a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -1735,8 +1579,7 @@ initialize this disk. This can be one of: the image's `self_link`,
     </dt>
     <dd>{{% md %}}Whether or not the disk should be auto-deleted.
 This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="boot_go">
 <a href="#boot_go" style="color: inherit; text-decoration: inherit;">Boot</a>
@@ -1745,8 +1588,7 @@ This defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1757,8 +1599,7 @@ This defaults to true.
     <dd>{{% md %}}A unique device name that is reflected into the
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeys_go">
 <a href="#diskencryptionkeys_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Keys</a>
@@ -1767,8 +1608,7 @@ specified, the server chooses a default device name to apply to this disk.
         <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">[]Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskname_go">
 <a href="#diskname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
@@ -1778,8 +1618,7 @@ specified, the server chooses a default device name to apply to this disk.
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1790,8 +1629,7 @@ to the name of the instance.
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
 the size must be exactly 375GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -1801,8 +1639,7 @@ the size must be exactly 375GB.
     </dt>
     <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
 `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1814,8 +1651,7 @@ the size must be exactly 375GB.
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1825,8 +1661,7 @@ than SCSI. Local SSDs can use either NVME or SCSI.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1837,8 +1672,7 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcepolicies_go">
 <a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -1846,8 +1680,7 @@ read-write mode.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1858,8 +1691,7 @@ read-write mode.
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceimage_go">
 <a href="#sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
@@ -1874,8 +1706,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1884,13 +1715,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autodelete_nodejs">
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
@@ -1900,8 +1729,7 @@ initialize this disk. This can be one of: the image's `self_link`,
     </dt>
     <dd>{{% md %}}Whether or not the disk should be auto-deleted.
 This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="boot_nodejs">
 <a href="#boot_nodejs" style="color: inherit; text-decoration: inherit;">boot</a>
@@ -1910,8 +1738,7 @@ This defaults to true.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -1922,8 +1749,7 @@ This defaults to true.
     <dd>{{% md %}}A unique device name that is reflected into the
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeys_nodejs">
 <a href="#diskencryptionkeys_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Keys</a>
@@ -1932,8 +1758,7 @@ specified, the server chooses a default device name to apply to this disk.
         <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskname_nodejs">
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
@@ -1943,8 +1768,7 @@ specified, the server chooses a default device name to apply to this disk.
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -1955,8 +1779,7 @@ to the name of the instance.
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
 the size must be exactly 375GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -1966,8 +1789,7 @@ the size must be exactly 375GB.
     </dt>
     <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
 `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1979,8 +1801,7 @@ the size must be exactly 375GB.
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1990,8 +1811,7 @@ than SCSI. Local SSDs can use either NVME or SCSI.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2002,8 +1822,7 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
@@ -2011,8 +1830,7 @@ read-write mode.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2023,8 +1841,7 @@ read-write mode.
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceimage_nodejs">
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
@@ -2039,8 +1856,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2049,13 +1865,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_delete_python">
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
@@ -2065,8 +1879,7 @@ initialize this disk. This can be one of: the image's `self_link`,
     </dt>
     <dd>{{% md %}}Whether or not the disk should be auto-deleted.
 This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="boot_python">
 <a href="#boot_python" style="color: inherit; text-decoration: inherit;">boot</a>
@@ -2075,8 +1888,7 @@ This defaults to true.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2087,8 +1899,7 @@ This defaults to true.
     <dd>{{% md %}}A unique device name that is reflected into the
 /dev/  tree of a Linux operating system running within the instance. If not
 specified, the server chooses a default device name to apply to this disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_encryption_keys_python">
 <a href="#disk_encryption_keys_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>keys</a>
@@ -2097,8 +1908,7 @@ specified, the server chooses a default device name to apply to this disk.
         <span class="property-type"><a href="#getinstancetemplatediskdiskencryptionkey">Sequence[Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_name_python">
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
@@ -2108,8 +1918,7 @@ specified, the server chooses a default device name to apply to this disk.
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -2120,8 +1929,7 @@ to the name of the instance.
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
 the size must be exactly 375GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -2131,8 +1939,7 @@ the size must be exactly 375GB.
     </dt>
     <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
 `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -2144,8 +1951,7 @@ the size must be exactly 375GB.
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2155,8 +1961,7 @@ than SCSI. Local SSDs can use either NVME or SCSI.
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2167,8 +1972,7 @@ created from this template,
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_policies_python">
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
@@ -2176,8 +1980,7 @@ read-write mode.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2188,8 +1991,7 @@ read-write mode.
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_image_python">
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
@@ -2204,8 +2006,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`.
 > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2214,8 +2015,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatediskdiskencryptionkey">Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</h4>
@@ -2223,8 +2023,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2233,13 +2032,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the encryption key that is stored in Google Cloud KMS
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2248,13 +2045,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the encryption key that is stored in Google Cloud KMS
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2263,13 +2058,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the encryption key that is stored in Google Cloud KMS
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kms_key_self_link_python">
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
@@ -2278,8 +2071,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link of the encryption key that is stored in Google Cloud KMS
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateguestaccelerator">Get<wbr>Instance<wbr>Template<wbr>Guest<wbr>Accelerator</h4>
@@ -2287,8 +2079,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2297,8 +2088,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2307,13 +2097,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2322,8 +2110,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2332,13 +2119,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2347,8 +2132,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2357,13 +2141,11 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2372,8 +2154,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2382,8 +2163,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkinterface">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface</h4>
@@ -2391,8 +2171,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessconfigs_csharp">
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
@@ -2400,8 +2179,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_csharp">
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
@@ -2412,8 +2190,7 @@ initialize this disk. This can be one of: the image's `self_link`,
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
 interfaces on subnet-mode networks. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2422,8 +2199,7 @@ interfaces on subnet-mode networks. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2434,8 +2210,7 @@ interfaces on subnet-mode networks. Structure documented below.
     <dd>{{% md %}}The name or self_link of the network to attach this interface to.
 Use `network` attribute for Legacy or Auto subnetted networks and
 `subnetwork` for custom subnetted networks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkip_csharp">
 <a href="#networkip_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -2445,8 +2220,7 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -2454,8 +2228,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2466,8 +2239,7 @@ empty, the address will be automatically assigned.
     <dd>{{% md %}}the name of the subnetwork to attach this interface
 to. The subnetwork must exist in the same `region` this instance will be
 created in. Either `network` or `subnetwork` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkproject_csharp">
 <a href="#subnetworkproject_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Project</a>
@@ -2477,13 +2249,11 @@ created in. Either `network` or `subnetwork` must be provided.
     </dt>
     <dd>{{% md %}}The ID of the project in which the subnetwork belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessconfigs_go">
 <a href="#accessconfigs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
@@ -2491,8 +2261,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">[]Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_go">
 <a href="#aliasipranges_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
@@ -2503,8 +2272,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
 interfaces on subnet-mode networks. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2513,8 +2281,7 @@ interfaces on subnet-mode networks. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2525,8 +2292,7 @@ interfaces on subnet-mode networks. Structure documented below.
     <dd>{{% md %}}The name or self_link of the network to attach this interface to.
 Use `network` attribute for Legacy or Auto subnetted networks and
 `subnetwork` for custom subnetted networks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkip_go">
 <a href="#networkip_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -2536,8 +2302,7 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -2545,8 +2310,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2557,8 +2321,7 @@ empty, the address will be automatically assigned.
     <dd>{{% md %}}the name of the subnetwork to attach this interface
 to. The subnetwork must exist in the same `region` this instance will be
 created in. Either `network` or `subnetwork` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkproject_go">
 <a href="#subnetworkproject_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Project</a>
@@ -2568,13 +2331,11 @@ created in. Either `network` or `subnetwork` must be provided.
     </dt>
     <dd>{{% md %}}The ID of the project in which the subnetwork belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessconfigs_nodejs">
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
@@ -2582,8 +2343,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_nodejs">
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
@@ -2594,8 +2354,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
 interfaces on subnet-mode networks. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2604,8 +2363,7 @@ interfaces on subnet-mode networks. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2616,8 +2374,7 @@ interfaces on subnet-mode networks. Structure documented below.
     <dd>{{% md %}}The name or self_link of the network to attach this interface to.
 Use `network` attribute for Legacy or Auto subnetted networks and
 `subnetwork` for custom subnetted networks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkip_nodejs">
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
@@ -2627,8 +2384,7 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
@@ -2636,8 +2392,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2648,8 +2403,7 @@ empty, the address will be automatically assigned.
     <dd>{{% md %}}the name of the subnetwork to attach this interface
 to. The subnetwork must exist in the same `region` this instance will be
 created in. Either `network` or `subnetwork` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkproject_nodejs">
 <a href="#subnetworkproject_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
@@ -2659,13 +2413,11 @@ created in. Either `network` or `subnetwork` must be provided.
     </dt>
     <dd>{{% md %}}The ID of the project in which the subnetwork belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_configs_python">
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
@@ -2673,8 +2425,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetemplatenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alias_ip_ranges_python">
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
@@ -2685,8 +2436,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
 interfaces on subnet-mode networks. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2695,8 +2445,7 @@ interfaces on subnet-mode networks. Structure documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. One of `name` or `filter` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2707,8 +2456,7 @@ interfaces on subnet-mode networks. Structure documented below.
     <dd>{{% md %}}The name or self_link of the network to attach this interface to.
 Use `network` attribute for Legacy or Auto subnetted networks and
 `subnetwork` for custom subnetted networks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_ip_python">
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
@@ -2718,8 +2466,7 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
@@ -2727,8 +2474,7 @@ empty, the address will be automatically assigned.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2739,8 +2485,7 @@ empty, the address will be automatically assigned.
     <dd>{{% md %}}the name of the subnetwork to attach this interface
 to. The subnetwork must exist in the same `region` this instance will be
 created in. Either `network` or `subnetwork` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_project_python">
 <a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
@@ -2750,8 +2495,7 @@ created in. Either `network` or `subnetwork` must be provided.
     </dt>
     <dd>{{% md %}}The ID of the project in which the subnetwork belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
@@ -2759,8 +2503,7 @@ If it is not provided, the provider project is used.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natip_csharp">
 <a href="#natip_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip</a>
@@ -2770,8 +2513,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The IP address that will be 1:1 mapped to the instance's
 network ip. If not given, one will be generated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networktier_csharp">
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -2782,8 +2524,7 @@ network ip. If not given, one will be generated.
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring
 this instance template. This field can take the following values: PREMIUM or
 STANDARD. If this field is not specified, it is assumed to be PREMIUM.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_csharp">
 <a href="#publicptrdomainname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
@@ -2791,13 +2532,11 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natip_go">
 <a href="#natip_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip</a>
@@ -2807,8 +2546,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
     </dt>
     <dd>{{% md %}}The IP address that will be 1:1 mapped to the instance's
 network ip. If not given, one will be generated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networktier_go">
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -2819,8 +2557,7 @@ network ip. If not given, one will be generated.
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring
 this instance template. This field can take the following values: PREMIUM or
 STANDARD. If this field is not specified, it is assumed to be PREMIUM.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_go">
 <a href="#publicptrdomainname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
@@ -2828,13 +2565,11 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natip_nodejs">
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
@@ -2844,8 +2579,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
     </dt>
     <dd>{{% md %}}The IP address that will be 1:1 mapped to the instance's
 network ip. If not given, one will be generated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networktier_nodejs">
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
@@ -2856,8 +2590,7 @@ network ip. If not given, one will be generated.
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring
 this instance template. This field can take the following values: PREMIUM or
 STANDARD. If this field is not specified, it is assumed to be PREMIUM.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_nodejs">
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
@@ -2865,13 +2598,11 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nat_ip_python">
 <a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
@@ -2881,8 +2612,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
     </dt>
     <dd>{{% md %}}The IP address that will be 1:1 mapped to the instance's
 network ip. If not given, one will be generated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_tier_python">
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
@@ -2893,8 +2623,7 @@ network ip. If not given, one will be generated.
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring
 this instance template. This field can take the following values: PREMIUM or
 STANDARD. If this field is not specified, it is assumed to be PREMIUM.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_ptr_domain_name_python">
 <a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
@@ -2902,8 +2631,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkinterfacealiasiprange">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
@@ -2911,8 +2639,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -2925,8 +2652,7 @@ must belong to the specified subnetwork and cannot contain IP addresses reserved
 system or used by other network interfaces. At the time of writing only a
 netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
 error.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_csharp">
 <a href="#subnetworkrangename_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
@@ -2937,13 +2663,11 @@ error.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -2956,8 +2680,7 @@ must belong to the specified subnetwork and cannot contain IP addresses reserved
 system or used by other network interfaces. At the time of writing only a
 netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
 error.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_go">
 <a href="#subnetworkrangename_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
@@ -2968,13 +2691,11 @@ error.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
@@ -2987,8 +2708,7 @@ must belong to the specified subnetwork and cannot contain IP addresses reserved
 system or used by other network interfaces. At the time of writing only a
 netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
 error.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_nodejs">
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
@@ -2999,13 +2719,11 @@ error.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
@@ -3018,8 +2736,7 @@ must belong to the specified subnetwork and cannot contain IP addresses reserved
 system or used by other network interfaces. At the time of writing only a
 netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
 error.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_range_name_python">
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
@@ -3030,8 +2747,7 @@ error.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range. If left unspecified, the primary range of the subnetwork will be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatescheduling">Get<wbr>Instance<wbr>Template<wbr>Scheduling</h4>
@@ -3039,8 +2755,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticrestart_csharp">
 <a href="#automaticrestart_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Restart</a>
@@ -3051,8 +2766,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
     <dd>{{% md %}}Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecpus_csharp">
 <a href="#minnodecpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
@@ -3060,8 +2774,7 @@ terminated by a user). This defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaffinities_csharp">
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
@@ -3074,8 +2787,7 @@ to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
 [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
 Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_csharp">
 <a href="#onhostmaintenance_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
@@ -3085,8 +2797,7 @@ Structure documented below.
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this
 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_csharp">
 <a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
@@ -3097,13 +2808,11 @@ instance.
     <dd>{{% md %}}Allows instance to be preempted. This defaults to
 false. Read more on this
 [here](https://cloud.google.com/compute/docs/instances/preemptible).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticrestart_go">
 <a href="#automaticrestart_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Restart</a>
@@ -3114,8 +2823,7 @@ false. Read more on this
     <dd>{{% md %}}Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecpus_go">
 <a href="#minnodecpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
@@ -3123,8 +2831,7 @@ terminated by a user). This defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaffinities_go">
 <a href="#nodeaffinities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
@@ -3137,8 +2844,7 @@ to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
 [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
 Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_go">
 <a href="#onhostmaintenance_go" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
@@ -3148,8 +2854,7 @@ Structure documented below.
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this
 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_go">
 <a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
@@ -3160,13 +2865,11 @@ instance.
     <dd>{{% md %}}Allows instance to be preempted. This defaults to
 false. Read more on this
 [here](https://cloud.google.com/compute/docs/instances/preemptible).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticrestart_nodejs">
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
@@ -3177,8 +2880,7 @@ false. Read more on this
     <dd>{{% md %}}Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecpus_nodejs">
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
@@ -3186,8 +2888,7 @@ terminated by a user). This defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaffinities_nodejs">
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
@@ -3200,8 +2901,7 @@ to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
 [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
 Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_nodejs">
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
@@ -3211,8 +2911,7 @@ Structure documented below.
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this
 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_nodejs">
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
@@ -3223,13 +2922,11 @@ instance.
     <dd>{{% md %}}Allows instance to be preempted. This defaults to
 false. Read more on this
 [here](https://cloud.google.com/compute/docs/instances/preemptible).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automatic_restart_python">
 <a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
@@ -3240,8 +2937,7 @@ false. Read more on this
     <dd>{{% md %}}Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
 terminated by a user). This defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_node_cpus_python">
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
@@ -3249,8 +2945,7 @@ terminated by a user). This defaults to true.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_affinities_python">
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
@@ -3263,8 +2958,7 @@ to determine which sole-tenant nodes your instances and managed instance
 groups will use as host systems. Read more on sole-tenant node creation
 [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
 Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="on_host_maintenance_python">
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
@@ -3274,8 +2968,7 @@ Structure documented below.
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this
 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_python">
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
@@ -3286,8 +2979,7 @@ instance.
     <dd>{{% md %}}Allows instance to be preempted. This defaults to
 false. Read more on this
 [here](https://cloud.google.com/compute/docs/instances/preemptible).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateschedulingnodeaffinity">Get<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
@@ -3295,8 +2987,7 @@ false. Read more on this
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3305,8 +2996,7 @@ false. Read more on this
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the node affinity label.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3316,8 +3006,7 @@ false. Read more on this
     </dt>
     <dd>{{% md %}}The operator. Can be `IN` for node-affinities
 or `NOT_IN` for anti-affinities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3325,13 +3014,11 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3340,8 +3027,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the node affinity label.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3351,8 +3037,7 @@ or `NOT_IN` for anti-affinities.
     </dt>
     <dd>{{% md %}}The operator. Can be `IN` for node-affinities
 or `NOT_IN` for anti-affinities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3360,13 +3045,11 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3375,8 +3058,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the node affinity label.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3386,8 +3068,7 @@ or `NOT_IN` for anti-affinities.
     </dt>
     <dd>{{% md %}}The operator. Can be `IN` for node-affinities
 or `NOT_IN` for anti-affinities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3395,13 +3076,11 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3410,8 +3089,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for the node affinity label.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3421,8 +3099,7 @@ or `NOT_IN` for anti-affinities.
     </dt>
     <dd>{{% md %}}The operator. Can be `IN` for node-affinities
 or `NOT_IN` for anti-affinities.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3430,8 +3107,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateserviceaccount">Get<wbr>Instance<wbr>Template<wbr>Service<wbr>Account</h4>
@@ -3439,8 +3115,7 @@ or `NOT_IN` for anti-affinities.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -3450,8 +3125,7 @@ or `NOT_IN` for anti-affinities.
     </dt>
     <dd>{{% md %}}The service account e-mail address. If not given, the
 default Google Compute Engine service account is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -3462,13 +3136,11 @@ default Google Compute Engine service account is used.
     <dd>{{% md %}}A list of service scopes. Both OAuth2 URLs and gcloud
 short names are supported. To allow full access to all Cloud APIs, use the
 `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -3478,8 +3150,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
     </dt>
     <dd>{{% md %}}The service account e-mail address. If not given, the
 default Google Compute Engine service account is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -3490,13 +3161,11 @@ default Google Compute Engine service account is used.
     <dd>{{% md %}}A list of service scopes. Both OAuth2 URLs and gcloud
 short names are supported. To allow full access to all Cloud APIs, use the
 `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -3506,8 +3175,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
     </dt>
     <dd>{{% md %}}The service account e-mail address. If not given, the
 default Google Compute Engine service account is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -3518,13 +3186,11 @@ default Google Compute Engine service account is used.
     <dd>{{% md %}}A list of service scopes. Both OAuth2 URLs and gcloud
 short names are supported. To allow full access to all Cloud APIs, use the
 `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -3534,8 +3200,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
     </dt>
     <dd>{{% md %}}The service account e-mail address. If not given, the
 default Google Compute Engine service account is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -3546,8 +3211,7 @@ default Google Compute Engine service account is used.
     <dd>{{% md %}}A list of service scopes. Both OAuth2 URLs and gcloud
 short names are supported. To allow full access to all Cloud APIs, use the
 `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateshieldedinstanceconfig">Get<wbr>Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</h4>
@@ -3555,8 +3219,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_csharp">
 <a href="#enableintegritymonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
@@ -3564,8 +3227,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablesecureboot_csharp">
 <a href="#enablesecureboot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
@@ -3573,8 +3235,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablevtpm_csharp">
 <a href="#enablevtpm_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
@@ -3582,13 +3243,11 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_go">
 <a href="#enableintegritymonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
@@ -3596,8 +3255,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablesecureboot_go">
 <a href="#enablesecureboot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
@@ -3605,8 +3263,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablevtpm_go">
 <a href="#enablevtpm_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
@@ -3614,13 +3271,11 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_nodejs">
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
@@ -3628,8 +3283,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablesecureboot_nodejs">
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
@@ -3637,8 +3291,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablevtpm_nodejs">
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
@@ -3646,13 +3299,11 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_integrity_monitoring_python">
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
@@ -3660,8 +3311,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_secure_boot_python">
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
@@ -3669,8 +3319,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_vtpm_python">
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
@@ -3678,8 +3327,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

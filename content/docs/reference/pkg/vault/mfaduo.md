@@ -292,8 +292,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apihostname_csharp">
 <a href="#apihostname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
@@ -302,8 +301,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationkey_csharp">
 <a href="#integrationkey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -312,8 +310,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mountaccessor_csharp">
 <a href="#mountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
@@ -322,8 +319,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -332,8 +328,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -342,8 +337,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushinfo_csharp">
 <a href="#pushinfo_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
@@ -352,8 +346,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameformat_csharp">
 <a href="#usernameformat_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
@@ -366,13 +359,11 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apihostname_go">
 <a href="#apihostname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
@@ -381,8 +372,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationkey_go">
 <a href="#integrationkey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -391,8 +381,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mountaccessor_go">
 <a href="#mountaccessor_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
@@ -401,8 +390,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -411,8 +399,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -421,8 +408,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushinfo_go">
 <a href="#pushinfo_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
@@ -431,8 +417,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameformat_go">
 <a href="#usernameformat_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
@@ -445,13 +430,11 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apihostname_nodejs">
 <a href="#apihostname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Hostname</a>
@@ -460,8 +443,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationkey_nodejs">
 <a href="#integrationkey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Key</a>
@@ -470,8 +452,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mountaccessor_nodejs">
 <a href="#mountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Accessor</a>
@@ -480,8 +461,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -490,8 +470,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -500,8 +479,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushinfo_nodejs">
 <a href="#pushinfo_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Info</a>
@@ -510,8 +488,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameformat_nodejs">
 <a href="#usernameformat_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Format</a>
@@ -524,13 +501,11 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_hostname_python">
 <a href="#api_hostname_python" style="color: inherit; text-decoration: inherit;">api_<wbr>hostname</a>
@@ -539,8 +514,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_key_python">
 <a href="#integration_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>key</a>
@@ -549,8 +523,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mount_accessor_python">
 <a href="#mount_accessor_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>accessor</a>
@@ -559,8 +532,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -569,8 +541,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -579,8 +550,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="push_info_python">
 <a href="#push_info_python" style="color: inherit; text-decoration: inherit;">push_<wbr>info</a>
@@ -589,8 +559,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_format_python">
 <a href="#username_format_python" style="color: inherit; text-decoration: inherit;">username_<wbr>format</a>
@@ -603,8 +572,7 @@ The MfaDuo resource accepts the following [input]({{< relref "/docs/intro/concep
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -615,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -624,13 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -638,13 +603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -652,13 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -794,8 +754,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apihostname_csharp">
 <a href="#state_apihostname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
@@ -804,8 +763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkey_csharp">
 <a href="#state_integrationkey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -814,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountaccessor_csharp">
 <a href="#state_mountaccessor_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
@@ -824,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -834,8 +790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pushinfo_csharp">
 <a href="#state_pushinfo_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
@@ -844,8 +799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretkey_csharp">
 <a href="#state_secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -854,8 +808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameformat_csharp">
 <a href="#state_usernameformat_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
@@ -868,13 +821,11 @@ The following state arguments are supported:
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apihostname_go">
 <a href="#state_apihostname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Hostname</a>
@@ -883,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkey_go">
 <a href="#state_integrationkey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -893,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountaccessor_go">
 <a href="#state_mountaccessor_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Accessor</a>
@@ -903,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -913,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pushinfo_go">
 <a href="#state_pushinfo_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Info</a>
@@ -923,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretkey_go">
 <a href="#state_secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -933,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameformat_go">
 <a href="#state_usernameformat_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Format</a>
@@ -947,13 +892,11 @@ The following state arguments are supported:
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apihostname_nodejs">
 <a href="#state_apihostname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Hostname</a>
@@ -962,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkey_nodejs">
 <a href="#state_integrationkey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Key</a>
@@ -972,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountaccessor_nodejs">
 <a href="#state_mountaccessor_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Accessor</a>
@@ -982,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -992,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pushinfo_nodejs">
 <a href="#state_pushinfo_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Info</a>
@@ -1002,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretkey_nodejs">
 <a href="#state_secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -1012,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameformat_nodejs">
 <a href="#state_usernameformat_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Format</a>
@@ -1026,13 +963,11 @@ The following state arguments are supported:
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_hostname_python">
 <a href="#state_api_hostname_python" style="color: inherit; text-decoration: inherit;">api_<wbr>hostname</a>
@@ -1041,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - API hostname for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_key_python">
 <a href="#state_integration_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>key</a>
@@ -1051,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Integration key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mount_accessor_python">
 <a href="#state_mount_accessor_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>accessor</a>
@@ -1061,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1071,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` – Name of the MFA method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_push_info_python">
 <a href="#state_push_info_python" style="color: inherit; text-decoration: inherit;">push_<wbr>info</a>
@@ -1081,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string)` - Push information for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_key_python">
 <a href="#state_secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -1091,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`(string: <required>)` - Secret key for Duo.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_format_python">
 <a href="#state_username_format_python" style="color: inherit; text-decoration: inherit;">username_<wbr>format</a>
@@ -1105,8 +1034,7 @@ The following state arguments are supported:
 - entity.name: The name configured for the Entity
 - alias.metadata.`<key>`: The value of the Alias's metadata parameter
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

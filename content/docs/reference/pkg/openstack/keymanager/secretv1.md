@@ -170,8 +170,7 @@ The SecretV1 resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -182,8 +181,7 @@ The SecretV1 resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -192,8 +190,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bitlength_csharp">
 <a href="#bitlength_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Length</a>
@@ -202,8 +199,7 @@ project wide.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -212,8 +208,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -222,8 +217,7 @@ project wide.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -232,8 +226,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -243,8 +236,7 @@ project wide.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_csharp">
 <a href="#payload_csharp" style="color: inherit; text-decoration: inherit;">Payload</a>
@@ -253,8 +245,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontentencoding_csharp">
 <a href="#payloadcontentencoding_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Encoding</a>
@@ -263,8 +254,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontenttype_csharp">
 <a href="#payloadcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Type</a>
@@ -273,8 +263,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -286,8 +275,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrettype_csharp">
 <a href="#secrettype_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
@@ -296,13 +284,11 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -313,8 +299,7 @@ V1 secret.
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -323,8 +308,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bitlength_go">
 <a href="#bitlength_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Length</a>
@@ -333,8 +317,7 @@ project wide.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -343,8 +326,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -353,8 +335,7 @@ project wide.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -363,8 +344,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -374,8 +354,7 @@ project wide.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_go">
 <a href="#payload_go" style="color: inherit; text-decoration: inherit;">Payload</a>
@@ -384,8 +363,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontentencoding_go">
 <a href="#payloadcontentencoding_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Encoding</a>
@@ -394,8 +372,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontenttype_go">
 <a href="#payloadcontenttype_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Type</a>
@@ -404,8 +381,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -417,8 +393,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrettype_go">
 <a href="#secrettype_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
@@ -427,13 +402,11 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -444,8 +417,7 @@ V1 secret.
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -454,8 +426,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bitlength_nodejs">
 <a href="#bitlength_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Length</a>
@@ -464,8 +435,7 @@ project wide.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -474,8 +444,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -484,8 +453,7 @@ project wide.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -494,8 +462,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -505,8 +472,7 @@ project wide.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_nodejs">
 <a href="#payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
@@ -515,8 +481,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontentencoding_nodejs">
 <a href="#payloadcontentencoding_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Content<wbr>Encoding</a>
@@ -525,8 +490,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadcontenttype_nodejs">
 <a href="#payloadcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Content<wbr>Type</a>
@@ -535,8 +499,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -548,8 +511,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrettype_nodejs">
 <a href="#secrettype_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Type</a>
@@ -558,13 +520,11 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -575,8 +535,7 @@ V1 secret.
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -585,8 +544,7 @@ project wide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bit_length_python">
 <a href="#bit_length_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>length</a>
@@ -595,8 +553,7 @@ project wide.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -605,8 +562,7 @@ project wide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -615,8 +571,7 @@ project wide.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -625,8 +580,7 @@ project wide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -636,8 +590,7 @@ project wide.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_python">
 <a href="#payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
@@ -646,8 +599,7 @@ to be unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_content_encoding_python">
 <a href="#payload_content_encoding_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>content_<wbr>encoding</a>
@@ -656,8 +608,7 @@ to be unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_content_type_python">
 <a href="#payload_content_type_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>content_<wbr>type</a>
@@ -666,8 +617,7 @@ to be unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -679,8 +629,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_type_python">
 <a href="#secret_type_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>type</a>
@@ -689,8 +638,7 @@ V1 secret.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -701,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allmetadata_csharp">
 <a href="#allmetadata_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -712,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contenttypes_csharp">
 <a href="#contenttypes_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Types</a>
@@ -722,8 +668,7 @@ explicitly and implicitly added.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -732,8 +677,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_csharp">
 <a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -742,8 +686,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -751,8 +694,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretref_csharp">
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -761,8 +703,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -771,8 +712,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -781,13 +721,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allmetadata_go">
 <a href="#allmetadata_go" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -797,8 +735,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contenttypes_go">
 <a href="#contenttypes_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Types</a>
@@ -807,8 +744,7 @@ explicitly and implicitly added.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -817,8 +753,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_go">
 <a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -827,8 +762,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -836,8 +770,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretref_go">
 <a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -846,8 +779,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -856,8 +788,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -866,13 +797,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allmetadata_nodejs">
 <a href="#allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
@@ -882,8 +811,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contenttypes_nodejs">
 <a href="#contenttypes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types</a>
@@ -892,8 +820,7 @@ explicitly and implicitly added.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -902,8 +829,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creatorid_nodejs">
 <a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -912,8 +838,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -921,8 +846,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretref_nodejs">
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -931,8 +855,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -941,8 +864,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -951,13 +873,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_metadata_python">
 <a href="#all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
@@ -967,8 +887,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_types_python">
 <a href="#content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
@@ -977,8 +896,7 @@ explicitly and implicitly added.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -987,8 +905,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creator_id_python">
 <a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -997,8 +914,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1006,8 +922,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_ref_python">
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -1016,8 +931,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1026,8 +940,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1036,8 +949,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1164,8 +1076,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1176,8 +1087,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_csharp">
 <a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1186,8 +1096,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allmetadata_csharp">
 <a href="#state_allmetadata_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -1197,8 +1106,7 @@ project wide.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bitlength_csharp">
 <a href="#state_bitlength_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Length</a>
@@ -1207,8 +1115,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttypes_csharp">
 <a href="#state_contenttypes_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Types</a>
@@ -1217,8 +1124,7 @@ explicitly and implicitly added.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1227,8 +1133,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creatorid_csharp">
 <a href="#state_creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -1237,8 +1142,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_csharp">
 <a href="#state_expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1247,8 +1151,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1257,8 +1160,7 @@ explicitly and implicitly added.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1267,8 +1169,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1278,8 +1179,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_csharp">
 <a href="#state_payload_csharp" style="color: inherit; text-decoration: inherit;">Payload</a>
@@ -1288,8 +1188,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadcontentencoding_csharp">
 <a href="#state_payloadcontentencoding_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Encoding</a>
@@ -1298,8 +1197,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadcontenttype_csharp">
 <a href="#state_payloadcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Type</a>
@@ -1308,8 +1206,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1321,8 +1218,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretref_csharp">
 <a href="#state_secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -1331,8 +1227,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secrettype_csharp">
 <a href="#state_secrettype_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
@@ -1341,8 +1236,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1351,8 +1245,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_csharp">
 <a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1361,13 +1254,11 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1378,8 +1269,7 @@ V1 secret.
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_go">
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1388,8 +1278,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allmetadata_go">
 <a href="#state_allmetadata_go" style="color: inherit; text-decoration: inherit;">All<wbr>Metadata</a>
@@ -1399,8 +1288,7 @@ project wide.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bitlength_go">
 <a href="#state_bitlength_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Length</a>
@@ -1409,8 +1297,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttypes_go">
 <a href="#state_contenttypes_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Types</a>
@@ -1419,8 +1306,7 @@ explicitly and implicitly added.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1429,8 +1315,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creatorid_go">
 <a href="#state_creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -1439,8 +1324,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_go">
 <a href="#state_expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1449,8 +1333,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1459,8 +1342,7 @@ explicitly and implicitly added.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1469,8 +1351,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1480,8 +1361,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_go">
 <a href="#state_payload_go" style="color: inherit; text-decoration: inherit;">Payload</a>
@@ -1490,8 +1370,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadcontentencoding_go">
 <a href="#state_payloadcontentencoding_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Encoding</a>
@@ -1500,8 +1379,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadcontenttype_go">
 <a href="#state_payloadcontenttype_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Content<wbr>Type</a>
@@ -1510,8 +1388,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1523,8 +1400,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretref_go">
 <a href="#state_secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -1533,8 +1409,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secrettype_go">
 <a href="#state_secrettype_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Type</a>
@@ -1543,8 +1418,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1553,8 +1427,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_go">
 <a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1563,13 +1436,11 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1580,8 +1451,7 @@ V1 secret.
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_nodejs">
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1590,8 +1460,7 @@ project wide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allmetadata_nodejs">
 <a href="#state_allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
@@ -1601,8 +1470,7 @@ project wide.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bitlength_nodejs">
 <a href="#state_bitlength_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Length</a>
@@ -1611,8 +1479,7 @@ explicitly and implicitly added.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttypes_nodejs">
 <a href="#state_contenttypes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types</a>
@@ -1621,8 +1488,7 @@ explicitly and implicitly added.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1631,8 +1497,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creatorid_nodejs">
 <a href="#state_creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -1641,8 +1506,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_nodejs">
 <a href="#state_expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1651,8 +1515,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1661,8 +1524,7 @@ explicitly and implicitly added.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1671,8 +1533,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1682,8 +1543,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_nodejs">
 <a href="#state_payload_nodejs" style="color: inherit; text-decoration: inherit;">payload</a>
@@ -1692,8 +1552,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadcontentencoding_nodejs">
 <a href="#state_payloadcontentencoding_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Content<wbr>Encoding</a>
@@ -1702,8 +1561,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadcontenttype_nodejs">
 <a href="#state_payloadcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Content<wbr>Type</a>
@@ -1712,8 +1570,7 @@ to be unique.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1725,8 +1582,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretref_nodejs">
 <a href="#state_secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -1735,8 +1591,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secrettype_nodejs">
 <a href="#state_secrettype_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Type</a>
@@ -1745,8 +1600,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1755,8 +1609,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_nodejs">
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1765,13 +1618,11 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1782,8 +1633,7 @@ V1 secret.
     <dd>{{% md %}}Allows to control an access to a secret. Currently only the
 `read` operation is supported. If not specified, the secret is accessible
 project wide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_python">
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1792,8 +1642,7 @@ project wide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_metadata_python">
 <a href="#state_all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
@@ -1803,8 +1652,7 @@ project wide.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bit_length_python">
 <a href="#state_bit_length_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>length</a>
@@ -1813,8 +1661,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_types_python">
 <a href="#state_content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
@@ -1823,8 +1670,7 @@ explicitly and implicitly added.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1833,8 +1679,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creator_id_python">
 <a href="#state_creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -1843,8 +1688,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creator of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_python">
 <a href="#state_expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1853,8 +1697,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the secret in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted, a secret will never expire. Changing this creates a new secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1863,8 +1706,7 @@ explicitly and implicitly added.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional Metadata for the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1873,8 +1715,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata provided by a user or system for informational purposes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1884,8 +1725,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable name for the Secret. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_python">
 <a href="#state_payload_python" style="color: inherit; text-decoration: inherit;">payload</a>
@@ -1894,8 +1734,7 @@ to be unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret's data to be stored. **payload\_content\_type** must also be supplied if **payload** is included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_content_encoding_python">
 <a href="#state_payload_content_encoding_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>content_<wbr>encoding</a>
@@ -1904,8 +1743,7 @@ to be unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is encoded) The encoding used for the payload to be able to include it in the JSON request. Must be either `base64` or `binary`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_content_type_python">
 <a href="#state_payload_content_type_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>content_<wbr>type</a>
@@ -1914,8 +1752,7 @@ to be unique.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(required if **payload** is included) The media type for the content of the payload. Must be one of `text/plain`, `text/plain;charset=utf-8`, `text/plain; charset=utf-8`, `application/octet-stream`, `application/pkcs8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1927,8 +1764,7 @@ to be unique.
 A KeyManager client is needed to create a secret. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 V1 secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_ref_python">
 <a href="#state_secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -1937,8 +1773,7 @@ V1 secret.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_type_python">
 <a href="#state_secret_type_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>type</a>
@@ -1947,8 +1782,7 @@ V1 secret.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of secret being stored. For more information see [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1957,8 +1791,7 @@ V1 secret.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_at_python">
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1967,8 +1800,7 @@ V1 secret.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1983,8 +1815,7 @@ V1 secret.
 <h4 id="secretv1acl">Secret<wbr>V1Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="read_csharp">
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -1992,13 +1823,11 @@ V1 secret.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretv1aclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Secret<wbr>V1Acl<wbr>Read<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="read_go">
 <a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -2006,13 +1835,11 @@ V1 secret.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretv1aclread">Secret<wbr>V1Acl<wbr>Read</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="read_nodejs">
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
@@ -2020,13 +1847,11 @@ V1 secret.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretv1aclread">Secret<wbr>V1Acl<wbr>Read</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="read_python">
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
@@ -2034,15 +1859,13 @@ V1 secret.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretv1aclread">Secret<wbr>V1Acl<wbr>Read<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretv1aclread">Secret<wbr>V1Acl<wbr>Read</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2051,8 +1874,7 @@ V1 secret.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectaccess_csharp">
 <a href="#projectaccess_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
@@ -2062,8 +1884,7 @@ V1 secret.
     </dt>
     <dd>{{% md %}}Whether the secret is accessible project wide.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -2072,8 +1893,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -2083,13 +1903,11 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 secret, when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2098,8 +1916,7 @@ secret, when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectaccess_go">
 <a href="#projectaccess_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
@@ -2109,8 +1926,7 @@ secret, when `project_access` is set to `false`.
     </dt>
     <dd>{{% md %}}Whether the secret is accessible project wide.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -2119,8 +1935,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -2130,13 +1945,11 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 secret, when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2145,8 +1958,7 @@ secret, when `project_access` is set to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectaccess_nodejs">
 <a href="#projectaccess_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
@@ -2156,8 +1968,7 @@ secret, when `project_access` is set to `false`.
     </dt>
     <dd>{{% md %}}Whether the secret is accessible project wide.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -2166,8 +1977,7 @@ Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2177,13 +1987,11 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 secret, when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2192,8 +2000,7 @@ secret, when `project_access` is set to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_access_python">
 <a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
@@ -2203,8 +2010,7 @@ secret, when `project_access` is set to `false`.
     </dt>
     <dd>{{% md %}}Whether the secret is accessible project wide.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -2213,8 +2019,7 @@ Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2224,8 +2029,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 secret, when `project_access` is set to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

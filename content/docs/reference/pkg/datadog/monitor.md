@@ -170,8 +170,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -181,8 +180,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -191,8 +189,7 @@ same `@username` notation as events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -203,8 +200,7 @@ same `@username` notation as events.
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -215,8 +211,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogssample_csharp">
 <a href="#enablelogssample_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
@@ -226,8 +221,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="escalationmessage_csharp">
 <a href="#escalationmessage_csharp" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
@@ -236,8 +230,7 @@ monitors. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationdelay_csharp">
 <a href="#evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
@@ -249,8 +242,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_csharp">
 <a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -260,8 +252,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includetags_csharp">
 <a href="#includetags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -271,8 +262,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -282,8 +272,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorthresholdwindows_csharp">
 <a href="#monitorthresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
@@ -293,8 +282,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorthresholds_csharp">
 <a href="#monitorthresholds_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
@@ -303,8 +291,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newhostdelay_csharp">
 <a href="#newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
@@ -314,8 +301,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodatatimeframe_csharp">
 <a href="#nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -325,8 +311,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyaudit_csharp">
 <a href="#notifyaudit_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
@@ -335,8 +320,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifynodata_csharp">
 <a href="#notifynodata_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
@@ -345,8 +329,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -354,8 +337,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renotifyinterval_csharp">
 <a href="#renotifyinterval_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
@@ -365,8 +347,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirefullwindow_csharp">
 <a href="#requirefullwindow_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
@@ -377,8 +358,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="silenced_csharp">
 <a href="#silenced_csharp" style="color: inherit; text-decoration: inherit;">Silenced</a>
@@ -389,8 +369,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -400,8 +379,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholdwindows_csharp">
 <a href="#thresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
@@ -411,8 +389,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholds_csharp">
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -421,8 +398,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeouth_csharp">
 <a href="#timeouth_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
@@ -432,8 +408,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_csharp">
 <a href="#validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -442,13 +417,11 @@ Defaults to `false`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -458,8 +431,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -468,8 +440,7 @@ same `@username` notation as events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -480,8 +451,7 @@ same `@username` notation as events.
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -492,8 +462,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogssample_go">
 <a href="#enablelogssample_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
@@ -503,8 +472,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="escalationmessage_go">
 <a href="#escalationmessage_go" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
@@ -513,8 +481,7 @@ monitors. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationdelay_go">
 <a href="#evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
@@ -526,8 +493,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_go">
 <a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -537,8 +503,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includetags_go">
 <a href="#includetags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -548,8 +513,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -559,8 +523,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorthresholdwindows_go">
 <a href="#monitorthresholdwindows_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
@@ -570,8 +533,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorthresholds_go">
 <a href="#monitorthresholds_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
@@ -580,8 +542,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newhostdelay_go">
 <a href="#newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
@@ -591,8 +552,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodatatimeframe_go">
 <a href="#nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -602,8 +562,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyaudit_go">
 <a href="#notifyaudit_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
@@ -612,8 +571,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifynodata_go">
 <a href="#notifynodata_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
@@ -622,8 +580,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -631,8 +588,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renotifyinterval_go">
 <a href="#renotifyinterval_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
@@ -642,8 +598,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirefullwindow_go">
 <a href="#requirefullwindow_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
@@ -654,8 +609,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="silenced_go">
 <a href="#silenced_go" style="color: inherit; text-decoration: inherit;">Silenced</a>
@@ -666,8 +620,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -677,8 +630,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholdwindows_go">
 <a href="#thresholdwindows_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
@@ -688,8 +640,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholds_go">
 <a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -698,8 +649,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeouth_go">
 <a href="#timeouth_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
@@ -709,8 +659,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_go">
 <a href="#validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -719,13 +668,11 @@ Defaults to `false`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -735,8 +682,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -745,8 +691,7 @@ same `@username` notation as events.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -757,8 +702,7 @@ same `@username` notation as events.
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -769,8 +713,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogssample_nodejs">
 <a href="#enablelogssample_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logs<wbr>Sample</a>
@@ -780,8 +723,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="escalationmessage_nodejs">
 <a href="#escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
@@ -790,8 +732,7 @@ monitors. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationdelay_nodejs">
 <a href="#evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
@@ -803,8 +744,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_nodejs">
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -814,8 +754,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includetags_nodejs">
 <a href="#includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
@@ -825,8 +764,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -836,8 +774,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorthresholdwindows_nodejs">
 <a href="#monitorthresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Threshold<wbr>Windows</a>
@@ -847,8 +784,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorthresholds_nodejs">
 <a href="#monitorthresholds_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Thresholds</a>
@@ -857,8 +793,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newhostdelay_nodejs">
 <a href="#newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
@@ -868,8 +803,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodatatimeframe_nodejs">
 <a href="#nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
@@ -879,8 +813,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyaudit_nodejs">
 <a href="#notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
@@ -889,8 +822,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifynodata_nodejs">
 <a href="#notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
@@ -899,8 +831,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -908,8 +839,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renotifyinterval_nodejs">
 <a href="#renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
@@ -919,8 +849,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirefullwindow_nodejs">
 <a href="#requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
@@ -931,8 +860,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="silenced_nodejs">
 <a href="#silenced_nodejs" style="color: inherit; text-decoration: inherit;">silenced</a>
@@ -943,8 +871,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -954,8 +881,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholdwindows_nodejs">
 <a href="#thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
@@ -965,8 +891,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholds_nodejs">
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -975,8 +900,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeouth_nodejs">
 <a href="#timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
@@ -986,8 +910,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_nodejs">
 <a href="#validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -996,13 +919,11 @@ Defaults to `false`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1012,8 +933,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1022,8 +942,7 @@ same `@username` notation as events.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1034,8 +953,7 @@ same `@username` notation as events.
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1046,8 +964,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_logs_sample_python">
 <a href="#enable_logs_sample_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logs_<wbr>sample</a>
@@ -1057,8 +974,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="escalation_message_python">
 <a href="#escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
@@ -1067,8 +983,7 @@ monitors. Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_delay_python">
 <a href="#evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
@@ -1080,8 +995,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_delete_python">
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -1091,8 +1005,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_tags_python">
 <a href="#include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
@@ -1102,8 +1015,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1113,8 +1025,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_threshold_windows_python">
 <a href="#monitor_threshold_windows_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>threshold_<wbr>windows</a>
@@ -1124,8 +1035,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_thresholds_python">
 <a href="#monitor_thresholds_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>thresholds</a>
@@ -1134,8 +1044,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="new_host_delay_python">
 <a href="#new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
@@ -1145,8 +1054,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_data_timeframe_python">
 <a href="#no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
@@ -1156,8 +1064,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_audit_python">
 <a href="#notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
@@ -1166,8 +1073,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_no_data_python">
 <a href="#notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
@@ -1176,8 +1082,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1185,8 +1090,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renotify_interval_python">
 <a href="#renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
@@ -1196,8 +1100,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_full_window_python">
 <a href="#require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
@@ -1208,8 +1111,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="silenced_python">
 <a href="#silenced_python" style="color: inherit; text-decoration: inherit;">silenced</a>
@@ -1220,8 +1122,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1231,8 +1132,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="threshold_windows_python">
 <a href="#threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
@@ -1242,8 +1142,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="thresholds_python">
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -1252,8 +1151,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_h_python">
 <a href="#timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
@@ -1263,8 +1161,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_python">
 <a href="#validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -1273,8 +1170,7 @@ Defaults to `false`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1285,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1294,13 +1189,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1308,13 +1201,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1322,13 +1213,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1336,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1464,8 +1352,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogssample_csharp">
 <a href="#state_enablelogssample_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
@@ -1475,8 +1362,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_escalationmessage_csharp">
 <a href="#state_escalationmessage_csharp" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
@@ -1485,8 +1371,7 @@ monitors. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evaluationdelay_csharp">
 <a href="#state_evaluationdelay_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
@@ -1498,8 +1383,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_csharp">
 <a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1509,8 +1393,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includetags_csharp">
 <a href="#state_includetags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -1520,8 +1403,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
 <a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1531,8 +1413,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_csharp">
 <a href="#state_message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1542,8 +1423,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorthresholdwindows_csharp">
 <a href="#state_monitorthresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
@@ -1553,8 +1433,7 @@ same `@username` notation as events.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorthresholds_csharp">
 <a href="#state_monitorthresholds_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
@@ -1563,8 +1442,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1573,8 +1451,7 @@ required for, anomaly monitors.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_newhostdelay_csharp">
 <a href="#state_newhostdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
@@ -1584,8 +1461,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodatatimeframe_csharp">
 <a href="#state_nodatatimeframe_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -1595,8 +1471,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyaudit_csharp">
 <a href="#state_notifyaudit_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
@@ -1605,8 +1480,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifynodata_csharp">
 <a href="#state_notifynodata_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
@@ -1615,8 +1489,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1624,8 +1497,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_csharp">
 <a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1636,8 +1508,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renotifyinterval_csharp">
 <a href="#state_renotifyinterval_csharp" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
@@ -1647,8 +1518,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirefullwindow_csharp">
 <a href="#state_requirefullwindow_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
@@ -1659,8 +1529,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_silenced_csharp">
 <a href="#state_silenced_csharp" style="color: inherit; text-decoration: inherit;">Silenced</a>
@@ -1671,8 +1540,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1682,8 +1550,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholdwindows_csharp">
 <a href="#state_thresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
@@ -1693,8 +1560,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholds_csharp">
 <a href="#state_thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -1703,8 +1569,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeouth_csharp">
 <a href="#state_timeouth_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
@@ -1714,8 +1579,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1726,8 +1590,7 @@ Defaults to `false`.
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_csharp">
 <a href="#state_validate_csharp" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -1736,13 +1599,11 @@ cannot be changed after a monitor is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogssample_go">
 <a href="#state_enablelogssample_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logs<wbr>Sample</a>
@@ -1752,8 +1613,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_escalationmessage_go">
 <a href="#state_escalationmessage_go" style="color: inherit; text-decoration: inherit;">Escalation<wbr>Message</a>
@@ -1762,8 +1622,7 @@ monitors. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evaluationdelay_go">
 <a href="#state_evaluationdelay_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Delay</a>
@@ -1775,8 +1634,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_go">
 <a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1786,8 +1644,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includetags_go">
 <a href="#state_includetags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -1797,8 +1654,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
 <a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1808,8 +1664,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_go">
 <a href="#state_message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1819,8 +1674,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorthresholdwindows_go">
 <a href="#state_monitorthresholdwindows_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
@@ -1830,8 +1684,7 @@ same `@username` notation as events.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorthresholds_go">
 <a href="#state_monitorthresholds_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
@@ -1840,8 +1693,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1850,8 +1702,7 @@ required for, anomaly monitors.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_newhostdelay_go">
 <a href="#state_newhostdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Host<wbr>Delay</a>
@@ -1861,8 +1712,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodatatimeframe_go">
 <a href="#state_nodatatimeframe_go" style="color: inherit; text-decoration: inherit;">No<wbr>Data<wbr>Timeframe</a>
@@ -1872,8 +1722,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyaudit_go">
 <a href="#state_notifyaudit_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Audit</a>
@@ -1882,8 +1731,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifynodata_go">
 <a href="#state_notifynodata_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>No<wbr>Data</a>
@@ -1892,8 +1740,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1901,8 +1748,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_go">
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1913,8 +1759,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renotifyinterval_go">
 <a href="#state_renotifyinterval_go" style="color: inherit; text-decoration: inherit;">Renotify<wbr>Interval</a>
@@ -1924,8 +1769,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirefullwindow_go">
 <a href="#state_requirefullwindow_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Full<wbr>Window</a>
@@ -1936,8 +1780,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_silenced_go">
 <a href="#state_silenced_go" style="color: inherit; text-decoration: inherit;">Silenced</a>
@@ -1948,8 +1791,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1959,8 +1801,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholdwindows_go">
 <a href="#state_thresholdwindows_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
@@ -1970,8 +1811,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholds_go">
 <a href="#state_thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
@@ -1980,8 +1820,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeouth_go">
 <a href="#state_timeouth_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>H</a>
@@ -1991,8 +1830,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2003,8 +1841,7 @@ Defaults to `false`.
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_go">
 <a href="#state_validate_go" style="color: inherit; text-decoration: inherit;">Validate</a>
@@ -2013,13 +1850,11 @@ cannot be changed after a monitor is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogssample_nodejs">
 <a href="#state_enablelogssample_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logs<wbr>Sample</a>
@@ -2029,8 +1864,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_escalationmessage_nodejs">
 <a href="#state_escalationmessage_nodejs" style="color: inherit; text-decoration: inherit;">escalation<wbr>Message</a>
@@ -2039,8 +1873,7 @@ monitors. Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evaluationdelay_nodejs">
 <a href="#state_evaluationdelay_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Delay</a>
@@ -2052,8 +1885,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_nodejs">
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -2063,8 +1895,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includetags_nodejs">
 <a href="#state_includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
@@ -2074,8 +1905,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -2085,8 +1915,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_nodejs">
 <a href="#state_message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2096,8 +1925,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorthresholdwindows_nodejs">
 <a href="#state_monitorthresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Threshold<wbr>Windows</a>
@@ -2107,8 +1935,7 @@ same `@username` notation as events.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorthresholds_nodejs">
 <a href="#state_monitorthresholds_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Thresholds</a>
@@ -2117,8 +1944,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2127,8 +1953,7 @@ required for, anomaly monitors.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_newhostdelay_nodejs">
 <a href="#state_newhostdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Host<wbr>Delay</a>
@@ -2138,8 +1963,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodatatimeframe_nodejs">
 <a href="#state_nodatatimeframe_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Data<wbr>Timeframe</a>
@@ -2149,8 +1973,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyaudit_nodejs">
 <a href="#state_notifyaudit_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Audit</a>
@@ -2159,8 +1982,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifynodata_nodejs">
 <a href="#state_notifynodata_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>No<wbr>Data</a>
@@ -2169,8 +1991,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2178,8 +1999,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_nodejs">
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2190,8 +2010,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renotifyinterval_nodejs">
 <a href="#state_renotifyinterval_nodejs" style="color: inherit; text-decoration: inherit;">renotify<wbr>Interval</a>
@@ -2201,8 +2020,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirefullwindow_nodejs">
 <a href="#state_requirefullwindow_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Full<wbr>Window</a>
@@ -2213,8 +2031,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_silenced_nodejs">
 <a href="#state_silenced_nodejs" style="color: inherit; text-decoration: inherit;">silenced</a>
@@ -2225,8 +2042,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2236,8 +2052,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholdwindows_nodejs">
 <a href="#state_thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
@@ -2247,8 +2062,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholds_nodejs">
 <a href="#state_thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -2257,8 +2071,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeouth_nodejs">
 <a href="#state_timeouth_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>H</a>
@@ -2268,8 +2081,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2280,8 +2092,7 @@ Defaults to `false`.
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_nodejs">
 <a href="#state_validate_nodejs" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -2290,13 +2101,11 @@ cannot be changed after a monitor is created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enable_logs_sample_python">
 <a href="#state_enable_logs_sample_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logs_<wbr>sample</a>
@@ -2306,8 +2115,7 @@ cannot be changed after a monitor is created.
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
 monitors. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_escalation_message_python">
 <a href="#state_escalation_message_python" style="color: inherit; text-decoration: inherit;">escalation_<wbr>message</a>
@@ -2316,8 +2124,7 @@ monitors. Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message to include with a re-notification. Supports the `@username` notification allowed elsewhere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evaluation_delay_python">
 <a href="#state_evaluation_delay_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>delay</a>
@@ -2329,8 +2136,7 @@ monitors. Defaults to `false`.
 value is set to `300` (5min), the `timeframe` is set to `last_5m` and the time is 7:00, the monitor will evaluate data
 from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
 data during evaluation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_delete_python">
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -2340,8 +2146,7 @@ data during evaluation.
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
 composite monitor).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_tags_python">
 <a href="#state_include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
@@ -2351,8 +2156,7 @@ composite monitor).
     </dt>
     <dd>{{% md %}}A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
 Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -2362,8 +2166,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_message_python">
 <a href="#state_message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2373,8 +2176,7 @@ Defaults to `true`.
     </dt>
     <dd>{{% md %}}A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same `@username` notation as events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitor_threshold_windows_python">
 <a href="#state_monitor_threshold_windows_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>threshold_<wbr>windows</a>
@@ -2384,8 +2186,7 @@ same `@username` notation as events.
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m` . Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitor_thresholds_python">
 <a href="#state_monitor_thresholds_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>thresholds</a>
@@ -2394,8 +2195,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2404,8 +2204,7 @@ required for, anomaly monitors.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Datadog monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_new_host_delay_python">
 <a href="#state_new_host_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>host_<wbr>delay</a>
@@ -2415,8 +2214,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
 results. Should be a non negative integer. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_data_timeframe_python">
 <a href="#state_no_data_timeframe_python" style="color: inherit; text-decoration: inherit;">no_<wbr>data_<wbr>timeframe</a>
@@ -2426,8 +2224,7 @@ results. Should be a non negative integer. Defaults to `300`.
     </dt>
     <dd>{{% md %}}The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
 recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_audit_python">
 <a href="#state_notify_audit_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>audit</a>
@@ -2436,8 +2233,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_no_data_python">
 <a href="#state_notify_no_data_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>no_<wbr>data</a>
@@ -2446,8 +2242,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2455,8 +2250,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_python">
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2467,8 +2261,7 @@ recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for s
     <dd>{{% md %}}The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the [API Reference](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor) for
 details. Warning: `terraform plan` won't perform any validation of the query contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renotify_interval_python">
 <a href="#state_renotify_interval_python" style="color: inherit; text-decoration: inherit;">renotify_<wbr>interval</a>
@@ -2478,8 +2271,7 @@ details. Warning: `terraform plan` won't perform any validation of the query con
     </dt>
     <dd>{{% md %}}The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
 re-notify if it's not resolved.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_require_full_window_python">
 <a href="#state_require_full_window_python" style="color: inherit; text-decoration: inherit;">require_<wbr>full_<wbr>window</a>
@@ -2490,8 +2282,7 @@ re-notify if it's not resolved.
     <dd>{{% md %}}A boolean indicating whether this monitor needs a full window of data before it's evaluated. We highly recommend you set
 this to `false` for s metrics, otherwise some evaluations will be skipped. Default: `true` for `on average`, `at all
 times` and `in total` aggregation. `false` otherwise.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_silenced_python">
 <a href="#state_silenced_python" style="color: inherit; text-decoration: inherit;">silenced</a>
@@ -2502,8 +2293,7 @@ times` and `in total` aggregation. `false` otherwise.
     <dd>{{% md %}}Each scope will be muted until the given POSIX timestamp or forever if the value is `0`. Use `-1` if you want to unmute
 the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
 removed in the next major version of the Terraform Provider.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use Downtime Resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2513,8 +2303,7 @@ removed in the next major version of the Terraform Provider.
     </dt>
     <dd>{{% md %}}A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
 page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_threshold_windows_python">
 <a href="#state_threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
@@ -2524,8 +2313,7 @@ page of the UI. Note: it's not currently possible to filter by these tags when q
     </dt>
     <dd>{{% md %}}A mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. Can only be used for, and are
 required for, anomaly monitors.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_thresholds_python">
 <a href="#state_thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
@@ -2534,8 +2322,7 @@ required for, anomaly monitors.
         <span class="property-type"><a href="#monitorthresholds">Monitor<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alert thresholds of the monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_h_python">
 <a href="#state_timeout_h_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>h</a>
@@ -2545,8 +2332,7 @@ required for, anomaly monitors.
     </dt>
     <dd>{{% md %}}The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2557,8 +2343,7 @@ Defaults to `false`.
     <dd>{{% md %}}The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
 Datadog API [documentation page](https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor). Note: The monitor type
 cannot be changed after a monitor is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_python">
 <a href="#state_validate_python" style="color: inherit; text-decoration: inherit;">validate</a>
@@ -2567,8 +2352,7 @@ cannot be changed after a monitor is created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `false`, skip the validation call done during plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2583,8 +2367,7 @@ cannot be changed after a monitor is created.
 <h4 id="monitormonitorthresholdwindows">Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverywindow_csharp">
 <a href="#recoverywindow_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
@@ -2592,8 +2375,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerwindow_csharp">
 <a href="#triggerwindow_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
@@ -2601,13 +2383,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverywindow_go">
 <a href="#recoverywindow_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
@@ -2615,8 +2395,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerwindow_go">
 <a href="#triggerwindow_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
@@ -2624,13 +2403,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverywindow_nodejs">
 <a href="#recoverywindow_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Window</a>
@@ -2638,8 +2415,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerwindow_nodejs">
 <a href="#triggerwindow_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Window</a>
@@ -2647,13 +2423,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recovery_window_python">
 <a href="#recovery_window_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>window</a>
@@ -2661,8 +2435,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_window_python">
 <a href="#trigger_window_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>window</a>
@@ -2670,15 +2443,13 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitormonitorthresholds">Monitor<wbr>Monitor<wbr>Thresholds</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -2686,8 +2457,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_csharp">
 <a href="#criticalrecovery_csharp" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
@@ -2695,8 +2465,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_csharp">
 <a href="#ok_csharp" style="color: inherit; text-decoration: inherit;">Ok</a>
@@ -2704,8 +2473,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_csharp">
 <a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
@@ -2713,8 +2481,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -2722,8 +2489,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningrecovery_csharp">
 <a href="#warningrecovery_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
@@ -2731,13 +2497,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -2745,8 +2509,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_go">
 <a href="#criticalrecovery_go" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
@@ -2754,8 +2517,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_go">
 <a href="#ok_go" style="color: inherit; text-decoration: inherit;">Ok</a>
@@ -2763,8 +2525,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_go">
 <a href="#unknown_go" style="color: inherit; text-decoration: inherit;">Unknown</a>
@@ -2772,8 +2533,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -2781,8 +2541,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningrecovery_go">
 <a href="#warningrecovery_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
@@ -2790,13 +2549,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -2804,8 +2561,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_nodejs">
 <a href="#criticalrecovery_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Recovery</a>
@@ -2813,8 +2569,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_nodejs">
 <a href="#ok_nodejs" style="color: inherit; text-decoration: inherit;">ok</a>
@@ -2822,8 +2577,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_nodejs">
 <a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
@@ -2831,8 +2585,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -2840,8 +2593,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningrecovery_nodejs">
 <a href="#warningrecovery_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Recovery</a>
@@ -2849,13 +2601,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -2863,8 +2613,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_recovery_python">
 <a href="#critical_recovery_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>recovery</a>
@@ -2872,8 +2621,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_python">
 <a href="#ok_python" style="color: inherit; text-decoration: inherit;">ok</a>
@@ -2881,8 +2629,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_python">
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
@@ -2890,8 +2637,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -2899,8 +2645,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_recovery_python">
 <a href="#warning_recovery_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>recovery</a>
@@ -2908,15 +2653,13 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorthresholdwindows">Monitor<wbr>Threshold<wbr>Windows</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverywindow_csharp">
 <a href="#recoverywindow_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
@@ -2924,8 +2667,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerwindow_csharp">
 <a href="#triggerwindow_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
@@ -2933,13 +2675,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverywindow_go">
 <a href="#recoverywindow_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
@@ -2947,8 +2687,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerwindow_go">
 <a href="#triggerwindow_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
@@ -2956,13 +2695,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverywindow_nodejs">
 <a href="#recoverywindow_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Window</a>
@@ -2970,8 +2707,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerwindow_nodejs">
 <a href="#triggerwindow_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Window</a>
@@ -2979,13 +2715,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recovery_window_python">
 <a href="#recovery_window_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>window</a>
@@ -2993,8 +2727,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_window_python">
 <a href="#trigger_window_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>window</a>
@@ -3002,15 +2735,13 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorthresholds">Monitor<wbr>Thresholds</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -3018,8 +2749,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_csharp">
 <a href="#criticalrecovery_csharp" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
@@ -3027,8 +2757,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_csharp">
 <a href="#ok_csharp" style="color: inherit; text-decoration: inherit;">Ok</a>
@@ -3036,8 +2765,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_csharp">
 <a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
@@ -3045,8 +2773,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -3054,8 +2781,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningrecovery_csharp">
 <a href="#warningrecovery_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
@@ -3063,13 +2789,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -3077,8 +2801,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_go">
 <a href="#criticalrecovery_go" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
@@ -3086,8 +2809,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_go">
 <a href="#ok_go" style="color: inherit; text-decoration: inherit;">Ok</a>
@@ -3095,8 +2817,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_go">
 <a href="#unknown_go" style="color: inherit; text-decoration: inherit;">Unknown</a>
@@ -3104,8 +2825,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -3113,8 +2833,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningrecovery_go">
 <a href="#warningrecovery_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
@@ -3122,13 +2841,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -3136,8 +2853,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalrecovery_nodejs">
 <a href="#criticalrecovery_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Recovery</a>
@@ -3145,8 +2861,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_nodejs">
 <a href="#ok_nodejs" style="color: inherit; text-decoration: inherit;">ok</a>
@@ -3154,8 +2869,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_nodejs">
 <a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
@@ -3163,8 +2877,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -3172,8 +2885,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningrecovery_nodejs">
 <a href="#warningrecovery_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Recovery</a>
@@ -3181,13 +2893,11 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -3195,8 +2905,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_recovery_python">
 <a href="#critical_recovery_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>recovery</a>
@@ -3204,8 +2913,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_python">
 <a href="#ok_python" style="color: inherit; text-decoration: inherit;">ok</a>
@@ -3213,8 +2921,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unknown_python">
 <a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
@@ -3222,8 +2929,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -3231,8 +2937,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_recovery_python">
 <a href="#warning_recovery_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>recovery</a>
@@ -3240,8 +2945,7 @@ cannot be changed after a monitor is created.
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

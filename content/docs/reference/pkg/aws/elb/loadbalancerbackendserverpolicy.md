@@ -373,8 +373,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceport_csharp">
 <a href="#instanceport_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Port</a>
@@ -383,8 +382,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancername_csharp">
 <a href="#loadbalancername_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -393,8 +391,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policynames_csharp">
 <a href="#policynames_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Names</a>
@@ -403,13 +400,11 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceport_go">
 <a href="#instanceport_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Port</a>
@@ -418,8 +413,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancername_go">
 <a href="#loadbalancername_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -428,8 +422,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policynames_go">
 <a href="#policynames_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Names</a>
@@ -438,13 +431,11 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceport_nodejs">
 <a href="#instanceport_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Port</a>
@@ -453,8 +444,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancername_nodejs">
 <a href="#loadbalancername_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Name</a>
@@ -463,8 +453,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policynames_nodejs">
 <a href="#policynames_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Names</a>
@@ -473,13 +462,11 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_port_python">
 <a href="#instance_port_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>port</a>
@@ -488,8 +475,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_name_python">
 <a href="#load_balancer_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>name</a>
@@ -498,8 +484,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_names_python">
 <a href="#policy_names_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>names</a>
@@ -508,8 +493,7 @@ The LoadBalancerBackendServerPolicy resource accepts the following [input]({{< r
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -520,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -529,13 +512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -543,13 +524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -557,13 +536,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -699,8 +675,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instanceport_csharp">
 <a href="#state_instanceport_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Port</a>
@@ -709,8 +684,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancername_csharp">
 <a href="#state_loadbalancername_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -719,8 +693,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policynames_csharp">
 <a href="#state_policynames_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Names</a>
@@ -729,13 +702,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instanceport_go">
 <a href="#state_instanceport_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Port</a>
@@ -744,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancername_go">
 <a href="#state_loadbalancername_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -754,8 +724,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policynames_go">
 <a href="#state_policynames_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Names</a>
@@ -764,13 +733,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instanceport_nodejs">
 <a href="#state_instanceport_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Port</a>
@@ -779,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancername_nodejs">
 <a href="#state_loadbalancername_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Name</a>
@@ -789,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policynames_nodejs">
 <a href="#state_policynames_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Names</a>
@@ -799,13 +764,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instance_port_python">
 <a href="#state_instance_port_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>port</a>
@@ -814,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance port to apply the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_name_python">
 <a href="#state_load_balancer_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>name</a>
@@ -824,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer to attach the policy to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_names_python">
 <a href="#state_policy_names_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>names</a>
@@ -834,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Policy Names to apply to the backend server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

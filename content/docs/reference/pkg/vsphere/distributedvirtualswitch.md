@@ -162,8 +162,7 @@ The DistributedVirtualSwitch resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -173,8 +172,7 @@ The DistributedVirtualSwitch resource accepts the following [input]({{< relref "
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activeuplinks_csharp">
 <a href="#activeuplinks_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
@@ -186,8 +184,7 @@ virtual switch will be created. Forces a new resource if changed.
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforgedtransmits_csharp">
 <a href="#allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
@@ -198,8 +195,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmacchanges_csharp">
 <a href="#allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
@@ -209,8 +205,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpromiscuous_csharp">
 <a href="#allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
@@ -220,8 +215,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockallports_csharp">
 <a href="#blockallports_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
@@ -232,8 +226,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkbeacon_csharp">
 <a href="#checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
@@ -243,8 +236,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactdetail_csharp">
 <a href="#contactdetail_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
@@ -254,8 +246,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactname_csharp">
 <a href="#contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -265,8 +256,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -276,8 +266,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -286,8 +275,7 @@ value strings to set for virtual switch.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directpathgen2allowed_csharp">
 <a href="#directpathgen2allowed_csharp" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
@@ -297,8 +285,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingaveragebandwidth_csharp">
 <a href="#egressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -308,8 +295,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingburstsize_csharp">
 <a href="#egressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -319,8 +305,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingenabled_csharp">
 <a href="#egressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
@@ -330,8 +315,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingpeakbandwidth_csharp">
 <a href="#egressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -341,8 +325,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failback_csharp">
 <a href="#failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
@@ -352,8 +335,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancemaximummbit_csharp">
 <a href="#faulttolerancemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
@@ -362,8 +344,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancereservationmbit_csharp">
 <a href="#faulttolerancereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
@@ -372,8 +353,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancesharecount_csharp">
 <a href="#faulttolerancesharecount_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
@@ -382,8 +362,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancesharelevel_csharp">
 <a href="#faulttolerancesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
@@ -392,8 +371,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -403,8 +381,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrmaximummbit_csharp">
 <a href="#hbrmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
@@ -413,8 +390,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrreservationmbit_csharp">
 <a href="#hbrreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
@@ -423,8 +399,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrsharecount_csharp">
 <a href="#hbrsharecount_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
@@ -433,8 +408,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrsharelevel_csharp">
 <a href="#hbrsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
@@ -443,8 +417,7 @@ if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -454,8 +427,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreotherpvlanmappings_csharp">
 <a href="#ignoreotherpvlanmappings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
@@ -465,8 +437,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingaveragebandwidth_csharp">
 <a href="#ingressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -476,8 +447,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingburstsize_csharp">
 <a href="#ingressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -487,8 +457,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingenabled_csharp">
 <a href="#ingressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
@@ -498,8 +467,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingpeakbandwidth_csharp">
 <a href="#ingressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -509,8 +477,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -521,8 +488,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsimaximummbit_csharp">
 <a href="#iscsimaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
@@ -531,8 +497,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsireservationmbit_csharp">
 <a href="#iscsireservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
@@ -541,8 +506,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsisharecount_csharp">
 <a href="#iscsisharecount_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
@@ -551,8 +515,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsisharelevel_csharp">
 <a href="#iscsisharelevel_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
@@ -561,8 +524,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpapiversion_csharp">
 <a href="#lacpapiversion_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
@@ -573,8 +535,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpenabled_csharp">
 <a href="#lacpenabled_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
@@ -584,8 +545,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpmode_csharp">
 <a href="#lacpmode_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
@@ -594,8 +554,7 @@ applies to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkdiscoveryoperation_csharp">
 <a href="#linkdiscoveryoperation_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
@@ -605,8 +564,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkdiscoveryprotocol_csharp">
 <a href="#linkdiscoveryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
@@ -616,8 +574,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementmaximummbit_csharp">
 <a href="#managementmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
@@ -626,8 +583,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementreservationmbit_csharp">
 <a href="#managementreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
@@ -636,8 +592,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementsharecount_csharp">
 <a href="#managementsharecount_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
@@ -646,8 +601,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementsharelevel_csharp">
 <a href="#managementsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
@@ -656,8 +610,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmtu_csharp">
 <a href="#maxmtu_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
@@ -667,8 +620,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multicastfilteringmode_csharp">
 <a href="#multicastfilteringmode_csharp" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
@@ -678,8 +630,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -688,8 +639,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowactiveflowtimeout_csharp">
 <a href="#netflowactiveflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
@@ -700,8 +650,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowcollectoripaddress_csharp">
 <a href="#netflowcollectoripaddress_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
@@ -712,8 +661,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowcollectorport_csharp">
 <a href="#netflowcollectorport_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
@@ -723,8 +671,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowenabled_csharp">
 <a href="#netflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
@@ -734,8 +681,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowidleflowtimeout_csharp">
 <a href="#netflowidleflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
@@ -746,8 +692,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowinternalflowsonly_csharp">
 <a href="#netflowinternalflowsonly_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
@@ -758,8 +703,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowobservationdomainid_csharp">
 <a href="#netflowobservationdomainid_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
@@ -769,8 +713,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowsamplingrate_csharp">
 <a href="#netflowsamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
@@ -782,8 +725,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkresourcecontrolenabled_csharp">
 <a href="#networkresourcecontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
@@ -793,8 +735,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkresourcecontrolversion_csharp">
 <a href="#networkresourcecontrolversion_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
@@ -804,8 +745,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsmaximummbit_csharp">
 <a href="#nfsmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
@@ -814,8 +754,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsreservationmbit_csharp">
 <a href="#nfsreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
@@ -824,8 +763,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfssharecount_csharp">
 <a href="#nfssharecount_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
@@ -834,8 +772,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfssharelevel_csharp">
 <a href="#nfssharelevel_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
@@ -844,8 +781,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyswitches_csharp">
 <a href="#notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
@@ -855,8 +791,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portprivatesecondaryvlanid_csharp">
 <a href="#portprivatesecondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
@@ -866,8 +801,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pvlanmappings_csharp">
 <a href="#pvlanmappings_csharp" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Mappings</a>
@@ -877,8 +811,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standbyuplinks_csharp">
 <a href="#standbyuplinks_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
@@ -890,8 +823,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -900,8 +832,7 @@ here for more details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamingpolicy_csharp">
 <a href="#teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
@@ -912,8 +843,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="txuplink_csharp">
 <a href="#txuplink_csharp" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
@@ -923,8 +853,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uplinks_csharp">
 <a href="#uplinks_csharp" style="color: inherit; text-decoration: inherit;">Uplinks</a>
@@ -937,8 +866,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpmaximummbit_csharp">
 <a href="#vdpmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
@@ -947,8 +875,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpreservationmbit_csharp">
 <a href="#vdpreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
@@ -957,8 +884,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpsharecount_csharp">
 <a href="#vdpsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
@@ -967,8 +893,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpsharelevel_csharp">
 <a href="#vdpsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
@@ -977,8 +902,7 @@ use this option.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -990,8 +914,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinemaximummbit_csharp">
 <a href="#virtualmachinemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
@@ -1000,8 +923,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinereservationmbit_csharp">
 <a href="#virtualmachinereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
@@ -1010,8 +932,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesharecount_csharp">
 <a href="#virtualmachinesharecount_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
@@ -1020,8 +941,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesharelevel_csharp">
 <a href="#virtualmachinesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
@@ -1030,8 +950,7 @@ downgraded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlanid_csharp">
 <a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -1040,8 +959,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlanranges_csharp">
 <a href="#vlanranges_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
@@ -1053,8 +971,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionmaximummbit_csharp">
 <a href="#vmotionmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
@@ -1063,8 +980,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionreservationmbit_csharp">
 <a href="#vmotionreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
@@ -1073,8 +989,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionsharecount_csharp">
 <a href="#vmotionsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
@@ -1083,8 +998,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionsharelevel_csharp">
 <a href="#vmotionsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
@@ -1093,8 +1007,7 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanmaximummbit_csharp">
 <a href="#vsanmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
@@ -1103,8 +1016,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanreservationmbit_csharp">
 <a href="#vsanreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
@@ -1113,8 +1025,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsansharecount_csharp">
 <a href="#vsansharecount_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
@@ -1123,8 +1034,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsansharelevel_csharp">
 <a href="#vsansharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
@@ -1133,13 +1043,11 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -1149,8 +1057,7 @@ below:
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activeuplinks_go">
 <a href="#activeuplinks_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
@@ -1162,8 +1069,7 @@ virtual switch will be created. Forces a new resource if changed.
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforgedtransmits_go">
 <a href="#allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
@@ -1174,8 +1080,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmacchanges_go">
 <a href="#allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
@@ -1185,8 +1090,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpromiscuous_go">
 <a href="#allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
@@ -1196,8 +1100,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockallports_go">
 <a href="#blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
@@ -1208,8 +1111,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkbeacon_go">
 <a href="#checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
@@ -1219,8 +1121,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactdetail_go">
 <a href="#contactdetail_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
@@ -1230,8 +1131,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactname_go">
 <a href="#contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -1241,8 +1141,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1252,8 +1151,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1262,8 +1160,7 @@ value strings to set for virtual switch.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directpathgen2allowed_go">
 <a href="#directpathgen2allowed_go" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
@@ -1273,8 +1170,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingaveragebandwidth_go">
 <a href="#egressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -1284,8 +1180,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingburstsize_go">
 <a href="#egressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -1295,8 +1190,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingenabled_go">
 <a href="#egressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
@@ -1306,8 +1200,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingpeakbandwidth_go">
 <a href="#egressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -1317,8 +1210,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failback_go">
 <a href="#failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
@@ -1328,8 +1220,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancemaximummbit_go">
 <a href="#faulttolerancemaximummbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
@@ -1338,8 +1229,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancereservationmbit_go">
 <a href="#faulttolerancereservationmbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
@@ -1348,8 +1238,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancesharecount_go">
 <a href="#faulttolerancesharecount_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
@@ -1358,8 +1247,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancesharelevel_go">
 <a href="#faulttolerancesharelevel_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
@@ -1368,8 +1256,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1379,8 +1266,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrmaximummbit_go">
 <a href="#hbrmaximummbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
@@ -1389,8 +1275,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrreservationmbit_go">
 <a href="#hbrreservationmbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
@@ -1399,8 +1284,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrsharecount_go">
 <a href="#hbrsharecount_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
@@ -1409,8 +1293,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrsharelevel_go">
 <a href="#hbrsharelevel_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
@@ -1419,8 +1302,7 @@ if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -1430,8 +1312,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreotherpvlanmappings_go">
 <a href="#ignoreotherpvlanmappings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
@@ -1441,8 +1322,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingaveragebandwidth_go">
 <a href="#ingressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -1452,8 +1332,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingburstsize_go">
 <a href="#ingressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -1463,8 +1342,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingenabled_go">
 <a href="#ingressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
@@ -1474,8 +1352,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingpeakbandwidth_go">
 <a href="#ingressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -1485,8 +1362,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -1497,8 +1373,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsimaximummbit_go">
 <a href="#iscsimaximummbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
@@ -1507,8 +1382,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsireservationmbit_go">
 <a href="#iscsireservationmbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
@@ -1517,8 +1391,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsisharecount_go">
 <a href="#iscsisharecount_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
@@ -1527,8 +1400,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsisharelevel_go">
 <a href="#iscsisharelevel_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
@@ -1537,8 +1409,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpapiversion_go">
 <a href="#lacpapiversion_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
@@ -1549,8 +1420,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpenabled_go">
 <a href="#lacpenabled_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
@@ -1560,8 +1430,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpmode_go">
 <a href="#lacpmode_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
@@ -1570,8 +1439,7 @@ applies to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkdiscoveryoperation_go">
 <a href="#linkdiscoveryoperation_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
@@ -1581,8 +1449,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkdiscoveryprotocol_go">
 <a href="#linkdiscoveryprotocol_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
@@ -1592,8 +1459,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementmaximummbit_go">
 <a href="#managementmaximummbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
@@ -1602,8 +1468,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementreservationmbit_go">
 <a href="#managementreservationmbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
@@ -1612,8 +1477,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementsharecount_go">
 <a href="#managementsharecount_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
@@ -1622,8 +1486,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementsharelevel_go">
 <a href="#managementsharelevel_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
@@ -1632,8 +1495,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmtu_go">
 <a href="#maxmtu_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
@@ -1643,8 +1505,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multicastfilteringmode_go">
 <a href="#multicastfilteringmode_go" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
@@ -1654,8 +1515,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1664,8 +1524,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowactiveflowtimeout_go">
 <a href="#netflowactiveflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
@@ -1676,8 +1535,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowcollectoripaddress_go">
 <a href="#netflowcollectoripaddress_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
@@ -1688,8 +1546,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowcollectorport_go">
 <a href="#netflowcollectorport_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
@@ -1699,8 +1556,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowenabled_go">
 <a href="#netflowenabled_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
@@ -1710,8 +1566,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowidleflowtimeout_go">
 <a href="#netflowidleflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
@@ -1722,8 +1577,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowinternalflowsonly_go">
 <a href="#netflowinternalflowsonly_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
@@ -1734,8 +1588,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowobservationdomainid_go">
 <a href="#netflowobservationdomainid_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
@@ -1745,8 +1598,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowsamplingrate_go">
 <a href="#netflowsamplingrate_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
@@ -1758,8 +1610,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkresourcecontrolenabled_go">
 <a href="#networkresourcecontrolenabled_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
@@ -1769,8 +1620,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkresourcecontrolversion_go">
 <a href="#networkresourcecontrolversion_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
@@ -1780,8 +1630,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsmaximummbit_go">
 <a href="#nfsmaximummbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
@@ -1790,8 +1639,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsreservationmbit_go">
 <a href="#nfsreservationmbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
@@ -1800,8 +1648,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfssharecount_go">
 <a href="#nfssharecount_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
@@ -1810,8 +1657,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfssharelevel_go">
 <a href="#nfssharelevel_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
@@ -1820,8 +1666,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyswitches_go">
 <a href="#notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
@@ -1831,8 +1676,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portprivatesecondaryvlanid_go">
 <a href="#portprivatesecondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
@@ -1842,8 +1686,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pvlanmappings_go">
 <a href="#pvlanmappings_go" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Mappings</a>
@@ -1853,8 +1696,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standbyuplinks_go">
 <a href="#standbyuplinks_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
@@ -1866,8 +1708,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1876,8 +1717,7 @@ here for more details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamingpolicy_go">
 <a href="#teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
@@ -1888,8 +1728,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="txuplink_go">
 <a href="#txuplink_go" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
@@ -1899,8 +1738,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uplinks_go">
 <a href="#uplinks_go" style="color: inherit; text-decoration: inherit;">Uplinks</a>
@@ -1913,8 +1751,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpmaximummbit_go">
 <a href="#vdpmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
@@ -1923,8 +1760,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpreservationmbit_go">
 <a href="#vdpreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
@@ -1933,8 +1769,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpsharecount_go">
 <a href="#vdpsharecount_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
@@ -1943,8 +1778,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpsharelevel_go">
 <a href="#vdpsharelevel_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
@@ -1953,8 +1787,7 @@ use this option.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1966,8 +1799,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinemaximummbit_go">
 <a href="#virtualmachinemaximummbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
@@ -1976,8 +1808,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinereservationmbit_go">
 <a href="#virtualmachinereservationmbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
@@ -1986,8 +1817,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesharecount_go">
 <a href="#virtualmachinesharecount_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
@@ -1996,8 +1826,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesharelevel_go">
 <a href="#virtualmachinesharelevel_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
@@ -2006,8 +1835,7 @@ downgraded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlanid_go">
 <a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -2016,8 +1844,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlanranges_go">
 <a href="#vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
@@ -2029,8 +1856,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionmaximummbit_go">
 <a href="#vmotionmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
@@ -2039,8 +1865,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionreservationmbit_go">
 <a href="#vmotionreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
@@ -2049,8 +1874,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionsharecount_go">
 <a href="#vmotionsharecount_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
@@ -2059,8 +1883,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionsharelevel_go">
 <a href="#vmotionsharelevel_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
@@ -2069,8 +1892,7 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanmaximummbit_go">
 <a href="#vsanmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
@@ -2079,8 +1901,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanreservationmbit_go">
 <a href="#vsanreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
@@ -2089,8 +1910,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsansharecount_go">
 <a href="#vsansharecount_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
@@ -2099,8 +1919,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsansharelevel_go">
 <a href="#vsansharelevel_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
@@ -2109,13 +1928,11 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -2125,8 +1942,7 @@ below:
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activeuplinks_nodejs">
 <a href="#activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
@@ -2138,8 +1954,7 @@ virtual switch will be created. Forces a new resource if changed.
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowforgedtransmits_nodejs">
 <a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
@@ -2150,8 +1965,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmacchanges_nodejs">
 <a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
@@ -2161,8 +1975,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpromiscuous_nodejs">
 <a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
@@ -2172,8 +1985,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockallports_nodejs">
 <a href="#blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
@@ -2184,8 +1996,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkbeacon_nodejs">
 <a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
@@ -2195,8 +2006,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactdetail_nodejs">
 <a href="#contactdetail_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Detail</a>
@@ -2206,8 +2016,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactname_nodejs">
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
@@ -2217,8 +2026,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -2228,8 +2036,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2238,8 +2045,7 @@ value strings to set for virtual switch.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directpathgen2allowed_nodejs">
 <a href="#directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
@@ -2249,8 +2055,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingaveragebandwidth_nodejs">
 <a href="#egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -2260,8 +2065,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingburstsize_nodejs">
 <a href="#egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -2271,8 +2075,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingenabled_nodejs">
 <a href="#egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
@@ -2282,8 +2085,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egressshapingpeakbandwidth_nodejs">
 <a href="#egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -2293,8 +2095,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failback_nodejs">
 <a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
@@ -2304,8 +2105,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancemaximummbit_nodejs">
 <a href="#faulttolerancemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Maximum<wbr>Mbit</a>
@@ -2314,8 +2114,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancereservationmbit_nodejs">
 <a href="#faulttolerancereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Reservation<wbr>Mbit</a>
@@ -2324,8 +2123,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancesharecount_nodejs">
 <a href="#faulttolerancesharecount_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Count</a>
@@ -2334,8 +2132,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerancesharelevel_nodejs">
 <a href="#faulttolerancesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Level</a>
@@ -2344,8 +2141,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -2355,8 +2151,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrmaximummbit_nodejs">
 <a href="#hbrmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Maximum<wbr>Mbit</a>
@@ -2365,8 +2160,7 @@ if changed.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrreservationmbit_nodejs">
 <a href="#hbrreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Reservation<wbr>Mbit</a>
@@ -2375,8 +2169,7 @@ if changed.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrsharecount_nodejs">
 <a href="#hbrsharecount_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Count</a>
@@ -2385,8 +2178,7 @@ if changed.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbrsharelevel_nodejs">
 <a href="#hbrsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Level</a>
@@ -2395,8 +2187,7 @@ if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -2406,8 +2197,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreotherpvlanmappings_nodejs">
 <a href="#ignoreotherpvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
@@ -2417,8 +2207,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingaveragebandwidth_nodejs">
 <a href="#ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -2428,8 +2217,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingburstsize_nodejs">
 <a href="#ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -2439,8 +2227,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingenabled_nodejs">
 <a href="#ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
@@ -2450,8 +2237,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingressshapingpeakbandwidth_nodejs">
 <a href="#ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -2461,8 +2247,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -2473,8 +2258,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsimaximummbit_nodejs">
 <a href="#iscsimaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Maximum<wbr>Mbit</a>
@@ -2483,8 +2267,7 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsireservationmbit_nodejs">
 <a href="#iscsireservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Reservation<wbr>Mbit</a>
@@ -2493,8 +2276,7 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsisharecount_nodejs">
 <a href="#iscsisharecount_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Count</a>
@@ -2503,8 +2285,7 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsisharelevel_nodejs">
 <a href="#iscsisharelevel_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Level</a>
@@ -2513,8 +2294,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpapiversion_nodejs">
 <a href="#lacpapiversion_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Api<wbr>Version</a>
@@ -2525,8 +2305,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpenabled_nodejs">
 <a href="#lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
@@ -2536,8 +2315,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacpmode_nodejs">
 <a href="#lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
@@ -2546,8 +2324,7 @@ applies to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkdiscoveryoperation_nodejs">
 <a href="#linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
@@ -2557,8 +2334,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkdiscoveryprotocol_nodejs">
 <a href="#linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
@@ -2568,8 +2344,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementmaximummbit_nodejs">
 <a href="#managementmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Maximum<wbr>Mbit</a>
@@ -2578,8 +2353,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementreservationmbit_nodejs">
 <a href="#managementreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Reservation<wbr>Mbit</a>
@@ -2588,8 +2362,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementsharecount_nodejs">
 <a href="#managementsharecount_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Count</a>
@@ -2598,8 +2371,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementsharelevel_nodejs">
 <a href="#managementsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Level</a>
@@ -2608,8 +2380,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmtu_nodejs">
 <a href="#maxmtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mtu</a>
@@ -2619,8 +2390,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multicastfilteringmode_nodejs">
 <a href="#multicastfilteringmode_nodejs" style="color: inherit; text-decoration: inherit;">multicast<wbr>Filtering<wbr>Mode</a>
@@ -2630,8 +2400,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2640,8 +2409,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowactiveflowtimeout_nodejs">
 <a href="#netflowactiveflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
@@ -2652,8 +2420,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowcollectoripaddress_nodejs">
 <a href="#netflowcollectoripaddress_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
@@ -2664,8 +2431,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowcollectorport_nodejs">
 <a href="#netflowcollectorport_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Port</a>
@@ -2675,8 +2441,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowenabled_nodejs">
 <a href="#netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
@@ -2686,8 +2451,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowidleflowtimeout_nodejs">
 <a href="#netflowidleflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
@@ -2698,8 +2462,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowinternalflowsonly_nodejs">
 <a href="#netflowinternalflowsonly_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
@@ -2710,8 +2473,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowobservationdomainid_nodejs">
 <a href="#netflowobservationdomainid_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
@@ -2721,8 +2483,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflowsamplingrate_nodejs">
 <a href="#netflowsamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Sampling<wbr>Rate</a>
@@ -2734,8 +2495,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkresourcecontrolenabled_nodejs">
 <a href="#networkresourcecontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Enabled</a>
@@ -2745,8 +2505,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkresourcecontrolversion_nodejs">
 <a href="#networkresourcecontrolversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Version</a>
@@ -2756,8 +2515,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsmaximummbit_nodejs">
 <a href="#nfsmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Maximum<wbr>Mbit</a>
@@ -2766,8 +2524,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsreservationmbit_nodejs">
 <a href="#nfsreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Reservation<wbr>Mbit</a>
@@ -2776,8 +2533,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfssharecount_nodejs">
 <a href="#nfssharecount_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Count</a>
@@ -2786,8 +2542,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfssharelevel_nodejs">
 <a href="#nfssharelevel_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Level</a>
@@ -2796,8 +2551,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyswitches_nodejs">
 <a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
@@ -2807,8 +2561,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portprivatesecondaryvlanid_nodejs">
 <a href="#portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
@@ -2818,8 +2571,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pvlanmappings_nodejs">
 <a href="#pvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">pvlan<wbr>Mappings</a>
@@ -2829,8 +2581,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standbyuplinks_nodejs">
 <a href="#standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
@@ -2842,8 +2593,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2852,8 +2602,7 @@ here for more details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamingpolicy_nodejs">
 <a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
@@ -2864,8 +2613,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="txuplink_nodejs">
 <a href="#txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
@@ -2875,8 +2623,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uplinks_nodejs">
 <a href="#uplinks_nodejs" style="color: inherit; text-decoration: inherit;">uplinks</a>
@@ -2889,8 +2636,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpmaximummbit_nodejs">
 <a href="#vdpmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Maximum<wbr>Mbit</a>
@@ -2899,8 +2645,7 @@ use this option.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpreservationmbit_nodejs">
 <a href="#vdpreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Reservation<wbr>Mbit</a>
@@ -2909,8 +2654,7 @@ use this option.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpsharecount_nodejs">
 <a href="#vdpsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Count</a>
@@ -2919,8 +2663,7 @@ use this option.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdpsharelevel_nodejs">
 <a href="#vdpsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Level</a>
@@ -2929,8 +2672,7 @@ use this option.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2942,8 +2684,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinemaximummbit_nodejs">
 <a href="#virtualmachinemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Maximum<wbr>Mbit</a>
@@ -2952,8 +2693,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinereservationmbit_nodejs">
 <a href="#virtualmachinereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Reservation<wbr>Mbit</a>
@@ -2962,8 +2702,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesharecount_nodejs">
 <a href="#virtualmachinesharecount_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Count</a>
@@ -2972,8 +2711,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesharelevel_nodejs">
 <a href="#virtualmachinesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Level</a>
@@ -2982,8 +2720,7 @@ downgraded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlanid_nodejs">
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
@@ -2992,8 +2729,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlanranges_nodejs">
 <a href="#vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
@@ -3005,8 +2741,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionmaximummbit_nodejs">
 <a href="#vmotionmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Maximum<wbr>Mbit</a>
@@ -3015,8 +2750,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionreservationmbit_nodejs">
 <a href="#vmotionreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Reservation<wbr>Mbit</a>
@@ -3025,8 +2759,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionsharecount_nodejs">
 <a href="#vmotionsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Count</a>
@@ -3035,8 +2768,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotionsharelevel_nodejs">
 <a href="#vmotionsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Level</a>
@@ -3045,8 +2777,7 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanmaximummbit_nodejs">
 <a href="#vsanmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Maximum<wbr>Mbit</a>
@@ -3055,8 +2786,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanreservationmbit_nodejs">
 <a href="#vsanreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Reservation<wbr>Mbit</a>
@@ -3065,8 +2795,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsansharecount_nodejs">
 <a href="#vsansharecount_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Count</a>
@@ -3075,8 +2804,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsansharelevel_nodejs">
 <a href="#vsansharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Level</a>
@@ -3085,13 +2813,11 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -3101,8 +2827,7 @@ below:
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_uplinks_python">
 <a href="#active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
@@ -3114,8 +2839,7 @@ virtual switch will be created. Forces a new resource if changed.
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_forged_transmits_python">
 <a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
@@ -3126,8 +2850,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_mac_changes_python">
 <a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
@@ -3137,8 +2860,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_promiscuous_python">
 <a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
@@ -3148,8 +2870,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_all_ports_python">
 <a href="#block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
@@ -3160,8 +2881,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_beacon_python">
 <a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
@@ -3171,8 +2891,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contact_detail_python">
 <a href="#contact_detail_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>detail</a>
@@ -3182,8 +2901,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contact_name_python">
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
@@ -3193,8 +2911,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -3204,8 +2921,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3214,8 +2930,7 @@ value strings to set for virtual switch.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="directpath_gen2_allowed_python">
 <a href="#directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
@@ -3225,8 +2940,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_average_bandwidth_python">
 <a href="#egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
@@ -3236,8 +2950,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_burst_size_python">
 <a href="#egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
@@ -3247,8 +2960,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_enabled_python">
 <a href="#egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
@@ -3258,8 +2970,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_peak_bandwidth_python">
 <a href="#egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
@@ -3269,8 +2980,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failback_python">
 <a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
@@ -3280,8 +2990,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerance_maximum_mbit_python">
 <a href="#faulttolerance_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>maximum_<wbr>mbit</a>
@@ -3290,8 +2999,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerance_reservation_mbit_python">
 <a href="#faulttolerance_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>reservation_<wbr>mbit</a>
@@ -3300,8 +3008,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerance_share_count_python">
 <a href="#faulttolerance_share_count_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>count</a>
@@ -3310,8 +3017,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faulttolerance_share_level_python">
 <a href="#faulttolerance_share_level_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>level</a>
@@ -3320,8 +3026,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -3331,8 +3036,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbr_maximum_mbit_python">
 <a href="#hbr_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>maximum_<wbr>mbit</a>
@@ -3341,8 +3045,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbr_reservation_mbit_python">
 <a href="#hbr_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>reservation_<wbr>mbit</a>
@@ -3351,8 +3054,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbr_share_count_python">
 <a href="#hbr_share_count_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>count</a>
@@ -3361,8 +3063,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hbr_share_level_python">
 <a href="#hbr_share_level_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>level</a>
@@ -3371,8 +3072,7 @@ if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -3382,8 +3082,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_other_pvlan_mappings_python">
 <a href="#ignore_other_pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>other_<wbr>pvlan_<wbr>mappings</a>
@@ -3393,8 +3092,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_average_bandwidth_python">
 <a href="#ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
@@ -3404,8 +3102,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_burst_size_python">
 <a href="#ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
@@ -3415,8 +3112,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_enabled_python">
 <a href="#ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
@@ -3426,8 +3122,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_peak_bandwidth_python">
 <a href="#ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
@@ -3437,8 +3132,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -3449,8 +3143,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsi_maximum_mbit_python">
 <a href="#iscsi_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>maximum_<wbr>mbit</a>
@@ -3459,8 +3152,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsi_reservation_mbit_python">
 <a href="#iscsi_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>reservation_<wbr>mbit</a>
@@ -3469,8 +3161,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsi_share_count_python">
 <a href="#iscsi_share_count_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>count</a>
@@ -3479,8 +3170,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscsi_share_level_python">
 <a href="#iscsi_share_level_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>level</a>
@@ -3489,8 +3179,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacp_api_version_python">
 <a href="#lacp_api_version_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>api_<wbr>version</a>
@@ -3501,8 +3190,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacp_enabled_python">
 <a href="#lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
@@ -3512,8 +3200,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lacp_mode_python">
 <a href="#lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
@@ -3522,8 +3209,7 @@ applies to.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_discovery_operation_python">
 <a href="#link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
@@ -3533,8 +3219,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_discovery_protocol_python">
 <a href="#link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
@@ -3544,8 +3229,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_maximum_mbit_python">
 <a href="#management_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>maximum_<wbr>mbit</a>
@@ -3554,8 +3238,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_reservation_mbit_python">
 <a href="#management_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>reservation_<wbr>mbit</a>
@@ -3564,8 +3247,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_share_count_python">
 <a href="#management_share_count_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>count</a>
@@ -3574,8 +3256,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_share_level_python">
 <a href="#management_share_level_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>level</a>
@@ -3584,8 +3265,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_mtu_python">
 <a href="#max_mtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mtu</a>
@@ -3595,8 +3275,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multicast_filtering_mode_python">
 <a href="#multicast_filtering_mode_python" style="color: inherit; text-decoration: inherit;">multicast_<wbr>filtering_<wbr>mode</a>
@@ -3606,8 +3285,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3616,8 +3294,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_active_flow_timeout_python">
 <a href="#netflow_active_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>active_<wbr>flow_<wbr>timeout</a>
@@ -3628,8 +3305,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_collector_ip_address_python">
 <a href="#netflow_collector_ip_address_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>ip_<wbr>address</a>
@@ -3640,8 +3316,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_collector_port_python">
 <a href="#netflow_collector_port_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>port</a>
@@ -3651,8 +3326,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_enabled_python">
 <a href="#netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
@@ -3662,8 +3336,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_idle_flow_timeout_python">
 <a href="#netflow_idle_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>idle_<wbr>flow_<wbr>timeout</a>
@@ -3674,8 +3347,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_internal_flows_only_python">
 <a href="#netflow_internal_flows_only_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>internal_<wbr>flows_<wbr>only</a>
@@ -3686,8 +3358,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_observation_domain_id_python">
 <a href="#netflow_observation_domain_id_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>observation_<wbr>domain_<wbr>id</a>
@@ -3697,8 +3368,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netflow_sampling_rate_python">
 <a href="#netflow_sampling_rate_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>sampling_<wbr>rate</a>
@@ -3710,8 +3380,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_resource_control_enabled_python">
 <a href="#network_resource_control_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>enabled</a>
@@ -3721,8 +3390,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_resource_control_version_python">
 <a href="#network_resource_control_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>version</a>
@@ -3732,8 +3400,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_maximum_mbit_python">
 <a href="#nfs_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>maximum_<wbr>mbit</a>
@@ -3742,8 +3409,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_reservation_mbit_python">
 <a href="#nfs_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>reservation_<wbr>mbit</a>
@@ -3752,8 +3418,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_share_count_python">
 <a href="#nfs_share_count_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>count</a>
@@ -3762,8 +3427,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_share_level_python">
 <a href="#nfs_share_level_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>level</a>
@@ -3772,8 +3436,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_switches_python">
 <a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
@@ -3783,8 +3446,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_private_secondary_vlan_id_python">
 <a href="#port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
@@ -3794,8 +3456,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pvlan_mappings_python">
 <a href="#pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">pvlan_<wbr>mappings</a>
@@ -3805,8 +3466,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standby_uplinks_python">
 <a href="#standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
@@ -3818,8 +3478,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3828,8 +3487,7 @@ here for more details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teaming_policy_python">
 <a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
@@ -3840,8 +3498,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tx_uplink_python">
 <a href="#tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
@@ -3851,8 +3508,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uplinks_python">
 <a href="#uplinks_python" style="color: inherit; text-decoration: inherit;">uplinks</a>
@@ -3865,8 +3521,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdp_maximum_mbit_python">
 <a href="#vdp_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>maximum_<wbr>mbit</a>
@@ -3875,8 +3530,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdp_reservation_mbit_python">
 <a href="#vdp_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>reservation_<wbr>mbit</a>
@@ -3885,8 +3539,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdp_share_count_python">
 <a href="#vdp_share_count_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>count</a>
@@ -3895,8 +3548,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vdp_share_level_python">
 <a href="#vdp_share_level_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>level</a>
@@ -3905,8 +3557,7 @@ use this option.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3918,8 +3569,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_maximum_mbit_python">
 <a href="#virtualmachine_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>maximum_<wbr>mbit</a>
@@ -3928,8 +3578,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_reservation_mbit_python">
 <a href="#virtualmachine_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>reservation_<wbr>mbit</a>
@@ -3938,8 +3587,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_share_count_python">
 <a href="#virtualmachine_share_count_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>count</a>
@@ -3948,8 +3596,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_share_level_python">
 <a href="#virtualmachine_share_level_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>level</a>
@@ -3958,8 +3605,7 @@ downgraded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlan_id_python">
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
@@ -3968,8 +3614,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlan_ranges_python">
 <a href="#vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
@@ -3981,8 +3626,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotion_maximum_mbit_python">
 <a href="#vmotion_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>maximum_<wbr>mbit</a>
@@ -3991,8 +3635,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotion_reservation_mbit_python">
 <a href="#vmotion_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>reservation_<wbr>mbit</a>
@@ -4001,8 +3644,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotion_share_count_python">
 <a href="#vmotion_share_count_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>count</a>
@@ -4011,8 +3653,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmotion_share_level_python">
 <a href="#vmotion_share_level_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>level</a>
@@ -4021,8 +3662,7 @@ below:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsan_maximum_mbit_python">
 <a href="#vsan_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>maximum_<wbr>mbit</a>
@@ -4031,8 +3671,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsan_reservation_mbit_python">
 <a href="#vsan_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>reservation_<wbr>mbit</a>
@@ -4041,8 +3680,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsan_share_count_python">
 <a href="#vsan_share_count_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>count</a>
@@ -4051,8 +3689,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsan_share_level_python">
 <a href="#vsan_share_level_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>level</a>
@@ -4061,8 +3698,7 @@ below:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4073,8 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configversion_csharp">
 <a href="#configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
@@ -4083,8 +3718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4092,13 +3726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configversion_go">
 <a href="#configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
@@ -4107,8 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4116,13 +3747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configversion_nodejs">
 <a href="#configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
@@ -4131,8 +3760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4140,13 +3768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="config_version_python">
 <a href="#config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
@@ -4155,8 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4164,8 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4292,8 +3916,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activeuplinks_csharp">
 <a href="#state_activeuplinks_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
@@ -4305,8 +3928,7 @@ The following state arguments are supported:
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowforgedtransmits_csharp">
 <a href="#state_allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
@@ -4317,8 +3939,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmacchanges_csharp">
 <a href="#state_allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
@@ -4328,8 +3949,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowpromiscuous_csharp">
 <a href="#state_allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
@@ -4339,8 +3959,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_csharp">
 <a href="#state_blockallports_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
@@ -4351,8 +3970,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkbeacon_csharp">
 <a href="#state_checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
@@ -4362,8 +3980,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configversion_csharp">
 <a href="#state_configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
@@ -4372,8 +3989,7 @@ to detect NIC failure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contactdetail_csharp">
 <a href="#state_contactdetail_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
@@ -4383,8 +3999,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contactname_csharp">
 <a href="#state_contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -4394,8 +4009,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -4405,8 +4019,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_csharp">
 <a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -4416,8 +4029,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4426,8 +4038,7 @@ virtual switch will be created. Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directpathgen2allowed_csharp">
 <a href="#state_directpathgen2allowed_csharp" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
@@ -4437,8 +4048,7 @@ virtual switch will be created. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingaveragebandwidth_csharp">
 <a href="#state_egressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -4448,8 +4058,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingburstsize_csharp">
 <a href="#state_egressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -4459,8 +4068,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingenabled_csharp">
 <a href="#state_egressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
@@ -4470,8 +4078,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingpeakbandwidth_csharp">
 <a href="#state_egressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -4481,8 +4088,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failback_csharp">
 <a href="#state_failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
@@ -4492,8 +4098,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancemaximummbit_csharp">
 <a href="#state_faulttolerancemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
@@ -4502,8 +4107,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancereservationmbit_csharp">
 <a href="#state_faulttolerancereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
@@ -4512,8 +4116,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancesharecount_csharp">
 <a href="#state_faulttolerancesharecount_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
@@ -4522,8 +4125,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancesharelevel_csharp">
 <a href="#state_faulttolerancesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
@@ -4532,8 +4134,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -4543,8 +4144,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrmaximummbit_csharp">
 <a href="#state_hbrmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
@@ -4553,8 +4153,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrreservationmbit_csharp">
 <a href="#state_hbrreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
@@ -4563,8 +4162,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrsharecount_csharp">
 <a href="#state_hbrsharecount_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
@@ -4573,8 +4171,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrsharelevel_csharp">
 <a href="#state_hbrsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
@@ -4583,8 +4180,7 @@ if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_csharp">
 <a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -4594,8 +4190,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreotherpvlanmappings_csharp">
 <a href="#state_ignoreotherpvlanmappings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
@@ -4605,8 +4200,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingaveragebandwidth_csharp">
 <a href="#state_ingressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -4616,8 +4210,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingburstsize_csharp">
 <a href="#state_ingressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -4627,8 +4220,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingenabled_csharp">
 <a href="#state_ingressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
@@ -4638,8 +4230,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingpeakbandwidth_csharp">
 <a href="#state_ingressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -4649,8 +4240,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_csharp">
 <a href="#state_ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -4661,8 +4251,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsimaximummbit_csharp">
 <a href="#state_iscsimaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
@@ -4671,8 +4260,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsireservationmbit_csharp">
 <a href="#state_iscsireservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
@@ -4681,8 +4269,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsisharecount_csharp">
 <a href="#state_iscsisharecount_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
@@ -4691,8 +4278,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsisharelevel_csharp">
 <a href="#state_iscsisharelevel_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
@@ -4701,8 +4287,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpapiversion_csharp">
 <a href="#state_lacpapiversion_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
@@ -4713,8 +4298,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpenabled_csharp">
 <a href="#state_lacpenabled_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
@@ -4724,8 +4308,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpmode_csharp">
 <a href="#state_lacpmode_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
@@ -4734,8 +4317,7 @@ applies to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkdiscoveryoperation_csharp">
 <a href="#state_linkdiscoveryoperation_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
@@ -4745,8 +4327,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkdiscoveryprotocol_csharp">
 <a href="#state_linkdiscoveryprotocol_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
@@ -4756,8 +4337,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementmaximummbit_csharp">
 <a href="#state_managementmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
@@ -4766,8 +4346,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementreservationmbit_csharp">
 <a href="#state_managementreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
@@ -4776,8 +4355,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsharecount_csharp">
 <a href="#state_managementsharecount_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
@@ -4786,8 +4364,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsharelevel_csharp">
 <a href="#state_managementsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
@@ -4796,8 +4373,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmtu_csharp">
 <a href="#state_maxmtu_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
@@ -4807,8 +4383,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multicastfilteringmode_csharp">
 <a href="#state_multicastfilteringmode_csharp" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
@@ -4818,8 +4393,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4828,8 +4402,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowactiveflowtimeout_csharp">
 <a href="#state_netflowactiveflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
@@ -4840,8 +4413,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowcollectoripaddress_csharp">
 <a href="#state_netflowcollectoripaddress_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
@@ -4852,8 +4424,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowcollectorport_csharp">
 <a href="#state_netflowcollectorport_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
@@ -4863,8 +4434,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowenabled_csharp">
 <a href="#state_netflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
@@ -4874,8 +4444,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowidleflowtimeout_csharp">
 <a href="#state_netflowidleflowtimeout_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
@@ -4886,8 +4455,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowinternalflowsonly_csharp">
 <a href="#state_netflowinternalflowsonly_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
@@ -4898,8 +4466,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowobservationdomainid_csharp">
 <a href="#state_netflowobservationdomainid_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
@@ -4909,8 +4476,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowsamplingrate_csharp">
 <a href="#state_netflowsamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
@@ -4922,8 +4488,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcecontrolenabled_csharp">
 <a href="#state_networkresourcecontrolenabled_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
@@ -4933,8 +4498,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcecontrolversion_csharp">
 <a href="#state_networkresourcecontrolversion_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
@@ -4944,8 +4508,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfsmaximummbit_csharp">
 <a href="#state_nfsmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
@@ -4954,8 +4517,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfsreservationmbit_csharp">
 <a href="#state_nfsreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
@@ -4964,8 +4526,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfssharecount_csharp">
 <a href="#state_nfssharecount_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
@@ -4974,8 +4535,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfssharelevel_csharp">
 <a href="#state_nfssharelevel_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
@@ -4984,8 +4544,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyswitches_csharp">
 <a href="#state_notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
@@ -4995,8 +4554,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portprivatesecondaryvlanid_csharp">
 <a href="#state_portprivatesecondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
@@ -5006,8 +4564,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pvlanmappings_csharp">
 <a href="#state_pvlanmappings_csharp" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Mappings</a>
@@ -5017,8 +4574,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_standbyuplinks_csharp">
 <a href="#state_standbyuplinks_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
@@ -5030,8 +4586,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5040,8 +4595,7 @@ here for more details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamingpolicy_csharp">
 <a href="#state_teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
@@ -5052,8 +4606,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_txuplink_csharp">
 <a href="#state_txuplink_csharp" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
@@ -5063,8 +4616,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uplinks_csharp">
 <a href="#state_uplinks_csharp" style="color: inherit; text-decoration: inherit;">Uplinks</a>
@@ -5077,8 +4629,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpmaximummbit_csharp">
 <a href="#state_vdpmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
@@ -5087,8 +4638,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpreservationmbit_csharp">
 <a href="#state_vdpreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
@@ -5097,8 +4647,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpsharecount_csharp">
 <a href="#state_vdpsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
@@ -5107,8 +4656,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpsharelevel_csharp">
 <a href="#state_vdpsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
@@ -5117,8 +4665,7 @@ use this option.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -5130,8 +4677,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinemaximummbit_csharp">
 <a href="#state_virtualmachinemaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
@@ -5140,8 +4686,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinereservationmbit_csharp">
 <a href="#state_virtualmachinereservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
@@ -5150,8 +4695,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinesharecount_csharp">
 <a href="#state_virtualmachinesharecount_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
@@ -5160,8 +4704,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinesharelevel_csharp">
 <a href="#state_virtualmachinesharelevel_csharp" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
@@ -5170,8 +4713,7 @@ downgraded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_csharp">
 <a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -5180,8 +4722,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanranges_csharp">
 <a href="#state_vlanranges_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
@@ -5193,8 +4734,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionmaximummbit_csharp">
 <a href="#state_vmotionmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
@@ -5203,8 +4743,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionreservationmbit_csharp">
 <a href="#state_vmotionreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
@@ -5213,8 +4752,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsharecount_csharp">
 <a href="#state_vmotionsharecount_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
@@ -5223,8 +4761,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsharelevel_csharp">
 <a href="#state_vmotionsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
@@ -5233,8 +4770,7 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanmaximummbit_csharp">
 <a href="#state_vsanmaximummbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
@@ -5243,8 +4779,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanreservationmbit_csharp">
 <a href="#state_vsanreservationmbit_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
@@ -5253,8 +4788,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsansharecount_csharp">
 <a href="#state_vsansharecount_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
@@ -5263,8 +4797,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsansharelevel_csharp">
 <a href="#state_vsansharelevel_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
@@ -5273,13 +4806,11 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activeuplinks_go">
 <a href="#state_activeuplinks_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
@@ -5291,8 +4822,7 @@ below:
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowforgedtransmits_go">
 <a href="#state_allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
@@ -5303,8 +4833,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmacchanges_go">
 <a href="#state_allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
@@ -5314,8 +4843,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowpromiscuous_go">
 <a href="#state_allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
@@ -5325,8 +4853,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_go">
 <a href="#state_blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
@@ -5337,8 +4864,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkbeacon_go">
 <a href="#state_checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
@@ -5348,8 +4874,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configversion_go">
 <a href="#state_configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
@@ -5358,8 +4883,7 @@ to detect NIC failure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contactdetail_go">
 <a href="#state_contactdetail_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Detail</a>
@@ -5369,8 +4893,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contactname_go">
 <a href="#state_contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -5380,8 +4903,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -5391,8 +4913,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_go">
 <a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -5402,8 +4923,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -5412,8 +4932,7 @@ virtual switch will be created. Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directpathgen2allowed_go">
 <a href="#state_directpathgen2allowed_go" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
@@ -5423,8 +4942,7 @@ virtual switch will be created. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingaveragebandwidth_go">
 <a href="#state_egressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -5434,8 +4952,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingburstsize_go">
 <a href="#state_egressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -5445,8 +4962,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingenabled_go">
 <a href="#state_egressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
@@ -5456,8 +4972,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingpeakbandwidth_go">
 <a href="#state_egressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -5467,8 +4982,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failback_go">
 <a href="#state_failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
@@ -5478,8 +4992,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancemaximummbit_go">
 <a href="#state_faulttolerancemaximummbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Maximum<wbr>Mbit</a>
@@ -5488,8 +5001,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancereservationmbit_go">
 <a href="#state_faulttolerancereservationmbit_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Reservation<wbr>Mbit</a>
@@ -5498,8 +5010,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancesharecount_go">
 <a href="#state_faulttolerancesharecount_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Count</a>
@@ -5508,8 +5019,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancesharelevel_go">
 <a href="#state_faulttolerancesharelevel_go" style="color: inherit; text-decoration: inherit;">Faulttolerance<wbr>Share<wbr>Level</a>
@@ -5518,8 +5028,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -5529,8 +5038,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrmaximummbit_go">
 <a href="#state_hbrmaximummbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Maximum<wbr>Mbit</a>
@@ -5539,8 +5047,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrreservationmbit_go">
 <a href="#state_hbrreservationmbit_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Reservation<wbr>Mbit</a>
@@ -5549,8 +5056,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrsharecount_go">
 <a href="#state_hbrsharecount_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Count</a>
@@ -5559,8 +5065,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrsharelevel_go">
 <a href="#state_hbrsharelevel_go" style="color: inherit; text-decoration: inherit;">Hbr<wbr>Share<wbr>Level</a>
@@ -5569,8 +5074,7 @@ if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_go">
 <a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -5580,8 +5084,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreotherpvlanmappings_go">
 <a href="#state_ignoreotherpvlanmappings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
@@ -5591,8 +5094,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingaveragebandwidth_go">
 <a href="#state_ingressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -5602,8 +5104,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingburstsize_go">
 <a href="#state_ingressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -5613,8 +5114,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingenabled_go">
 <a href="#state_ingressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
@@ -5624,8 +5124,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingpeakbandwidth_go">
 <a href="#state_ingressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -5635,8 +5134,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_go">
 <a href="#state_ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -5647,8 +5145,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsimaximummbit_go">
 <a href="#state_iscsimaximummbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Maximum<wbr>Mbit</a>
@@ -5657,8 +5154,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsireservationmbit_go">
 <a href="#state_iscsireservationmbit_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Reservation<wbr>Mbit</a>
@@ -5667,8 +5163,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsisharecount_go">
 <a href="#state_iscsisharecount_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Count</a>
@@ -5677,8 +5172,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsisharelevel_go">
 <a href="#state_iscsisharelevel_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Share<wbr>Level</a>
@@ -5687,8 +5181,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpapiversion_go">
 <a href="#state_lacpapiversion_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Api<wbr>Version</a>
@@ -5699,8 +5192,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpenabled_go">
 <a href="#state_lacpenabled_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
@@ -5710,8 +5202,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpmode_go">
 <a href="#state_lacpmode_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
@@ -5720,8 +5211,7 @@ applies to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkdiscoveryoperation_go">
 <a href="#state_linkdiscoveryoperation_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Operation</a>
@@ -5731,8 +5221,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkdiscoveryprotocol_go">
 <a href="#state_linkdiscoveryprotocol_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Discovery<wbr>Protocol</a>
@@ -5742,8 +5231,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementmaximummbit_go">
 <a href="#state_managementmaximummbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Maximum<wbr>Mbit</a>
@@ -5752,8 +5240,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementreservationmbit_go">
 <a href="#state_managementreservationmbit_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Reservation<wbr>Mbit</a>
@@ -5762,8 +5249,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsharecount_go">
 <a href="#state_managementsharecount_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Count</a>
@@ -5772,8 +5258,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsharelevel_go">
 <a href="#state_managementsharelevel_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Share<wbr>Level</a>
@@ -5782,8 +5267,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmtu_go">
 <a href="#state_maxmtu_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Mtu</a>
@@ -5793,8 +5277,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multicastfilteringmode_go">
 <a href="#state_multicastfilteringmode_go" style="color: inherit; text-decoration: inherit;">Multicast<wbr>Filtering<wbr>Mode</a>
@@ -5804,8 +5287,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5814,8 +5296,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowactiveflowtimeout_go">
 <a href="#state_netflowactiveflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
@@ -5826,8 +5307,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowcollectoripaddress_go">
 <a href="#state_netflowcollectoripaddress_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
@@ -5838,8 +5318,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowcollectorport_go">
 <a href="#state_netflowcollectorport_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Collector<wbr>Port</a>
@@ -5849,8 +5328,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowenabled_go">
 <a href="#state_netflowenabled_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
@@ -5860,8 +5338,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowidleflowtimeout_go">
 <a href="#state_netflowidleflowtimeout_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
@@ -5872,8 +5349,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowinternalflowsonly_go">
 <a href="#state_netflowinternalflowsonly_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
@@ -5884,8 +5360,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowobservationdomainid_go">
 <a href="#state_netflowobservationdomainid_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
@@ -5895,8 +5370,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowsamplingrate_go">
 <a href="#state_netflowsamplingrate_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Sampling<wbr>Rate</a>
@@ -5908,8 +5382,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcecontrolenabled_go">
 <a href="#state_networkresourcecontrolenabled_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Enabled</a>
@@ -5919,8 +5392,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcecontrolversion_go">
 <a href="#state_networkresourcecontrolversion_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Control<wbr>Version</a>
@@ -5930,8 +5402,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfsmaximummbit_go">
 <a href="#state_nfsmaximummbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Maximum<wbr>Mbit</a>
@@ -5940,8 +5411,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfsreservationmbit_go">
 <a href="#state_nfsreservationmbit_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Reservation<wbr>Mbit</a>
@@ -5950,8 +5420,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfssharecount_go">
 <a href="#state_nfssharecount_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Count</a>
@@ -5960,8 +5429,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfssharelevel_go">
 <a href="#state_nfssharelevel_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Share<wbr>Level</a>
@@ -5970,8 +5438,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyswitches_go">
 <a href="#state_notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
@@ -5981,8 +5448,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portprivatesecondaryvlanid_go">
 <a href="#state_portprivatesecondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
@@ -5992,8 +5458,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pvlanmappings_go">
 <a href="#state_pvlanmappings_go" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Mappings</a>
@@ -6003,8 +5468,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_standbyuplinks_go">
 <a href="#state_standbyuplinks_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
@@ -6016,8 +5480,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -6026,8 +5489,7 @@ here for more details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamingpolicy_go">
 <a href="#state_teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
@@ -6038,8 +5500,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_txuplink_go">
 <a href="#state_txuplink_go" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
@@ -6049,8 +5510,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uplinks_go">
 <a href="#state_uplinks_go" style="color: inherit; text-decoration: inherit;">Uplinks</a>
@@ -6063,8 +5523,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpmaximummbit_go">
 <a href="#state_vdpmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Maximum<wbr>Mbit</a>
@@ -6073,8 +5532,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpreservationmbit_go">
 <a href="#state_vdpreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Reservation<wbr>Mbit</a>
@@ -6083,8 +5541,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpsharecount_go">
 <a href="#state_vdpsharecount_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Count</a>
@@ -6093,8 +5550,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpsharelevel_go">
 <a href="#state_vdpsharelevel_go" style="color: inherit; text-decoration: inherit;">Vdp<wbr>Share<wbr>Level</a>
@@ -6103,8 +5559,7 @@ use this option.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6116,8 +5571,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinemaximummbit_go">
 <a href="#state_virtualmachinemaximummbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Maximum<wbr>Mbit</a>
@@ -6126,8 +5580,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinereservationmbit_go">
 <a href="#state_virtualmachinereservationmbit_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Reservation<wbr>Mbit</a>
@@ -6136,8 +5589,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinesharecount_go">
 <a href="#state_virtualmachinesharecount_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Count</a>
@@ -6146,8 +5598,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinesharelevel_go">
 <a href="#state_virtualmachinesharelevel_go" style="color: inherit; text-decoration: inherit;">Virtualmachine<wbr>Share<wbr>Level</a>
@@ -6156,8 +5607,7 @@ downgraded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_go">
 <a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -6166,8 +5616,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanranges_go">
 <a href="#state_vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
@@ -6179,8 +5628,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionmaximummbit_go">
 <a href="#state_vmotionmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Maximum<wbr>Mbit</a>
@@ -6189,8 +5637,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionreservationmbit_go">
 <a href="#state_vmotionreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Reservation<wbr>Mbit</a>
@@ -6199,8 +5646,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsharecount_go">
 <a href="#state_vmotionsharecount_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Count</a>
@@ -6209,8 +5655,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsharelevel_go">
 <a href="#state_vmotionsharelevel_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Share<wbr>Level</a>
@@ -6219,8 +5664,7 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanmaximummbit_go">
 <a href="#state_vsanmaximummbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Maximum<wbr>Mbit</a>
@@ -6229,8 +5673,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanreservationmbit_go">
 <a href="#state_vsanreservationmbit_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Reservation<wbr>Mbit</a>
@@ -6239,8 +5682,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsansharecount_go">
 <a href="#state_vsansharecount_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Count</a>
@@ -6249,8 +5691,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsansharelevel_go">
 <a href="#state_vsansharelevel_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Share<wbr>Level</a>
@@ -6259,13 +5700,11 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activeuplinks_nodejs">
 <a href="#state_activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
@@ -6277,8 +5716,7 @@ below:
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowforgedtransmits_nodejs">
 <a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
@@ -6289,8 +5727,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowmacchanges_nodejs">
 <a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
@@ -6300,8 +5737,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowpromiscuous_nodejs">
 <a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
@@ -6311,8 +5747,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_nodejs">
 <a href="#state_blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
@@ -6323,8 +5758,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkbeacon_nodejs">
 <a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
@@ -6334,8 +5768,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configversion_nodejs">
 <a href="#state_configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
@@ -6344,8 +5777,7 @@ to detect NIC failure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contactdetail_nodejs">
 <a href="#state_contactdetail_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Detail</a>
@@ -6355,8 +5787,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contactname_nodejs">
 <a href="#state_contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
@@ -6366,8 +5797,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -6377,8 +5807,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_nodejs">
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -6388,8 +5817,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -6398,8 +5826,7 @@ virtual switch will be created. Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directpathgen2allowed_nodejs">
 <a href="#state_directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
@@ -6409,8 +5836,7 @@ virtual switch will be created. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingaveragebandwidth_nodejs">
 <a href="#state_egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -6420,8 +5846,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingburstsize_nodejs">
 <a href="#state_egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -6431,8 +5856,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingenabled_nodejs">
 <a href="#state_egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
@@ -6442,8 +5866,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingpeakbandwidth_nodejs">
 <a href="#state_egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -6453,8 +5876,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failback_nodejs">
 <a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
@@ -6464,8 +5886,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancemaximummbit_nodejs">
 <a href="#state_faulttolerancemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Maximum<wbr>Mbit</a>
@@ -6474,8 +5895,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancereservationmbit_nodejs">
 <a href="#state_faulttolerancereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Reservation<wbr>Mbit</a>
@@ -6484,8 +5904,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancesharecount_nodejs">
 <a href="#state_faulttolerancesharecount_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Count</a>
@@ -6494,8 +5913,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerancesharelevel_nodejs">
 <a href="#state_faulttolerancesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Level</a>
@@ -6504,8 +5922,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -6515,8 +5932,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrmaximummbit_nodejs">
 <a href="#state_hbrmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Maximum<wbr>Mbit</a>
@@ -6525,8 +5941,7 @@ if changed.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrreservationmbit_nodejs">
 <a href="#state_hbrreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Reservation<wbr>Mbit</a>
@@ -6535,8 +5950,7 @@ if changed.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrsharecount_nodejs">
 <a href="#state_hbrsharecount_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Count</a>
@@ -6545,8 +5959,7 @@ if changed.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbrsharelevel_nodejs">
 <a href="#state_hbrsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Level</a>
@@ -6555,8 +5968,7 @@ if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_nodejs">
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -6566,8 +5978,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoreotherpvlanmappings_nodejs">
 <a href="#state_ignoreotherpvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
@@ -6577,8 +5988,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingaveragebandwidth_nodejs">
 <a href="#state_ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
@@ -6588,8 +5998,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingburstsize_nodejs">
 <a href="#state_ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
@@ -6599,8 +6008,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingenabled_nodejs">
 <a href="#state_ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
@@ -6610,8 +6018,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingpeakbandwidth_nodejs">
 <a href="#state_ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
@@ -6621,8 +6028,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4address_nodejs">
 <a href="#state_ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -6633,8 +6039,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsimaximummbit_nodejs">
 <a href="#state_iscsimaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Maximum<wbr>Mbit</a>
@@ -6643,8 +6048,7 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsireservationmbit_nodejs">
 <a href="#state_iscsireservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Reservation<wbr>Mbit</a>
@@ -6653,8 +6057,7 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsisharecount_nodejs">
 <a href="#state_iscsisharecount_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Count</a>
@@ -6663,8 +6066,7 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsisharelevel_nodejs">
 <a href="#state_iscsisharelevel_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Level</a>
@@ -6673,8 +6075,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpapiversion_nodejs">
 <a href="#state_lacpapiversion_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Api<wbr>Version</a>
@@ -6685,8 +6086,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpenabled_nodejs">
 <a href="#state_lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
@@ -6696,8 +6096,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacpmode_nodejs">
 <a href="#state_lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
@@ -6706,8 +6105,7 @@ applies to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkdiscoveryoperation_nodejs">
 <a href="#state_linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
@@ -6717,8 +6115,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkdiscoveryprotocol_nodejs">
 <a href="#state_linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
@@ -6728,8 +6125,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementmaximummbit_nodejs">
 <a href="#state_managementmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Maximum<wbr>Mbit</a>
@@ -6738,8 +6134,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementreservationmbit_nodejs">
 <a href="#state_managementreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Reservation<wbr>Mbit</a>
@@ -6748,8 +6143,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsharecount_nodejs">
 <a href="#state_managementsharecount_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Count</a>
@@ -6758,8 +6152,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsharelevel_nodejs">
 <a href="#state_managementsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Level</a>
@@ -6768,8 +6161,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmtu_nodejs">
 <a href="#state_maxmtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mtu</a>
@@ -6779,8 +6171,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multicastfilteringmode_nodejs">
 <a href="#state_multicastfilteringmode_nodejs" style="color: inherit; text-decoration: inherit;">multicast<wbr>Filtering<wbr>Mode</a>
@@ -6790,8 +6181,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6800,8 +6190,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowactiveflowtimeout_nodejs">
 <a href="#state_netflowactiveflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
@@ -6812,8 +6201,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowcollectoripaddress_nodejs">
 <a href="#state_netflowcollectoripaddress_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
@@ -6824,8 +6212,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowcollectorport_nodejs">
 <a href="#state_netflowcollectorport_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Port</a>
@@ -6835,8 +6222,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowenabled_nodejs">
 <a href="#state_netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
@@ -6846,8 +6232,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowidleflowtimeout_nodejs">
 <a href="#state_netflowidleflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
@@ -6858,8 +6243,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowinternalflowsonly_nodejs">
 <a href="#state_netflowinternalflowsonly_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
@@ -6870,8 +6254,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowobservationdomainid_nodejs">
 <a href="#state_netflowobservationdomainid_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
@@ -6881,8 +6264,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflowsamplingrate_nodejs">
 <a href="#state_netflowsamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Sampling<wbr>Rate</a>
@@ -6894,8 +6276,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcecontrolenabled_nodejs">
 <a href="#state_networkresourcecontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Enabled</a>
@@ -6905,8 +6286,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcecontrolversion_nodejs">
 <a href="#state_networkresourcecontrolversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Version</a>
@@ -6916,8 +6296,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfsmaximummbit_nodejs">
 <a href="#state_nfsmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Maximum<wbr>Mbit</a>
@@ -6926,8 +6305,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfsreservationmbit_nodejs">
 <a href="#state_nfsreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Reservation<wbr>Mbit</a>
@@ -6936,8 +6314,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfssharecount_nodejs">
 <a href="#state_nfssharecount_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Count</a>
@@ -6946,8 +6323,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfssharelevel_nodejs">
 <a href="#state_nfssharelevel_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Level</a>
@@ -6956,8 +6332,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyswitches_nodejs">
 <a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
@@ -6967,8 +6342,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portprivatesecondaryvlanid_nodejs">
 <a href="#state_portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
@@ -6978,8 +6352,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pvlanmappings_nodejs">
 <a href="#state_pvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">pvlan<wbr>Mappings</a>
@@ -6989,8 +6362,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_standbyuplinks_nodejs">
 <a href="#state_standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
@@ -7002,8 +6374,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -7012,8 +6383,7 @@ here for more details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamingpolicy_nodejs">
 <a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
@@ -7024,8 +6394,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_txuplink_nodejs">
 <a href="#state_txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
@@ -7035,8 +6404,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uplinks_nodejs">
 <a href="#state_uplinks_nodejs" style="color: inherit; text-decoration: inherit;">uplinks</a>
@@ -7049,8 +6417,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpmaximummbit_nodejs">
 <a href="#state_vdpmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Maximum<wbr>Mbit</a>
@@ -7059,8 +6426,7 @@ use this option.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpreservationmbit_nodejs">
 <a href="#state_vdpreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Reservation<wbr>Mbit</a>
@@ -7069,8 +6435,7 @@ use this option.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpsharecount_nodejs">
 <a href="#state_vdpsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Count</a>
@@ -7079,8 +6444,7 @@ use this option.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdpsharelevel_nodejs">
 <a href="#state_vdpsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Level</a>
@@ -7089,8 +6453,7 @@ use this option.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -7102,8 +6465,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinemaximummbit_nodejs">
 <a href="#state_virtualmachinemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Maximum<wbr>Mbit</a>
@@ -7112,8 +6474,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinereservationmbit_nodejs">
 <a href="#state_virtualmachinereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Reservation<wbr>Mbit</a>
@@ -7122,8 +6483,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinesharecount_nodejs">
 <a href="#state_virtualmachinesharecount_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Count</a>
@@ -7132,8 +6492,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinesharelevel_nodejs">
 <a href="#state_virtualmachinesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Level</a>
@@ -7142,8 +6501,7 @@ downgraded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_nodejs">
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
@@ -7152,8 +6510,7 @@ downgraded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanranges_nodejs">
 <a href="#state_vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
@@ -7165,8 +6522,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionmaximummbit_nodejs">
 <a href="#state_vmotionmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Maximum<wbr>Mbit</a>
@@ -7175,8 +6531,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionreservationmbit_nodejs">
 <a href="#state_vmotionreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Reservation<wbr>Mbit</a>
@@ -7185,8 +6540,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsharecount_nodejs">
 <a href="#state_vmotionsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Count</a>
@@ -7195,8 +6549,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsharelevel_nodejs">
 <a href="#state_vmotionsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Level</a>
@@ -7205,8 +6558,7 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanmaximummbit_nodejs">
 <a href="#state_vsanmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Maximum<wbr>Mbit</a>
@@ -7215,8 +6567,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanreservationmbit_nodejs">
 <a href="#state_vsanreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Reservation<wbr>Mbit</a>
@@ -7225,8 +6576,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsansharecount_nodejs">
 <a href="#state_vsansharecount_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Count</a>
@@ -7235,8 +6585,7 @@ below:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsansharelevel_nodejs">
 <a href="#state_vsansharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Level</a>
@@ -7245,13 +6594,11 @@ below:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_active_uplinks_python">
 <a href="#state_active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
@@ -7263,8 +6610,7 @@ below:
 balancing. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_forged_transmits_python">
 <a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
@@ -7275,8 +6621,7 @@ here for more details.
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_mac_changes_python">
 <a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
@@ -7286,8 +6631,7 @@ address than that of its own.
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_promiscuous_python">
 <a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
@@ -7297,8 +6641,7 @@ Control (MAC) address can be changed.
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_block_all_ports_python">
 <a href="#state_block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
@@ -7309,8 +6652,7 @@ flag indicates whether or not all traffic is seen on a given port.
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
 virtual devices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_beacon_python">
 <a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
@@ -7320,8 +6662,7 @@ virtual devices.
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_version_python">
 <a href="#state_config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
@@ -7330,8 +6671,7 @@ to detect NIC failure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contact_detail_python">
 <a href="#state_contact_detail_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>detail</a>
@@ -7341,8 +6681,7 @@ to detect NIC failure.
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contact_name_python">
 <a href="#state_contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
@@ -7352,8 +6691,7 @@ who is responsible for the DVS.
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -7363,8 +6701,7 @@ DVS.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_id_python">
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -7374,8 +6711,7 @@ value strings to set for virtual switch.
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -7384,8 +6720,7 @@ virtual switch will be created. Forces a new resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_directpath_gen2_allowed_python">
 <a href="#state_directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
@@ -7395,8 +6730,7 @@ virtual switch will be created. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_average_bandwidth_python">
 <a href="#state_egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
@@ -7406,8 +6740,7 @@ for which this policy applies to.
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_burst_size_python">
 <a href="#state_egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
@@ -7417,8 +6750,7 @@ per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_enabled_python">
 <a href="#state_egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
@@ -7428,8 +6760,7 @@ bytes if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_peak_bandwidth_python">
 <a href="#state_egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
@@ -7439,8 +6770,7 @@ on the port for egress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failback_python">
 <a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
@@ -7450,8 +6780,7 @@ in bits per second if egress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerance_maximum_mbit_python">
 <a href="#state_faulttolerance_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>maximum_<wbr>mbit</a>
@@ -7460,8 +6789,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerance_reservation_mbit_python">
 <a href="#state_faulttolerance_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>reservation_<wbr>mbit</a>
@@ -7470,8 +6798,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerance_share_count_python">
 <a href="#state_faulttolerance_share_count_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>count</a>
@@ -7480,8 +6807,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_faulttolerance_share_level_python">
 <a href="#state_faulttolerance_share_level_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>level</a>
@@ -7490,8 +6816,7 @@ uplinks higher in precedence when they come back up.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -7501,8 +6826,7 @@ uplinks higher in precedence when they come back up.
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbr_maximum_mbit_python">
 <a href="#state_hbr_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>maximum_<wbr>mbit</a>
@@ -7511,8 +6835,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbr_reservation_mbit_python">
 <a href="#state_hbr_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>reservation_<wbr>mbit</a>
@@ -7521,8 +6844,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbr_share_count_python">
 <a href="#state_hbr_share_count_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>count</a>
@@ -7531,8 +6853,7 @@ if changed.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hbr_share_level_python">
 <a href="#state_hbr_share_level_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>level</a>
@@ -7541,8 +6862,7 @@ if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_python">
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -7552,8 +6872,7 @@ if changed.
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_other_pvlan_mappings_python">
 <a href="#state_ignore_other_pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>other_<wbr>pvlan_<wbr>mappings</a>
@@ -7563,8 +6882,7 @@ options are:
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_average_bandwidth_python">
 <a href="#state_ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
@@ -7574,8 +6892,7 @@ mappings not managed by this resource. Defaults to false.
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_burst_size_python">
 <a href="#state_ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
@@ -7585,8 +6902,7 @@ bits per second if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_enabled_python">
 <a href="#state_ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
@@ -7596,8 +6912,7 @@ bytes if ingress traffic shaping is enabled on the port.
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_peak_bandwidth_python">
 <a href="#state_ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
@@ -7607,8 +6922,7 @@ enabled on the port for ingress traffic.
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_address_python">
 <a href="#state_ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -7619,8 +6933,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsi_maximum_mbit_python">
 <a href="#state_iscsi_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>maximum_<wbr>mbit</a>
@@ -7629,8 +6942,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsi_reservation_mbit_python">
 <a href="#state_iscsi_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>reservation_<wbr>mbit</a>
@@ -7639,8 +6951,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsi_share_count_python">
 <a href="#state_iscsi_share_count_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>count</a>
@@ -7649,8 +6960,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscsi_share_level_python">
 <a href="#state_iscsi_share_level_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>level</a>
@@ -7659,8 +6969,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacp_api_version_python">
 <a href="#state_lacp_api_version_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>api_<wbr>version</a>
@@ -7671,8 +6980,7 @@ below.
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacp_enabled_python">
 <a href="#state_lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
@@ -7682,8 +6990,7 @@ version to use with the switch. Possible values are `singleLag` and
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lacp_mode_python">
 <a href="#state_lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
@@ -7692,8 +6999,7 @@ applies to.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_discovery_operation_python">
 <a href="#state_link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
@@ -7703,8 +7009,7 @@ applies to.
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_discovery_protocol_python">
 <a href="#state_link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
@@ -7714,8 +7019,7 @@ for link discovery traffic.
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_maximum_mbit_python">
 <a href="#state_management_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>maximum_<wbr>mbit</a>
@@ -7724,8 +7028,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_reservation_mbit_python">
 <a href="#state_management_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>reservation_<wbr>mbit</a>
@@ -7734,8 +7037,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_share_count_python">
 <a href="#state_management_share_count_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>count</a>
@@ -7744,8 +7046,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_share_level_python">
 <a href="#state_management_share_level_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>level</a>
@@ -7754,8 +7055,7 @@ types are `cdp` and `lldp`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_mtu_python">
 <a href="#state_max_mtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mtu</a>
@@ -7765,8 +7065,7 @@ types are `cdp` and `lldp`.
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multicast_filtering_mode_python">
 <a href="#state_multicast_filtering_mode_python" style="color: inherit; text-decoration: inherit;">multicast_<wbr>filtering_<wbr>mode</a>
@@ -7776,8 +7075,7 @@ switch.
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7786,8 +7084,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_active_flow_timeout_python">
 <a href="#state_netflow_active_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>active_<wbr>flow_<wbr>timeout</a>
@@ -7798,8 +7095,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_collector_ip_address_python">
 <a href="#state_netflow_collector_ip_address_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>ip_<wbr>address</a>
@@ -7810,8 +7106,7 @@ active flows are forced to be exported to the collector. Allowed range is
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_collector_port_python">
 <a href="#state_netflow_collector_port_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>port</a>
@@ -7821,8 +7116,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_enabled_python">
 <a href="#state_netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
@@ -7832,8 +7126,7 @@ must be set before Netflow can be enabled.
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_idle_flow_timeout_python">
 <a href="#state_netflow_idle_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>idle_<wbr>flow_<wbr>timeout</a>
@@ -7844,8 +7137,7 @@ applies to.
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_internal_flows_only_python">
 <a href="#state_netflow_internal_flows_only_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>internal_<wbr>flows_<wbr>only</a>
@@ -7856,8 +7148,7 @@ to `600`. Default: `15`.
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_observation_domain_id_python">
 <a href="#state_netflow_observation_domain_id_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>observation_<wbr>domain_<wbr>id</a>
@@ -7867,8 +7158,7 @@ Default: `false`.
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netflow_sampling_rate_python">
 <a href="#state_netflow_sampling_rate_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>sampling_<wbr>rate</a>
@@ -7880,8 +7170,7 @@ the Netflow collector.
 the number of packets analyzed. The default is `0`, which indicates that the
 switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_resource_control_enabled_python">
 <a href="#state_network_resource_control_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>enabled</a>
@@ -7891,8 +7180,7 @@ indicates an analysis rate of 0.001%.
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_resource_control_version_python">
 <a href="#state_network_resource_control_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>version</a>
@@ -7902,8 +7190,7 @@ network I/O control. Default: `false`.
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfs_maximum_mbit_python">
 <a href="#state_nfs_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>maximum_<wbr>mbit</a>
@@ -7912,8 +7199,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfs_reservation_mbit_python">
 <a href="#state_nfs_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>reservation_<wbr>mbit</a>
@@ -7922,8 +7208,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfs_share_count_python">
 <a href="#state_nfs_share_count_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>count</a>
@@ -7932,8 +7217,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nfs_share_level_python">
 <a href="#state_nfs_share_level_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>level</a>
@@ -7942,8 +7226,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_switches_python">
 <a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
@@ -7953,8 +7236,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_private_secondary_vlan_id_python">
 <a href="#state_port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
@@ -7964,8 +7246,7 @@ broadcast network of an uplink failover, triggering cache updates.
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pvlan_mappings_python">
 <a href="#state_pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">pvlan_<wbr>mappings</a>
@@ -7975,8 +7256,7 @@ ID when using private VLANs.
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_standby_uplinks_python">
 <a href="#state_standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
@@ -7988,8 +7268,7 @@ private VLAN mapping. The options are:
 failover. These uplinks need to match the definitions in the
 `uplinks` DVS argument. See
 here for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -7998,8 +7277,7 @@ here for more details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teaming_policy_python">
 <a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
@@ -8010,8 +7288,7 @@ here for more details.
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tx_uplink_python">
 <a href="#state_tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
@@ -8021,8 +7298,7 @@ here for more details.
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uplinks_python">
 <a href="#state_uplinks_python" style="color: inherit; text-decoration: inherit;">uplinks</a>
@@ -8035,8 +7311,7 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdp_maximum_mbit_python">
 <a href="#state_vdp_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>maximum_<wbr>mbit</a>
@@ -8045,8 +7320,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdp_reservation_mbit_python">
 <a href="#state_vdp_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>reservation_<wbr>mbit</a>
@@ -8055,8 +7329,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdp_share_count_python">
 <a href="#state_vdp_share_count_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>count</a>
@@ -8065,8 +7338,7 @@ use this option.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vdp_share_level_python">
 <a href="#state_vdp_share_level_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>level</a>
@@ -8075,8 +7347,7 @@ use this option.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -8088,8 +7359,7 @@ use this option.
 create the DVS at the latest version supported by the version of vSphere
 being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachine_maximum_mbit_python">
 <a href="#state_virtualmachine_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>maximum_<wbr>mbit</a>
@@ -8098,8 +7368,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachine_reservation_mbit_python">
 <a href="#state_virtualmachine_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>reservation_<wbr>mbit</a>
@@ -8108,8 +7377,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachine_share_count_python">
 <a href="#state_virtualmachine_share_count_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>count</a>
@@ -8118,8 +7386,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachine_share_level_python">
 <a href="#state_virtualmachine_share_level_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>level</a>
@@ -8128,8 +7395,7 @@ downgraded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlan_id_python">
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
@@ -8138,8 +7404,7 @@ downgraded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlan_ranges_python">
 <a href="#state_vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
@@ -8151,8 +7416,7 @@ downgraded.
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 `vlan_range` definitions are allowed, but they must not overlap. Example
 below:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotion_maximum_mbit_python">
 <a href="#state_vmotion_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>maximum_<wbr>mbit</a>
@@ -8161,8 +7425,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotion_reservation_mbit_python">
 <a href="#state_vmotion_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>reservation_<wbr>mbit</a>
@@ -8171,8 +7434,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotion_share_count_python">
 <a href="#state_vmotion_share_count_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>count</a>
@@ -8181,8 +7443,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotion_share_level_python">
 <a href="#state_vmotion_share_level_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>level</a>
@@ -8191,8 +7452,7 @@ below:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsan_maximum_mbit_python">
 <a href="#state_vsan_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>maximum_<wbr>mbit</a>
@@ -8201,8 +7461,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsan_reservation_mbit_python">
 <a href="#state_vsan_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>reservation_<wbr>mbit</a>
@@ -8211,8 +7470,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsan_share_count_python">
 <a href="#state_vsan_share_count_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>count</a>
@@ -8221,8 +7479,7 @@ below:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsan_share_level_python">
 <a href="#state_vsan_share_level_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>level</a>
@@ -8231,8 +7488,7 @@ below:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -8247,8 +7503,7 @@ below:
 <h4 id="distributedvirtualswitchhost">Distributed<wbr>Virtual<wbr>Switch<wbr>Host</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devices_csharp">
 <a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -8258,8 +7513,7 @@ below:
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -8269,13 +7523,11 @@ added in order they are specified.
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devices_go">
 <a href="#devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -8285,8 +7537,7 @@ DVS.
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -8296,13 +7547,11 @@ added in order they are specified.
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devices_nodejs">
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -8312,8 +7561,7 @@ DVS.
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -8323,13 +7571,11 @@ added in order they are specified.
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devices_python">
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -8339,8 +7585,7 @@ DVS.
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -8350,15 +7595,13 @@ added in order they are specified.
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributedvirtualswitchpvlanmapping">Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primaryvlanid_csharp">
 <a href="#primaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Vlan<wbr>Id</a>
@@ -8368,8 +7611,7 @@ DVS.
     </dt>
     <dd>{{% md %}}The primary VLAN ID. The VLAN IDs of 0 and
 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pvlantype_csharp">
 <a href="#pvlantype_csharp" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Type</a>
@@ -8379,8 +7621,7 @@ DVS.
     </dt>
     <dd>{{% md %}}The private VLAN type. Valid values are
 promiscuous, community and isolated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondaryvlanid_csharp">
 <a href="#secondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Vlan<wbr>Id</a>
@@ -8390,13 +7631,11 @@ promiscuous, community and isolated.
     </dt>
     <dd>{{% md %}}The secondary VLAN ID. The VLAN IDs of 0
 and 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primaryvlanid_go">
 <a href="#primaryvlanid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Vlan<wbr>Id</a>
@@ -8406,8 +7645,7 @@ and 4095 are reserved and cannot be used in this property.
     </dt>
     <dd>{{% md %}}The primary VLAN ID. The VLAN IDs of 0 and
 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pvlantype_go">
 <a href="#pvlantype_go" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Type</a>
@@ -8417,8 +7655,7 @@ and 4095 are reserved and cannot be used in this property.
     </dt>
     <dd>{{% md %}}The private VLAN type. Valid values are
 promiscuous, community and isolated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondaryvlanid_go">
 <a href="#secondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Vlan<wbr>Id</a>
@@ -8428,13 +7665,11 @@ promiscuous, community and isolated.
     </dt>
     <dd>{{% md %}}The secondary VLAN ID. The VLAN IDs of 0
 and 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primaryvlanid_nodejs">
 <a href="#primaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Vlan<wbr>Id</a>
@@ -8444,8 +7679,7 @@ and 4095 are reserved and cannot be used in this property.
     </dt>
     <dd>{{% md %}}The primary VLAN ID. The VLAN IDs of 0 and
 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pvlantype_nodejs">
 <a href="#pvlantype_nodejs" style="color: inherit; text-decoration: inherit;">pvlan<wbr>Type</a>
@@ -8455,8 +7689,7 @@ and 4095 are reserved and cannot be used in this property.
     </dt>
     <dd>{{% md %}}The private VLAN type. Valid values are
 promiscuous, community and isolated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondaryvlanid_nodejs">
 <a href="#secondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Vlan<wbr>Id</a>
@@ -8466,13 +7699,11 @@ promiscuous, community and isolated.
     </dt>
     <dd>{{% md %}}The secondary VLAN ID. The VLAN IDs of 0
 and 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="primary_vlan_id_python">
 <a href="#primary_vlan_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>vlan_<wbr>id</a>
@@ -8482,8 +7713,7 @@ and 4095 are reserved and cannot be used in this property.
     </dt>
     <dd>{{% md %}}The primary VLAN ID. The VLAN IDs of 0 and
 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pvlan_type_python">
 <a href="#pvlan_type_python" style="color: inherit; text-decoration: inherit;">pvlan_<wbr>type</a>
@@ -8493,8 +7723,7 @@ and 4095 are reserved and cannot be used in this property.
     </dt>
     <dd>{{% md %}}The private VLAN type. Valid values are
 promiscuous, community and isolated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondary_vlan_id_python">
 <a href="#secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>vlan_<wbr>id</a>
@@ -8504,15 +7733,13 @@ promiscuous, community and isolated.
     </dt>
     <dd>{{% md %}}The secondary VLAN ID. The VLAN IDs of 0
 and 4095 are reserved and cannot be used in this property.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributedvirtualswitchvlanrange">Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxvlan_csharp">
 <a href="#maxvlan_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Vlan</a>
@@ -8520,8 +7747,7 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minvlan_csharp">
 <a href="#minvlan_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Vlan</a>
@@ -8529,13 +7755,11 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxvlan_go">
 <a href="#maxvlan_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Vlan</a>
@@ -8543,8 +7767,7 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minvlan_go">
 <a href="#minvlan_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Vlan</a>
@@ -8552,13 +7775,11 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxvlan_nodejs">
 <a href="#maxvlan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
@@ -8566,8 +7787,7 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minvlan_nodejs">
 <a href="#minvlan_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
@@ -8575,13 +7795,11 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_vlan_python">
 <a href="#max_vlan_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vlan</a>
@@ -8589,8 +7807,7 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_vlan_python">
 <a href="#min_vlan_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vlan</a>
@@ -8598,8 +7815,7 @@ and 4095 are reserved and cannot be used in this property.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

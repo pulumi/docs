@@ -312,8 +312,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="templatecontent_csharp">
 <a href="#templatecontent_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
@@ -322,8 +321,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglevel_csharp">
 <a href="#debuglevel_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Level</a>
@@ -332,8 +330,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -342,8 +339,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -352,8 +348,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameterscontent_csharp">
 <a href="#parameterscontent_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Content</a>
@@ -362,8 +357,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -372,13 +366,11 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="templatecontent_go">
 <a href="#templatecontent_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
@@ -387,8 +379,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglevel_go">
 <a href="#debuglevel_go" style="color: inherit; text-decoration: inherit;">Debug<wbr>Level</a>
@@ -397,8 +388,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -407,8 +397,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -417,8 +406,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameterscontent_go">
 <a href="#parameterscontent_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Content</a>
@@ -427,8 +415,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -437,13 +424,11 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="templatecontent_nodejs">
 <a href="#templatecontent_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Content</a>
@@ -452,8 +437,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debuglevel_nodejs">
 <a href="#debuglevel_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Level</a>
@@ -462,8 +446,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -472,8 +455,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -482,8 +464,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameterscontent_nodejs">
 <a href="#parameterscontent_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Content</a>
@@ -492,8 +473,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -502,13 +482,11 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="template_content_python">
 <a href="#template_content_python" style="color: inherit; text-decoration: inherit;">template_<wbr>content</a>
@@ -517,8 +495,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="debug_level_python">
 <a href="#debug_level_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>level</a>
@@ -527,8 +504,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -537,8 +513,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,8 +522,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_content_python">
 <a href="#parameters_content_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>content</a>
@@ -557,8 +531,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -567,8 +540,7 @@ The SubscriptionTemplateDeployment resource accepts the following [input]({{< re
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -579,8 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputcontent_csharp">
 <a href="#outputcontent_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Content</a>
@@ -598,13 +568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -612,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputcontent_go">
 <a href="#outputcontent_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Content</a>
@@ -622,13 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -636,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputcontent_nodejs">
 <a href="#outputcontent_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Content</a>
@@ -646,13 +610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -660,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_content_python">
 <a href="#output_content_python" style="color: inherit; text-decoration: inherit;">output_<wbr>content</a>
@@ -670,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -798,8 +758,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_debuglevel_csharp">
 <a href="#state_debuglevel_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Level</a>
@@ -808,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -818,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -828,8 +785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputcontent_csharp">
 <a href="#state_outputcontent_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Content</a>
@@ -838,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameterscontent_csharp">
 <a href="#state_parameterscontent_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Content</a>
@@ -848,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -858,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatecontent_csharp">
 <a href="#state_templatecontent_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
@@ -868,13 +821,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_debuglevel_go">
 <a href="#state_debuglevel_go" style="color: inherit; text-decoration: inherit;">Debug<wbr>Level</a>
@@ -883,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -893,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -903,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputcontent_go">
 <a href="#state_outputcontent_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Content</a>
@@ -913,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameterscontent_go">
 <a href="#state_parameterscontent_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Content</a>
@@ -923,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -933,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatecontent_go">
 <a href="#state_templatecontent_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Content</a>
@@ -943,13 +888,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_debuglevel_nodejs">
 <a href="#state_debuglevel_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Level</a>
@@ -958,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -968,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -978,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputcontent_nodejs">
 <a href="#state_outputcontent_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Content</a>
@@ -988,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameterscontent_nodejs">
 <a href="#state_parameterscontent_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Content</a>
@@ -998,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1008,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatecontent_nodejs">
 <a href="#state_templatecontent_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Content</a>
@@ -1018,13 +955,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_debug_level_python">
 <a href="#state_debug_level_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>level</a>
@@ -1033,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1043,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1053,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_content_python">
 <a href="#state_output_content_python" style="color: inherit; text-decoration: inherit;">output_<wbr>content</a>
@@ -1063,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JSON Content of the Outputs of the ARM Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_content_python">
 <a href="#state_parameters_content_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>content</a>
@@ -1073,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template parameters file - containing a JSON list of parameters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1083,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Subscription Template Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_content_python">
 <a href="#state_template_content_python" style="color: inherit; text-decoration: inherit;">template_<wbr>content</a>
@@ -1093,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the ARM Template which should be deployed into this Subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

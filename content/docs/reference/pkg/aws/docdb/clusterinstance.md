@@ -335,8 +335,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_csharp">
 <a href="#clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -345,8 +344,7 @@ The ClusterInstance resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -369,8 +367,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_csharp">
 <a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -380,8 +377,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_csharp">
 <a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -390,8 +386,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -400,8 +395,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertidentifier_csharp">
 <a href="#cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -410,8 +404,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -420,8 +413,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -430,8 +422,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_csharp">
 <a href="#identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -440,8 +431,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_csharp">
 <a href="#preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -451,8 +441,7 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotiontier_csharp">
 <a href="#promotiontier_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -461,8 +450,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -471,13 +459,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_go">
 <a href="#clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -486,8 +472,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceclass_go">
 <a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -510,8 +495,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_go">
 <a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -521,8 +505,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_go">
 <a href="#autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -531,8 +514,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -541,8 +523,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertidentifier_go">
 <a href="#cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -551,8 +532,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -561,8 +541,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -571,8 +550,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_go">
 <a href="#identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -581,8 +559,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_go">
 <a href="#preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -592,8 +569,7 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotiontier_go">
 <a href="#promotiontier_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -602,8 +578,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -612,13 +587,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_nodejs">
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -627,8 +600,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
@@ -651,8 +623,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_nodejs">
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -662,8 +633,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_nodejs">
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -672,8 +642,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -682,8 +651,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertidentifier_nodejs">
 <a href="#cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
@@ -692,8 +660,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -702,8 +669,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -712,8 +678,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifierprefix_nodejs">
 <a href="#identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
@@ -722,8 +687,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmaintenancewindow_nodejs">
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -733,8 +697,7 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotiontier_nodejs">
 <a href="#promotiontier_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Tier</a>
@@ -743,8 +706,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -753,13 +715,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_identifier_python">
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -768,8 +728,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_class_python">
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
@@ -792,8 +751,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_immediately_python">
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -803,8 +761,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_minor_version_upgrade_python">
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -813,8 +770,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -823,8 +779,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_cert_identifier_python">
 <a href="#ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
@@ -833,8 +788,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -843,8 +797,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -853,8 +806,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_prefix_python">
 <a href="#identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
@@ -863,8 +815,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_maintenance_window_python">
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -874,8 +825,7 @@ are applied immediately, or during the next maintenance window. Default is`false
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotion_tier_python">
 <a href="#promotion_tier_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>tier</a>
@@ -884,8 +834,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -894,8 +843,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -906,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -916,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbsubnetgroupname_csharp">
 <a href="#dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -926,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbiresourceid_csharp">
 <a href="#dbiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -936,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -946,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -956,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -965,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -975,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -985,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredbackupwindow_csharp">
 <a href="#preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -995,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publiclyaccessible_csharp">
 <a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1004,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageencrypted_csharp">
 <a href="#storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1014,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_csharp">
 <a href="#writer_csharp" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -1024,13 +960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1039,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbsubnetgroupname_go">
 <a href="#dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1049,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbiresourceid_go">
 <a href="#dbiresourceid_go" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -1059,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1069,8 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1079,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1088,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1098,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1108,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredbackupwindow_go">
 <a href="#preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -1118,8 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publiclyaccessible_go">
 <a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1127,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageencrypted_go">
 <a href="#storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1137,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_go">
 <a href="#writer_go" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -1147,13 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1162,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbsubnetgroupname_nodejs">
 <a href="#dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1172,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbiresourceid_nodejs">
 <a href="#dbiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">dbi<wbr>Resource<wbr>Id</a>
@@ -1182,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1192,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1202,8 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1211,8 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1221,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1231,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredbackupwindow_nodejs">
 <a href="#preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
@@ -1241,8 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publiclyaccessible_nodejs">
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -1250,8 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageencrypted_nodejs">
 <a href="#storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
@@ -1260,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_nodejs">
 <a href="#writer_nodejs" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -1270,13 +1180,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1285,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="db_subnet_group_name_python">
 <a href="#db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -1295,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dbi_resource_id_python">
 <a href="#dbi_resource_id_python" style="color: inherit; text-decoration: inherit;">dbi_<wbr>resource_<wbr>id</a>
@@ -1305,8 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1315,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1325,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1334,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1344,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1354,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferred_backup_window_python">
 <a href="#preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
@@ -1364,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicly_accessible_python">
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -1373,8 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_encrypted_python">
 <a href="#storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
@@ -1383,8 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_python">
 <a href="#writer_python" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -1393,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1521,8 +1417,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
 <a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1532,8 +1427,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1542,8 +1436,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_csharp">
 <a href="#state_autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1552,8 +1445,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1562,8 +1454,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertidentifier_csharp">
 <a href="#state_cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -1572,8 +1463,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_csharp">
 <a href="#state_clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -1582,8 +1472,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_csharp">
 <a href="#state_dbsubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1592,8 +1481,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbiresourceid_csharp">
 <a href="#state_dbiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -1602,8 +1490,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1612,8 +1499,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1622,8 +1508,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1632,8 +1517,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_csharp">
 <a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -1642,8 +1526,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_csharp">
 <a href="#state_identifierprefix_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -1652,8 +1535,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_csharp">
 <a href="#state_instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -1676,8 +1558,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
 <a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1686,8 +1567,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1696,8 +1576,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_csharp">
 <a href="#state_preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -1706,8 +1585,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_csharp">
 <a href="#state_preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -1717,8 +1595,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotiontier_csharp">
 <a href="#state_promotiontier_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -1727,8 +1604,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_csharp">
 <a href="#state_publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1736,8 +1612,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_csharp">
 <a href="#state_storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1746,8 +1621,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1756,8 +1630,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_csharp">
 <a href="#state_writer_csharp" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -1766,13 +1639,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
 <a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1782,8 +1653,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1792,8 +1662,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_go">
 <a href="#state_autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1802,8 +1671,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1812,8 +1680,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertidentifier_go">
 <a href="#state_cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
@@ -1822,8 +1689,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_go">
 <a href="#state_clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -1832,8 +1698,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_go">
 <a href="#state_dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1842,8 +1707,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbiresourceid_go">
 <a href="#state_dbiresourceid_go" style="color: inherit; text-decoration: inherit;">Dbi<wbr>Resource<wbr>Id</a>
@@ -1852,8 +1716,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1862,8 +1725,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1872,8 +1734,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1882,8 +1743,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_go">
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -1892,8 +1752,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_go">
 <a href="#state_identifierprefix_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Prefix</a>
@@ -1902,8 +1761,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_go">
 <a href="#state_instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -1926,8 +1784,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
 <a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1936,8 +1793,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1946,8 +1802,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_go">
 <a href="#state_preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
@@ -1956,8 +1811,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_go">
 <a href="#state_preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -1967,8 +1821,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotiontier_go">
 <a href="#state_promotiontier_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Tier</a>
@@ -1977,8 +1830,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_go">
 <a href="#state_publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1986,8 +1838,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_go">
 <a href="#state_storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
@@ -1996,8 +1847,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2006,8 +1856,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_go">
 <a href="#state_writer_go" style="color: inherit; text-decoration: inherit;">Writer</a>
@@ -2016,13 +1865,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -2032,8 +1879,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2042,8 +1888,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_nodejs">
 <a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -2052,8 +1897,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -2062,8 +1906,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertidentifier_nodejs">
 <a href="#state_cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
@@ -2072,8 +1915,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteridentifier_nodejs">
 <a href="#state_clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -2082,8 +1924,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_nodejs">
 <a href="#state_dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -2092,8 +1933,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbiresourceid_nodejs">
 <a href="#state_dbiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">dbi<wbr>Resource<wbr>Id</a>
@@ -2102,8 +1942,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2112,8 +1951,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2122,8 +1960,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -2132,8 +1969,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_nodejs">
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -2142,8 +1978,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifierprefix_nodejs">
 <a href="#state_identifierprefix_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Prefix</a>
@@ -2152,8 +1987,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_nodejs">
 <a href="#state_instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
@@ -2176,8 +2010,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -2186,8 +2019,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2196,8 +2028,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupwindow_nodejs">
 <a href="#state_preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
@@ -2206,8 +2037,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmaintenancewindow_nodejs">
 <a href="#state_preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -2217,8 +2047,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotiontier_nodejs">
 <a href="#state_promotiontier_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Tier</a>
@@ -2227,8 +2056,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_nodejs">
 <a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -2236,8 +2064,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageencrypted_nodejs">
 <a href="#state_storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
@@ -2246,8 +2073,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2256,8 +2082,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_nodejs">
 <a href="#state_writer_nodejs" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -2266,13 +2091,11 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -2282,8 +2105,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
     </dt>
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2292,8 +2114,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_minor_version_upgrade_python">
 <a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -2302,8 +2123,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -2312,8 +2132,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_cert_identifier_python">
 <a href="#state_ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
@@ -2322,8 +2141,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) The identifier of the CA certificate for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_identifier_python">
 <a href="#state_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -2332,8 +2150,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.docdb.Cluster` in which to launch this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_subnet_group_name_python">
 <a href="#state_db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -2342,8 +2159,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DB subnet group to associate with this DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbi_resource_id_python">
 <a href="#state_dbi_resource_id_python" style="color: inherit; text-decoration: inherit;">dbi_<wbr>resource_<wbr>id</a>
@@ -2352,8 +2168,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region-unique, immutable identifier for the DB instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2362,8 +2177,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2372,8 +2186,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -2382,8 +2195,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_python">
 <a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -2392,8 +2204,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_prefix_python">
 <a href="#state_identifier_prefix_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>prefix</a>
@@ -2402,8 +2213,7 @@ are applied immediately, or during the next maintenance window. Default is`false
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_class_python">
 <a href="#state_instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
@@ -2426,8 +2236,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
 - db.r4.8xlarge
 - db.r4.16xlarge
 - db.t3.medium
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -2436,8 +2245,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key if one is set to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2446,8 +2254,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_window_python">
 <a href="#state_preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
@@ -2456,8 +2263,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_maintenance_window_python">
 <a href="#state_preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -2467,8 +2273,7 @@ supports the below instance classes. Please see [AWS Documentation](https://docs
     </dt>
     <dd>{{% md %}}The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotion_tier_python">
 <a href="#state_promotion_tier_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>tier</a>
@@ -2477,8 +2282,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicly_accessible_python">
 <a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -2486,8 +2290,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_encrypted_python">
 <a href="#state_storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
@@ -2496,8 +2299,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2506,8 +2308,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_python">
 <a href="#state_writer_python" style="color: inherit; text-decoration: inherit;">writer</a>
@@ -2516,8 +2317,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

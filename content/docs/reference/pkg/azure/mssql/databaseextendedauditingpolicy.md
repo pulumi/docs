@@ -361,8 +361,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databaseid_csharp">
 <a href="#databaseid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
@@ -371,8 +370,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmonitoringenabled_csharp">
 <a href="#logmonitoringenabled_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
@@ -380,8 +378,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -390,8 +387,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_csharp">
 <a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -400,8 +396,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_csharp">
 <a href="#storageaccountaccesskeyissecondary_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -410,8 +405,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_csharp">
 <a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -420,13 +414,11 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databaseid_go">
 <a href="#databaseid_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
@@ -435,8 +427,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmonitoringenabled_go">
 <a href="#logmonitoringenabled_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
@@ -444,8 +435,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -454,8 +444,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_go">
 <a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -464,8 +453,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_go">
 <a href="#storageaccountaccesskeyissecondary_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -474,8 +462,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_go">
 <a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -484,13 +471,11 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databaseid_nodejs">
 <a href="#databaseid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Id</a>
@@ -499,8 +484,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logmonitoringenabled_nodejs">
 <a href="#logmonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Monitoring<wbr>Enabled</a>
@@ -508,8 +492,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -518,8 +501,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_nodejs">
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -528,8 +510,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_nodejs">
 <a href="#storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -538,8 +519,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_nodejs">
 <a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
@@ -548,13 +528,11 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_id_python">
 <a href="#database_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>id</a>
@@ -563,8 +541,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_monitoring_enabled_python">
 <a href="#log_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>monitoring_<wbr>enabled</a>
@@ -572,8 +549,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -582,8 +558,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_python">
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -592,8 +567,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_is_secondary_python">
 <a href="#storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
@@ -602,8 +576,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_endpoint_python">
 <a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
@@ -612,8 +585,7 @@ The DatabaseExtendedAuditingPolicy resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -624,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,13 +604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -647,13 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -661,13 +628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -675,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -803,8 +767,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databaseid_csharp">
 <a href="#state_databaseid_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
@@ -813,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logmonitoringenabled_csharp">
 <a href="#state_logmonitoringenabled_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
@@ -822,8 +784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_csharp">
 <a href="#state_retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -832,8 +793,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskey_csharp">
 <a href="#state_storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -842,8 +802,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskeyissecondary_csharp">
 <a href="#state_storageaccountaccesskeyissecondary_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -852,8 +811,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageendpoint_csharp">
 <a href="#state_storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -862,13 +820,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databaseid_go">
 <a href="#state_databaseid_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Id</a>
@@ -877,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logmonitoringenabled_go">
 <a href="#state_logmonitoringenabled_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
@@ -886,8 +841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_go">
 <a href="#state_retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -896,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskey_go">
 <a href="#state_storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -906,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskeyissecondary_go">
 <a href="#state_storageaccountaccesskeyissecondary_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -916,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageendpoint_go">
 <a href="#state_storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -926,13 +877,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databaseid_nodejs">
 <a href="#state_databaseid_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Id</a>
@@ -941,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logmonitoringenabled_nodejs">
 <a href="#state_logmonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Monitoring<wbr>Enabled</a>
@@ -950,8 +898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_nodejs">
 <a href="#state_retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -960,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskey_nodejs">
 <a href="#state_storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -970,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskeyissecondary_nodejs">
 <a href="#state_storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -980,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageendpoint_nodejs">
 <a href="#state_storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
@@ -990,13 +934,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_id_python">
 <a href="#state_database_id_python" style="color: inherit; text-decoration: inherit;">database_<wbr>id</a>
@@ -1005,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the sql database to set the extended auditing policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_monitoring_enabled_python">
 <a href="#state_log_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>monitoring_<wbr>enabled</a>
@@ -1014,8 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_in_days_python">
 <a href="#state_retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1024,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_access_key_python">
 <a href="#state_storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -1034,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_access_key_is_secondary_python">
 <a href="#state_storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
@@ -1044,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is `storage_account_access_key` value the storage's secondary key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_endpoint_python">
 <a href="#state_storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
@@ -1054,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all extended auditing logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowreauth_csharp">
 <a href="#allowreauth_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Reauth</a>
@@ -178,8 +177,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
- It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_csharp">
 <a href="#applicationcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Id</a>
@@ -188,8 +186,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_csharp">
 <a href="#applicationcredentialname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Name</a>
@@ -198,8 +195,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_csharp">
 <a href="#applicationcredentialsecret_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Secret</a>
@@ -208,8 +204,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_csharp">
 <a href="#authurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -218,8 +213,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertfile_csharp">
 <a href="#cacertfile_csharp" style="color: inherit; text-decoration: inherit;">Cacert<wbr>File</a>
@@ -228,8 +222,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -238,8 +231,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_csharp">
 <a href="#cloud_csharp" style="color: inherit; text-decoration: inherit;">Cloud</a>
@@ -248,8 +240,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
- It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdomain_csharp">
 <a href="#defaultdomain_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Domain</a>
@@ -258,8 +249,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delayedauth_csharp">
 <a href="#delayedauth_csharp" style="color: inherit; text-decoration: inherit;">Delayed<wbr>Auth</a>
@@ -269,8 +259,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
- It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablenocacheheader_csharp">
 <a href="#disablenocacheheader_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>No<wbr>Cache<wbr>Header</a>
@@ -279,8 +268,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -289,8 +277,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -299,8 +286,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointoverrides_csharp">
 <a href="#endpointoverrides_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Overrides</a>
@@ -309,8 +295,7 @@ to `true`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of services with an endpoint to override what was from the Keystone catalog
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -318,8 +303,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
 <a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
@@ -328,8 +312,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
- It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -338,8 +321,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
 <a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -348,8 +330,7 @@ to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -358,8 +339,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdomainid_csharp">
 <a href="#projectdomainid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Domain<wbr>Id</a>
@@ -368,8 +348,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdomainname_csharp">
 <a href="#projectdomainname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Domain<wbr>Name</a>
@@ -378,8 +357,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -388,8 +366,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
- It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swauth_csharp">
 <a href="#swauth_csharp" style="color: inherit; text-decoration: inherit;">Swauth</a>
@@ -398,8 +375,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
- It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -408,8 +384,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantname_csharp">
 <a href="#tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -418,8 +393,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -428,8 +402,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useoctavia_csharp">
 <a href="#useoctavia_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Octavia</a>
@@ -438,8 +411,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
- It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdomainid_csharp">
 <a href="#userdomainid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Domain<wbr>Id</a>
@@ -448,8 +420,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdomainname_csharp">
 <a href="#userdomainname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Domain<wbr>Name</a>
@@ -458,8 +429,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -468,8 +438,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -478,13 +447,11 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowreauth_go">
 <a href="#allowreauth_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Reauth</a>
@@ -494,8 +461,7 @@ to `true`.
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
- It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_go">
 <a href="#applicationcredentialid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Id</a>
@@ -504,8 +470,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_go">
 <a href="#applicationcredentialname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Name</a>
@@ -514,8 +479,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_go">
 <a href="#applicationcredentialsecret_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Secret</a>
@@ -524,8 +488,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_go">
 <a href="#authurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -534,8 +497,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertfile_go">
 <a href="#cacertfile_go" style="color: inherit; text-decoration: inherit;">Cacert<wbr>File</a>
@@ -544,8 +506,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -554,8 +515,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_go">
 <a href="#cloud_go" style="color: inherit; text-decoration: inherit;">Cloud</a>
@@ -564,8 +524,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
- It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdomain_go">
 <a href="#defaultdomain_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Domain</a>
@@ -574,8 +533,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delayedauth_go">
 <a href="#delayedauth_go" style="color: inherit; text-decoration: inherit;">Delayed<wbr>Auth</a>
@@ -585,8 +543,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
- It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablenocacheheader_go">
 <a href="#disablenocacheheader_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>No<wbr>Cache<wbr>Header</a>
@@ -595,8 +552,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -605,8 +561,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -615,8 +570,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointoverrides_go">
 <a href="#endpointoverrides_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Overrides</a>
@@ -625,8 +579,7 @@ to `true`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of services with an endpoint to override what was from the Keystone catalog
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -634,8 +587,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
 <a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
@@ -644,8 +596,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
- It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -654,8 +605,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
 <a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -664,8 +614,7 @@ to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -674,8 +623,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdomainid_go">
 <a href="#projectdomainid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Domain<wbr>Id</a>
@@ -684,8 +632,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdomainname_go">
 <a href="#projectdomainname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Domain<wbr>Name</a>
@@ -694,8 +641,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -704,8 +650,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
- It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swauth_go">
 <a href="#swauth_go" style="color: inherit; text-decoration: inherit;">Swauth</a>
@@ -714,8 +659,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
- It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -724,8 +668,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantname_go">
 <a href="#tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -734,8 +677,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -744,8 +686,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useoctavia_go">
 <a href="#useoctavia_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Octavia</a>
@@ -754,8 +695,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
- It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdomainid_go">
 <a href="#userdomainid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Domain<wbr>Id</a>
@@ -764,8 +704,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdomainname_go">
 <a href="#userdomainname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Domain<wbr>Name</a>
@@ -774,8 +713,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -784,8 +722,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -794,13 +731,11 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowreauth_nodejs">
 <a href="#allowreauth_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Reauth</a>
@@ -810,8 +745,7 @@ to `true`.
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
- It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_nodejs">
 <a href="#applicationcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Id</a>
@@ -820,8 +754,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_nodejs">
 <a href="#applicationcredentialname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Name</a>
@@ -830,8 +763,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_nodejs">
 <a href="#applicationcredentialsecret_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Secret</a>
@@ -840,8 +772,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_nodejs">
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
@@ -850,8 +781,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacertfile_nodejs">
 <a href="#cacertfile_nodejs" style="color: inherit; text-decoration: inherit;">cacert<wbr>File</a>
@@ -860,8 +790,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -870,8 +799,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_nodejs">
 <a href="#cloud_nodejs" style="color: inherit; text-decoration: inherit;">cloud</a>
@@ -880,8 +808,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
- It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdomain_nodejs">
 <a href="#defaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Domain</a>
@@ -890,8 +817,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delayedauth_nodejs">
 <a href="#delayedauth_nodejs" style="color: inherit; text-decoration: inherit;">delayed<wbr>Auth</a>
@@ -901,8 +827,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
- It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablenocacheheader_nodejs">
 <a href="#disablenocacheheader_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>No<wbr>Cache<wbr>Header</a>
@@ -911,8 +836,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -921,8 +845,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -931,8 +854,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointoverrides_nodejs">
 <a href="#endpointoverrides_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Overrides</a>
@@ -941,8 +863,7 @@ to `true`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of services with an endpoint to override what was from the Keystone catalog
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -950,8 +871,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
 <a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
@@ -960,8 +880,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
- It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -970,8 +889,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
@@ -980,8 +898,7 @@ to `true`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -990,8 +907,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdomainid_nodejs">
 <a href="#projectdomainid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Domain<wbr>Id</a>
@@ -1000,8 +916,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectdomainname_nodejs">
 <a href="#projectdomainname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Domain<wbr>Name</a>
@@ -1010,8 +925,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1020,8 +934,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
- It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swauth_nodejs">
 <a href="#swauth_nodejs" style="color: inherit; text-decoration: inherit;">swauth</a>
@@ -1030,8 +943,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
- It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1040,8 +952,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantname_nodejs">
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -1050,8 +961,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1060,8 +970,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useoctavia_nodejs">
 <a href="#useoctavia_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Octavia</a>
@@ -1070,8 +979,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
- It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdomainid_nodejs">
 <a href="#userdomainid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Domain<wbr>Id</a>
@@ -1080,8 +988,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdomainname_nodejs">
 <a href="#userdomainname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Domain<wbr>Name</a>
@@ -1090,8 +997,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -1100,8 +1006,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -1110,13 +1015,11 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_reauth_python">
 <a href="#allow_reauth_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>reauth</a>
@@ -1126,8 +1029,7 @@ to `true`.
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
- It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_credential_id_python">
 <a href="#application_credential_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>id</a>
@@ -1136,8 +1038,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_credential_name_python">
 <a href="#application_credential_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>name</a>
@@ -1146,8 +1047,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_credential_secret_python">
 <a href="#application_credential_secret_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>secret</a>
@@ -1156,8 +1056,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_url_python">
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
@@ -1166,8 +1065,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_file_python">
 <a href="#cacert_file_python" style="color: inherit; text-decoration: inherit;">cacert_<wbr>file</a>
@@ -1176,8 +1074,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -1186,8 +1083,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_python">
 <a href="#cloud_python" style="color: inherit; text-decoration: inherit;">cloud</a>
@@ -1196,8 +1092,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
- It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_domain_python">
 <a href="#default_domain_python" style="color: inherit; text-decoration: inherit;">default_<wbr>domain</a>
@@ -1206,8 +1101,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delayed_auth_python">
 <a href="#delayed_auth_python" style="color: inherit; text-decoration: inherit;">delayed_<wbr>auth</a>
@@ -1217,8 +1111,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
- It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_no_cache_header_python">
 <a href="#disable_no_cache_header_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>no_<wbr>cache_<wbr>header</a>
@@ -1227,8 +1120,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -1237,8 +1129,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -1247,8 +1138,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_overrides_python">
 <a href="#endpoint_overrides_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>overrides</a>
@@ -1257,8 +1147,7 @@ to `true`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of services with an endpoint to override what was from the Keystone catalog
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -1266,8 +1155,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
 <a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
@@ -1276,8 +1164,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
- It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1286,8 +1173,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
@@ -1296,8 +1182,7 @@ to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1306,8 +1191,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_domain_id_python">
 <a href="#project_domain_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>domain_<wbr>id</a>
@@ -1316,8 +1200,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_domain_name_python">
 <a href="#project_domain_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>domain_<wbr>name</a>
@@ -1326,8 +1209,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1336,8 +1218,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
- It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swauth_python">
 <a href="#swauth_python" style="color: inherit; text-decoration: inherit;">swauth</a>
@@ -1346,8 +1227,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
- It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1356,8 +1236,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_name_python">
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -1366,8 +1245,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1376,8 +1254,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_octavia_python">
 <a href="#use_octavia_python" style="color: inherit; text-decoration: inherit;">use_<wbr>octavia</a>
@@ -1386,8 +1263,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
- It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_domain_id_python">
 <a href="#user_domain_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>domain_<wbr>id</a>
@@ -1396,8 +1272,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_domain_name_python">
 <a href="#user_domain_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>domain_<wbr>name</a>
@@ -1406,8 +1281,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -1416,8 +1290,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -1426,8 +1299,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username to login with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1438,8 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1447,13 +1318,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1461,13 +1330,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1475,13 +1342,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1489,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

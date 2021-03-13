@@ -253,8 +253,7 @@ The IkePolicy resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authalgorithm_csharp">
 <a href="#authalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
@@ -264,8 +263,7 @@ The IkePolicy resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -275,8 +273,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionalgorithm_csharp">
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -286,8 +283,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_csharp">
 <a href="#ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -297,8 +293,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimes_csharp">
 <a href="#lifetimes_csharp" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
@@ -307,8 +302,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ike<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -318,8 +312,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfs_csharp">
 <a href="#pfs_csharp" style="color: inherit; text-decoration: inherit;">Pfs</a>
@@ -329,8 +322,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phase1negotiationmode_csharp">
 <a href="#phase1negotiationmode_csharp" style="color: inherit; text-decoration: inherit;">Phase1Negotiation<wbr>Mode</a>
@@ -340,8 +332,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -353,8 +344,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -364,8 +354,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -374,13 +363,11 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authalgorithm_go">
 <a href="#authalgorithm_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
@@ -390,8 +377,7 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -401,8 +387,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionalgorithm_go">
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -412,8 +397,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_go">
 <a href="#ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -423,8 +407,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimes_go">
 <a href="#lifetimes_go" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
@@ -433,8 +416,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">[]Ike<wbr>Policy<wbr>Lifetime</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -444,8 +426,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfs_go">
 <a href="#pfs_go" style="color: inherit; text-decoration: inherit;">Pfs</a>
@@ -455,8 +436,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phase1negotiationmode_go">
 <a href="#phase1negotiationmode_go" style="color: inherit; text-decoration: inherit;">Phase1Negotiation<wbr>Mode</a>
@@ -466,8 +446,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -479,8 +458,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -490,8 +468,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -500,13 +477,11 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authalgorithm_nodejs">
 <a href="#authalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Algorithm</a>
@@ -516,8 +491,7 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -527,8 +501,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionalgorithm_nodejs">
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -538,8 +511,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_nodejs">
 <a href="#ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
@@ -549,8 +521,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimes_nodejs">
 <a href="#lifetimes_nodejs" style="color: inherit; text-decoration: inherit;">lifetimes</a>
@@ -559,8 +530,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">Ike<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -570,8 +540,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfs_nodejs">
 <a href="#pfs_nodejs" style="color: inherit; text-decoration: inherit;">pfs</a>
@@ -581,8 +550,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phase1negotiationmode_nodejs">
 <a href="#phase1negotiationmode_nodejs" style="color: inherit; text-decoration: inherit;">phase1Negotiation<wbr>Mode</a>
@@ -592,8 +560,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -605,8 +572,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -616,8 +582,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -626,13 +591,11 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auth_algorithm_python">
 <a href="#auth_algorithm_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>algorithm</a>
@@ -642,8 +605,7 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -653,8 +615,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_algorithm_python">
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -664,8 +625,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_version_python">
 <a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
@@ -675,8 +635,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimes_python">
 <a href="#lifetimes_python" style="color: inherit; text-decoration: inherit;">lifetimes</a>
@@ -685,8 +644,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">Sequence[Ike<wbr>Policy<wbr>Lifetime<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -696,8 +654,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfs_python">
 <a href="#pfs_python" style="color: inherit; text-decoration: inherit;">pfs</a>
@@ -707,8 +664,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phase1_negotiation_mode_python">
 <a href="#phase1_negotiation_mode_python" style="color: inherit; text-decoration: inherit;">phase1_<wbr>negotiation_<wbr>mode</a>
@@ -718,8 +674,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -731,8 +686,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -742,8 +696,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -752,8 +705,7 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -764,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -773,13 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -787,13 +736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -801,13 +748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -815,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -943,8 +887,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authalgorithm_csharp">
 <a href="#state_authalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
@@ -954,8 +897,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -965,8 +907,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionalgorithm_csharp">
 <a href="#state_encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -976,8 +917,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeversion_csharp">
 <a href="#state_ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -987,8 +927,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimes_csharp">
 <a href="#state_lifetimes_csharp" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
@@ -997,8 +936,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ike<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1008,8 +946,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pfs_csharp">
 <a href="#state_pfs_csharp" style="color: inherit; text-decoration: inherit;">Pfs</a>
@@ -1019,8 +956,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phase1negotiationmode_csharp">
 <a href="#state_phase1negotiationmode_csharp" style="color: inherit; text-decoration: inherit;">Phase1Negotiation<wbr>Mode</a>
@@ -1030,8 +966,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1043,8 +978,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1054,8 +988,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1064,13 +997,11 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authalgorithm_go">
 <a href="#state_authalgorithm_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Algorithm</a>
@@ -1080,8 +1011,7 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1091,8 +1021,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionalgorithm_go">
 <a href="#state_encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -1102,8 +1031,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeversion_go">
 <a href="#state_ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -1113,8 +1041,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimes_go">
 <a href="#state_lifetimes_go" style="color: inherit; text-decoration: inherit;">Lifetimes</a>
@@ -1123,8 +1050,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">[]Ike<wbr>Policy<wbr>Lifetime</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1134,8 +1060,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pfs_go">
 <a href="#state_pfs_go" style="color: inherit; text-decoration: inherit;">Pfs</a>
@@ -1145,8 +1070,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phase1negotiationmode_go">
 <a href="#state_phase1negotiationmode_go" style="color: inherit; text-decoration: inherit;">Phase1Negotiation<wbr>Mode</a>
@@ -1156,8 +1080,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1169,8 +1092,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1180,8 +1102,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1190,13 +1111,11 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authalgorithm_nodejs">
 <a href="#state_authalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Algorithm</a>
@@ -1206,8 +1125,7 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1217,8 +1135,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionalgorithm_nodejs">
 <a href="#state_encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -1228,8 +1145,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeversion_nodejs">
 <a href="#state_ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
@@ -1239,8 +1155,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimes_nodejs">
 <a href="#state_lifetimes_nodejs" style="color: inherit; text-decoration: inherit;">lifetimes</a>
@@ -1249,8 +1164,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">Ike<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1260,8 +1174,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pfs_nodejs">
 <a href="#state_pfs_nodejs" style="color: inherit; text-decoration: inherit;">pfs</a>
@@ -1271,8 +1184,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phase1negotiationmode_nodejs">
 <a href="#state_phase1negotiationmode_nodejs" style="color: inherit; text-decoration: inherit;">phase1Negotiation<wbr>Mode</a>
@@ -1282,8 +1194,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1295,8 +1206,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1306,8 +1216,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1316,13 +1225,11 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auth_algorithm_python">
 <a href="#state_auth_algorithm_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>algorithm</a>
@@ -1332,8 +1239,7 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1343,8 +1249,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_algorithm_python">
 <a href="#state_encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -1354,8 +1259,7 @@ Changing this updates the description of the existing policy.
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ike_version_python">
 <a href="#state_ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
@@ -1365,8 +1269,7 @@ The default value is aes-128. Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimes_python">
 <a href="#state_lifetimes_python" style="color: inherit; text-decoration: inherit;">lifetimes</a>
@@ -1375,8 +1278,7 @@ Changing this updates the existing policy.
         <span class="property-type"><a href="#ikepolicylifetime">Sequence[Ike<wbr>Policy<wbr>Lifetime<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1386,8 +1288,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pfs_python">
 <a href="#state_pfs_python" style="color: inherit; text-decoration: inherit;">pfs</a>
@@ -1397,8 +1298,7 @@ the existing policy.
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phase1_negotiation_mode_python">
 <a href="#state_phase1_negotiation_mode_python" style="color: inherit; text-decoration: inherit;">phase1_<wbr>negotiation_<wbr>mode</a>
@@ -1408,8 +1308,7 @@ Changing this updates the existing policy.
     </dt>
     <dd>{{% md %}}The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1421,8 +1320,7 @@ Changing this updates the existing policy.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1432,8 +1330,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1442,8 +1339,7 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1458,8 +1354,7 @@ create a service for another policy. Changing this creates a new policy.
 <h4 id="ikepolicylifetime">Ike<wbr>Policy<wbr>Lifetime</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -1467,8 +1362,7 @@ create a service for another policy. Changing this creates a new policy.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1478,13 +1372,11 @@ create a service for another policy. Changing this creates a new policy.
     </dt>
     <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
 Default is 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -1492,8 +1384,7 @@ Default is 3600.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1503,13 +1394,11 @@ Default is 3600.
     </dt>
     <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
 Default is 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
@@ -1517,8 +1406,7 @@ Default is 3600.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1528,13 +1416,11 @@ Default is 3600.
     </dt>
     <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
 Default is 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
@@ -1542,8 +1428,7 @@ Default is 3600.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1553,8 +1438,7 @@ Default is 3600.
     </dt>
     <dd>{{% md %}}The value for the lifetime of the security association. Must be a positive integer.
 Default is 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

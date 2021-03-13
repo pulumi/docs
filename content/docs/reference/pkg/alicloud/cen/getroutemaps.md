@@ -183,8 +183,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -193,8 +192,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cenregionid_csharp">
 <a href="#cenregionid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Region<wbr>Id</a>
@@ -203,8 +201,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionregex_csharp">
 <a href="#descriptionregex_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
@@ -213,8 +210,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter CEN route map by description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -223,8 +219,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -232,8 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -242,8 +236,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transmitdirection_csharp">
 <a href="#transmitdirection_csharp" style="color: inherit; text-decoration: inherit;">Transmit<wbr>Direction</a>
@@ -252,13 +245,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -267,8 +258,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cenregionid_go">
 <a href="#cenregionid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Region<wbr>Id</a>
@@ -277,8 +267,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionregex_go">
 <a href="#descriptionregex_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
@@ -287,8 +276,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter CEN route map by description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -297,8 +285,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -306,8 +293,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -316,8 +302,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transmitdirection_go">
 <a href="#transmitdirection_go" style="color: inherit; text-decoration: inherit;">Transmit<wbr>Direction</a>
@@ -326,13 +311,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
@@ -341,8 +324,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cenregionid_nodejs">
 <a href="#cenregionid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Region<wbr>Id</a>
@@ -351,8 +333,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="descriptionregex_nodejs">
 <a href="#descriptionregex_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Regex</a>
@@ -361,8 +342,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter CEN route map by description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -371,8 +351,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
@@ -380,8 +359,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -390,8 +368,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transmitdirection_nodejs">
 <a href="#transmitdirection_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>Direction</a>
@@ -400,13 +377,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
@@ -415,8 +390,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cen_region_id_python">
 <a href="#cen_region_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>region_<wbr>id</a>
@@ -425,8 +399,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_regex_python">
 <a href="#description_regex_python" style="color: inherit; text-decoration: inherit;">description_<wbr>regex</a>
@@ -435,8 +408,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter CEN route map by description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -445,8 +417,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
@@ -454,8 +425,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -464,8 +434,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transmit_direction_python">
 <a href="#transmit_direction_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>direction</a>
@@ -474,8 +443,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -488,8 +456,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -498,8 +465,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -508,8 +474,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -518,8 +483,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maps_csharp">
 <a href="#maps_csharp" style="color: inherit; text-decoration: inherit;">Maps</a>
@@ -528,8 +492,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getroutemapsmap">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cen.<wbr>Outputs.<wbr>Get<wbr>Route<wbr>Maps<wbr>Map&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN instances. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cenregionid_csharp">
 <a href="#cenregionid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Region<wbr>Id</a>
@@ -538,8 +501,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="descriptionregex_csharp">
 <a href="#descriptionregex_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
@@ -547,8 +509,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -556,8 +517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -566,8 +526,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transmitdirection_csharp">
 <a href="#transmitdirection_csharp" style="color: inherit; text-decoration: inherit;">Transmit<wbr>Direction</a>
@@ -576,13 +535,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -591,8 +548,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,8 +557,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -611,8 +566,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maps_go">
 <a href="#maps_go" style="color: inherit; text-decoration: inherit;">Maps</a>
@@ -621,8 +575,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getroutemapsmap">[]Get<wbr>Route<wbr>Maps<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN instances. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cenregionid_go">
 <a href="#cenregionid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Region<wbr>Id</a>
@@ -631,8 +584,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="descriptionregex_go">
 <a href="#descriptionregex_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
@@ -640,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -649,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -659,8 +609,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transmitdirection_go">
 <a href="#transmitdirection_go" style="color: inherit; text-decoration: inherit;">Transmit<wbr>Direction</a>
@@ -669,13 +618,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
@@ -684,8 +631,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -694,8 +640,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -704,8 +649,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maps_nodejs">
 <a href="#maps_nodejs" style="color: inherit; text-decoration: inherit;">maps</a>
@@ -714,8 +658,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getroutemapsmap">Get<wbr>Route<wbr>Maps<wbr>Map[]</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN instances. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cenregionid_nodejs">
 <a href="#cenregionid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Region<wbr>Id</a>
@@ -724,8 +667,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="descriptionregex_nodejs">
 <a href="#descriptionregex_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Regex</a>
@@ -733,8 +675,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
@@ -742,8 +683,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -752,8 +692,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transmitdirection_nodejs">
 <a href="#transmitdirection_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>Direction</a>
@@ -762,13 +701,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
@@ -777,8 +714,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +723,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -797,8 +732,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of CEN route map IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maps_python">
 <a href="#maps_python" style="color: inherit; text-decoration: inherit;">maps</a>
@@ -807,8 +741,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getroutemapsmap">Sequence[Get<wbr>Route<wbr>Maps<wbr>Map]</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN instances. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cen_region_id_python">
 <a href="#cen_region_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>region_<wbr>id</a>
@@ -817,8 +750,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_regex_python">
 <a href="#description_regex_python" style="color: inherit; text-decoration: inherit;">description_<wbr>regex</a>
@@ -826,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
@@ -835,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -845,8 +775,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the route map.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transmit_direction_python">
 <a href="#transmit_direction_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>direction</a>
@@ -855,8 +784,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -870,8 +798,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aspathmatchmode_csharp">
 <a href="#aspathmatchmode_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Path<wbr>Match<wbr>Mode</a>
@@ -880,8 +807,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the as-path attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -890,8 +816,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cenregionid_csharp">
 <a href="#cenregionid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Region<wbr>Id</a>
@@ -900,8 +825,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrmatchmode_csharp">
 <a href="#cidrmatchmode_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Match<wbr>Mode</a>
@@ -910,8 +834,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="communitymatchmode_csharp">
 <a href="#communitymatchmode_csharp" style="color: inherit; text-decoration: inherit;">Community<wbr>Match<wbr>Mode</a>
@@ -920,8 +843,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="communityoperatemode_csharp">
 <a href="#communityoperatemode_csharp" style="color: inherit; text-decoration: inherit;">Community<wbr>Operate<wbr>Mode</a>
@@ -930,8 +852,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -940,8 +861,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationchildinstancetypes_csharp">
 <a href="#destinationchildinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Child<wbr>Instance<wbr>Types</a>
@@ -950,8 +870,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationcidrblocks_csharp">
 <a href="#destinationcidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Blocks</a>
@@ -960,8 +879,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationinstanceids_csharp">
 <a href="#destinationinstanceids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Instance<wbr>Ids</a>
@@ -970,8 +888,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationinstanceidsreversematch_csharp">
 <a href="#destinationinstanceidsreversematch_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
@@ -980,8 +897,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationroutetableids_csharp">
 <a href="#destinationroutetableids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Route<wbr>Table<wbr>Ids</a>
@@ -990,8 +906,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1000,8 +915,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mapresult_csharp">
 <a href="#mapresult_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Result</a>
@@ -1010,8 +924,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route meets all the match conditions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchasns_csharp">
 <a href="#matchasns_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Asns</a>
@@ -1020,8 +933,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the As path list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchcommunitysets_csharp">
 <a href="#matchcommunitysets_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Community<wbr>Sets</a>
@@ -1030,8 +942,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nextpriority_csharp">
 <a href="#nextpriority_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Priority</a>
@@ -1040,8 +951,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatecommunitysets_csharp">
 <a href="#operatecommunitysets_csharp" style="color: inherit; text-decoration: inherit;">Operate<wbr>Community<wbr>Sets</a>
@@ -1050,8 +960,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preference_csharp">
 <a href="#preference_csharp" style="color: inherit; text-decoration: inherit;">Preference</a>
@@ -1060,8 +969,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the preference of the route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prependaspaths_csharp">
 <a href="#prependaspaths_csharp" style="color: inherit; text-decoration: inherit;">Prepend<wbr>As<wbr>Paths</a>
@@ -1070,8 +978,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Indicates AS Path prepending when a regional gateway receives or publishes a route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1080,8 +987,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routemapid_csharp">
 <a href="#routemapid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Map<wbr>Id</a>
@@ -1090,8 +996,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routetypes_csharp">
 <a href="#routetypes_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Types</a>
@@ -1100,8 +1005,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcechildinstancetypes_csharp">
 <a href="#sourcechildinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Child<wbr>Instance<wbr>Types</a>
@@ -1110,8 +1014,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstanceids_csharp">
 <a href="#sourceinstanceids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Ids</a>
@@ -1120,8 +1023,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstanceidsreversematch_csharp">
 <a href="#sourceinstanceidsreversematch_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
@@ -1130,8 +1032,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the SourceInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceregionids_csharp">
 <a href="#sourceregionids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Region<wbr>Ids</a>
@@ -1140,8 +1041,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceroutetableids_csharp">
 <a href="#sourceroutetableids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Route<wbr>Table<wbr>Ids</a>
@@ -1150,8 +1050,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1160,8 +1059,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmitdirection_csharp">
 <a href="#transmitdirection_csharp" style="color: inherit; text-decoration: inherit;">Transmit<wbr>Direction</a>
@@ -1170,13 +1068,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aspathmatchmode_go">
 <a href="#aspathmatchmode_go" style="color: inherit; text-decoration: inherit;">As<wbr>Path<wbr>Match<wbr>Mode</a>
@@ -1185,8 +1081,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the as-path attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -1195,8 +1090,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cenregionid_go">
 <a href="#cenregionid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Region<wbr>Id</a>
@@ -1205,8 +1099,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrmatchmode_go">
 <a href="#cidrmatchmode_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Match<wbr>Mode</a>
@@ -1215,8 +1108,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="communitymatchmode_go">
 <a href="#communitymatchmode_go" style="color: inherit; text-decoration: inherit;">Community<wbr>Match<wbr>Mode</a>
@@ -1225,8 +1117,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="communityoperatemode_go">
 <a href="#communityoperatemode_go" style="color: inherit; text-decoration: inherit;">Community<wbr>Operate<wbr>Mode</a>
@@ -1235,8 +1126,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1245,8 +1135,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationchildinstancetypes_go">
 <a href="#destinationchildinstancetypes_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Child<wbr>Instance<wbr>Types</a>
@@ -1255,8 +1144,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationcidrblocks_go">
 <a href="#destinationcidrblocks_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Blocks</a>
@@ -1265,8 +1153,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationinstanceids_go">
 <a href="#destinationinstanceids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Instance<wbr>Ids</a>
@@ -1275,8 +1162,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationinstanceidsreversematch_go">
 <a href="#destinationinstanceidsreversematch_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
@@ -1285,8 +1171,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationroutetableids_go">
 <a href="#destinationroutetableids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Route<wbr>Table<wbr>Ids</a>
@@ -1295,8 +1180,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1305,8 +1189,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mapresult_go">
 <a href="#mapresult_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Result</a>
@@ -1315,8 +1198,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route meets all the match conditions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchasns_go">
 <a href="#matchasns_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Asns</a>
@@ -1325,8 +1207,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the As path list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchcommunitysets_go">
 <a href="#matchcommunitysets_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Community<wbr>Sets</a>
@@ -1335,8 +1216,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nextpriority_go">
 <a href="#nextpriority_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Priority</a>
@@ -1345,8 +1225,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatecommunitysets_go">
 <a href="#operatecommunitysets_go" style="color: inherit; text-decoration: inherit;">Operate<wbr>Community<wbr>Sets</a>
@@ -1355,8 +1234,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preference_go">
 <a href="#preference_go" style="color: inherit; text-decoration: inherit;">Preference</a>
@@ -1365,8 +1243,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the preference of the route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prependaspaths_go">
 <a href="#prependaspaths_go" style="color: inherit; text-decoration: inherit;">Prepend<wbr>As<wbr>Paths</a>
@@ -1375,8 +1252,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Indicates AS Path prepending when a regional gateway receives or publishes a route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1385,8 +1261,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routemapid_go">
 <a href="#routemapid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Map<wbr>Id</a>
@@ -1395,8 +1270,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routetypes_go">
 <a href="#routetypes_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Types</a>
@@ -1405,8 +1279,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcechildinstancetypes_go">
 <a href="#sourcechildinstancetypes_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Child<wbr>Instance<wbr>Types</a>
@@ -1415,8 +1288,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstanceids_go">
 <a href="#sourceinstanceids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Ids</a>
@@ -1425,8 +1297,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstanceidsreversematch_go">
 <a href="#sourceinstanceidsreversematch_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
@@ -1435,8 +1306,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the SourceInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceregionids_go">
 <a href="#sourceregionids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Region<wbr>Ids</a>
@@ -1445,8 +1315,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceroutetableids_go">
 <a href="#sourceroutetableids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Route<wbr>Table<wbr>Ids</a>
@@ -1455,8 +1324,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1465,8 +1333,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmitdirection_go">
 <a href="#transmitdirection_go" style="color: inherit; text-decoration: inherit;">Transmit<wbr>Direction</a>
@@ -1475,13 +1342,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aspathmatchmode_nodejs">
 <a href="#aspathmatchmode_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Path<wbr>Match<wbr>Mode</a>
@@ -1490,8 +1355,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the as-path attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
@@ -1500,8 +1364,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cenregionid_nodejs">
 <a href="#cenregionid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Region<wbr>Id</a>
@@ -1510,8 +1373,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrmatchmode_nodejs">
 <a href="#cidrmatchmode_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Match<wbr>Mode</a>
@@ -1520,8 +1382,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="communitymatchmode_nodejs">
 <a href="#communitymatchmode_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Match<wbr>Mode</a>
@@ -1530,8 +1391,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="communityoperatemode_nodejs">
 <a href="#communityoperatemode_nodejs" style="color: inherit; text-decoration: inherit;">community<wbr>Operate<wbr>Mode</a>
@@ -1540,8 +1400,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1550,8 +1409,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationchildinstancetypes_nodejs">
 <a href="#destinationchildinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Child<wbr>Instance<wbr>Types</a>
@@ -1560,8 +1418,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationcidrblocks_nodejs">
 <a href="#destinationcidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Blocks</a>
@@ -1570,8 +1427,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationinstanceids_nodejs">
 <a href="#destinationinstanceids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Instance<wbr>Ids</a>
@@ -1580,8 +1436,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationinstanceidsreversematch_nodejs">
 <a href="#destinationinstanceidsreversematch_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
@@ -1590,8 +1445,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationroutetableids_nodejs">
 <a href="#destinationroutetableids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Route<wbr>Table<wbr>Ids</a>
@@ -1600,8 +1454,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1610,8 +1463,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mapresult_nodejs">
 <a href="#mapresult_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Result</a>
@@ -1620,8 +1472,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route meets all the match conditions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchasns_nodejs">
 <a href="#matchasns_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Asns</a>
@@ -1630,8 +1481,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the As path list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchcommunitysets_nodejs">
 <a href="#matchcommunitysets_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Community<wbr>Sets</a>
@@ -1640,8 +1490,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nextpriority_nodejs">
 <a href="#nextpriority_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Priority</a>
@@ -1650,8 +1499,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatecommunitysets_nodejs">
 <a href="#operatecommunitysets_nodejs" style="color: inherit; text-decoration: inherit;">operate<wbr>Community<wbr>Sets</a>
@@ -1660,8 +1508,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preference_nodejs">
 <a href="#preference_nodejs" style="color: inherit; text-decoration: inherit;">preference</a>
@@ -1670,8 +1517,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the preference of the route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prependaspaths_nodejs">
 <a href="#prependaspaths_nodejs" style="color: inherit; text-decoration: inherit;">prepend<wbr>As<wbr>Paths</a>
@@ -1680,8 +1526,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Indicates AS Path prepending when a regional gateway receives or publishes a route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1690,8 +1535,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routemapid_nodejs">
 <a href="#routemapid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Map<wbr>Id</a>
@@ -1700,8 +1544,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routetypes_nodejs">
 <a href="#routetypes_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Types</a>
@@ -1710,8 +1553,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcechildinstancetypes_nodejs">
 <a href="#sourcechildinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Child<wbr>Instance<wbr>Types</a>
@@ -1720,8 +1562,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstanceids_nodejs">
 <a href="#sourceinstanceids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Ids</a>
@@ -1730,8 +1571,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstanceidsreversematch_nodejs">
 <a href="#sourceinstanceidsreversematch_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Ids<wbr>Reverse<wbr>Match</a>
@@ -1740,8 +1580,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the SourceInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceregionids_nodejs">
 <a href="#sourceregionids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Region<wbr>Ids</a>
@@ -1750,8 +1589,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceroutetableids_nodejs">
 <a href="#sourceroutetableids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Route<wbr>Table<wbr>Ids</a>
@@ -1760,8 +1598,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1770,8 +1607,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmitdirection_nodejs">
 <a href="#transmitdirection_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>Direction</a>
@@ -1780,13 +1616,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="as_path_match_mode_python">
 <a href="#as_path_match_mode_python" style="color: inherit; text-decoration: inherit;">as_<wbr>path_<wbr>match_<wbr>mode</a>
@@ -1795,8 +1629,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the as-path attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
@@ -1805,8 +1638,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cen_region_id_python">
 <a href="#cen_region_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>region_<wbr>id</a>
@@ -1815,8 +1647,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_match_mode_python">
 <a href="#cidr_match_mode_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>match_<wbr>mode</a>
@@ -1825,8 +1656,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the prefix attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="community_match_mode_python">
 <a href="#community_match_mode_python" style="color: inherit; text-decoration: inherit;">community_<wbr>match_<wbr>mode</a>
@@ -1835,8 +1665,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A match statement. It indicates the mode in which the community attribute is matched.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="community_operate_mode_python">
 <a href="#community_operate_mode_python" style="color: inherit; text-decoration: inherit;">community_<wbr>operate_<wbr>mode</a>
@@ -1845,8 +1674,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An action statement. It indicates the mode in which the community attribute is operated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1855,8 +1683,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_child_instance_types_python">
 <a href="#destination_child_instance_types_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>child_<wbr>instance_<wbr>types</a>
@@ -1865,8 +1692,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_cidr_blocks_python">
 <a href="#destination_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>blocks</a>
@@ -1875,8 +1701,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the prefix list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_instance_ids_python">
 <a href="#destination_instance_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids</a>
@@ -1885,8 +1710,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_instance_ids_reverse_match_python">
 <a href="#destination_instance_ids_reverse_match_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>instance_<wbr>ids_<wbr>reverse_<wbr>match</a>
@@ -1895,8 +1719,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the DestinationInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_route_table_ids_python">
 <a href="#destination_route_table_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>route_<wbr>table_<wbr>ids</a>
@@ -1905,8 +1728,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the destination route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1915,8 +1737,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="map_result_python">
 <a href="#map_result_python" style="color: inherit; text-decoration: inherit;">map_<wbr>result</a>
@@ -1925,8 +1746,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action that is performed to a route if the route meets all the match conditions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_asns_python">
 <a href="#match_asns_python" style="color: inherit; text-decoration: inherit;">match_<wbr>asns</a>
@@ -1935,8 +1755,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the As path list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_community_sets_python">
 <a href="#match_community_sets_python" style="color: inherit; text-decoration: inherit;">match_<wbr>community_<wbr>sets</a>
@@ -1945,8 +1764,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the community set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="next_priority_python">
 <a href="#next_priority_python" style="color: inherit; text-decoration: inherit;">next_<wbr>priority</a>
@@ -1955,8 +1773,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the next route map that is associated with the current route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operate_community_sets_python">
 <a href="#operate_community_sets_python" style="color: inherit; text-decoration: inherit;">operate_<wbr>community_<wbr>sets</a>
@@ -1965,8 +1782,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An action statement that operates the community attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preference_python">
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
@@ -1975,8 +1791,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An action statement that modifies the preference of the route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prepend_as_paths_python">
 <a href="#prepend_as_paths_python" style="color: inherit; text-decoration: inherit;">prepend_<wbr>as_<wbr>paths</a>
@@ -1985,8 +1800,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Indicates AS Path prepending when a regional gateway receives or publishes a route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1995,8 +1809,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_map_id_python">
 <a href="#route_map_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>map_<wbr>id</a>
@@ -2005,8 +1818,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the route map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_types_python">
 <a href="#route_types_python" style="color: inherit; text-decoration: inherit;">route_<wbr>types</a>
@@ -2015,8 +1827,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of route types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_child_instance_types_python">
 <a href="#source_child_instance_types_python" style="color: inherit; text-decoration: inherit;">source_<wbr>child_<wbr>instance_<wbr>types</a>
@@ -2025,8 +1836,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_ids_python">
 <a href="#source_instance_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids</a>
@@ -2035,8 +1845,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source instances.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_ids_reverse_match_python">
 <a href="#source_instance_ids_reverse_match_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>ids_<wbr>reverse_<wbr>match</a>
@@ -2045,8 +1854,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable the reverse match method of the SourceInstanceIds match condition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_region_ids_python">
 <a href="#source_region_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>region_<wbr>ids</a>
@@ -2055,8 +1863,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source regions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_route_table_ids_python">
 <a href="#source_route_table_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>route_<wbr>table_<wbr>ids</a>
@@ -2065,8 +1872,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A match statement that indicates the list of IDs of the source route tables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2075,8 +1881,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the route map, including `Creating`, `Active` and `Deleting`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmit_direction_python">
 <a href="#transmit_direction_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>direction</a>
@@ -2085,8 +1890,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which the route map is applied, including `RegionIn` and `RegionOut`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

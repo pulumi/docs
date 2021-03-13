@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiendpoint_csharp">
 <a href="#apiendpoint_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Endpoint</a>
@@ -177,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean API.
- It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacesaccessid_csharp">
 <a href="#spacesaccessid_csharp" style="color: inherit; text-decoration: inherit;">Spaces<wbr>Access<wbr>Id</a>
@@ -187,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key ID for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacesendpoint_csharp">
 <a href="#spacesendpoint_csharp" style="color: inherit; text-decoration: inherit;">Spaces<wbr>Endpoint</a>
@@ -197,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean Spaces API.
- It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacessecretkey_csharp">
 <a href="#spacessecretkey_csharp" style="color: inherit; text-decoration: inherit;">Spaces<wbr>Secret<wbr>Key</a>
@@ -207,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret access key for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -217,13 +212,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token key for API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiendpoint_go">
 <a href="#apiendpoint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Endpoint</a>
@@ -232,8 +225,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean API.
- It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacesaccessid_go">
 <a href="#spacesaccessid_go" style="color: inherit; text-decoration: inherit;">Spaces<wbr>Access<wbr>Id</a>
@@ -242,8 +234,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key ID for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacesendpoint_go">
 <a href="#spacesendpoint_go" style="color: inherit; text-decoration: inherit;">Spaces<wbr>Endpoint</a>
@@ -252,8 +243,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean Spaces API.
- It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacessecretkey_go">
 <a href="#spacessecretkey_go" style="color: inherit; text-decoration: inherit;">Spaces<wbr>Secret<wbr>Key</a>
@@ -262,8 +252,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret access key for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -272,13 +261,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token key for API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiendpoint_nodejs">
 <a href="#apiendpoint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Endpoint</a>
@@ -287,8 +274,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean API.
- It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacesaccessid_nodejs">
 <a href="#spacesaccessid_nodejs" style="color: inherit; text-decoration: inherit;">spaces<wbr>Access<wbr>Id</a>
@@ -297,8 +283,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key ID for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacesendpoint_nodejs">
 <a href="#spacesendpoint_nodejs" style="color: inherit; text-decoration: inherit;">spaces<wbr>Endpoint</a>
@@ -307,8 +292,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean Spaces API.
- It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spacessecretkey_nodejs">
 <a href="#spacessecretkey_nodejs" style="color: inherit; text-decoration: inherit;">spaces<wbr>Secret<wbr>Key</a>
@@ -317,8 +301,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret access key for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -327,13 +310,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token key for API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_endpoint_python">
 <a href="#api_endpoint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>endpoint</a>
@@ -342,8 +323,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean API.
- It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `DIGITALOCEAN_API_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spaces_access_id_python">
 <a href="#spaces_access_id_python" style="color: inherit; text-decoration: inherit;">spaces_<wbr>access_<wbr>id</a>
@@ -352,8 +332,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access key ID for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spaces_endpoint_python">
 <a href="#spaces_endpoint_python" style="color: inherit; text-decoration: inherit;">spaces_<wbr>endpoint</a>
@@ -362,8 +341,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to use for the DigitalOcean Spaces API.
- It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `SPACES_ENDPOINT_URL`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spaces_secret_key_python">
 <a href="#spaces_secret_key_python" style="color: inherit; text-decoration: inherit;">spaces_<wbr>secret_<wbr>key</a>
@@ -372,8 +350,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret access key for Spaces API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -382,8 +359,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token key for API operations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -394,8 +370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -403,13 +378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -417,13 +390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -431,13 +402,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -445,8 +414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

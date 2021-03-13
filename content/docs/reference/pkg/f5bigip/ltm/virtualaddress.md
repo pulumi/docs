@@ -266,8 +266,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -276,8 +275,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertizeroute_csharp">
 <a href="#advertizeroute_csharp" style="color: inherit; text-decoration: inherit;">Advertize<wbr>Route</a>
@@ -286,8 +284,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_csharp">
 <a href="#arp_csharp" style="color: inherit; text-decoration: inherit;">Arp</a>
@@ -296,8 +293,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodelete_csharp">
 <a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -306,8 +302,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connlimit_csharp">
 <a href="#connlimit_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -316,8 +311,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -326,8 +320,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpecho_csharp">
 <a href="#icmpecho_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Echo</a>
@@ -336,8 +329,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficgroup_csharp">
 <a href="#trafficgroup_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
@@ -346,13 +338,11 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -361,8 +351,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertizeroute_go">
 <a href="#advertizeroute_go" style="color: inherit; text-decoration: inherit;">Advertize<wbr>Route</a>
@@ -371,8 +360,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_go">
 <a href="#arp_go" style="color: inherit; text-decoration: inherit;">Arp</a>
@@ -381,8 +369,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodelete_go">
 <a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -391,8 +378,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connlimit_go">
 <a href="#connlimit_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -401,8 +387,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -411,8 +396,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpecho_go">
 <a href="#icmpecho_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Echo</a>
@@ -421,8 +405,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficgroup_go">
 <a href="#trafficgroup_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
@@ -431,13 +414,11 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -446,8 +427,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertizeroute_nodejs">
 <a href="#advertizeroute_nodejs" style="color: inherit; text-decoration: inherit;">advertize<wbr>Route</a>
@@ -456,8 +436,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_nodejs">
 <a href="#arp_nodejs" style="color: inherit; text-decoration: inherit;">arp</a>
@@ -466,8 +445,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodelete_nodejs">
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
@@ -476,8 +454,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connlimit_nodejs">
 <a href="#connlimit_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Limit</a>
@@ -486,8 +463,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -496,8 +472,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpecho_nodejs">
 <a href="#icmpecho_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Echo</a>
@@ -506,8 +481,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficgroup_nodejs">
 <a href="#trafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Group</a>
@@ -516,13 +490,11 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -531,8 +503,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertize_route_python">
 <a href="#advertize_route_python" style="color: inherit; text-decoration: inherit;">advertize_<wbr>route</a>
@@ -541,8 +512,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_python">
 <a href="#arp_python" style="color: inherit; text-decoration: inherit;">arp</a>
@@ -551,8 +521,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_delete_python">
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
@@ -561,8 +530,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conn_limit_python">
 <a href="#conn_limit_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>limit</a>
@@ -571,8 +539,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -581,8 +548,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmp_echo_python">
 <a href="#icmp_echo_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>echo</a>
@@ -591,8 +557,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_group_python">
 <a href="#traffic_group_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>group</a>
@@ -601,8 +566,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -613,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -622,13 +585,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,13 +597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -650,13 +609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -664,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -792,8 +748,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertizeroute_csharp">
 <a href="#state_advertizeroute_csharp" style="color: inherit; text-decoration: inherit;">Advertize<wbr>Route</a>
@@ -802,8 +757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_csharp">
 <a href="#state_arp_csharp" style="color: inherit; text-decoration: inherit;">Arp</a>
@@ -812,8 +766,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autodelete_csharp">
 <a href="#state_autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -822,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connlimit_csharp">
 <a href="#state_connlimit_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -832,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -842,8 +793,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmpecho_csharp">
 <a href="#state_icmpecho_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Echo</a>
@@ -852,8 +802,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -862,8 +811,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficgroup_csharp">
 <a href="#state_trafficgroup_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
@@ -872,13 +820,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertizeroute_go">
 <a href="#state_advertizeroute_go" style="color: inherit; text-decoration: inherit;">Advertize<wbr>Route</a>
@@ -887,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_go">
 <a href="#state_arp_go" style="color: inherit; text-decoration: inherit;">Arp</a>
@@ -897,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autodelete_go">
 <a href="#state_autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -907,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connlimit_go">
 <a href="#state_connlimit_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -917,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -927,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmpecho_go">
 <a href="#state_icmpecho_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Echo</a>
@@ -937,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -947,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficgroup_go">
 <a href="#state_trafficgroup_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Group</a>
@@ -957,13 +896,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertizeroute_nodejs">
 <a href="#state_advertizeroute_nodejs" style="color: inherit; text-decoration: inherit;">advertize<wbr>Route</a>
@@ -972,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_nodejs">
 <a href="#state_arp_nodejs" style="color: inherit; text-decoration: inherit;">arp</a>
@@ -982,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autodelete_nodejs">
 <a href="#state_autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
@@ -992,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connlimit_nodejs">
 <a href="#state_connlimit_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Limit</a>
@@ -1002,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1012,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmpecho_nodejs">
 <a href="#state_icmpecho_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Echo</a>
@@ -1022,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1032,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficgroup_nodejs">
 <a href="#state_trafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Group</a>
@@ -1042,13 +972,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertize_route_python">
 <a href="#state_advertize_route_python" style="color: inherit; text-decoration: inherit;">advertize_<wbr>route</a>
@@ -1057,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enabled dynamic routing of the address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_python">
 <a href="#state_arp_python" style="color: inherit; text-decoration: inherit;">arp</a>
@@ -1067,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable ARP for the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_delete_python">
 <a href="#state_auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
@@ -1077,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically delete the virtual address with the virtual server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_conn_limit_python">
 <a href="#state_conn_limit_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>limit</a>
@@ -1087,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of connections for virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1097,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmp_echo_python">
 <a href="#state_icmp_echo_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>echo</a>
@@ -1107,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1117,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the virtual address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_group_python">
 <a href="#state_traffic_group_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>group</a>
@@ -1127,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the partition and traffic group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

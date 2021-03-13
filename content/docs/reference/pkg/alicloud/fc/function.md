@@ -170,8 +170,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="handler_csharp">
 <a href="#handler_csharp" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -180,8 +179,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_csharp">
 <a href="#runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -190,8 +188,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -200,8 +197,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caport_csharp">
 <a href="#caport_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Port</a>
@@ -210,8 +206,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codechecksum_csharp">
 <a href="#codechecksum_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Checksum</a>
@@ -220,8 +215,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customcontainerconfig_csharp">
 <a href="#customcontainerconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Container<wbr>Config</a>
@@ -230,8 +224,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functioncustomcontainerconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Function<wbr>Custom<wbr>Container<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -240,8 +233,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -250,8 +242,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -260,8 +251,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializationtimeout_csharp">
 <a href="#initializationtimeout_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Timeout</a>
@@ -270,8 +260,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializer_csharp">
 <a href="#initializer_csharp" style="color: inherit; text-decoration: inherit;">Initializer</a>
@@ -280,8 +269,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceconcurrency_csharp">
 <a href="#instanceconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Concurrency</a>
@@ -290,8 +278,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -300,8 +287,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysize_csharp">
 <a href="#memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -310,8 +296,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -320,8 +305,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -330,8 +314,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ossbucket_csharp">
 <a href="#ossbucket_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket</a>
@@ -340,8 +323,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osskey_csharp">
 <a href="#osskey_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key</a>
@@ -350,8 +332,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -360,13 +341,11 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="handler_go">
 <a href="#handler_go" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -375,8 +354,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_go">
 <a href="#runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -385,8 +363,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -395,8 +372,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caport_go">
 <a href="#caport_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Port</a>
@@ -405,8 +381,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codechecksum_go">
 <a href="#codechecksum_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Checksum</a>
@@ -415,8 +390,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customcontainerconfig_go">
 <a href="#customcontainerconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Container<wbr>Config</a>
@@ -425,8 +399,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -435,8 +408,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -445,8 +417,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -455,8 +426,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializationtimeout_go">
 <a href="#initializationtimeout_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Timeout</a>
@@ -465,8 +435,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializer_go">
 <a href="#initializer_go" style="color: inherit; text-decoration: inherit;">Initializer</a>
@@ -475,8 +444,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceconcurrency_go">
 <a href="#instanceconcurrency_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Concurrency</a>
@@ -485,8 +453,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -495,8 +462,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysize_go">
 <a href="#memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -505,8 +471,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -515,8 +480,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -525,8 +489,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ossbucket_go">
 <a href="#ossbucket_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket</a>
@@ -535,8 +498,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osskey_go">
 <a href="#osskey_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key</a>
@@ -545,8 +507,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -555,13 +516,11 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="handler_nodejs">
 <a href="#handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -570,8 +529,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_nodejs">
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -580,8 +538,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -590,8 +547,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caport_nodejs">
 <a href="#caport_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Port</a>
@@ -600,8 +556,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codechecksum_nodejs">
 <a href="#codechecksum_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Checksum</a>
@@ -610,8 +565,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customcontainerconfig_nodejs">
 <a href="#customcontainerconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Container<wbr>Config</a>
@@ -620,8 +574,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -630,8 +583,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -640,8 +592,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -650,8 +601,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializationtimeout_nodejs">
 <a href="#initializationtimeout_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Timeout</a>
@@ -660,8 +610,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializer_nodejs">
 <a href="#initializer_nodejs" style="color: inherit; text-decoration: inherit;">initializer</a>
@@ -670,8 +619,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceconcurrency_nodejs">
 <a href="#instanceconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Concurrency</a>
@@ -680,8 +628,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -690,8 +637,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysize_nodejs">
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -700,8 +646,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -710,8 +655,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -720,8 +664,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ossbucket_nodejs">
 <a href="#ossbucket_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket</a>
@@ -730,8 +673,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osskey_nodejs">
 <a href="#osskey_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Key</a>
@@ -740,8 +682,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -750,13 +691,11 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="handler_python">
 <a href="#handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -765,8 +704,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_python">
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -775,8 +713,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -785,8 +722,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_port_python">
 <a href="#ca_port_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>port</a>
@@ -795,8 +731,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_checksum_python">
 <a href="#code_checksum_python" style="color: inherit; text-decoration: inherit;">code_<wbr>checksum</a>
@@ -805,8 +740,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_container_config_python">
 <a href="#custom_container_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>container_<wbr>config</a>
@@ -815,8 +749,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -825,8 +758,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -835,8 +767,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -845,8 +776,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialization_timeout_python">
 <a href="#initialization_timeout_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>timeout</a>
@@ -855,8 +785,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializer_python">
 <a href="#initializer_python" style="color: inherit; text-decoration: inherit;">initializer</a>
@@ -865,8 +794,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_concurrency_python">
 <a href="#instance_concurrency_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>concurrency</a>
@@ -875,8 +803,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -885,8 +812,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_size_python">
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -895,8 +821,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -905,8 +830,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -915,8 +839,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oss_bucket_python">
 <a href="#oss_bucket_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>bucket</a>
@@ -925,8 +848,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oss_key_python">
 <a href="#oss_key_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>key</a>
@@ -935,8 +857,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -945,8 +866,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -957,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="functionid_csharp">
 <a href="#functionid_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
@@ -967,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -976,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -986,13 +903,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="functionid_go">
 <a href="#functionid_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
@@ -1001,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1010,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1020,13 +933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="functionid_nodejs">
 <a href="#functionid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Id</a>
@@ -1035,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1044,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -1054,13 +963,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="function_id_python">
 <a href="#function_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>id</a>
@@ -1069,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1078,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -1088,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1216,8 +1120,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_caport_csharp">
 <a href="#state_caport_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Port</a>
@@ -1226,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_codechecksum_csharp">
 <a href="#state_codechecksum_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Checksum</a>
@@ -1236,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customcontainerconfig_csharp">
 <a href="#state_customcontainerconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Container<wbr>Config</a>
@@ -1246,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functioncustomcontainerconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Function<wbr>Custom<wbr>Container<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1256,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_csharp">
 <a href="#state_environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -1266,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_csharp">
 <a href="#state_filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1276,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionid_csharp">
 <a href="#state_functionid_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
@@ -1286,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_handler_csharp">
 <a href="#state_handler_csharp" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -1296,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializationtimeout_csharp">
 <a href="#state_initializationtimeout_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Timeout</a>
@@ -1306,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializer_csharp">
 <a href="#state_initializer_csharp" style="color: inherit; text-decoration: inherit;">Initializer</a>
@@ -1316,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceconcurrency_csharp">
 <a href="#state_instanceconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Concurrency</a>
@@ -1326,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_csharp">
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1336,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_csharp">
 <a href="#state_lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1346,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysize_csharp">
 <a href="#state_memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -1356,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1366,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1376,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ossbucket_csharp">
 <a href="#state_ossbucket_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket</a>
@@ -1386,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osskey_csharp">
 <a href="#state_osskey_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key</a>
@@ -1396,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_csharp">
 <a href="#state_runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -1406,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1416,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1426,13 +1309,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_caport_go">
 <a href="#state_caport_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Port</a>
@@ -1441,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_codechecksum_go">
 <a href="#state_codechecksum_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Checksum</a>
@@ -1451,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customcontainerconfig_go">
 <a href="#state_customcontainerconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Container<wbr>Config</a>
@@ -1461,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1471,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_go">
 <a href="#state_environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -1481,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_go">
 <a href="#state_filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1491,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionid_go">
 <a href="#state_functionid_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Id</a>
@@ -1501,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_handler_go">
 <a href="#state_handler_go" style="color: inherit; text-decoration: inherit;">Handler</a>
@@ -1511,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializationtimeout_go">
 <a href="#state_initializationtimeout_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Timeout</a>
@@ -1521,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializer_go">
 <a href="#state_initializer_go" style="color: inherit; text-decoration: inherit;">Initializer</a>
@@ -1531,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceconcurrency_go">
 <a href="#state_instanceconcurrency_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Concurrency</a>
@@ -1541,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_go">
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1551,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_go">
 <a href="#state_lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1561,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysize_go">
 <a href="#state_memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -1571,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1581,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1591,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ossbucket_go">
 <a href="#state_ossbucket_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket</a>
@@ -1601,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osskey_go">
 <a href="#state_osskey_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key</a>
@@ -1611,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_go">
 <a href="#state_runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -1621,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1631,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1641,13 +1502,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_caport_nodejs">
 <a href="#state_caport_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Port</a>
@@ -1656,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_codechecksum_nodejs">
 <a href="#state_codechecksum_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Checksum</a>
@@ -1666,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customcontainerconfig_nodejs">
 <a href="#state_customcontainerconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Container<wbr>Config</a>
@@ -1676,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1686,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_nodejs">
 <a href="#state_environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -1696,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_nodejs">
 <a href="#state_filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1706,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionid_nodejs">
 <a href="#state_functionid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Id</a>
@@ -1716,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_handler_nodejs">
 <a href="#state_handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -1726,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializationtimeout_nodejs">
 <a href="#state_initializationtimeout_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Timeout</a>
@@ -1736,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializer_nodejs">
 <a href="#state_initializer_nodejs" style="color: inherit; text-decoration: inherit;">initializer</a>
@@ -1746,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceconcurrency_nodejs">
 <a href="#state_instanceconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Concurrency</a>
@@ -1756,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_nodejs">
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1766,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_nodejs">
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -1776,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysize_nodejs">
 <a href="#state_memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -1786,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1796,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -1806,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ossbucket_nodejs">
 <a href="#state_ossbucket_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket</a>
@@ -1816,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osskey_nodejs">
 <a href="#state_osskey_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Key</a>
@@ -1826,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_nodejs">
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -1836,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1846,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1856,13 +1695,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ca_port_python">
 <a href="#state_ca_port_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>port</a>
@@ -1871,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that the function listen to, only valid for [custom runtime](https://www.alibabacloud.com/help/doc-detail/132044.htm) and [custom container runtime](https://www.alibabacloud.com/help/doc-detail/179368.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_checksum_python">
 <a href="#state_code_checksum_python" style="color: inherit; text-decoration: inherit;">code_<wbr>checksum</a>
@@ -1881,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The checksum (crc64) of the function code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_container_config_python">
 <a href="#state_custom_container_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>container_<wbr>config</a>
@@ -1891,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for custom container runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1901,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute function description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environment_variables_python">
 <a href="#state_environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -1911,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map that defines environment variables for the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filename_python">
 <a href="#state_filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1921,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the function's deployment package within the local filesystem. It is conflict with the `oss_`-prefixed options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_function_id_python">
 <a href="#state_function_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>id</a>
@@ -1931,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_handler_python">
 <a href="#state_handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
@@ -1941,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function [entry point](https://www.alibabacloud.com/help/doc-detail/157704.htm) in your code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initialization_timeout_python">
 <a href="#state_initialization_timeout_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>timeout</a>
@@ -1951,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of time, in seconds, that the function's initialization should be run for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initializer_python">
 <a href="#state_initializer_python" style="color: inherit; text-decoration: inherit;">initializer</a>
@@ -1961,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entry point of the function's [initialization](https://www.alibabacloud.com/help/doc-detail/157704.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_concurrency_python">
 <a href="#state_instance_concurrency_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>concurrency</a>
@@ -1971,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests can be executed concurrently within the single function instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_type_python">
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1981,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_python">
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -1991,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_size_python">
 <a href="#state_memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -2001,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB your function can use at runtime. Defaults to `128`. Limits to [128, 3072].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2011,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute function name. It is the only in one service and is conflict with "name_prefix".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -2021,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only function name. It is conflict with "name".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oss_bucket_python">
 <a href="#state_oss_bucket_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>bucket</a>
@@ -2031,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OSS bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same Alibaba Cloud region where you are creating the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oss_key_python">
 <a href="#state_oss_key_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>key</a>
@@ -2041,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OSS key of an object containing the function's deployment package. Conflicts with `filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_python">
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2051,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See [Runtimes][https://www.alibabacloud.com/help/doc-detail/52077.htm] for valid values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2061,8 +1879,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2071,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time your function has to run in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2087,8 +1903,7 @@ The following state arguments are supported:
 <h4 id="functioncustomcontainerconfig">Function<wbr>Custom<wbr>Container<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2097,8 +1912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container image address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2107,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The args field specifies the arguments passed to the command.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -2117,13 +1930,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2132,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container image address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2142,8 +1952,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The args field specifies the arguments passed to the command.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -2152,13 +1961,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2167,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container image address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2177,8 +1983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The args field specifies the arguments passed to the command.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2187,13 +1992,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2202,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container image address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2212,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The args field specifies the arguments passed to the command.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2222,8 +2023,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entry point of the container, which specifies the actual command run by the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

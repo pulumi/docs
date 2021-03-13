@@ -632,8 +632,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacityproviderstrategies_csharp">
 <a href="#capacityproviderstrategies_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider<wbr>Strategies</a>
@@ -642,8 +641,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecapacityproviderstrategy">List&lt;Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -652,8 +650,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentcontroller_csharp">
 <a href="#deploymentcontroller_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Controller</a>
@@ -662,8 +659,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmaximumpercent_csharp">
 <a href="#deploymentmaximumpercent_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Maximum<wbr>Percent</a>
@@ -672,8 +668,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentminimumhealthypercent_csharp">
 <a href="#deploymentminimumhealthypercent_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
@@ -682,8 +677,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcount_csharp">
 <a href="#desiredcount_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Count</a>
@@ -692,8 +686,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableecsmanagedtags_csharp">
 <a href="#enableecsmanagedtags_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
@@ -702,8 +695,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcenewdeployment_csharp">
 <a href="#forcenewdeployment_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>New<wbr>Deployment</a>
@@ -712,8 +704,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiodseconds_csharp">
 <a href="#healthcheckgraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -722,8 +713,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrole_csharp">
 <a href="#iamrole_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role</a>
@@ -732,8 +722,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtype_csharp">
 <a href="#launchtype_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Type</a>
@@ -742,8 +731,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
 <a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -752,8 +740,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceloadbalancer">List&lt;Service<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -762,8 +749,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_csharp">
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -772,8 +758,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderedplacementstrategies_csharp">
 <a href="#orderedplacementstrategies_csharp" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Placement<wbr>Strategies</a>
@@ -782,8 +767,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceorderedplacementstrategy">List&lt;Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementconstraints_csharp">
 <a href="#placementconstraints_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
@@ -792,8 +776,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceplacementconstraint">List&lt;Service<wbr>Placement<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformversion_csharp">
 <a href="#platformversion_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
@@ -802,8 +785,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagatetags_csharp">
 <a href="#propagatetags_csharp" style="color: inherit; text-decoration: inherit;">Propagate<wbr>Tags</a>
@@ -812,8 +794,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulingstrategy_csharp">
 <a href="#schedulingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Strategy</a>
@@ -822,8 +803,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceregistries_csharp">
 <a href="#serviceregistries_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
@@ -832,8 +812,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -842,8 +821,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskdefinition_csharp">
 <a href="#taskdefinition_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition</a>
@@ -852,8 +830,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforsteadystate_csharp">
 <a href="#waitforsteadystate_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Steady<wbr>State</a>
@@ -861,13 +838,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacityproviderstrategies_go">
 <a href="#capacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider<wbr>Strategies</a>
@@ -876,8 +851,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -886,8 +860,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentcontroller_go">
 <a href="#deploymentcontroller_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Controller</a>
@@ -896,8 +869,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmaximumpercent_go">
 <a href="#deploymentmaximumpercent_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Maximum<wbr>Percent</a>
@@ -906,8 +878,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentminimumhealthypercent_go">
 <a href="#deploymentminimumhealthypercent_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
@@ -916,8 +887,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcount_go">
 <a href="#desiredcount_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Count</a>
@@ -926,8 +896,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableecsmanagedtags_go">
 <a href="#enableecsmanagedtags_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
@@ -936,8 +905,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcenewdeployment_go">
 <a href="#forcenewdeployment_go" style="color: inherit; text-decoration: inherit;">Force<wbr>New<wbr>Deployment</a>
@@ -946,8 +914,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiodseconds_go">
 <a href="#healthcheckgraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -956,8 +923,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrole_go">
 <a href="#iamrole_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role</a>
@@ -966,8 +932,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtype_go">
 <a href="#launchtype_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Type</a>
@@ -976,8 +941,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
 <a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -986,8 +950,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -996,8 +959,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_go">
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -1006,8 +968,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderedplacementstrategies_go">
 <a href="#orderedplacementstrategies_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Placement<wbr>Strategies</a>
@@ -1016,8 +977,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementconstraints_go">
 <a href="#placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
@@ -1026,8 +986,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformversion_go">
 <a href="#platformversion_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
@@ -1036,8 +995,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagatetags_go">
 <a href="#propagatetags_go" style="color: inherit; text-decoration: inherit;">Propagate<wbr>Tags</a>
@@ -1046,8 +1004,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulingstrategy_go">
 <a href="#schedulingstrategy_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Strategy</a>
@@ -1056,8 +1013,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceregistries_go">
 <a href="#serviceregistries_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
@@ -1066,8 +1022,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1076,8 +1031,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskdefinition_go">
 <a href="#taskdefinition_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition</a>
@@ -1086,8 +1040,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforsteadystate_go">
 <a href="#waitforsteadystate_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Steady<wbr>State</a>
@@ -1095,13 +1048,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacityproviderstrategies_nodejs">
 <a href="#capacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider<wbr>Strategies</a>
@@ -1110,8 +1061,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1120,8 +1070,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentcontroller_nodejs">
 <a href="#deploymentcontroller_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Controller</a>
@@ -1130,8 +1079,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmaximumpercent_nodejs">
 <a href="#deploymentmaximumpercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Maximum<wbr>Percent</a>
@@ -1140,8 +1088,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentminimumhealthypercent_nodejs">
 <a href="#deploymentminimumhealthypercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
@@ -1150,8 +1097,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcount_nodejs">
 <a href="#desiredcount_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Count</a>
@@ -1160,8 +1106,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableecsmanagedtags_nodejs">
 <a href="#enableecsmanagedtags_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
@@ -1170,8 +1115,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcenewdeployment_nodejs">
 <a href="#forcenewdeployment_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>New<wbr>Deployment</a>
@@ -1180,8 +1124,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiodseconds_nodejs">
 <a href="#healthcheckgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -1190,8 +1133,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrole_nodejs">
 <a href="#iamrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role</a>
@@ -1200,8 +1142,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtype_nodejs">
 <a href="#launchtype_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Type</a>
@@ -1210,8 +1151,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -1220,8 +1160,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1230,8 +1169,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_nodejs">
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
@@ -1240,8 +1178,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderedplacementstrategies_nodejs">
 <a href="#orderedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Placement<wbr>Strategies</a>
@@ -1250,8 +1187,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementconstraints_nodejs">
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
@@ -1260,8 +1196,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformversion_nodejs">
 <a href="#platformversion_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Version</a>
@@ -1270,8 +1205,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagatetags_nodejs">
 <a href="#propagatetags_nodejs" style="color: inherit; text-decoration: inherit;">propagate<wbr>Tags</a>
@@ -1280,8 +1214,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulingstrategy_nodejs">
 <a href="#schedulingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Strategy</a>
@@ -1290,8 +1223,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceregistries_nodejs">
 <a href="#serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
@@ -1300,8 +1232,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1310,8 +1241,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskdefinition_nodejs">
 <a href="#taskdefinition_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Definition</a>
@@ -1320,8 +1250,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforsteadystate_nodejs">
 <a href="#waitforsteadystate_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Steady<wbr>State</a>
@@ -1329,13 +1258,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_provider_strategies_python">
 <a href="#capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider_<wbr>strategies</a>
@@ -1344,8 +1271,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecapacityproviderstrategy">Sequence[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1354,8 +1280,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_controller_python">
 <a href="#deployment_controller_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>controller</a>
@@ -1364,8 +1289,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_maximum_percent_python">
 <a href="#deployment_maximum_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>maximum_<wbr>percent</a>
@@ -1374,8 +1298,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_minimum_healthy_percent_python">
 <a href="#deployment_minimum_healthy_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>minimum_<wbr>healthy_<wbr>percent</a>
@@ -1384,8 +1307,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_count_python">
 <a href="#desired_count_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>count</a>
@@ -1394,8 +1316,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_ecs_managed_tags_python">
 <a href="#enable_ecs_managed_tags_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ecs_<wbr>managed_<wbr>tags</a>
@@ -1404,8 +1325,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_new_deployment_python">
 <a href="#force_new_deployment_python" style="color: inherit; text-decoration: inherit;">force_<wbr>new_<wbr>deployment</a>
@@ -1414,8 +1334,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_grace_period_seconds_python">
 <a href="#health_check_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period_<wbr>seconds</a>
@@ -1424,8 +1343,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_role_python">
 <a href="#iam_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role</a>
@@ -1434,8 +1352,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launch_type_python">
 <a href="#launch_type_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>type</a>
@@ -1444,8 +1361,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -1454,8 +1370,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceloadbalancer">Sequence[Service<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1464,8 +1379,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_configuration_python">
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
@@ -1474,8 +1388,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ordered_placement_strategies_python">
 <a href="#ordered_placement_strategies_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>placement_<wbr>strategies</a>
@@ -1484,8 +1397,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceorderedplacementstrategy">Sequence[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_constraints_python">
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
@@ -1494,8 +1406,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceplacementconstraint">Sequence[Service<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_version_python">
 <a href="#platform_version_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>version</a>
@@ -1504,8 +1415,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagate_tags_python">
 <a href="#propagate_tags_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>tags</a>
@@ -1514,8 +1424,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_strategy_python">
 <a href="#scheduling_strategy_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>strategy</a>
@@ -1524,8 +1433,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_registries_python">
 <a href="#service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
@@ -1534,8 +1442,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1544,8 +1451,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="task_definition_python">
 <a href="#task_definition_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition</a>
@@ -1554,8 +1460,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_steady_state_python">
 <a href="#wait_for_steady_state_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>steady_<wbr>state</a>
@@ -1563,8 +1468,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1575,8 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1584,13 +1487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1598,13 +1499,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1612,13 +1511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1626,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1754,8 +1650,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacityproviderstrategies_csharp">
 <a href="#state_capacityproviderstrategies_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider<wbr>Strategies</a>
@@ -1764,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecapacityproviderstrategy">List&lt;Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_csharp">
 <a href="#state_cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -1774,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentcontroller_csharp">
 <a href="#state_deploymentcontroller_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Controller</a>
@@ -1784,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmaximumpercent_csharp">
 <a href="#state_deploymentmaximumpercent_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Maximum<wbr>Percent</a>
@@ -1794,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentminimumhealthypercent_csharp">
 <a href="#state_deploymentminimumhealthypercent_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
@@ -1804,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcount_csharp">
 <a href="#state_desiredcount_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Count</a>
@@ -1814,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableecsmanagedtags_csharp">
 <a href="#state_enableecsmanagedtags_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
@@ -1824,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcenewdeployment_csharp">
 <a href="#state_forcenewdeployment_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>New<wbr>Deployment</a>
@@ -1834,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiodseconds_csharp">
 <a href="#state_healthcheckgraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -1844,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrole_csharp">
 <a href="#state_iamrole_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role</a>
@@ -1854,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtype_csharp">
 <a href="#state_launchtype_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Type</a>
@@ -1864,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
 <a href="#state_loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1874,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceloadbalancer">List&lt;Service<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1884,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconfiguration_csharp">
 <a href="#state_networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -1894,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderedplacementstrategies_csharp">
 <a href="#state_orderedplacementstrategies_csharp" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Placement<wbr>Strategies</a>
@@ -1904,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceorderedplacementstrategy">List&lt;Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementconstraints_csharp">
 <a href="#state_placementconstraints_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
@@ -1914,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceplacementconstraint">List&lt;Service<wbr>Placement<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformversion_csharp">
 <a href="#state_platformversion_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
@@ -1924,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_propagatetags_csharp">
 <a href="#state_propagatetags_csharp" style="color: inherit; text-decoration: inherit;">Propagate<wbr>Tags</a>
@@ -1934,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulingstrategy_csharp">
 <a href="#state_schedulingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Strategy</a>
@@ -1944,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceregistries_csharp">
 <a href="#state_serviceregistries_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
@@ -1954,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1964,8 +1839,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskdefinition_csharp">
 <a href="#state_taskdefinition_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition</a>
@@ -1974,8 +1848,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforsteadystate_csharp">
 <a href="#state_waitforsteadystate_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Steady<wbr>State</a>
@@ -1983,13 +1856,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacityproviderstrategies_go">
 <a href="#state_capacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider<wbr>Strategies</a>
@@ -1998,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecapacityproviderstrategy">[]Service<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_go">
 <a href="#state_cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -2008,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentcontroller_go">
 <a href="#state_deploymentcontroller_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Controller</a>
@@ -2018,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmaximumpercent_go">
 <a href="#state_deploymentmaximumpercent_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Maximum<wbr>Percent</a>
@@ -2028,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentminimumhealthypercent_go">
 <a href="#state_deploymentminimumhealthypercent_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
@@ -2038,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcount_go">
 <a href="#state_desiredcount_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Count</a>
@@ -2048,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableecsmanagedtags_go">
 <a href="#state_enableecsmanagedtags_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
@@ -2058,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcenewdeployment_go">
 <a href="#state_forcenewdeployment_go" style="color: inherit; text-decoration: inherit;">Force<wbr>New<wbr>Deployment</a>
@@ -2068,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiodseconds_go">
 <a href="#state_healthcheckgraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -2078,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrole_go">
 <a href="#state_iamrole_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role</a>
@@ -2088,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtype_go">
 <a href="#state_launchtype_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Type</a>
@@ -2098,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
 <a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -2108,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceloadbalancer">[]Service<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2118,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconfiguration_go">
 <a href="#state_networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -2128,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderedplacementstrategies_go">
 <a href="#state_orderedplacementstrategies_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Placement<wbr>Strategies</a>
@@ -2138,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceorderedplacementstrategy">[]Service<wbr>Ordered<wbr>Placement<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementconstraints_go">
 <a href="#state_placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
@@ -2148,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceplacementconstraint">[]Service<wbr>Placement<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformversion_go">
 <a href="#state_platformversion_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
@@ -2158,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_propagatetags_go">
 <a href="#state_propagatetags_go" style="color: inherit; text-decoration: inherit;">Propagate<wbr>Tags</a>
@@ -2168,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulingstrategy_go">
 <a href="#state_schedulingstrategy_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Strategy</a>
@@ -2178,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceregistries_go">
 <a href="#state_serviceregistries_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Registries</a>
@@ -2188,8 +2040,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2198,8 +2049,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskdefinition_go">
 <a href="#state_taskdefinition_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition</a>
@@ -2208,8 +2058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforsteadystate_go">
 <a href="#state_waitforsteadystate_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Steady<wbr>State</a>
@@ -2217,13 +2066,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacityproviderstrategies_nodejs">
 <a href="#state_capacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider<wbr>Strategies</a>
@@ -2232,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_nodejs">
 <a href="#state_cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -2242,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentcontroller_nodejs">
 <a href="#state_deploymentcontroller_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Controller</a>
@@ -2252,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmaximumpercent_nodejs">
 <a href="#state_deploymentmaximumpercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Maximum<wbr>Percent</a>
@@ -2262,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentminimumhealthypercent_nodejs">
 <a href="#state_deploymentminimumhealthypercent_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Minimum<wbr>Healthy<wbr>Percent</a>
@@ -2272,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcount_nodejs">
 <a href="#state_desiredcount_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Count</a>
@@ -2282,8 +2124,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableecsmanagedtags_nodejs">
 <a href="#state_enableecsmanagedtags_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
@@ -2292,8 +2133,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcenewdeployment_nodejs">
 <a href="#state_forcenewdeployment_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>New<wbr>Deployment</a>
@@ -2302,8 +2142,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiodseconds_nodejs">
 <a href="#state_healthcheckgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -2312,8 +2151,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrole_nodejs">
 <a href="#state_iamrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role</a>
@@ -2322,8 +2160,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtype_nodejs">
 <a href="#state_launchtype_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Type</a>
@@ -2332,8 +2169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -2342,8 +2178,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2352,8 +2187,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconfiguration_nodejs">
 <a href="#state_networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
@@ -2362,8 +2196,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderedplacementstrategies_nodejs">
 <a href="#state_orderedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Placement<wbr>Strategies</a>
@@ -2372,8 +2205,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementconstraints_nodejs">
 <a href="#state_placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
@@ -2382,8 +2214,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformversion_nodejs">
 <a href="#state_platformversion_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Version</a>
@@ -2392,8 +2223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_propagatetags_nodejs">
 <a href="#state_propagatetags_nodejs" style="color: inherit; text-decoration: inherit;">propagate<wbr>Tags</a>
@@ -2402,8 +2232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulingstrategy_nodejs">
 <a href="#state_schedulingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Strategy</a>
@@ -2412,8 +2241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceregistries_nodejs">
 <a href="#state_serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
@@ -2422,8 +2250,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2432,8 +2259,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskdefinition_nodejs">
 <a href="#state_taskdefinition_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Definition</a>
@@ -2442,8 +2268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforsteadystate_nodejs">
 <a href="#state_waitforsteadystate_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Steady<wbr>State</a>
@@ -2451,13 +2276,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_provider_strategies_python">
 <a href="#state_capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider_<wbr>strategies</a>
@@ -2466,8 +2289,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecapacityproviderstrategy">Sequence[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_python">
 <a href="#state_cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -2476,8 +2298,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of an ECS cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_controller_python">
 <a href="#state_deployment_controller_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>controller</a>
@@ -2486,8 +2307,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_maximum_percent_python">
 <a href="#state_deployment_maximum_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>maximum_<wbr>percent</a>
@@ -2496,8 +2316,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_minimum_healthy_percent_python">
 <a href="#state_deployment_minimum_healthy_percent_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>minimum_<wbr>healthy_<wbr>percent</a>
@@ -2506,8 +2325,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desired_count_python">
 <a href="#state_desired_count_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>count</a>
@@ -2516,8 +2334,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_ecs_managed_tags_python">
 <a href="#state_enable_ecs_managed_tags_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ecs_<wbr>managed_<wbr>tags</a>
@@ -2526,8 +2343,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_new_deployment_python">
 <a href="#state_force_new_deployment_python" style="color: inherit; text-decoration: inherit;">force_<wbr>new_<wbr>deployment</a>
@@ -2536,8 +2352,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g. `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_grace_period_seconds_python">
 <a href="#state_health_check_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period_<wbr>seconds</a>
@@ -2546,8 +2361,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_role_python">
 <a href="#state_iam_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role</a>
@@ -2556,8 +2370,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_type_python">
 <a href="#state_launch_type_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>type</a>
@@ -2566,8 +2379,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -2576,8 +2388,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceloadbalancer">Sequence[Service<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2586,8 +2397,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_configuration_python">
 <a href="#state_network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
@@ -2596,8 +2406,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ordered_placement_strategies_python">
 <a href="#state_ordered_placement_strategies_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>placement_<wbr>strategies</a>
@@ -2606,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceorderedplacementstrategy">Sequence[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_constraints_python">
 <a href="#state_placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
@@ -2616,8 +2424,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceplacementconstraint">Sequence[Service<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_version_python">
 <a href="#state_platform_version_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>version</a>
@@ -2626,8 +2433,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_propagate_tags_python">
 <a href="#state_propagate_tags_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>tags</a>
@@ -2636,8 +2442,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_strategy_python">
 <a href="#state_scheduling_strategy_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>strategy</a>
@@ -2646,8 +2451,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_registries_python">
 <a href="#state_service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
@@ -2656,8 +2460,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2666,8 +2469,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_task_definition_python">
 <a href="#state_task_definition_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition</a>
@@ -2676,8 +2478,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_steady_state_python">
 <a href="#state_wait_for_steady_state_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>steady_<wbr>state</a>
@@ -2685,8 +2486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2701,8 +2501,7 @@ The following state arguments are supported:
 <h4 id="servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacityprovider_csharp">
 <a href="#capacityprovider_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider</a>
@@ -2711,8 +2510,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the capacity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_csharp">
 <a href="#base_csharp" style="color: inherit; text-decoration: inherit;">Base</a>
@@ -2721,8 +2519,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -2731,13 +2528,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacityprovider_go">
 <a href="#capacityprovider_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Provider</a>
@@ -2746,8 +2541,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the capacity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_go">
 <a href="#base_go" style="color: inherit; text-decoration: inherit;">Base</a>
@@ -2756,8 +2550,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -2766,13 +2559,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacityprovider_nodejs">
 <a href="#capacityprovider_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider</a>
@@ -2781,8 +2572,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the capacity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_nodejs">
 <a href="#base_nodejs" style="color: inherit; text-decoration: inherit;">base</a>
@@ -2791,8 +2581,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2801,13 +2590,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_provider_python">
 <a href="#capacity_provider_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider</a>
@@ -2816,8 +2603,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short name of the capacity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_python">
 <a href="#base_python" style="color: inherit; text-decoration: inherit;">base</a>
@@ -2826,8 +2612,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2836,15 +2621,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2853,13 +2636,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2868,13 +2649,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2883,13 +2662,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2898,15 +2675,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceloadbalancer">Service<wbr>Load<wbr>Balancer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -2915,8 +2690,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerport_csharp">
 <a href="#containerport_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Port</a>
@@ -2925,8 +2699,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on the container to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elbname_csharp">
 <a href="#elbname_csharp" style="color: inherit; text-decoration: inherit;">Elb<wbr>Name</a>
@@ -2935,8 +2708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparn_csharp">
 <a href="#targetgrouparn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arn</a>
@@ -2945,13 +2717,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -2960,8 +2730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerport_go">
 <a href="#containerport_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Port</a>
@@ -2970,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on the container to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elbname_go">
 <a href="#elbname_go" style="color: inherit; text-decoration: inherit;">Elb<wbr>Name</a>
@@ -2980,8 +2748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparn_go">
 <a href="#targetgrouparn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arn</a>
@@ -2990,13 +2757,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -3005,8 +2770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerport_nodejs">
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
@@ -3015,8 +2779,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on the container to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elbname_nodejs">
 <a href="#elbname_nodejs" style="color: inherit; text-decoration: inherit;">elb<wbr>Name</a>
@@ -3025,8 +2788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparn_nodejs">
 <a href="#targetgrouparn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arn</a>
@@ -3035,13 +2797,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -3050,8 +2810,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_port_python">
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
@@ -3060,8 +2819,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on the container to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elb_name_python">
 <a href="#elb_name_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>name</a>
@@ -3070,8 +2828,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ELB (Classic) to associate with the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_group_arn_python">
 <a href="#target_group_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arn</a>
@@ -3080,15 +2837,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Load Balancer target group to associate with the service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -3097,8 +2852,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_csharp">
 <a href="#assignpublicip_csharp" style="color: inherit; text-decoration: inherit;">Assign<wbr>Public<wbr>Ip</a>
@@ -3107,8 +2861,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -3117,13 +2870,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -3132,8 +2883,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_go">
 <a href="#assignpublicip_go" style="color: inherit; text-decoration: inherit;">Assign<wbr>Public<wbr>Ip</a>
@@ -3142,8 +2892,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -3152,13 +2901,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -3167,8 +2914,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_nodejs">
 <a href="#assignpublicip_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Public<wbr>Ip</a>
@@ -3177,8 +2923,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -3187,13 +2932,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -3202,8 +2945,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assign_public_ip_python">
 <a href="#assign_public_ip_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>public_<wbr>ip</a>
@@ -3212,8 +2954,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -3222,15 +2963,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3239,8 +2978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -3252,13 +2990,11 @@ The following state arguments are supported:
 which has the same effect), or any platform or custom attribute that is applied to a container instance.
 For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
 needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3267,8 +3003,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -3280,13 +3015,11 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 which has the same effect), or any platform or custom attribute that is applied to a container instance.
 For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
 needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3295,8 +3028,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -3308,13 +3040,11 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 which has the same effect), or any platform or custom attribute that is applied to a container instance.
 For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
 needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3323,8 +3053,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -3336,15 +3065,13 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
 which has the same effect), or any platform or custom attribute that is applied to a container instance.
 For the `binpack` type, valid values are `memory` and `cpu`. For the `random` type, this attribute is not
 needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3353,8 +3080,7 @@ needed. For more information, see [Placement Strategy](https://docs.aws.amazon.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -3367,13 +3093,11 @@ for the `distinctInstance` type.
 For more information, see [Cluster Query Language in the Amazon EC2 Container
 Service Developer
 Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3382,8 +3106,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -3396,13 +3119,11 @@ for the `distinctInstance` type.
 For more information, see [Cluster Query Language in the Amazon EC2 Container
 Service Developer
 Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3411,8 +3132,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -3425,13 +3145,11 @@ for the `distinctInstance` type.
 For more information, see [Cluster Query Language in the Amazon EC2 Container
 Service Developer
 Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3440,8 +3158,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -3454,15 +3171,13 @@ for the `distinctInstance` type.
 For more information, see [Cluster Query Language in the Amazon EC2 Container
 Service Developer
 Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceserviceregistries">Service<wbr>Service<wbr>Registries</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registryarn_csharp">
 <a href="#registryarn_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Arn</a>
@@ -3471,8 +3186,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -3481,8 +3195,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerport_csharp">
 <a href="#containerport_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Port</a>
@@ -3491,8 +3204,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3501,13 +3213,11 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registryarn_go">
 <a href="#registryarn_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Arn</a>
@@ -3516,8 +3226,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -3526,8 +3235,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerport_go">
 <a href="#containerport_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Port</a>
@@ -3536,8 +3244,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3546,13 +3253,11 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registryarn_nodejs">
 <a href="#registryarn_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Arn</a>
@@ -3561,8 +3266,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -3571,8 +3275,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerport_nodejs">
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
@@ -3581,8 +3284,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3591,13 +3293,11 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registry_arn_python">
 <a href="#registry_arn_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>arn</a>
@@ -3606,8 +3306,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -3616,8 +3315,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_port_python">
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
@@ -3626,8 +3324,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3636,8 +3333,7 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port value used if your Service Discovery service specified an SRV record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

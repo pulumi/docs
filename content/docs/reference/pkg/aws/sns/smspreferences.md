@@ -254,8 +254,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultsenderid_csharp">
 <a href="#defaultsenderid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
@@ -264,8 +263,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsmstype_csharp">
 <a href="#defaultsmstype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
@@ -274,8 +272,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverystatusiamrolearn_csharp">
 <a href="#deliverystatusiamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
@@ -284,8 +281,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverystatussuccesssamplingrate_csharp">
 <a href="#deliverystatussuccesssamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
@@ -294,8 +290,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyspendlimit_csharp">
 <a href="#monthlyspendlimit_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
@@ -304,8 +299,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usagereports3bucket_csharp">
 <a href="#usagereports3bucket_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
@@ -314,13 +308,11 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultsenderid_go">
 <a href="#defaultsenderid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
@@ -329,8 +321,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsmstype_go">
 <a href="#defaultsmstype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
@@ -339,8 +330,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverystatusiamrolearn_go">
 <a href="#deliverystatusiamrolearn_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
@@ -349,8 +339,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverystatussuccesssamplingrate_go">
 <a href="#deliverystatussuccesssamplingrate_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
@@ -359,8 +348,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyspendlimit_go">
 <a href="#monthlyspendlimit_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
@@ -369,8 +357,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usagereports3bucket_go">
 <a href="#usagereports3bucket_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
@@ -379,13 +366,11 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultsenderid_nodejs">
 <a href="#defaultsenderid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sender<wbr>Id</a>
@@ -394,8 +379,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsmstype_nodejs">
 <a href="#defaultsmstype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sms<wbr>Type</a>
@@ -404,8 +388,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverystatusiamrolearn_nodejs">
 <a href="#deliverystatusiamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
@@ -414,8 +397,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverystatussuccesssamplingrate_nodejs">
 <a href="#deliverystatussuccesssamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
@@ -424,8 +406,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyspendlimit_nodejs">
 <a href="#monthlyspendlimit_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Spend<wbr>Limit</a>
@@ -434,8 +415,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usagereports3bucket_nodejs">
 <a href="#usagereports3bucket_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Report<wbr>S3Bucket</a>
@@ -444,13 +424,11 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_sender_id_python">
 <a href="#default_sender_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sender_<wbr>id</a>
@@ -459,8 +437,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_sms_type_python">
 <a href="#default_sms_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sms_<wbr>type</a>
@@ -469,8 +446,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_status_iam_role_arn_python">
 <a href="#delivery_status_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>iam_<wbr>role_<wbr>arn</a>
@@ -479,8 +455,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_status_success_sampling_rate_python">
 <a href="#delivery_status_success_sampling_rate_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>success_<wbr>sampling_<wbr>rate</a>
@@ -489,8 +464,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_spend_limit_python">
 <a href="#monthly_spend_limit_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>spend_<wbr>limit</a>
@@ -499,8 +473,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_report_s3_bucket_python">
 <a href="#usage_report_s3_bucket_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>report_<wbr>s3_<wbr>bucket</a>
@@ -509,8 +482,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -521,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -530,13 +501,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -544,13 +513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -558,13 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -572,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -700,8 +664,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsenderid_csharp">
 <a href="#state_defaultsenderid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
@@ -710,8 +673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsmstype_csharp">
 <a href="#state_defaultsmstype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
@@ -720,8 +682,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliverystatusiamrolearn_csharp">
 <a href="#state_deliverystatusiamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
@@ -730,8 +691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliverystatussuccesssamplingrate_csharp">
 <a href="#state_deliverystatussuccesssamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
@@ -740,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthlyspendlimit_csharp">
 <a href="#state_monthlyspendlimit_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
@@ -750,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usagereports3bucket_csharp">
 <a href="#state_usagereports3bucket_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
@@ -760,13 +718,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsenderid_go">
 <a href="#state_defaultsenderid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
@@ -775,8 +731,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsmstype_go">
 <a href="#state_defaultsmstype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
@@ -785,8 +740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliverystatusiamrolearn_go">
 <a href="#state_deliverystatusiamrolearn_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
@@ -795,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliverystatussuccesssamplingrate_go">
 <a href="#state_deliverystatussuccesssamplingrate_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
@@ -805,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthlyspendlimit_go">
 <a href="#state_monthlyspendlimit_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
@@ -815,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usagereports3bucket_go">
 <a href="#state_usagereports3bucket_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
@@ -825,13 +776,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsenderid_nodejs">
 <a href="#state_defaultsenderid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sender<wbr>Id</a>
@@ -840,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsmstype_nodejs">
 <a href="#state_defaultsmstype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sms<wbr>Type</a>
@@ -850,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliverystatusiamrolearn_nodejs">
 <a href="#state_deliverystatusiamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
@@ -860,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliverystatussuccesssamplingrate_nodejs">
 <a href="#state_deliverystatussuccesssamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
@@ -870,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthlyspendlimit_nodejs">
 <a href="#state_monthlyspendlimit_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Spend<wbr>Limit</a>
@@ -880,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usagereports3bucket_nodejs">
 <a href="#state_usagereports3bucket_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Report<wbr>S3Bucket</a>
@@ -890,13 +834,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_default_sender_id_python">
 <a href="#state_default_sender_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sender_<wbr>id</a>
@@ -905,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_sms_type_python">
 <a href="#state_default_sms_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sms_<wbr>type</a>
@@ -915,8 +856,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delivery_status_iam_role_arn_python">
 <a href="#state_delivery_status_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>iam_<wbr>role_<wbr>arn</a>
@@ -925,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delivery_status_success_sampling_rate_python">
 <a href="#state_delivery_status_success_sampling_rate_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>success_<wbr>sampling_<wbr>rate</a>
@@ -935,8 +874,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthly_spend_limit_python">
 <a href="#state_monthly_spend_limit_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>spend_<wbr>limit</a>
@@ -945,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usage_report_s3_bucket_python">
 <a href="#state_usage_report_s3_bucket_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>report_<wbr>s3_<wbr>bucket</a>
@@ -955,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

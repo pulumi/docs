@@ -329,8 +329,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -339,8 +338,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationmodes_csharp">
 <a href="#activationmodes_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Modes</a>
@@ -349,8 +347,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concurrentstreamsperconnection_csharp">
 <a href="#concurrentstreamsperconnection_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Streams<wbr>Per<wbr>Connection</a>
@@ -359,8 +356,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionidletimeout_csharp">
 <a href="#connectionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Idle<wbr>Timeout</a>
@@ -369,8 +365,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_csharp">
 <a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -379,8 +374,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcetlsrequirements_csharp">
 <a href="#enforcetlsrequirements_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
@@ -389,8 +383,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="framesize_csharp">
 <a href="#framesize_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
@@ -399,8 +392,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headertablesize_csharp">
 <a href="#headertablesize_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
@@ -409,8 +401,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecontentlength_csharp">
 <a href="#includecontentlength_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
@@ -419,8 +410,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheader_csharp">
 <a href="#insertheader_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
@@ -429,8 +419,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheadername_csharp">
 <a href="#insertheadername_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
@@ -439,8 +428,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receivewindow_csharp">
 <a href="#receivewindow_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
@@ -449,8 +437,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writesize_csharp">
 <a href="#writesize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
@@ -459,13 +446,11 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -474,8 +459,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationmodes_go">
 <a href="#activationmodes_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Modes</a>
@@ -484,8 +468,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concurrentstreamsperconnection_go">
 <a href="#concurrentstreamsperconnection_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Streams<wbr>Per<wbr>Connection</a>
@@ -494,8 +477,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionidletimeout_go">
 <a href="#connectionidletimeout_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Idle<wbr>Timeout</a>
@@ -504,8 +486,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_go">
 <a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -514,8 +495,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcetlsrequirements_go">
 <a href="#enforcetlsrequirements_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
@@ -524,8 +504,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="framesize_go">
 <a href="#framesize_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
@@ -534,8 +513,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headertablesize_go">
 <a href="#headertablesize_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
@@ -544,8 +522,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecontentlength_go">
 <a href="#includecontentlength_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
@@ -554,8 +531,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheader_go">
 <a href="#insertheader_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
@@ -564,8 +540,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheadername_go">
 <a href="#insertheadername_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
@@ -574,8 +549,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receivewindow_go">
 <a href="#receivewindow_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
@@ -584,8 +558,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writesize_go">
 <a href="#writesize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
@@ -594,13 +567,11 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -609,8 +580,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationmodes_nodejs">
 <a href="#activationmodes_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Modes</a>
@@ -619,8 +589,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concurrentstreamsperconnection_nodejs">
 <a href="#concurrentstreamsperconnection_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Streams<wbr>Per<wbr>Connection</a>
@@ -629,8 +598,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionidletimeout_nodejs">
 <a href="#connectionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Idle<wbr>Timeout</a>
@@ -639,8 +607,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_nodejs">
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -649,8 +616,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcetlsrequirements_nodejs">
 <a href="#enforcetlsrequirements_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Tls<wbr>Requirements</a>
@@ -659,8 +625,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="framesize_nodejs">
 <a href="#framesize_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Size</a>
@@ -669,8 +634,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headertablesize_nodejs">
 <a href="#headertablesize_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Table<wbr>Size</a>
@@ -679,8 +643,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecontentlength_nodejs">
 <a href="#includecontentlength_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Content<wbr>Length</a>
@@ -689,8 +652,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheader_nodejs">
 <a href="#insertheader_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header</a>
@@ -699,8 +661,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheadername_nodejs">
 <a href="#insertheadername_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header<wbr>Name</a>
@@ -709,8 +670,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receivewindow_nodejs">
 <a href="#receivewindow_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Window</a>
@@ -719,8 +679,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writesize_nodejs">
 <a href="#writesize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Size</a>
@@ -729,13 +688,11 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -744,8 +701,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activation_modes_python">
 <a href="#activation_modes_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>modes</a>
@@ -754,8 +710,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="concurrent_streams_per_connection_python">
 <a href="#concurrent_streams_per_connection_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>streams_<wbr>per_<wbr>connection</a>
@@ -764,8 +719,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_idle_timeout_python">
 <a href="#connection_idle_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>idle_<wbr>timeout</a>
@@ -774,8 +728,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaults_from_python">
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -784,8 +737,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_tls_requirements_python">
 <a href="#enforce_tls_requirements_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>tls_<wbr>requirements</a>
@@ -794,8 +746,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frame_size_python">
 <a href="#frame_size_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>size</a>
@@ -804,8 +755,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_table_size_python">
 <a href="#header_table_size_python" style="color: inherit; text-decoration: inherit;">header_<wbr>table_<wbr>size</a>
@@ -814,8 +764,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_content_length_python">
 <a href="#include_content_length_python" style="color: inherit; text-decoration: inherit;">include_<wbr>content_<wbr>length</a>
@@ -824,8 +773,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insert_header_python">
 <a href="#insert_header_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header</a>
@@ -834,8 +782,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insert_header_name_python">
 <a href="#insert_header_name_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header_<wbr>name</a>
@@ -844,8 +791,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receive_window_python">
 <a href="#receive_window_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>window</a>
@@ -854,8 +800,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_size_python">
 <a href="#write_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>size</a>
@@ -864,8 +809,7 @@ The ProfileHttp2 resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -876,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -885,13 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -899,13 +840,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -913,13 +852,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -927,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1055,8 +991,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activationmodes_csharp">
 <a href="#state_activationmodes_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Modes</a>
@@ -1065,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_concurrentstreamsperconnection_csharp">
 <a href="#state_concurrentstreamsperconnection_csharp" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Streams<wbr>Per<wbr>Connection</a>
@@ -1075,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionidletimeout_csharp">
 <a href="#state_connectionidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Idle<wbr>Timeout</a>
@@ -1085,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
 <a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1095,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforcetlsrequirements_csharp">
 <a href="#state_enforcetlsrequirements_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
@@ -1105,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_framesize_csharp">
 <a href="#state_framesize_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
@@ -1115,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headertablesize_csharp">
 <a href="#state_headertablesize_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
@@ -1125,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includecontentlength_csharp">
 <a href="#state_includecontentlength_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
@@ -1135,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheader_csharp">
 <a href="#state_insertheader_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
@@ -1145,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheadername_csharp">
 <a href="#state_insertheadername_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
@@ -1155,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1165,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receivewindow_csharp">
 <a href="#state_receivewindow_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
@@ -1175,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writesize_csharp">
 <a href="#state_writesize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
@@ -1185,13 +1108,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activationmodes_go">
 <a href="#state_activationmodes_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Modes</a>
@@ -1200,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_concurrentstreamsperconnection_go">
 <a href="#state_concurrentstreamsperconnection_go" style="color: inherit; text-decoration: inherit;">Concurrent<wbr>Streams<wbr>Per<wbr>Connection</a>
@@ -1210,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionidletimeout_go">
 <a href="#state_connectionidletimeout_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Idle<wbr>Timeout</a>
@@ -1220,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
 <a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1230,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforcetlsrequirements_go">
 <a href="#state_enforcetlsrequirements_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Tls<wbr>Requirements</a>
@@ -1240,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_framesize_go">
 <a href="#state_framesize_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Size</a>
@@ -1250,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headertablesize_go">
 <a href="#state_headertablesize_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Table<wbr>Size</a>
@@ -1260,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includecontentlength_go">
 <a href="#state_includecontentlength_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Content<wbr>Length</a>
@@ -1270,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheader_go">
 <a href="#state_insertheader_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header</a>
@@ -1280,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheadername_go">
 <a href="#state_insertheadername_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Header<wbr>Name</a>
@@ -1290,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1300,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receivewindow_go">
 <a href="#state_receivewindow_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Window</a>
@@ -1310,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writesize_go">
 <a href="#state_writesize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Size</a>
@@ -1320,13 +1229,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activationmodes_nodejs">
 <a href="#state_activationmodes_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Modes</a>
@@ -1335,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_concurrentstreamsperconnection_nodejs">
 <a href="#state_concurrentstreamsperconnection_nodejs" style="color: inherit; text-decoration: inherit;">concurrent<wbr>Streams<wbr>Per<wbr>Connection</a>
@@ -1345,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionidletimeout_nodejs">
 <a href="#state_connectionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Idle<wbr>Timeout</a>
@@ -1355,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -1365,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforcetlsrequirements_nodejs">
 <a href="#state_enforcetlsrequirements_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Tls<wbr>Requirements</a>
@@ -1375,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_framesize_nodejs">
 <a href="#state_framesize_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Size</a>
@@ -1385,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headertablesize_nodejs">
 <a href="#state_headertablesize_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Table<wbr>Size</a>
@@ -1395,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includecontentlength_nodejs">
 <a href="#state_includecontentlength_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Content<wbr>Length</a>
@@ -1405,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheader_nodejs">
 <a href="#state_insertheader_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header</a>
@@ -1415,8 +1314,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheadername_nodejs">
 <a href="#state_insertheadername_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Header<wbr>Name</a>
@@ -1425,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1435,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receivewindow_nodejs">
 <a href="#state_receivewindow_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Window</a>
@@ -1445,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writesize_nodejs">
 <a href="#state_writesize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Size</a>
@@ -1455,13 +1350,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activation_modes_python">
 <a href="#state_activation_modes_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>modes</a>
@@ -1470,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This setting specifies the condition that will cause the BIG-IP system to handle an incoming connection as an HTTP/2 connection, Allowed values : `[“alpn”]` (or) `[“always”]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_concurrent_streams_per_connection_python">
 <a href="#state_concurrent_streams_per_connection_python" style="color: inherit; text-decoration: inherit;">concurrent_<wbr>streams_<wbr>per_<wbr>connection</a>
@@ -1480,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how many concurrent requests are allowed to be outstanding on a single HTTP/2 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_idle_timeout_python">
 <a href="#state_connection_idle_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>idle_<wbr>timeout</a>
@@ -1490,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of seconds that a connection is idle before the connection is eligible for deletion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -1500,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_tls_requirements_python">
 <a href="#state_enforce_tls_requirements_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>tls_<wbr>requirements</a>
@@ -1510,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable or disable enforcement of TLS requirements,Allowed Values : `"enabled"/"disabled"` [Default:`"enabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frame_size_python">
 <a href="#state_frame_size_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>size</a>
@@ -1520,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the data frames, in bytes, that the HTTP/2 protocol sends to the client. `Default: 2048`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_header_table_size_python">
 <a href="#state_header_table_size_python" style="color: inherit; text-decoration: inherit;">header_<wbr>table_<wbr>size</a>
@@ -1530,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the header table, in KB, for the HTTP headers that the HTTP/2 protocol compresses to save bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_content_length_python">
 <a href="#state_include_content_length_python" style="color: inherit; text-decoration: inherit;">include_<wbr>content_<wbr>length</a>
@@ -1540,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable to include content-length in HTTP/2 headers,Default : disabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insert_header_python">
 <a href="#state_insert_header_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header</a>
@@ -1550,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This setting specifies whether the BIG-IP system should add an HTTP header to the HTTP request to show that the request was received over HTTP/2, Allowed Values : `"enabled"/"disabled"` [ Default: `"disabled"`].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insert_header_name_python">
 <a href="#state_insert_header_name_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>header_<wbr>name</a>
@@ -1560,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This setting specifies the name of the header that the BIG-IP system will add to the HTTP request when the Insert Header is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1570,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Profile should be full path.The full path is the combination of the `partition + profile name`,For example `/Common/test-http2-profile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receive_window_python">
 <a href="#state_receive_window_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>window</a>
@@ -1580,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The flow-control size for upload streams, in KB. `Default: 32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_size_python">
 <a href="#state_write_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>size</a>
@@ -1590,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total size of combined data frames, in bytes, that the HTTP/2 protocol sends in a single write function. `Default: 16384`".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -466,8 +466,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -476,8 +475,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -487,8 +485,7 @@ The Host resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -498,8 +495,7 @@ to the host.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -510,8 +506,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustermanaged_csharp">
 <a href="#clustermanaged_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
@@ -522,8 +517,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connected_csharp">
 <a href="#connected_csharp" style="color: inherit; text-decoration: inherit;">Connected</a>
@@ -533,8 +527,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -544,8 +537,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -555,8 +547,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_csharp">
 <a href="#license_csharp" style="color: inherit; text-decoration: inherit;">License</a>
@@ -566,8 +557,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockdown_csharp">
 <a href="#lockdown_csharp" style="color: inherit; text-decoration: inherit;">Lockdown</a>
@@ -577,8 +567,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_csharp">
 <a href="#maintenance_csharp" style="color: inherit; text-decoration: inherit;">Maintenance</a>
@@ -587,8 +576,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -599,13 +587,11 @@ The license key is expected to be present in vSphere.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -614,8 +600,7 @@ and no thumbprint is set then the operation will fail.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -625,8 +610,7 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -636,8 +620,7 @@ to the host.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -648,8 +631,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustermanaged_go">
 <a href="#clustermanaged_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
@@ -660,8 +642,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connected_go">
 <a href="#connected_go" style="color: inherit; text-decoration: inherit;">Connected</a>
@@ -671,8 +652,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -682,8 +662,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -693,8 +672,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_go">
 <a href="#license_go" style="color: inherit; text-decoration: inherit;">License</a>
@@ -704,8 +682,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockdown_go">
 <a href="#lockdown_go" style="color: inherit; text-decoration: inherit;">Lockdown</a>
@@ -715,8 +692,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_go">
 <a href="#maintenance_go" style="color: inherit; text-decoration: inherit;">Maintenance</a>
@@ -725,8 +701,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -737,13 +712,11 @@ The license key is expected to be present in vSphere.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -752,8 +725,7 @@ and no thumbprint is set then the operation will fail.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -763,8 +735,7 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -774,8 +745,7 @@ to the host.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -786,8 +756,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustermanaged_nodejs">
 <a href="#clustermanaged_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Managed</a>
@@ -798,8 +767,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connected_nodejs">
 <a href="#connected_nodejs" style="color: inherit; text-decoration: inherit;">connected</a>
@@ -809,8 +777,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -820,8 +787,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
@@ -831,8 +797,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_nodejs">
 <a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
@@ -842,8 +807,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockdown_nodejs">
 <a href="#lockdown_nodejs" style="color: inherit; text-decoration: inherit;">lockdown</a>
@@ -853,8 +817,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_nodejs">
 <a href="#maintenance_nodejs" style="color: inherit; text-decoration: inherit;">maintenance</a>
@@ -863,8 +826,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -875,13 +837,11 @@ The license key is expected to be present in vSphere.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -890,8 +850,7 @@ and no thumbprint is set then the operation will fail.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -901,8 +860,7 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -912,8 +870,7 @@ to the host.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -924,8 +881,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_managed_python">
 <a href="#cluster_managed_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>managed</a>
@@ -936,8 +892,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connected_python">
 <a href="#connected_python" style="color: inherit; text-decoration: inherit;">connected</a>
@@ -947,8 +902,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -958,8 +912,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
@@ -969,8 +922,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_python">
 <a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
@@ -980,8 +932,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockdown_python">
 <a href="#lockdown_python" style="color: inherit; text-decoration: inherit;">lockdown</a>
@@ -991,8 +942,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_python">
 <a href="#maintenance_python" style="color: inherit; text-decoration: inherit;">maintenance</a>
@@ -1001,8 +951,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1013,8 +962,7 @@ The license key is expected to be present in vSphere.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1025,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1034,13 +981,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1048,13 +993,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1062,13 +1005,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1076,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1204,8 +1144,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_csharp">
 <a href="#state_cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -1216,8 +1155,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustermanaged_csharp">
 <a href="#state_clustermanaged_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
@@ -1228,8 +1166,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connected_csharp">
 <a href="#state_connected_csharp" style="color: inherit; text-decoration: inherit;">Connected</a>
@@ -1239,8 +1176,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1250,8 +1186,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_csharp">
 <a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -1261,8 +1196,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1271,8 +1205,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_csharp">
 <a href="#state_license_csharp" style="color: inherit; text-decoration: inherit;">License</a>
@@ -1282,8 +1215,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lockdown_csharp">
 <a href="#state_lockdown_csharp" style="color: inherit; text-decoration: inherit;">Lockdown</a>
@@ -1293,8 +1225,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_csharp">
 <a href="#state_maintenance_csharp" style="color: inherit; text-decoration: inherit;">Maintenance</a>
@@ -1303,8 +1234,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1314,8 +1244,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_csharp">
 <a href="#state_thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1326,8 +1255,7 @@ to the host.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1337,13 +1265,11 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_go">
 <a href="#state_cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -1354,8 +1280,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustermanaged_go">
 <a href="#state_clustermanaged_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Managed</a>
@@ -1366,8 +1291,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connected_go">
 <a href="#state_connected_go" style="color: inherit; text-decoration: inherit;">Connected</a>
@@ -1377,8 +1301,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1388,8 +1311,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_go">
 <a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -1399,8 +1321,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1409,8 +1330,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_go">
 <a href="#state_license_go" style="color: inherit; text-decoration: inherit;">License</a>
@@ -1420,8 +1340,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lockdown_go">
 <a href="#state_lockdown_go" style="color: inherit; text-decoration: inherit;">Lockdown</a>
@@ -1431,8 +1350,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_go">
 <a href="#state_maintenance_go" style="color: inherit; text-decoration: inherit;">Maintenance</a>
@@ -1441,8 +1359,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1452,8 +1369,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_go">
 <a href="#state_thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1464,8 +1380,7 @@ to the host.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1475,13 +1390,11 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_nodejs">
 <a href="#state_cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1492,8 +1405,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustermanaged_nodejs">
 <a href="#state_clustermanaged_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Managed</a>
@@ -1504,8 +1416,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connected_nodejs">
 <a href="#state_connected_nodejs" style="color: inherit; text-decoration: inherit;">connected</a>
@@ -1515,8 +1426,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1526,8 +1436,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_nodejs">
 <a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
@@ -1537,8 +1446,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1547,8 +1455,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_nodejs">
 <a href="#state_license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
@@ -1558,8 +1465,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lockdown_nodejs">
 <a href="#state_lockdown_nodejs" style="color: inherit; text-decoration: inherit;">lockdown</a>
@@ -1569,8 +1475,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_nodejs">
 <a href="#state_maintenance_nodejs" style="color: inherit; text-decoration: inherit;">maintenance</a>
@@ -1579,8 +1484,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1590,8 +1494,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_nodejs">
 <a href="#state_thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1602,8 +1505,7 @@ to the host.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1613,13 +1515,11 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_python">
 <a href="#state_cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1630,8 +1530,7 @@ to the host.
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set. Conflicts with:
 `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_managed_python">
 <a href="#state_cluster_managed_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>managed</a>
@@ -1642,8 +1541,7 @@ be added to. This should not be set if `datacenter` is set. Conflicts with:
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `compute_cluster` resource rather
 than the`host` resource. Conflicts with: `cluster`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connected_python">
 <a href="#state_connected_python" style="color: inherit; text-decoration: inherit;">connected</a>
@@ -1653,8 +1551,7 @@ than the`host` resource. Conflicts with: `cluster`.
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1664,8 +1561,7 @@ Default is `false`.
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_python">
 <a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
@@ -1675,8 +1571,7 @@ be added to. This should not be set if `cluster` is set.
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1685,8 +1580,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_python">
 <a href="#state_license_python" style="color: inherit; text-decoration: inherit;">license</a>
@@ -1696,8 +1590,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lockdown_python">
 <a href="#state_lockdown_python" style="color: inherit; text-decoration: inherit;">lockdown</a>
@@ -1707,8 +1600,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_python">
 <a href="#state_maintenance_python" style="color: inherit; text-decoration: inherit;">maintenance</a>
@@ -1717,8 +1609,7 @@ The license key is expected to be present in vSphere.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1728,8 +1619,7 @@ The license key is expected to be present in vSphere.
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_python">
 <a href="#state_thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1740,8 +1630,7 @@ to the host.
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
 and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1751,8 +1640,7 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

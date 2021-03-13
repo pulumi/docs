@@ -383,8 +383,7 @@ The GameServerDeploymentRollout resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultgameserverconfig_csharp">
 <a href="#defaultgameserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
@@ -395,8 +394,7 @@ The GameServerDeploymentRollout resource accepts the following [input]({{< relre
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -405,8 +403,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gameserverconfigoverrides_csharp">
 <a href="#gameserverconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
@@ -419,8 +416,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -430,13 +426,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultgameserverconfig_go">
 <a href="#defaultgameserverconfig_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
@@ -447,8 +441,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -457,8 +450,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gameserverconfigoverrides_go">
 <a href="#gameserverconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
@@ -471,8 +463,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -482,13 +473,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultgameserverconfig_nodejs">
 <a href="#defaultgameserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Game<wbr>Server<wbr>Config</a>
@@ -499,8 +488,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -509,8 +497,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gameserverconfigoverrides_nodejs">
 <a href="#gameserverconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Config<wbr>Overrides</a>
@@ -523,8 +510,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -534,13 +520,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_game_server_config_python">
 <a href="#default_game_server_config_python" style="color: inherit; text-decoration: inherit;">default_<wbr>game_<wbr>server_<wbr>config</a>
@@ -551,8 +535,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -561,8 +544,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="game_server_config_overrides_python">
 <a href="#game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
@@ -575,8 +557,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -586,8 +567,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -598,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -607,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -618,13 +596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -632,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -643,13 +618,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -657,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -668,13 +640,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -682,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -693,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -821,8 +789,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultgameserverconfig_csharp">
 <a href="#state_defaultgameserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
@@ -833,8 +800,7 @@ The following state arguments are supported:
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_csharp">
 <a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -843,8 +809,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gameserverconfigoverrides_csharp">
 <a href="#state_gameserverconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
@@ -857,8 +822,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -868,8 +832,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -879,13 +842,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultgameserverconfig_go">
 <a href="#state_defaultgameserverconfig_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Game<wbr>Server<wbr>Config</a>
@@ -896,8 +857,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_go">
 <a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -906,8 +866,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gameserverconfigoverrides_go">
 <a href="#state_gameserverconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
@@ -920,8 +879,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -931,8 +889,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -942,13 +899,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultgameserverconfig_nodejs">
 <a href="#state_defaultgameserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Game<wbr>Server<wbr>Config</a>
@@ -959,8 +914,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_nodejs">
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -969,8 +923,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gameserverconfigoverrides_nodejs">
 <a href="#state_gameserverconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Config<wbr>Overrides</a>
@@ -983,8 +936,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -994,8 +946,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1005,13 +956,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_default_game_server_config_python">
 <a href="#state_default_game_server_config_python" style="color: inherit; text-decoration: inherit;">default_<wbr>game_<wbr>server_<wbr>config</a>
@@ -1022,8 +971,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}This field points to the game server config that is
 applied by default to all realms and clusters. For example,
 `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_id_python">
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -1032,8 +980,7 @@ applied by default to all realms and clusters. For example,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_game_server_config_overrides_python">
 <a href="#state_game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
@@ -1046,8 +993,7 @@ overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1057,8 +1003,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The resource id of the game server deployment eg:
 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1068,8 +1013,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1084,8 +1028,7 @@ If it is not provided, the provider project is used.
 <h4 id="gameserverdeploymentrolloutgameserverconfigoverride">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configversion_csharp">
 <a href="#configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
@@ -1094,8 +1037,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realmsselector_csharp">
 <a href="#realmsselector_csharp" style="color: inherit; text-decoration: inherit;">Realms<wbr>Selector</a>
@@ -1105,13 +1047,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configversion_go">
 <a href="#configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
@@ -1120,8 +1060,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realmsselector_go">
 <a href="#realmsselector_go" style="color: inherit; text-decoration: inherit;">Realms<wbr>Selector</a>
@@ -1131,13 +1070,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configversion_nodejs">
 <a href="#configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
@@ -1146,8 +1083,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realmsselector_nodejs">
 <a href="#realmsselector_nodejs" style="color: inherit; text-decoration: inherit;">realms<wbr>Selector</a>
@@ -1157,13 +1093,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_version_python">
 <a href="#config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
@@ -1172,8 +1106,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realms_selector_python">
 <a href="#realms_selector_python" style="color: inherit; text-decoration: inherit;">realms_<wbr>selector</a>
@@ -1183,15 +1116,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="realms_csharp">
 <a href="#realms_csharp" style="color: inherit; text-decoration: inherit;">Realms</a>
@@ -1200,13 +1131,11 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of realms to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="realms_go">
 <a href="#realms_go" style="color: inherit; text-decoration: inherit;">Realms</a>
@@ -1215,13 +1144,11 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of realms to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="realms_nodejs">
 <a href="#realms_nodejs" style="color: inherit; text-decoration: inherit;">realms</a>
@@ -1230,13 +1157,11 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of realms to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="realms_python">
 <a href="#realms_python" style="color: inherit; text-decoration: inherit;">realms</a>
@@ -1245,8 +1170,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of realms to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

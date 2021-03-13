@@ -327,8 +327,7 @@ The AclBindingRule resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authmethod_csharp">
 <a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -337,8 +336,7 @@ The AclBindingRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindname_csharp">
 <a href="#bindname_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Name</a>
@@ -347,8 +345,7 @@ The AclBindingRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindtype_csharp">
 <a href="#bindtype_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Type</a>
@@ -358,8 +355,7 @@ The AclBindingRule resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -369,8 +365,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -380,8 +375,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -391,13 +385,11 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authmethod_go">
 <a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -406,8 +398,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindname_go">
 <a href="#bindname_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Name</a>
@@ -416,8 +407,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindtype_go">
 <a href="#bindtype_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Type</a>
@@ -427,8 +417,7 @@ identities returned from an auth method validation.
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -438,8 +427,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -449,8 +437,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -460,13 +447,11 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authmethod_nodejs">
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
@@ -475,8 +460,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindname_nodejs">
 <a href="#bindname_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Name</a>
@@ -485,8 +469,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bindtype_nodejs">
 <a href="#bindtype_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Type</a>
@@ -496,8 +479,7 @@ identities returned from an auth method validation.
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -507,8 +489,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -518,8 +499,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -529,13 +509,11 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auth_method_python">
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
@@ -544,8 +522,7 @@ identities returned from an auth method validation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bind_name_python">
 <a href="#bind_name_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>name</a>
@@ -554,8 +531,7 @@ identities returned from an auth method validation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bind_type_python">
 <a href="#bind_type_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>type</a>
@@ -565,8 +541,7 @@ identities returned from an auth method validation.
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -576,8 +551,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -587,8 +561,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -598,8 +571,7 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -610,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -619,13 +590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,13 +602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -647,13 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -661,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -789,8 +753,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authmethod_csharp">
 <a href="#state_authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -799,8 +762,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindname_csharp">
 <a href="#state_bindname_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Name</a>
@@ -809,8 +771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindtype_csharp">
 <a href="#state_bindtype_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Type</a>
@@ -820,8 +781,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -831,8 +791,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_csharp">
 <a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -842,8 +801,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selector_csharp">
 <a href="#state_selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -853,13 +811,11 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authmethod_go">
 <a href="#state_authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -868,8 +824,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindname_go">
 <a href="#state_bindname_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Name</a>
@@ -878,8 +833,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindtype_go">
 <a href="#state_bindtype_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Type</a>
@@ -889,8 +843,7 @@ identities returned from an auth method validation.
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -900,8 +853,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_go">
 <a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -911,8 +863,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selector_go">
 <a href="#state_selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -922,13 +873,11 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authmethod_nodejs">
 <a href="#state_authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
@@ -937,8 +886,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindname_nodejs">
 <a href="#state_bindname_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Name</a>
@@ -947,8 +895,7 @@ identities returned from an auth method validation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bindtype_nodejs">
 <a href="#state_bindtype_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Type</a>
@@ -958,8 +905,7 @@ identities returned from an auth method validation.
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -969,8 +915,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_nodejs">
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -980,8 +925,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selector_nodejs">
 <a href="#state_selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -991,13 +935,11 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auth_method_python">
 <a href="#state_auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
@@ -1006,8 +948,7 @@ identities returned from an auth method validation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method this rule apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bind_name_python">
 <a href="#state_bind_name_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>name</a>
@@ -1016,8 +957,7 @@ identities returned from an auth method validation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to bind to a token at login-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bind_type_python">
 <a href="#state_bind_type_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>type</a>
@@ -1027,8 +967,7 @@ identities returned from an auth method validation.
     </dt>
     <dd>{{% md %}}Specifies the way the binding rule affects a token
 created at login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1038,8 +977,7 @@ created at login.
     </dt>
     <dd>{{% md %}}A free form human readable description of the
 binding rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_python">
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1049,8 +987,7 @@ binding rule.
     </dt>
     <dd>{{% md %}}The namespace to create the binding
 rule within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selector_python">
 <a href="#state_selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -1060,8 +997,7 @@ rule within.
     </dt>
     <dd>{{% md %}}The expression used to math this rule against valid
 identities returned from an auth method validation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

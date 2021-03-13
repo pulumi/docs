@@ -610,8 +610,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -620,8 +619,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -631,8 +629,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionid_csharp">
 <a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -641,8 +638,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontype_csharp">
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -651,8 +647,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandlingstrategy_csharp">
 <a href="#contenthandlingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -661,8 +656,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialsarn_csharp">
 <a href="#credentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
@@ -671,8 +665,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -681,8 +674,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmethod_csharp">
 <a href="#integrationmethod_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Method</a>
@@ -691,8 +683,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationsubtype_csharp">
 <a href="#integrationsubtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Subtype</a>
@@ -701,8 +692,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationuri_csharp">
 <a href="#integrationuri_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Uri</a>
@@ -712,8 +702,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_csharp">
 <a href="#passthroughbehavior_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -723,8 +712,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadformatversion_csharp">
 <a href="#payloadformatversion_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format<wbr>Version</a>
@@ -733,8 +721,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_csharp">
 <a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -746,8 +733,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_csharp">
 <a href="#requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -756,8 +742,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_csharp">
 <a href="#responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -766,8 +751,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">List&lt;Integration<wbr>Response<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateselectionexpression_csharp">
 <a href="#templateselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -776,8 +760,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmilliseconds_csharp">
 <a href="#timeoutmilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -785,8 +768,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_csharp">
 <a href="#tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -795,13 +777,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -810,8 +790,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -821,8 +800,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionid_go">
 <a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -831,8 +809,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontype_go">
 <a href="#connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -841,8 +818,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandlingstrategy_go">
 <a href="#contenthandlingstrategy_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -851,8 +827,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialsarn_go">
 <a href="#credentialsarn_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
@@ -861,8 +836,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -871,8 +845,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmethod_go">
 <a href="#integrationmethod_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Method</a>
@@ -881,8 +854,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationsubtype_go">
 <a href="#integrationsubtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Subtype</a>
@@ -891,8 +863,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationuri_go">
 <a href="#integrationuri_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Uri</a>
@@ -902,8 +873,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_go">
 <a href="#passthroughbehavior_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -913,8 +883,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadformatversion_go">
 <a href="#payloadformatversion_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format<wbr>Version</a>
@@ -923,8 +892,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_go">
 <a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -936,8 +904,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_go">
 <a href="#requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -946,8 +913,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_go">
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -956,8 +922,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">[]Integration<wbr>Response<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateselectionexpression_go">
 <a href="#templateselectionexpression_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -966,8 +931,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmilliseconds_go">
 <a href="#timeoutmilliseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -975,8 +939,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_go">
 <a href="#tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -985,13 +948,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -1000,8 +961,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -1011,8 +971,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionid_nodejs">
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
@@ -1021,8 +980,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectiontype_nodejs">
 <a href="#connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
@@ -1031,8 +989,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandlingstrategy_nodejs">
 <a href="#contenthandlingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling<wbr>Strategy</a>
@@ -1041,8 +998,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialsarn_nodejs">
 <a href="#credentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Arn</a>
@@ -1051,8 +1007,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1061,8 +1016,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmethod_nodejs">
 <a href="#integrationmethod_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Method</a>
@@ -1071,8 +1025,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationsubtype_nodejs">
 <a href="#integrationsubtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Subtype</a>
@@ -1081,8 +1034,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationuri_nodejs">
 <a href="#integrationuri_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Uri</a>
@@ -1092,8 +1044,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughbehavior_nodejs">
 <a href="#passthroughbehavior_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Behavior</a>
@@ -1103,8 +1054,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadformatversion_nodejs">
 <a href="#payloadformatversion_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format<wbr>Version</a>
@@ -1113,8 +1063,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_nodejs">
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -1126,8 +1075,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttemplates_nodejs">
 <a href="#requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
@@ -1136,8 +1084,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_nodejs">
 <a href="#responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -1146,8 +1093,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">Integration<wbr>Response<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateselectionexpression_nodejs">
 <a href="#templateselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Selection<wbr>Expression</a>
@@ -1156,8 +1102,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmilliseconds_nodejs">
 <a href="#timeoutmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Milliseconds</a>
@@ -1165,8 +1110,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsconfig_nodejs">
 <a href="#tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
@@ -1175,13 +1119,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -1190,8 +1132,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -1201,8 +1142,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_id_python">
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
@@ -1211,8 +1151,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_type_python">
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
@@ -1221,8 +1160,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_handling_strategy_python">
 <a href="#content_handling_strategy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling_<wbr>strategy</a>
@@ -1231,8 +1169,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_arn_python">
 <a href="#credentials_arn_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>arn</a>
@@ -1241,8 +1178,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1251,8 +1187,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_method_python">
 <a href="#integration_method_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>method</a>
@@ -1261,8 +1196,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_subtype_python">
 <a href="#integration_subtype_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>subtype</a>
@@ -1271,8 +1205,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_uri_python">
 <a href="#integration_uri_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>uri</a>
@@ -1282,8 +1215,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthrough_behavior_python">
 <a href="#passthrough_behavior_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>behavior</a>
@@ -1293,8 +1225,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_format_version_python">
 <a href="#payload_format_version_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format_<wbr>version</a>
@@ -1303,8 +1234,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_parameters_python">
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -1316,8 +1246,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_templates_python">
 <a href="#request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
@@ -1326,8 +1255,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_parameters_python">
 <a href="#response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -1336,8 +1264,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">Sequence[Integration<wbr>Response<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_selection_expression_python">
 <a href="#template_selection_expression_python" style="color: inherit; text-decoration: inherit;">template_<wbr>selection_<wbr>expression</a>
@@ -1346,8 +1273,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_milliseconds_python">
 <a href="#timeout_milliseconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>milliseconds</a>
@@ -1355,8 +1281,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_config_python">
 <a href="#tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
@@ -1365,8 +1290,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1377,8 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1386,8 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integrationresponseselectionexpression_csharp">
 <a href="#integrationresponseselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1396,13 +1318,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1410,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integrationresponseselectionexpression_go">
 <a href="#integrationresponseselectionexpression_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1420,13 +1339,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1434,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integrationresponseselectionexpression_nodejs">
 <a href="#integrationresponseselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1444,13 +1360,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1458,8 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integration_response_selection_expression_python">
 <a href="#integration_response_selection_expression_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>response_<wbr>selection_<wbr>expression</a>
@@ -1468,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1596,8 +1508,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_csharp">
 <a href="#state_apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1606,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_csharp">
 <a href="#state_connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -1616,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectiontype_csharp">
 <a href="#state_connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -1626,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandlingstrategy_csharp">
 <a href="#state_contenthandlingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -1636,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentialsarn_csharp">
 <a href="#state_credentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
@@ -1646,8 +1553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1656,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmethod_csharp">
 <a href="#state_integrationmethod_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Method</a>
@@ -1666,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationresponseselectionexpression_csharp">
 <a href="#state_integrationresponseselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1676,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationsubtype_csharp">
 <a href="#state_integrationsubtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Subtype</a>
@@ -1686,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationtype_csharp">
 <a href="#state_integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -1697,8 +1599,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationuri_csharp">
 <a href="#state_integrationuri_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Uri</a>
@@ -1708,8 +1609,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passthroughbehavior_csharp">
 <a href="#state_passthroughbehavior_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -1719,8 +1619,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadformatversion_csharp">
 <a href="#state_payloadformatversion_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format<wbr>Version</a>
@@ -1729,8 +1628,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_csharp">
 <a href="#state_requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -1742,8 +1640,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requesttemplates_csharp">
 <a href="#state_requesttemplates_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -1752,8 +1649,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_csharp">
 <a href="#state_responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1762,8 +1658,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">List&lt;Integration<wbr>Response<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateselectionexpression_csharp">
 <a href="#state_templateselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -1772,8 +1667,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmilliseconds_csharp">
 <a href="#state_timeoutmilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -1781,8 +1675,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_csharp">
 <a href="#state_tlsconfig_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1791,13 +1684,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_go">
 <a href="#state_apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1806,8 +1697,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_go">
 <a href="#state_connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -1816,8 +1706,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectiontype_go">
 <a href="#state_connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -1826,8 +1715,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandlingstrategy_go">
 <a href="#state_contenthandlingstrategy_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -1836,8 +1724,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentialsarn_go">
 <a href="#state_credentialsarn_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Arn</a>
@@ -1846,8 +1733,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1856,8 +1742,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmethod_go">
 <a href="#state_integrationmethod_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Method</a>
@@ -1866,8 +1751,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationresponseselectionexpression_go">
 <a href="#state_integrationresponseselectionexpression_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1876,8 +1760,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationsubtype_go">
 <a href="#state_integrationsubtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Subtype</a>
@@ -1886,8 +1769,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationtype_go">
 <a href="#state_integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -1897,8 +1779,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationuri_go">
 <a href="#state_integrationuri_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Uri</a>
@@ -1908,8 +1789,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passthroughbehavior_go">
 <a href="#state_passthroughbehavior_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Behavior</a>
@@ -1919,8 +1799,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadformatversion_go">
 <a href="#state_payloadformatversion_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format<wbr>Version</a>
@@ -1929,8 +1808,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_go">
 <a href="#state_requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -1942,8 +1820,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requesttemplates_go">
 <a href="#state_requesttemplates_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Templates</a>
@@ -1952,8 +1829,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_go">
 <a href="#state_responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1962,8 +1838,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">[]Integration<wbr>Response<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateselectionexpression_go">
 <a href="#state_templateselectionexpression_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -1972,8 +1847,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmilliseconds_go">
 <a href="#state_timeoutmilliseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Milliseconds</a>
@@ -1981,8 +1855,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_go">
 <a href="#state_tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
@@ -1991,13 +1864,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_nodejs">
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -2006,8 +1877,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_nodejs">
 <a href="#state_connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
@@ -2016,8 +1886,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectiontype_nodejs">
 <a href="#state_connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
@@ -2026,8 +1895,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandlingstrategy_nodejs">
 <a href="#state_contenthandlingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling<wbr>Strategy</a>
@@ -2036,8 +1904,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentialsarn_nodejs">
 <a href="#state_credentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Arn</a>
@@ -2046,8 +1913,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2056,8 +1922,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmethod_nodejs">
 <a href="#state_integrationmethod_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Method</a>
@@ -2066,8 +1931,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationresponseselectionexpression_nodejs">
 <a href="#state_integrationresponseselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -2076,8 +1940,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationsubtype_nodejs">
 <a href="#state_integrationsubtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Subtype</a>
@@ -2086,8 +1949,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationtype_nodejs">
 <a href="#state_integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -2097,8 +1959,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationuri_nodejs">
 <a href="#state_integrationuri_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Uri</a>
@@ -2108,8 +1969,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passthroughbehavior_nodejs">
 <a href="#state_passthroughbehavior_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Behavior</a>
@@ -2119,8 +1979,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadformatversion_nodejs">
 <a href="#state_payloadformatversion_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format<wbr>Version</a>
@@ -2129,8 +1988,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_nodejs">
 <a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -2142,8 +2000,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requesttemplates_nodejs">
 <a href="#state_requesttemplates_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Templates</a>
@@ -2152,8 +2009,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_nodejs">
 <a href="#state_responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -2162,8 +2018,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">Integration<wbr>Response<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateselectionexpression_nodejs">
 <a href="#state_templateselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Selection<wbr>Expression</a>
@@ -2172,8 +2027,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmilliseconds_nodejs">
 <a href="#state_timeoutmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Milliseconds</a>
@@ -2181,8 +2035,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tlsconfig_nodejs">
 <a href="#state_tlsconfig_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Config</a>
@@ -2191,13 +2044,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_id_python">
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -2206,8 +2057,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_id_python">
 <a href="#state_connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
@@ -2216,8 +2066,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_type_python">
 <a href="#state_connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
@@ -2226,8 +2075,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_handling_strategy_python">
 <a href="#state_content_handling_strategy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling_<wbr>strategy</a>
@@ -2236,8 +2084,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_arn_python">
 <a href="#state_credentials_arn_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>arn</a>
@@ -2246,8 +2093,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credentials required for the integration, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2256,8 +2102,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_method_python">
 <a href="#state_integration_method_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>method</a>
@@ -2266,8 +2111,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_response_selection_expression_python">
 <a href="#state_integration_response_selection_expression_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>response_<wbr>selection_<wbr>expression</a>
@@ -2276,8 +2120,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_subtype_python">
 <a href="#state_integration_subtype_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>subtype</a>
@@ -2286,8 +2129,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_type_python">
 <a href="#state_integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -2297,8 +2139,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}The integration type of an integration.
 Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_uri_python">
 <a href="#state_integration_uri_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>uri</a>
@@ -2308,8 +2149,7 @@ Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (su
     </dt>
     <dd>{{% md %}}The URI of the Lambda function for a Lambda proxy integration, when `integration_type` is `AWS_PROXY`.
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passthrough_behavior_python">
 <a href="#state_passthrough_behavior_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>behavior</a>
@@ -2319,8 +2159,7 @@ For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API privat
     </dt>
     <dd>{{% md %}}The pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the `request_templates` attribute.
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_format_version_python">
 <a href="#state_payload_format_version_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format_<wbr>version</a>
@@ -2329,8 +2168,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_parameters_python">
 <a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -2342,8 +2180,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations.
 For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_templates_python">
 <a href="#state_request_templates_python" style="color: inherit; text-decoration: inherit;">request_<wbr>templates</a>
@@ -2352,8 +2189,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_parameters_python">
 <a href="#state_response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -2362,8 +2198,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationresponseparameter">Sequence[Integration<wbr>Response<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_selection_expression_python">
 <a href="#state_template_selection_expression_python" style="color: inherit; text-decoration: inherit;">template_<wbr>selection_<wbr>expression</a>
@@ -2372,8 +2207,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_milliseconds_python">
 <a href="#state_timeout_milliseconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>milliseconds</a>
@@ -2381,8 +2215,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tls_config_python">
 <a href="#state_tls_config_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>config</a>
@@ -2391,8 +2224,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2407,8 +2239,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 <h4 id="integrationresponseparameter">Integration<wbr>Response<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mappings_csharp">
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -2418,8 +2249,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -2428,13 +2258,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code in the range 200-599.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mappings_go">
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -2444,8 +2272,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -2454,13 +2281,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code in the range 200-599.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mappings_nodejs">
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -2470,8 +2295,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -2480,13 +2304,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code in the range 200-599.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mappings_python">
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -2496,8 +2318,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
     </dt>
     <dd>{{% md %}}A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -2506,15 +2327,13 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code in the range 200-599.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationtlsconfig">Integration<wbr>Tls<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="servernametoverify_csharp">
 <a href="#servernametoverify_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name<wbr>To<wbr>Verify</a>
@@ -2523,13 +2342,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="servernametoverify_go">
 <a href="#servernametoverify_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name<wbr>To<wbr>Verify</a>
@@ -2538,13 +2355,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="servernametoverify_nodejs">
 <a href="#servernametoverify_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name<wbr>To<wbr>Verify</a>
@@ -2553,13 +2368,11 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="server_name_to_verify_python">
 <a href="#server_name_to_verify_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name_<wbr>to_<wbr>verify</a>
@@ -2568,8 +2381,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

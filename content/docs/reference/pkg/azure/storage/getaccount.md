@@ -156,8 +156,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -166,8 +165,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -176,8 +174,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -186,13 +183,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Storage Account is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -201,8 +196,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -211,8 +205,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -221,13 +214,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Storage Account is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -236,8 +227,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -246,8 +236,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -256,13 +245,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Storage Account is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -271,8 +258,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -281,8 +267,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -291,8 +276,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group the Storage Account is located in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -305,8 +289,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstier_csharp">
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -315,8 +298,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access tier for `BlobStorage` accounts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountkind_csharp">
 <a href="#accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
@@ -325,8 +307,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountreplicationtype_csharp">
 <a href="#accountreplicationtype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
@@ -335,8 +316,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of replication used for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accounttier_csharp">
 <a href="#accounttier_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
@@ -345,8 +325,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tier of this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowblobpublicaccess_csharp">
 <a href="#allowblobpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -355,8 +334,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomains_csharp">
 <a href="#customdomains_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
@@ -365,8 +343,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountcustomdomain">List&lt;Get<wbr>Account<wbr>Custom<wbr>Domain&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablehttpstrafficonly_csharp">
 <a href="#enablehttpstrafficonly_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -376,8 +353,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Is traffic only allowed via HTTPS? See [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,8 +362,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ishnsenabled_csharp">
 <a href="#ishnsenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
@@ -396,8 +371,7 @@ for more information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -406,8 +380,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Storage Account exists
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -416,8 +389,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name used for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_csharp">
 <a href="#primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -426,8 +398,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobconnectionstring_csharp">
 <a href="#primaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -436,8 +407,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobendpoint_csharp">
 <a href="#primaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
@@ -446,8 +416,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobhost_csharp">
 <a href="#primaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
@@ -456,8 +425,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_csharp">
 <a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -466,8 +434,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfsendpoint_csharp">
 <a href="#primarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
@@ -476,8 +443,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfshost_csharp">
 <a href="#primarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
@@ -486,8 +452,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfileendpoint_csharp">
 <a href="#primaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
@@ -496,8 +461,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfilehost_csharp">
 <a href="#primaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
@@ -506,8 +470,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarylocation_csharp">
 <a href="#primarylocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
@@ -516,8 +479,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueueendpoint_csharp">
 <a href="#primaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
@@ -526,8 +488,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueuehost_csharp">
 <a href="#primaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
@@ -536,8 +497,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytableendpoint_csharp">
 <a href="#primarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
@@ -546,8 +506,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytablehost_csharp">
 <a href="#primarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
@@ -556,8 +515,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebendpoint_csharp">
 <a href="#primarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
@@ -566,8 +524,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebhost_csharp">
 <a href="#primarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
@@ -576,8 +533,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -585,8 +541,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_csharp">
 <a href="#secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -595,8 +550,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobconnectionstring_csharp">
 <a href="#secondaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -605,8 +559,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobendpoint_csharp">
 <a href="#secondaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
@@ -615,8 +568,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobhost_csharp">
 <a href="#secondaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
@@ -625,8 +577,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -635,8 +586,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfsendpoint_csharp">
 <a href="#secondarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -645,8 +595,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfshost_csharp">
 <a href="#secondarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
@@ -655,8 +604,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfileendpoint_csharp">
 <a href="#secondaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
@@ -665,8 +613,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfilehost_csharp">
 <a href="#secondaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
@@ -675,8 +622,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarylocation_csharp">
 <a href="#secondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
@@ -685,8 +631,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueueendpoint_csharp">
 <a href="#secondaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
@@ -695,8 +640,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueuehost_csharp">
 <a href="#secondaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
@@ -705,8 +649,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytableendpoint_csharp">
 <a href="#secondarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
@@ -715,8 +658,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytablehost_csharp">
 <a href="#secondarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
@@ -725,8 +667,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebendpoint_csharp">
 <a href="#secondarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
@@ -735,8 +676,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebhost_csharp">
 <a href="#secondarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
@@ -745,8 +685,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -755,8 +694,7 @@ for more information.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -765,13 +703,11 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstier_go">
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -780,8 +716,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access tier for `BlobStorage` accounts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountkind_go">
 <a href="#accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
@@ -790,8 +725,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountreplicationtype_go">
 <a href="#accountreplicationtype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
@@ -800,8 +734,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of replication used for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accounttier_go">
 <a href="#accounttier_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
@@ -810,8 +743,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tier of this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowblobpublicaccess_go">
 <a href="#allowblobpublicaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -820,8 +752,7 @@ for more information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomains_go">
 <a href="#customdomains_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
@@ -830,8 +761,7 @@ for more information.
         <span class="property-type"><a href="#getaccountcustomdomain">[]Get<wbr>Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablehttpstrafficonly_go">
 <a href="#enablehttpstrafficonly_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -841,8 +771,7 @@ for more information.
     </dt>
     <dd>{{% md %}}Is traffic only allowed via HTTPS? See [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -851,8 +780,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ishnsenabled_go">
 <a href="#ishnsenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
@@ -861,8 +789,7 @@ for more information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -871,8 +798,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Storage Account exists
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -881,8 +807,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name used for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_go">
 <a href="#primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -891,8 +816,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobconnectionstring_go">
 <a href="#primaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -901,8 +825,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobendpoint_go">
 <a href="#primaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
@@ -911,8 +834,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobhost_go">
 <a href="#primaryblobhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
@@ -921,8 +843,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_go">
 <a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -931,8 +852,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfsendpoint_go">
 <a href="#primarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
@@ -941,8 +861,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfshost_go">
 <a href="#primarydfshost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
@@ -951,8 +870,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfileendpoint_go">
 <a href="#primaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
@@ -961,8 +879,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfilehost_go">
 <a href="#primaryfilehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
@@ -971,8 +888,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarylocation_go">
 <a href="#primarylocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
@@ -981,8 +897,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueueendpoint_go">
 <a href="#primaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
@@ -991,8 +906,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueuehost_go">
 <a href="#primaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
@@ -1001,8 +915,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytableendpoint_go">
 <a href="#primarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
@@ -1011,8 +924,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytablehost_go">
 <a href="#primarytablehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
@@ -1021,8 +933,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebendpoint_go">
 <a href="#primarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
@@ -1031,8 +942,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebhost_go">
 <a href="#primarywebhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
@@ -1041,8 +951,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1050,8 +959,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_go">
 <a href="#secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1060,8 +968,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobconnectionstring_go">
 <a href="#secondaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1070,8 +977,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobendpoint_go">
 <a href="#secondaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
@@ -1080,8 +986,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobhost_go">
 <a href="#secondaryblobhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
@@ -1090,8 +995,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1100,8 +1004,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfsendpoint_go">
 <a href="#secondarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -1110,8 +1013,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfshost_go">
 <a href="#secondarydfshost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
@@ -1120,8 +1022,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfileendpoint_go">
 <a href="#secondaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
@@ -1130,8 +1031,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfilehost_go">
 <a href="#secondaryfilehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
@@ -1140,8 +1040,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarylocation_go">
 <a href="#secondarylocation_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
@@ -1150,8 +1049,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueueendpoint_go">
 <a href="#secondaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
@@ -1160,8 +1058,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueuehost_go">
 <a href="#secondaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
@@ -1170,8 +1067,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytableendpoint_go">
 <a href="#secondarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
@@ -1180,8 +1076,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytablehost_go">
 <a href="#secondarytablehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
@@ -1190,8 +1085,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebendpoint_go">
 <a href="#secondarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
@@ -1200,8 +1094,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebhost_go">
 <a href="#secondarywebhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
@@ -1210,8 +1103,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1220,8 +1112,7 @@ for more information.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -1230,13 +1121,11 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstier_nodejs">
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
@@ -1245,8 +1134,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access tier for `BlobStorage` accounts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountkind_nodejs">
 <a href="#accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
@@ -1255,8 +1143,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountreplicationtype_nodejs">
 <a href="#accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
@@ -1265,8 +1152,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of replication used for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accounttier_nodejs">
 <a href="#accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
@@ -1275,8 +1161,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tier of this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowblobpublicaccess_nodejs">
 <a href="#allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -1285,8 +1170,7 @@ for more information.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomains_nodejs">
 <a href="#customdomains_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domains</a>
@@ -1295,8 +1179,7 @@ for more information.
         <span class="property-type"><a href="#getaccountcustomdomain">Get<wbr>Account<wbr>Custom<wbr>Domain[]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablehttpstrafficonly_nodejs">
 <a href="#enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -1306,8 +1189,7 @@ for more information.
     </dt>
     <dd>{{% md %}}Is traffic only allowed via HTTPS? See [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1316,8 +1198,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ishnsenabled_nodejs">
 <a href="#ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
@@ -1326,8 +1207,7 @@ for more information.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1336,8 +1216,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Storage Account exists
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1346,8 +1225,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name used for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_nodejs">
 <a href="#primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
@@ -1356,8 +1234,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobconnectionstring_nodejs">
 <a href="#primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1366,8 +1243,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobendpoint_nodejs">
 <a href="#primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
@@ -1376,8 +1252,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobhost_nodejs">
 <a href="#primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
@@ -1386,8 +1261,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_nodejs">
 <a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -1396,8 +1270,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfsendpoint_nodejs">
 <a href="#primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
@@ -1406,8 +1279,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfshost_nodejs">
 <a href="#primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
@@ -1416,8 +1288,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfileendpoint_nodejs">
 <a href="#primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
@@ -1426,8 +1297,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfilehost_nodejs">
 <a href="#primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
@@ -1436,8 +1306,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarylocation_nodejs">
 <a href="#primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
@@ -1446,8 +1315,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueueendpoint_nodejs">
 <a href="#primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
@@ -1456,8 +1324,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueuehost_nodejs">
 <a href="#primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
@@ -1466,8 +1333,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytableendpoint_nodejs">
 <a href="#primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
@@ -1476,8 +1342,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytablehost_nodejs">
 <a href="#primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
@@ -1486,8 +1351,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebendpoint_nodejs">
 <a href="#primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
@@ -1496,8 +1360,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebhost_nodejs">
 <a href="#primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
@@ -1506,8 +1369,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1515,8 +1377,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_nodejs">
 <a href="#secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
@@ -1525,8 +1386,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobconnectionstring_nodejs">
 <a href="#secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1535,8 +1395,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobendpoint_nodejs">
 <a href="#secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
@@ -1545,8 +1404,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobhost_nodejs">
 <a href="#secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
@@ -1555,8 +1413,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -1565,8 +1422,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfsendpoint_nodejs">
 <a href="#secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -1575,8 +1431,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfshost_nodejs">
 <a href="#secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
@@ -1585,8 +1440,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfileendpoint_nodejs">
 <a href="#secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
@@ -1595,8 +1449,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfilehost_nodejs">
 <a href="#secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
@@ -1605,8 +1458,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarylocation_nodejs">
 <a href="#secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
@@ -1615,8 +1467,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueueendpoint_nodejs">
 <a href="#secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
@@ -1625,8 +1476,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueuehost_nodejs">
 <a href="#secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
@@ -1635,8 +1485,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytableendpoint_nodejs">
 <a href="#secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
@@ -1645,8 +1494,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytablehost_nodejs">
 <a href="#secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
@@ -1655,8 +1503,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebendpoint_nodejs">
 <a href="#secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
@@ -1665,8 +1512,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebhost_nodejs">
 <a href="#secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
@@ -1675,8 +1521,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1685,8 +1530,7 @@ for more information.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -1695,13 +1539,11 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_tier_python">
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
@@ -1710,8 +1552,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access tier for `BlobStorage` accounts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="account_kind_python">
 <a href="#account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
@@ -1720,8 +1561,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kind of account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="account_replication_type_python">
 <a href="#account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
@@ -1730,8 +1570,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of replication used for this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="account_tier_python">
 <a href="#account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
@@ -1740,8 +1579,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tier of this storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allow_blob_public_access_python">
 <a href="#allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
@@ -1750,8 +1588,7 @@ for more information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is public access allowed to all blobs or containers in the storage account?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_domains_python">
 <a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
@@ -1760,8 +1597,7 @@ for more information.
         <span class="property-type"><a href="#getaccountcustomdomain">Sequence[Get<wbr>Account<wbr>Custom<wbr>Domain]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_https_traffic_only_python">
 <a href="#enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
@@ -1771,8 +1607,7 @@ for more information.
     </dt>
     <dd>{{% md %}}Is traffic only allowed via HTTPS? See [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1781,8 +1616,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_hns_enabled_python">
 <a href="#is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
@@ -1791,8 +1625,7 @@ for more information.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1801,8 +1634,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Storage Account exists
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1811,8 +1643,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name used for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_access_key_python">
 <a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
@@ -1821,8 +1652,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_blob_connection_string_python">
 <a href="#primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
@@ -1831,8 +1661,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_blob_endpoint_python">
 <a href="#primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
@@ -1841,8 +1670,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_blob_host_python">
 <a href="#primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
@@ -1851,8 +1679,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_connection_string_python">
 <a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -1861,8 +1688,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_dfs_endpoint_python">
 <a href="#primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
@@ -1871,8 +1697,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_dfs_host_python">
 <a href="#primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
@@ -1881,8 +1706,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_file_endpoint_python">
 <a href="#primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
@@ -1891,8 +1715,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_file_host_python">
 <a href="#primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
@@ -1901,8 +1724,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_location_python">
 <a href="#primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
@@ -1911,8 +1733,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_queue_endpoint_python">
 <a href="#primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
@@ -1921,8 +1742,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_queue_host_python">
 <a href="#primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
@@ -1931,8 +1751,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_table_endpoint_python">
 <a href="#primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
@@ -1941,8 +1760,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_table_host_python">
 <a href="#primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
@@ -1951,8 +1769,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_web_endpoint_python">
 <a href="#primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
@@ -1961,8 +1778,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_web_host_python">
 <a href="#primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
@@ -1971,8 +1787,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1980,8 +1795,7 @@ for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_access_key_python">
 <a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
@@ -1990,8 +1804,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_blob_connection_string_python">
 <a href="#secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
@@ -2000,8 +1813,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_blob_endpoint_python">
 <a href="#secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
@@ -2010,8 +1822,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_blob_host_python">
 <a href="#secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
@@ -2020,8 +1831,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_connection_string_python">
 <a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -2030,8 +1840,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_dfs_endpoint_python">
 <a href="#secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
@@ -2040,8 +1849,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_dfs_host_python">
 <a href="#secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
@@ -2050,8 +1858,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_file_endpoint_python">
 <a href="#secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
@@ -2060,8 +1867,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_file_host_python">
 <a href="#secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
@@ -2070,8 +1876,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_location_python">
 <a href="#secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
@@ -2080,8 +1885,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary location of the Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_queue_endpoint_python">
 <a href="#secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
@@ -2090,8 +1894,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_queue_host_python">
 <a href="#secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
@@ -2100,8 +1903,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_table_endpoint_python">
 <a href="#secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
@@ -2110,8 +1912,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_table_host_python">
 <a href="#secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
@@ -2120,8 +1921,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_web_endpoint_python">
 <a href="#secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
@@ -2130,8 +1930,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_web_host_python">
 <a href="#secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
@@ -2140,8 +1939,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2150,8 +1948,7 @@ for more information.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -2160,8 +1957,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this storage account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2175,8 +1971,7 @@ for more information.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2185,13 +1980,11 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2200,13 +1993,11 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2215,13 +2006,11 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2230,8 +2019,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage Account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

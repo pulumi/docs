@@ -508,8 +508,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkinterfaceids_csharp">
 <a href="#networkinterfaceids_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Ids</a>
@@ -518,8 +517,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -528,8 +526,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageosdisk_csharp">
 <a href="#storageosdisk_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Os<wbr>Disk</a>
@@ -538,8 +535,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -548,8 +544,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalcapabilities_csharp">
 <a href="#additionalcapabilities_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
@@ -558,8 +553,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitysetid_csharp">
 <a href="#availabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Set<wbr>Id</a>
@@ -568,8 +562,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdiagnostics_csharp">
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
@@ -578,8 +571,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletedatadisksontermination_csharp">
 <a href="#deletedatadisksontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
@@ -588,8 +580,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteosdiskontermination_csharp">
 <a href="#deleteosdiskontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
@@ -598,8 +589,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -608,8 +598,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -618,8 +607,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -628,8 +616,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -638,8 +625,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -648,8 +634,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilelinuxconfig_csharp">
 <a href="#osprofilelinuxconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
@@ -658,8 +643,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilesecrets_csharp">
 <a href="#osprofilesecrets_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
@@ -668,8 +652,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilesecret">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilewindowsconfig_csharp">
 <a href="#osprofilewindowsconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
@@ -678,8 +661,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -688,8 +670,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkinterfaceid_csharp">
 <a href="#primarynetworkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -698,8 +679,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_csharp">
 <a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -708,8 +688,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagedatadisks_csharp">
 <a href="#storagedatadisks_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Disks</a>
@@ -718,8 +697,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">List&lt;Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageimagereference_csharp">
 <a href="#storageimagereference_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
@@ -728,8 +706,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -738,8 +715,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -748,13 +724,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkinterfaceids_go">
 <a href="#networkinterfaceids_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Ids</a>
@@ -763,8 +737,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -773,8 +746,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageosdisk_go">
 <a href="#storageosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Os<wbr>Disk</a>
@@ -783,8 +755,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -793,8 +764,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalcapabilities_go">
 <a href="#additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
@@ -803,8 +773,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitysetid_go">
 <a href="#availabilitysetid_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Set<wbr>Id</a>
@@ -813,8 +782,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdiagnostics_go">
 <a href="#bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
@@ -823,8 +791,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletedatadisksontermination_go">
 <a href="#deletedatadisksontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
@@ -833,8 +800,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteosdiskontermination_go">
 <a href="#deleteosdiskontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
@@ -843,8 +809,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -853,8 +818,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -863,8 +827,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -873,8 +836,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -883,8 +845,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -893,8 +854,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilelinuxconfig_go">
 <a href="#osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
@@ -903,8 +863,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilesecrets_go">
 <a href="#osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
@@ -913,8 +872,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilesecret">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilewindowsconfig_go">
 <a href="#osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
@@ -923,8 +881,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -933,8 +890,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkinterfaceid_go">
 <a href="#primarynetworkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -943,8 +899,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_go">
 <a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -953,8 +908,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagedatadisks_go">
 <a href="#storagedatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Disks</a>
@@ -963,8 +917,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">[]Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageimagereference_go">
 <a href="#storageimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
@@ -973,8 +926,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -983,8 +935,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -993,13 +944,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkinterfaceids_nodejs">
 <a href="#networkinterfaceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Ids</a>
@@ -1008,8 +957,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1018,8 +966,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageosdisk_nodejs">
 <a href="#storageosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Os<wbr>Disk</a>
@@ -1028,8 +975,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -1038,8 +984,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalcapabilities_nodejs">
 <a href="#additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
@@ -1048,8 +993,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitysetid_nodejs">
 <a href="#availabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Id</a>
@@ -1058,8 +1002,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdiagnostics_nodejs">
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
@@ -1068,8 +1011,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletedatadisksontermination_nodejs">
 <a href="#deletedatadisksontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
@@ -1078,8 +1020,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteosdiskontermination_nodejs">
 <a href="#deleteosdiskontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
@@ -1088,8 +1029,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1098,8 +1038,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -1108,8 +1047,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1118,8 +1056,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1128,8 +1065,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
@@ -1138,8 +1074,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilelinuxconfig_nodejs">
 <a href="#osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
@@ -1148,8 +1083,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilesecrets_nodejs">
 <a href="#osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
@@ -1158,8 +1092,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilesecret">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofilewindowsconfig_nodejs">
 <a href="#osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
@@ -1168,8 +1101,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1178,8 +1110,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkinterfaceid_nodejs">
 <a href="#primarynetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -1188,8 +1119,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_nodejs">
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -1198,8 +1128,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagedatadisks_nodejs">
 <a href="#storagedatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Disks</a>
@@ -1208,8 +1137,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageimagereference_nodejs">
 <a href="#storageimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>Reference</a>
@@ -1218,8 +1146,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1228,8 +1155,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -1238,13 +1164,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_interface_ids_python">
 <a href="#network_interface_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ids</a>
@@ -1253,8 +1177,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1263,8 +1186,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_os_disk_python">
 <a href="#storage_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>os_<wbr>disk</a>
@@ -1273,8 +1195,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -1283,8 +1204,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_capabilities_python">
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
@@ -1293,8 +1213,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_set_id_python">
 <a href="#availability_set_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>id</a>
@@ -1303,8 +1222,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boot_diagnostics_python">
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
@@ -1313,8 +1231,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_data_disks_on_termination_python">
 <a href="#delete_data_disks_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>data_<wbr>disks_<wbr>on_<wbr>termination</a>
@@ -1323,8 +1240,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_os_disk_on_termination_python">
 <a href="#delete_os_disk_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>termination</a>
@@ -1333,8 +1249,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1343,8 +1258,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -1353,8 +1267,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1363,8 +1276,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1373,8 +1285,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
@@ -1383,8 +1294,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_linux_config_python">
 <a href="#os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
@@ -1393,8 +1303,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_secrets_python">
 <a href="#os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
@@ -1403,8 +1312,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilesecret">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_windows_config_python">
 <a href="#os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
@@ -1413,8 +1321,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1423,8 +1330,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_network_interface_id_python">
 <a href="#primary_network_interface_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>interface_<wbr>id</a>
@@ -1433,8 +1339,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximity_placement_group_id_python">
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
@@ -1443,8 +1348,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_data_disks_python">
 <a href="#storage_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>disks</a>
@@ -1453,8 +1357,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">Sequence[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_image_reference_python">
 <a href="#storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
@@ -1463,8 +1366,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1473,8 +1375,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -1483,8 +1384,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1495,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1504,13 +1403,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1518,13 +1415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1532,13 +1427,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1546,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1674,8 +1566,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalcapabilities_csharp">
 <a href="#state_additionalcapabilities_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
@@ -1684,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilitysetid_csharp">
 <a href="#state_availabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Set<wbr>Id</a>
@@ -1694,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdiagnostics_csharp">
 <a href="#state_bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
@@ -1704,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletedatadisksontermination_csharp">
 <a href="#state_deletedatadisksontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
@@ -1714,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteosdiskontermination_csharp">
 <a href="#state_deleteosdiskontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
@@ -1724,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1734,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_csharp">
 <a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1744,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1754,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1764,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceids_csharp">
 <a href="#state_networkinterfaceids_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Ids</a>
@@ -1774,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofile_csharp">
 <a href="#state_osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -1784,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilelinuxconfig_csharp">
 <a href="#state_osprofilelinuxconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
@@ -1794,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilesecrets_csharp">
 <a href="#state_osprofilesecrets_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
@@ -1804,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecret">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilewindowsconfig_csharp">
 <a href="#state_osprofilewindowsconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
@@ -1814,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1824,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarynetworkinterfaceid_csharp">
 <a href="#state_primarynetworkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -1834,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_csharp">
 <a href="#state_proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -1844,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1854,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagedatadisks_csharp">
 <a href="#state_storagedatadisks_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Disks</a>
@@ -1864,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">List&lt;Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageimagereference_csharp">
 <a href="#state_storageimagereference_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
@@ -1874,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageosdisk_csharp">
 <a href="#state_storageosdisk_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Os<wbr>Disk</a>
@@ -1884,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1894,8 +1764,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_csharp">
 <a href="#state_vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1904,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_csharp">
 <a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -1914,13 +1782,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalcapabilities_go">
 <a href="#state_additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
@@ -1929,8 +1795,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilitysetid_go">
 <a href="#state_availabilitysetid_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Set<wbr>Id</a>
@@ -1939,8 +1804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdiagnostics_go">
 <a href="#state_bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
@@ -1949,8 +1813,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletedatadisksontermination_go">
 <a href="#state_deletedatadisksontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
@@ -1959,8 +1822,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteosdiskontermination_go">
 <a href="#state_deleteosdiskontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
@@ -1969,8 +1831,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1979,8 +1840,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_go">
 <a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1989,8 +1849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1999,8 +1858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2009,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceids_go">
 <a href="#state_networkinterfaceids_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Ids</a>
@@ -2019,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofile_go">
 <a href="#state_osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2029,8 +1885,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilelinuxconfig_go">
 <a href="#state_osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
@@ -2039,8 +1894,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilesecrets_go">
 <a href="#state_osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
@@ -2049,8 +1903,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecret">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilewindowsconfig_go">
 <a href="#state_osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
@@ -2059,8 +1912,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -2069,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarynetworkinterfaceid_go">
 <a href="#state_primarynetworkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -2079,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_go">
 <a href="#state_proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -2089,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2099,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagedatadisks_go">
 <a href="#state_storagedatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Disks</a>
@@ -2109,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">[]Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageimagereference_go">
 <a href="#state_storageimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
@@ -2119,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageosdisk_go">
 <a href="#state_storageosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Os<wbr>Disk</a>
@@ -2129,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2139,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_go">
 <a href="#state_vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -2149,8 +1993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_go">
 <a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -2159,13 +2002,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalcapabilities_nodejs">
 <a href="#state_additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
@@ -2174,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilitysetid_nodejs">
 <a href="#state_availabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Id</a>
@@ -2184,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdiagnostics_nodejs">
 <a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
@@ -2194,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletedatadisksontermination_nodejs">
 <a href="#state_deletedatadisksontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Data<wbr>Disks<wbr>On<wbr>Termination</a>
@@ -2204,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteosdiskontermination_nodejs">
 <a href="#state_deleteosdiskontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Termination</a>
@@ -2214,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -2224,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_nodejs">
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -2234,8 +2069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2244,8 +2078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2254,8 +2087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceids_nodejs">
 <a href="#state_networkinterfaceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Ids</a>
@@ -2264,8 +2096,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofile_nodejs">
 <a href="#state_osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
@@ -2274,8 +2105,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilelinuxconfig_nodejs">
 <a href="#state_osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
@@ -2284,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilesecrets_nodejs">
 <a href="#state_osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
@@ -2294,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecret">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osprofilewindowsconfig_nodejs">
 <a href="#state_osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
@@ -2304,8 +2132,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2314,8 +2141,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarynetworkinterfaceid_nodejs">
 <a href="#state_primarynetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -2324,8 +2150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_nodejs">
 <a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -2334,8 +2159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2344,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagedatadisks_nodejs">
 <a href="#state_storagedatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Disks</a>
@@ -2354,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageimagereference_nodejs">
 <a href="#state_storageimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>Reference</a>
@@ -2364,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageosdisk_nodejs">
 <a href="#state_storageosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Os<wbr>Disk</a>
@@ -2374,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2384,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_nodejs">
 <a href="#state_vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -2394,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_nodejs">
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -2404,13 +2222,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additional_capabilities_python">
 <a href="#state_additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
@@ -2419,8 +2235,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_set_id_python">
 <a href="#state_availability_set_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>id</a>
@@ -2429,8 +2244,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boot_diagnostics_python">
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
@@ -2439,8 +2253,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_data_disks_on_termination_python">
 <a href="#state_delete_data_disks_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>data_<wbr>disks_<wbr>on_<wbr>termination</a>
@@ -2449,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_os_disk_on_termination_python">
 <a href="#state_delete_os_disk_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>termination</a>
@@ -2459,8 +2271,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -2469,8 +2280,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_type_python">
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -2479,8 +2289,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2489,8 +2298,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2499,8 +2307,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interface_ids_python">
 <a href="#state_network_interface_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ids</a>
@@ -2509,8 +2316,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Network Interface ID's which should be associated with the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_python">
 <a href="#state_os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
@@ -2519,8 +2325,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_linux_config_python">
 <a href="#state_os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
@@ -2529,8 +2334,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_secrets_python">
 <a href="#state_os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
@@ -2539,8 +2343,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecret">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_windows_config_python">
 <a href="#state_os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
@@ -2549,8 +2352,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2559,8 +2361,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_network_interface_id_python">
 <a href="#state_primary_network_interface_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>interface_<wbr>id</a>
@@ -2569,8 +2370,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximity_placement_group_id_python">
 <a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
@@ -2579,8 +2379,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2589,8 +2388,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_data_disks_python">
 <a href="#state_storage_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>disks</a>
@@ -2599,8 +2397,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestoragedatadisk">Sequence[Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_image_reference_python">
 <a href="#state_storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
@@ -2609,8 +2406,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_os_disk_python">
 <a href="#state_storage_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>os_<wbr>disk</a>
@@ -2619,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2629,8 +2424,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_size_python">
 <a href="#state_vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -2639,8 +2433,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the [size of the Virtual Machine](https://docs.microsoft.com/azure/virtual-machines/sizes-general). See also [Azure VM Naming Conventions](https://docs.microsoft.com/azure/virtual-machines/vm-naming-conventions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_python">
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -2649,8 +2442,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2665,8 +2457,7 @@ The following state arguments are supported:
 <h4 id="virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ultrassdenabled_csharp">
 <a href="#ultrassdenabled_csharp" style="color: inherit; text-decoration: inherit;">Ultra<wbr>Ssd<wbr>Enabled</a>
@@ -2675,13 +2466,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Ultra SSD disk be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ultrassdenabled_go">
 <a href="#ultrassdenabled_go" style="color: inherit; text-decoration: inherit;">Ultra<wbr>Ssd<wbr>Enabled</a>
@@ -2690,13 +2479,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Ultra SSD disk be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ultrassdenabled_nodejs">
 <a href="#ultrassdenabled_nodejs" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
@@ -2705,13 +2492,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Ultra SSD disk be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ultra_ssd_enabled_python">
 <a href="#ultra_ssd_enabled_python" style="color: inherit; text-decoration: inherit;">ultra_<wbr>ssd_<wbr>enabled</a>
@@ -2720,15 +2505,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Ultra SSD disk be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2737,8 +2520,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Boot Diagnostics be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_csharp">
 <a href="#storageuri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
@@ -2747,13 +2529,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2762,8 +2542,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Boot Diagnostics be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_go">
 <a href="#storageuri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
@@ -2772,13 +2551,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2787,8 +2564,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Boot Diagnostics be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_nodejs">
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
@@ -2797,13 +2573,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2812,8 +2586,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Boot Diagnostics be enabled for this Virtual Machine?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_uri_python">
 <a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
@@ -2822,15 +2595,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Storage Account's Blob Endpoint which should hold the virtual machine's diagnostic files.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2839,8 +2610,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Virtual Machine. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` (where you can specify the Service Principal ID's) to be used by this Virtual Machine using the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_csharp">
 <a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -2849,8 +2619,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VM. Required if `type` is `UserAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2859,13 +2628,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2874,8 +2641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Virtual Machine. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` (where you can specify the Service Principal ID's) to be used by this Virtual Machine using the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_go">
 <a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -2884,8 +2650,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VM. Required if `type` is `UserAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2894,13 +2659,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2909,8 +2672,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Virtual Machine. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` (where you can specify the Service Principal ID's) to be used by this Virtual Machine using the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityids_nodejs">
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
@@ -2919,8 +2681,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VM. Required if `type` is `UserAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -2929,13 +2690,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2944,8 +2703,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this Virtual Machine. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` (where you can specify the Service Principal ID's) to be used by this Virtual Machine using the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_ids_python">
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
@@ -2954,8 +2712,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VM. Required if `type` is `UserAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -2964,15 +2721,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -2981,8 +2736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computername_csharp">
 <a href="#computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
@@ -2991,8 +2745,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -3001,8 +2754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -3011,13 +2763,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -3026,8 +2776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computername_go">
 <a href="#computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
@@ -3036,8 +2785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -3046,8 +2794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -3056,13 +2803,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -3071,8 +2816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computername_nodejs">
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
@@ -3081,8 +2825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -3091,8 +2834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -3101,13 +2843,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -3116,8 +2856,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computer_name_python">
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
@@ -3126,8 +2865,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -3136,8 +2874,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the local administrator account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -3146,15 +2883,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disablepasswordauthentication_csharp">
 <a href="#disablepasswordauthentication_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Authentication</a>
@@ -3163,8 +2898,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. If set to `false`, an `admin_password` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -3173,13 +2907,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disablepasswordauthentication_go">
 <a href="#disablepasswordauthentication_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Authentication</a>
@@ -3188,8 +2920,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. If set to `false`, an `admin_password` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
@@ -3198,13 +2929,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disablepasswordauthentication_nodejs">
 <a href="#disablepasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Authentication</a>
@@ -3213,8 +2942,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. If set to `false`, an `admin_password` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
@@ -3223,13 +2951,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disable_password_authentication_python">
 <a href="#disable_password_authentication_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>authentication</a>
@@ -3238,8 +2964,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. If set to `false`, an `admin_password` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_keys_python">
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
@@ -3248,15 +2973,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilelinuxconfigsshkey">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -3265,8 +2988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key which should be written to the `path` defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3275,13 +2997,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the destination file on the virtual machine
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -3290,8 +3010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key which should be written to the `path` defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3300,13 +3019,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the destination file on the virtual machine
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
@@ -3315,8 +3032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key which should be written to the `path` defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3325,13 +3041,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the destination file on the virtual machine
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
@@ -3340,8 +3054,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key which should be written to the `path` defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3350,15 +3063,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the destination file on the virtual machine
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilesecret">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcevaultid_csharp">
 <a href="#sourcevaultid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault<wbr>Id</a>
@@ -3367,8 +3078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_csharp">
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
@@ -3377,13 +3087,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcevaultid_go">
 <a href="#sourcevaultid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault<wbr>Id</a>
@@ -3392,8 +3100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_go">
 <a href="#vaultcertificates_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
@@ -3402,13 +3109,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcevaultid_nodejs">
 <a href="#sourcevaultid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
@@ -3417,8 +3122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_nodejs">
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
@@ -3427,13 +3131,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_vault_id_python">
 <a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
@@ -3442,8 +3144,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vault_certificates_python">
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
@@ -3452,15 +3153,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilesecretvaultcertificate">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateurl_csharp">
 <a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
@@ -3469,8 +3168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatestore_csharp">
 <a href="#certificatestore_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Store</a>
@@ -3479,13 +3177,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as `My`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateurl_go">
 <a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
@@ -3494,8 +3190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatestore_go">
 <a href="#certificatestore_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Store</a>
@@ -3504,13 +3199,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as `My`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateurl_nodejs">
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
@@ -3519,8 +3212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatestore_nodejs">
 <a href="#certificatestore_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
@@ -3529,13 +3221,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as `My`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_url_python">
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
@@ -3544,8 +3234,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_store_python">
 <a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
@@ -3554,15 +3243,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as `My`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalunattendconfigs_csharp">
 <a href="#additionalunattendconfigs_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Configs</a>
@@ -3571,8 +3258,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautomaticupgrades_csharp">
 <a href="#enableautomaticupgrades_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Upgrades</a>
@@ -3581,8 +3267,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are automatic updates enabled on this Virtual Machine? Defaults to `false.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
 <a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
@@ -3591,8 +3276,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -3601,8 +3285,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone of the virtual machine, [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrms_csharp">
 <a href="#winrms_csharp" style="color: inherit; text-decoration: inherit;">Winrms</a>
@@ -3611,13 +3294,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalunattendconfigs_go">
 <a href="#additionalunattendconfigs_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Configs</a>
@@ -3626,8 +3307,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautomaticupgrades_go">
 <a href="#enableautomaticupgrades_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Upgrades</a>
@@ -3636,8 +3316,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are automatic updates enabled on this Virtual Machine? Defaults to `false.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
 <a href="#provisionvmagent_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
@@ -3646,8 +3325,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -3656,8 +3334,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone of the virtual machine, [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrms_go">
 <a href="#winrms_go" style="color: inherit; text-decoration: inherit;">Winrms</a>
@@ -3666,13 +3343,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalunattendconfigs_nodejs">
 <a href="#additionalunattendconfigs_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
@@ -3681,8 +3356,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautomaticupgrades_nodejs">
 <a href="#enableautomaticupgrades_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
@@ -3691,8 +3365,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Are automatic updates enabled on this Virtual Machine? Defaults to `false.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
@@ -3701,8 +3374,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -3711,8 +3383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone of the virtual machine, [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrms_nodejs">
 <a href="#winrms_nodejs" style="color: inherit; text-decoration: inherit;">winrms</a>
@@ -3721,13 +3392,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_unattend_configs_python">
 <a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
@@ -3736,8 +3405,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_automatic_upgrades_python">
 <a href="#enable_automatic_upgrades_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>upgrades</a>
@@ -3746,8 +3414,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are automatic updates enabled on this Virtual Machine? Defaults to `false.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
@@ -3756,8 +3423,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -3766,8 +3432,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time zone of the virtual machine, [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="winrms_python">
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
@@ -3776,15 +3441,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilewindowsconfigadditionalunattendconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -3793,8 +3456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -3803,8 +3465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pass_csharp">
 <a href="#pass_csharp" style="color: inherit; text-decoration: inherit;">Pass</a>
@@ -3813,8 +3474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settingname_csharp">
 <a href="#settingname_csharp" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
@@ -3823,13 +3483,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -3838,8 +3496,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -3848,8 +3505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pass_go">
 <a href="#pass_go" style="color: inherit; text-decoration: inherit;">Pass</a>
@@ -3858,8 +3514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settingname_go">
 <a href="#settingname_go" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
@@ -3868,13 +3523,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -3883,8 +3536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -3893,8 +3545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pass_nodejs">
 <a href="#pass_nodejs" style="color: inherit; text-decoration: inherit;">pass</a>
@@ -3903,8 +3554,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settingname_nodejs">
 <a href="#settingname_nodejs" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
@@ -3913,13 +3563,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -3928,8 +3576,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -3938,8 +3585,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pass__python">
 <a href="#pass__python" style="color: inherit; text-decoration: inherit;">pass_</a>
@@ -3948,8 +3594,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="setting_name_python">
 <a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
@@ -3958,15 +3603,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineosprofilewindowsconfigwinrm">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3975,8 +3618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener. Possible values are `HTTP` or `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateurl_csharp">
 <a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
@@ -3985,13 +3627,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the `vault_certificates` block within the `os_profile_secrets` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -4000,8 +3640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener. Possible values are `HTTP` or `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateurl_go">
 <a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
@@ -4010,13 +3649,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the `vault_certificates` block within the `os_profile_secrets` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -4025,8 +3662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener. Possible values are `HTTP` or `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateurl_nodejs">
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
@@ -4035,13 +3671,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the `vault_certificates` block within the `os_profile_secrets` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -4050,8 +3684,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener. Possible values are `HTTP` or `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_url_python">
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
@@ -4060,15 +3693,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the `vault_certificates` block within the `os_profile_secrets` block.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4077,8 +3708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -4087,8 +3717,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -4097,13 +3726,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4112,8 +3739,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -4122,8 +3748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -4132,13 +3757,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4147,8 +3770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -4157,8 +3779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -4167,13 +3788,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4182,8 +3801,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -4192,8 +3810,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -4202,15 +3819,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestoragedatadisk">Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -4219,8 +3834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. Possible values are `Attach`, `FromImage` and `Empty`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -4229,8 +3843,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4239,8 +3852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Data Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -4249,8 +3861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -4259,8 +3870,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_csharp">
 <a href="#manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -4269,8 +3879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_csharp">
 <a href="#manageddisktype_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
@@ -4279,8 +3888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhduri_csharp">
 <a href="#vhduri_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Uri</a>
@@ -4289,8 +3897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeacceleratorenabled_csharp">
 <a href="#writeacceleratorenabled_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
@@ -4299,13 +3906,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -4314,8 +3919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. Possible values are `Attach`, `FromImage` and `Empty`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -4324,8 +3928,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4334,8 +3937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Data Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -4344,8 +3946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -4354,8 +3955,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_go">
 <a href="#manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -4364,8 +3964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_go">
 <a href="#manageddisktype_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
@@ -4374,8 +3973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhduri_go">
 <a href="#vhduri_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Uri</a>
@@ -4384,8 +3982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeacceleratorenabled_go">
 <a href="#writeacceleratorenabled_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
@@ -4394,13 +3991,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
@@ -4409,8 +4004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. Possible values are `Attach`, `FromImage` and `Empty`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -4419,8 +4013,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4429,8 +4022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Data Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -4439,8 +4031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -4449,8 +4040,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_nodejs">
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
@@ -4459,8 +4049,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_nodejs">
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
@@ -4469,8 +4058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhduri_nodejs">
 <a href="#vhduri_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Uri</a>
@@ -4479,8 +4067,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeacceleratorenabled_nodejs">
 <a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
@@ -4489,13 +4076,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
@@ -4504,8 +4089,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. Possible values are `Attach`, `FromImage` and `Empty`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -4514,8 +4098,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4524,8 +4107,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Data Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -4534,8 +4116,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -4544,8 +4125,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the data disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_id_python">
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
@@ -4554,8 +4134,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_type_python">
 <a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
@@ -4564,8 +4143,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_uri_python">
 <a href="#vhd_uri_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>uri</a>
@@ -4574,8 +4152,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_accelerator_enabled_python">
 <a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
@@ -4584,15 +4161,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4601,8 +4176,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -4611,8 +4185,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -4621,8 +4194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -4631,8 +4203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4641,13 +4212,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4656,8 +4225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -4666,8 +4234,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -4676,8 +4243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -4686,8 +4252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4696,13 +4261,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4711,8 +4274,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -4721,8 +4283,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -4731,8 +4292,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -4741,8 +4301,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4751,13 +4310,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4766,8 +4323,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -4776,8 +4332,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -4786,8 +4341,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -4796,8 +4350,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4806,15 +4359,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -4823,8 +4374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the OS Disk should be created. Possible values are `Attach` (managed disks only) and `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4833,8 +4383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the OS Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -4843,8 +4392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the OS Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -4853,8 +4401,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the OS Disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageuri_csharp">
 <a href="#imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
@@ -4863,8 +4410,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_csharp">
 <a href="#manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -4873,8 +4419,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_csharp">
 <a href="#manageddisktype_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
@@ -4883,8 +4428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -4893,8 +4437,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Operating System on the OS Disk. Possible values are `Linux` and `Windows`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhduri_csharp">
 <a href="#vhduri_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Uri</a>
@@ -4903,8 +4446,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeacceleratorenabled_csharp">
 <a href="#writeacceleratorenabled_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
@@ -4913,13 +4455,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -4928,8 +4468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the OS Disk should be created. Possible values are `Attach` (managed disks only) and `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4938,8 +4477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the OS Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -4948,8 +4486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the OS Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -4958,8 +4495,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the OS Disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageuri_go">
 <a href="#imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
@@ -4968,8 +4504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_go">
 <a href="#manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -4978,8 +4513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_go">
 <a href="#manageddisktype_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
@@ -4988,8 +4522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -4998,8 +4531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Operating System on the OS Disk. Possible values are `Linux` and `Windows`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhduri_go">
 <a href="#vhduri_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Uri</a>
@@ -5008,8 +4540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeacceleratorenabled_go">
 <a href="#writeacceleratorenabled_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Accelerator<wbr>Enabled</a>
@@ -5018,13 +4549,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
@@ -5033,8 +4562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the OS Disk should be created. Possible values are `Attach` (managed disks only) and `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5043,8 +4571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the OS Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -5053,8 +4580,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the OS Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -5063,8 +4589,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the OS Disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageuri_nodejs">
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
@@ -5073,8 +4598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_nodejs">
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
@@ -5083,8 +4607,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_nodejs">
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
@@ -5093,8 +4616,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -5103,8 +4625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Operating System on the OS Disk. Possible values are `Linux` and `Windows`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhduri_nodejs">
 <a href="#vhduri_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Uri</a>
@@ -5113,8 +4634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writeacceleratorenabled_nodejs">
 <a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
@@ -5123,13 +4643,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
@@ -5138,8 +4656,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the OS Disk should be created. Possible values are `Attach` (managed disks only) and `FromImage`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5148,8 +4665,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the OS Disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -5158,8 +4674,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements for the OS Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -5168,8 +4683,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the OS Disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_uri_python">
 <a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
@@ -5178,8 +4692,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Image URI in the format `publisherName:offer:skus:version`. This field can also specify the [VHD uri](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image) of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the `os_type` field must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_id_python">
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
@@ -5188,8 +4701,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_type_python">
 <a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
@@ -5198,8 +4710,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -5208,8 +4719,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Operating System on the OS Disk. Possible values are `Linux` and `Windows`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_uri_python">
 <a href="#vhd_uri_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>uri</a>
@@ -5218,8 +4728,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_accelerator_enabled_python">
 <a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
@@ -5228,8 +4737,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

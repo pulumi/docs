@@ -170,8 +170,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetesclusterid_csharp">
 <a href="#kubernetesclusterid_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Cluster<wbr>Id</a>
@@ -180,8 +179,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -190,8 +188,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -200,8 +197,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautoscaling_csharp">
 <a href="#enableautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -210,8 +206,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehostencryption_csharp">
 <a href="#enablehostencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Host<wbr>Encryption</a>
@@ -220,8 +215,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -230,8 +224,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_csharp">
 <a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -240,8 +233,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -250,8 +242,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpods_csharp">
 <a href="#maxpods_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -260,8 +251,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincount_csharp">
 <a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -270,8 +260,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -280,8 +269,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -290,8 +278,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -300,8 +287,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodelabels_csharp">
 <a href="#nodelabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -310,8 +296,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -320,8 +305,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestratorversion_csharp">
 <a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -330,8 +314,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_csharp">
 <a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -340,8 +323,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisktype_csharp">
 <a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -350,8 +332,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -360,8 +341,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -370,8 +350,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_csharp">
 <a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -380,8 +359,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_csharp">
 <a href="#spotmaxprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -390,8 +368,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -400,8 +377,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_csharp">
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -410,8 +386,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetid_csharp">
 <a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
@@ -420,13 +395,11 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetesclusterid_go">
 <a href="#kubernetesclusterid_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Cluster<wbr>Id</a>
@@ -435,8 +408,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -445,8 +417,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -455,8 +426,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautoscaling_go">
 <a href="#enableautoscaling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -465,8 +435,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehostencryption_go">
 <a href="#enablehostencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Host<wbr>Encryption</a>
@@ -475,8 +444,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -485,8 +453,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_go">
 <a href="#evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -495,8 +462,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_go">
 <a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -505,8 +471,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpods_go">
 <a href="#maxpods_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -515,8 +480,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincount_go">
 <a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -525,8 +489,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -535,8 +498,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -545,8 +507,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -555,8 +516,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodelabels_go">
 <a href="#nodelabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -565,8 +525,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_go">
 <a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -575,8 +534,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestratorversion_go">
 <a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -585,8 +543,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_go">
 <a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -595,8 +552,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisktype_go">
 <a href="#osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -605,8 +561,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -615,8 +570,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -625,8 +579,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_go">
 <a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -635,8 +588,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_go">
 <a href="#spotmaxprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -645,8 +597,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -655,8 +606,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_go">
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -665,8 +615,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetid_go">
 <a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
@@ -675,13 +624,11 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetesclusterid_nodejs">
 <a href="#kubernetesclusterid_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Cluster<wbr>Id</a>
@@ -690,8 +637,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -700,8 +646,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -710,8 +655,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautoscaling_nodejs">
 <a href="#enableautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Scaling</a>
@@ -720,8 +664,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehostencryption_nodejs">
 <a href="#enablehostencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Host<wbr>Encryption</a>
@@ -730,8 +673,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -740,8 +682,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_nodejs">
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
@@ -750,8 +691,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_nodejs">
 <a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
@@ -760,8 +700,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpods_nodejs">
 <a href="#maxpods_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods</a>
@@ -770,8 +709,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincount_nodejs">
 <a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
@@ -780,8 +718,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -790,8 +727,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -800,8 +736,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -810,8 +745,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodelabels_nodejs">
 <a href="#nodelabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Labels</a>
@@ -820,8 +754,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -830,8 +763,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestratorversion_nodejs">
 <a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
@@ -840,8 +772,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_nodejs">
 <a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -850,8 +781,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisktype_nodejs">
 <a href="#osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
@@ -860,8 +790,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -870,8 +799,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -880,8 +808,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_nodejs">
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -890,8 +817,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_nodejs">
 <a href="#spotmaxprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price</a>
@@ -900,8 +826,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -910,8 +835,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_nodejs">
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
@@ -920,8 +844,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetid_nodejs">
 <a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Id</a>
@@ -930,13 +853,11 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubernetes_cluster_id_python">
 <a href="#kubernetes_cluster_id_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>cluster_<wbr>id</a>
@@ -945,8 +866,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -955,8 +875,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -965,8 +884,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_auto_scaling_python">
 <a href="#enable_auto_scaling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>scaling</a>
@@ -975,8 +893,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_host_encryption_python">
 <a href="#enable_host_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>host_<wbr>encryption</a>
@@ -985,8 +902,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
@@ -995,8 +911,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eviction_policy_python">
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
@@ -1005,8 +920,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_count_python">
 <a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
@@ -1015,8 +929,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_pods_python">
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
@@ -1025,8 +938,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_count_python">
 <a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
@@ -1035,8 +947,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1045,8 +956,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1055,8 +965,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1065,8 +974,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_labels_python">
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
@@ -1075,8 +983,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_taints_python">
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -1085,8 +992,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestrator_version_python">
 <a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
@@ -1095,8 +1001,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_size_gb_python">
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -1105,8 +1010,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_type_python">
 <a href="#os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
@@ -1115,8 +1019,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1125,8 +1028,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1135,8 +1037,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximity_placement_group_id_python">
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
@@ -1145,8 +1046,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_max_price_python">
 <a href="#spot_max_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price</a>
@@ -1155,8 +1055,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1165,8 +1064,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_settings_python">
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
@@ -1175,8 +1073,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_subnet_id_python">
 <a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
@@ -1185,8 +1082,7 @@ The KubernetesClusterNodePool resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1197,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1206,13 +1101,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1220,13 +1113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1234,13 +1125,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1248,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1376,8 +1264,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1386,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautoscaling_csharp">
 <a href="#state_enableautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -1396,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehostencryption_csharp">
 <a href="#state_enablehostencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Host<wbr>Encryption</a>
@@ -1406,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablenodepublicip_csharp">
 <a href="#state_enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -1416,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evictionpolicy_csharp">
 <a href="#state_evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -1426,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_csharp">
 <a href="#state_kubernetesclusterid_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Cluster<wbr>Id</a>
@@ -1436,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcount_csharp">
 <a href="#state_maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -1446,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpods_csharp">
 <a href="#state_maxpods_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -1456,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mincount_csharp">
 <a href="#state_mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -1466,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1476,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1486,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_csharp">
 <a href="#state_nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1496,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodelabels_csharp">
 <a href="#state_nodelabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -1506,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetaints_csharp">
 <a href="#state_nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -1516,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orchestratorversion_csharp">
 <a href="#state_orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -1526,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisksizegb_csharp">
 <a href="#state_osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -1536,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisktype_csharp">
 <a href="#state_osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -1546,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_csharp">
 <a href="#state_ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1556,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1566,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_csharp">
 <a href="#state_proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -1576,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotmaxprice_csharp">
 <a href="#state_spotmaxprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -1586,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1596,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradesettings_csharp">
 <a href="#state_upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -1606,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_csharp">
 <a href="#state_vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1616,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetsubnetid_csharp">
 <a href="#state_vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
@@ -1626,13 +1489,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1641,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautoscaling_go">
 <a href="#state_enableautoscaling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -1651,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehostencryption_go">
 <a href="#state_enablehostencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Host<wbr>Encryption</a>
@@ -1661,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablenodepublicip_go">
 <a href="#state_enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -1671,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evictionpolicy_go">
 <a href="#state_evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -1681,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_go">
 <a href="#state_kubernetesclusterid_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Cluster<wbr>Id</a>
@@ -1691,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcount_go">
 <a href="#state_maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -1701,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpods_go">
 <a href="#state_maxpods_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -1711,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mincount_go">
 <a href="#state_mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -1721,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1731,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1741,8 +1592,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_go">
 <a href="#state_nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1751,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodelabels_go">
 <a href="#state_nodelabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -1761,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetaints_go">
 <a href="#state_nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -1771,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orchestratorversion_go">
 <a href="#state_orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -1781,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisksizegb_go">
 <a href="#state_osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -1791,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisktype_go">
 <a href="#state_osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -1801,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_go">
 <a href="#state_ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1811,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1821,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_go">
 <a href="#state_proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -1831,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotmaxprice_go">
 <a href="#state_spotmaxprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -1841,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1851,8 +1691,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradesettings_go">
 <a href="#state_upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -1861,8 +1700,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_go">
 <a href="#state_vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1871,8 +1709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetsubnetid_go">
 <a href="#state_vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>Id</a>
@@ -1881,13 +1718,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -1896,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableautoscaling_nodejs">
 <a href="#state_enableautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Scaling</a>
@@ -1906,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehostencryption_nodejs">
 <a href="#state_enablehostencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Host<wbr>Encryption</a>
@@ -1916,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablenodepublicip_nodejs">
 <a href="#state_enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -1926,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_evictionpolicy_nodejs">
 <a href="#state_evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
@@ -1936,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetesclusterid_nodejs">
 <a href="#state_kubernetesclusterid_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Cluster<wbr>Id</a>
@@ -1946,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxcount_nodejs">
 <a href="#state_maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
@@ -1956,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpods_nodejs">
 <a href="#state_maxpods_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods</a>
@@ -1966,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mincount_nodejs">
 <a href="#state_mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
@@ -1976,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1986,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1996,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_nodejs">
 <a href="#state_nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -2006,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodelabels_nodejs">
 <a href="#state_nodelabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Labels</a>
@@ -2016,8 +1839,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetaints_nodejs">
 <a href="#state_nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -2026,8 +1848,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orchestratorversion_nodejs">
 <a href="#state_orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
@@ -2036,8 +1857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisksizegb_nodejs">
 <a href="#state_osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2046,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisktype_nodejs">
 <a href="#state_osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
@@ -2056,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_nodejs">
 <a href="#state_ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -2066,8 +1884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2076,8 +1893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_nodejs">
 <a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
@@ -2086,8 +1902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotmaxprice_nodejs">
 <a href="#state_spotmaxprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price</a>
@@ -2096,8 +1911,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2106,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradesettings_nodejs">
 <a href="#state_upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
@@ -2116,8 +1929,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmsize_nodejs">
 <a href="#state_vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -2126,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetsubnetid_nodejs">
 <a href="#state_vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Id</a>
@@ -2136,13 +1947,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -2151,8 +1960,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Availability Zones where the Nodes in this Node Pool should be created in. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_auto_scaling_python">
 <a href="#state_enable_auto_scaling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>scaling</a>
@@ -2161,8 +1969,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable [auto-scaler](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_host_encryption_python">
 <a href="#state_enable_host_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>host_<wbr>encryption</a>
@@ -2171,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the nodes in this Node Pool have host encryption enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_node_public_ip_python">
 <a href="#state_enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
@@ -2181,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should each node have a Public IP Address? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eviction_policy_python">
 <a href="#state_eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
@@ -2191,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are `Deallocate` and `Delete`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubernetes_cluster_id_python">
 <a href="#state_kubernetes_cluster_id_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>cluster_<wbr>id</a>
@@ -2201,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes Cluster where this Node Pool should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_count_python">
 <a href="#state_max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
@@ -2211,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be greater than or equal to `min_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_pods_python">
 <a href="#state_max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
@@ -2221,8 +2023,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_count_python">
 <a href="#state_min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
@@ -2231,8 +2032,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be less than or equal to `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2241,8 +2041,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Should this Node Pool be used for System or User resources? Possible values are `System` and `User`. Defaults to `User`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2251,8 +2050,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_count_python">
 <a href="#state_node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -2261,8 +2059,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial number of nodes which should exist within this Node Pool. Valid values are between `0` and `1000` and must be a value in the range `min_count` - `max_count`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_labels_python">
 <a href="#state_node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
@@ -2271,8 +2068,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes labels which should be applied to nodes in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_taints_python">
 <a href="#state_node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -2281,8 +2077,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g `key=value:NoSchedule`). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orchestrator_version_python">
 <a href="#state_orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
@@ -2291,8 +2086,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes used for the Agents. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_disk_size_gb_python">
 <a href="#state_os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -2301,8 +2095,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Agent Operating System disk size in GB. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_disk_type_python">
 <a href="#state_os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
@@ -2311,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of disk which should be used for the Operating System. Possible values are `Ephemeral` and `Managed`. Defaults to `Managed`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_type_python">
 <a href="#state_os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -2321,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are `Linux` and `Windows`. Defaults to `Linux`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2331,8 +2122,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Priority for Virtual Machines within the Virtual Machine Scale Set that powers this Node Pool. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proximity_placement_group_id_python">
 <a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
@@ -2341,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group where the Virtual Machine Scale Set that powers this Node Pool will be placed. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_max_price_python">
 <a href="#state_spot_max_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price</a>
@@ -2351,8 +2140,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay in USD per Virtual Machine. Valid values are `-1` (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2361,8 +2149,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgrade_settings_python">
 <a href="#state_upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
@@ -2371,8 +2158,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_size_python">
 <a href="#state_vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -2381,8 +2167,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnet_subnet_id_python">
 <a href="#state_vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
@@ -2391,8 +2176,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where this Node Pool should exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2407,8 +2191,7 @@ The following state arguments are supported:
 <h4 id="kubernetesclusternodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxsurge_csharp">
 <a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -2417,13 +2200,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxsurge_go">
 <a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -2432,13 +2213,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxsurge_nodejs">
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
@@ -2447,13 +2226,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_surge_python">
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
@@ -2462,8 +2239,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

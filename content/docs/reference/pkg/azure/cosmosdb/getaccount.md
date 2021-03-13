@@ -155,8 +155,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -165,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -175,13 +173,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the CosmosDB Account resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -190,8 +186,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -200,13 +195,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the CosmosDB Account resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -215,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -225,13 +217,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the CosmosDB Account resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -240,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -250,8 +239,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the CosmosDB Account resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,8 +252,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -274,8 +261,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountcapability">List&lt;Get<wbr>Account<wbr>Capability&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities enabled on this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consistencypolicies_csharp">
 <a href="#consistencypolicies_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policies</a>
@@ -283,8 +269,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountconsistencypolicy">List&lt;Get<wbr>Account<wbr>Consistency<wbr>Policy&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautomaticfailover_csharp">
 <a href="#enableautomaticfailover_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Failover</a>
@@ -293,8 +278,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If automatic failover is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablefreetier_csharp">
 <a href="#enablefreetier_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
@@ -303,8 +287,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablemultiplewritelocations_csharp">
 <a href="#enablemultiplewritelocations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
@@ -313,8 +296,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -323,8 +305,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="geolocations_csharp">
 <a href="#geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
@@ -332,8 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountgeolocation">List&lt;Get<wbr>Account<wbr>Geo<wbr>Location&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -342,8 +322,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iprangefilter_csharp">
 <a href="#iprangefilter_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range<wbr>Filter</a>
@@ -352,8 +331,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current IP Filter for this CosmosDB account
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isvirtualnetworkfilterenabled_csharp">
 <a href="#isvirtualnetworkfilterenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
@@ -362,8 +340,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If virtual network filtering is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultkeyid_csharp">
 <a href="#keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
@@ -372,8 +349,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Vault key URI for CMK encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -382,8 +358,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -392,8 +367,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -401,8 +375,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offertype_csharp">
 <a href="#offertype_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Type</a>
@@ -411,8 +384,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Offer Type to used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -421,8 +393,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_csharp">
 <a href="#primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
@@ -430,8 +401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="primaryreadonlykey_csharp">
 <a href="#primaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
@@ -440,8 +410,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_csharp">
 <a href="#primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -449,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="readendpoints_csharp">
 <a href="#readendpoints_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Endpoints</a>
@@ -459,8 +427,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -468,8 +435,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -478,8 +444,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_csharp">
 <a href="#secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
@@ -487,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="secondaryreadonlykey_csharp">
 <a href="#secondaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
@@ -497,8 +461,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_csharp">
 <a href="#secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -506,8 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -516,8 +478,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -526,8 +487,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountvirtualnetworkrule">List&lt;Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Subnets that are allowed to access this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writeendpoints_csharp">
 <a href="#writeendpoints_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Endpoints</a>
@@ -536,13 +496,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -551,8 +509,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountcapability">[]Get<wbr>Account<wbr>Capability</a></span>
     </dt>
     <dd>{{% md %}}Capabilities enabled on this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consistencypolicies_go">
 <a href="#consistencypolicies_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policies</a>
@@ -560,8 +517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountconsistencypolicy">[]Get<wbr>Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautomaticfailover_go">
 <a href="#enableautomaticfailover_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Failover</a>
@@ -570,8 +526,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If automatic failover is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablefreetier_go">
 <a href="#enablefreetier_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
@@ -580,8 +535,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablemultiplewritelocations_go">
 <a href="#enablemultiplewritelocations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
@@ -590,8 +544,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -600,8 +553,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="geolocations_go">
 <a href="#geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
@@ -609,8 +561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountgeolocation">[]Get<wbr>Account<wbr>Geo<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -619,8 +570,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iprangefilter_go">
 <a href="#iprangefilter_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range<wbr>Filter</a>
@@ -629,8 +579,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current IP Filter for this CosmosDB account
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isvirtualnetworkfilterenabled_go">
 <a href="#isvirtualnetworkfilterenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
@@ -639,8 +588,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If virtual network filtering is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultkeyid_go">
 <a href="#keyvaultkeyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
@@ -649,8 +597,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Vault key URI for CMK encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -659,8 +606,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -669,8 +615,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -678,8 +623,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offertype_go">
 <a href="#offertype_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Type</a>
@@ -688,8 +632,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Offer Type to used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -698,8 +641,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_go">
 <a href="#primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
@@ -707,8 +649,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="primaryreadonlykey_go">
 <a href="#primaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
@@ -717,8 +658,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_go">
 <a href="#primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -726,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="readendpoints_go">
 <a href="#readendpoints_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Endpoints</a>
@@ -736,8 +675,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -745,8 +683,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -755,8 +692,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_go">
 <a href="#secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
@@ -764,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="secondaryreadonlykey_go">
 <a href="#secondaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
@@ -774,8 +709,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_go">
 <a href="#secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -783,8 +717,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -793,8 +726,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkrules_go">
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -803,8 +735,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountvirtualnetworkrule">[]Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Subnets that are allowed to access this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writeendpoints_go">
 <a href="#writeendpoints_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Endpoints</a>
@@ -813,13 +744,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -828,8 +757,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountcapability">Get<wbr>Account<wbr>Capability[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities enabled on this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consistencypolicies_nodejs">
 <a href="#consistencypolicies_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policies</a>
@@ -837,8 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountconsistencypolicy">Get<wbr>Account<wbr>Consistency<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautomaticfailover_nodejs">
 <a href="#enableautomaticfailover_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Failover</a>
@@ -847,8 +774,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If automatic failover is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablefreetier_nodejs">
 <a href="#enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
@@ -857,8 +783,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablemultiplewritelocations_nodejs">
 <a href="#enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
@@ -867,8 +792,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -877,8 +801,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="geolocations_nodejs">
 <a href="#geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
@@ -886,8 +809,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountgeolocation">Get<wbr>Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -896,8 +818,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iprangefilter_nodejs">
 <a href="#iprangefilter_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range<wbr>Filter</a>
@@ -906,8 +827,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current IP Filter for this CosmosDB account
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isvirtualnetworkfilterenabled_nodejs">
 <a href="#isvirtualnetworkfilterenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
@@ -916,8 +836,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If virtual network filtering is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultkeyid_nodejs">
 <a href="#keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
@@ -926,8 +845,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Vault key URI for CMK encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -936,8 +854,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kind of the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -946,8 +863,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -955,8 +871,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offertype_nodejs">
 <a href="#offertype_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Type</a>
@@ -965,8 +880,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Offer Type to used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -975,8 +889,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_nodejs">
 <a href="#primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
@@ -984,8 +897,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="primaryreadonlykey_nodejs">
 <a href="#primaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Key</a>
@@ -994,8 +906,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_nodejs">
 <a href="#primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -1003,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="readendpoints_nodejs">
 <a href="#readendpoints_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Endpoints</a>
@@ -1013,8 +923,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1022,8 +931,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -1032,8 +940,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_nodejs">
 <a href="#secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
@@ -1041,8 +948,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="secondaryreadonlykey_nodejs">
 <a href="#secondaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Key</a>
@@ -1051,8 +957,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_nodejs">
 <a href="#secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -1060,8 +965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1070,8 +974,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
@@ -1080,8 +983,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountvirtualnetworkrule">Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Subnets that are allowed to access this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writeendpoints_nodejs">
 <a href="#writeendpoints_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Endpoints</a>
@@ -1090,13 +992,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1105,8 +1005,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountcapability">Sequence[Get<wbr>Account<wbr>Capability]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities enabled on this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="consistency_policies_python">
 <a href="#consistency_policies_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policies</a>
@@ -1114,8 +1013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountconsistencypolicy">Sequence[Get<wbr>Account<wbr>Consistency<wbr>Policy]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_automatic_failover_python">
 <a href="#enable_automatic_failover_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>failover</a>
@@ -1124,8 +1022,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If automatic failover is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_free_tier_python">
 <a href="#enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
@@ -1134,8 +1031,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Free Tier pricing option is enabled for this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_multiple_write_locations_python">
 <a href="#enable_multiple_write_locations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multiple_<wbr>write_<wbr>locations</a>
@@ -1144,8 +1040,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1154,8 +1049,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="geo_locations_python">
 <a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
@@ -1163,8 +1057,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountgeolocation">Sequence[Get<wbr>Account<wbr>Geo<wbr>Location]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1173,8 +1066,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_range_filter_python">
 <a href="#ip_range_filter_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range_<wbr>filter</a>
@@ -1183,8 +1075,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current IP Filter for this CosmosDB account
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_virtual_network_filter_enabled_python">
 <a href="#is_virtual_network_filter_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>virtual_<wbr>network_<wbr>filter_<wbr>enabled</a>
@@ -1193,8 +1084,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If virtual network filtering is enabled for this Cosmos DB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_vault_key_id_python">
 <a href="#key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
@@ -1203,8 +1093,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Key Vault key URI for CMK encryption.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1213,8 +1102,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kind of the CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1223,8 +1111,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1232,8 +1119,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offer_type_python">
 <a href="#offer_type_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>type</a>
@@ -1242,8 +1128,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Offer Type to used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -1252,8 +1137,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primary_master_key_python">
 <a href="#primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
@@ -1261,8 +1145,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="primary_readonly_key_python">
 <a href="#primary_readonly_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>key</a>
@@ -1271,8 +1154,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primary_readonly_master_key_python">
 <a href="#primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
@@ -1280,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="read_endpoints_python">
 <a href="#read_endpoints_python" style="color: inherit; text-decoration: inherit;">read_<wbr>endpoints</a>
@@ -1290,8 +1171,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1299,8 +1179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -1309,8 +1188,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondary_master_key_python">
 <a href="#secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
@@ -1318,8 +1196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="secondary_readonly_key_python">
 <a href="#secondary_readonly_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>key</a>
@@ -1328,8 +1205,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondary_readonly_master_key_python">
 <a href="#secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
@@ -1337,8 +1213,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1347,8 +1222,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_network_rules_python">
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
@@ -1357,8 +1231,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccountvirtualnetworkrule">Sequence[Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Subnets that are allowed to access this CosmosDB account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="write_endpoints_python">
 <a href="#write_endpoints_python" style="color: inherit; text-decoration: inherit;">write_<wbr>endpoints</a>
@@ -1367,8 +1240,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1382,8 +1254,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1392,13 +1263,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1407,13 +1276,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1422,13 +1289,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1437,8 +1302,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getaccountconsistencypolicy">Get<wbr>Account<wbr>Consistency<wbr>Policy</h4>
@@ -1446,8 +1310,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consistencylevel_csharp">
 <a href="#consistencylevel_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Level</a>
@@ -1456,8 +1319,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxintervalinseconds_csharp">
 <a href="#maxintervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Interval<wbr>In<wbr>Seconds</a>
@@ -1466,8 +1328,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of staleness (in seconds) tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxstalenessprefix_csharp">
 <a href="#maxstalenessprefix_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
@@ -1476,13 +1337,11 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of stale requests tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consistencylevel_go">
 <a href="#consistencylevel_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Level</a>
@@ -1491,8 +1350,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxintervalinseconds_go">
 <a href="#maxintervalinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Interval<wbr>In<wbr>Seconds</a>
@@ -1501,8 +1359,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of staleness (in seconds) tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxstalenessprefix_go">
 <a href="#maxstalenessprefix_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
@@ -1511,13 +1368,11 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of stale requests tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consistencylevel_nodejs">
 <a href="#consistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
@@ -1526,8 +1381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxintervalinseconds_nodejs">
 <a href="#maxintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
@@ -1536,8 +1390,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of staleness (in seconds) tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxstalenessprefix_nodejs">
 <a href="#maxstalenessprefix_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
@@ -1546,13 +1399,11 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of stale requests tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consistency_level_python">
 <a href="#consistency_level_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>level</a>
@@ -1561,8 +1412,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consistency Level used by this CosmosDB Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_interval_in_seconds_python">
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
@@ -1571,8 +1421,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of staleness (in seconds) tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_staleness_prefix_python">
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
@@ -1581,8 +1430,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of stale requests tolerated when the consistency level is Bounded Staleness.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getaccountgeolocation">Get<wbr>Account<wbr>Geo<wbr>Location</h4>
@@ -1590,8 +1438,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failoverpriority_csharp">
 <a href="#failoverpriority_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Priority</a>
@@ -1599,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1609,8 +1455,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1619,13 +1464,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failoverpriority_go">
 <a href="#failoverpriority_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Priority</a>
@@ -1633,8 +1476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1643,8 +1485,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1653,13 +1494,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failoverpriority_nodejs">
 <a href="#failoverpriority_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
@@ -1667,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1677,8 +1515,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1687,13 +1524,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failover_priority_python">
 <a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
@@ -1701,8 +1536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1711,8 +1545,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1721,8 +1554,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region hosting replicated data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getaccountvirtualnetworkrule">Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule</h4>
@@ -1730,8 +1562,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1740,13 +1571,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1755,13 +1584,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1770,13 +1597,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1785,8 +1610,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

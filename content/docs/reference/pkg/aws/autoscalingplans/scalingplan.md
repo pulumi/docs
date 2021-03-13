@@ -168,8 +168,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationsource_csharp">
 <a href="#applicationsource_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Source</a>
@@ -178,8 +177,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalinginstructions_csharp">
 <a href="#scalinginstructions_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Instructions</a>
@@ -188,8 +186,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanscalinginstruction">List&lt;Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -198,13 +195,11 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationsource_go">
 <a href="#applicationsource_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Source</a>
@@ -213,8 +208,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalinginstructions_go">
 <a href="#scalinginstructions_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Instructions</a>
@@ -223,8 +217,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanscalinginstruction">[]Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -233,13 +226,11 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationsource_nodejs">
 <a href="#applicationsource_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Source</a>
@@ -248,8 +239,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalinginstructions_nodejs">
 <a href="#scalinginstructions_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Instructions</a>
@@ -258,8 +248,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanscalinginstruction">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction[]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -268,13 +257,11 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_source_python">
 <a href="#application_source_python" style="color: inherit; text-decoration: inherit;">application_<wbr>source</a>
@@ -283,8 +270,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaling_instructions_python">
 <a href="#scaling_instructions_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>instructions</a>
@@ -293,8 +279,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#scalingplanscalinginstruction">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -303,8 +288,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -315,8 +299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -324,8 +307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalingplanversion_csharp">
 <a href="#scalingplanversion_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Version</a>
@@ -334,13 +316,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -348,8 +328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalingplanversion_go">
 <a href="#scalingplanversion_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Version</a>
@@ -358,13 +337,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -372,8 +349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scalingplanversion_nodejs">
 <a href="#scalingplanversion_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Version</a>
@@ -382,13 +358,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -396,8 +370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scaling_plan_version_python">
 <a href="#scaling_plan_version_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>version</a>
@@ -406,8 +379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -534,8 +506,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationsource_csharp">
 <a href="#state_applicationsource_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Source</a>
@@ -544,8 +515,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -554,8 +524,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinginstructions_csharp">
 <a href="#state_scalinginstructions_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Instructions</a>
@@ -564,8 +533,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanscalinginstruction">List&lt;Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingplanversion_csharp">
 <a href="#state_scalingplanversion_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Version</a>
@@ -574,13 +542,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationsource_go">
 <a href="#state_applicationsource_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Source</a>
@@ -589,8 +555,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -599,8 +564,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinginstructions_go">
 <a href="#state_scalinginstructions_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Instructions</a>
@@ -609,8 +573,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanscalinginstruction">[]Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingplanversion_go">
 <a href="#state_scalingplanversion_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Version</a>
@@ -619,13 +582,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationsource_nodejs">
 <a href="#state_applicationsource_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Source</a>
@@ -634,8 +595,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -644,8 +604,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinginstructions_nodejs">
 <a href="#state_scalinginstructions_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Instructions</a>
@@ -654,8 +613,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanscalinginstruction">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction[]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingplanversion_nodejs">
 <a href="#state_scalingplanversion_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Version</a>
@@ -664,13 +622,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_source_python">
 <a href="#state_application_source_python" style="color: inherit; text-decoration: inherit;">application_<wbr>source</a>
@@ -679,8 +635,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudFormation stack or set of tags. You can create one scaling plan per application source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -689,8 +644,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_instructions_python">
 <a href="#state_scaling_instructions_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>instructions</a>
@@ -699,8 +653,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanscalinginstruction">Sequence[Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_plan_version_python">
 <a href="#state_scaling_plan_version_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>version</a>
@@ -709,8 +662,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the scaling plan. This value is always 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -725,8 +677,7 @@ The following state arguments are supported:
 <h4 id="scalingplanapplicationsource">Scaling<wbr>Plan<wbr>Application<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudformationstackarn_csharp">
 <a href="#cloudformationstackarn_csharp" style="color: inherit; text-decoration: inherit;">Cloudformation<wbr>Stack<wbr>Arn</a>
@@ -735,8 +686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_csharp">
 <a href="#tagfilters_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
@@ -745,13 +695,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">List&lt;Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudformationstackarn_go">
 <a href="#cloudformationstackarn_go" style="color: inherit; text-decoration: inherit;">Cloudformation<wbr>Stack<wbr>Arn</a>
@@ -760,8 +708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_go">
 <a href="#tagfilters_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filters</a>
@@ -770,13 +717,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">[]Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudformationstackarn_nodejs">
 <a href="#cloudformationstackarn_nodejs" style="color: inherit; text-decoration: inherit;">cloudformation<wbr>Stack<wbr>Arn</a>
@@ -785,8 +730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagfilters_nodejs">
 <a href="#tagfilters_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filters</a>
@@ -795,13 +739,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudformation_stack_arn_python">
 <a href="#cloudformation_stack_arn_python" style="color: inherit; text-decoration: inherit;">cloudformation_<wbr>stack_<wbr>arn</a>
@@ -810,8 +752,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_filters_python">
 <a href="#tag_filters_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filters</a>
@@ -820,15 +761,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#scalingplanapplicationsourcetagfilter">Sequence[Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanapplicationsourcetagfilter">Scaling<wbr>Plan<wbr>Application<wbr>Source<wbr>Tag<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -837,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -847,13 +785,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The tag values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -862,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -872,13 +807,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The tag values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -887,8 +820,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -897,13 +829,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The tag values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -912,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -922,15 +851,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The tag values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanscalinginstruction">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxcapacity_csharp">
 <a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -939,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincapacity_csharp">
 <a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
@@ -949,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum capacity of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -959,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource. This string consists of the resource type and unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalabledimension_csharp">
 <a href="#scalabledimension_csharp" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
@@ -969,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicenamespace_csharp">
 <a href="#servicenamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
@@ -979,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettrackingconfigurations_csharp">
 <a href="#targettrackingconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Configurations</a>
@@ -990,8 +912,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customizedloadmetricspecification_csharp">
 <a href="#customizedloadmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Load<wbr>Metric<wbr>Specification</a>
@@ -1001,8 +922,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledynamicscaling_csharp">
 <a href="#disabledynamicscaling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Dynamic<wbr>Scaling</a>
@@ -1011,8 +931,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedloadmetricspecification_csharp">
 <a href="#predefinedloadmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
@@ -1022,8 +941,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmaxcapacitybehavior_csharp">
 <a href="#predictivescalingmaxcapacitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Behavior</a>
@@ -1033,8 +951,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
 Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmaxcapacitybuffer_csharp">
 <a href="#predictivescalingmaxcapacitybuffer_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Buffer</a>
@@ -1043,8 +960,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmode_csharp">
 <a href="#predictivescalingmode_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Mode</a>
@@ -1053,8 +969,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingpolicyupdatebehavior_csharp">
 <a href="#scalingpolicyupdatebehavior_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Policy<wbr>Update<wbr>Behavior</a>
@@ -1063,8 +978,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledactionbuffertime_csharp">
 <a href="#scheduledactionbuffertime_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Action<wbr>Buffer<wbr>Time</a>
@@ -1073,13 +987,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxcapacity_go">
 <a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -1088,8 +1000,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincapacity_go">
 <a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
@@ -1098,8 +1009,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum capacity of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1108,8 +1018,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource. This string consists of the resource type and unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalabledimension_go">
 <a href="#scalabledimension_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
@@ -1118,8 +1027,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicenamespace_go">
 <a href="#servicenamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
@@ -1128,8 +1036,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettrackingconfigurations_go">
 <a href="#targettrackingconfigurations_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Configurations</a>
@@ -1139,8 +1046,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customizedloadmetricspecification_go">
 <a href="#customizedloadmetricspecification_go" style="color: inherit; text-decoration: inherit;">Customized<wbr>Load<wbr>Metric<wbr>Specification</a>
@@ -1150,8 +1056,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledynamicscaling_go">
 <a href="#disabledynamicscaling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Dynamic<wbr>Scaling</a>
@@ -1160,8 +1065,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedloadmetricspecification_go">
 <a href="#predefinedloadmetricspecification_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
@@ -1171,8 +1075,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmaxcapacitybehavior_go">
 <a href="#predictivescalingmaxcapacitybehavior_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Behavior</a>
@@ -1182,8 +1085,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
 Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmaxcapacitybuffer_go">
 <a href="#predictivescalingmaxcapacitybuffer_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Buffer</a>
@@ -1192,8 +1094,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmode_go">
 <a href="#predictivescalingmode_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Mode</a>
@@ -1202,8 +1103,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingpolicyupdatebehavior_go">
 <a href="#scalingpolicyupdatebehavior_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Policy<wbr>Update<wbr>Behavior</a>
@@ -1212,8 +1112,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledactionbuffertime_go">
 <a href="#scheduledactionbuffertime_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Action<wbr>Buffer<wbr>Time</a>
@@ -1222,13 +1121,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxcapacity_nodejs">
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
@@ -1237,8 +1134,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincapacity_nodejs">
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
@@ -1247,8 +1143,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum capacity of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1257,8 +1152,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource. This string consists of the resource type and unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalabledimension_nodejs">
 <a href="#scalabledimension_nodejs" style="color: inherit; text-decoration: inherit;">scalable<wbr>Dimension</a>
@@ -1267,8 +1161,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicenamespace_nodejs">
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
@@ -1277,8 +1170,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettrackingconfigurations_nodejs">
 <a href="#targettrackingconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tracking<wbr>Configurations</a>
@@ -1288,8 +1180,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customizedloadmetricspecification_nodejs">
 <a href="#customizedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Load<wbr>Metric<wbr>Specification</a>
@@ -1299,8 +1190,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledynamicscaling_nodejs">
 <a href="#disabledynamicscaling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Dynamic<wbr>Scaling</a>
@@ -1309,8 +1199,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedloadmetricspecification_nodejs">
 <a href="#predefinedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
@@ -1320,8 +1209,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmaxcapacitybehavior_nodejs">
 <a href="#predictivescalingmaxcapacitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Behavior</a>
@@ -1331,8 +1219,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
 Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmaxcapacitybuffer_nodejs">
 <a href="#predictivescalingmaxcapacitybuffer_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Max<wbr>Capacity<wbr>Buffer</a>
@@ -1341,8 +1228,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivescalingmode_nodejs">
 <a href="#predictivescalingmode_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Scaling<wbr>Mode</a>
@@ -1351,8 +1237,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingpolicyupdatebehavior_nodejs">
 <a href="#scalingpolicyupdatebehavior_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Policy<wbr>Update<wbr>Behavior</a>
@@ -1361,8 +1246,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledactionbuffertime_nodejs">
 <a href="#scheduledactionbuffertime_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Action<wbr>Buffer<wbr>Time</a>
@@ -1371,13 +1255,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_capacity_python">
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
@@ -1386,8 +1268,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_capacity_python">
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
@@ -1396,8 +1277,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum capacity of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1406,8 +1286,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource. This string consists of the resource type and unique identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scalable_dimension_python">
 <a href="#scalable_dimension_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>dimension</a>
@@ -1416,8 +1295,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_namespace_python">
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
@@ -1426,8 +1304,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_tracking_configurations_python">
 <a href="#target_tracking_configurations_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>configurations</a>
@@ -1437,8 +1314,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
     </dt>
     <dd>{{% md %}}The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customized_load_metric_specification_python">
 <a href="#customized_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>load_<wbr>metric_<wbr>specification</a>
@@ -1448,8 +1324,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_dynamic_scaling_python">
 <a href="#disable_dynamic_scaling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>dynamic_<wbr>scaling</a>
@@ -1458,8 +1333,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefined_load_metric_specification_python">
 <a href="#predefined_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>specification</a>
@@ -1469,8 +1343,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictive_scaling_max_capacity_behavior_python">
 <a href="#predictive_scaling_max_capacity_behavior_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>max_<wbr>capacity_<wbr>behavior</a>
@@ -1480,8 +1353,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
 Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictive_scaling_max_capacity_buffer_python">
 <a href="#predictive_scaling_max_capacity_buffer_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>max_<wbr>capacity_<wbr>buffer</a>
@@ -1490,8 +1362,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictive_scaling_mode_python">
 <a href="#predictive_scaling_mode_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>scaling_<wbr>mode</a>
@@ -1500,8 +1371,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_policy_update_behavior_python">
 <a href="#scaling_policy_update_behavior_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>policy_<wbr>update_<wbr>behavior</a>
@@ -1510,8 +1380,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduled_action_buffer_time_python">
 <a href="#scheduled_action_buffer_time_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>action_<wbr>buffer_<wbr>time</a>
@@ -1520,15 +1389,13 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanscalinginstructioncustomizedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Customized<wbr>Load<wbr>Metric<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -1537,8 +1404,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1547,8 +1413,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -1557,8 +1422,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Currently, the value must always be `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1567,8 +1431,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -1577,13 +1440,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -1592,8 +1453,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1602,8 +1462,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -1612,8 +1471,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Currently, the value must always be `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1622,8 +1480,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -1632,13 +1489,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -1647,8 +1502,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1657,8 +1511,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -1667,8 +1520,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Currently, the value must always be `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1677,8 +1529,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -1687,13 +1538,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -1702,8 +1551,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1712,8 +1560,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -1722,8 +1569,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Currently, the value must always be `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1732,8 +1578,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -1742,15 +1587,13 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanscalinginstructionpredefinedloadmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefinedloadmetrictype_csharp">
 <a href="#predefinedloadmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Type</a>
@@ -1759,8 +1602,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_csharp">
 <a href="#resourcelabel_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
@@ -1769,13 +1611,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefinedloadmetrictype_go">
 <a href="#predefinedloadmetrictype_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Type</a>
@@ -1784,8 +1624,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_go">
 <a href="#resourcelabel_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
@@ -1794,13 +1633,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefinedloadmetrictype_nodejs">
 <a href="#predefinedloadmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Type</a>
@@ -1809,8 +1646,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_nodejs">
 <a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
@@ -1819,13 +1655,11 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefined_load_metric_type_python">
 <a href="#predefined_load_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>type</a>
@@ -1834,8 +1668,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_label_python">
 <a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
@@ -1844,15 +1677,13 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanscalinginstructiontargettrackingconfiguration">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetvalue_csharp">
 <a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -1861,8 +1692,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customizedscalingmetricspecification_csharp">
 <a href="#customizedscalingmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a>
@@ -1872,8 +1702,7 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablescalein_csharp">
 <a href="#disablescalein_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
@@ -1882,8 +1711,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedinstancewarmup_csharp">
 <a href="#estimatedinstancewarmup_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Instance<wbr>Warmup</a>
@@ -1893,8 +1721,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
 This value is used only if the resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedscalingmetricspecification_csharp">
 <a href="#predefinedscalingmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
@@ -1904,8 +1731,7 @@ This value is used only if the resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleincooldown_csharp">
 <a href="#scaleincooldown_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Cooldown</a>
@@ -1915,8 +1741,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleoutcooldown_csharp">
 <a href="#scaleoutcooldown_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Out<wbr>Cooldown</a>
@@ -1926,13 +1751,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale-out activity completes before another scale-out activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetvalue_go">
 <a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -1941,8 +1764,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customizedscalingmetricspecification_go">
 <a href="#customizedscalingmetricspecification_go" style="color: inherit; text-decoration: inherit;">Customized<wbr>Scaling<wbr>Metric<wbr>Specification</a>
@@ -1952,8 +1774,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablescalein_go">
 <a href="#disablescalein_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
@@ -1962,8 +1783,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedinstancewarmup_go">
 <a href="#estimatedinstancewarmup_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Instance<wbr>Warmup</a>
@@ -1973,8 +1793,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
 This value is used only if the resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedscalingmetricspecification_go">
 <a href="#predefinedscalingmetricspecification_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
@@ -1984,8 +1803,7 @@ This value is used only if the resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleincooldown_go">
 <a href="#scaleincooldown_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Cooldown</a>
@@ -1995,8 +1813,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleoutcooldown_go">
 <a href="#scaleoutcooldown_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Out<wbr>Cooldown</a>
@@ -2006,13 +1823,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale-out activity completes before another scale-out activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetvalue_nodejs">
 <a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
@@ -2021,8 +1836,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customizedscalingmetricspecification_nodejs">
 <a href="#customizedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Scaling<wbr>Metric<wbr>Specification</a>
@@ -2032,8 +1846,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablescalein_nodejs">
 <a href="#disablescalein_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
@@ -2042,8 +1855,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimatedinstancewarmup_nodejs">
 <a href="#estimatedinstancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Instance<wbr>Warmup</a>
@@ -2053,8 +1865,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
 This value is used only if the resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedscalingmetricspecification_nodejs">
 <a href="#predefinedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
@@ -2064,8 +1875,7 @@ This value is used only if the resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleincooldown_nodejs">
 <a href="#scaleincooldown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Cooldown</a>
@@ -2075,8 +1885,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleoutcooldown_nodejs">
 <a href="#scaleoutcooldown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Out<wbr>Cooldown</a>
@@ -2086,13 +1895,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale-out activity completes before another scale-out activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_value_python">
 <a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
@@ -2101,8 +1908,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customized_scaling_metric_specification_python">
 <a href="#customized_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>scaling_<wbr>metric_<wbr>specification</a>
@@ -2112,8 +1918,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_scale_in_python">
 <a href="#disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
@@ -2122,8 +1927,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="estimated_instance_warmup_python">
 <a href="#estimated_instance_warmup_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>instance_<wbr>warmup</a>
@@ -2133,8 +1937,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
 This value is used only if the resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefined_scaling_metric_specification_python">
 <a href="#predefined_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>specification</a>
@@ -2144,8 +1947,7 @@ This value is used only if the resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}A predefined metric. You can specify either `predefined_scaling_metric_specification` or `customized_scaling_metric_specification`.
 More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_in_cooldown_python">
 <a href="#scale_in_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>cooldown</a>
@@ -2155,8 +1957,7 @@ More details can be found in the [AWS Auto Scaling API Reference](https://docs.a
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_out_cooldown_python">
 <a href="#scale_out_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>out_<wbr>cooldown</a>
@@ -2166,15 +1967,13 @@ This value is not used if the scalable resource is an Auto Scaling group.
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale-out activity completes before another scale-out activity can start.
 This value is not used if the scalable resource is an Auto Scaling group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanscalinginstructiontargettrackingconfigurationcustomizedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Scaling<wbr>Metric<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2183,8 +1982,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2193,8 +1991,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -2203,8 +2000,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -2213,8 +2009,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -2223,13 +2018,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2238,8 +2031,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2248,8 +2040,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -2258,8 +2049,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -2268,8 +2058,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -2278,13 +2067,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -2293,8 +2080,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2303,8 +2089,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -2313,8 +2098,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -2323,8 +2107,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -2333,13 +2116,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -2348,8 +2129,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2358,8 +2138,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -2368,8 +2147,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -2378,8 +2156,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -2388,15 +2165,13 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingplanscalinginstructiontargettrackingconfigurationpredefinedscalingmetricspecification">Scaling<wbr>Plan<wbr>Scaling<wbr>Instruction<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefinedscalingmetrictype_csharp">
 <a href="#predefinedscalingmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Type</a>
@@ -2405,8 +2180,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_csharp">
 <a href="#resourcelabel_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
@@ -2415,13 +2189,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefinedscalingmetrictype_go">
 <a href="#predefinedscalingmetrictype_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Type</a>
@@ -2430,8 +2202,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_go">
 <a href="#resourcelabel_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
@@ -2440,13 +2211,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefinedscalingmetrictype_nodejs">
 <a href="#predefinedscalingmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Type</a>
@@ -2455,8 +2224,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_nodejs">
 <a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
@@ -2465,13 +2233,11 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="predefined_scaling_metric_type_python">
 <a href="#predefined_scaling_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>type</a>
@@ -2480,8 +2246,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_label_python">
 <a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
@@ -2490,8 +2255,7 @@ This value is not used if the scalable resource is an Auto Scaling group.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the resource associated with the metric type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

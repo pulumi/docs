@@ -388,8 +388,7 @@ The File resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_csharp">
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -399,8 +398,7 @@ The File resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationfile_csharp">
 <a href="#destinationfile_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
@@ -410,8 +408,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcefile_csharp">
 <a href="#sourcefile_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
@@ -422,8 +419,7 @@ or copied to on vSphere.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdirectories_csharp">
 <a href="#createdirectories_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -433,8 +429,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -444,8 +439,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatacenter_csharp">
 <a href="#sourcedatacenter_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
@@ -455,8 +449,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatastore_csharp">
 <a href="#sourcedatastore_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
@@ -466,13 +459,11 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_go">
 <a href="#datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -482,8 +473,7 @@ be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationfile_go">
 <a href="#destinationfile_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
@@ -493,8 +483,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcefile_go">
 <a href="#sourcefile_go" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
@@ -505,8 +494,7 @@ or copied to on vSphere.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdirectories_go">
 <a href="#createdirectories_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -516,8 +504,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -527,8 +514,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatacenter_go">
 <a href="#sourcedatacenter_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
@@ -538,8 +524,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatastore_go">
 <a href="#sourcedatastore_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
@@ -549,13 +534,11 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_nodejs">
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -565,8 +548,7 @@ be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationfile_nodejs">
 <a href="#destinationfile_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>File</a>
@@ -576,8 +558,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcefile_nodejs">
 <a href="#sourcefile_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>File</a>
@@ -588,8 +569,7 @@ or copied to on vSphere.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdirectories_nodejs">
 <a href="#createdirectories_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Directories</a>
@@ -599,8 +579,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -610,8 +589,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatacenter_nodejs">
 <a href="#sourcedatacenter_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datacenter</a>
@@ -621,8 +599,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatastore_nodejs">
 <a href="#sourcedatastore_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datastore</a>
@@ -632,13 +609,11 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_python">
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -648,8 +623,7 @@ be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_file_python">
 <a href="#destination_file_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>file</a>
@@ -659,8 +633,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_file_python">
 <a href="#source_file_python" style="color: inherit; text-decoration: inherit;">source_<wbr>file</a>
@@ -671,8 +644,7 @@ or copied to on vSphere.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_directories_python">
 <a href="#create_directories_python" style="color: inherit; text-decoration: inherit;">create_<wbr>directories</a>
@@ -682,8 +654,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -693,8 +664,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_datacenter_python">
 <a href="#source_datacenter_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datacenter</a>
@@ -704,8 +674,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_datastore_python">
 <a href="#source_datastore_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datastore</a>
@@ -715,8 +684,7 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -727,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -736,13 +703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -750,13 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -764,13 +727,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -906,8 +866,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdirectories_csharp">
 <a href="#state_createdirectories_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -917,8 +876,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -928,8 +886,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_csharp">
 <a href="#state_datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -939,8 +896,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationfile_csharp">
 <a href="#state_destinationfile_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
@@ -950,8 +906,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatacenter_csharp">
 <a href="#state_sourcedatacenter_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
@@ -961,8 +916,7 @@ or copied to on vSphere.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatastore_csharp">
 <a href="#state_sourcedatastore_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
@@ -972,8 +926,7 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcefile_csharp">
 <a href="#state_sourcefile_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
@@ -984,13 +937,11 @@ be copied from. Forces a new resource if changed.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdirectories_go">
 <a href="#state_createdirectories_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -1000,8 +951,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1011,8 +961,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_go">
 <a href="#state_datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -1022,8 +971,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationfile_go">
 <a href="#state_destinationfile_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>File</a>
@@ -1033,8 +981,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatacenter_go">
 <a href="#state_sourcedatacenter_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datacenter</a>
@@ -1044,8 +991,7 @@ or copied to on vSphere.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatastore_go">
 <a href="#state_sourcedatastore_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Datastore</a>
@@ -1055,8 +1001,7 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcefile_go">
 <a href="#state_sourcefile_go" style="color: inherit; text-decoration: inherit;">Source<wbr>File</a>
@@ -1067,13 +1012,11 @@ be copied from. Forces a new resource if changed.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdirectories_nodejs">
 <a href="#state_createdirectories_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Directories</a>
@@ -1083,8 +1026,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1094,8 +1036,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_nodejs">
 <a href="#state_datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -1105,8 +1046,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationfile_nodejs">
 <a href="#state_destinationfile_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>File</a>
@@ -1116,8 +1056,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatacenter_nodejs">
 <a href="#state_sourcedatacenter_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datacenter</a>
@@ -1127,8 +1066,7 @@ or copied to on vSphere.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatastore_nodejs">
 <a href="#state_sourcedatastore_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Datastore</a>
@@ -1138,8 +1076,7 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcefile_nodejs">
 <a href="#state_sourcefile_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>File</a>
@@ -1150,13 +1087,11 @@ be copied from. Forces a new resource if changed.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_directories_python">
 <a href="#state_create_directories_python" style="color: inherit; text-decoration: inherit;">create_<wbr>directories</a>
@@ -1166,8 +1101,7 @@ changed.
     </dt>
     <dd>{{% md %}}Create directories in `destination_file`
 path parameter if any missing for copy operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1177,8 +1111,7 @@ path parameter if any missing for copy operation.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file will be
 uploaded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_python">
 <a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -1188,8 +1121,7 @@ uploaded to.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to upload the
 file to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_file_python">
 <a href="#state_destination_file_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>file</a>
@@ -1199,8 +1131,7 @@ file to.
     </dt>
     <dd>{{% md %}}The path to where the file should be uploaded
 or copied to on vSphere.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_datacenter_python">
 <a href="#state_source_datacenter_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datacenter</a>
@@ -1210,8 +1141,7 @@ or copied to on vSphere.
     </dt>
     <dd>{{% md %}}The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_datastore_python">
 <a href="#state_source_datastore_python" style="color: inherit; text-decoration: inherit;">source_<wbr>datastore</a>
@@ -1221,8 +1151,7 @@ will be copied from. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_file_python">
 <a href="#state_source_file_python" style="color: inherit; text-decoration: inherit;">source_<wbr>file</a>
@@ -1233,8 +1162,7 @@ be copied from. Forces a new resource if changed.
     <dd>{{% md %}}The path to the file being uploaded from the
 host to vSphere or copied within vSphere. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

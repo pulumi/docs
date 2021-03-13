@@ -313,8 +313,7 @@ The KafkaMirrorMaker resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -325,8 +324,7 @@ The KafkaMirrorMaker resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -337,8 +335,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -353,8 +350,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormaker_csharp">
 <a href="#kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
@@ -363,8 +359,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormakeruserconfig_csharp">
 <a href="#kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
@@ -374,8 +369,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -385,8 +379,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -396,8 +389,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -413,8 +405,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -428,8 +419,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -438,8 +428,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">List&lt;Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -452,13 +441,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -469,8 +456,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -481,8 +467,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -497,8 +482,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormaker_go">
 <a href="#kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
@@ -507,8 +491,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormakeruserconfig_go">
 <a href="#kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
@@ -518,8 +501,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -529,8 +511,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -540,8 +521,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -557,8 +537,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -572,8 +551,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -582,8 +560,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -596,13 +573,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -613,8 +588,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -625,8 +599,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -641,8 +614,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormaker_nodejs">
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
@@ -651,8 +623,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormakeruserconfig_nodejs">
 <a href="#kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
@@ -662,8 +633,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -673,8 +643,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -684,8 +653,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -701,8 +669,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -716,8 +683,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -726,8 +692,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -740,13 +705,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -757,8 +720,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -769,8 +731,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -785,8 +746,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_mirrormaker_python">
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
@@ -795,8 +755,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_mirrormaker_user_config_python">
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
@@ -806,8 +765,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -817,8 +775,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -828,8 +785,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -845,8 +801,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -860,8 +815,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -870,8 +824,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -884,8 +837,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -896,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -906,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkamirrormakercomponent">List&lt;Kafka<wbr>Mirror<wbr>Maker<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -915,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -925,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -935,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -945,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -955,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -965,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -975,8 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -985,13 +928,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1000,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkamirrormakercomponent">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1009,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1019,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1029,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1039,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1049,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1059,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1069,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1079,13 +1012,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1094,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkamirrormakercomponent">Kafka<wbr>Mirror<wbr>Maker<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1103,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1113,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1123,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1133,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1143,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1153,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1163,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1173,13 +1096,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1188,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kafkamirrormakercomponent">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1197,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1207,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1217,8 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1227,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1237,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1247,8 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1257,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1267,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1395,8 +1307,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
 <a href="#state_cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1411,8 +1322,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_csharp">
 <a href="#state_components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1421,8 +1331,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakercomponent">List&lt;Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormaker_csharp">
 <a href="#state_kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
@@ -1431,8 +1340,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormakeruserconfig_csharp">
 <a href="#state_kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
@@ -1442,8 +1350,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_csharp">
 <a href="#state_maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1453,8 +1360,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_csharp">
 <a href="#state_maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1464,8 +1370,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1481,8 +1386,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1493,8 +1397,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_csharp">
 <a href="#state_projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1508,8 +1411,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_csharp">
 <a href="#state_servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1518,8 +1420,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_csharp">
 <a href="#state_serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1528,8 +1429,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">List&lt;Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1540,8 +1440,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_csharp">
 <a href="#state_servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1550,8 +1449,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_csharp">
 <a href="#state_serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1560,8 +1458,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1570,8 +1467,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_csharp">
 <a href="#state_serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1580,8 +1476,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_csharp">
 <a href="#state_serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1590,8 +1485,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1600,8 +1494,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1614,13 +1507,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
 <a href="#state_cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1635,8 +1526,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_go">
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1645,8 +1535,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakercomponent">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormaker_go">
 <a href="#state_kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
@@ -1655,8 +1544,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormakeruserconfig_go">
 <a href="#state_kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
@@ -1666,8 +1554,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_go">
 <a href="#state_maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1677,8 +1564,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_go">
 <a href="#state_maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1688,8 +1574,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1705,8 +1590,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1717,8 +1601,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_go">
 <a href="#state_projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1732,8 +1615,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_go">
 <a href="#state_servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1742,8 +1624,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_go">
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1752,8 +1633,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">[]Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1764,8 +1644,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_go">
 <a href="#state_servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1774,8 +1653,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_go">
 <a href="#state_serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1784,8 +1662,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1794,8 +1671,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_go">
 <a href="#state_serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1804,8 +1680,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_go">
 <a href="#state_serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1814,8 +1689,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1824,8 +1698,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1838,13 +1711,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1859,8 +1730,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_nodejs">
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1869,8 +1739,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakercomponent">Kafka<wbr>Mirror<wbr>Maker<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormaker_nodejs">
 <a href="#state_kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
@@ -1879,8 +1748,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormakeruserconfig_nodejs">
 <a href="#state_kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
@@ -1890,8 +1758,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_nodejs">
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -1901,8 +1768,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_nodejs">
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -1912,8 +1778,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1929,8 +1794,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1941,8 +1805,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_nodejs">
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -1956,8 +1819,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_nodejs">
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1966,8 +1828,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_nodejs">
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -1976,8 +1837,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1988,8 +1848,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_nodejs">
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1998,8 +1857,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_nodejs">
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -2008,8 +1866,7 @@ intended service usage rather than current attributes.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -2018,8 +1875,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_nodejs">
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -2028,8 +1884,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_nodejs">
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -2038,8 +1893,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2048,8 +1902,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -2062,13 +1915,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -2083,8 +1934,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_python">
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -2093,8 +1943,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakercomponent">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafka_mirrormaker_python">
 <a href="#state_kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
@@ -2103,8 +1952,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kafka_mirrormaker_user_config_python">
 <a href="#state_kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
@@ -2114,8 +1962,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_dow_python">
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -2125,8 +1972,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_time_python">
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -2136,8 +1982,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2153,8 +1998,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2165,8 +2009,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_vpc_id_python">
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -2180,8 +2023,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_host_python">
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -2190,8 +2032,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_integrations_python">
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -2200,8 +2041,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#kafkamirrormakerserviceintegration">Sequence[Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -2212,8 +2052,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_password_python">
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -2222,8 +2061,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_port_python">
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -2232,8 +2070,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker 2 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -2242,8 +2079,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_uri_python">
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -2252,8 +2088,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Kafka MirrorMaker 2 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_username_python">
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -2262,8 +2097,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2272,8 +2106,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -2286,8 +2119,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2302,8 +2134,7 @@ deletion is done.
 <h4 id="kafkamirrormakercomponent">Kafka<wbr>Mirror<wbr>Maker<wbr>Component</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2311,8 +2142,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2320,8 +2150,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2329,8 +2158,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2338,8 +2166,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2347,8 +2174,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2356,8 +2182,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2365,13 +2190,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2379,8 +2202,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2388,8 +2210,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2397,8 +2218,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2406,8 +2226,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2415,8 +2234,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2424,8 +2242,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2433,13 +2250,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2447,8 +2262,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2456,8 +2270,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2465,8 +2278,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2474,8 +2286,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2483,8 +2294,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2492,8 +2302,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2501,13 +2310,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2515,8 +2322,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2524,8 +2330,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2533,8 +2338,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2542,8 +2346,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2551,8 +2354,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2560,8 +2362,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2569,15 +2370,13 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkamirrormakerkafkamirrormakeruserconfig">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2586,8 +2385,7 @@ deletion is done.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormaker_csharp">
 <a href="#kafkamirrormaker_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
@@ -2596,13 +2394,11 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2611,8 +2407,7 @@ deletion is done.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormaker_go">
 <a href="#kafkamirrormaker_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker</a>
@@ -2621,13 +2416,11 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -2636,8 +2429,7 @@ deletion is done.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormaker_nodejs">
 <a href="#kafkamirrormaker_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker</a>
@@ -2646,13 +2438,11 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -2661,8 +2451,7 @@ deletion is done.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_mirrormaker_python">
 <a href="#kafka_mirrormaker_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker</a>
@@ -2671,15 +2460,13 @@ deletion is done.
         <span class="property-type"><a href="#kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka MirrorMaker configuration values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkamirrormakerkafkamirrormakeruserconfigkafkamirrormaker">Kafka<wbr>Mirror<wbr>Maker<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Kafka<wbr>Mirrormaker</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_csharp">
 <a href="#refreshgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Enabled</a>
@@ -2689,8 +2476,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}Whether to periodically check for new consumer groups. 
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsintervalseconds_csharp">
 <a href="#refreshgroupsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Interval<wbr>Seconds</a>
@@ -2700,8 +2486,7 @@ Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Whether to periodically check for new topics and 
 partitions. Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_csharp">
 <a href="#refreshtopicsenabled_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Enabled</a>
@@ -2709,8 +2494,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_csharp">
 <a href="#refreshtopicsintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2720,13 +2504,11 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_go">
 <a href="#refreshgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Enabled</a>
@@ -2736,8 +2518,7 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Whether to periodically check for new consumer groups. 
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsintervalseconds_go">
 <a href="#refreshgroupsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Groups<wbr>Interval<wbr>Seconds</a>
@@ -2747,8 +2528,7 @@ Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Whether to periodically check for new topics and 
 partitions. Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_go">
 <a href="#refreshtopicsenabled_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Enabled</a>
@@ -2756,8 +2536,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_go">
 <a href="#refreshtopicsintervalseconds_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2767,13 +2546,11 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsenabled_nodejs">
 <a href="#refreshgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Enabled</a>
@@ -2783,8 +2560,7 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Whether to periodically check for new consumer groups. 
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshgroupsintervalseconds_nodejs">
 <a href="#refreshgroupsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Groups<wbr>Interval<wbr>Seconds</a>
@@ -2794,8 +2570,7 @@ Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Whether to periodically check for new topics and 
 partitions. Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsenabled_nodejs">
 <a href="#refreshtopicsenabled_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Enabled</a>
@@ -2803,8 +2578,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtopicsintervalseconds_nodejs">
 <a href="#refreshtopicsintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Topics<wbr>Interval<wbr>Seconds</a>
@@ -2814,13 +2588,11 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="refresh_groups_enabled_python">
 <a href="#refresh_groups_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>enabled</a>
@@ -2830,8 +2602,7 @@ seconds. Defaults to 600 seconds (10 minutes).
     </dt>
     <dd>{{% md %}}Whether to periodically check for new consumer groups. 
 Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_groups_interval_seconds_python">
 <a href="#refresh_groups_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>groups_<wbr>interval_<wbr>seconds</a>
@@ -2841,8 +2612,7 @@ Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Whether to periodically check for new topics and 
 partitions. Defaults to 'true'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_topics_enabled_python">
 <a href="#refresh_topics_enabled_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>enabled</a>
@@ -2850,8 +2620,7 @@ partitions. Defaults to 'true'.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_topics_interval_seconds_python">
 <a href="#refresh_topics_interval_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>topics_<wbr>interval_<wbr>seconds</a>
@@ -2861,15 +2630,13 @@ partitions. Defaults to 'true'.
     </dt>
     <dd>{{% md %}}Frequency of topic and partitions refresh in 
 seconds. Defaults to 600 seconds (10 minutes).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kafkamirrormakerserviceintegration">Kafka<wbr>Mirror<wbr>Maker<wbr>Service<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -2877,8 +2644,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -2886,13 +2652,11 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -2900,8 +2664,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -2909,13 +2672,11 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -2923,8 +2684,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -2932,13 +2692,11 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -2946,8 +2704,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -2955,8 +2712,7 @@ seconds. Defaults to 600 seconds (10 minutes).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -323,8 +323,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceptancerequired_csharp">
 <a href="#acceptancerequired_csharp" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
@@ -333,8 +332,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprincipals_csharp">
 <a href="#allowedprincipals_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
@@ -343,8 +341,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayloadbalancerarns_csharp">
 <a href="#gatewayloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -353,8 +350,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkloadbalancerarns_csharp">
 <a href="#networkloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -363,8 +359,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednsname_csharp">
 <a href="#privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
@@ -373,8 +368,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -383,13 +377,11 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceptancerequired_go">
 <a href="#acceptancerequired_go" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
@@ -398,8 +390,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprincipals_go">
 <a href="#allowedprincipals_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
@@ -408,8 +399,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayloadbalancerarns_go">
 <a href="#gatewayloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -418,8 +408,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkloadbalancerarns_go">
 <a href="#networkloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -428,8 +417,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednsname_go">
 <a href="#privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
@@ -438,8 +426,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -448,13 +435,11 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceptancerequired_nodejs">
 <a href="#acceptancerequired_nodejs" style="color: inherit; text-decoration: inherit;">acceptance<wbr>Required</a>
@@ -463,8 +448,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprincipals_nodejs">
 <a href="#allowedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principals</a>
@@ -473,8 +457,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayloadbalancerarns_nodejs">
 <a href="#gatewayloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -483,8 +466,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkloadbalancerarns_nodejs">
 <a href="#networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -493,8 +475,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednsname_nodejs">
 <a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
@@ -503,8 +484,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -513,13 +493,11 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceptance_required_python">
 <a href="#acceptance_required_python" style="color: inherit; text-decoration: inherit;">acceptance_<wbr>required</a>
@@ -528,8 +506,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_principals_python">
 <a href="#allowed_principals_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principals</a>
@@ -538,8 +515,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_load_balancer_arns_python">
 <a href="#gateway_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>arns</a>
@@ -548,8 +524,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_load_balancer_arns_python">
 <a href="#network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
@@ -558,8 +533,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_dns_name_python">
 <a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
@@ -568,8 +542,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -578,8 +551,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -590,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -600,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -610,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="baseendpointdnsnames_csharp">
 <a href="#baseendpointdnsnames_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
@@ -620,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -629,8 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managesvpcendpoints_csharp">
 <a href="#managesvpcendpoints_csharp" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
@@ -639,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatednsnameconfigurations_csharp">
 <a href="#privatednsnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
@@ -649,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">List&lt;Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -659,8 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -669,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -679,13 +642,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -694,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -704,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="baseendpointdnsnames_go">
 <a href="#baseendpointdnsnames_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
@@ -714,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -723,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managesvpcendpoints_go">
 <a href="#managesvpcendpoints_go" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
@@ -733,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatednsnameconfigurations_go">
 <a href="#privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
@@ -743,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -753,8 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -763,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -773,13 +726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -788,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -798,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="baseendpointdnsnames_nodejs">
 <a href="#baseendpointdnsnames_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
@@ -808,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -817,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managesvpcendpoints_nodejs">
 <a href="#managesvpcendpoints_nodejs" style="color: inherit; text-decoration: inherit;">manages<wbr>Vpc<wbr>Endpoints</a>
@@ -827,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatednsnameconfigurations_nodejs">
 <a href="#privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
@@ -837,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -847,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -857,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -867,13 +810,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -882,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -892,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="base_endpoint_dns_names_python">
 <a href="#base_endpoint_dns_names_python" style="color: inherit; text-decoration: inherit;">base_<wbr>endpoint_<wbr>dns_<wbr>names</a>
@@ -902,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manages_vpc_endpoints_python">
 <a href="#manages_vpc_endpoints_python" style="color: inherit; text-decoration: inherit;">manages_<wbr>vpc_<wbr>endpoints</a>
@@ -921,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_dns_name_configurations_python">
 <a href="#private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
@@ -931,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -941,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -951,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -961,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1089,8 +1021,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptancerequired_csharp">
 <a href="#state_acceptancerequired_csharp" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
@@ -1099,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipals_csharp">
 <a href="#state_allowedprincipals_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
@@ -1109,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1119,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1129,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseendpointdnsnames_csharp">
 <a href="#state_baseendpointdnsnames_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
@@ -1139,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayloadbalancerarns_csharp">
 <a href="#state_gatewayloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -1149,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managesvpcendpoints_csharp">
 <a href="#state_managesvpcendpoints_csharp" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
@@ -1159,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkloadbalancerarns_csharp">
 <a href="#state_networkloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -1169,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_csharp">
 <a href="#state_privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
@@ -1179,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsnameconfigurations_csharp">
 <a href="#state_privatednsnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
@@ -1189,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">List&lt;Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1199,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1209,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1219,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1229,13 +1147,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptancerequired_go">
 <a href="#state_acceptancerequired_go" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
@@ -1244,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipals_go">
 <a href="#state_allowedprincipals_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
@@ -1254,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1264,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1274,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseendpointdnsnames_go">
 <a href="#state_baseendpointdnsnames_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
@@ -1284,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayloadbalancerarns_go">
 <a href="#state_gatewayloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -1294,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managesvpcendpoints_go">
 <a href="#state_managesvpcendpoints_go" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
@@ -1304,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkloadbalancerarns_go">
 <a href="#state_networkloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -1314,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_go">
 <a href="#state_privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
@@ -1324,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsnameconfigurations_go">
 <a href="#state_privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
@@ -1334,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1344,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1354,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1364,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1374,13 +1277,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptancerequired_nodejs">
 <a href="#state_acceptancerequired_nodejs" style="color: inherit; text-decoration: inherit;">acceptance<wbr>Required</a>
@@ -1389,8 +1290,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipals_nodejs">
 <a href="#state_allowedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principals</a>
@@ -1399,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1409,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -1419,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseendpointdnsnames_nodejs">
 <a href="#state_baseendpointdnsnames_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
@@ -1429,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayloadbalancerarns_nodejs">
 <a href="#state_gatewayloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -1439,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managesvpcendpoints_nodejs">
 <a href="#state_managesvpcendpoints_nodejs" style="color: inherit; text-decoration: inherit;">manages<wbr>Vpc<wbr>Endpoints</a>
@@ -1449,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkloadbalancerarns_nodejs">
 <a href="#state_networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
@@ -1459,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_nodejs">
 <a href="#state_privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
@@ -1469,8 +1362,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednsnameconfigurations_nodejs">
 <a href="#state_privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
@@ -1479,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1489,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1499,8 +1389,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1509,8 +1398,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1519,13 +1407,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptance_required_python">
 <a href="#state_acceptance_required_python" style="color: inherit; text-decoration: inherit;">acceptance_<wbr>required</a>
@@ -1534,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_principals_python">
 <a href="#state_allowed_principals_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principals</a>
@@ -1544,8 +1429,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1554,8 +1438,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -1564,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_base_endpoint_dns_names_python">
 <a href="#state_base_endpoint_dns_names_python" style="color: inherit; text-decoration: inherit;">base_<wbr>endpoint_<wbr>dns_<wbr>names</a>
@@ -1574,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_load_balancer_arns_python">
 <a href="#state_gateway_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>arns</a>
@@ -1584,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manages_vpc_endpoints_python">
 <a href="#state_manages_vpc_endpoints_python" style="color: inherit; text-decoration: inherit;">manages_<wbr>vpc_<wbr>endpoints</a>
@@ -1594,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_load_balancer_arns_python">
 <a href="#state_network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
@@ -1604,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_name_python">
 <a href="#state_private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
@@ -1614,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_name_configurations_python">
 <a href="#state_private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
@@ -1624,8 +1501,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1634,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1644,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1654,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1664,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1680,8 +1552,7 @@ The following state arguments are supported:
 <h4 id="vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1690,8 +1561,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1700,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1710,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1720,13 +1588,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1735,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1745,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1755,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1765,13 +1628,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1780,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1790,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1800,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1810,13 +1668,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1825,8 +1681,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1835,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1845,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1855,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

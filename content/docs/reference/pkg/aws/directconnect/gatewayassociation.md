@@ -575,8 +575,7 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dxgatewayid_csharp">
 <a href="#dxgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
@@ -585,8 +584,7 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprefixes_csharp">
 <a href="#allowedprefixes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
@@ -595,8 +593,7 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatedgatewayid_csharp">
 <a href="#associatedgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
@@ -606,8 +603,7 @@ The GatewayAssociation resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatedgatewayowneraccountid_csharp">
 <a href="#associatedgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -617,8 +613,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proposalid_csharp">
 <a href="#proposalid_csharp" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
@@ -628,8 +623,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -637,13 +631,11 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dxgatewayid_go">
 <a href="#dxgatewayid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
@@ -652,8 +644,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprefixes_go">
 <a href="#allowedprefixes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
@@ -662,8 +653,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatedgatewayid_go">
 <a href="#associatedgatewayid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
@@ -673,8 +663,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatedgatewayowneraccountid_go">
 <a href="#associatedgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -684,8 +673,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proposalid_go">
 <a href="#proposalid_go" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
@@ -695,8 +683,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -704,13 +691,11 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dxgatewayid_nodejs">
 <a href="#dxgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Id</a>
@@ -719,8 +704,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedprefixes_nodejs">
 <a href="#allowedprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Prefixes</a>
@@ -729,8 +713,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatedgatewayid_nodejs">
 <a href="#associatedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Id</a>
@@ -740,8 +723,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatedgatewayowneraccountid_nodejs">
 <a href="#associatedgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -751,8 +733,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proposalid_nodejs">
 <a href="#proposalid_nodejs" style="color: inherit; text-decoration: inherit;">proposal<wbr>Id</a>
@@ -762,8 +743,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -771,13 +751,11 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dx_gateway_id_python">
 <a href="#dx_gateway_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>id</a>
@@ -786,8 +764,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_prefixes_python">
 <a href="#allowed_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>prefixes</a>
@@ -796,8 +773,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associated_gateway_id_python">
 <a href="#associated_gateway_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>id</a>
@@ -807,8 +783,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associated_gateway_owner_account_id_python">
 <a href="#associated_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
@@ -818,8 +793,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proposal_id_python">
 <a href="#proposal_id_python" style="color: inherit; text-decoration: inherit;">proposal_<wbr>id</a>
@@ -829,8 +803,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -838,8 +811,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -850,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="associatedgatewaytype_csharp">
 <a href="#associatedgatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
@@ -860,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dxgatewayassociationid_csharp">
 <a href="#dxgatewayassociationid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
@@ -870,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dxgatewayowneraccountid_csharp">
 <a href="#dxgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -880,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -889,13 +857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="associatedgatewaytype_go">
 <a href="#associatedgatewaytype_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
@@ -904,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dxgatewayassociationid_go">
 <a href="#dxgatewayassociationid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
@@ -914,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dxgatewayowneraccountid_go">
 <a href="#dxgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -924,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -933,13 +896,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="associatedgatewaytype_nodejs">
 <a href="#associatedgatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Type</a>
@@ -948,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dxgatewayassociationid_nodejs">
 <a href="#dxgatewayassociationid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Association<wbr>Id</a>
@@ -958,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dxgatewayowneraccountid_nodejs">
 <a href="#dxgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -968,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -977,13 +935,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="associated_gateway_type_python">
 <a href="#associated_gateway_type_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>type</a>
@@ -992,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dx_gateway_association_id_python">
 <a href="#dx_gateway_association_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>association_<wbr>id</a>
@@ -1002,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dx_gateway_owner_account_id_python">
 <a href="#dx_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
@@ -1012,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1021,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1149,8 +1101,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprefixes_csharp">
 <a href="#state_allowedprefixes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
@@ -1159,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewayid_csharp">
 <a href="#state_associatedgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
@@ -1170,8 +1120,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewayowneraccountid_csharp">
 <a href="#state_associatedgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -1181,8 +1130,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewaytype_csharp">
 <a href="#state_associatedgatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
@@ -1191,8 +1139,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayassociationid_csharp">
 <a href="#state_dxgatewayassociationid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
@@ -1201,8 +1148,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayid_csharp">
 <a href="#state_dxgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
@@ -1211,8 +1157,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayowneraccountid_csharp">
 <a href="#state_dxgatewayowneraccountid_csharp" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -1221,8 +1166,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proposalid_csharp">
 <a href="#state_proposalid_csharp" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
@@ -1232,8 +1176,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vpngatewayid_csharp">
 <a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -1241,13 +1184,11 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprefixes_go">
 <a href="#state_allowedprefixes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Prefixes</a>
@@ -1256,8 +1197,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewayid_go">
 <a href="#state_associatedgatewayid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Id</a>
@@ -1267,8 +1207,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewayowneraccountid_go">
 <a href="#state_associatedgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -1278,8 +1217,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewaytype_go">
 <a href="#state_associatedgatewaytype_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Gateway<wbr>Type</a>
@@ -1288,8 +1226,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayassociationid_go">
 <a href="#state_dxgatewayassociationid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Association<wbr>Id</a>
@@ -1298,8 +1235,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayid_go">
 <a href="#state_dxgatewayid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Id</a>
@@ -1308,8 +1244,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayowneraccountid_go">
 <a href="#state_dxgatewayowneraccountid_go" style="color: inherit; text-decoration: inherit;">Dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -1318,8 +1253,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proposalid_go">
 <a href="#state_proposalid_go" style="color: inherit; text-decoration: inherit;">Proposal<wbr>Id</a>
@@ -1329,8 +1263,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vpngatewayid_go">
 <a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -1338,13 +1271,11 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedprefixes_nodejs">
 <a href="#state_allowedprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Prefixes</a>
@@ -1353,8 +1284,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewayid_nodejs">
 <a href="#state_associatedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Id</a>
@@ -1364,8 +1294,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewayowneraccountid_nodejs">
 <a href="#state_associatedgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -1375,8 +1304,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatedgatewaytype_nodejs">
 <a href="#state_associatedgatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Gateway<wbr>Type</a>
@@ -1385,8 +1313,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayassociationid_nodejs">
 <a href="#state_dxgatewayassociationid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Association<wbr>Id</a>
@@ -1395,8 +1322,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayid_nodejs">
 <a href="#state_dxgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Id</a>
@@ -1405,8 +1331,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dxgatewayowneraccountid_nodejs">
 <a href="#state_dxgatewayowneraccountid_nodejs" style="color: inherit; text-decoration: inherit;">dx<wbr>Gateway<wbr>Owner<wbr>Account<wbr>Id</a>
@@ -1415,8 +1340,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proposalid_nodejs">
 <a href="#state_proposalid_nodejs" style="color: inherit; text-decoration: inherit;">proposal<wbr>Id</a>
@@ -1426,8 +1350,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vpngatewayid_nodejs">
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -1435,13 +1358,11 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_prefixes_python">
 <a href="#state_allowed_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>prefixes</a>
@@ -1450,8 +1371,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associated_gateway_id_python">
 <a href="#state_associated_gateway_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>id</a>
@@ -1461,8 +1381,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for single account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associated_gateway_owner_account_id_python">
 <a href="#state_associated_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
@@ -1472,8 +1391,7 @@ Used for single account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associated_gateway_type_python">
 <a href="#state_associated_gateway_type_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>gateway_<wbr>type</a>
@@ -1482,8 +1400,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dx_gateway_association_id_python">
 <a href="#state_dx_gateway_association_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>association_<wbr>id</a>
@@ -1492,8 +1409,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dx_gateway_id_python">
 <a href="#state_dx_gateway_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>id</a>
@@ -1502,8 +1418,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dx_gateway_owner_account_id_python">
 <a href="#state_dx_gateway_owner_account_id_python" style="color: inherit; text-decoration: inherit;">dx_<wbr>gateway_<wbr>owner_<wbr>account_<wbr>id</a>
@@ -1512,8 +1427,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the Direct Connect gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proposal_id_python">
 <a href="#state_proposal_id_python" style="color: inherit; text-decoration: inherit;">proposal_<wbr>id</a>
@@ -1523,8 +1437,7 @@ Used for cross-account Direct Connect gateway associations.
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vpn_gateway_id_python">
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -1532,8 +1445,7 @@ Used for cross-account Direct Connect gateway associations.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 

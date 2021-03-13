@@ -171,8 +171,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -181,8 +180,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -191,8 +189,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagedescription_csharp">
 <a href="#stagedescription_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Description</a>
@@ -201,8 +198,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagename_csharp">
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -211,8 +207,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -221,8 +216,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_csharp">
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -231,13 +225,11 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -246,8 +238,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +247,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagedescription_go">
 <a href="#stagedescription_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Description</a>
@@ -266,8 +256,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagename_go">
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -276,8 +265,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -286,8 +274,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_go">
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -296,13 +283,11 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -311,8 +296,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -321,8 +305,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagedescription_nodejs">
 <a href="#stagedescription_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Description</a>
@@ -331,8 +314,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stagename_nodejs">
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
@@ -341,8 +323,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -351,8 +332,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_nodejs">
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -361,13 +341,11 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -376,8 +354,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -386,8 +363,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_description_python">
 <a href="#stage_description_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>description</a>
@@ -396,8 +372,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stage_name_python">
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
@@ -406,8 +381,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -416,8 +390,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_python">
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -426,8 +399,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -438,8 +410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -448,8 +419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="executionarn_csharp">
 <a href="#executionarn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -460,8 +430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -469,8 +438,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invokeurl_csharp">
 <a href="#invokeurl_csharp" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -480,13 +448,11 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -495,8 +461,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="executionarn_go">
 <a href="#executionarn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -507,8 +472,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -516,8 +480,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invokeurl_go">
 <a href="#invokeurl_go" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -527,13 +490,11 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -542,8 +503,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="executionarn_nodejs">
 <a href="#executionarn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Arn</a>
@@ -554,8 +514,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -563,8 +522,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invokeurl_nodejs">
 <a href="#invokeurl_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Url</a>
@@ -574,13 +532,11 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -589,8 +545,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="execution_arn_python">
 <a href="#execution_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>arn</a>
@@ -601,8 +556,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,8 +564,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invoke_url_python">
 <a href="#invoke_url_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>url</a>
@@ -621,8 +574,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -749,8 +701,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createddate_csharp">
 <a href="#state_createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -759,8 +710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -769,8 +719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_executionarn_csharp">
 <a href="#state_executionarn_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -781,8 +730,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_csharp">
 <a href="#state_invokeurl_csharp" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -792,8 +740,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -802,8 +749,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stagedescription_csharp">
 <a href="#state_stagedescription_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Description</a>
@@ -812,8 +758,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stagename_csharp">
 <a href="#state_stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -822,8 +767,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_csharp">
 <a href="#state_triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -832,8 +776,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_csharp">
 <a href="#state_variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -842,13 +785,11 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createddate_go">
 <a href="#state_createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -857,8 +798,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -867,8 +807,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_executionarn_go">
 <a href="#state_executionarn_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Arn</a>
@@ -879,8 +818,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_go">
 <a href="#state_invokeurl_go" style="color: inherit; text-decoration: inherit;">Invoke<wbr>Url</a>
@@ -890,8 +828,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -900,8 +837,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stagedescription_go">
 <a href="#state_stagedescription_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Description</a>
@@ -910,8 +846,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stagename_go">
 <a href="#state_stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -920,8 +855,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_go">
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -930,8 +864,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_go">
 <a href="#state_variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -940,13 +873,11 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createddate_nodejs">
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -955,8 +886,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -965,8 +895,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_executionarn_nodejs">
 <a href="#state_executionarn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Arn</a>
@@ -977,8 +906,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invokeurl_nodejs">
 <a href="#state_invokeurl_nodejs" style="color: inherit; text-decoration: inherit;">invoke<wbr>Url</a>
@@ -988,8 +916,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -998,8 +925,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stagedescription_nodejs">
 <a href="#state_stagedescription_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Description</a>
@@ -1008,8 +934,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stagename_nodejs">
 <a href="#state_stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
@@ -1018,8 +943,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_nodejs">
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -1028,8 +952,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_nodejs">
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -1038,13 +961,11 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_date_python">
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1053,8 +974,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1063,8 +983,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_execution_arn_python">
 <a href="#state_execution_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>arn</a>
@@ -1075,8 +994,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
     <dd>{{% md %}}The execution ARN to be used in `lambda_permission` resource's `source_arn`
 when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invoke_url_python">
 <a href="#state_invoke_url_python" style="color: inherit; text-decoration: inherit;">invoke_<wbr>url</a>
@@ -1086,8 +1004,7 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -1096,8 +1013,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}REST API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stage_description_python">
 <a href="#state_stage_description_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>description</a>
@@ -1106,8 +1022,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stage_name_python">
 <a href="#state_stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
@@ -1116,8 +1031,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_python">
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -1126,8 +1040,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of arbitrary keys and values that, when changed, will trigger a redeployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_python">
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -1136,8 +1049,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map to set on the stage managed by the `stage_name` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -280,8 +280,7 @@ The CustomerGateway resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bgpasn_csharp">
 <a href="#bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
@@ -290,8 +289,7 @@ The CustomerGateway resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -300,8 +298,7 @@ The CustomerGateway resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -311,8 +308,7 @@ The CustomerGateway resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -321,8 +317,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -331,13 +326,11 @@ supports at this time is "ipsec.1".
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bgpasn_go">
 <a href="#bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
@@ -346,8 +339,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -356,8 +348,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -367,8 +358,7 @@ supports at this time is "ipsec.1".
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -377,8 +367,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -387,13 +376,11 @@ supports at this time is "ipsec.1".
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bgpasn_nodejs">
 <a href="#bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
@@ -402,8 +389,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -412,8 +398,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -423,8 +408,7 @@ supports at this time is "ipsec.1".
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -433,8 +417,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -443,13 +426,11 @@ supports at this time is "ipsec.1".
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bgp_asn_python">
 <a href="#bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
@@ -458,8 +439,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -468,8 +448,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -479,8 +458,7 @@ supports at this time is "ipsec.1".
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -489,8 +467,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -499,8 +476,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -511,8 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -521,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -530,13 +504,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -545,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -554,13 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -569,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -578,13 +546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -593,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -602,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,8 +694,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -740,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bgpasn_csharp">
 <a href="#state_bgpasn_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
@@ -750,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_csharp">
 <a href="#state_devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -760,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -770,8 +730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -780,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -791,13 +749,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -806,8 +762,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bgpasn_go">
 <a href="#state_bgpasn_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Asn</a>
@@ -816,8 +771,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_go">
 <a href="#state_devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -826,8 +780,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -836,8 +789,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -846,8 +798,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -857,13 +808,11 @@ supports at this time is "ipsec.1".
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -872,8 +821,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bgpasn_nodejs">
 <a href="#state_bgpasn_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Asn</a>
@@ -882,8 +830,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_nodejs">
 <a href="#state_devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -892,8 +839,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -902,8 +848,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -912,8 +857,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -923,13 +867,11 @@ supports at this time is "ipsec.1".
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -938,8 +880,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bgp_asn_python">
 <a href="#state_bgp_asn_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>asn</a>
@@ -948,8 +889,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_name_python">
 <a href="#state_device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -958,8 +898,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the customer gateway device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -968,8 +907,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the gateway's Internet-routable external interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -978,8 +916,7 @@ supports at this time is "ipsec.1".
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags to apply to the gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -989,8 +926,7 @@ supports at this time is "ipsec.1".
     </dt>
     <dd>{{% md %}}The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

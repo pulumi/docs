@@ -170,8 +170,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clients_csharp">
 <a href="#clients_csharp" style="color: inherit; text-decoration: inherit;">Clients</a>
@@ -180,8 +179,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provideralias_csharp">
 <a href="#provideralias_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Alias</a>
@@ -190,8 +188,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -200,8 +197,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -210,13 +206,11 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clients_go">
 <a href="#clients_go" style="color: inherit; text-decoration: inherit;">Clients</a>
@@ -225,8 +219,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provideralias_go">
 <a href="#provideralias_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Alias</a>
@@ -235,8 +228,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -245,8 +237,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -255,13 +246,11 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clients_nodejs">
 <a href="#clients_nodejs" style="color: inherit; text-decoration: inherit;">clients</a>
@@ -270,8 +259,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provideralias_nodejs">
 <a href="#provideralias_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Alias</a>
@@ -280,8 +268,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -290,8 +277,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -300,13 +286,11 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clients_python">
 <a href="#clients_python" style="color: inherit; text-decoration: inherit;">clients</a>
@@ -315,8 +299,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_alias_python">
 <a href="#provider_alias_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>alias</a>
@@ -325,8 +308,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -335,8 +317,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -345,8 +326,7 @@ The IdentityProviderTokenExchangeScopePermission resource accepts the following 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -357,8 +337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationidpresourceid_csharp">
 <a href="#authorizationidpresourceid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Idp<wbr>Resource<wbr>Id</a>
@@ -367,8 +346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationresourceserverid_csharp">
 <a href="#authorizationresourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Resource<wbr>Server<wbr>Id</a>
@@ -377,8 +355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationtokenexchangescopepermissionid_csharp">
 <a href="#authorizationtokenexchangescopepermissionid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token<wbr>Exchange<wbr>Scope<wbr>Permission<wbr>Id</a>
@@ -387,8 +364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -396,8 +372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -406,13 +381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationidpresourceid_go">
 <a href="#authorizationidpresourceid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Idp<wbr>Resource<wbr>Id</a>
@@ -421,8 +394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationresourceserverid_go">
 <a href="#authorizationresourceserverid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Resource<wbr>Server<wbr>Id</a>
@@ -431,8 +403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationtokenexchangescopepermissionid_go">
 <a href="#authorizationtokenexchangescopepermissionid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token<wbr>Exchange<wbr>Scope<wbr>Permission<wbr>Id</a>
@@ -441,8 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -450,8 +420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -460,13 +429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationidpresourceid_nodejs">
 <a href="#authorizationidpresourceid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Idp<wbr>Resource<wbr>Id</a>
@@ -475,8 +442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationresourceserverid_nodejs">
 <a href="#authorizationresourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Resource<wbr>Server<wbr>Id</a>
@@ -485,8 +451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationtokenexchangescopepermissionid_nodejs">
 <a href="#authorizationtokenexchangescopepermissionid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Token<wbr>Exchange<wbr>Scope<wbr>Permission<wbr>Id</a>
@@ -495,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -504,8 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -514,13 +477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorization_idp_resource_id_python">
 <a href="#authorization_idp_resource_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>idp_<wbr>resource_<wbr>id</a>
@@ -529,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_resource_server_id_python">
 <a href="#authorization_resource_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>resource_<wbr>server_<wbr>id</a>
@@ -539,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_token_exchange_scope_permission_id_python">
 <a href="#authorization_token_exchange_scope_permission_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>token_<wbr>exchange_<wbr>scope_<wbr>permission_<wbr>id</a>
@@ -549,8 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -558,8 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -568,8 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -696,8 +652,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationidpresourceid_csharp">
 <a href="#state_authorizationidpresourceid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Idp<wbr>Resource<wbr>Id</a>
@@ -706,8 +661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationresourceserverid_csharp">
 <a href="#state_authorizationresourceserverid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Resource<wbr>Server<wbr>Id</a>
@@ -716,8 +670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtokenexchangescopepermissionid_csharp">
 <a href="#state_authorizationtokenexchangescopepermissionid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token<wbr>Exchange<wbr>Scope<wbr>Permission<wbr>Id</a>
@@ -726,8 +679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clients_csharp">
 <a href="#state_clients_csharp" style="color: inherit; text-decoration: inherit;">Clients</a>
@@ -736,8 +688,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -746,8 +697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_csharp">
 <a href="#state_policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -756,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provideralias_csharp">
 <a href="#state_provideralias_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Alias</a>
@@ -766,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -776,13 +724,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationidpresourceid_go">
 <a href="#state_authorizationidpresourceid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Idp<wbr>Resource<wbr>Id</a>
@@ -791,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationresourceserverid_go">
 <a href="#state_authorizationresourceserverid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Resource<wbr>Server<wbr>Id</a>
@@ -801,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtokenexchangescopepermissionid_go">
 <a href="#state_authorizationtokenexchangescopepermissionid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token<wbr>Exchange<wbr>Scope<wbr>Permission<wbr>Id</a>
@@ -811,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clients_go">
 <a href="#state_clients_go" style="color: inherit; text-decoration: inherit;">Clients</a>
@@ -821,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -831,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_go">
 <a href="#state_policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -841,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provideralias_go">
 <a href="#state_provideralias_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Alias</a>
@@ -851,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -861,13 +800,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationidpresourceid_nodejs">
 <a href="#state_authorizationidpresourceid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Idp<wbr>Resource<wbr>Id</a>
@@ -876,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationresourceserverid_nodejs">
 <a href="#state_authorizationresourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Resource<wbr>Server<wbr>Id</a>
@@ -886,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtokenexchangescopepermissionid_nodejs">
 <a href="#state_authorizationtokenexchangescopepermissionid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Token<wbr>Exchange<wbr>Scope<wbr>Permission<wbr>Id</a>
@@ -896,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clients_nodejs">
 <a href="#state_clients_nodejs" style="color: inherit; text-decoration: inherit;">clients</a>
@@ -906,8 +840,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -916,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_nodejs">
 <a href="#state_policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -926,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provideralias_nodejs">
 <a href="#state_provideralias_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Alias</a>
@@ -936,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -946,13 +876,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_idp_resource_id_python">
 <a href="#state_authorization_idp_resource_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>idp_<wbr>resource_<wbr>id</a>
@@ -961,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource ID representing the identity provider, this automatically created by keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_resource_server_id_python">
 <a href="#state_authorization_resource_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>resource_<wbr>server_<wbr>id</a>
@@ -971,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Resource server ID representing the realm management client on which this permission is managed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_token_exchange_scope_permission_id_python">
 <a href="#state_authorization_token_exchange_scope_permission_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>token_<wbr>exchange_<wbr>scope_<wbr>permission_<wbr>id</a>
@@ -981,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Permission ID representing the Permission with scope 'Token Exchange' and the resource 'authorization_idp_resource_id', this automatically created by keycloak, the policy ID will be set on this permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clients_python">
 <a href="#state_clients_python" style="color: inherit; text-decoration: inherit;">clients</a>
@@ -991,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1001,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Policy ID that will be set on the scope based token exchange permission automatically created by enabling permissions on the reference identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_python">
 <a href="#state_policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -1011,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defaults to "client" This is also the only value policy type supported by this provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_alias_python">
 <a href="#state_provider_alias_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>alias</a>
@@ -1021,8 +943,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias of the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -1031,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm that the identity provider exists in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

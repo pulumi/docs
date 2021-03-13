@@ -317,8 +317,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -327,8 +326,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_csharp">
 <a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -338,8 +336,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -351,13 +348,11 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -366,8 +361,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_go">
 <a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -377,8 +371,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -390,13 +383,11 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -405,8 +396,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_nodejs">
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -416,8 +406,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -429,13 +418,11 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -444,8 +431,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_id_python">
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -455,8 +441,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -468,8 +453,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -480,8 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,8 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -499,13 +481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -513,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -523,13 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -537,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,13 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -571,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -699,8 +671,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -712,8 +683,7 @@ The following state arguments are supported:
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -722,8 +692,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_csharp">
 <a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -732,8 +701,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_csharp">
 <a href="#state_serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -743,13 +711,11 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -761,8 +727,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -771,8 +736,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_go">
 <a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -781,8 +745,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_go">
 <a href="#state_serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -792,13 +755,11 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -810,8 +771,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -820,8 +780,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_nodejs">
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -830,8 +789,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_nodejs">
 <a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -841,13 +799,11 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -859,8 +815,7 @@ lowercase letters or the hyphen character.
 by service clients. The entire metadata dictionary may contain
 up to 2000 characters, spread across all key-value pairs.
 Metadata that goes beyond any these limits will be rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -869,8 +824,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_python">
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -879,8 +833,7 @@ Metadata that goes beyond any these limits will be rejected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the namespace this service will belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_id_python">
 <a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -890,8 +843,7 @@ Metadata that goes beyond any these limits will be rejected.
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

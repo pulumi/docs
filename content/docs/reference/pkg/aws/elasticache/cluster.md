@@ -480,8 +480,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_csharp">
 <a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -492,8 +491,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -502,8 +500,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azmode_csharp">
 <a href="#azmode_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Mode</a>
@@ -512,8 +509,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -523,8 +519,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -533,8 +528,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -545,8 +539,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_csharp">
 <a href="#finalsnapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -555,8 +548,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_csharp">
 <a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -567,8 +559,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_csharp">
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -577,8 +568,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtopicarn_csharp">
 <a href="#notificationtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -589,8 +579,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numcachenodes_csharp">
 <a href="#numcachenodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cache<wbr>Nodes</a>
@@ -602,8 +591,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_csharp">
 <a href="#parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -613,8 +601,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -623,8 +610,7 @@ with this cache cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_csharp">
 <a href="#preferredavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -633,8 +619,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationgroupid_csharp">
 <a href="#replicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
@@ -643,8 +628,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -653,8 +637,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupnames_csharp">
 <a href="#securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -663,8 +646,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotarns_csharp">
 <a href="#snapshotarns_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Arns</a>
@@ -673,8 +655,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotname_csharp">
 <a href="#snapshotname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
@@ -683,8 +664,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotretentionlimit_csharp">
 <a href="#snapshotretentionlimit_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Retention<wbr>Limit</a>
@@ -697,8 +677,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotwindow_csharp">
 <a href="#snapshotwindow_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Window</a>
@@ -708,8 +687,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_csharp">
 <a href="#subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -718,8 +696,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -728,13 +705,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_go">
 <a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -745,8 +720,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -755,8 +729,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azmode_go">
 <a href="#azmode_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Mode</a>
@@ -765,8 +738,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -776,8 +748,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -786,8 +757,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -798,8 +768,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_go">
 <a href="#finalsnapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -808,8 +777,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_go">
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -820,8 +788,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_go">
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -830,8 +797,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtopicarn_go">
 <a href="#notificationtopicarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -842,8 +808,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numcachenodes_go">
 <a href="#numcachenodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cache<wbr>Nodes</a>
@@ -855,8 +820,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_go">
 <a href="#parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -866,8 +830,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -876,8 +839,7 @@ with this cache cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_go">
 <a href="#preferredavailabilityzones_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -886,8 +848,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationgroupid_go">
 <a href="#replicationgroupid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
@@ -896,8 +857,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -906,8 +866,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupnames_go">
 <a href="#securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -916,8 +875,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotarns_go">
 <a href="#snapshotarns_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Arns</a>
@@ -926,8 +884,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotname_go">
 <a href="#snapshotname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
@@ -936,8 +893,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotretentionlimit_go">
 <a href="#snapshotretentionlimit_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Retention<wbr>Limit</a>
@@ -950,8 +906,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotwindow_go">
 <a href="#snapshotwindow_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Window</a>
@@ -961,8 +916,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_go">
 <a href="#subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -971,8 +925,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -981,13 +934,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_nodejs">
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -998,8 +949,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1008,8 +958,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azmode_nodejs">
 <a href="#azmode_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Mode</a>
@@ -1018,8 +967,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1029,8 +977,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1039,8 +986,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1051,8 +997,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_nodejs">
 <a href="#finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
@@ -1061,8 +1006,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_nodejs">
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -1073,8 +1017,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetype_nodejs">
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
@@ -1083,8 +1026,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtopicarn_nodejs">
 <a href="#notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
@@ -1095,8 +1037,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numcachenodes_nodejs">
 <a href="#numcachenodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cache<wbr>Nodes</a>
@@ -1108,8 +1049,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_nodejs">
 <a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
@@ -1119,8 +1059,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1129,8 +1068,7 @@ with this cache cluster
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_nodejs">
 <a href="#preferredavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Availability<wbr>Zones</a>
@@ -1139,8 +1077,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationgroupid_nodejs">
 <a href="#replicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Id</a>
@@ -1149,8 +1086,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -1159,8 +1095,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupnames_nodejs">
 <a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
@@ -1169,8 +1104,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotarns_nodejs">
 <a href="#snapshotarns_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Arns</a>
@@ -1179,8 +1113,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotname_nodejs">
 <a href="#snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
@@ -1189,8 +1122,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotretentionlimit_nodejs">
 <a href="#snapshotretentionlimit_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Retention<wbr>Limit</a>
@@ -1203,8 +1135,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotwindow_nodejs">
 <a href="#snapshotwindow_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Window</a>
@@ -1214,8 +1145,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_nodejs">
 <a href="#subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
@@ -1224,8 +1154,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1234,13 +1163,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apply_immediately_python">
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -1251,8 +1178,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1261,8 +1187,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="az_mode_python">
 <a href="#az_mode_python" style="color: inherit; text-decoration: inherit;">az_<wbr>mode</a>
@@ -1271,8 +1196,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1282,8 +1206,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1292,8 +1215,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1304,8 +1226,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="final_snapshot_identifier_python">
 <a href="#final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
@@ -1314,8 +1235,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_python">
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -1326,8 +1246,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_type_python">
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
@@ -1336,8 +1255,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_topic_arn_python">
 <a href="#notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
@@ -1348,8 +1266,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_cache_nodes_python">
 <a href="#num_cache_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cache_<wbr>nodes</a>
@@ -1361,8 +1278,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameter_group_name_python">
 <a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
@@ -1372,8 +1288,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1382,8 +1297,7 @@ with this cache cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_availability_zones_python">
 <a href="#preferred_availability_zones_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>availability_<wbr>zones</a>
@@ -1392,8 +1306,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_group_id_python">
 <a href="#replication_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>id</a>
@@ -1402,8 +1315,7 @@ with this cache cluster
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -1412,8 +1324,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_names_python">
 <a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
@@ -1422,8 +1333,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_arns_python">
 <a href="#snapshot_arns_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>arns</a>
@@ -1432,8 +1342,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_name_python">
 <a href="#snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
@@ -1442,8 +1351,7 @@ with this cache cluster
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_retention_limit_python">
 <a href="#snapshot_retention_limit_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>retention_<wbr>limit</a>
@@ -1456,8 +1364,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_window_python">
 <a href="#snapshot_window_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>window</a>
@@ -1467,8 +1374,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_group_name_python">
 <a href="#subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
@@ -1477,8 +1383,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1487,8 +1392,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1499,8 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1509,8 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cachenodes_csharp">
 <a href="#cachenodes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Nodes</a>
@@ -1519,8 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustercachenode">List&lt;Cluster<wbr>Cache<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_csharp">
 <a href="#clusteraddress_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -1529,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configurationendpoint_csharp">
 <a href="#configurationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -1539,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1548,13 +1447,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1563,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cachenodes_go">
 <a href="#cachenodes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Nodes</a>
@@ -1573,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_go">
 <a href="#clusteraddress_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -1583,8 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configurationendpoint_go">
 <a href="#configurationendpoint_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -1593,8 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1602,13 +1495,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1617,8 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cachenodes_nodejs">
 <a href="#cachenodes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Nodes</a>
@@ -1627,8 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustercachenode">Cluster<wbr>Cache<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_nodejs">
 <a href="#clusteraddress_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Address</a>
@@ -1637,8 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configurationendpoint_nodejs">
 <a href="#configurationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint</a>
@@ -1647,8 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1656,13 +1543,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1671,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cache_nodes_python">
 <a href="#cache_nodes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>nodes</a>
@@ -1681,8 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustercachenode">Sequence[Cluster<wbr>Cache<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_address_python">
 <a href="#cluster_address_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>address</a>
@@ -1691,8 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configuration_endpoint_python">
 <a href="#configuration_endpoint_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint</a>
@@ -1701,8 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1710,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1838,8 +1718,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
 <a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1850,8 +1729,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1860,8 +1738,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1870,8 +1747,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azmode_csharp">
 <a href="#state_azmode_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Mode</a>
@@ -1880,8 +1756,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachenodes_csharp">
 <a href="#state_cachenodes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Nodes</a>
@@ -1890,8 +1765,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type"><a href="#clustercachenode">List&lt;Cluster<wbr>Cache<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteraddress_csharp">
 <a href="#state_clusteraddress_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -1900,8 +1774,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1911,8 +1784,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationendpoint_csharp">
 <a href="#state_configurationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -1921,8 +1793,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1931,8 +1802,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1943,8 +1813,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_csharp">
 <a href="#state_finalsnapshotidentifier_csharp" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -1953,8 +1822,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindow_csharp">
 <a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -1965,8 +1833,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetype_csharp">
 <a href="#state_nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -1975,8 +1842,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtopicarn_csharp">
 <a href="#state_notificationtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -1987,8 +1853,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numcachenodes_csharp">
 <a href="#state_numcachenodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cache<wbr>Nodes</a>
@@ -2000,8 +1865,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_csharp">
 <a href="#state_parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -2011,8 +1875,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2021,8 +1884,7 @@ with this cache cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_csharp">
 <a href="#state_preferredavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -2031,8 +1893,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationgroupid_csharp">
 <a href="#state_replicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
@@ -2041,8 +1902,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -2051,8 +1911,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupnames_csharp">
 <a href="#state_securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -2061,8 +1920,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotarns_csharp">
 <a href="#state_snapshotarns_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Arns</a>
@@ -2071,8 +1929,7 @@ with this cache cluster
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotname_csharp">
 <a href="#state_snapshotname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
@@ -2081,8 +1938,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotretentionlimit_csharp">
 <a href="#state_snapshotretentionlimit_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Retention<wbr>Limit</a>
@@ -2095,8 +1951,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotwindow_csharp">
 <a href="#state_snapshotwindow_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Window</a>
@@ -2106,8 +1961,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_csharp">
 <a href="#state_subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -2116,8 +1970,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2126,13 +1979,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
 <a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -2143,8 +1994,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2153,8 +2003,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -2163,8 +2012,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azmode_go">
 <a href="#state_azmode_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Mode</a>
@@ -2173,8 +2021,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachenodes_go">
 <a href="#state_cachenodes_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Nodes</a>
@@ -2183,8 +2030,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type"><a href="#clustercachenode">[]Cluster<wbr>Cache<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteraddress_go">
 <a href="#state_clusteraddress_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -2193,8 +2039,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -2204,8 +2049,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationendpoint_go">
 <a href="#state_configurationendpoint_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -2214,8 +2058,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -2224,8 +2067,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -2236,8 +2078,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_go">
 <a href="#state_finalsnapshotidentifier_go" style="color: inherit; text-decoration: inherit;">Final<wbr>Snapshot<wbr>Identifier</a>
@@ -2246,8 +2087,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindow_go">
 <a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -2258,8 +2098,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetype_go">
 <a href="#state_nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -2268,8 +2107,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtopicarn_go">
 <a href="#state_notificationtopicarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -2280,8 +2118,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numcachenodes_go">
 <a href="#state_numcachenodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cache<wbr>Nodes</a>
@@ -2293,8 +2130,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_go">
 <a href="#state_parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -2304,8 +2140,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2314,8 +2149,7 @@ with this cache cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_go">
 <a href="#state_preferredavailabilityzones_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -2324,8 +2158,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationgroupid_go">
 <a href="#state_replicationgroupid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
@@ -2334,8 +2167,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -2344,8 +2176,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupnames_go">
 <a href="#state_securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -2354,8 +2185,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotarns_go">
 <a href="#state_snapshotarns_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Arns</a>
@@ -2364,8 +2194,7 @@ with this cache cluster
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotname_go">
 <a href="#state_snapshotname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
@@ -2374,8 +2203,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotretentionlimit_go">
 <a href="#state_snapshotretentionlimit_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Retention<wbr>Limit</a>
@@ -2388,8 +2216,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotwindow_go">
 <a href="#state_snapshotwindow_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Window</a>
@@ -2399,8 +2226,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_go">
 <a href="#state_subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -2409,8 +2235,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2419,13 +2244,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -2436,8 +2259,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2446,8 +2268,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -2456,8 +2277,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azmode_nodejs">
 <a href="#state_azmode_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Mode</a>
@@ -2466,8 +2286,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachenodes_nodejs">
 <a href="#state_cachenodes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Nodes</a>
@@ -2476,8 +2295,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type"><a href="#clustercachenode">Cluster<wbr>Cache<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteraddress_nodejs">
 <a href="#state_clusteraddress_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Address</a>
@@ -2486,8 +2304,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -2497,8 +2314,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationendpoint_nodejs">
 <a href="#state_configurationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint</a>
@@ -2507,8 +2323,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2517,8 +2332,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -2529,8 +2343,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_nodejs">
 <a href="#state_finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
@@ -2539,8 +2352,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindow_nodejs">
 <a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -2551,8 +2363,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetype_nodejs">
 <a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
@@ -2561,8 +2372,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtopicarn_nodejs">
 <a href="#state_notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
@@ -2573,8 +2383,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numcachenodes_nodejs">
 <a href="#state_numcachenodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cache<wbr>Nodes</a>
@@ -2586,8 +2395,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_nodejs">
 <a href="#state_parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
@@ -2597,8 +2405,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2607,8 +2414,7 @@ with this cache cluster
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_nodejs">
 <a href="#state_preferredavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Availability<wbr>Zones</a>
@@ -2617,8 +2423,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationgroupid_nodejs">
 <a href="#state_replicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Id</a>
@@ -2627,8 +2432,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -2637,8 +2441,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupnames_nodejs">
 <a href="#state_securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
@@ -2647,8 +2450,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotarns_nodejs">
 <a href="#state_snapshotarns_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Arns</a>
@@ -2657,8 +2459,7 @@ with this cache cluster
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotname_nodejs">
 <a href="#state_snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
@@ -2667,8 +2468,7 @@ with this cache cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotretentionlimit_nodejs">
 <a href="#state_snapshotretentionlimit_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Retention<wbr>Limit</a>
@@ -2681,8 +2481,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotwindow_nodejs">
 <a href="#state_snapshotwindow_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Window</a>
@@ -2692,8 +2491,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_nodejs">
 <a href="#state_subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
@@ -2702,8 +2500,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2712,13 +2509,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -2729,8 +2524,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
     <dd>{{% md %}}Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon ElastiCache Documentation for more information.](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheCluster.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2739,8 +2533,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the created ElastiCache Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -2749,8 +2542,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_az_mode_python">
 <a href="#state_az_mode_python" style="color: inherit; text-decoration: inherit;">az_<wbr>mode</a>
@@ -2759,8 +2551,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cache_nodes_python">
 <a href="#state_cache_nodes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>nodes</a>
@@ -2769,8 +2560,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type"><a href="#clustercachenode">Sequence[Cluster<wbr>Cache<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and `availability_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_address_python">
 <a href="#state_cluster_address_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>address</a>
@@ -2779,8 +2569,7 @@ are applied immediately, or during the next maintenance window. Default is
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The DNS name of the cache cluster without the port appended.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -2790,8 +2579,7 @@ are applied immediately, or during the next maintenance window. Default is
     </dt>
     <dd>{{% md %}}Group identifier. ElastiCache converts
 this name to lowercase. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_endpoint_python">
 <a href="#state_configuration_endpoint_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint</a>
@@ -2800,8 +2588,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Memcached only) The configuration endpoint to allow host discovery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2810,8 +2597,7 @@ this name to lowercase. Changing this value will re-create the resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cache engine to be used for this cache cluster. Valid values are `memcached` or `redis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -2822,8 +2608,7 @@ this name to lowercase. Changing this value will re-create the resource.
     <dd>{{% md %}}Version number of the cache engine to be used.
 See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
 in the AWS Documentation center for supported versions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_final_snapshot_identifier_python">
 <a href="#state_final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
@@ -2832,8 +2617,7 @@ in the AWS Documentation center for supported versions
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your final cluster snapshot. If omitted, no final snapshot will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_python">
 <a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -2844,8 +2628,7 @@ in the AWS Documentation center for supported versions
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_type_python">
 <a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
@@ -2854,8 +2637,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance class used. See AWS documentation for information on [supported node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). See AWS documentation for information on [supported node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/nodes-select-size.html). For Memcached, changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_topic_arn_python">
 <a href="#state_notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
@@ -2866,8 +2648,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_num_cache_nodes_python">
 <a href="#state_num_cache_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cache_<wbr>nodes</a>
@@ -2879,8 +2660,7 @@ SNS topic to send ElastiCache notifications to. Example:
 cache cluster will have. For Redis, this value must be 1. For Memcached, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameter_group_name_python">
 <a href="#state_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
@@ -2890,8 +2670,7 @@ the highest numbered nodes will be removed.
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2900,8 +2679,7 @@ with this cache cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_availability_zones_python">
 <a href="#state_preferred_availability_zones_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>availability_<wbr>zones</a>
@@ -2910,8 +2688,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_group_id_python">
 <a href="#state_replication_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>id</a>
@@ -2920,8 +2697,7 @@ with this cache cluster
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -2930,8 +2706,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated with the cache cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_names_python">
 <a href="#state_security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
@@ -2940,8 +2715,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of security group names to associate with this cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_arns_python">
 <a href="#state_snapshot_arns_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>arns</a>
@@ -2950,8 +2724,7 @@ with this cache cluster
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing `snapshot_arns` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_name_python">
 <a href="#state_snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
@@ -2960,8 +2733,7 @@ with this cache cluster
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing `snapshot_name` forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_retention_limit_python">
 <a href="#state_snapshot_retention_limit_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>retention_<wbr>limit</a>
@@ -2974,8 +2746,7 @@ retain automatic cache cluster snapshots before deleting them. For example, if y
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_window_python">
 <a href="#state_snapshot_window_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>window</a>
@@ -2985,8 +2756,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_group_name_python">
 <a href="#state_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
@@ -2995,8 +2765,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3005,8 +2774,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3021,8 +2789,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 <h4 id="clustercachenode">Cluster<wbr>Cache<wbr>Node</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -3030,8 +2797,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -3040,8 +2806,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3049,8 +2814,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3059,13 +2823,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -3073,8 +2835,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -3083,8 +2844,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3092,8 +2852,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3102,13 +2861,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -3116,8 +2873,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -3126,8 +2882,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3135,8 +2890,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3145,13 +2899,11 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -3159,8 +2911,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -3169,8 +2920,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3178,8 +2928,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3188,8 +2937,7 @@ begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

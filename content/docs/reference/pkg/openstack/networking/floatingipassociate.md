@@ -279,8 +279,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floatingip_csharp">
 <a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -289,8 +288,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -300,8 +298,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_csharp">
 <a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -309,8 +306,7 @@ associate with this floating IP.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -323,13 +319,11 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floatingip_go">
 <a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -338,8 +332,7 @@ floating IP (which may or may not have a different address).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -349,8 +342,7 @@ floating IP (which may or may not have a different address).
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_go">
 <a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -358,8 +350,7 @@ associate with this floating IP.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -372,13 +363,11 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floatingip_nodejs">
 <a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
@@ -387,8 +376,7 @@ floating IP (which may or may not have a different address).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -398,8 +386,7 @@ floating IP (which may or may not have a different address).
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_nodejs">
 <a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -407,8 +394,7 @@ associate with this floating IP.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -421,13 +407,11 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floating_ip_python">
 <a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
@@ -436,8 +420,7 @@ floating IP (which may or may not have a different address).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -447,8 +430,7 @@ floating IP (which may or may not have a different address).
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_ip_python">
 <a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -456,8 +438,7 @@ associate with this floating IP.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -470,8 +451,7 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -482,8 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -491,13 +470,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -505,13 +482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -519,13 +494,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -533,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -661,8 +633,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_csharp">
 <a href="#state_fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -670,8 +641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_csharp">
 <a href="#state_floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -680,8 +650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -691,8 +660,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -705,13 +673,11 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_go">
 <a href="#state_fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -719,8 +685,7 @@ floating IP (which may or may not have a different address).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_go">
 <a href="#state_floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -729,8 +694,7 @@ floating IP (which may or may not have a different address).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -740,8 +704,7 @@ floating IP (which may or may not have a different address).
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -754,13 +717,11 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_nodejs">
 <a href="#state_fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -768,8 +729,7 @@ floating IP (which may or may not have a different address).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_nodejs">
 <a href="#state_floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
@@ -778,8 +738,7 @@ floating IP (which may or may not have a different address).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -789,8 +748,7 @@ floating IP (which may or may not have a different address).
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -803,13 +761,11 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixed_ip_python">
 <a href="#state_fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -817,8 +773,7 @@ floating IP (which may or may not have a different address).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floating_ip_python">
 <a href="#state_floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
@@ -827,8 +782,7 @@ floating IP (which may or may not have a different address).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Address of an existing floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -838,8 +792,7 @@ floating IP (which may or may not have a different address).
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -852,8 +805,7 @@ A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

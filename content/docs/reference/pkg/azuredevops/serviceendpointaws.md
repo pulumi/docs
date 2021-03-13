@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceEndpointAws"
-title_tag: "Resource ServiceEndpointAws | Package Azure DevOps"
-meta_desc: "Explore the ServiceEndpointAws resource of the Azure DevOps package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a AWS service endpoint within Azure DevOps. Using this service endpoint requires you to first install [AWS Toolkit for Azure DevOps](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools)."
+title_tag: "azuredevops.ServiceEndpointAws"
+meta_desc: "Documentation for the azuredevops.ServiceEndpointAws resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -17,11 +17,17 @@ Manages a AWS service endpoint within Azure DevOps. Using this service endpoint 
 * [Azure DevOps Service REST API 5.1 - Agent Pools](https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -49,14 +55,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,9 +94,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -104,9 +116,12 @@ serviceendpoint = azuredevops.ServiceEndpointAws("serviceendpoint",
     secret_access_key="accesskey")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,9 +141,16 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceEndpointAws Resource {#create}
@@ -153,9 +175,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +183,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +191,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +199,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -212,9 +225,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -222,9 +233,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +241,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +249,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,18 +257,13 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -271,9 +271,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -281,9 +279,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -291,10 +287,7 @@ const serviceendpoint = new azuredevops.ServiceEndpointAws("serviceendpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -309,9 +302,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskeyid_csharp">
 <a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -320,8 +311,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -330,8 +320,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_csharp">
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -340,8 +329,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_csharp">
 <a href="#serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -350,8 +338,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -359,8 +346,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -368,8 +354,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -378,8 +363,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolesessionname_csharp">
 <a href="#rolesessionname_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Session<wbr>Name</a>
@@ -388,8 +372,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletoassume_csharp">
 <a href="#roletoassume_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>To<wbr>Assume</a>
@@ -398,8 +381,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontoken_csharp">
 <a href="#sessiontoken_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
@@ -408,14 +390,11 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskeyid_go">
 <a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -424,8 +403,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -434,8 +412,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_go">
 <a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -444,8 +421,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_go">
 <a href="#serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -454,8 +430,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -463,8 +438,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -472,8 +446,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -482,8 +455,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolesessionname_go">
 <a href="#rolesessionname_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Session<wbr>Name</a>
@@ -492,8 +464,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletoassume_go">
 <a href="#roletoassume_go" style="color: inherit; text-decoration: inherit;">Role<wbr>To<wbr>Assume</a>
@@ -502,8 +473,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontoken_go">
 <a href="#sessiontoken_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
@@ -512,14 +482,11 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskeyid_nodejs">
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
@@ -528,8 +495,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -538,8 +504,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_nodejs">
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
@@ -548,8 +513,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_nodejs">
 <a href="#serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -558,8 +522,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -567,8 +530,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -576,8 +538,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -586,8 +547,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolesessionname_nodejs">
 <a href="#rolesessionname_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Session<wbr>Name</a>
@@ -596,8 +556,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roletoassume_nodejs">
 <a href="#roletoassume_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>To<wbr>Assume</a>
@@ -606,8 +565,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontoken_nodejs">
 <a href="#sessiontoken_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
@@ -616,14 +574,11 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_id_python">
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
@@ -632,8 +587,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -642,8 +596,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_access_key_python">
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
@@ -652,8 +605,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_name_python">
 <a href="#service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -662,8 +614,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -671,8 +622,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -680,8 +630,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -690,8 +639,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_session_name_python">
 <a href="#role_session_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>session_<wbr>name</a>
@@ -700,8 +648,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_to_assume_python">
 <a href="#role_to_assume_python" style="color: inherit; text-decoration: inherit;">role_<wbr>to_<wbr>assume</a>
@@ -710,8 +657,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_token_python">
 <a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
@@ -720,8 +666,7 @@ The ServiceEndpointAws resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -732,9 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -742,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretaccesskeyhash_csharp">
 <a href="#secretaccesskeyhash_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key<wbr>Hash</a>
@@ -752,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessiontokenhash_csharp">
 <a href="#sessiontokenhash_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token<wbr>Hash</a>
@@ -762,14 +703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -777,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretaccesskeyhash_go">
 <a href="#secretaccesskeyhash_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key<wbr>Hash</a>
@@ -787,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessiontokenhash_go">
 <a href="#sessiontokenhash_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token<wbr>Hash</a>
@@ -797,14 +733,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -812,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretaccesskeyhash_nodejs">
 <a href="#secretaccesskeyhash_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key<wbr>Hash</a>
@@ -822,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessiontokenhash_nodejs">
 <a href="#sessiontokenhash_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token<wbr>Hash</a>
@@ -832,14 +763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -847,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_access_key_hash_python">
 <a href="#secret_access_key_hash_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key_<wbr>hash</a>
@@ -857,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="session_token_hash_python">
 <a href="#session_token_hash_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token_<wbr>hash</a>
@@ -867,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -995,9 +920,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskeyid_csharp">
 <a href="#state_accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -1006,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1015,8 +937,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1024,8 +945,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalid_csharp">
 <a href="#state_externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -1034,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1044,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolesessionname_csharp">
 <a href="#state_rolesessionname_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Session<wbr>Name</a>
@@ -1054,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletoassume_csharp">
 <a href="#state_roletoassume_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>To<wbr>Assume</a>
@@ -1064,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretaccesskey_csharp">
 <a href="#state_secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -1074,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretaccesskeyhash_csharp">
 <a href="#state_secretaccesskeyhash_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key<wbr>Hash</a>
@@ -1084,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_csharp">
 <a href="#state_serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -1094,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessiontoken_csharp">
 <a href="#state_sessiontoken_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
@@ -1104,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessiontokenhash_csharp">
 <a href="#state_sessiontokenhash_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token<wbr>Hash</a>
@@ -1114,14 +1026,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskeyid_go">
 <a href="#state_accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -1130,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1139,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1148,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalid_go">
 <a href="#state_externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -1158,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1168,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolesessionname_go">
 <a href="#state_rolesessionname_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Session<wbr>Name</a>
@@ -1178,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletoassume_go">
 <a href="#state_roletoassume_go" style="color: inherit; text-decoration: inherit;">Role<wbr>To<wbr>Assume</a>
@@ -1188,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretaccesskey_go">
 <a href="#state_secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -1198,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretaccesskeyhash_go">
 <a href="#state_secretaccesskeyhash_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key<wbr>Hash</a>
@@ -1208,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_go">
 <a href="#state_serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -1218,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessiontoken_go">
 <a href="#state_sessiontoken_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
@@ -1228,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessiontokenhash_go">
 <a href="#state_sessiontokenhash_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token<wbr>Hash</a>
@@ -1238,14 +1136,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesskeyid_nodejs">
 <a href="#state_accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
@@ -1254,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1263,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1272,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalid_nodejs">
 <a href="#state_externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -1282,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1292,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolesessionname_nodejs">
 <a href="#state_rolesessionname_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Session<wbr>Name</a>
@@ -1302,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletoassume_nodejs">
 <a href="#state_roletoassume_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>To<wbr>Assume</a>
@@ -1312,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretaccesskey_nodejs">
 <a href="#state_secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
@@ -1322,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretaccesskeyhash_nodejs">
 <a href="#state_secretaccesskeyhash_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key<wbr>Hash</a>
@@ -1332,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_nodejs">
 <a href="#state_serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -1342,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessiontoken_nodejs">
 <a href="#state_sessiontoken_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
@@ -1352,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessiontokenhash_nodejs">
 <a href="#state_sessiontokenhash_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token<wbr>Hash</a>
@@ -1362,14 +1246,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_key_id_python">
 <a href="#state_access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
@@ -1378,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS access key ID for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1387,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1396,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_id_python">
 <a href="#state_external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -1406,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is used by third parties when assuming roles in their customers' accounts, aka cross-account role access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1416,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_session_name_python">
 <a href="#state_role_session_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>session_<wbr>name</a>
@@ -1426,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional identifier for the assumed role session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_to_assume_python">
 <a href="#state_role_to_assume_python" style="color: inherit; text-decoration: inherit;">role_<wbr>to_<wbr>assume</a>
@@ -1436,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the role to assume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_access_key_python">
 <a href="#state_secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
@@ -1446,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_access_key_hash_python">
 <a href="#state_secret_access_key_hash_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key_<wbr>hash</a>
@@ -1456,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'secret_access_key'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_endpoint_name_python">
 <a href="#state_service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -1466,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_token_python">
 <a href="#state_session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
@@ -1476,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS session token for signing programmatic requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_token_hash_python">
 <a href="#state_session_token_hash_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token_<wbr>hash</a>
@@ -1486,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'session_token'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

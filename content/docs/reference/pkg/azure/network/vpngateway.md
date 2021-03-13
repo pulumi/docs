@@ -354,8 +354,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -364,8 +363,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_csharp">
 <a href="#virtualhubid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -374,8 +372,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_csharp">
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -384,8 +381,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -394,8 +390,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -404,8 +399,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleunit_csharp">
 <a href="#scaleunit_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Unit</a>
@@ -414,8 +408,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -424,13 +417,11 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -439,8 +430,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_go">
 <a href="#virtualhubid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -449,8 +439,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_go">
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -459,8 +448,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -469,8 +457,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -479,8 +466,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleunit_go">
 <a href="#scaleunit_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Unit</a>
@@ -489,8 +475,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -499,13 +484,11 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -514,8 +497,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_nodejs">
 <a href="#virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
@@ -524,8 +506,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_nodejs">
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
@@ -534,8 +515,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -544,8 +524,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -554,8 +533,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleunit_nodejs">
 <a href="#scaleunit_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Unit</a>
@@ -564,8 +542,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -574,13 +551,11 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -589,8 +564,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_hub_id_python">
 <a href="#virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
@@ -599,8 +573,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_settings_python">
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
@@ -609,8 +582,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -619,8 +591,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -629,8 +600,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_unit_python">
 <a href="#scale_unit_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>unit</a>
@@ -639,8 +609,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -649,8 +618,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -661,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -670,13 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -684,13 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -698,13 +661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -712,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -840,8 +800,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bgpsettings_csharp">
 <a href="#state_bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -850,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -860,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -870,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -880,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaleunit_csharp">
 <a href="#state_scaleunit_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Unit</a>
@@ -890,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -900,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualhubid_csharp">
 <a href="#state_virtualhubid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -910,13 +863,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bgpsettings_go">
 <a href="#state_bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -925,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -935,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -945,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -955,8 +903,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaleunit_go">
 <a href="#state_scaleunit_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Unit</a>
@@ -965,8 +912,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -975,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualhubid_go">
 <a href="#state_virtualhubid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -985,13 +930,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bgpsettings_nodejs">
 <a href="#state_bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
@@ -1000,8 +943,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1010,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1020,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1030,8 +970,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaleunit_nodejs">
 <a href="#state_scaleunit_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Unit</a>
@@ -1040,8 +979,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1050,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualhubid_nodejs">
 <a href="#state_virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
@@ -1060,13 +997,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bgp_settings_python">
 <a href="#state_bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
@@ -1075,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1085,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1095,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Gateway. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1105,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scale_unit_python">
 <a href="#state_scale_unit_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>unit</a>
@@ -1115,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this VPN Gateway. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1125,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the VPN Gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_hub_id_python">
 <a href="#state_virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
@@ -1135,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this VPN Gateway should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1151,8 +1079,7 @@ The following state arguments are supported:
 <h4 id="vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_csharp">
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
@@ -1161,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN of the BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerweight_csharp">
 <a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
@@ -1171,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_csharp">
 <a href="#bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
@@ -1181,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance0bgppeeringaddress_csharp">
 <a href="#instance0bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Instance0Bgp<wbr>Peering<wbr>Address</a>
@@ -1191,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance1bgppeeringaddress_csharp">
 <a href="#instance1bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Instance1Bgp<wbr>Peering<wbr>Address</a>
@@ -1201,13 +1124,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_go">
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
@@ -1216,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN of the BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerweight_go">
 <a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
@@ -1226,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_go">
 <a href="#bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
@@ -1236,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance0bgppeeringaddress_go">
 <a href="#instance0bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Instance0Bgp<wbr>Peering<wbr>Address</a>
@@ -1246,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance1bgppeeringaddress_go">
 <a href="#instance1bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Instance1Bgp<wbr>Peering<wbr>Address</a>
@@ -1256,13 +1173,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_nodejs">
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
@@ -1271,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ASN of the BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerweight_nodejs">
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
@@ -1281,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_nodejs">
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
@@ -1291,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance0bgppeeringaddress_nodejs">
 <a href="#instance0bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">instance0Bgp<wbr>Peering<wbr>Address</a>
@@ -1301,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance1bgppeeringaddress_nodejs">
 <a href="#instance1bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">instance1Bgp<wbr>Peering<wbr>Address</a>
@@ -1311,13 +1222,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asn_python">
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
@@ -1326,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN of the BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_weight_python">
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
@@ -1336,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_peering_address_python">
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
@@ -1346,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Address which should be used for the BGP Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance0_bgp_peering_address_python">
 <a href="#instance0_bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">instance0_<wbr>bgp_<wbr>peering_<wbr>address</a>
@@ -1356,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance1_bgp_peering_address_python">
 <a href="#instance1_bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">instance1_<wbr>bgp_<wbr>peering_<wbr>address</a>
@@ -1366,15 +1271,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customips_csharp">
 <a href="#customips_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
@@ -1383,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultips_csharp">
 <a href="#defaultips_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
@@ -1393,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_csharp">
 <a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
@@ -1403,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnelips_csharp">
 <a href="#tunnelips_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
@@ -1413,13 +1313,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customips_go">
 <a href="#customips_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
@@ -1428,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultips_go">
 <a href="#defaultips_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
@@ -1438,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_go">
 <a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
@@ -1448,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnelips_go">
 <a href="#tunnelips_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
@@ -1458,13 +1353,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customips_nodejs">
 <a href="#customips_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ips</a>
@@ -1473,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultips_nodejs">
 <a href="#defaultips_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ips</a>
@@ -1483,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_nodejs">
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
@@ -1493,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnelips_nodejs">
 <a href="#tunnelips_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ips</a>
@@ -1503,13 +1393,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="custom_ips_python">
 <a href="#custom_ips_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ips</a>
@@ -1518,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ips_python">
 <a href="#default_ips_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ips</a>
@@ -1528,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_configuration_id_python">
 <a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
@@ -1538,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnel_ips_python">
 <a href="#tunnel_ips_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ips</a>
@@ -1548,15 +1433,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customips_csharp">
 <a href="#customips_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
@@ -1565,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultips_csharp">
 <a href="#defaultips_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
@@ -1575,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_csharp">
 <a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
@@ -1585,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnelips_csharp">
 <a href="#tunnelips_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
@@ -1595,13 +1475,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customips_go">
 <a href="#customips_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Ips</a>
@@ -1610,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultips_go">
 <a href="#defaultips_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ips</a>
@@ -1620,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_go">
 <a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
@@ -1630,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnelips_go">
 <a href="#tunnelips_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ips</a>
@@ -1640,13 +1515,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customips_nodejs">
 <a href="#customips_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ips</a>
@@ -1655,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultips_nodejs">
 <a href="#defaultips_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ips</a>
@@ -1665,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_nodejs">
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
@@ -1675,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnelips_nodejs">
 <a href="#tunnelips_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ips</a>
@@ -1685,13 +1555,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="custom_ips_python">
 <a href="#custom_ips_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ips</a>
@@ -1700,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of custom BGP peering addresses to assign to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ips_python">
 <a href="#default_ips_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ips</a>
@@ -1710,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_configuration_id_python">
 <a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
@@ -1720,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pre-defined id of VPN Gateway Ip Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tunnel_ips_python">
 <a href="#tunnel_ips_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ips</a>
@@ -1730,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to the pre-defined VPN Gateway IP configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

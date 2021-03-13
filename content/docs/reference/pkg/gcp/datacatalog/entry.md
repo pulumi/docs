@@ -652,8 +652,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entrygroup_csharp">
 <a href="#entrygroup_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Group</a>
@@ -662,8 +661,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entryid_csharp">
 <a href="#entryid_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Id</a>
@@ -672,8 +670,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -682,8 +679,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -693,8 +689,7 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsfilesetspec_csharp">
 <a href="#gcsfilesetspec_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Fileset<wbr>Spec</a>
@@ -704,8 +699,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedresource_csharp">
 <a href="#linkedresource_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Resource</a>
@@ -719,8 +713,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -732,8 +725,7 @@ this field is optional and defaults to an empty string.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -744,8 +736,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userspecifiedsystem_csharp">
 <a href="#userspecifiedsystem_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>System</a>
@@ -756,8 +747,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userspecifiedtype_csharp">
 <a href="#userspecifiedtype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>Type</a>
@@ -770,13 +760,11 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entrygroup_go">
 <a href="#entrygroup_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Group</a>
@@ -785,8 +773,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entryid_go">
 <a href="#entryid_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Id</a>
@@ -795,8 +782,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -805,8 +791,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -816,8 +801,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsfilesetspec_go">
 <a href="#gcsfilesetspec_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Fileset<wbr>Spec</a>
@@ -827,8 +811,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedresource_go">
 <a href="#linkedresource_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Resource</a>
@@ -842,8 +825,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -855,8 +837,7 @@ this field is optional and defaults to an empty string.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -867,8 +848,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userspecifiedsystem_go">
 <a href="#userspecifiedsystem_go" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>System</a>
@@ -879,8 +859,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userspecifiedtype_go">
 <a href="#userspecifiedtype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>Type</a>
@@ -893,13 +872,11 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entrygroup_nodejs">
 <a href="#entrygroup_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Group</a>
@@ -908,8 +885,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entryid_nodejs">
 <a href="#entryid_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Id</a>
@@ -918,8 +894,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -928,8 +903,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -939,8 +913,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsfilesetspec_nodejs">
 <a href="#gcsfilesetspec_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Fileset<wbr>Spec</a>
@@ -950,8 +923,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedresource_nodejs">
 <a href="#linkedresource_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Resource</a>
@@ -965,8 +937,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -978,8 +949,7 @@ this field is optional and defaults to an empty string.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -990,8 +960,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userspecifiedsystem_nodejs">
 <a href="#userspecifiedsystem_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>System</a>
@@ -1002,8 +971,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userspecifiedtype_nodejs">
 <a href="#userspecifiedtype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>Type</a>
@@ -1016,13 +984,11 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entry_group_python">
 <a href="#entry_group_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>group</a>
@@ -1031,8 +997,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entry_id_python">
 <a href="#entry_id_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>id</a>
@@ -1041,8 +1006,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1051,8 +1015,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1062,8 +1025,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_fileset_spec_python">
 <a href="#gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
@@ -1073,8 +1035,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_resource_python">
 <a href="#linked_resource_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>resource</a>
@@ -1088,8 +1049,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1101,8 +1061,7 @@ this field is optional and defaults to an empty string.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1113,8 +1072,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_specified_system_python">
 <a href="#user_specified_system_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>system</a>
@@ -1125,8 +1083,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_specified_type_python">
 <a href="#user_specified_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>type</a>
@@ -1139,8 +1096,7 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1151,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bigquerydateshardedspecs_csharp">
 <a href="#bigquerydateshardedspecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
@@ -1162,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bigquerytablespecs_csharp">
 <a href="#bigquerytablespecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
@@ -1172,8 +1126,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1181,8 +1134,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integratedsystem_csharp">
 <a href="#integratedsystem_csharp" style="color: inherit; text-decoration: inherit;">Integrated<wbr>System</a>
@@ -1191,8 +1143,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1203,13 +1154,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bigquerydateshardedspecs_go">
 <a href="#bigquerydateshardedspecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
@@ -1219,8 +1168,7 @@ child resources may not actually be stored in the location in this name.
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bigquerytablespecs_go">
 <a href="#bigquerytablespecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
@@ -1229,8 +1177,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1238,8 +1185,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integratedsystem_go">
 <a href="#integratedsystem_go" style="color: inherit; text-decoration: inherit;">Integrated<wbr>System</a>
@@ -1248,8 +1194,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1260,13 +1205,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bigquerydateshardedspecs_nodejs">
 <a href="#bigquerydateshardedspecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
@@ -1276,8 +1219,7 @@ child resources may not actually be stored in the location in this name.
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bigquerytablespecs_nodejs">
 <a href="#bigquerytablespecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Specs</a>
@@ -1286,8 +1228,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1295,8 +1236,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integratedsystem_nodejs">
 <a href="#integratedsystem_nodejs" style="color: inherit; text-decoration: inherit;">integrated<wbr>System</a>
@@ -1305,8 +1245,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1317,13 +1256,11 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bigquery_date_sharded_specs_python">
 <a href="#bigquery_date_sharded_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>specs</a>
@@ -1333,8 +1270,7 @@ child resources may not actually be stored in the location in this name.
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bigquery_table_specs_python">
 <a href="#bigquery_table_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>specs</a>
@@ -1343,8 +1279,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1352,8 +1287,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integrated_system_python">
 <a href="#integrated_system_python" style="color: inherit; text-decoration: inherit;">integrated_<wbr>system</a>
@@ -1362,8 +1296,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1374,8 +1307,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1502,8 +1434,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigquerydateshardedspecs_csharp">
 <a href="#state_bigquerydateshardedspecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
@@ -1513,8 +1444,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigquerytablespecs_csharp">
 <a href="#state_bigquerytablespecs_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
@@ -1523,8 +1453,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1533,8 +1462,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1544,8 +1472,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrygroup_csharp">
 <a href="#state_entrygroup_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Group</a>
@@ -1554,8 +1481,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entryid_csharp">
 <a href="#state_entryid_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Id</a>
@@ -1564,8 +1490,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsfilesetspec_csharp">
 <a href="#state_gcsfilesetspec_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Fileset<wbr>Spec</a>
@@ -1575,8 +1500,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integratedsystem_csharp">
 <a href="#state_integratedsystem_csharp" style="color: inherit; text-decoration: inherit;">Integrated<wbr>System</a>
@@ -1585,8 +1509,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkedresource_csharp">
 <a href="#state_linkedresource_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Resource</a>
@@ -1600,8 +1523,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1612,8 +1534,7 @@ this field is optional and defaults to an empty string.
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_csharp">
 <a href="#state_schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -1625,8 +1546,7 @@ child resources may not actually be stored in the location in this name.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1637,8 +1557,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userspecifiedsystem_csharp">
 <a href="#state_userspecifiedsystem_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>System</a>
@@ -1649,8 +1568,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userspecifiedtype_csharp">
 <a href="#state_userspecifiedtype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>Type</a>
@@ -1663,13 +1581,11 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigquerydateshardedspecs_go">
 <a href="#state_bigquerydateshardedspecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
@@ -1679,8 +1595,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigquerytablespecs_go">
 <a href="#state_bigquerytablespecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
@@ -1689,8 +1604,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1699,8 +1613,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1710,8 +1623,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrygroup_go">
 <a href="#state_entrygroup_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Group</a>
@@ -1720,8 +1632,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entryid_go">
 <a href="#state_entryid_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Id</a>
@@ -1730,8 +1641,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsfilesetspec_go">
 <a href="#state_gcsfilesetspec_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Fileset<wbr>Spec</a>
@@ -1741,8 +1651,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integratedsystem_go">
 <a href="#state_integratedsystem_go" style="color: inherit; text-decoration: inherit;">Integrated<wbr>System</a>
@@ -1751,8 +1660,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkedresource_go">
 <a href="#state_linkedresource_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Resource</a>
@@ -1766,8 +1674,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1778,8 +1685,7 @@ this field is optional and defaults to an empty string.
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_go">
 <a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -1791,8 +1697,7 @@ child resources may not actually be stored in the location in this name.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1803,8 +1708,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userspecifiedsystem_go">
 <a href="#state_userspecifiedsystem_go" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>System</a>
@@ -1815,8 +1719,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userspecifiedtype_go">
 <a href="#state_userspecifiedtype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Specified<wbr>Type</a>
@@ -1829,13 +1732,11 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigquerydateshardedspecs_nodejs">
 <a href="#state_bigquerydateshardedspecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
@@ -1845,8 +1746,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigquerytablespecs_nodejs">
 <a href="#state_bigquerytablespecs_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Table<wbr>Specs</a>
@@ -1855,8 +1755,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1865,8 +1764,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1876,8 +1774,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrygroup_nodejs">
 <a href="#state_entrygroup_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Group</a>
@@ -1886,8 +1783,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entryid_nodejs">
 <a href="#state_entryid_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Id</a>
@@ -1896,8 +1792,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsfilesetspec_nodejs">
 <a href="#state_gcsfilesetspec_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Fileset<wbr>Spec</a>
@@ -1907,8 +1802,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integratedsystem_nodejs">
 <a href="#state_integratedsystem_nodejs" style="color: inherit; text-decoration: inherit;">integrated<wbr>System</a>
@@ -1917,8 +1811,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkedresource_nodejs">
 <a href="#state_linkedresource_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Resource</a>
@@ -1932,8 +1825,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1944,8 +1836,7 @@ this field is optional and defaults to an empty string.
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_nodejs">
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1957,8 +1848,7 @@ child resources may not actually be stored in the location in this name.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1969,8 +1859,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userspecifiedsystem_nodejs">
 <a href="#state_userspecifiedsystem_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>System</a>
@@ -1981,8 +1870,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userspecifiedtype_nodejs">
 <a href="#state_userspecifiedtype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Specified<wbr>Type</a>
@@ -1995,13 +1883,11 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigquery_date_sharded_specs_python">
 <a href="#state_bigquery_date_sharded_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>specs</a>
@@ -2011,8 +1897,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigquery_table_specs_python">
 <a href="#state_bigquery_table_specs_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>specs</a>
@@ -2021,8 +1906,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type"><a href="#entrybigquerytablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2031,8 +1915,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entry description, which can consist of several sentences or paragraphs that describe entry contents.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2042,8 +1925,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
     </dt>
     <dd>{{% md %}}Display information such as title and description. A short name to identify the entry,
 for example, "Analytics Data - Jan 2011".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entry_group_python">
 <a href="#state_entry_group_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>group</a>
@@ -2052,8 +1934,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the entry group this entry is in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entry_id_python">
 <a href="#state_entry_id_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>id</a>
@@ -2062,8 +1943,7 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the entry to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcs_fileset_spec_python">
 <a href="#state_gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
@@ -2073,8 +1953,7 @@ for example, "Analytics Data - Jan 2011".
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrated_system_python">
 <a href="#state_integrated_system_python" style="color: inherit; text-decoration: inherit;">integrated_<wbr>system</a>
@@ -2083,8 +1962,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linked_resource_python">
 <a href="#state_linked_resource_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>resource</a>
@@ -2098,8 +1976,7 @@ For example, the linkedResource for a table resource from BigQuery is:
 //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId
 Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType,
 this field is optional and defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2110,8 +1987,7 @@ this field is optional and defaults to an empty string.
     <dd>{{% md %}}The Data Catalog resource name of the entry in URL format. Example:
 projects/{project_id}/locations/{location}/entryGroups/{entryGroupId}/entries/{entryId}. Note that this Entry and its
 child resources may not actually be stored in the location in this name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_python">
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -2123,8 +1999,7 @@ child resources may not actually be stored in the location in this name.
 attached to it. See
 https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema
 for what fields this schema can contain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2135,8 +2010,7 @@ for what fields this schema can contain.
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
 Possible values are `FILESET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_specified_system_python">
 <a href="#state_user_specified_system_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>system</a>
@@ -2147,8 +2021,7 @@ Possible values are `FILESET`.
     <dd>{{% md %}}This field indicates the entry's source system that Data Catalog does not integrate with.
 userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_specified_type_python">
 <a href="#state_user_specified_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>specified_<wbr>type</a>
@@ -2161,8 +2034,7 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example "my_special_type".
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2177,8 +2049,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <h4 id="entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -2186,8 +2057,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_csharp">
 <a href="#shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -2195,8 +2065,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tableprefix_csharp">
 <a href="#tableprefix_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Prefix</a>
@@ -2204,13 +2073,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -2218,8 +2085,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_go">
 <a href="#shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -2227,8 +2093,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tableprefix_go">
 <a href="#tableprefix_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Prefix</a>
@@ -2236,13 +2101,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -2250,8 +2113,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_nodejs">
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
@@ -2259,8 +2121,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tableprefix_nodejs">
 <a href="#tableprefix_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
@@ -2268,13 +2129,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -2282,8 +2141,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shard_count_python">
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
@@ -2291,8 +2149,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_prefix_python">
 <a href="#table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
@@ -2300,15 +2157,13 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tablesourcetype_csharp">
 <a href="#tablesourcetype_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Source<wbr>Type</a>
@@ -2316,8 +2171,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespecs_csharp">
 <a href="#tablespecs_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Specs</a>
@@ -2325,8 +2179,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespectablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewspecs_csharp">
 <a href="#viewspecs_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Specs</a>
@@ -2334,13 +2187,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespecviewspec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tablesourcetype_go">
 <a href="#tablesourcetype_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Source<wbr>Type</a>
@@ -2348,8 +2199,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespecs_go">
 <a href="#tablespecs_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Specs</a>
@@ -2357,8 +2207,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespectablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewspecs_go">
 <a href="#viewspecs_go" style="color: inherit; text-decoration: inherit;">View<wbr>Specs</a>
@@ -2366,13 +2215,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespecviewspec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tablesourcetype_nodejs">
 <a href="#tablesourcetype_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Source<wbr>Type</a>
@@ -2380,8 +2227,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespecs_nodejs">
 <a href="#tablespecs_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Specs</a>
@@ -2389,8 +2235,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewspecs_nodejs">
 <a href="#viewspecs_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Specs</a>
@@ -2398,13 +2243,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="table_source_type_python">
 <a href="#table_source_type_python" style="color: inherit; text-decoration: inherit;">table_<wbr>source_<wbr>type</a>
@@ -2412,8 +2255,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_specs_python">
 <a href="#table_specs_python" style="color: inherit; text-decoration: inherit;">table_<wbr>specs</a>
@@ -2421,8 +2263,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespectablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="view_specs_python">
 <a href="#view_specs_python" style="color: inherit; text-decoration: inherit;">view_<wbr>specs</a>
@@ -2430,15 +2271,13 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrybigquerytablespecviewspec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupedentry_csharp">
 <a href="#groupedentry_csharp" style="color: inherit; text-decoration: inherit;">Grouped<wbr>Entry</a>
@@ -2446,13 +2285,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupedentry_go">
 <a href="#groupedentry_go" style="color: inherit; text-decoration: inherit;">Grouped<wbr>Entry</a>
@@ -2460,13 +2297,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupedentry_nodejs">
 <a href="#groupedentry_nodejs" style="color: inherit; text-decoration: inherit;">grouped<wbr>Entry</a>
@@ -2474,13 +2309,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grouped_entry_python">
 <a href="#grouped_entry_python" style="color: inherit; text-decoration: inherit;">grouped_<wbr>entry</a>
@@ -2488,15 +2321,13 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="viewquery_csharp">
 <a href="#viewquery_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Query</a>
@@ -2504,13 +2335,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="viewquery_go">
 <a href="#viewquery_go" style="color: inherit; text-decoration: inherit;">View<wbr>Query</a>
@@ -2518,13 +2347,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="viewquery_nodejs">
 <a href="#viewquery_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Query</a>
@@ -2532,13 +2359,11 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="view_query_python">
 <a href="#view_query_python" style="color: inherit; text-decoration: inherit;">view_<wbr>query</a>
@@ -2546,15 +2371,13 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filepatterns_csharp">
 <a href="#filepatterns_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Patterns</a>
@@ -2573,8 +2396,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
 * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b
 * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplegcsfilespecs_csharp">
 <a href="#samplegcsfilespecs_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Gcs<wbr>File<wbr>Specs</a>
@@ -2585,13 +2407,11 @@ for more information. Note that bucket wildcards are currently not supported. Ex
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filepatterns_go">
 <a href="#filepatterns_go" style="color: inherit; text-decoration: inherit;">File<wbr>Patterns</a>
@@ -2610,8 +2430,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
 * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b
 * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplegcsfilespecs_go">
 <a href="#samplegcsfilespecs_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Gcs<wbr>File<wbr>Specs</a>
@@ -2622,13 +2441,11 @@ for more information. Note that bucket wildcards are currently not supported. Ex
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filepatterns_nodejs">
 <a href="#filepatterns_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Patterns</a>
@@ -2647,8 +2464,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
 * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b
 * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplegcsfilespecs_nodejs">
 <a href="#samplegcsfilespecs_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Gcs<wbr>File<wbr>Specs</a>
@@ -2659,13 +2475,11 @@ for more information. Note that bucket wildcards are currently not supported. Ex
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_patterns_python">
 <a href="#file_patterns_python" style="color: inherit; text-decoration: inherit;">file_<wbr>patterns</a>
@@ -2684,8 +2498,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name
 * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b
 * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_gcs_file_specs_python">
 <a href="#sample_gcs_file_specs_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>gcs_<wbr>file_<wbr>specs</a>
@@ -2696,15 +2509,13 @@ for more information. Note that bucket wildcards are currently not supported. Ex
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entrygcsfilesetspecsamplegcsfilespec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepath_csharp">
 <a href="#filepath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
@@ -2714,8 +2525,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 The full file path
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_csharp">
 <a href="#sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -2725,13 +2535,11 @@ The full file path
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepath_go">
 <a href="#filepath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
@@ -2741,8 +2549,7 @@ The size of the file, in bytes.
     </dt>
     <dd>{{% md %}}-
 The full file path
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_go">
 <a href="#sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -2752,13 +2559,11 @@ The full file path
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepath_nodejs">
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
@@ -2768,8 +2573,7 @@ The size of the file, in bytes.
     </dt>
     <dd>{{% md %}}-
 The full file path
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizebytes_nodejs">
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
@@ -2779,13 +2583,11 @@ The full file path
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_path_python">
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
@@ -2795,8 +2597,7 @@ The size of the file, in bytes.
     </dt>
     <dd>{{% md %}}-
 The full file path
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_bytes_python">
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
@@ -2806,8 +2607,7 @@ The full file path
     </dt>
     <dd>{{% md %}}-
 The size of the file, in bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

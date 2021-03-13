@@ -385,8 +385,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchrolearn_csharp">
 <a href="#cloudwatchrolearn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Role<wbr>Arn</a>
@@ -395,13 +394,11 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchrolearn_go">
 <a href="#cloudwatchrolearn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Role<wbr>Arn</a>
@@ -410,13 +407,11 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchrolearn_nodejs">
 <a href="#cloudwatchrolearn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Role<wbr>Arn</a>
@@ -425,13 +420,11 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_role_arn_python">
 <a href="#cloudwatch_role_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>role_<wbr>arn</a>
@@ -440,8 +433,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -452,8 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -461,8 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="throttlesettings_csharp">
 <a href="#throttlesettings_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -471,13 +461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -485,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="throttlesettings_go">
 <a href="#throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -495,13 +482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -509,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="throttlesettings_nodejs">
 <a href="#throttlesettings_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Settings</a>
@@ -519,13 +503,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -533,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="throttle_settings_python">
 <a href="#throttle_settings_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>settings</a>
@@ -543,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -671,8 +651,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchrolearn_csharp">
 <a href="#state_cloudwatchrolearn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Role<wbr>Arn</a>
@@ -681,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_csharp">
 <a href="#state_throttlesettings_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -691,13 +669,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchrolearn_go">
 <a href="#state_cloudwatchrolearn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Role<wbr>Arn</a>
@@ -706,8 +682,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_go">
 <a href="#state_throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -716,13 +691,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchrolearn_nodejs">
 <a href="#state_cloudwatchrolearn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Role<wbr>Arn</a>
@@ -731,8 +704,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_nodejs">
 <a href="#state_throttlesettings_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Settings</a>
@@ -741,13 +713,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatch_role_arn_python">
 <a href="#state_cloudwatch_role_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>role_<wbr>arn</a>
@@ -756,8 +726,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttle_settings_python">
 <a href="#state_throttle_settings_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>settings</a>
@@ -766,8 +735,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -782,8 +750,7 @@ The following state arguments are supported:
 <h4 id="accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burstlimit_csharp">
 <a href="#burstlimit_csharp" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
@@ -792,8 +759,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_csharp">
 <a href="#ratelimit_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
@@ -802,13 +768,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burstlimit_go">
 <a href="#burstlimit_go" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
@@ -817,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_go">
 <a href="#ratelimit_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
@@ -827,13 +790,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burstlimit_nodejs">
 <a href="#burstlimit_nodejs" style="color: inherit; text-decoration: inherit;">burst<wbr>Limit</a>
@@ -842,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_nodejs">
 <a href="#ratelimit_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit</a>
@@ -852,13 +812,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burst_limit_python">
 <a href="#burst_limit_python" style="color: inherit; text-decoration: inherit;">burst_<wbr>limit</a>
@@ -867,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rate_limit_python">
 <a href="#rate_limit_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit</a>
@@ -877,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

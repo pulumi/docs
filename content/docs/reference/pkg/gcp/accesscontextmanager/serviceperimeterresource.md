@@ -342,8 +342,7 @@ The ServicePerimeterResource resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="perimetername_csharp">
 <a href="#perimetername_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
@@ -352,8 +351,7 @@ The ServicePerimeterResource resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -364,13 +362,11 @@ The ServicePerimeterResource resource accepts the following [input]({{< relref "
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="perimetername_go">
 <a href="#perimetername_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
@@ -379,8 +375,7 @@ Format: projects/{project_number}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -391,13 +386,11 @@ Format: projects/{project_number}
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="perimetername_nodejs">
 <a href="#perimetername_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Name</a>
@@ -406,8 +399,7 @@ Format: projects/{project_number}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -418,13 +410,11 @@ Format: projects/{project_number}
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="perimeter_name_python">
 <a href="#perimeter_name_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>name</a>
@@ -433,8 +423,7 @@ Format: projects/{project_number}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -445,8 +434,7 @@ Format: projects/{project_number}
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -457,8 +445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -466,13 +453,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -480,13 +465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -494,13 +477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -636,8 +616,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_perimetername_csharp">
 <a href="#state_perimetername_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
@@ -646,8 +625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_csharp">
 <a href="#state_resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -658,13 +636,11 @@ The following state arguments are supported:
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_perimetername_go">
 <a href="#state_perimetername_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Name</a>
@@ -673,8 +649,7 @@ Format: projects/{project_number}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_go">
 <a href="#state_resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -685,13 +660,11 @@ Format: projects/{project_number}
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_perimetername_nodejs">
 <a href="#state_perimetername_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Name</a>
@@ -700,8 +673,7 @@ Format: projects/{project_number}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_nodejs">
 <a href="#state_resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -712,13 +684,11 @@ Format: projects/{project_number}
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_perimeter_name_python">
 <a href="#state_perimeter_name_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>name</a>
@@ -727,8 +697,7 @@ Format: projects/{project_number}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Perimeter to add this resource to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_python">
 <a href="#state_resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -739,8 +708,7 @@ Format: projects/{project_number}
     <dd>{{% md %}}A GCP resource that is inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

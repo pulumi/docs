@@ -164,8 +164,7 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -173,8 +172,7 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscaler">List&lt;Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -182,13 +180,11 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>List<wbr>Meta<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -196,8 +192,7 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscaler">[]Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -205,13 +200,11 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">List<wbr>Meta</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -219,8 +212,7 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscaler">Horizontal<wbr>Pod<wbr>Autoscaler[]</a></span>
     </dt>
-    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -228,13 +220,11 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">meta.v1.<wbr>List<wbr>Meta</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -242,8 +232,7 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscaler">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}items is the list of horizontal pod autoscaler objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -251,8 +240,7 @@ The HorizontalPodAutoscalerList resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metadata is the standard list metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -263,8 +251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -272,13 +259,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -286,13 +271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -300,13 +283,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -314,8 +295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -331,8 +311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -340,8 +319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -349,8 +327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaverageutilization_csharp">
 <a href="#targetaverageutilization_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Utilization</a>
@@ -358,8 +335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_csharp">
 <a href="#targetaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -367,13 +343,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -381,8 +355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -390,8 +363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaverageutilization_go">
 <a href="#targetaverageutilization_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Utilization</a>
@@ -399,8 +371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_go">
 <a href="#targetaveragevalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -408,13 +379,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -422,8 +391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -431,8 +399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaverageutilization_nodejs">
 <a href="#targetaverageutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Utilization</a>
@@ -440,8 +407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_nodejs">
 <a href="#targetaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Value</a>
@@ -449,13 +415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -463,8 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -472,8 +435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_average_utilization_python">
 <a href="#target_average_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>utilization</a>
@@ -481,8 +443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_average_value_python">
 <a href="#target_average_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>value</a>
@@ -490,15 +451,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -506,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_csharp">
 <a href="#currentaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -515,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -524,8 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaverageutilization_csharp">
 <a href="#currentaverageutilization_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Utilization</a>
@@ -533,13 +489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -547,8 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_go">
 <a href="#currentaveragevalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -556,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -565,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaverageutilization_go">
 <a href="#currentaverageutilization_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Utilization</a>
@@ -574,13 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -588,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_nodejs">
 <a href="#currentaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Value</a>
@@ -597,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -606,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaverageutilization_nodejs">
 <a href="#currentaverageutilization_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Utilization</a>
@@ -615,13 +561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -629,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}container is the name of the container in the pods of the scaling target{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="current_average_value_python">
 <a href="#current_average_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>value</a>
@@ -638,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -647,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="current_average_utilization_python">
 <a href="#current_average_utilization_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>utilization</a>
@@ -656,15 +597,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -672,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -681,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -690,13 +627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API version of the referent{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}API version of the referent{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -704,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -713,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -722,13 +655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API version of the referent{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}API version of the referent{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -736,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -745,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -754,13 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API version of the referent{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}API version of the referent{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -768,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -777,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -786,15 +711,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API version of the referent{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}API version of the referent{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="externalmetricsource">External<wbr>Metric<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -802,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricselector_csharp">
 <a href="#metricselector_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Selector</a>
@@ -811,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_csharp">
 <a href="#targetaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -820,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvalue_csharp">
 <a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -829,13 +749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -843,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricselector_go">
 <a href="#metricselector_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Selector</a>
@@ -852,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_go">
 <a href="#targetaveragevalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -861,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvalue_go">
 <a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -870,13 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -884,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricselector_nodejs">
 <a href="#metricselector_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Selector</a>
@@ -893,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_nodejs">
 <a href="#targetaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Value</a>
@@ -902,8 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetvalue_nodejs">
 <a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
@@ -911,13 +821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -925,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_selector_python">
 <a href="#metric_selector_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>selector</a>
@@ -934,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_average_value_python">
 <a href="#target_average_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>value</a>
@@ -943,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_value_python">
 <a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
@@ -952,15 +857,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="externalmetricstatus">External<wbr>Metric<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvalue_csharp">
 <a href="#currentvalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Value</a>
@@ -968,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -977,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaveragevalue_csharp">
 <a href="#currentaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -986,8 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricselector_csharp">
 <a href="#metricselector_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Selector</a>
@@ -995,13 +895,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvalue_go">
 <a href="#currentvalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Value</a>
@@ -1009,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -1018,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaveragevalue_go">
 <a href="#currentaveragevalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -1027,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricselector_go">
 <a href="#metricselector_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Selector</a>
@@ -1036,13 +931,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvalue_nodejs">
 <a href="#currentvalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Value</a>
@@ -1050,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -1059,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaveragevalue_nodejs">
 <a href="#currentaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Value</a>
@@ -1068,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricselector_nodejs">
 <a href="#metricselector_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Selector</a>
@@ -1077,13 +967,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="current_value_python">
 <a href="#current_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>value</a>
@@ -1091,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -1100,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of a metric used for autoscaling in metric system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="current_average_value_python">
 <a href="#current_average_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>value</a>
@@ -1109,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentAverageValue is the current value of metric averaged over autoscaled pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_selector_python">
 <a href="#metric_selector_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>selector</a>
@@ -1118,15 +1003,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}metricSelector is used to identify a specific time series within a given metric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="horizontalpodautoscaler">Horizontal<wbr>Pod<wbr>Autoscaler</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1134,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -1143,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1152,13 +1033,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1166,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -1175,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1184,13 +1061,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1198,8 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -1207,8 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1216,13 +1089,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1230,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -1239,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1248,15 +1117,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}status is the current information about the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1264,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1273,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_csharp">
 <a href="#lasttransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
@@ -1282,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1291,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1300,13 +1163,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1314,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1323,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_go">
 <a href="#lasttransitiontime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
@@ -1332,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1341,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1350,13 +1207,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1364,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1373,8 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_nodejs">
 <a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
@@ -1382,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1391,8 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1400,13 +1251,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1414,8 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}status is the status of the condition (True, False, Unknown){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1423,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type describes the current condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_transition_time_python">
 <a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
@@ -1432,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastTransitionTime is the last time the condition transitioned from one status to another{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1441,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}message is a human-readable explanation containing details about the transition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1450,15 +1295,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}reason is the reason for the condition's last transition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxreplicas_csharp">
 <a href="#maxreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
@@ -1466,8 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaletargetref_csharp">
 <a href="#scaletargetref_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Ref</a>
@@ -1475,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_csharp">
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
@@ -1484,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricspec">List&lt;Metric<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minreplicas_csharp">
 <a href="#minreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Replicas</a>
@@ -1493,13 +1333,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxreplicas_go">
 <a href="#maxreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
@@ -1507,8 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaletargetref_go">
 <a href="#scaletargetref_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Ref</a>
@@ -1516,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_go">
 <a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
@@ -1525,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricspec">[]Metric<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minreplicas_go">
 <a href="#minreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Replicas</a>
@@ -1534,13 +1369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxreplicas_nodejs">
 <a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
@@ -1548,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaletargetref_nodejs">
 <a href="#scaletargetref_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Ref</a>
@@ -1557,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_nodejs">
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
@@ -1566,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricspec">Metric<wbr>Spec[]</a></span>
     </dt>
-    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minreplicas_nodejs">
 <a href="#minreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Replicas</a>
@@ -1575,13 +1405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_replicas_python">
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
@@ -1589,8 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scale_target_ref_python">
 <a href="#scale_target_ref_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>target_<wbr>ref</a>
@@ -1598,8 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_python">
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
@@ -1607,8 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricspec">Metric<wbr>Spec<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_replicas_python">
 <a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
@@ -1616,15 +1441,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1632,8 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">List&lt;Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentreplicas_csharp">
 <a href="#currentreplicas_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Replicas</a>
@@ -1641,8 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="desiredreplicas_csharp">
 <a href="#desiredreplicas_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Replicas</a>
@@ -1650,8 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentmetrics_csharp">
 <a href="#currentmetrics_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Metrics</a>
@@ -1659,8 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricstatus">List&lt;Metric<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastscaletime_csharp">
 <a href="#lastscaletime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Scale<wbr>Time</a>
@@ -1668,8 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_csharp">
 <a href="#observedgeneration_csharp" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
@@ -1677,13 +1495,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1691,8 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">[]Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentreplicas_go">
 <a href="#currentreplicas_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Replicas</a>
@@ -1700,8 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="desiredreplicas_go">
 <a href="#desiredreplicas_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Replicas</a>
@@ -1709,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentmetrics_go">
 <a href="#currentmetrics_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Metrics</a>
@@ -1718,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricstatus">[]Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastscaletime_go">
 <a href="#lastscaletime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Scale<wbr>Time</a>
@@ -1727,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_go">
 <a href="#observedgeneration_go" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
@@ -1736,13 +1547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1750,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentreplicas_nodejs">
 <a href="#currentreplicas_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Replicas</a>
@@ -1759,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="desiredreplicas_nodejs">
 <a href="#desiredreplicas_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Replicas</a>
@@ -1768,8 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentmetrics_nodejs">
 <a href="#currentmetrics_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Metrics</a>
@@ -1777,8 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricstatus">Metric<wbr>Status[]</a></span>
     </dt>
-    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastscaletime_nodejs">
 <a href="#lastscaletime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Scale<wbr>Time</a>
@@ -1786,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_nodejs">
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
@@ -1795,13 +1599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1809,8 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="current_replicas_python">
 <a href="#current_replicas_python" style="color: inherit; text-decoration: inherit;">current_<wbr>replicas</a>
@@ -1818,8 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="desired_replicas_python">
 <a href="#desired_replicas_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>replicas</a>
@@ -1827,8 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="current_metrics_python">
 <a href="#current_metrics_python" style="color: inherit; text-decoration: inherit;">current_<wbr>metrics</a>
@@ -1836,8 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricstatus">Metric<wbr>Status<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_scale_time_python">
 <a href="#last_scale_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>scale_<wbr>time</a>
@@ -1845,8 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observed_generation_python">
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
@@ -1854,15 +1651,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}observedGeneration is the most recent generation observed by this autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelselector">Label<wbr>Selector</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchexpressions_csharp">
 <a href="#matchexpressions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Expressions</a>
@@ -1870,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchlabels_csharp">
 <a href="#matchlabels_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Labels</a>
@@ -1879,13 +1673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchexpressions_go">
 <a href="#matchexpressions_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Expressions</a>
@@ -1893,8 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</a></span>
     </dt>
-    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchlabels_go">
 <a href="#matchlabels_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Labels</a>
@@ -1902,13 +1693,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchexpressions_nodejs">
 <a href="#matchexpressions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Expressions</a>
@@ -1916,8 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselectorrequirement">meta.v1.<wbr>Label<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
-    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchlabels_nodejs">
 <a href="#matchlabels_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Labels</a>
@@ -1925,13 +1713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="match_expressions_python">
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
@@ -1939,8 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_labels_python">
 <a href="#match_labels_python" style="color: inherit; text-decoration: inherit;">match_<wbr>labels</a>
@@ -1948,15 +1733,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1964,8 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1973,8 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1982,13 +1763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1996,8 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2005,8 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2014,13 +1791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2028,8 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2037,8 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2046,13 +1819,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2060,8 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key is the label key that the selector applies to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2069,8 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2078,15 +1847,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="listmeta">List<wbr>Meta</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continue_csharp">
 <a href="#continue_csharp" style="color: inherit; text-decoration: inherit;">Continue</a>
@@ -2094,8 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remainingitemcount_csharp">
 <a href="#remainingitemcount_csharp" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Item<wbr>Count</a>
@@ -2103,8 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -2112,8 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2123,13 +1887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-</dl>
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continue_go">
 <a href="#continue_go" style="color: inherit; text-decoration: inherit;">Continue</a>
@@ -2137,8 +1899,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remainingitemcount_go">
 <a href="#remainingitemcount_go" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Item<wbr>Count</a>
@@ -2146,8 +1907,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -2155,8 +1915,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2166,13 +1925,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-</dl>
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continue_nodejs">
 <a href="#continue_nodejs" style="color: inherit; text-decoration: inherit;">continue</a>
@@ -2180,8 +1937,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remainingitemcount_nodejs">
 <a href="#remainingitemcount_nodejs" style="color: inherit; text-decoration: inherit;">remaining<wbr>Item<wbr>Count</a>
@@ -2189,8 +1945,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
@@ -2198,8 +1953,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2209,13 +1963,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-</dl>
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continue__python">
 <a href="#continue__python" style="color: inherit; text-decoration: inherit;">continue_</a>
@@ -2223,8 +1975,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remaining_item_count_python">
 <a href="#remaining_item_count_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>item_<wbr>count</a>
@@ -2232,8 +1983,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_version_python">
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
@@ -2241,8 +1991,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2252,15 +2001,13 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-</dl>
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -2268,8 +2015,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldstype_csharp">
 <a href="#fieldstype_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>Type</a>
@@ -2277,8 +2023,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldsv1_csharp">
 <a href="#fieldsv1_csharp" style="color: inherit; text-decoration: inherit;">Fields<wbr>V1</a>
@@ -2286,8 +2031,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">System.<wbr>Text.<wbr>Json.<wbr>Json<wbr>Element</span>
     </dt>
-    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manager_csharp">
 <a href="#manager_csharp" style="color: inherit; text-decoration: inherit;">Manager</a>
@@ -2295,8 +2039,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -2304,8 +2047,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -2313,13 +2055,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -2327,8 +2067,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldstype_go">
 <a href="#fieldstype_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>Type</a>
@@ -2336,8 +2075,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldsv1_go">
 <a href="#fieldsv1_go" style="color: inherit; text-decoration: inherit;">Fields<wbr>V1</a>
@@ -2345,8 +2083,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manager_go">
 <a href="#manager_go" style="color: inherit; text-decoration: inherit;">Manager</a>
@@ -2354,8 +2091,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -2363,8 +2099,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -2372,13 +2107,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -2386,8 +2119,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldstype_nodejs">
 <a href="#fieldstype_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Type</a>
@@ -2395,8 +2127,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldsv1_nodejs">
 <a href="#fieldsv1_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>V1</a>
@@ -2404,8 +2135,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manager_nodejs">
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
@@ -2413,8 +2143,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -2422,8 +2151,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -2431,13 +2159,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -2445,8 +2171,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fields_type_python">
 <a href="#fields_type_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>type</a>
@@ -2454,8 +2179,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fields_v1_python">
 <a href="#fields_v1_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>v1</a>
@@ -2463,8 +2187,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manager_python">
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
@@ -2472,8 +2195,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -2481,8 +2203,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -2490,15 +2211,13 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricspec">Metric<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2506,8 +2225,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerresource_csharp">
 <a href="#containerresource_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
@@ -2515,8 +2233,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -2524,8 +2241,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -2533,8 +2249,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_csharp">
 <a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
@@ -2542,8 +2257,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2551,13 +2265,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2565,8 +2277,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerresource_go">
 <a href="#containerresource_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
@@ -2574,8 +2285,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -2583,8 +2293,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -2592,8 +2301,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_go">
 <a href="#pods_go" style="color: inherit; text-decoration: inherit;">Pods</a>
@@ -2601,8 +2309,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2610,13 +2317,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2624,8 +2329,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerresource_nodejs">
 <a href="#containerresource_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource</a>
@@ -2633,8 +2337,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -2642,8 +2345,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -2651,8 +2353,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_nodejs">
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
@@ -2660,8 +2361,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2669,13 +2369,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2683,8 +2381,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_resource_python">
 <a href="#container_resource_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource</a>
@@ -2692,8 +2389,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -2701,8 +2397,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -2710,8 +2405,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_python">
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
@@ -2719,8 +2413,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2728,15 +2421,13 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricstatus">Metric<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2744,8 +2435,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerresource_csharp">
 <a href="#containerresource_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
@@ -2753,8 +2443,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -2762,8 +2451,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -2771,8 +2459,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_csharp">
 <a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
@@ -2780,8 +2467,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2789,13 +2475,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2803,8 +2487,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerresource_go">
 <a href="#containerresource_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
@@ -2812,8 +2495,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -2821,8 +2503,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -2830,8 +2511,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_go">
 <a href="#pods_go" style="color: inherit; text-decoration: inherit;">Pods</a>
@@ -2839,8 +2519,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2848,13 +2527,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2862,8 +2539,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerresource_nodejs">
 <a href="#containerresource_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource</a>
@@ -2871,8 +2547,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -2880,8 +2555,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -2889,8 +2563,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_nodejs">
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
@@ -2898,8 +2571,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2907,13 +2579,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2921,8 +2591,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type is the type of metric source.  It will be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each corresponds to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_resource_python">
 <a href="#container_resource_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource</a>
@@ -2930,8 +2599,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -2939,8 +2607,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -2948,8 +2615,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pods_python">
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
@@ -2957,8 +2623,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2966,15 +2631,13 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectmeta">Object<wbr>Meta</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2982,8 +2645,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -2991,8 +2653,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3002,8 +2663,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
-Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiongraceperiodseconds_csharp">
 <a href="#deletiongraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -3011,8 +2671,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiontimestamp_csharp">
 <a href="#deletiontimestamp_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
@@ -3022,8 +2681,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
-Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_csharp">
 <a href="#finalizers_csharp" style="color: inherit; text-decoration: inherit;">Finalizers</a>
@@ -3031,8 +2689,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatename_csharp">
 <a href="#generatename_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
@@ -3044,8 +2701,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
 If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
 
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd>
-    <dt class="property-optional"
+Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -3053,8 +2709,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3062,8 +2717,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedfields_csharp">
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
@@ -3071,8 +2725,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3080,8 +2733,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -3091,8 +2743,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
-    <dt class="property-optional"
+Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerreferences_csharp">
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
@@ -3100,8 +2751,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -3111,8 +2761,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3122,8 +2771,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-    <dt class="property-optional"
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -3133,13 +2781,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-</dl>
+Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -3147,8 +2793,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -3156,8 +2801,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3167,8 +2811,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
-Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiongraceperiodseconds_go">
 <a href="#deletiongraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -3176,8 +2819,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiontimestamp_go">
 <a href="#deletiontimestamp_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
@@ -3187,8 +2829,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
-Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_go">
 <a href="#finalizers_go" style="color: inherit; text-decoration: inherit;">Finalizers</a>
@@ -3196,8 +2837,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatename_go">
 <a href="#generatename_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
@@ -3209,8 +2849,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
 If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
 
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd>
-    <dt class="property-optional"
+Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -3218,8 +2857,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3227,8 +2865,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedfields_go">
 <a href="#managedfields_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
@@ -3236,8 +2873,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3245,8 +2881,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -3256,8 +2891,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
-    <dt class="property-optional"
+Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerreferences_go">
 <a href="#ownerreferences_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
@@ -3265,8 +2899,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -3276,8 +2909,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3287,8 +2919,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-    <dt class="property-optional"
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -3298,13 +2929,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-</dl>
+Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -3312,8 +2941,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -3321,8 +2949,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -3332,8 +2959,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
-Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiongraceperiodseconds_nodejs">
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -3341,8 +2967,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiontimestamp_nodejs">
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
@@ -3352,8 +2977,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
-Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_nodejs">
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
@@ -3361,8 +2985,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatename_nodejs">
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
@@ -3374,8 +2997,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
 If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
 
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd>
-    <dt class="property-optional"
+Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -3383,8 +3005,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3392,8 +3013,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedfields_nodejs">
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
@@ -3401,8 +3021,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
-    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3410,8 +3029,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -3421,8 +3039,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
-    <dt class="property-optional"
+Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerreferences_nodejs">
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
@@ -3430,8 +3047,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
@@ -3441,8 +3057,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -3452,8 +3067,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-    <dt class="property-optional"
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -3463,13 +3077,11 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-</dl>
+Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -3477,8 +3089,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -3486,8 +3097,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -3497,8 +3107,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
-Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_grace_period_seconds_python">
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
@@ -3506,8 +3115,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_timestamp_python">
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
@@ -3517,8 +3125,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
-Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_python">
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
@@ -3526,8 +3133,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generate_name_python">
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
@@ -3539,8 +3145,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
 If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
 
-Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd>
-    <dt class="property-optional"
+Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -3548,8 +3153,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3557,8 +3161,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_fields_python">
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
@@ -3566,8 +3169,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3575,8 +3177,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -3586,8 +3187,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
-Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd>
-    <dt class="property-optional"
+Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_references_python">
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
@@ -3595,8 +3195,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_version_python">
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
@@ -3606,8 +3205,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
-    <dt class="property-optional"
+Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -3617,8 +3215,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
-DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd>
-    <dt class="property-optional"
+DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -3628,15 +3225,13 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
-Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-</dl>
+Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectmetricsource">Object<wbr>Metric<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3644,8 +3239,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3653,8 +3247,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetvalue_csharp">
 <a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -3662,8 +3255,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagevalue_csharp">
 <a href="#averagevalue_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Value</a>
@@ -3671,8 +3263,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -3680,13 +3271,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3694,8 +3283,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3703,8 +3291,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetvalue_go">
 <a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
@@ -3712,8 +3299,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagevalue_go">
 <a href="#averagevalue_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Value</a>
@@ -3721,8 +3307,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -3730,13 +3315,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -3744,8 +3327,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3753,8 +3335,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetvalue_nodejs">
 <a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
@@ -3762,8 +3343,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagevalue_nodejs">
 <a href="#averagevalue_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Value</a>
@@ -3771,8 +3351,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -3780,13 +3359,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -3794,8 +3371,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3803,8 +3379,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_value_python">
 <a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
@@ -3812,8 +3387,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetValue is the target value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="average_value_python">
 <a href="#average_value_python" style="color: inherit; text-decoration: inherit;">average_<wbr>value</a>
@@ -3821,8 +3395,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -3830,15 +3403,13 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectmetricstatus">Object<wbr>Metric<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvalue_csharp">
 <a href="#currentvalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Value</a>
@@ -3846,8 +3417,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3855,8 +3425,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3864,8 +3433,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagevalue_csharp">
 <a href="#averagevalue_csharp" style="color: inherit; text-decoration: inherit;">Average<wbr>Value</a>
@@ -3873,8 +3441,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -3882,13 +3449,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvalue_go">
 <a href="#currentvalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Value</a>
@@ -3896,8 +3461,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3905,8 +3469,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3914,8 +3477,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagevalue_go">
 <a href="#averagevalue_go" style="color: inherit; text-decoration: inherit;">Average<wbr>Value</a>
@@ -3923,8 +3485,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -3932,13 +3493,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentvalue_nodejs">
 <a href="#currentvalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Value</a>
@@ -3946,8 +3505,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -3955,8 +3513,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3964,8 +3521,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="averagevalue_nodejs">
 <a href="#averagevalue_nodejs" style="color: inherit; text-decoration: inherit;">average<wbr>Value</a>
@@ -3973,8 +3529,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -3982,13 +3537,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="current_value_python">
 <a href="#current_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>value</a>
@@ -3996,8 +3549,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentValue is the current value of the metric (as a quantity).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -4005,8 +3557,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -4014,8 +3565,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}target is the described Kubernetes object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="average_value_python">
 <a href="#average_value_python" style="color: inherit; text-decoration: inherit;">average_<wbr>value</a>
@@ -4023,8 +3573,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}averageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4032,15 +3581,13 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ownerreference">Owner<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -4048,8 +3595,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -4057,8 +3603,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4066,8 +3611,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -4075,8 +3619,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockownerdeletion_csharp">
 <a href="#blockownerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Owner<wbr>Deletion</a>
@@ -4084,8 +3627,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controller_csharp">
 <a href="#controller_csharp" style="color: inherit; text-decoration: inherit;">Controller</a>
@@ -4093,13 +3635,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -4107,8 +3647,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -4116,8 +3655,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4125,8 +3663,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -4134,8 +3671,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockownerdeletion_go">
 <a href="#blockownerdeletion_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Owner<wbr>Deletion</a>
@@ -4143,8 +3679,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controller_go">
 <a href="#controller_go" style="color: inherit; text-decoration: inherit;">Controller</a>
@@ -4152,13 +3687,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -4166,8 +3699,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -4175,8 +3707,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4184,8 +3715,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -4193,8 +3723,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockownerdeletion_nodejs">
 <a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
@@ -4202,8 +3731,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controller_nodejs">
 <a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
@@ -4211,13 +3739,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -4225,8 +3751,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -4234,8 +3759,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4243,8 +3767,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -4252,8 +3775,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_owner_deletion_python">
 <a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
@@ -4261,8 +3783,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controller_python">
 <a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
@@ -4270,15 +3791,13 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="podsmetricsource">Pods<wbr>Metric<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -4286,8 +3805,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetaveragevalue_csharp">
 <a href="#targetaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -4295,8 +3813,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4304,13 +3821,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -4318,8 +3833,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetaveragevalue_go">
 <a href="#targetaveragevalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -4327,8 +3841,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4336,13 +3849,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -4350,8 +3861,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetaveragevalue_nodejs">
 <a href="#targetaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Value</a>
@@ -4359,8 +3869,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4368,13 +3877,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -4382,8 +3889,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_average_value_python">
 <a href="#target_average_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>value</a>
@@ -4391,8 +3897,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4400,15 +3905,13 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="podsmetricstatus">Pods<wbr>Metric<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_csharp">
 <a href="#currentaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -4416,8 +3919,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -4425,8 +3927,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4434,13 +3935,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_go">
 <a href="#currentaveragevalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -4448,8 +3947,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -4457,8 +3955,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4466,13 +3963,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_nodejs">
 <a href="#currentaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Value</a>
@@ -4480,8 +3975,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -4489,8 +3983,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4498,13 +3991,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="current_average_value_python">
 <a href="#current_average_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>value</a>
@@ -4512,8 +4003,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the metric across all relevant pods (as a quantity){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -4521,8 +4011,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}metricName is the name of the metric in question{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4530,15 +4019,13 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the PodsMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcemetricsource">Resource<wbr>Metric<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4546,8 +4033,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaverageutilization_csharp">
 <a href="#targetaverageutilization_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Utilization</a>
@@ -4555,8 +4041,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_csharp">
 <a href="#targetaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -4564,13 +4049,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4578,8 +4061,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaverageutilization_go">
 <a href="#targetaverageutilization_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Utilization</a>
@@ -4587,8 +4069,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_go">
 <a href="#targetaveragevalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Average<wbr>Value</a>
@@ -4596,13 +4077,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4610,8 +4089,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaverageutilization_nodejs">
 <a href="#targetaverageutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Utilization</a>
@@ -4619,8 +4097,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetaveragevalue_nodejs">
 <a href="#targetaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Average<wbr>Value</a>
@@ -4628,13 +4105,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4642,8 +4117,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_average_utilization_python">
 <a href="#target_average_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>utilization</a>
@@ -4651,8 +4125,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_average_value_python">
 <a href="#target_average_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>average_<wbr>value</a>
@@ -4660,15 +4133,13 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcemetricstatus">Resource<wbr>Metric<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_csharp">
 <a href="#currentaveragevalue_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -4676,8 +4147,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4685,8 +4155,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaverageutilization_csharp">
 <a href="#currentaverageutilization_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Utilization</a>
@@ -4694,13 +4163,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_go">
 <a href="#currentaveragevalue_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Value</a>
@@ -4708,8 +4175,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4717,8 +4183,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaverageutilization_go">
 <a href="#currentaverageutilization_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Average<wbr>Utilization</a>
@@ -4726,13 +4191,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="currentaveragevalue_nodejs">
 <a href="#currentaveragevalue_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Value</a>
@@ -4740,8 +4203,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4749,8 +4211,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentaverageutilization_nodejs">
 <a href="#currentaverageutilization_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Average<wbr>Utilization</a>
@@ -4758,13 +4219,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="current_average_value_python">
 <a href="#current_average_value_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>value</a>
@@ -4772,8 +4231,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4781,8 +4239,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}name is the name of the resource in question.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="current_average_utilization_python">
 <a href="#current_average_utilization_python" style="color: inherit; text-decoration: inherit;">current_<wbr>average_<wbr>utilization</a>
@@ -4790,8 +4247,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

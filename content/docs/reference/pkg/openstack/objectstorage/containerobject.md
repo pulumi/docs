@@ -472,8 +472,7 @@ The ContainerObject resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -487,8 +486,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -498,8 +496,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_csharp">
 <a href="#contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -510,8 +507,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_csharp">
 <a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -521,8 +517,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -531,8 +526,7 @@ metadata.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyfrom_csharp">
 <a href="#copyfrom_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
@@ -545,8 +539,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_csharp">
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -557,8 +550,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteat_csharp">
 <a href="#deleteat_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
@@ -568,8 +560,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectcontenttype_csharp">
 <a href="#detectcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
@@ -580,8 +571,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -590,8 +580,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -599,8 +588,7 @@ header, if present.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -609,8 +597,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectmanifest_csharp">
 <a href="#objectmanifest_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
@@ -623,8 +610,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -635,8 +621,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -646,13 +631,11 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -666,8 +649,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -677,8 +659,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_go">
 <a href="#contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -689,8 +670,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_go">
 <a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -700,8 +680,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -710,8 +689,7 @@ metadata.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyfrom_go">
 <a href="#copyfrom_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
@@ -724,8 +702,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_go">
 <a href="#deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -736,8 +713,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteat_go">
 <a href="#deleteat_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
@@ -747,8 +723,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectcontenttype_go">
 <a href="#detectcontenttype_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
@@ -759,8 +734,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -769,8 +743,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -778,8 +751,7 @@ header, if present.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -788,8 +760,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectmanifest_go">
 <a href="#objectmanifest_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
@@ -802,8 +773,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -814,8 +784,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -825,13 +794,11 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -845,8 +812,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -856,8 +822,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_nodejs">
 <a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
@@ -868,8 +833,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_nodejs">
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
@@ -879,8 +843,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -889,8 +852,7 @@ metadata.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyfrom_nodejs">
 <a href="#copyfrom_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From</a>
@@ -903,8 +865,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_nodejs">
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
@@ -915,8 +876,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteat_nodejs">
 <a href="#deleteat_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>At</a>
@@ -926,8 +886,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectcontenttype_nodejs">
 <a href="#detectcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Content<wbr>Type</a>
@@ -938,8 +897,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -948,8 +906,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -957,8 +914,7 @@ header, if present.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -967,8 +923,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectmanifest_nodejs">
 <a href="#objectmanifest_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Manifest</a>
@@ -981,8 +936,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -993,8 +947,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1004,13 +957,11 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -1024,8 +975,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1035,8 +985,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_disposition_python">
 <a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
@@ -1047,8 +996,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_encoding_python">
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
@@ -1058,8 +1006,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1068,8 +1015,7 @@ metadata.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_from_python">
 <a href="#copy_from_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from</a>
@@ -1082,8 +1028,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_after_python">
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
@@ -1094,8 +1039,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_at_python">
 <a href="#delete_at_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>at</a>
@@ -1105,8 +1049,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detect_content_type_python">
 <a href="#detect_content_type_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>content_<wbr>type</a>
@@ -1117,8 +1060,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1127,8 +1069,7 @@ header, if present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1136,8 +1077,7 @@ header, if present.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1146,8 +1086,7 @@ header, if present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_manifest_python">
 <a href="#object_manifest_python" style="color: inherit; text-decoration: inherit;">object_<wbr>manifest</a>
@@ -1160,8 +1099,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1172,8 +1110,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1183,8 +1120,7 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1195,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="contentlength_csharp">
 <a href="#contentlength_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
@@ -1206,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_csharp">
 <a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -1218,8 +1152,7 @@ length of informational or error text in the response body.
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1227,8 +1160,7 @@ time is always in UTC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1242,8 +1174,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transid_csharp">
 <a href="#transid_csharp" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
@@ -1253,13 +1184,11 @@ example, the offset value is -05:00.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="contentlength_go">
 <a href="#contentlength_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
@@ -1269,8 +1198,7 @@ need this value if you report a problem.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_go">
 <a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -1281,8 +1209,7 @@ length of informational or error text in the response body.
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1290,8 +1217,7 @@ time is always in UTC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1305,8 +1231,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transid_go">
 <a href="#transid_go" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
@@ -1316,13 +1241,11 @@ example, the offset value is -05:00.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="contentlength_nodejs">
 <a href="#contentlength_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Length</a>
@@ -1332,8 +1255,7 @@ need this value if you report a problem.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_nodejs">
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
@@ -1344,8 +1266,7 @@ length of informational or error text in the response body.
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1353,8 +1274,7 @@ time is always in UTC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -1368,8 +1288,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transid_nodejs">
 <a href="#transid_nodejs" style="color: inherit; text-decoration: inherit;">trans<wbr>Id</a>
@@ -1379,13 +1298,11 @@ example, the offset value is -05:00.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="content_length_python">
 <a href="#content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
@@ -1395,8 +1312,7 @@ need this value if you report a problem.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_python">
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
@@ -1407,8 +1323,7 @@ length of informational or error text in the response body.
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1416,8 +1331,7 @@ time is always in UTC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -1431,8 +1345,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trans_id_python">
 <a href="#trans_id_python" style="color: inherit; text-decoration: inherit;">trans_<wbr>id</a>
@@ -1442,8 +1355,7 @@ example, the offset value is -05:00.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1570,8 +1482,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containername_csharp">
 <a href="#state_containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1585,8 +1496,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_csharp">
 <a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1596,8 +1506,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentdisposition_csharp">
 <a href="#state_contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -1608,8 +1517,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_csharp">
 <a href="#state_contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -1619,8 +1527,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlength_csharp">
 <a href="#state_contentlength_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
@@ -1630,8 +1537,7 @@ metadata.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
 <a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1640,8 +1546,7 @@ length of informational or error text in the response body.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyfrom_csharp">
 <a href="#state_copyfrom_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
@@ -1654,8 +1559,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_csharp">
 <a href="#state_date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -1666,8 +1570,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteafter_csharp">
 <a href="#state_deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1678,8 +1581,7 @@ time is always in UTC.
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteat_csharp">
 <a href="#state_deleteat_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
@@ -1689,8 +1591,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectcontenttype_csharp">
 <a href="#state_detectcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
@@ -1701,8 +1602,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1711,8 +1611,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_csharp">
 <a href="#state_lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1726,8 +1625,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1735,8 +1633,7 @@ example, the offset value is -05:00.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1745,8 +1642,7 @@ example, the offset value is -05:00.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectmanifest_csharp">
 <a href="#state_objectmanifest_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
@@ -1759,8 +1655,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1771,8 +1666,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1782,8 +1676,7 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transid_csharp">
 <a href="#state_transid_csharp" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
@@ -1793,13 +1686,11 @@ as the object's content. Conflicts with `source` and `copy_from`.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containername_go">
 <a href="#state_containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1813,8 +1704,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_go">
 <a href="#state_content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1824,8 +1714,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentdisposition_go">
 <a href="#state_contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -1836,8 +1725,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_go">
 <a href="#state_contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -1847,8 +1735,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlength_go">
 <a href="#state_contentlength_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Length</a>
@@ -1858,8 +1745,7 @@ metadata.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
 <a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1868,8 +1754,7 @@ length of informational or error text in the response body.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyfrom_go">
 <a href="#state_copyfrom_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>From</a>
@@ -1882,8 +1767,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_go">
 <a href="#state_date_go" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -1894,8 +1778,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteafter_go">
 <a href="#state_deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1906,8 +1789,7 @@ time is always in UTC.
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteat_go">
 <a href="#state_deleteat_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>At</a>
@@ -1917,8 +1799,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectcontenttype_go">
 <a href="#state_detectcontenttype_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Content<wbr>Type</a>
@@ -1929,8 +1810,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1939,8 +1819,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_go">
 <a href="#state_lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1954,8 +1833,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1963,8 +1841,7 @@ example, the offset value is -05:00.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1973,8 +1850,7 @@ example, the offset value is -05:00.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectmanifest_go">
 <a href="#state_objectmanifest_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Manifest</a>
@@ -1987,8 +1863,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1999,8 +1874,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2010,8 +1884,7 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transid_go">
 <a href="#state_transid_go" style="color: inherit; text-decoration: inherit;">Trans<wbr>Id</a>
@@ -2021,13 +1894,11 @@ as the object's content. Conflicts with `source` and `copy_from`.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containername_nodejs">
 <a href="#state_containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -2041,8 +1912,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_nodejs">
 <a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2052,8 +1922,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentdisposition_nodejs">
 <a href="#state_contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
@@ -2064,8 +1933,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_nodejs">
 <a href="#state_contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
@@ -2075,8 +1943,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlength_nodejs">
 <a href="#state_contentlength_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Length</a>
@@ -2086,8 +1953,7 @@ metadata.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -2096,8 +1962,7 @@ length of informational or error text in the response body.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyfrom_nodejs">
 <a href="#state_copyfrom_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From</a>
@@ -2110,8 +1975,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_nodejs">
 <a href="#state_date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
@@ -2122,8 +1986,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteafter_nodejs">
 <a href="#state_deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
@@ -2134,8 +1997,7 @@ time is always in UTC.
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteat_nodejs">
 <a href="#state_deleteat_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>At</a>
@@ -2145,8 +2007,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectcontenttype_nodejs">
 <a href="#state_detectcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Content<wbr>Type</a>
@@ -2157,8 +2018,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2167,8 +2027,7 @@ header, if present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_nodejs">
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -2182,8 +2041,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2191,8 +2049,7 @@ example, the offset value is -05:00.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2201,8 +2058,7 @@ example, the offset value is -05:00.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectmanifest_nodejs">
 <a href="#state_objectmanifest_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Manifest</a>
@@ -2215,8 +2071,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2227,8 +2082,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2238,8 +2092,7 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transid_nodejs">
 <a href="#state_transid_nodejs" style="color: inherit; text-decoration: inherit;">trans<wbr>Id</a>
@@ -2249,13 +2102,11 @@ as the object's content. Conflicts with `source` and `copy_from`.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_name_python">
 <a href="#state_container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -2269,8 +2120,7 @@ with any character and contain any pattern. Character set must be UTF-8.
 The container name cannot contain a slash (/) character because this
 character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_python">
 <a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2280,8 +2130,7 @@ character delimits the container and object name. For example, the path
     </dt>
     <dd>{{% md %}}A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_disposition_python">
 <a href="#state_content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
@@ -2292,8 +2141,7 @@ character delimits the container and object name. For example, the path
     <dd>{{% md %}}A string which specifies the override behavior for 
 the browser. For example, this header might specify that the browser use a download
 program to save this file rather than show the file, which is the default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_encoding_python">
 <a href="#state_content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
@@ -2303,8 +2151,7 @@ program to save this file rather than show the file, which is the default.
     </dt>
     <dd>{{% md %}}A string representing the value of the Content-Encoding
 metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_length_python">
 <a href="#state_content_length_python" style="color: inherit; text-decoration: inherit;">content_<wbr>length</a>
@@ -2314,8 +2161,7 @@ metadata.
     </dt>
     <dd>{{% md %}}If the operation succeeds, this value is zero (0) or the 
 length of informational or error text in the response body.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -2324,8 +2170,7 @@ length of informational or error text in the response body.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string which sets the MIME type for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copy_from_python">
 <a href="#state_copy_from_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from</a>
@@ -2338,8 +2183,7 @@ used to create the new object by copying the `copy_from` object. The value is in
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with `source` and
 `content`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_python">
 <a href="#state_date_python" style="color: inherit; text-decoration: inherit;">date</a>
@@ -2350,8 +2194,7 @@ container and object before you include them in the header. Conflicts with `sour
     <dd>{{% md %}}The date and time the system responded to the request, using the preferred 
 format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_after_python">
 <a href="#state_delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
@@ -2362,8 +2205,7 @@ time is always in UTC.
     <dd>{{% md %}}An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_at_python">
 <a href="#state_delete_at_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>at</a>
@@ -2373,8 +2215,7 @@ the X-Delete-At metadata item.
     </dt>
     <dd>{{% md %}}An string representing the date when the system removes the object. 
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detect_content_type_python">
 <a href="#state_detect_content_type_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>content_<wbr>type</a>
@@ -2385,8 +2226,7 @@ For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
     <dd>{{% md %}}If set to true, Object Storage guesses the content 
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2395,8 +2235,7 @@ header, if present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_python">
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -2410,8 +2249,7 @@ CCYY-MM-DDThh:mm:ss±hh:mm
 For example, 2015-08-27T09:49:58-05:00.
 The ±hh:mm value, if included, is the time zone as an offset from UTC. In the previous
 example, the offset value is -05:00.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2419,8 +2257,7 @@ example, the offset value is -05:00.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2429,8 +2266,7 @@ example, the offset value is -05:00.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_manifest_python">
 <a href="#state_object_manifest_python" style="color: inherit; text-decoration: inherit;">object_<wbr>manifest</a>
@@ -2443,8 +2279,7 @@ object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
 header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2455,8 +2290,7 @@ header.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2466,8 +2300,7 @@ creates a new container.
     </dt>
     <dd>{{% md %}}A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trans_id_python">
 <a href="#state_trans_id_python" style="color: inherit; text-decoration: inherit;">trans_<wbr>id</a>
@@ -2477,8 +2310,7 @@ as the object's content. Conflicts with `source` and `copy_from`.
     </dt>
     <dd>{{% md %}}A unique transaction ID for this request. Your service provider might 
 need this value if you report a problem.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

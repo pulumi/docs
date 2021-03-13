@@ -307,8 +307,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -318,8 +317,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_csharp">
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -337,8 +335,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -355,8 +352,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -366,8 +362,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -376,8 +371,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiwriter_csharp">
 <a href="#multiwriter_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Writer</a>
@@ -386,8 +380,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -402,8 +395,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalblocksizebytes_csharp">
 <a href="#physicalblocksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -416,8 +408,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -427,8 +418,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -442,8 +432,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -458,8 +447,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -475,8 +463,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceimageencryptionkey_csharp">
 <a href="#sourceimageencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -487,8 +474,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshotencryptionkey_csharp">
 <a href="#sourcesnapshotencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -500,8 +486,7 @@ Structure is documented below.
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -511,8 +496,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -521,13 +505,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -537,8 +519,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_go">
 <a href="#diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -556,8 +537,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -574,8 +554,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -585,8 +564,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -595,8 +573,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiwriter_go">
 <a href="#multiwriter_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Writer</a>
@@ -605,8 +582,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -621,8 +597,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalblocksizebytes_go">
 <a href="#physicalblocksizebytes_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -635,8 +610,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -646,8 +620,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepolicies_go">
 <a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -661,8 +634,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -677,8 +649,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -694,8 +665,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceimageencryptionkey_go">
 <a href="#sourceimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -706,8 +676,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshotencryptionkey_go">
 <a href="#sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -719,8 +688,7 @@ Structure is documented below.
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -730,8 +698,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -740,13 +707,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -756,8 +721,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_nodejs">
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
@@ -775,8 +739,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -793,8 +756,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -804,8 +766,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -814,8 +775,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiwriter_nodejs">
 <a href="#multiwriter_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Writer</a>
@@ -824,8 +784,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -840,8 +799,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalblocksizebytes_nodejs">
 <a href="#physicalblocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -854,8 +812,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -865,8 +822,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
@@ -880,8 +836,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -896,8 +851,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -913,8 +867,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceimageencryptionkey_nodejs">
 <a href="#sourceimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -925,8 +878,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshotencryptionkey_nodejs">
 <a href="#sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -938,8 +890,7 @@ Structure is documented below.
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -949,8 +900,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -959,13 +909,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -975,8 +923,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_key_python">
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
@@ -994,8 +941,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1012,8 +958,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1023,8 +968,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1033,8 +977,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_writer_python">
 <a href="#multi_writer_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>writer</a>
@@ -1043,8 +986,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1059,8 +1001,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physical_block_size_bytes_python">
 <a href="#physical_block_size_bytes_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>block_<wbr>size_<wbr>bytes</a>
@@ -1073,8 +1014,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1084,8 +1024,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_policies_python">
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
@@ -1099,8 +1038,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1115,8 +1053,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -1132,8 +1069,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_image_encryption_key_python">
 <a href="#source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
@@ -1144,8 +1080,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_snapshot_encryption_key_python">
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
@@ -1157,8 +1092,7 @@ Structure is documented below.
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1168,8 +1102,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1178,8 +1111,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1190,8 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1200,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1209,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1219,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastattachtimestamp_csharp">
 <a href="#lastattachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1229,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastdetachtimestamp_csharp">
 <a href="#lastdetachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1239,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1249,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceimageid_csharp">
 <a href="#sourceimageid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
@@ -1261,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesnapshotid_csharp">
 <a href="#sourcesnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1273,8 +1197,7 @@ under the same name, the source image ID would identify the exact version of the
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1283,13 +1206,11 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1298,8 +1219,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1307,8 +1227,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1317,8 +1236,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastattachtimestamp_go">
 <a href="#lastattachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1327,8 +1245,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastdetachtimestamp_go">
 <a href="#lastdetachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1337,8 +1254,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1347,8 +1263,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceimageid_go">
 <a href="#sourceimageid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
@@ -1359,8 +1274,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesnapshotid_go">
 <a href="#sourcesnapshotid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1371,8 +1285,7 @@ under the same name, the source image ID would identify the exact version of the
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1381,13 +1294,11 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1396,8 +1307,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1405,8 +1315,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1415,8 +1324,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastattachtimestamp_nodejs">
 <a href="#lastattachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attach<wbr>Timestamp</a>
@@ -1425,8 +1333,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastdetachtimestamp_nodejs">
 <a href="#lastdetachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Detach<wbr>Timestamp</a>
@@ -1435,8 +1342,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1445,8 +1351,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceimageid_nodejs">
 <a href="#sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
@@ -1457,8 +1362,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesnapshotid_nodejs">
 <a href="#sourcesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Id</a>
@@ -1469,8 +1373,7 @@ under the same name, the source image ID would identify the exact version of the
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1479,13 +1382,11 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1494,8 +1395,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1503,8 +1403,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1513,8 +1412,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_attach_timestamp_python">
 <a href="#last_attach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attach_<wbr>timestamp</a>
@@ -1523,8 +1421,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_detach_timestamp_python">
 <a href="#last_detach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detach_<wbr>timestamp</a>
@@ -1533,8 +1430,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1543,8 +1439,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_image_id_python">
 <a href="#source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
@@ -1555,8 +1450,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_snapshot_id_python">
 <a href="#source_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>id</a>
@@ -1567,8 +1461,7 @@ under the same name, the source image ID would identify the exact version of the
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1577,8 +1470,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1705,8 +1597,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1715,8 +1606,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1726,8 +1616,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryptionkey_csharp">
 <a href="#state_diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -1745,8 +1634,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_csharp">
 <a href="#state_image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1763,8 +1651,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_csharp">
 <a href="#state_interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1774,8 +1661,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1784,8 +1670,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1794,8 +1679,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastattachtimestamp_csharp">
 <a href="#state_lastattachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1804,8 +1688,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastdetachtimestamp_csharp">
 <a href="#state_lastdetachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1814,8 +1697,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiwriter_csharp">
 <a href="#state_multiwriter_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Writer</a>
@@ -1824,8 +1706,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1840,8 +1721,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physicalblocksizebytes_csharp">
 <a href="#state_physicalblocksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -1854,8 +1734,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1865,8 +1744,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepolicies_csharp">
 <a href="#state_resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -1880,8 +1758,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1890,8 +1767,7 @@ to allow for updating the resource policy attached to the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1906,8 +1782,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_csharp">
 <a href="#state_snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -1923,8 +1798,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimageencryptionkey_csharp">
 <a href="#state_sourceimageencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -1935,8 +1809,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimageid_csharp">
 <a href="#state_sourceimageid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
@@ -1947,8 +1820,7 @@ Structure is documented below.
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotencryptionkey_csharp">
 <a href="#state_sourcesnapshotencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -1960,8 +1832,7 @@ under the same name, the source image ID would identify the exact version of the
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotid_csharp">
 <a href="#state_sourcesnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1972,8 +1843,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1983,8 +1853,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1993,8 +1862,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -2003,13 +1871,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2018,8 +1884,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2029,8 +1894,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryptionkey_go">
 <a href="#state_diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -2048,8 +1912,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_go">
 <a href="#state_image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2066,8 +1929,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_go">
 <a href="#state_interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -2077,8 +1939,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2087,8 +1948,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2097,8 +1957,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastattachtimestamp_go">
 <a href="#state_lastattachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -2107,8 +1966,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastdetachtimestamp_go">
 <a href="#state_lastdetachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -2117,8 +1975,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiwriter_go">
 <a href="#state_multiwriter_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Writer</a>
@@ -2127,8 +1984,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2143,8 +1999,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physicalblocksizebytes_go">
 <a href="#state_physicalblocksizebytes_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -2157,8 +2012,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2168,8 +2022,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepolicies_go">
 <a href="#state_resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -2183,8 +2036,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2193,8 +2045,7 @@ to allow for updating the resource policy attached to the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2209,8 +2060,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_go">
 <a href="#state_snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -2226,8 +2076,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimageencryptionkey_go">
 <a href="#state_sourceimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -2238,8 +2087,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimageid_go">
 <a href="#state_sourceimageid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
@@ -2250,8 +2098,7 @@ Structure is documented below.
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotencryptionkey_go">
 <a href="#state_sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -2263,8 +2110,7 @@ under the same name, the source image ID would identify the exact version of the
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotid_go">
 <a href="#state_sourcesnapshotid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -2275,8 +2121,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2286,8 +2131,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -2296,8 +2140,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -2306,13 +2149,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -2321,8 +2162,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2332,8 +2172,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryptionkey_nodejs">
 <a href="#state_diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
@@ -2351,8 +2190,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_nodejs">
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2369,8 +2207,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_nodejs">
 <a href="#state_interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -2380,8 +2217,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -2390,8 +2226,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2400,8 +2235,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastattachtimestamp_nodejs">
 <a href="#state_lastattachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attach<wbr>Timestamp</a>
@@ -2410,8 +2244,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastdetachtimestamp_nodejs">
 <a href="#state_lastdetachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Detach<wbr>Timestamp</a>
@@ -2420,8 +2253,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiwriter_nodejs">
 <a href="#state_multiwriter_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Writer</a>
@@ -2430,8 +2262,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2446,8 +2277,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physicalblocksizebytes_nodejs">
 <a href="#state_physicalblocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -2460,8 +2290,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2471,8 +2300,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepolicies_nodejs">
 <a href="#state_resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
@@ -2486,8 +2314,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2496,8 +2323,7 @@ to allow for updating the resource policy attached to the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2512,8 +2338,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_nodejs">
 <a href="#state_snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2529,8 +2354,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimageencryptionkey_nodejs">
 <a href="#state_sourceimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -2541,8 +2365,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimageid_nodejs">
 <a href="#state_sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
@@ -2553,8 +2376,7 @@ Structure is documented below.
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotencryptionkey_nodejs">
 <a href="#state_sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -2566,8 +2388,7 @@ under the same name, the source image ID would identify the exact version of the
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotid_nodejs">
 <a href="#state_sourcesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Id</a>
@@ -2578,8 +2399,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2589,8 +2409,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2599,8 +2418,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2609,13 +2427,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -2624,8 +2440,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2635,8 +2450,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_encryption_key_python">
 <a href="#state_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
@@ -2654,8 +2468,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_python">
 <a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2672,8 +2485,7 @@ images names must include the family name. If they don't, use the
 [gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_python">
 <a href="#state_interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -2683,8 +2495,7 @@ These images can be referred by family name here.
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Default
 value: "SCSI" Possible values: ["SCSI", "NVME"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -2693,8 +2504,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2703,8 +2513,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_attach_timestamp_python">
 <a href="#state_last_attach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attach_<wbr>timestamp</a>
@@ -2713,8 +2522,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_detach_timestamp_python">
 <a href="#state_last_detach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detach_<wbr>timestamp</a>
@@ -2723,8 +2531,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multi_writer_python">
 <a href="#state_multi_writer_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>writer</a>
@@ -2733,8 +2540,7 @@ value: "SCSI" Possible values: ["SCSI", "NVME"]
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the disk can be read/write attached to more than one instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2749,8 +2555,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physical_block_size_bytes_python">
 <a href="#state_physical_block_size_bytes_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>block_<wbr>size_<wbr>bytes</a>
@@ -2763,8 +2568,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2774,8 +2578,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_policies_python">
 <a href="#state_resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
@@ -2789,8 +2592,7 @@ resource policy, as resource policies can not be updated more than
 one at a time. Use
 `gcp.compute.DiskResourcePolicyAttachment`
 to allow for updating the resource policy attached to the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2799,8 +2601,7 @@ to allow for updating the resource policy attached to the disk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2815,8 +2616,7 @@ persistent disk.
 If you specify this field along with `image` or `snapshot`,
 the value must not be less than the size of the image
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_python">
 <a href="#state_snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2832,8 +2632,7 @@ following are valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_image_encryption_key_python">
 <a href="#state_source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
@@ -2844,8 +2643,7 @@ following are valid values:
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_image_id_python">
 <a href="#state_source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
@@ -2856,8 +2654,7 @@ Structure is documented below.
     <dd>{{% md %}}The ID value of the image used to create this disk. This value identifies the exact image that was used to create this
 persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated
 under the same name, the source image ID would identify the exact version of the image that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_snapshot_encryption_key_python">
 <a href="#state_source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
@@ -2869,8 +2666,7 @@ under the same name, the source image ID would identify the exact version of the
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_snapshot_id_python">
 <a href="#state_source_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>id</a>
@@ -2881,8 +2677,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2892,8 +2687,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2902,8 +2696,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2912,8 +2705,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the disk resides.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2928,8 +2720,7 @@ create the disk. Provide this when creating the disk.
 <h4 id="diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2942,8 +2733,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_csharp">
 <a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -2953,8 +2743,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2964,8 +2753,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2976,13 +2764,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2995,8 +2781,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_go">
 <a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -3006,8 +2791,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -3017,8 +2801,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -3029,13 +2812,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3048,8 +2829,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_nodejs">
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -3059,8 +2839,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -3070,8 +2849,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3082,13 +2860,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_self_link_python">
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
@@ -3101,8 +2877,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_service_account_python">
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
@@ -3112,8 +2887,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -3123,8 +2897,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3135,15 +2908,13 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3156,8 +2927,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_csharp">
 <a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -3167,8 +2937,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -3178,8 +2947,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -3190,13 +2958,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3209,8 +2975,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_go">
 <a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -3220,8 +2985,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -3231,8 +2995,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -3243,13 +3006,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3262,8 +3023,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_nodejs">
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -3273,8 +3033,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -3284,8 +3043,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3296,13 +3054,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_self_link_python">
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
@@ -3315,8 +3071,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_service_account_python">
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
@@ -3326,8 +3081,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -3337,8 +3091,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3349,15 +3102,13 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3370,8 +3121,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -3381,8 +3131,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -3393,13 +3142,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3412,8 +3159,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -3423,8 +3169,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -3435,13 +3180,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -3454,8 +3197,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -3465,8 +3207,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3477,13 +3218,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_self_link_python">
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
@@ -3496,8 +3235,7 @@ in the cloud console. Your project's Compute Engine System service account
 (`service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com`) must have
 `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -3507,8 +3245,7 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -3519,8 +3256,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

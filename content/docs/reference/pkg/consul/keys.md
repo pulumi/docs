@@ -162,8 +162,7 @@ The Keys resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -173,8 +172,7 @@ The Keys resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyscollection_csharp">
 <a href="#keyscollection_csharp" style="color: inherit; text-decoration: inherit;">Keys<wbr>Collection</a>
@@ -184,8 +182,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -194,8 +191,7 @@ Supported values documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -205,13 +201,11 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -221,8 +215,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_go">
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -232,8 +225,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -242,8 +234,7 @@ Supported values documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -253,13 +244,11 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -269,8 +258,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_nodejs">
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -280,8 +268,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -290,8 +277,7 @@ Supported values documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -301,13 +287,11 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -317,8 +301,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keys_python">
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -328,8 +311,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -338,8 +320,7 @@ Supported values documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -349,8 +330,7 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -361,8 +341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_csharp">
 <a href="#var_csharp" style="color: inherit; text-decoration: inherit;">Var</a>
@@ -379,13 +357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -393,8 +369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_go">
 <a href="#var_go" style="color: inherit; text-decoration: inherit;">Var</a>
@@ -402,13 +377,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -416,8 +389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_nodejs">
 <a href="#var_nodejs" style="color: inherit; text-decoration: inherit;">var</a>
@@ -425,13 +397,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -439,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_python">
 <a href="#var_python" style="color: inherit; text-decoration: inherit;">var</a>
@@ -448,8 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -576,8 +544,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -587,8 +554,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyscollection_csharp">
 <a href="#state_keyscollection_csharp" style="color: inherit; text-decoration: inherit;">Keys<wbr>Collection</a>
@@ -598,8 +564,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_csharp">
 <a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -608,8 +573,7 @@ Supported values documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -619,8 +583,7 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_var_csharp">
 <a href="#state_var_csharp" style="color: inherit; text-decoration: inherit;">Var</a>
@@ -628,13 +591,11 @@ token that the agent provides by default.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -644,8 +605,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_go">
 <a href="#state_keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -655,8 +615,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_go">
 <a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -665,8 +624,7 @@ Supported values documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -676,8 +634,7 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_var_go">
 <a href="#state_var_go" style="color: inherit; text-decoration: inherit;">Var</a>
@@ -685,13 +642,11 @@ token that the agent provides by default.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -701,8 +656,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_nodejs">
 <a href="#state_keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -712,8 +666,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_nodejs">
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -722,8 +675,7 @@ Supported values documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -733,8 +685,7 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_var_nodejs">
 <a href="#state_var_nodejs" style="color: inherit; text-decoration: inherit;">var</a>
@@ -742,13 +693,11 @@ token that the agent provides by default.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -758,8 +707,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_python">
 <a href="#state_keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -769,8 +717,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be written.
 Supported values documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_python">
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -779,8 +726,7 @@ Supported values documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -790,8 +736,7 @@ Supported values documented below.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_var_python">
 <a href="#state_var_python" style="color: inherit; text-decoration: inherit;">var</a>
@@ -799,8 +744,7 @@ token that the agent provides by default.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -815,8 +759,7 @@ token that the agent provides by default.
 <h4 id="keyskey">Keys<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -825,8 +768,7 @@ token that the agent provides by default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be written to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -834,8 +776,7 @@ token that the agent provides by default.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_csharp">
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
@@ -847,8 +788,7 @@ token that the agent provides by default.
 either its configuration block is removed from the configuration or
 the entire resource is destroyed. Otherwise, it will be left in Consul.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -858,8 +798,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -867,8 +806,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -877,13 +815,11 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -892,8 +828,7 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be written to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -901,8 +836,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_go">
 <a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
@@ -914,8 +848,7 @@ to attach to the key (defaults to 0).
 either its configuration block is removed from the configuration or
 the entire resource is destroyed. Otherwise, it will be left in Consul.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -925,8 +858,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -934,8 +866,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -944,13 +875,11 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -959,8 +888,7 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be written to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -968,8 +896,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_nodejs">
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
@@ -981,8 +908,7 @@ to attach to the key (defaults to 0).
 either its configuration block is removed from the configuration or
 the entire resource is destroyed. Otherwise, it will be left in Consul.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -992,8 +918,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1001,8 +926,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1011,13 +935,11 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1026,8 +948,7 @@ to attach to the key (defaults to 0).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be written to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -1035,8 +956,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_python">
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
@@ -1048,8 +968,7 @@ to attach to the key (defaults to 0).
 either its configuration block is removed from the configuration or
 the entire resource is destroyed. Otherwise, it will be left in Consul.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -1059,8 +978,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
 to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1068,8 +986,7 @@ to attach to the key (defaults to 0).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Using consul_keys resource to *read* is deprecated; please use consul_keys data source instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1078,8 +995,7 @@ to attach to the key (defaults to 0).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

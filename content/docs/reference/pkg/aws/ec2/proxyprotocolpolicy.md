@@ -357,8 +357,7 @@ The ProxyProtocolPolicy resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceports_csharp">
 <a href="#instanceports_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
@@ -368,8 +367,7 @@ The ProxyProtocolPolicy resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancer_csharp">
 <a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -379,13 +377,11 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceports_go">
 <a href="#instanceports_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
@@ -395,8 +391,7 @@ should be attached.
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancer_go">
 <a href="#loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -406,13 +401,11 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceports_nodejs">
 <a href="#instanceports_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ports</a>
@@ -422,8 +415,7 @@ should be attached.
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancer_nodejs">
 <a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
@@ -433,13 +425,11 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_ports_python">
 <a href="#instance_ports_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ports</a>
@@ -449,8 +439,7 @@ should be attached.
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_python">
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
@@ -460,8 +449,7 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -472,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -481,13 +468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -495,13 +480,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -509,13 +492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -523,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -651,8 +631,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instanceports_csharp">
 <a href="#state_instanceports_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
@@ -662,8 +641,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_csharp">
 <a href="#state_loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -673,13 +651,11 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instanceports_go">
 <a href="#state_instanceports_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ports</a>
@@ -689,8 +665,7 @@ should be attached.
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_go">
 <a href="#state_loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -700,13 +675,11 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instanceports_nodejs">
 <a href="#state_instanceports_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ports</a>
@@ -716,8 +689,7 @@ should be attached.
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_nodejs">
 <a href="#state_loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
@@ -727,13 +699,11 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instance_ports_python">
 <a href="#state_instance_ports_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ports</a>
@@ -743,8 +713,7 @@ should be attached.
     </dt>
     <dd>{{% md %}}List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_python">
 <a href="#state_load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
@@ -754,8 +723,7 @@ should be applied. This can be specified if the protocol is SSL or TCP.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

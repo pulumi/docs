@@ -178,8 +178,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolid_csharp">
 <a href="#workloadidentitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -190,8 +189,7 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolproviderid_csharp">
 <a href="#workloadidentitypoolproviderid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
@@ -202,8 +200,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributecondition_csharp">
 <a href="#attributecondition_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
@@ -253,8 +250,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributemapping_csharp">
 <a href="#attributemapping_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
@@ -359,8 +355,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_csharp">
 <a href="#aws_csharp" style="color: inherit; text-decoration: inherit;">Aws</a>
@@ -370,8 +365,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -380,8 +374,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -391,8 +384,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -401,8 +393,7 @@ However, existing tokens still grant access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_csharp">
 <a href="#oidc_csharp" style="color: inherit; text-decoration: inherit;">Oidc</a>
@@ -412,8 +403,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -423,13 +413,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolid_go">
 <a href="#workloadidentitypoolid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -440,8 +428,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolproviderid_go">
 <a href="#workloadidentitypoolproviderid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
@@ -452,8 +439,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributecondition_go">
 <a href="#attributecondition_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
@@ -503,8 +489,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributemapping_go">
 <a href="#attributemapping_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
@@ -609,8 +594,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_go">
 <a href="#aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
@@ -620,8 +604,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -630,8 +613,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -641,8 +623,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -651,8 +632,7 @@ However, existing tokens still grant access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_go">
 <a href="#oidc_go" style="color: inherit; text-decoration: inherit;">Oidc</a>
@@ -662,8 +642,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -673,13 +652,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolid_nodejs">
 <a href="#workloadidentitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -690,8 +667,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolproviderid_nodejs">
 <a href="#workloadidentitypoolproviderid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
@@ -702,8 +678,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributecondition_nodejs">
 <a href="#attributecondition_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Condition</a>
@@ -753,8 +728,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributemapping_nodejs">
 <a href="#attributemapping_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Mapping</a>
@@ -859,8 +833,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_nodejs">
 <a href="#aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
@@ -870,8 +843,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -880,8 +852,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -891,8 +862,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -901,8 +871,7 @@ However, existing tokens still grant access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_nodejs">
 <a href="#oidc_nodejs" style="color: inherit; text-decoration: inherit;">oidc</a>
@@ -912,8 +881,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -923,13 +891,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="workload_identity_pool_id_python">
 <a href="#workload_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>id</a>
@@ -940,8 +906,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workload_identity_pool_provider_id_python">
 <a href="#workload_identity_pool_provider_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>provider_<wbr>id</a>
@@ -952,8 +917,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_condition_python">
 <a href="#attribute_condition_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>condition</a>
@@ -1003,8 +967,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_mapping_python">
 <a href="#attribute_mapping_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>mapping</a>
@@ -1109,8 +1072,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_python">
 <a href="#aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
@@ -1120,8 +1082,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1130,8 +1091,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1141,8 +1101,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1151,8 +1110,7 @@ However, existing tokens still grant access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_python">
 <a href="#oidc_python" style="color: inherit; text-decoration: inherit;">oidc</a>
@@ -1162,8 +1120,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1173,8 +1130,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1185,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1194,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1205,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1218,13 +1171,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1232,8 +1183,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1243,8 +1193,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1256,13 +1205,11 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1270,8 +1217,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1281,8 +1227,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1294,13 +1239,11 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1308,8 +1251,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1319,8 +1261,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1332,8 +1273,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1460,8 +1400,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributecondition_csharp">
 <a href="#state_attributecondition_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
@@ -1511,8 +1450,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributemapping_csharp">
 <a href="#state_attributemapping_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
@@ -1617,8 +1555,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aws_csharp">
 <a href="#state_aws_csharp" style="color: inherit; text-decoration: inherit;">Aws</a>
@@ -1628,8 +1565,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1638,8 +1574,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1649,8 +1584,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1659,8 +1593,7 @@ However, existing tokens still grant access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1670,8 +1603,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_csharp">
 <a href="#state_oidc_csharp" style="color: inherit; text-decoration: inherit;">Oidc</a>
@@ -1681,8 +1613,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1692,8 +1623,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1705,8 +1635,7 @@ If it is not provided, the provider project is used.
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_csharp">
 <a href="#state_workloadidentitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -1717,8 +1646,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolproviderid_csharp">
 <a href="#state_workloadidentitypoolproviderid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
@@ -1729,13 +1657,11 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributecondition_go">
 <a href="#state_attributecondition_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
@@ -1785,8 +1711,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributemapping_go">
 <a href="#state_attributemapping_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
@@ -1891,8 +1816,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aws_go">
 <a href="#state_aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
@@ -1902,8 +1826,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1912,8 +1835,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1923,8 +1845,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1933,8 +1854,7 @@ However, existing tokens still grant access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1944,8 +1864,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_go">
 <a href="#state_oidc_go" style="color: inherit; text-decoration: inherit;">Oidc</a>
@@ -1955,8 +1874,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1966,8 +1884,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1979,8 +1896,7 @@ If it is not provided, the provider project is used.
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_go">
 <a href="#state_workloadidentitypoolid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -1991,8 +1907,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolproviderid_go">
 <a href="#state_workloadidentitypoolproviderid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
@@ -2003,13 +1918,11 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributecondition_nodejs">
 <a href="#state_attributecondition_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Condition</a>
@@ -2059,8 +1972,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributemapping_nodejs">
 <a href="#state_attributemapping_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Mapping</a>
@@ -2165,8 +2077,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aws_nodejs">
 <a href="#state_aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
@@ -2176,8 +2087,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2186,8 +2096,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -2197,8 +2106,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2207,8 +2115,7 @@ However, existing tokens still grant access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2218,8 +2125,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_nodejs">
 <a href="#state_oidc_nodejs" style="color: inherit; text-decoration: inherit;">oidc</a>
@@ -2229,8 +2135,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2240,8 +2145,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2253,8 +2157,7 @@ If it is not provided, the provider project is used.
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_nodejs">
 <a href="#state_workloadidentitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Id</a>
@@ -2265,8 +2168,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolproviderid_nodejs">
 <a href="#state_workloadidentitypoolproviderid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
@@ -2277,13 +2179,11 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attribute_condition_python">
 <a href="#state_attribute_condition_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>condition</a>
@@ -2333,8 +2233,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attribute_mapping_python">
 <a href="#state_attribute_mapping_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>mapping</a>
@@ -2439,8 +2338,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aws_python">
 <a href="#state_aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
@@ -2450,8 +2348,7 @@ func main() {
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2460,8 +2357,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -2471,8 +2367,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2481,8 +2376,7 @@ However, existing tokens still grant access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2492,8 +2386,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_python">
 <a href="#state_oidc_python" style="color: inherit; text-decoration: inherit;">oidc</a>
@@ -2503,8 +2396,7 @@ However, existing tokens still grant access.
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2514,8 +2406,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2527,8 +2418,7 @@ If it is not provided, the provider project is used.
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workload_identity_pool_id_python">
 <a href="#state_workload_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>id</a>
@@ -2539,8 +2429,7 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workload_identity_pool_provider_id_python">
 <a href="#state_workload_identity_pool_provider_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>provider_<wbr>id</a>
@@ -2551,8 +2440,7 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2567,8 +2455,7 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
 <h4 id="workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2577,13 +2464,11 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2592,13 +2477,11 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -2607,13 +2490,11 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -2622,15 +2503,13 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issueruri_csharp">
 <a href="#issueruri_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Uri</a>
@@ -2639,8 +2518,7 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_csharp">
 <a href="#allowedaudiences_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -2685,13 +2563,11 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issueruri_go">
 <a href="#issueruri_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Uri</a>
@@ -2700,8 +2576,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_go">
 <a href="#allowedaudiences_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -2746,13 +2621,11 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issueruri_nodejs">
 <a href="#issueruri_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Uri</a>
@@ -2761,8 +2634,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_nodejs">
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
@@ -2807,13 +2679,11 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuer_uri_python">
 <a href="#issuer_uri_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>uri</a>
@@ -2822,8 +2692,7 @@ func main() {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_audiences_python">
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
@@ -2868,8 +2737,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

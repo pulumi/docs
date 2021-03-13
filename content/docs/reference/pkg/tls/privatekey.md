@@ -162,8 +162,7 @@ The PrivateKey resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -173,8 +172,7 @@ The PrivateKey resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsacurve_csharp">
 <a href="#ecdsacurve_csharp" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -185,8 +183,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsabits_csharp">
 <a href="#rsabits_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -196,13 +193,11 @@ default.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -212,8 +207,7 @@ RSA key in bits. Defaults to 2048.
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsacurve_go">
 <a href="#ecdsacurve_go" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -224,8 +218,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsabits_go">
 <a href="#rsabits_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -235,13 +228,11 @@ default.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -251,8 +242,7 @@ RSA key in bits. Defaults to 2048.
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsacurve_nodejs">
 <a href="#ecdsacurve_nodejs" style="color: inherit; text-decoration: inherit;">ecdsa<wbr>Curve</a>
@@ -263,8 +253,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsabits_nodejs">
 <a href="#rsabits_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Bits</a>
@@ -274,13 +263,11 @@ default.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -290,8 +277,7 @@ RSA key in bits. Defaults to 2048.
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecdsa_curve_python">
 <a href="#ecdsa_curve_python" style="color: inherit; text-decoration: inherit;">ecdsa_<wbr>curve</a>
@@ -302,8 +288,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsa_bits_python">
 <a href="#rsa_bits_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>bits</a>
@@ -313,8 +298,7 @@ default.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -325,8 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -334,8 +317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekeypem_csharp">
 <a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -344,8 +326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeyfingerprintmd5_csharp">
 <a href="#publickeyfingerprintmd5_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
@@ -357,8 +338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeyopenssh_csharp">
 <a href="#publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
@@ -371,8 +351,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeypem_csharp">
 <a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
@@ -381,13 +360,11 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -395,8 +372,7 @@ is selected.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekeypem_go">
 <a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -405,8 +381,7 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeyfingerprintmd5_go">
 <a href="#publickeyfingerprintmd5_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
@@ -418,8 +393,7 @@ is selected.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeyopenssh_go">
 <a href="#publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
@@ -432,8 +406,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeypem_go">
 <a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
@@ -442,13 +415,11 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -456,8 +427,7 @@ is selected.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekeypem_nodejs">
 <a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -466,8 +436,7 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeyfingerprintmd5_nodejs">
 <a href="#publickeyfingerprintmd5_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
@@ -479,8 +448,7 @@ is selected.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeyopenssh_nodejs">
 <a href="#publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
@@ -493,8 +461,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publickeypem_nodejs">
 <a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
@@ -503,13 +470,11 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -517,8 +482,7 @@ is selected.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_key_pem_python">
 <a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -527,8 +491,7 @@ is selected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_key_fingerprint_md5_python">
 <a href="#public_key_fingerprint_md5_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>fingerprint_<wbr>md5</a>
@@ -540,8 +503,7 @@ is selected.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_key_openssh_python">
 <a href="#public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
@@ -554,8 +516,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_key_pem_python">
 <a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
@@ -564,8 +525,7 @@ is selected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -692,8 +652,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_csharp">
 <a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -703,8 +662,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsacurve_csharp">
 <a href="#state_ecdsacurve_csharp" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -715,8 +673,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_csharp">
 <a href="#state_privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -725,8 +682,7 @@ default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeyfingerprintmd5_csharp">
 <a href="#state_publickeyfingerprintmd5_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
@@ -738,8 +694,7 @@ default.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeyopenssh_csharp">
 <a href="#state_publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
@@ -752,8 +707,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeypem_csharp">
 <a href="#state_publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
@@ -762,8 +716,7 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsabits_csharp">
 <a href="#state_rsabits_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -773,13 +726,11 @@ is selected.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_go">
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -789,8 +740,7 @@ RSA key in bits. Defaults to 2048.
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsacurve_go">
 <a href="#state_ecdsacurve_go" style="color: inherit; text-decoration: inherit;">Ecdsa<wbr>Curve</a>
@@ -801,8 +751,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_go">
 <a href="#state_privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -811,8 +760,7 @@ default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeyfingerprintmd5_go">
 <a href="#state_publickeyfingerprintmd5_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
@@ -824,8 +772,7 @@ default.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeyopenssh_go">
 <a href="#state_publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
@@ -838,8 +785,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeypem_go">
 <a href="#state_publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
@@ -848,8 +794,7 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsabits_go">
 <a href="#state_rsabits_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Bits</a>
@@ -859,13 +804,11 @@ is selected.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_nodejs">
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -875,8 +818,7 @@ RSA key in bits. Defaults to 2048.
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsacurve_nodejs">
 <a href="#state_ecdsacurve_nodejs" style="color: inherit; text-decoration: inherit;">ecdsa<wbr>Curve</a>
@@ -887,8 +829,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_nodejs">
 <a href="#state_privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -897,8 +838,7 @@ default.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeyfingerprintmd5_nodejs">
 <a href="#state_publickeyfingerprintmd5_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
@@ -910,8 +850,7 @@ default.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeyopenssh_nodejs">
 <a href="#state_publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
@@ -924,8 +863,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeypem_nodejs">
 <a href="#state_publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
@@ -934,8 +872,7 @@ is selected.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsabits_nodejs">
 <a href="#state_rsabits_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Bits</a>
@@ -945,13 +882,11 @@ is selected.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_python">
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -961,8 +896,7 @@ RSA key in bits. Defaults to 2048.
     </dt>
     <dd>{{% md %}}The name of the algorithm to use for
 the key. Currently-supported values are "RSA" and "ECDSA".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecdsa_curve_python">
 <a href="#state_ecdsa_curve_python" style="color: inherit; text-decoration: inherit;">ecdsa_<wbr>curve</a>
@@ -973,8 +907,7 @@ the key. Currently-supported values are "RSA" and "ECDSA".
     <dd>{{% md %}}When `algorithm` is "ECDSA", the name of the elliptic
 curve to use. May be any one of "P224", "P256", "P384" or "P521", with "P224" as the
 default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_pem_python">
 <a href="#state_private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -983,8 +916,7 @@ default.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_fingerprint_md5_python">
 <a href="#state_public_key_fingerprint_md5_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>fingerprint_<wbr>md5</a>
@@ -996,8 +928,7 @@ default.
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_openssh_python">
 <a href="#state_public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
@@ -1010,8 +941,7 @@ format, if the selected private key format is compatible. All RSA keys
 are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_pem_python">
 <a href="#state_public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
@@ -1020,8 +950,7 @@ is selected.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsa_bits_python">
 <a href="#state_rsa_bits_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>bits</a>
@@ -1031,8 +960,7 @@ is selected.
     </dt>
     <dd>{{% md %}}When `algorithm` is "RSA", the size of the generated
 RSA key in bits. Defaults to 2048.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

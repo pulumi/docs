@@ -293,8 +293,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -303,8 +302,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeconstraints_csharp">
 <a href="#sizeconstraints_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
@@ -313,13 +311,11 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -328,8 +324,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeconstraints_go">
 <a href="#sizeconstraints_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
@@ -338,13 +333,11 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -353,8 +346,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeconstraints_nodejs">
 <a href="#sizeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraints</a>
@@ -363,13 +355,11 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -378,8 +368,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_constraints_python">
 <a href="#size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
@@ -388,8 +377,7 @@ The SizeConstraintSet resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Sequence[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -400,8 +388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -410,8 +397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -419,13 +405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -434,8 +418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -443,13 +426,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -458,8 +439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -467,13 +447,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -482,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -491,8 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -619,8 +595,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -629,8 +604,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -639,8 +613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizeconstraints_csharp">
 <a href="#state_sizeconstraints_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
@@ -649,13 +622,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">List&lt;Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -664,8 +635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -674,8 +644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizeconstraints_go">
 <a href="#state_sizeconstraints_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Constraints</a>
@@ -684,13 +653,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">[]Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -699,8 +666,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -709,8 +675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizeconstraints_nodejs">
 <a href="#state_sizeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraints</a>
@@ -719,13 +684,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -734,8 +697,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -744,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or description of the Size Constraint Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_constraints_python">
 <a href="#state_size_constraints_python" style="color: inherit; text-decoration: inherit;">size_<wbr>constraints</a>
@@ -754,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraint">Sequence[Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parts of web requests that you want to inspect the size of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -770,8 +730,7 @@ The following state arguments are supported:
 <h4 id="sizeconstraintsetsizeconstraint">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparisonoperator_csharp">
 <a href="#comparisonoperator_csharp" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
@@ -782,8 +741,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtomatch_csharp">
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
@@ -792,8 +750,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -803,8 +760,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
     </dt>
     <dd>{{% md %}}The size in bytes that you want to compare against the size of the specified `field_to_match`.
 Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="texttransformation_csharp">
 <a href="#texttransformation_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
@@ -818,13 +774,11 @@ e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
 for all supported values.
 **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparisonoperator_go">
 <a href="#comparisonoperator_go" style="color: inherit; text-decoration: inherit;">Comparison<wbr>Operator</a>
@@ -835,8 +789,7 @@ for all supported values.
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtomatch_go">
 <a href="#fieldtomatch_go" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
@@ -845,8 +798,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -856,8 +808,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
     </dt>
     <dd>{{% md %}}The size in bytes that you want to compare against the size of the specified `field_to_match`.
 Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="texttransformation_go">
 <a href="#texttransformation_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
@@ -871,13 +822,11 @@ e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
 for all supported values.
 **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparisonoperator_nodejs">
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
@@ -888,8 +837,7 @@ for all supported values.
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fieldtomatch_nodejs">
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
@@ -898,8 +846,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -909,8 +856,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
     </dt>
     <dd>{{% md %}}The size in bytes that you want to compare against the size of the specified `field_to_match`.
 Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="texttransformation_nodejs">
 <a href="#texttransformation_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
@@ -924,13 +870,11 @@ e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
 for all supported values.
 **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparison_operator_python">
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
@@ -941,8 +885,7 @@ for all supported values.
     <dd>{{% md %}}The type of comparison you want to perform.
 e.g. `EQ`, `NE`, `LT`, `GT`.
 See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="field_to_match_python">
 <a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
@@ -951,8 +894,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
         <span class="property-type"><a href="#sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for the size constraint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -962,8 +904,7 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_S
     </dt>
     <dd>{{% md %}}The size in bytes that you want to compare against the size of the specified `field_to_match`.
 Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="text_transformation_python">
 <a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
@@ -977,15 +918,13 @@ e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
 for all supported values.
 **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sizeconstraintsetsizeconstraintfieldtomatch">Size<wbr>Constraint<wbr>Set<wbr>Size<wbr>Constraint<wbr>Field<wbr>To<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -997,8 +936,7 @@ for all supported values.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -1008,13 +946,11 @@ for all supported values.
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1026,8 +962,7 @@ If `type` is any other value, omit this field.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -1037,13 +972,11 @@ for all supported values.
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1055,8 +988,7 @@ If `type` is any other value, omit this field.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -1066,13 +998,11 @@ for all supported values.
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1084,8 +1014,7 @@ If `type` is any other value, omit this field.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -1095,8 +1024,7 @@ for all supported values.
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

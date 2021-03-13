@@ -162,8 +162,7 @@ The ContentLibrary resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storagebackings_csharp">
 <a href="#storagebackings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
@@ -173,8 +172,7 @@ The ContentLibrary resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -183,8 +181,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +190,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publication_csharp">
 <a href="#publication_csharp" style="color: inherit; text-decoration: inherit;">Publication</a>
@@ -203,8 +199,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_csharp">
 <a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
@@ -213,13 +208,11 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storagebackings_go">
 <a href="#storagebackings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
@@ -229,8 +222,7 @@ items.
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -239,8 +231,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -249,8 +240,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publication_go">
 <a href="#publication_go" style="color: inherit; text-decoration: inherit;">Publication</a>
@@ -259,8 +249,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_go">
 <a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
@@ -269,13 +258,11 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storagebackings_nodejs">
 <a href="#storagebackings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Backings</a>
@@ -285,8 +272,7 @@ items.
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -295,8 +281,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -305,8 +290,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publication_nodejs">
 <a href="#publication_nodejs" style="color: inherit; text-decoration: inherit;">publication</a>
@@ -315,8 +299,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_nodejs">
 <a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
@@ -325,13 +308,11 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storage_backings_python">
 <a href="#storage_backings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>backings</a>
@@ -341,8 +322,7 @@ items.
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -351,8 +331,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -361,8 +340,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publication_python">
 <a href="#publication_python" style="color: inherit; text-decoration: inherit;">publication</a>
@@ -371,8 +349,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_python">
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
@@ -381,8 +358,7 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -393,8 +369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -402,13 +377,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -416,13 +389,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,13 +401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -444,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -572,8 +540,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -582,8 +549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -592,8 +558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publication_csharp">
 <a href="#state_publication_csharp" style="color: inherit; text-decoration: inherit;">Publication</a>
@@ -602,8 +567,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentlibrarypublication">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagebackings_csharp">
 <a href="#state_storagebackings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
@@ -613,8 +577,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_csharp">
 <a href="#state_subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
@@ -623,13 +586,11 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -638,8 +599,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -648,8 +608,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publication_go">
 <a href="#state_publication_go" style="color: inherit; text-decoration: inherit;">Publication</a>
@@ -658,8 +617,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagebackings_go">
 <a href="#state_storagebackings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
@@ -669,8 +627,7 @@ items.
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_go">
 <a href="#state_subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
@@ -679,13 +636,11 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -694,8 +649,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -704,8 +658,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publication_nodejs">
 <a href="#state_publication_nodejs" style="color: inherit; text-decoration: inherit;">publication</a>
@@ -714,8 +667,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagebackings_nodejs">
 <a href="#state_storagebackings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Backings</a>
@@ -725,8 +677,7 @@ items.
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_nodejs">
 <a href="#state_subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
@@ -735,13 +686,11 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -750,8 +699,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -760,8 +708,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publication_python">
 <a href="#state_publication_python" style="color: inherit; text-decoration: inherit;">publication</a>
@@ -770,8 +717,7 @@ items.
         <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_backings_python">
 <a href="#state_storage_backings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>backings</a>
@@ -781,8 +727,7 @@ items.
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_python">
 <a href="#state_subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
@@ -791,8 +736,7 @@ items.
         <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -807,8 +751,7 @@ items.
 <h4 id="contentlibrarypublication">Content<wbr>Library<wbr>Publication</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethod_csharp">
 <a href="#authenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
@@ -817,8 +760,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -827,8 +769,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishurl_csharp">
 <a href="#publishurl_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Url</a>
@@ -837,8 +778,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to remotely access the published Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="published_csharp">
 <a href="#published_csharp" style="color: inherit; text-decoration: inherit;">Published</a>
@@ -847,8 +787,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bool determining if Content Library is published.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -857,13 +796,11 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethod_go">
 <a href="#authenticationmethod_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
@@ -872,8 +809,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -882,8 +818,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishurl_go">
 <a href="#publishurl_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Url</a>
@@ -892,8 +827,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to remotely access the published Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="published_go">
 <a href="#published_go" style="color: inherit; text-decoration: inherit;">Published</a>
@@ -902,8 +836,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bool determining if Content Library is published.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -912,13 +845,11 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethod_nodejs">
 <a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
@@ -927,8 +858,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -937,8 +867,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishurl_nodejs">
 <a href="#publishurl_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Url</a>
@@ -947,8 +876,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to remotely access the published Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="published_nodejs">
 <a href="#published_nodejs" style="color: inherit; text-decoration: inherit;">published</a>
@@ -957,8 +885,7 @@ items.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Bool determining if Content Library is published.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -967,13 +894,11 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_method_python">
 <a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
@@ -982,8 +907,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -992,8 +916,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publish_url_python">
 <a href="#publish_url_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>url</a>
@@ -1002,8 +925,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to remotely access the published Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="published_python">
 <a href="#published_python" style="color: inherit; text-decoration: inherit;">published</a>
@@ -1012,8 +934,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bool determining if Content Library is published.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1022,15 +943,13 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethod_csharp">
 <a href="#authenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
@@ -1039,8 +958,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticsync_csharp">
 <a href="#automaticsync_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Sync</a>
@@ -1049,8 +967,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic synchronization with the external content library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemand_csharp">
 <a href="#ondemand_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand</a>
@@ -1059,8 +976,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Download all library content immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1069,8 +985,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionurl_csharp">
 <a href="#subscriptionurl_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Url</a>
@@ -1079,8 +994,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of remote Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1089,13 +1003,11 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethod_go">
 <a href="#authenticationmethod_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
@@ -1104,8 +1016,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticsync_go">
 <a href="#automaticsync_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Sync</a>
@@ -1114,8 +1025,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic synchronization with the external content library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemand_go">
 <a href="#ondemand_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand</a>
@@ -1124,8 +1034,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Download all library content immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1134,8 +1043,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionurl_go">
 <a href="#subscriptionurl_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Url</a>
@@ -1144,8 +1052,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of remote Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1154,13 +1061,11 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethod_nodejs">
 <a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
@@ -1169,8 +1074,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticsync_nodejs">
 <a href="#automaticsync_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Sync</a>
@@ -1179,8 +1083,7 @@ items.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable automatic synchronization with the external content library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemand_nodejs">
 <a href="#ondemand_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand</a>
@@ -1189,8 +1092,7 @@ items.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Download all library content immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1199,8 +1101,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionurl_nodejs">
 <a href="#subscriptionurl_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Url</a>
@@ -1209,8 +1110,7 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of remote Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1219,13 +1119,11 @@ items.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_method_python">
 <a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
@@ -1234,8 +1132,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatic_sync_python">
 <a href="#automatic_sync_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>sync</a>
@@ -1244,8 +1141,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic synchronization with the external content library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_demand_python">
 <a href="#on_demand_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand</a>
@@ -1254,8 +1150,7 @@ items.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Download all library content immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1264,8 +1159,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to log in with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_url_python">
 <a href="#subscription_url_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>url</a>
@@ -1274,8 +1168,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of remote Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1284,8 +1177,7 @@ items.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name to log in with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

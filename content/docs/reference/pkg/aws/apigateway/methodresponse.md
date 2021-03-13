@@ -360,8 +360,7 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -370,8 +369,7 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -380,8 +378,7 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -390,8 +387,7 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -400,8 +396,7 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsemodels_csharp">
 <a href="#responsemodels_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Models</a>
@@ -410,8 +405,7 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_csharp">
 <a href="#responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -422,13 +416,11 @@ The MethodResponse resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -437,8 +429,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -447,8 +438,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -457,8 +447,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -467,8 +456,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsemodels_go">
 <a href="#responsemodels_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Models</a>
@@ -477,8 +465,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_go">
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -489,13 +476,11 @@ would define that the header `X-Some-Header` can be provided on the response.
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -504,8 +489,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -514,8 +498,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -524,8 +507,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -534,8 +516,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsemodels_nodejs">
 <a href="#responsemodels_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Models</a>
@@ -544,8 +525,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_nodejs">
 <a href="#responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -556,13 +536,11 @@ would define that the header `X-Some-Header` can be provided on the response.
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -571,8 +549,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -581,8 +558,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -591,8 +567,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -601,8 +576,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_models_python">
 <a href="#response_models_python" style="color: inherit; text-decoration: inherit;">response_<wbr>models</a>
@@ -611,8 +585,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_parameters_python">
 <a href="#response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -623,8 +596,7 @@ would define that the header `X-Some-Header` can be provided on the response.
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -635,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -644,13 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -658,13 +627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -672,13 +639,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -686,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -814,8 +778,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_csharp">
 <a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -824,8 +787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -834,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsemodels_csharp">
 <a href="#state_responsemodels_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Models</a>
@@ -844,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_csharp">
 <a href="#state_responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -856,8 +816,7 @@ The following state arguments are supported:
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -866,8 +825,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_csharp">
 <a href="#state_statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -876,13 +834,11 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_go">
 <a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -891,8 +847,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -901,8 +856,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsemodels_go">
 <a href="#state_responsemodels_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Models</a>
@@ -911,8 +865,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_go">
 <a href="#state_responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -923,8 +876,7 @@ would define that the header `X-Some-Header` can be provided on the response.
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -933,8 +885,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_go">
 <a href="#state_statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -943,13 +894,11 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_nodejs">
 <a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -958,8 +907,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -968,8 +916,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsemodels_nodejs">
 <a href="#state_responsemodels_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Models</a>
@@ -978,8 +925,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_nodejs">
 <a href="#state_responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -990,8 +936,7 @@ would define that the header `X-Some-Header` can be provided on the response.
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -1000,8 +945,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_nodejs">
 <a href="#state_statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -1010,13 +954,11 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_http_method_python">
 <a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1025,8 +967,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1035,8 +976,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_models_python">
 <a href="#state_response_models_python" style="color: inherit; text-decoration: inherit;">response_<wbr>models</a>
@@ -1045,8 +985,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the API models used for the response's content type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_parameters_python">
 <a href="#state_response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -1057,8 +996,7 @@ would define that the header `X-Some-Header` can be provided on the response.
     <dd>{{% md %}}A map of response parameters that can be sent to the caller.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
 would define that the header `X-Some-Header` can be provided on the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -1067,8 +1005,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_code_python">
 <a href="#state_status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -1077,8 +1014,7 @@ would define that the header `X-Some-Header` can be provided on the response.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -323,8 +323,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sqllicensetype_csharp">
 <a href="#sqllicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
@@ -333,8 +332,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -343,8 +341,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autobackup_csharp">
 <a href="#autobackup_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
@@ -353,8 +350,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopatching_csharp">
 <a href="#autopatching_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
@@ -363,8 +359,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultcredential_csharp">
 <a href="#keyvaultcredential_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
@@ -373,8 +368,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rservicesenabled_csharp">
 <a href="#rservicesenabled_csharp" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
@@ -383,8 +377,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityport_csharp">
 <a href="#sqlconnectivityport_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
@@ -393,8 +386,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivitytype_csharp">
 <a href="#sqlconnectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
@@ -403,8 +395,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdatepassword_csharp">
 <a href="#sqlconnectivityupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
@@ -413,8 +404,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdateusername_csharp">
 <a href="#sqlconnectivityupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
@@ -423,8 +413,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageconfiguration_csharp">
 <a href="#storageconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
@@ -433,8 +422,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -443,13 +431,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sqllicensetype_go">
 <a href="#sqllicensetype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
@@ -458,8 +444,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -468,8 +453,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autobackup_go">
 <a href="#autobackup_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
@@ -478,8 +462,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopatching_go">
 <a href="#autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
@@ -488,8 +471,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultcredential_go">
 <a href="#keyvaultcredential_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
@@ -498,8 +480,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rservicesenabled_go">
 <a href="#rservicesenabled_go" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
@@ -508,8 +489,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityport_go">
 <a href="#sqlconnectivityport_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
@@ -518,8 +498,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivitytype_go">
 <a href="#sqlconnectivitytype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
@@ -528,8 +507,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdatepassword_go">
 <a href="#sqlconnectivityupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
@@ -538,8 +516,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdateusername_go">
 <a href="#sqlconnectivityupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
@@ -548,8 +525,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageconfiguration_go">
 <a href="#storageconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
@@ -558,8 +534,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -568,13 +543,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sqllicensetype_nodejs">
 <a href="#sqllicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>License<wbr>Type</a>
@@ -583,8 +556,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -593,8 +565,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autobackup_nodejs">
 <a href="#autobackup_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup</a>
@@ -603,8 +574,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopatching_nodejs">
 <a href="#autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
@@ -613,8 +583,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultcredential_nodejs">
 <a href="#keyvaultcredential_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential</a>
@@ -623,8 +592,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rservicesenabled_nodejs">
 <a href="#rservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Services<wbr>Enabled</a>
@@ -633,8 +601,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityport_nodejs">
 <a href="#sqlconnectivityport_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Port</a>
@@ -643,8 +610,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivitytype_nodejs">
 <a href="#sqlconnectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Type</a>
@@ -653,8 +619,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdatepassword_nodejs">
 <a href="#sqlconnectivityupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
@@ -663,8 +628,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlconnectivityupdateusername_nodejs">
 <a href="#sqlconnectivityupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
@@ -673,8 +637,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageconfiguration_nodejs">
 <a href="#storageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration</a>
@@ -683,8 +646,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -693,13 +655,11 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sql_license_type_python">
 <a href="#sql_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>license_<wbr>type</a>
@@ -708,8 +668,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -718,8 +677,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_backup_python">
 <a href="#auto_backup_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup</a>
@@ -728,8 +686,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_patching_python">
 <a href="#auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
@@ -738,8 +695,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_credential_python">
 <a href="#key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
@@ -748,8 +704,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="r_services_enabled_python">
 <a href="#r_services_enabled_python" style="color: inherit; text-decoration: inherit;">r_<wbr>services_<wbr>enabled</a>
@@ -758,8 +713,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_connectivity_port_python">
 <a href="#sql_connectivity_port_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>port</a>
@@ -768,8 +722,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_connectivity_type_python">
 <a href="#sql_connectivity_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>type</a>
@@ -778,8 +731,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_connectivity_update_password_python">
 <a href="#sql_connectivity_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>password</a>
@@ -788,8 +740,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_connectivity_update_username_python">
 <a href="#sql_connectivity_update_username_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>username</a>
@@ -798,8 +749,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_configuration_python">
 <a href="#storage_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration</a>
@@ -808,8 +758,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -818,8 +767,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -830,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -839,13 +786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -853,13 +798,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -867,13 +810,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1009,8 +949,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autobackup_csharp">
 <a href="#state_autobackup_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
@@ -1019,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autopatching_csharp">
 <a href="#state_autopatching_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
@@ -1029,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultcredential_csharp">
 <a href="#state_keyvaultcredential_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
@@ -1039,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rservicesenabled_csharp">
 <a href="#state_rservicesenabled_csharp" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
@@ -1049,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityport_csharp">
 <a href="#state_sqlconnectivityport_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
@@ -1059,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivitytype_csharp">
 <a href="#state_sqlconnectivitytype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
@@ -1069,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityupdatepassword_csharp">
 <a href="#state_sqlconnectivityupdatepassword_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
@@ -1079,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityupdateusername_csharp">
 <a href="#state_sqlconnectivityupdateusername_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
@@ -1089,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqllicensetype_csharp">
 <a href="#state_sqllicensetype_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
@@ -1099,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageconfiguration_csharp">
 <a href="#state_storageconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
@@ -1109,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1119,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_csharp">
 <a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1129,13 +1057,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autobackup_go">
 <a href="#state_autobackup_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
@@ -1144,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autopatching_go">
 <a href="#state_autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
@@ -1154,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultcredential_go">
 <a href="#state_keyvaultcredential_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
@@ -1164,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rservicesenabled_go">
 <a href="#state_rservicesenabled_go" style="color: inherit; text-decoration: inherit;">RServices<wbr>Enabled</a>
@@ -1174,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityport_go">
 <a href="#state_sqlconnectivityport_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Port</a>
@@ -1184,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivitytype_go">
 <a href="#state_sqlconnectivitytype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Type</a>
@@ -1194,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityupdatepassword_go">
 <a href="#state_sqlconnectivityupdatepassword_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
@@ -1204,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityupdateusername_go">
 <a href="#state_sqlconnectivityupdateusername_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
@@ -1214,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqllicensetype_go">
 <a href="#state_sqllicensetype_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>License<wbr>Type</a>
@@ -1224,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageconfiguration_go">
 <a href="#state_storageconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
@@ -1234,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1244,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_go">
 <a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1254,13 +1169,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autobackup_nodejs">
 <a href="#state_autobackup_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup</a>
@@ -1269,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autopatching_nodejs">
 <a href="#state_autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
@@ -1279,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultcredential_nodejs">
 <a href="#state_keyvaultcredential_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential</a>
@@ -1289,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rservicesenabled_nodejs">
 <a href="#state_rservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Services<wbr>Enabled</a>
@@ -1299,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityport_nodejs">
 <a href="#state_sqlconnectivityport_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Port</a>
@@ -1309,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivitytype_nodejs">
 <a href="#state_sqlconnectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Type</a>
@@ -1319,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityupdatepassword_nodejs">
 <a href="#state_sqlconnectivityupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
@@ -1329,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlconnectivityupdateusername_nodejs">
 <a href="#state_sqlconnectivityupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
@@ -1339,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqllicensetype_nodejs">
 <a href="#state_sqllicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>License<wbr>Type</a>
@@ -1349,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageconfiguration_nodejs">
 <a href="#state_storageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration</a>
@@ -1359,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1369,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_nodejs">
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -1379,13 +1281,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_backup_python">
 <a href="#state_auto_backup_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup</a>
@@ -1394,8 +1294,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_patching_python">
 <a href="#state_auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
@@ -1404,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_vault_credential_python">
 <a href="#state_key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
@@ -1414,8 +1312,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_r_services_enabled_python">
 <a href="#state_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">r_<wbr>services_<wbr>enabled</a>
@@ -1424,8 +1321,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_connectivity_port_python">
 <a href="#state_sql_connectivity_port_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>port</a>
@@ -1434,8 +1330,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_connectivity_type_python">
 <a href="#state_sql_connectivity_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>type</a>
@@ -1444,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_connectivity_update_password_python">
 <a href="#state_sql_connectivity_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>password</a>
@@ -1454,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_connectivity_update_username_python">
 <a href="#state_sql_connectivity_update_username_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>username</a>
@@ -1464,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_license_type_python">
 <a href="#state_sql_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>license_<wbr>type</a>
@@ -1474,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_configuration_python">
 <a href="#state_storage_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration</a>
@@ -1484,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1494,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_id_python">
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -1504,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1520,8 +1408,7 @@ The following state arguments are supported:
 <h4 id="virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retentionperiodindays_csharp">
 <a href="#retentionperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period<wbr>In<wbr>Days</a>
@@ -1530,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountaccesskey_csharp">
 <a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -1540,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageblobendpoint_csharp">
 <a href="#storageblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Endpoint</a>
@@ -1550,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionenabled_csharp">
 <a href="#encryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Enabled</a>
@@ -1560,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionpassword_csharp">
 <a href="#encryptionpassword_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Password</a>
@@ -1570,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualschedule_csharp">
 <a href="#manualschedule_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Schedule</a>
@@ -1580,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdatabasesbackupenabled_csharp">
 <a href="#systemdatabasesbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Databases<wbr>Backup<wbr>Enabled</a>
@@ -1590,13 +1471,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retentionperiodindays_go">
 <a href="#retentionperiodindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period<wbr>In<wbr>Days</a>
@@ -1605,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountaccesskey_go">
 <a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -1615,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageblobendpoint_go">
 <a href="#storageblobendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Endpoint</a>
@@ -1625,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionenabled_go">
 <a href="#encryptionenabled_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Enabled</a>
@@ -1635,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionpassword_go">
 <a href="#encryptionpassword_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Password</a>
@@ -1645,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualschedule_go">
 <a href="#manualschedule_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Schedule</a>
@@ -1655,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdatabasesbackupenabled_go">
 <a href="#systemdatabasesbackupenabled_go" style="color: inherit; text-decoration: inherit;">System<wbr>Databases<wbr>Backup<wbr>Enabled</a>
@@ -1665,13 +1538,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retentionperiodindays_nodejs">
 <a href="#retentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
@@ -1680,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountaccesskey_nodejs">
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -1690,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageblobendpoint_nodejs">
 <a href="#storageblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Endpoint</a>
@@ -1700,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionenabled_nodejs">
 <a href="#encryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Enabled</a>
@@ -1710,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionpassword_nodejs">
 <a href="#encryptionpassword_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Password</a>
@@ -1720,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualschedule_nodejs">
 <a href="#manualschedule_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Schedule</a>
@@ -1730,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemdatabasesbackupenabled_nodejs">
 <a href="#systemdatabasesbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Databases<wbr>Backup<wbr>Enabled</a>
@@ -1740,13 +1605,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retention_period_in_days_python">
 <a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
@@ -1755,8 +1618,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_access_key_python">
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -1765,8 +1627,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_blob_endpoint_python">
 <a href="#storage_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>endpoint</a>
@@ -1775,8 +1636,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_enabled_python">
 <a href="#encryption_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>enabled</a>
@@ -1785,8 +1645,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_password_python">
 <a href="#encryption_password_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>password</a>
@@ -1795,8 +1654,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_schedule_python">
 <a href="#manual_schedule_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>schedule</a>
@@ -1805,8 +1663,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="system_databases_backup_enabled_python">
 <a href="#system_databases_backup_enabled_python" style="color: inherit; text-decoration: inherit;">system_<wbr>databases_<wbr>backup_<wbr>enabled</a>
@@ -1815,15 +1672,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullbackupfrequency_csharp">
 <a href="#fullbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
@@ -1832,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fullbackupstarthour_csharp">
 <a href="#fullbackupstarthour_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Hour</a>
@@ -1842,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fullbackupwindowinhours_csharp">
 <a href="#fullbackupwindowinhours_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
@@ -1852,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logbackupfrequencyinminutes_csharp">
 <a href="#logbackupfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -1862,13 +1714,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullbackupfrequency_go">
 <a href="#fullbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
@@ -1877,8 +1727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fullbackupstarthour_go">
 <a href="#fullbackupstarthour_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Hour</a>
@@ -1887,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fullbackupwindowinhours_go">
 <a href="#fullbackupwindowinhours_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
@@ -1897,8 +1745,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logbackupfrequencyinminutes_go">
 <a href="#logbackupfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -1907,13 +1754,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullbackupfrequency_nodejs">
 <a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
@@ -1922,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fullbackupstarthour_nodejs">
 <a href="#fullbackupstarthour_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Hour</a>
@@ -1932,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fullbackupwindowinhours_nodejs">
 <a href="#fullbackupwindowinhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
@@ -1942,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logbackupfrequencyinminutes_nodejs">
 <a href="#logbackupfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
@@ -1952,13 +1794,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="full_backup_frequency_python">
 <a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
@@ -1967,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="full_backup_start_hour_python">
 <a href="#full_backup_start_hour_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>hour</a>
@@ -1977,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="full_backup_window_in_hours_python">
 <a href="#full_backup_window_in_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>in_<wbr>hours</a>
@@ -1987,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_backup_frequency_in_minutes_python">
 <a href="#log_backup_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency_<wbr>in_<wbr>minutes</a>
@@ -1997,15 +1834,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -2014,8 +1849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindowdurationinminutes_csharp">
 <a href="#maintenancewindowdurationinminutes_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
@@ -2024,8 +1858,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindowstartinghour_csharp">
 <a href="#maintenancewindowstartinghour_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
@@ -2034,13 +1867,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -2049,8 +1880,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindowdurationinminutes_go">
 <a href="#maintenancewindowdurationinminutes_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
@@ -2059,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindowstartinghour_go">
 <a href="#maintenancewindowstartinghour_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
@@ -2069,13 +1898,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -2084,8 +1911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindowdurationinminutes_nodejs">
 <a href="#maintenancewindowdurationinminutes_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
@@ -2094,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenancewindowstartinghour_nodejs">
 <a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
@@ -2104,13 +1929,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -2119,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenance_window_duration_in_minutes_python">
 <a href="#maintenance_window_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration_<wbr>in_<wbr>minutes</a>
@@ -2129,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maintenance_window_starting_hour_python">
 <a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
@@ -2139,15 +1960,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaulturl_csharp">
 <a href="#keyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Url</a>
@@ -2156,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2166,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credential name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalname_csharp">
 <a href="#serviceprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
@@ -2176,8 +1993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalsecret_csharp">
 <a href="#serviceprincipalsecret_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
@@ -2186,13 +2002,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaulturl_go">
 <a href="#keyvaulturl_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Url</a>
@@ -2201,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2211,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credential name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalname_go">
 <a href="#serviceprincipalname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Name</a>
@@ -2221,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalsecret_go">
 <a href="#serviceprincipalsecret_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Secret</a>
@@ -2231,13 +2042,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaulturl_nodejs">
 <a href="#keyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Url</a>
@@ -2246,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2256,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credential name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalname_nodejs">
 <a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
@@ -2266,8 +2073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalsecret_nodejs">
 <a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
@@ -2276,13 +2082,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_vault_url_python">
 <a href="#key_vault_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>url</a>
@@ -2291,8 +2095,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2301,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credential name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_principal_name_python">
 <a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
@@ -2311,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_principal_secret_python">
 <a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
@@ -2321,15 +2122,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -2338,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageworkloadtype_csharp">
 <a href="#storageworkloadtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
@@ -2348,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasettings_csharp">
 <a href="#datasettings_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Settings</a>
@@ -2358,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsettings_csharp">
 <a href="#logsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
@@ -2368,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tempdbsettings_csharp">
 <a href="#tempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Db<wbr>Settings</a>
@@ -2378,13 +2173,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -2393,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageworkloadtype_go">
 <a href="#storageworkloadtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Workload<wbr>Type</a>
@@ -2403,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasettings_go">
 <a href="#datasettings_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Settings</a>
@@ -2413,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsettings_go">
 <a href="#logsettings_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
@@ -2423,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tempdbsettings_go">
 <a href="#tempdbsettings_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Db<wbr>Settings</a>
@@ -2433,13 +2222,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -2448,8 +2235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageworkloadtype_nodejs">
 <a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
@@ -2458,8 +2244,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasettings_nodejs">
 <a href="#datasettings_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Settings</a>
@@ -2468,8 +2253,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logsettings_nodejs">
 <a href="#logsettings_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Settings</a>
@@ -2478,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tempdbsettings_nodejs">
 <a href="#tempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Db<wbr>Settings</a>
@@ -2488,13 +2271,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -2503,8 +2284,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_workload_type_python">
 <a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
@@ -2513,8 +2293,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_settings_python">
 <a href="#data_settings_python" style="color: inherit; text-decoration: inherit;">data_<wbr>settings</a>
@@ -2523,8 +2302,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_settings_python">
 <a href="#log_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>settings</a>
@@ -2533,8 +2311,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temp_db_settings_python">
 <a href="#temp_db_settings_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>db_<wbr>settings</a>
@@ -2543,15 +2320,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_csharp">
 <a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -2560,8 +2335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_csharp">
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -2570,13 +2344,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_go">
 <a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -2585,8 +2357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_go">
 <a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -2595,13 +2366,11 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_nodejs">
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
@@ -2610,8 +2379,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_nodejs">
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2620,13 +2388,11 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_file_path_python">
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
@@ -2635,8 +2401,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_python">
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2645,15 +2410,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_csharp">
 <a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -2662,8 +2425,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_csharp">
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -2672,13 +2434,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_go">
 <a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -2687,8 +2447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_go">
 <a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -2697,13 +2456,11 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_nodejs">
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
@@ -2712,8 +2469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_nodejs">
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2722,13 +2478,11 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_file_path_python">
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
@@ -2737,8 +2491,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_python">
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2747,15 +2500,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_csharp">
 <a href="#defaultfilepath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -2764,8 +2515,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_csharp">
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -2774,13 +2524,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_go">
 <a href="#defaultfilepath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>File<wbr>Path</a>
@@ -2789,8 +2537,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_go">
 <a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
@@ -2799,13 +2546,11 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultfilepath_nodejs">
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
@@ -2814,8 +2559,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_nodejs">
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2824,13 +2568,11 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_file_path_python">
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
@@ -2839,8 +2581,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="luns_python">
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
@@ -2849,8 +2590,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

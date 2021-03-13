@@ -1,8 +1,8 @@
 
 ---
 title: "Escalation"
-title_tag: "Resource Escalation | Package opsgenie"
-meta_desc: "Explore the Escalation resource of the opsgenie package, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Escalation within Opsgenie."
+title_tag: "opsgenie.Escalation"
+meta_desc: "Documentation for the opsgenie.Escalation resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the Escalation resource of the opsgenie package, including e
 Manages an Escalation within Opsgenie.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Opsgenie = Pulumi.Opsgenie;
@@ -73,9 +79,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -127,9 +136,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_opsgenie as opsgenie
@@ -164,9 +176,12 @@ test = opsgenie.Escalation("test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -203,9 +218,16 @@ const test = new opsgenie.Escalation("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Escalation Resource {#create}
@@ -230,9 +252,7 @@ const test = new opsgenie.Escalation("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,9 +260,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -250,9 +268,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -260,10 +276,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +302,7 @@ const test = new opsgenie.Escalation("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -299,9 +310,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -309,9 +318,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -319,9 +326,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -329,18 +334,13 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -348,9 +348,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -358,9 +356,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -368,10 +364,7 @@ const test = new opsgenie.Escalation("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -386,9 +379,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -397,8 +388,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrule">List&lt;Escalation<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -407,8 +397,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -417,8 +406,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerteamid_csharp">
 <a href="#ownerteamid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Team<wbr>Id</a>
@@ -427,8 +415,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_csharp">
 <a href="#repeats_csharp" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -437,14 +424,11 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrepeat">List&lt;Escalation<wbr>Repeat<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -453,8 +437,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrule">[]Escalation<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -463,8 +446,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -473,8 +455,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerteamid_go">
 <a href="#ownerteamid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Team<wbr>Id</a>
@@ -483,8 +464,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_go">
 <a href="#repeats_go" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -493,14 +473,11 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrepeat">[]Escalation<wbr>Repeat</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -509,8 +486,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrule">Escalation<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -519,8 +495,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -529,8 +504,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerteamid_nodejs">
 <a href="#ownerteamid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Team<wbr>Id</a>
@@ -539,8 +513,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_nodejs">
 <a href="#repeats_nodejs" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -549,14 +522,11 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrepeat">Escalation<wbr>Repeat[]</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -565,8 +535,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrule">Sequence[Escalation<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -575,8 +544,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -585,8 +553,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_team_id_python">
 <a href="#owner_team_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>team_<wbr>id</a>
@@ -595,8 +562,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_python">
 <a href="#repeats_python" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -605,8 +571,7 @@ The Escalation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#escalationrepeat">Sequence[Escalation<wbr>Repeat<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -617,9 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -627,14 +590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -642,14 +602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -657,14 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -672,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,9 +753,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -811,8 +762,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -821,8 +771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerteamid_csharp">
 <a href="#state_ownerteamid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Team<wbr>Id</a>
@@ -831,8 +780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_csharp">
 <a href="#state_repeats_csharp" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -841,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrepeat">List&lt;Escalation<wbr>Repeat<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -851,14 +798,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrule">List&lt;Escalation<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -867,8 +811,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -877,8 +820,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerteamid_go">
 <a href="#state_ownerteamid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Team<wbr>Id</a>
@@ -887,8 +829,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_go">
 <a href="#state_repeats_go" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -897,8 +838,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrepeat">[]Escalation<wbr>Repeat</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -907,14 +847,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrule">[]Escalation<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -923,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -933,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownerteamid_nodejs">
 <a href="#state_ownerteamid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Team<wbr>Id</a>
@@ -943,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_nodejs">
 <a href="#state_repeats_nodejs" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -953,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrepeat">Escalation<wbr>Repeat[]</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -963,14 +896,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrule">Escalation<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -979,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -989,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_team_id_python">
 <a href="#state_owner_team_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>team_<wbr>id</a>
@@ -999,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner team id of the escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_python">
 <a href="#state_repeats_python" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -1009,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrepeat">Sequence[Escalation<wbr>Repeat<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Repeat preferences of the escalation including repeat interval, count, reverting acknowledge and seen states back and closing an alert automatically as soon as repeats are completed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1019,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#escalationrule">Sequence[Escalation<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the escalation rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1035,9 +960,7 @@ The following state arguments are supported:
 <h4 id="escalationrepeat">Escalation<wbr>Repeat</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="closealertafterall_csharp">
 <a href="#closealertafterall_csharp" style="color: inherit; text-decoration: inherit;">Close<wbr>Alert<wbr>After<wbr>All</a>
@@ -1045,8 +968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1054,8 +976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetrecipientstates_csharp">
 <a href="#resetrecipientstates_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Recipient<wbr>States</a>
@@ -1063,8 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitinterval_csharp">
 <a href="#waitinterval_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Interval</a>
@@ -1072,14 +992,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="closealertafterall_go">
 <a href="#closealertafterall_go" style="color: inherit; text-decoration: inherit;">Close<wbr>Alert<wbr>After<wbr>All</a>
@@ -1087,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1096,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetrecipientstates_go">
 <a href="#resetrecipientstates_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Recipient<wbr>States</a>
@@ -1105,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitinterval_go">
 <a href="#waitinterval_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Interval</a>
@@ -1114,14 +1028,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="closealertafterall_nodejs">
 <a href="#closealertafterall_nodejs" style="color: inherit; text-decoration: inherit;">close<wbr>Alert<wbr>After<wbr>All</a>
@@ -1129,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1138,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resetrecipientstates_nodejs">
 <a href="#resetrecipientstates_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Recipient<wbr>States</a>
@@ -1147,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitinterval_nodejs">
 <a href="#waitinterval_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Interval</a>
@@ -1156,14 +1064,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="close_alert_after_all_python">
 <a href="#close_alert_after_all_python" style="color: inherit; text-decoration: inherit;">close_<wbr>alert_<wbr>after_<wbr>all</a>
@@ -1171,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1180,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reset_recipient_states_python">
 <a href="#reset_recipient_states_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>recipient_<wbr>states</a>
@@ -1189,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_interval_python">
 <a href="#wait_interval_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>interval</a>
@@ -1198,16 +1100,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="escalationrule">Escalation<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1216,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition for notifying the recipient of escalation rule that is based on the alert state. Possible values are: if-not-acked and if-not-closed. If not given, if-not-acked is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -1226,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time delay of the escalation rule. This parameter takes an object that consists timeAmount field that takes time amount in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notifytype_csharp">
 <a href="#notifytype_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Type</a>
@@ -1266,8 +1163,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipients_csharp">
 <a href="#recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
@@ -1276,14 +1172,11 @@ func main() {
         <span class="property-type"><a href="#escalationrulerecipient">List&lt;Escalation<wbr>Rule<wbr>Recipient<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: user, schedule, team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1292,8 +1185,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition for notifying the recipient of escalation rule that is based on the alert state. Possible values are: if-not-acked and if-not-closed. If not given, if-not-acked is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -1302,8 +1194,7 @@ func main() {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time delay of the escalation rule. This parameter takes an object that consists timeAmount field that takes time amount in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notifytype_go">
 <a href="#notifytype_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Type</a>
@@ -1342,8 +1233,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipients_go">
 <a href="#recipients_go" style="color: inherit; text-decoration: inherit;">Recipients</a>
@@ -1352,14 +1242,11 @@ func main() {
         <span class="property-type"><a href="#escalationrulerecipient">[]Escalation<wbr>Rule<wbr>Recipient</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: user, schedule, team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1368,8 +1255,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition for notifying the recipient of escalation rule that is based on the alert state. Possible values are: if-not-acked and if-not-closed. If not given, if-not-acked is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -1378,8 +1264,7 @@ func main() {
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time delay of the escalation rule. This parameter takes an object that consists timeAmount field that takes time amount in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notifytype_nodejs">
 <a href="#notifytype_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Type</a>
@@ -1418,8 +1303,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipients_nodejs">
 <a href="#recipients_nodejs" style="color: inherit; text-decoration: inherit;">recipients</a>
@@ -1428,14 +1312,11 @@ func main() {
         <span class="property-type"><a href="#escalationrulerecipient">Escalation<wbr>Rule<wbr>Recipient[]</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: user, schedule, team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1444,8 +1325,7 @@ func main() {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition for notifying the recipient of escalation rule that is based on the alert state. Possible values are: if-not-acked and if-not-closed. If not given, if-not-acked is used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -1454,8 +1334,7 @@ func main() {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time delay of the escalation rule. This parameter takes an object that consists timeAmount field that takes time amount in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notify_type_python">
 <a href="#notify_type_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>type</a>
@@ -1494,8 +1373,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipients_python">
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
@@ -1504,16 +1382,13 @@ func main() {
         <span class="property-type"><a href="#escalationrulerecipient">Sequence[Escalation<wbr>Rule<wbr>Recipient<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object of schedule, team, or users which will be notified in escalation. The possible values for participants are: user, schedule, team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="escalationrulerecipient">Escalation<wbr>Rule<wbr>Recipient</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1522,8 +1397,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1531,14 +1405,11 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1547,8 +1418,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1556,14 +1426,11 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1572,8 +1439,7 @@ func main() {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1581,14 +1447,11 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1597,8 +1460,7 @@ func main() {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Escalation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1606,8 +1468,7 @@ func main() {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

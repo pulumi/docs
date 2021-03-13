@@ -409,8 +409,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="memorysizegb_csharp">
 <a href="#memorysizegb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
@@ -419,8 +418,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternativelocationid_csharp">
 <a href="#alternativelocationid_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
@@ -432,8 +430,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenabled_csharp">
 <a href="#authenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
@@ -444,8 +441,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authstring_csharp">
 <a href="#authstring_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>String</a>
@@ -454,8 +450,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_csharp">
 <a href="#authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -466,8 +461,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectmode_csharp">
 <a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
@@ -478,8 +472,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -488,8 +481,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -498,8 +490,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationid_csharp">
 <a href="#locationid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -512,8 +503,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -522,8 +512,7 @@ be different from [locationId].
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -533,8 +522,7 @@ be different from [locationId].
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisconfigs_csharp">
 <a href="#redisconfigs_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
@@ -545,8 +533,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisversion_csharp">
 <a href="#redisversion_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
@@ -559,8 +546,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -569,8 +555,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservediprange_csharp">
 <a href="#reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -583,8 +568,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -597,8 +581,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryptionmode_csharp">
 <a href="#transitencryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Mode</a>
@@ -609,13 +592,11 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="memorysizegb_go">
 <a href="#memorysizegb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
@@ -624,8 +605,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternativelocationid_go">
 <a href="#alternativelocationid_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
@@ -637,8 +617,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenabled_go">
 <a href="#authenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
@@ -649,8 +628,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authstring_go">
 <a href="#authstring_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>String</a>
@@ -659,8 +637,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_go">
 <a href="#authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -671,8 +648,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectmode_go">
 <a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
@@ -683,8 +659,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -693,8 +668,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -703,8 +677,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationid_go">
 <a href="#locationid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -717,8 +690,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -727,8 +699,7 @@ be different from [locationId].
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -738,8 +709,7 @@ be different from [locationId].
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisconfigs_go">
 <a href="#redisconfigs_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
@@ -750,8 +720,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisversion_go">
 <a href="#redisversion_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
@@ -764,8 +733,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -774,8 +742,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservediprange_go">
 <a href="#reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -788,8 +755,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -802,8 +768,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryptionmode_go">
 <a href="#transitencryptionmode_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Mode</a>
@@ -814,13 +779,11 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="memorysizegb_nodejs">
 <a href="#memorysizegb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size<wbr>Gb</a>
@@ -829,8 +792,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternativelocationid_nodejs">
 <a href="#alternativelocationid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Location<wbr>Id</a>
@@ -842,8 +804,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenabled_nodejs">
 <a href="#authenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
@@ -854,8 +815,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authstring_nodejs">
 <a href="#authstring_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>String</a>
@@ -864,8 +824,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_nodejs">
 <a href="#authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
@@ -876,8 +835,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectmode_nodejs">
 <a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
@@ -888,8 +846,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -898,8 +855,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -908,8 +864,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationid_nodejs">
 <a href="#locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
@@ -922,8 +877,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -932,8 +886,7 @@ be different from [locationId].
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -943,8 +896,7 @@ be different from [locationId].
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisconfigs_nodejs">
 <a href="#redisconfigs_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configs</a>
@@ -955,8 +907,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisversion_nodejs">
 <a href="#redisversion_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Version</a>
@@ -969,8 +920,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -979,8 +929,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservediprange_nodejs">
 <a href="#reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
@@ -993,8 +942,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1007,8 +955,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transitencryptionmode_nodejs">
 <a href="#transitencryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Mode</a>
@@ -1019,13 +966,11 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="memory_size_gb_python">
 <a href="#memory_size_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>gb</a>
@@ -1034,8 +979,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternative_location_id_python">
 <a href="#alternative_location_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>location_<wbr>id</a>
@@ -1047,8 +991,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_enabled_python">
 <a href="#auth_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>enabled</a>
@@ -1059,8 +1002,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_string_python">
 <a href="#auth_string_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>string</a>
@@ -1069,8 +1011,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_network_python">
 <a href="#authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
@@ -1081,8 +1022,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_mode_python">
 <a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
@@ -1093,8 +1033,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1103,8 +1042,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1113,8 +1051,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_id_python">
 <a href="#location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
@@ -1127,8 +1064,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1137,8 +1073,7 @@ be different from [locationId].
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1148,8 +1083,7 @@ be different from [locationId].
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_configs_python">
 <a href="#redis_configs_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configs</a>
@@ -1160,8 +1094,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_version_python">
 <a href="#redis_version_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>version</a>
@@ -1174,8 +1107,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1184,8 +1116,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reserved_ip_range_python">
 <a href="#reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
@@ -1198,8 +1129,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1212,8 +1142,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transit_encryption_mode_python">
 <a href="#transit_encryption_mode_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>mode</a>
@@ -1224,8 +1153,7 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1236,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1246,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentlocationid_csharp">
 <a href="#currentlocationid_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
@@ -1258,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1268,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1277,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistenceiamidentity_csharp">
 <a href="#persistenceiamidentity_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
@@ -1289,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1299,8 +1221,7 @@ operation.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_csharp">
 <a href="#servercacerts_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -1309,13 +1230,11 @@ operation.
         <span class="property-type"><a href="#instanceservercacert">List&lt;Instance<wbr>Server<wbr>Ca<wbr>Cert&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1324,8 +1243,7 @@ operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentlocationid_go">
 <a href="#currentlocationid_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
@@ -1336,8 +1254,7 @@ operation.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1346,8 +1263,7 @@ operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1355,8 +1271,7 @@ operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistenceiamidentity_go">
 <a href="#persistenceiamidentity_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
@@ -1367,8 +1282,7 @@ operation.
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1377,8 +1291,7 @@ operation.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_go">
 <a href="#servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -1387,13 +1300,11 @@ operation.
         <span class="property-type"><a href="#instanceservercacert">[]Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1402,8 +1313,7 @@ operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentlocationid_nodejs">
 <a href="#currentlocationid_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Location<wbr>Id</a>
@@ -1414,8 +1324,7 @@ operation.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1424,8 +1333,7 @@ operation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1433,8 +1341,7 @@ operation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistenceiamidentity_nodejs">
 <a href="#persistenceiamidentity_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Iam<wbr>Identity</a>
@@ -1445,8 +1352,7 @@ operation.
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1455,8 +1361,7 @@ operation.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_nodejs">
 <a href="#servercacerts_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Certs</a>
@@ -1465,13 +1370,11 @@ operation.
         <span class="property-type"><a href="#instanceservercacert">Instance<wbr>Server<wbr>Ca<wbr>Cert[]</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1480,8 +1383,7 @@ operation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_location_id_python">
 <a href="#current_location_id_python" style="color: inherit; text-decoration: inherit;">current_<wbr>location_<wbr>id</a>
@@ -1492,8 +1394,7 @@ operation.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1502,8 +1403,7 @@ operation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1511,8 +1411,7 @@ operation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistence_iam_identity_python">
 <a href="#persistence_iam_identity_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>iam_<wbr>identity</a>
@@ -1523,8 +1422,7 @@ operation.
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1533,8 +1431,7 @@ operation.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_ca_certs_python">
 <a href="#server_ca_certs_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>certs</a>
@@ -1543,8 +1440,7 @@ operation.
         <span class="property-type"><a href="#instanceservercacert">Sequence[Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1671,8 +1567,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativelocationid_csharp">
 <a href="#state_alternativelocationid_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
@@ -1684,8 +1579,7 @@ The following state arguments are supported:
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenabled_csharp">
 <a href="#state_authenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
@@ -1696,8 +1590,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authstring_csharp">
 <a href="#state_authstring_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>String</a>
@@ -1706,8 +1599,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_csharp">
 <a href="#state_authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -1718,8 +1610,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectmode_csharp">
 <a href="#state_connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
@@ -1730,8 +1621,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1740,8 +1630,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_currentlocationid_csharp">
 <a href="#state_currentlocationid_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
@@ -1752,8 +1641,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1762,8 +1650,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1772,8 +1659,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1782,8 +1668,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locationid_csharp">
 <a href="#state_locationid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -1796,8 +1681,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysizegb_csharp">
 <a href="#state_memorysizegb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
@@ -1806,8 +1690,7 @@ be different from [locationId].
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1816,8 +1699,7 @@ be different from [locationId].
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistenceiamidentity_csharp">
 <a href="#state_persistenceiamidentity_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
@@ -1828,8 +1710,7 @@ be different from [locationId].
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1838,8 +1719,7 @@ operation.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1849,8 +1729,7 @@ operation.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisconfigs_csharp">
 <a href="#state_redisconfigs_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
@@ -1861,8 +1740,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisversion_csharp">
 <a href="#state_redisversion_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
@@ -1875,8 +1753,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1885,8 +1762,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_csharp">
 <a href="#state_reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -1899,8 +1775,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacerts_csharp">
 <a href="#state_servercacerts_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -1909,8 +1784,7 @@ network.
         <span class="property-type"><a href="#instanceservercacert">List&lt;Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1923,8 +1797,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionmode_csharp">
 <a href="#state_transitencryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Mode</a>
@@ -1935,13 +1808,11 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativelocationid_go">
 <a href="#state_alternativelocationid_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
@@ -1953,8 +1824,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenabled_go">
 <a href="#state_authenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
@@ -1965,8 +1835,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authstring_go">
 <a href="#state_authstring_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>String</a>
@@ -1975,8 +1844,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_go">
 <a href="#state_authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -1987,8 +1855,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectmode_go">
 <a href="#state_connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
@@ -1999,8 +1866,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -2009,8 +1875,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_currentlocationid_go">
 <a href="#state_currentlocationid_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
@@ -2021,8 +1886,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2031,8 +1895,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2041,8 +1904,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2051,8 +1913,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locationid_go">
 <a href="#state_locationid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -2065,8 +1926,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysizegb_go">
 <a href="#state_memorysizegb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
@@ -2075,8 +1935,7 @@ be different from [locationId].
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2085,8 +1944,7 @@ be different from [locationId].
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistenceiamidentity_go">
 <a href="#state_persistenceiamidentity_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
@@ -2097,8 +1955,7 @@ be different from [locationId].
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2107,8 +1964,7 @@ operation.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2118,8 +1974,7 @@ operation.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisconfigs_go">
 <a href="#state_redisconfigs_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
@@ -2130,8 +1985,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisversion_go">
 <a href="#state_redisversion_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
@@ -2144,8 +1998,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2154,8 +2007,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_go">
 <a href="#state_reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -2168,8 +2020,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacerts_go">
 <a href="#state_servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -2178,8 +2029,7 @@ network.
         <span class="property-type"><a href="#instanceservercacert">[]Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2192,8 +2042,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionmode_go">
 <a href="#state_transitencryptionmode_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Encryption<wbr>Mode</a>
@@ -2204,13 +2053,11 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativelocationid_nodejs">
 <a href="#state_alternativelocationid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Location<wbr>Id</a>
@@ -2222,8 +2069,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenabled_nodejs">
 <a href="#state_authenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
@@ -2234,8 +2080,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authstring_nodejs">
 <a href="#state_authstring_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>String</a>
@@ -2244,8 +2089,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_nodejs">
 <a href="#state_authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
@@ -2256,8 +2100,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectmode_nodejs">
 <a href="#state_connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
@@ -2268,8 +2111,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -2278,8 +2120,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_currentlocationid_nodejs">
 <a href="#state_currentlocationid_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Location<wbr>Id</a>
@@ -2290,8 +2131,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2300,8 +2140,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2310,8 +2149,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2320,8 +2158,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locationid_nodejs">
 <a href="#state_locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
@@ -2334,8 +2171,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysizegb_nodejs">
 <a href="#state_memorysizegb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size<wbr>Gb</a>
@@ -2344,8 +2180,7 @@ be different from [locationId].
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2354,8 +2189,7 @@ be different from [locationId].
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistenceiamidentity_nodejs">
 <a href="#state_persistenceiamidentity_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Iam<wbr>Identity</a>
@@ -2366,8 +2200,7 @@ be different from [locationId].
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2376,8 +2209,7 @@ operation.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2387,8 +2219,7 @@ operation.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisconfigs_nodejs">
 <a href="#state_redisconfigs_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configs</a>
@@ -2399,8 +2230,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisversion_nodejs">
 <a href="#state_redisversion_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Version</a>
@@ -2413,8 +2243,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2423,8 +2252,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_nodejs">
 <a href="#state_reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
@@ -2437,8 +2265,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacerts_nodejs">
 <a href="#state_servercacerts_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Certs</a>
@@ -2447,8 +2274,7 @@ network.
         <span class="property-type"><a href="#instanceservercacert">Instance<wbr>Server<wbr>Ca<wbr>Cert[]</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2461,8 +2287,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transitencryptionmode_nodejs">
 <a href="#state_transitencryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Mode</a>
@@ -2473,13 +2298,11 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternative_location_id_python">
 <a href="#state_alternative_location_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>location_<wbr>id</a>
@@ -2491,8 +2314,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_enabled_python">
 <a href="#state_auth_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>enabled</a>
@@ -2503,8 +2325,7 @@ If provided, it must be a different zone from the one provided in
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_string_python">
 <a href="#state_auth_string_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>string</a>
@@ -2513,8 +2334,7 @@ Default value is "false" meaning AUTH is disabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AUTH String set on the instance. This field will only be populated if auth_enabled is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_network_python">
 <a href="#state_authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
@@ -2525,8 +2345,7 @@ Default value is "false" meaning AUTH is disabled.
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connect_mode_python">
 <a href="#state_connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
@@ -2537,8 +2356,7 @@ will be used.
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -2547,8 +2365,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_current_location_id_python">
 <a href="#state_current_location_id_python" style="color: inherit; text-decoration: inherit;">current_<wbr>location_<wbr>id</a>
@@ -2559,8 +2376,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2569,8 +2385,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2579,8 +2394,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2589,8 +2403,7 @@ Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_id_python">
 <a href="#state_location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
@@ -2603,8 +2416,7 @@ the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_size_gb_python">
 <a href="#state_memory_size_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>gb</a>
@@ -2613,8 +2425,7 @@ be different from [locationId].
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2623,8 +2434,7 @@ be different from [locationId].
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_iam_identity_python">
 <a href="#state_persistence_iam_identity_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>iam_<wbr>identity</a>
@@ -2635,8 +2445,7 @@ be different from [locationId].
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2645,8 +2454,7 @@ operation.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2656,8 +2464,7 @@ operation.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redis_configs_python">
 <a href="#state_redis_configs_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configs</a>
@@ -2668,8 +2475,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redis_version_python">
 <a href="#state_redis_version_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>version</a>
@@ -2682,8 +2488,7 @@ version will be used. Currently, the supported values are:
 - REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2692,8 +2497,7 @@ version will be used. Currently, the supported values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reserved_ip_range_python">
 <a href="#state_reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
@@ -2706,8 +2510,7 @@ instance. If not provided, the service will choose an unused /29
 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_ca_certs_python">
 <a href="#state_server_ca_certs_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>certs</a>
@@ -2716,8 +2519,7 @@ network.
         <span class="property-type"><a href="#instanceservercacert">Sequence[Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of server CA certificates for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2730,8 +2532,7 @@ network.
 - STANDARD_HA: highly available primary/replica instances
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transit_encryption_mode_python">
 <a href="#state_transit_encryption_mode_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>mode</a>
@@ -2742,8 +2543,7 @@ Possible values are `BASIC` and `STANDARD_HA`.
     <dd>{{% md %}}The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance. - SERVER_AUTHENTICATION: Client
 to Server traffic encryption enabled with server authentcation Default value: "DISABLED" Possible values:
 ["SERVER_AUTHENTICATION", "DISABLED"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2758,8 +2558,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
 <h4 id="instanceservercacert">Instance<wbr>Server<wbr>Ca<wbr>Cert</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -2767,8 +2566,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -2776,8 +2574,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -2785,8 +2582,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -2794,8 +2590,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1fingerprint_csharp">
 <a href="#sha1fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -2803,13 +2598,11 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -2817,8 +2610,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -2826,8 +2618,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -2835,8 +2626,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -2844,8 +2634,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1fingerprint_go">
 <a href="#sha1fingerprint_go" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -2853,13 +2642,11 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -2867,8 +2654,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -2876,8 +2662,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
@@ -2885,8 +2670,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -2894,8 +2678,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1fingerprint_nodejs">
 <a href="#sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
@@ -2903,13 +2686,11 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -2917,8 +2698,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -2926,8 +2706,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
@@ -2935,8 +2714,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -2944,8 +2722,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1_fingerprint_python">
 <a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
@@ -2953,8 +2730,7 @@ to Server traffic encryption enabled with server authentcation Default value: "D
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

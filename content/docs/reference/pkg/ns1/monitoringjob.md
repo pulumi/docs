@@ -17,11 +17,17 @@ Provides a NS1 Monitoring Job resource. This can be used to create, modify, and 
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Ns1 = Pulumi.Ns1;
@@ -68,9 +74,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -116,9 +125,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_ns1 as ns1
@@ -150,9 +162,12 @@ uswest_monitor = ns1.MonitoringJob("uswestMonitor",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -185,9 +200,16 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a MonitoringJob Resource {#create}
@@ -212,9 +234,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -222,9 +242,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -232,9 +250,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,10 +258,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -271,9 +284,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -281,9 +292,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -291,9 +300,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -301,9 +308,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -311,18 +316,13 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -330,9 +330,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -340,9 +338,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -350,10 +346,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -368,9 +361,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -379,8 +370,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -389,8 +379,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobtype_csharp">
 <a href="#jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -399,8 +388,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -410,8 +398,7 @@ The MonitoringJob resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_csharp">
 <a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
@@ -420,8 +407,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -430,8 +416,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -440,8 +425,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifydelay_csharp">
 <a href="#notifydelay_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Delay</a>
@@ -450,8 +434,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyfailback_csharp">
 <a href="#notifyfailback_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Failback</a>
@@ -460,8 +443,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifylist_csharp">
 <a href="#notifylist_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>List</a>
@@ -469,8 +451,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyregional_csharp">
 <a href="#notifyregional_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Regional</a>
@@ -479,8 +460,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyrepeat_csharp">
 <a href="#notifyrepeat_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Repeat</a>
@@ -489,8 +469,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -500,8 +479,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rapidrecheck_csharp">
 <a href="#rapidrecheck_csharp" style="color: inherit; text-decoration: inherit;">Rapid<wbr>Recheck</a>
@@ -510,8 +488,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -520,14 +497,11 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type"><a href="#monitoringjobrule">List&lt;Monitoring<wbr>Job<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -536,8 +510,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -546,8 +519,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobtype_go">
 <a href="#jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -556,8 +528,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -567,8 +538,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_go">
 <a href="#active_go" style="color: inherit; text-decoration: inherit;">Active</a>
@@ -577,8 +547,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -587,8 +556,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -597,8 +565,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifydelay_go">
 <a href="#notifydelay_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Delay</a>
@@ -607,8 +574,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyfailback_go">
 <a href="#notifyfailback_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Failback</a>
@@ -617,8 +583,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifylist_go">
 <a href="#notifylist_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>List</a>
@@ -626,8 +591,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyregional_go">
 <a href="#notifyregional_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Regional</a>
@@ -636,8 +600,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyrepeat_go">
 <a href="#notifyrepeat_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Repeat</a>
@@ -646,8 +609,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -657,8 +619,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rapidrecheck_go">
 <a href="#rapidrecheck_go" style="color: inherit; text-decoration: inherit;">Rapid<wbr>Recheck</a>
@@ -667,8 +628,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -677,14 +637,11 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -693,8 +650,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -703,8 +659,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobtype_nodejs">
 <a href="#jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
@@ -713,8 +668,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -724,8 +678,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_nodejs">
 <a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
@@ -734,8 +687,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -744,8 +696,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -754,8 +705,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifydelay_nodejs">
 <a href="#notifydelay_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Delay</a>
@@ -764,8 +714,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyfailback_nodejs">
 <a href="#notifyfailback_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Failback</a>
@@ -774,8 +723,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifylist_nodejs">
 <a href="#notifylist_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>List</a>
@@ -783,8 +731,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyregional_nodejs">
 <a href="#notifyregional_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Regional</a>
@@ -793,8 +740,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifyrepeat_nodejs">
 <a href="#notifyrepeat_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Repeat</a>
@@ -803,8 +749,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -814,8 +759,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rapidrecheck_nodejs">
 <a href="#rapidrecheck_nodejs" style="color: inherit; text-decoration: inherit;">rapid<wbr>Recheck</a>
@@ -824,8 +768,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -834,14 +777,11 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type"><a href="#monitoringjobrule">Monitoring<wbr>Job<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -850,8 +790,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -860,8 +799,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_type_python">
 <a href="#job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
@@ -870,8 +808,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -881,8 +818,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_python">
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
@@ -891,8 +827,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -901,8 +836,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -911,8 +845,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_delay_python">
 <a href="#notify_delay_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>delay</a>
@@ -921,8 +854,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_failback_python">
 <a href="#notify_failback_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>failback</a>
@@ -931,8 +863,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_list_python">
 <a href="#notify_list_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>list</a>
@@ -940,8 +871,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_regional_python">
 <a href="#notify_regional_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>regional</a>
@@ -950,8 +880,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_repeat_python">
 <a href="#notify_repeat_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>repeat</a>
@@ -960,8 +889,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -971,8 +899,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rapid_recheck_python">
 <a href="#rapid_recheck_python" style="color: inherit; text-decoration: inherit;">rapid_<wbr>recheck</a>
@@ -981,8 +908,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -991,8 +917,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type"><a href="#monitoringjobrule">Sequence[Monitoring<wbr>Job<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1003,9 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1013,14 +936,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1028,14 +948,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1043,14 +960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1058,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1186,9 +1099,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_active_csharp">
 <a href="#state_active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
@@ -1197,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1207,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_csharp">
 <a href="#state_frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1217,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobtype_csharp">
 <a href="#state_jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -1227,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1237,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_csharp">
 <a href="#state_notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1247,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifydelay_csharp">
 <a href="#state_notifydelay_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Delay</a>
@@ -1257,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyfailback_csharp">
 <a href="#state_notifyfailback_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Failback</a>
@@ -1267,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifylist_csharp">
 <a href="#state_notifylist_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>List</a>
@@ -1276,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyregional_csharp">
 <a href="#state_notifyregional_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Regional</a>
@@ -1286,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyrepeat_csharp">
 <a href="#state_notifyrepeat_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Repeat</a>
@@ -1296,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -1307,8 +1207,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rapidrecheck_csharp">
 <a href="#state_rapidrecheck_csharp" style="color: inherit; text-decoration: inherit;">Rapid<wbr>Recheck</a>
@@ -1317,8 +1216,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_csharp">
 <a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -1328,8 +1226,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1338,14 +1235,11 @@ job. See NS1 API docs for supported values.
         <span class="property-type"><a href="#monitoringjobrule">List&lt;Monitoring<wbr>Job<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_active_go">
 <a href="#state_active_go" style="color: inherit; text-decoration: inherit;">Active</a>
@@ -1354,8 +1248,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1364,8 +1257,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_go">
 <a href="#state_frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1374,8 +1266,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobtype_go">
 <a href="#state_jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -1384,8 +1275,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1394,8 +1284,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_go">
 <a href="#state_notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1404,8 +1293,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifydelay_go">
 <a href="#state_notifydelay_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Delay</a>
@@ -1414,8 +1302,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyfailback_go">
 <a href="#state_notifyfailback_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Failback</a>
@@ -1424,8 +1311,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifylist_go">
 <a href="#state_notifylist_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>List</a>
@@ -1433,8 +1319,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyregional_go">
 <a href="#state_notifyregional_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Regional</a>
@@ -1443,8 +1328,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyrepeat_go">
 <a href="#state_notifyrepeat_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Repeat</a>
@@ -1453,8 +1337,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -1464,8 +1347,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rapidrecheck_go">
 <a href="#state_rapidrecheck_go" style="color: inherit; text-decoration: inherit;">Rapid<wbr>Recheck</a>
@@ -1474,8 +1356,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_go">
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -1485,8 +1366,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1495,14 +1375,11 @@ job. See NS1 API docs for supported values.
         <span class="property-type"><a href="#monitoringjobrule">[]Monitoring<wbr>Job<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_active_nodejs">
 <a href="#state_active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
@@ -1511,8 +1388,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1521,8 +1397,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_nodejs">
 <a href="#state_frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1531,8 +1406,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobtype_nodejs">
 <a href="#state_jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
@@ -1541,8 +1415,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1551,8 +1424,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_nodejs">
 <a href="#state_notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1561,8 +1433,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifydelay_nodejs">
 <a href="#state_notifydelay_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Delay</a>
@@ -1571,8 +1442,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyfailback_nodejs">
 <a href="#state_notifyfailback_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Failback</a>
@@ -1581,8 +1451,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifylist_nodejs">
 <a href="#state_notifylist_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>List</a>
@@ -1590,8 +1459,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyregional_nodejs">
 <a href="#state_notifyregional_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Regional</a>
@@ -1600,8 +1468,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifyrepeat_nodejs">
 <a href="#state_notifyrepeat_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Repeat</a>
@@ -1610,8 +1477,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -1621,8 +1487,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rapidrecheck_nodejs">
 <a href="#state_rapidrecheck_nodejs" style="color: inherit; text-decoration: inherit;">rapid<wbr>Recheck</a>
@@ -1631,8 +1496,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_nodejs">
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1642,8 +1506,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1652,14 +1515,11 @@ job. See NS1 API docs for supported values.
         <span class="property-type"><a href="#monitoringjobrule">Monitoring<wbr>Job<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_active_python">
 <a href="#state_active_python" style="color: inherit; text-decoration: inherit;">active</a>
@@ -1668,8 +1528,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1678,8 +1537,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A configuration dictionary with keys and values depending on the job_type. Configuration details for each job_type are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_python">
 <a href="#state_frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1688,8 +1546,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The frequency, in seconds, at which to run the monitoring job in each region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_type_python">
 <a href="#state_job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
@@ -1698,8 +1555,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1708,8 +1564,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free-form display name for the monitoring job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_python">
 <a href="#state_notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1718,8 +1573,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Freeform notes to be included in any notifications about this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_delay_python">
 <a href="#state_notify_delay_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>delay</a>
@@ -1728,8 +1582,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds after a failure to wait before sending a notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_failback_python">
 <a href="#state_notify_failback_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>failback</a>
@@ -1738,8 +1591,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a notification is sent when a job returns to an "up" state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_list_python">
 <a href="#state_notify_list_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>list</a>
@@ -1747,8 +1599,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_regional_python">
 <a href="#state_notify_regional_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>regional</a>
@@ -1757,8 +1608,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, notifications are sent for any regional failure (and failback if desired), in addition to global state notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_repeat_python">
 <a href="#state_notify_repeat_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>repeat</a>
@@ -1767,8 +1617,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds between repeat notifications of a failed job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -1778,8 +1627,7 @@ job. See NS1 API docs for supported values.
     </dt>
     <dd>{{% md %}}The policy for determining the monitor's global status
 based on the status of the job in all regions. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rapid_recheck_python">
 <a href="#state_rapid_recheck_python" style="color: inherit; text-decoration: inherit;">rapid_<wbr>recheck</a>
@@ -1788,8 +1636,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, on any apparent state change, the job is quickly re-run after one second to confirm the state change before notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_python">
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1799,8 +1646,7 @@ based on the status of the job in all regions. See NS1 API docs for supported va
     </dt>
     <dd>{{% md %}}The list of region codes in which to run the monitoring
 job. See NS1 API docs for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1809,8 +1655,7 @@ job. See NS1 API docs for supported values.
         <span class="property-type"><a href="#monitoringjobrule">Sequence[Monitoring<wbr>Job<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules for determining failure conditions. Each rule acts on one of the outputs from the monitoring job. You must specify key (the output key); comparison (a comparison to perform on the the output); and value (the value to compare to). For example, {"key":"rtt", "comparison":"<", "value":100} is a rule requiring the rtt from a job to be under 100ms, or the job will be marked failed. Available output keys, comparators, and value types are are found by submitting a GET request to https://api.nsone.net/v1/monitoring/jobtypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1825,9 +1670,7 @@ job. See NS1 API docs for supported values.
 <h4 id="monitoringjobrule">Monitoring<wbr>Job<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparison_csharp">
 <a href="#comparison_csharp" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -1835,8 +1678,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1844,8 +1686,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1853,14 +1694,11 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparison_go">
 <a href="#comparison_go" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -1868,8 +1706,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1877,8 +1714,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1886,14 +1722,11 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparison_nodejs">
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -1901,8 +1734,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1910,8 +1742,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1919,14 +1750,11 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparison_python">
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -1934,8 +1762,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1943,8 +1770,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1952,8 +1778,7 @@ job. See NS1 API docs for supported values.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

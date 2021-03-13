@@ -350,8 +350,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevirtualnetworkid_csharp">
 <a href="#remotevirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -360,8 +359,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_csharp">
 <a href="#virtualhubid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -370,8 +368,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hubtovitualnetworktrafficallowed_csharp">
 <a href="#hubtovitualnetworktrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
@@ -379,8 +376,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetsecurityenabled_csharp">
 <a href="#internetsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -389,8 +385,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -399,8 +394,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_csharp">
 <a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -409,8 +403,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_csharp">
 <a href="#vitualnetworktohubgatewaystrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
@@ -418,13 +411,11 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevirtualnetworkid_go">
 <a href="#remotevirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -433,8 +424,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_go">
 <a href="#virtualhubid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -443,8 +433,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hubtovitualnetworktrafficallowed_go">
 <a href="#hubtovitualnetworktrafficallowed_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
@@ -452,8 +441,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetsecurityenabled_go">
 <a href="#internetsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -462,8 +450,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,8 +459,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_go">
 <a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -482,8 +468,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_go">
 <a href="#vitualnetworktohubgatewaystrafficallowed_go" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
@@ -491,13 +476,11 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevirtualnetworkid_nodejs">
 <a href="#remotevirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -506,8 +489,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_nodejs">
 <a href="#virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
@@ -516,8 +498,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hubtovitualnetworktrafficallowed_nodejs">
 <a href="#hubtovitualnetworktrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
@@ -525,8 +506,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetsecurityenabled_nodejs">
 <a href="#internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
@@ -535,8 +515,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -545,8 +524,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_nodejs">
 <a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -555,8 +533,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vitualnetworktohubgatewaystrafficallowed_nodejs">
 <a href="#vitualnetworktohubgatewaystrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
@@ -564,13 +541,11 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remote_virtual_network_id_python">
 <a href="#remote_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>id</a>
@@ -579,8 +554,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_hub_id_python">
 <a href="#virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
@@ -589,8 +563,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hub_to_vitual_network_traffic_allowed_python">
 <a href="#hub_to_vitual_network_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>to_<wbr>vitual_<wbr>network_<wbr>traffic_<wbr>allowed</a>
@@ -598,8 +571,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internet_security_enabled_python">
 <a href="#internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
@@ -608,8 +580,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -618,8 +589,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_python">
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -628,8 +598,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vitual_network_to_hub_gateways_traffic_allowed_python">
 <a href="#vitual_network_to_hub_gateways_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">vitual_<wbr>network_<wbr>to_<wbr>hub_<wbr>gateways_<wbr>traffic_<wbr>allowed</a>
@@ -637,8 +606,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -649,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -658,13 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,13 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -686,13 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -700,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -828,8 +788,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hubtovitualnetworktrafficallowed_csharp">
 <a href="#state_hubtovitualnetworktrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
@@ -837,8 +796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetsecurityenabled_csharp">
 <a href="#state_internetsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -847,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -857,8 +814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevirtualnetworkid_csharp">
 <a href="#state_remotevirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -867,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_csharp">
 <a href="#state_routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -877,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualhubid_csharp">
 <a href="#state_virtualhubid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -887,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vitualnetworktohubgatewaystrafficallowed_csharp">
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_csharp" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
@@ -896,13 +849,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hubtovitualnetworktrafficallowed_go">
 <a href="#state_hubtovitualnetworktrafficallowed_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
@@ -910,8 +861,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetsecurityenabled_go">
 <a href="#state_internetsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -920,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -930,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevirtualnetworkid_go">
 <a href="#state_remotevirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -940,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_go">
 <a href="#state_routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
@@ -950,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualhubid_go">
 <a href="#state_virtualhubid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
@@ -960,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vitualnetworktohubgatewaystrafficallowed_go">
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_go" style="color: inherit; text-decoration: inherit;">Vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
@@ -969,13 +914,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hubtovitualnetworktrafficallowed_nodejs">
 <a href="#state_hubtovitualnetworktrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>To<wbr>Vitual<wbr>Network<wbr>Traffic<wbr>Allowed</a>
@@ -983,8 +926,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetsecurityenabled_nodejs">
 <a href="#state_internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
@@ -993,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1003,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevirtualnetworkid_nodejs">
 <a href="#state_remotevirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Id</a>
@@ -1013,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_nodejs">
 <a href="#state_routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -1023,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualhubid_nodejs">
 <a href="#state_virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
@@ -1033,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vitualnetworktohubgatewaystrafficallowed_nodejs">
 <a href="#state_vitualnetworktohubgatewaystrafficallowed_nodejs" style="color: inherit; text-decoration: inherit;">vitual<wbr>Network<wbr>To<wbr>Hub<wbr>Gateways<wbr>Traffic<wbr>Allowed</a>
@@ -1042,13 +979,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hub_to_vitual_network_traffic_allowed_python">
 <a href="#state_hub_to_vitual_network_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>to_<wbr>vitual_<wbr>network_<wbr>traffic_<wbr>allowed</a>
@@ -1056,8 +991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_security_enabled_python">
 <a href="#state_internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
@@ -1066,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Internet Security be enabled to secure internet traffic? Changing this forces a new resource to be created. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1076,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection, which must be unique within the Virtual Hub. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_virtual_network_id_python">
 <a href="#state_remote_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>id</a>
@@ -1086,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network which the Virtual Hub should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_python">
 <a href="#state_routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
@@ -1096,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_hub_id_python">
 <a href="#state_virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
@@ -1106,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub within which this connection should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vitual_network_to_hub_gateways_traffic_allowed_python">
 <a href="#state_vitual_network_to_hub_gateways_traffic_allowed_python" style="color: inherit; text-decoration: inherit;">vitual_<wbr>network_<wbr>to_<wbr>hub_<wbr>gateways_<wbr>traffic_<wbr>allowed</a>
@@ -1115,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to a breaking behavioural change in the Azure API this property is no longer functional and will be removed in version 3.0 of the provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1131,8 +1059,7 @@ The following state arguments are supported:
 <h4 id="virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associatedroutetableid_csharp">
 <a href="#associatedroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table<wbr>Id</a>
@@ -1141,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagatedroutetable_csharp">
 <a href="#propagatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
@@ -1151,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticvnetroutes_csharp">
 <a href="#staticvnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Vnet<wbr>Routes</a>
@@ -1161,13 +1086,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">List&lt;Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associatedroutetableid_go">
 <a href="#associatedroutetableid_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table<wbr>Id</a>
@@ -1176,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagatedroutetable_go">
 <a href="#propagatedroutetable_go" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
@@ -1186,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticvnetroutes_go">
 <a href="#staticvnetroutes_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Vnet<wbr>Routes</a>
@@ -1196,13 +1117,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">[]Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associatedroutetableid_nodejs">
 <a href="#associatedroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table<wbr>Id</a>
@@ -1211,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagatedroutetable_nodejs">
 <a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
@@ -1221,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticvnetroutes_nodejs">
 <a href="#staticvnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Vnet<wbr>Routes</a>
@@ -1231,13 +1148,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associated_route_table_id_python">
 <a href="#associated_route_table_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table_<wbr>id</a>
@@ -1246,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the route table associated with this Virtual Hub connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propagated_route_table_python">
 <a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
@@ -1256,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_vnet_routes_python">
 <a href="#static_vnet_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>vnet_<wbr>routes</a>
@@ -1266,15 +1179,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Sequence[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1283,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of labels to assign to this route table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetableids_csharp">
 <a href="#routetableids_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Ids</a>
@@ -1293,13 +1203,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1308,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of labels to assign to this route table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetableids_go">
 <a href="#routetableids_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Ids</a>
@@ -1318,13 +1225,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1333,8 +1238,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of labels to assign to this route table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetableids_nodejs">
 <a href="#routetableids_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Ids</a>
@@ -1343,13 +1247,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1358,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of labels to assign to this route table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_table_ids_python">
 <a href="#route_table_ids_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>ids</a>
@@ -1368,15 +1269,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Route Table ID's to associated with this Virtual Hub Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1385,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1395,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Static Route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopipaddress_csharp">
 <a href="#nexthopipaddress_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip<wbr>Address</a>
@@ -1405,13 +1302,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address which should be used for the Next Hop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1420,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1430,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Static Route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopipaddress_go">
 <a href="#nexthopipaddress_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip<wbr>Address</a>
@@ -1440,13 +1333,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address which should be used for the Next Hop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
@@ -1455,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1465,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Static Route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopipaddress_nodejs">
 <a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
@@ -1475,13 +1364,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address which should be used for the Next Hop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
@@ -1490,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1500,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Static Route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_ip_address_python">
 <a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
@@ -1510,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP Address which should be used for the Next Hop.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

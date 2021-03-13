@@ -273,8 +273,7 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccount_csharp">
 <a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -283,8 +282,7 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -295,8 +293,7 @@ The BillingAccountExclusion resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -305,8 +302,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -316,8 +312,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -326,13 +321,11 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccount_go">
 <a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -341,8 +334,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -353,8 +345,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -363,8 +354,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -374,8 +364,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -384,13 +373,11 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccount_nodejs">
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
@@ -399,8 +386,7 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -411,8 +397,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -421,8 +406,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -432,8 +416,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -442,13 +425,11 @@ false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_account_python">
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
@@ -457,8 +438,7 @@ false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -469,8 +449,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -479,8 +458,7 @@ write a filter.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -490,8 +468,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -500,8 +477,7 @@ false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -512,8 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -521,13 +496,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -535,13 +508,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -549,13 +520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -563,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -691,8 +659,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_csharp">
 <a href="#state_billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -701,8 +668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -711,8 +677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -722,8 +687,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -734,8 +698,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -744,13 +707,11 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_go">
 <a href="#state_billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -759,8 +720,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -769,8 +729,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -780,8 +739,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -792,8 +750,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -802,13 +759,11 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_nodejs">
 <a href="#state_billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
@@ -817,8 +772,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -827,8 +781,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -838,8 +791,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -850,8 +802,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -860,13 +811,11 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_billing_account_python">
 <a href="#state_billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
@@ -875,8 +824,7 @@ write a filter.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing account to create the exclusion for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -885,8 +833,7 @@ write a filter.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -896,8 +843,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether this exclusion rule should be disabled or not. This defaults to
 false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -908,8 +854,7 @@ false.
     <dd>{{% md %}}The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced-filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -918,8 +863,7 @@ write a filter.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

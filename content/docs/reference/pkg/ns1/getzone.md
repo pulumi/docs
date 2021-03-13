@@ -16,11 +16,17 @@ should use a resource.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Ns1 = Pulumi.Ns1;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -62,9 +71,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_ns1 as ns1
@@ -72,9 +84,12 @@ import pulumi_ns1 as ns1
 example = ns1.get_zone(zone="terraform.example.io")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -86,9 +101,16 @@ const example = pulumi.output(ns1.getZone({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getZone {#using}
@@ -126,9 +148,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -137,8 +157,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalprimaries_csharp">
 <a href="#additionalprimaries_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Primaries</a>
@@ -148,14 +167,11 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -164,8 +180,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalprimaries_go">
 <a href="#additionalprimaries_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Primaries</a>
@@ -175,14 +190,11 @@ zone.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -191,8 +203,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalprimaries_nodejs">
 <a href="#additionalprimaries_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Primaries</a>
@@ -202,14 +213,11 @@ zone.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -218,8 +226,7 @@ zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_primaries_python">
 <a href="#additional_primaries_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>primaries</a>
@@ -229,8 +236,7 @@ zone.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -243,9 +249,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -254,8 +258,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authoritative Name Servers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnssec_csharp">
 <a href="#dnssec_csharp" style="color: inherit; text-decoration: inherit;">Dnssec</a>
@@ -264,8 +267,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_csharp">
 <a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -274,8 +276,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Expiry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostmaster_csharp">
 <a href="#hostmaster_csharp" style="color: inherit; text-decoration: inherit;">Hostmaster</a>
@@ -284,8 +285,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SOA Hostmaster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -294,8 +294,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="link_csharp">
 <a href="#link_csharp" style="color: inherit; text-decoration: inherit;">Link</a>
@@ -304,8 +303,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The linked target zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -315,8 +313,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nxttl_csharp">
 <a href="#nxttl_csharp" style="color: inherit; text-decoration: inherit;">Nx<wbr>Ttl</a>
@@ -325,8 +322,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_csharp">
 <a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
@@ -335,8 +331,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="refresh_csharp">
 <a href="#refresh_csharp" style="color: inherit; text-decoration: inherit;">Refresh</a>
@@ -345,8 +340,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Refresh.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_csharp">
 <a href="#retry_csharp" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -355,8 +349,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Retry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaries_csharp">
 <a href="#secondaries_csharp" style="color: inherit; text-decoration: inherit;">Secondaries</a>
@@ -366,8 +359,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}List of secondary servers. Secondaries is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -376,8 +368,7 @@ documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -385,8 +376,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additionalprimaries_csharp">
 <a href="#additionalprimaries_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Primaries</a>
@@ -396,14 +386,11 @@ documented below.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -412,8 +399,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authoritative Name Servers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnssec_go">
 <a href="#dnssec_go" style="color: inherit; text-decoration: inherit;">Dnssec</a>
@@ -422,8 +408,7 @@ zone.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_go">
 <a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -432,8 +417,7 @@ zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Expiry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostmaster_go">
 <a href="#hostmaster_go" style="color: inherit; text-decoration: inherit;">Hostmaster</a>
@@ -442,8 +426,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SOA Hostmaster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -452,8 +435,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="link_go">
 <a href="#link_go" style="color: inherit; text-decoration: inherit;">Link</a>
@@ -462,8 +444,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The linked target zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -473,8 +454,7 @@ zone.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nxttl_go">
 <a href="#nxttl_go" style="color: inherit; text-decoration: inherit;">Nx<wbr>Ttl</a>
@@ -483,8 +463,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_go">
 <a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
@@ -493,8 +472,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="refresh_go">
 <a href="#refresh_go" style="color: inherit; text-decoration: inherit;">Refresh</a>
@@ -503,8 +481,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Refresh.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_go">
 <a href="#retry_go" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -513,8 +490,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Retry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaries_go">
 <a href="#secondaries_go" style="color: inherit; text-decoration: inherit;">Secondaries</a>
@@ -524,8 +500,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}List of secondary servers. Secondaries is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -534,8 +509,7 @@ documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -543,8 +517,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additionalprimaries_go">
 <a href="#additionalprimaries_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Primaries</a>
@@ -554,14 +527,11 @@ documented below.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -570,8 +540,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authoritative Name Servers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnssec_nodejs">
 <a href="#dnssec_nodejs" style="color: inherit; text-decoration: inherit;">dnssec</a>
@@ -580,8 +549,7 @@ zone.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_nodejs">
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -590,8 +558,7 @@ zone.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SOA Expiry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostmaster_nodejs">
 <a href="#hostmaster_nodejs" style="color: inherit; text-decoration: inherit;">hostmaster</a>
@@ -600,8 +567,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SOA Hostmaster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,8 +576,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="link_nodejs">
 <a href="#link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
@@ -620,8 +585,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The linked target zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -631,8 +595,7 @@ zone.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nxttl_nodejs">
 <a href="#nxttl_nodejs" style="color: inherit; text-decoration: inherit;">nx<wbr>Ttl</a>
@@ -641,8 +604,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_nodejs">
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
@@ -651,8 +613,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="refresh_nodejs">
 <a href="#refresh_nodejs" style="color: inherit; text-decoration: inherit;">refresh</a>
@@ -661,8 +622,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SOA Refresh.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_nodejs">
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -671,8 +631,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SOA Retry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaries_nodejs">
 <a href="#secondaries_nodejs" style="color: inherit; text-decoration: inherit;">secondaries</a>
@@ -682,8 +641,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}List of secondary servers. Secondaries is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -692,8 +650,7 @@ documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -701,8 +658,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additionalprimaries_nodejs">
 <a href="#additionalprimaries_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Primaries</a>
@@ -712,14 +668,11 @@ documented below.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -728,8 +681,7 @@ zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authoritative Name Servers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnssec_python">
 <a href="#dnssec_python" style="color: inherit; text-decoration: inherit;">dnssec</a>
@@ -738,8 +690,7 @@ zone.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not DNSSEC is enabled for the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_python">
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -748,8 +699,7 @@ zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Expiry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostmaster_python">
 <a href="#hostmaster_python" style="color: inherit; text-decoration: inherit;">hostmaster</a>
@@ -758,8 +708,7 @@ zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SOA Hostmaster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -768,8 +717,7 @@ zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="link_python">
 <a href="#link_python" style="color: inherit; text-decoration: inherit;">link</a>
@@ -778,8 +726,7 @@ zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The linked target zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -789,8 +736,7 @@ zone.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nx_ttl_python">
 <a href="#nx_ttl_python" style="color: inherit; text-decoration: inherit;">nx_<wbr>ttl</a>
@@ -799,8 +745,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA NX TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_python">
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
@@ -809,8 +754,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary zones' IPv4 address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="refresh_python">
 <a href="#refresh_python" style="color: inherit; text-decoration: inherit;">refresh</a>
@@ -819,8 +763,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Refresh.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_python">
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -829,8 +772,7 @@ available. Default is network 0, the primary NSONE Global Network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA Retry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaries_python">
 <a href="#secondaries_python" style="color: inherit; text-decoration: inherit;">secondaries</a>
@@ -840,8 +782,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}List of secondary servers. Secondaries is
 documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -850,8 +791,7 @@ documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SOA TTL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -859,8 +799,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additional_primaries_python">
 <a href="#additional_primaries_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>primaries</a>
@@ -870,8 +809,7 @@ documented below.
     </dt>
     <dd>{{% md %}}List of additional IPv4 addresses for the primary
 zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -885,9 +823,7 @@ zone.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -896,8 +832,7 @@ zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address of the secondary server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -907,8 +842,7 @@ zone.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notify_csharp">
 <a href="#notify_csharp" style="color: inherit; text-decoration: inherit;">Notify</a>
@@ -918,8 +852,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -928,14 +861,11 @@ when the zone changes. Default `false`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -944,8 +874,7 @@ when the zone changes. Default `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address of the secondary server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -955,8 +884,7 @@ when the zone changes. Default `false`.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notify_go">
 <a href="#notify_go" style="color: inherit; text-decoration: inherit;">Notify</a>
@@ -966,8 +894,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -976,14 +903,11 @@ when the zone changes. Default `false`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -992,8 +916,7 @@ when the zone changes. Default `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address of the secondary server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1003,8 +926,7 @@ when the zone changes. Default `false`.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notify_nodejs">
 <a href="#notify_nodejs" style="color: inherit; text-decoration: inherit;">notify</a>
@@ -1014,8 +936,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1024,14 +945,11 @@ when the zone changes. Default `false`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1040,8 +958,7 @@ when the zone changes. Default `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address of the secondary server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1051,8 +968,7 @@ when the zone changes. Default `false`.
     </dt>
     <dd>{{% md %}}List of network IDs (`int`) for which the zone should be made
 available. Default is network 0, the primary NSONE Global Network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notify_python">
 <a href="#notify_python" style="color: inherit; text-decoration: inherit;">notify</a>
@@ -1062,8 +978,7 @@ available. Default is network 0, the primary NSONE Global Network.
     </dt>
     <dd>{{% md %}}Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1072,8 +987,7 @@ when the zone changes. Default `false`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port of the the secondary server. Default `53`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

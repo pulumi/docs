@@ -307,8 +307,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fallbacktoondemand_csharp">
 <a href="#fallbacktoondemand_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -317,8 +316,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetypesondemand_csharp">
 <a href="#instancetypesondemand_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
@@ -327,8 +325,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetypesspots_csharp">
 <a href="#instancetypesspots_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
@@ -337,8 +334,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orientation_csharp">
 <a href="#orientation_csharp" style="color: inherit; text-decoration: inherit;">Orientation</a>
@@ -347,8 +343,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -358,8 +353,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -368,8 +362,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -380,8 +373,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockdevicesmode_csharp">
 <a href="#blockdevicesmode_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
@@ -390,8 +382,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityunit_csharp">
 <a href="#capacityunit_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Unit</a>
@@ -400,8 +391,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_csharp">
 <a href="#cpucredits_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -410,8 +400,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuoptions_csharp">
 <a href="#cpuoptions_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
@@ -420,8 +409,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -430,8 +418,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -440,8 +427,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_csharp">
 <a href="#drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -450,8 +436,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_csharp">
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -459,8 +444,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -469,8 +453,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticips_csharp">
 <a href="#elasticips_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ips</a>
@@ -479,8 +462,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticloadbalancers_csharp">
 <a href="#elasticloadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancers</a>
@@ -489,8 +471,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemonitoring_csharp">
 <a href="#enablemonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -499,8 +480,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_csharp">
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -508,8 +488,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_csharp">
 <a href="#healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -518,8 +497,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_csharp">
 <a href="#healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -528,8 +506,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckunhealthydurationbeforereplacement_csharp">
 <a href="#healthcheckunhealthydurationbeforereplacement_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Unhealthy<wbr>Duration<wbr>Before<wbr>Replacement</a>
@@ -538,8 +515,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_csharp">
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -548,8 +524,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -558,8 +533,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypespreferredspots_csharp">
 <a href="#instancetypespreferredspots_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preferred<wbr>Spots</a>
@@ -568,8 +542,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypesweights_csharp">
 <a href="#instancetypesweights_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Weights</a>
@@ -578,8 +551,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationbeanstalk_csharp">
 <a href="#integrationbeanstalk_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Beanstalk</a>
@@ -587,8 +559,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationcodedeploy_csharp">
 <a href="#integrationcodedeploy_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Codedeploy</a>
@@ -597,8 +568,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationdockerswarm_csharp">
 <a href="#integrationdockerswarm_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
@@ -607,8 +577,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationecs_csharp">
 <a href="#integrationecs_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Ecs</a>
@@ -617,8 +586,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationgitlab_csharp">
 <a href="#integrationgitlab_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gitlab</a>
@@ -627,8 +595,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationkubernetes_csharp">
 <a href="#integrationkubernetes_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Kubernetes</a>
@@ -637,8 +604,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmesosphere_csharp">
 <a href="#integrationmesosphere_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Mesosphere</a>
@@ -647,8 +613,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmultairuntime_csharp">
 <a href="#integrationmultairuntime_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Multai<wbr>Runtime</a>
@@ -657,8 +622,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationnomad_csharp">
 <a href="#integrationnomad_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Nomad</a>
@@ -667,8 +631,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationrancher_csharp">
 <a href="#integrationrancher_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Rancher</a>
@@ -677,8 +640,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationroute53_csharp">
 <a href="#integrationroute53_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Route53</a>
@@ -687,8 +649,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -697,8 +658,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeperiod_csharp">
 <a href="#lifetimeperiod_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Period</a>
@@ -706,8 +666,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -716,8 +675,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_csharp">
 <a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -726,8 +684,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_csharp">
 <a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -736,8 +693,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminstancelifetime_csharp">
 <a href="#minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
@@ -746,8 +702,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multaitargetsets_csharp">
 <a href="#multaitargetsets_csharp" style="color: inherit; text-decoration: inherit;">Multai<wbr>Target<wbr>Sets</a>
@@ -756,8 +711,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -766,8 +720,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -775,8 +728,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_csharp">
 <a href="#ondemandcount_csharp" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
@@ -785,8 +737,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistblockdevices_csharp">
 <a href="#persistblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Block<wbr>Devices</a>
@@ -795,8 +746,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistprivateip_csharp">
 <a href="#persistprivateip_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Private<wbr>Ip</a>
@@ -805,8 +755,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistrootdevice_csharp">
 <a href="#persistrootdevice_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Root<wbr>Device</a>
@@ -815,8 +764,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_csharp">
 <a href="#placementtenancy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -825,8 +773,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_csharp">
 <a href="#preferredavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -836,8 +783,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateips_csharp">
 <a href="#privateips_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ips</a>
@@ -846,8 +792,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -857,8 +802,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_csharp">
 <a href="#reverttospot_csharp" style="color: inherit; text-decoration: inherit;">Revert<wbr>To<wbr>Spot</a>
@@ -867,8 +811,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_csharp">
 <a href="#scalingdownpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
@@ -876,8 +819,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingstrategies_csharp">
 <a href="#scalingstrategies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Strategies</a>
@@ -886,8 +828,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingtargetpolicies_csharp">
 <a href="#scalingtargetpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Target<wbr>Policies</a>
@@ -895,8 +836,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_csharp">
 <a href="#scalinguppolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
@@ -904,8 +844,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_csharp">
 <a href="#scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -913,8 +852,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_csharp">
 <a href="#shutdownscript_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
@@ -923,8 +861,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signals_csharp">
 <a href="#signals_csharp" style="color: inherit; text-decoration: inherit;">Signals</a>
@@ -932,8 +869,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Signal<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_csharp">
 <a href="#spotpercentage_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -942,8 +878,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statefuldeallocation_csharp">
 <a href="#statefuldeallocation_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Deallocation</a>
@@ -951,8 +886,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -962,8 +896,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -972,8 +905,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_csharp">
 <a href="#targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -982,8 +914,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_csharp">
 <a href="#updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -991,8 +922,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1001,8 +931,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizecommitments_csharp">
 <a href="#utilizecommitments_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -1010,8 +939,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizereservedinstances_csharp">
 <a href="#utilizereservedinstances_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -1020,8 +948,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforcapacity_csharp">
 <a href="#waitforcapacity_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity</a>
@@ -1030,8 +957,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforcapacitytimeout_csharp">
 <a href="#waitforcapacitytimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -1040,13 +966,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fallbacktoondemand_go">
 <a href="#fallbacktoondemand_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -1055,8 +979,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetypesondemand_go">
 <a href="#instancetypesondemand_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
@@ -1065,8 +988,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetypesspots_go">
 <a href="#instancetypesspots_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
@@ -1075,8 +997,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orientation_go">
 <a href="#orientation_go" style="color: inherit; text-decoration: inherit;">Orientation</a>
@@ -1085,8 +1006,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1096,8 +1016,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1106,8 +1025,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1118,8 +1036,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockdevicesmode_go">
 <a href="#blockdevicesmode_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
@@ -1128,8 +1045,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityunit_go">
 <a href="#capacityunit_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Unit</a>
@@ -1138,8 +1054,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_go">
 <a href="#cpucredits_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -1148,8 +1063,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuoptions_go">
 <a href="#cpuoptions_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
@@ -1158,8 +1072,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1168,8 +1081,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
 <a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -1178,8 +1090,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_go">
 <a href="#drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -1188,8 +1099,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_go">
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -1197,8 +1107,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">[]Elastigroup<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -1207,8 +1116,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticips_go">
 <a href="#elasticips_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ips</a>
@@ -1217,8 +1125,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticloadbalancers_go">
 <a href="#elasticloadbalancers_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancers</a>
@@ -1227,8 +1134,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemonitoring_go">
 <a href="#enablemonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -1237,8 +1143,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_go">
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -1246,8 +1151,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">[]Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_go">
 <a href="#healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -1256,8 +1160,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_go">
 <a href="#healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -1266,8 +1169,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckunhealthydurationbeforereplacement_go">
 <a href="#healthcheckunhealthydurationbeforereplacement_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Unhealthy<wbr>Duration<wbr>Before<wbr>Replacement</a>
@@ -1276,8 +1178,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_go">
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -1286,8 +1187,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1296,8 +1196,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypespreferredspots_go">
 <a href="#instancetypespreferredspots_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preferred<wbr>Spots</a>
@@ -1306,8 +1205,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypesweights_go">
 <a href="#instancetypesweights_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Weights</a>
@@ -1316,8 +1214,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">[]Elastigroup<wbr>Instance<wbr>Types<wbr>Weight</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationbeanstalk_go">
 <a href="#integrationbeanstalk_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Beanstalk</a>
@@ -1325,8 +1222,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationcodedeploy_go">
 <a href="#integrationcodedeploy_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Codedeploy</a>
@@ -1335,8 +1231,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationdockerswarm_go">
 <a href="#integrationdockerswarm_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
@@ -1345,8 +1240,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationecs_go">
 <a href="#integrationecs_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Ecs</a>
@@ -1355,8 +1249,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationgitlab_go">
 <a href="#integrationgitlab_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gitlab</a>
@@ -1365,8 +1258,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationkubernetes_go">
 <a href="#integrationkubernetes_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Kubernetes</a>
@@ -1375,8 +1267,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmesosphere_go">
 <a href="#integrationmesosphere_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Mesosphere</a>
@@ -1385,8 +1276,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmultairuntime_go">
 <a href="#integrationmultairuntime_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Multai<wbr>Runtime</a>
@@ -1395,8 +1285,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationnomad_go">
 <a href="#integrationnomad_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Nomad</a>
@@ -1405,8 +1294,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationrancher_go">
 <a href="#integrationrancher_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Rancher</a>
@@ -1415,8 +1303,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationroute53_go">
 <a href="#integrationroute53_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Route53</a>
@@ -1425,8 +1312,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1435,8 +1321,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeperiod_go">
 <a href="#lifetimeperiod_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Period</a>
@@ -1444,8 +1329,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
 <a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -1454,8 +1338,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_go">
 <a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -1464,8 +1347,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_go">
 <a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -1474,8 +1356,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminstancelifetime_go">
 <a href="#minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
@@ -1484,8 +1365,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multaitargetsets_go">
 <a href="#multaitargetsets_go" style="color: inherit; text-decoration: inherit;">Multai<wbr>Target<wbr>Sets</a>
@@ -1494,8 +1374,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">[]Elastigroup<wbr>Multai<wbr>Target<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1504,8 +1383,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -1513,8 +1391,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">[]Elastigroup<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_go">
 <a href="#ondemandcount_go" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
@@ -1523,8 +1400,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistblockdevices_go">
 <a href="#persistblockdevices_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Block<wbr>Devices</a>
@@ -1533,8 +1409,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistprivateip_go">
 <a href="#persistprivateip_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Private<wbr>Ip</a>
@@ -1543,8 +1418,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistrootdevice_go">
 <a href="#persistrootdevice_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Root<wbr>Device</a>
@@ -1553,8 +1427,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_go">
 <a href="#placementtenancy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -1563,8 +1436,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_go">
 <a href="#preferredavailabilityzones_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -1574,8 +1446,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateips_go">
 <a href="#privateips_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ips</a>
@@ -1584,8 +1455,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1595,8 +1465,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_go">
 <a href="#reverttospot_go" style="color: inherit; text-decoration: inherit;">Revert<wbr>To<wbr>Spot</a>
@@ -1605,8 +1474,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_go">
 <a href="#scalingdownpolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
@@ -1614,8 +1482,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingstrategies_go">
 <a href="#scalingstrategies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Strategies</a>
@@ -1624,8 +1491,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">[]Elastigroup<wbr>Scaling<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingtargetpolicies_go">
 <a href="#scalingtargetpolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Target<wbr>Policies</a>
@@ -1633,8 +1499,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">[]Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_go">
 <a href="#scalinguppolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
@@ -1642,8 +1507,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_go">
 <a href="#scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -1651,8 +1515,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_go">
 <a href="#shutdownscript_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
@@ -1661,8 +1524,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signals_go">
 <a href="#signals_go" style="color: inherit; text-decoration: inherit;">Signals</a>
@@ -1670,8 +1532,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">[]Elastigroup<wbr>Signal</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_go">
 <a href="#spotpercentage_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -1680,8 +1541,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statefuldeallocation_go">
 <a href="#statefuldeallocation_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Deallocation</a>
@@ -1689,8 +1549,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -1700,8 +1559,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1710,8 +1568,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">[]Elastigroup<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_go">
 <a href="#targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -1720,8 +1577,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_go">
 <a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -1729,8 +1585,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1739,8 +1594,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizecommitments_go">
 <a href="#utilizecommitments_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -1748,8 +1602,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizereservedinstances_go">
 <a href="#utilizereservedinstances_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -1758,8 +1611,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforcapacity_go">
 <a href="#waitforcapacity_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity</a>
@@ -1768,8 +1620,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforcapacitytimeout_go">
 <a href="#waitforcapacitytimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -1778,13 +1629,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fallbacktoondemand_nodejs">
 <a href="#fallbacktoondemand_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>To<wbr>Ondemand</a>
@@ -1793,8 +1642,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetypesondemand_nodejs">
 <a href="#instancetypesondemand_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Ondemand</a>
@@ -1803,8 +1651,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetypesspots_nodejs">
 <a href="#instancetypesspots_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Spots</a>
@@ -1813,8 +1660,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orientation_nodejs">
 <a href="#orientation_nodejs" style="color: inherit; text-decoration: inherit;">orientation</a>
@@ -1823,8 +1669,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1834,8 +1679,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1844,8 +1688,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -1856,8 +1699,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockdevicesmode_nodejs">
 <a href="#blockdevicesmode_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Devices<wbr>Mode</a>
@@ -1866,8 +1708,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacityunit_nodejs">
 <a href="#capacityunit_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Unit</a>
@@ -1876,8 +1717,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucredits_nodejs">
 <a href="#cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
@@ -1886,8 +1726,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuoptions_nodejs">
 <a href="#cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
@@ -1896,8 +1735,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1906,8 +1744,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -1916,8 +1753,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_nodejs">
 <a href="#drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
@@ -1926,8 +1762,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_nodejs">
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -1935,8 +1770,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -1945,8 +1779,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticips_nodejs">
 <a href="#elasticips_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ips</a>
@@ -1955,8 +1788,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticloadbalancers_nodejs">
 <a href="#elasticloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancers</a>
@@ -1965,8 +1797,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemonitoring_nodejs">
 <a href="#enablemonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Monitoring</a>
@@ -1975,8 +1806,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -1984,8 +1814,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_nodejs">
 <a href="#healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -1994,8 +1823,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_nodejs">
 <a href="#healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
@@ -2004,8 +1832,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckunhealthydurationbeforereplacement_nodejs">
 <a href="#healthcheckunhealthydurationbeforereplacement_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Unhealthy<wbr>Duration<wbr>Before<wbr>Replacement</a>
@@ -2014,8 +1841,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_nodejs">
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -2024,8 +1850,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2034,8 +1859,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypespreferredspots_nodejs">
 <a href="#instancetypespreferredspots_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Preferred<wbr>Spots</a>
@@ -2044,8 +1868,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetypesweights_nodejs">
 <a href="#instancetypesweights_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Weights</a>
@@ -2054,8 +1877,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight[]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationbeanstalk_nodejs">
 <a href="#integrationbeanstalk_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Beanstalk</a>
@@ -2063,8 +1885,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationcodedeploy_nodejs">
 <a href="#integrationcodedeploy_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Codedeploy</a>
@@ -2073,8 +1894,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationdockerswarm_nodejs">
 <a href="#integrationdockerswarm_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Docker<wbr>Swarm</a>
@@ -2083,8 +1903,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationecs_nodejs">
 <a href="#integrationecs_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Ecs</a>
@@ -2093,8 +1912,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationgitlab_nodejs">
 <a href="#integrationgitlab_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Gitlab</a>
@@ -2103,8 +1921,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationkubernetes_nodejs">
 <a href="#integrationkubernetes_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Kubernetes</a>
@@ -2113,8 +1930,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmesosphere_nodejs">
 <a href="#integrationmesosphere_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Mesosphere</a>
@@ -2123,8 +1939,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmultairuntime_nodejs">
 <a href="#integrationmultairuntime_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Multai<wbr>Runtime</a>
@@ -2133,8 +1948,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationnomad_nodejs">
 <a href="#integrationnomad_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Nomad</a>
@@ -2143,8 +1957,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationrancher_nodejs">
 <a href="#integrationrancher_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Rancher</a>
@@ -2153,8 +1966,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationroute53_nodejs">
 <a href="#integrationroute53_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Route53</a>
@@ -2163,8 +1975,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -2173,8 +1984,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeperiod_nodejs">
 <a href="#lifetimeperiod_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Period</a>
@@ -2182,8 +1992,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -2192,8 +2001,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_nodejs">
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
@@ -2202,8 +2010,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minsize_nodejs">
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -2212,8 +2019,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminstancelifetime_nodejs">
 <a href="#minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
@@ -2222,8 +2028,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multaitargetsets_nodejs">
 <a href="#multaitargetsets_nodejs" style="color: inherit; text-decoration: inherit;">multai<wbr>Target<wbr>Sets</a>
@@ -2232,8 +2037,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2242,8 +2046,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -2251,8 +2054,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_nodejs">
 <a href="#ondemandcount_nodejs" style="color: inherit; text-decoration: inherit;">ondemand<wbr>Count</a>
@@ -2261,8 +2063,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistblockdevices_nodejs">
 <a href="#persistblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Block<wbr>Devices</a>
@@ -2271,8 +2072,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistprivateip_nodejs">
 <a href="#persistprivateip_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Private<wbr>Ip</a>
@@ -2281,8 +2081,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistrootdevice_nodejs">
 <a href="#persistrootdevice_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Root<wbr>Device</a>
@@ -2291,8 +2090,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_nodejs">
 <a href="#placementtenancy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Tenancy</a>
@@ -2301,8 +2099,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredavailabilityzones_nodejs">
 <a href="#preferredavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Availability<wbr>Zones</a>
@@ -2312,8 +2109,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateips_nodejs">
 <a href="#privateips_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ips</a>
@@ -2322,8 +2118,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2333,8 +2128,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_nodejs">
 <a href="#reverttospot_nodejs" style="color: inherit; text-decoration: inherit;">revert<wbr>To<wbr>Spot</a>
@@ -2343,8 +2137,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_nodejs">
 <a href="#scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
@@ -2352,8 +2145,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingstrategies_nodejs">
 <a href="#scalingstrategies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Strategies</a>
@@ -2362,8 +2154,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingtargetpolicies_nodejs">
 <a href="#scalingtargetpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Target<wbr>Policies</a>
@@ -2371,8 +2162,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_nodejs">
 <a href="#scalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Up<wbr>Policies</a>
@@ -2380,8 +2170,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_nodejs">
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
@@ -2389,8 +2178,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_nodejs">
 <a href="#shutdownscript_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Script</a>
@@ -2399,8 +2187,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signals_nodejs">
 <a href="#signals_nodejs" style="color: inherit; text-decoration: inherit;">signals</a>
@@ -2408,8 +2195,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">Elastigroup<wbr>Signal[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotpercentage_nodejs">
 <a href="#spotpercentage_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Percentage</a>
@@ -2418,8 +2204,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statefuldeallocation_nodejs">
 <a href="#statefuldeallocation_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Deallocation</a>
@@ -2427,8 +2212,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -2438,8 +2222,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2448,8 +2231,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">Elastigroup<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_nodejs">
 <a href="#targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
@@ -2458,8 +2240,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_nodejs">
 <a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
@@ -2467,8 +2248,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -2477,8 +2257,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizecommitments_nodejs">
 <a href="#utilizecommitments_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Commitments</a>
@@ -2486,8 +2265,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilizereservedinstances_nodejs">
 <a href="#utilizereservedinstances_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Reserved<wbr>Instances</a>
@@ -2496,8 +2274,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforcapacity_nodejs">
 <a href="#waitforcapacity_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Capacity</a>
@@ -2506,8 +2283,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforcapacitytimeout_nodejs">
 <a href="#waitforcapacitytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -2516,13 +2292,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fallback_to_ondemand_python">
 <a href="#fallback_to_ondemand_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>to_<wbr>ondemand</a>
@@ -2531,8 +2305,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_types_ondemand_python">
 <a href="#instance_types_ondemand_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>ondemand</a>
@@ -2541,8 +2314,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_types_spots_python">
 <a href="#instance_types_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>spots</a>
@@ -2551,8 +2323,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orientation_python">
 <a href="#orientation_python" style="color: inherit; text-decoration: inherit;">orientation</a>
@@ -2561,8 +2332,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -2572,8 +2342,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2582,8 +2351,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -2594,8 +2362,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_devices_mode_python">
 <a href="#block_devices_mode_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices_<wbr>mode</a>
@@ -2604,8 +2371,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_unit_python">
 <a href="#capacity_unit_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>unit</a>
@@ -2614,8 +2380,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_credits_python">
 <a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
@@ -2624,8 +2389,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_options_python">
 <a href="#cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
@@ -2634,8 +2398,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2644,8 +2407,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -2654,8 +2416,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="draining_timeout_python">
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
@@ -2664,8 +2425,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_block_devices_python">
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -2673,8 +2433,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">Sequence[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -2683,8 +2442,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elastic_ips_python">
 <a href="#elastic_ips_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ips</a>
@@ -2693,8 +2451,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elastic_load_balancers_python">
 <a href="#elastic_load_balancers_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancers</a>
@@ -2703,8 +2460,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_monitoring_python">
 <a href="#enable_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>monitoring</a>
@@ -2713,8 +2469,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_block_devices_python">
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -2722,8 +2477,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">Sequence[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_grace_period_python">
 <a href="#health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
@@ -2732,8 +2486,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_type_python">
 <a href="#health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
@@ -2742,8 +2495,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_unhealthy_duration_before_replacement_python">
 <a href="#health_check_unhealthy_duration_before_replacement_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>unhealthy_<wbr>duration_<wbr>before_<wbr>replacement</a>
@@ -2752,8 +2504,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_python">
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -2762,8 +2513,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2772,8 +2522,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_types_preferred_spots_python">
 <a href="#instance_types_preferred_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preferred_<wbr>spots</a>
@@ -2782,8 +2531,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_types_weights_python">
 <a href="#instance_types_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>weights</a>
@@ -2792,8 +2540,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_beanstalk_python">
 <a href="#integration_beanstalk_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>beanstalk</a>
@@ -2801,8 +2548,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_codedeploy_python">
 <a href="#integration_codedeploy_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>codedeploy</a>
@@ -2811,8 +2557,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_docker_swarm_python">
 <a href="#integration_docker_swarm_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>docker_<wbr>swarm</a>
@@ -2821,8 +2566,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_ecs_python">
 <a href="#integration_ecs_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>ecs</a>
@@ -2831,8 +2575,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_gitlab_python">
 <a href="#integration_gitlab_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>gitlab</a>
@@ -2841,8 +2584,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_kubernetes_python">
 <a href="#integration_kubernetes_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>kubernetes</a>
@@ -2851,8 +2593,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_mesosphere_python">
 <a href="#integration_mesosphere_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>mesosphere</a>
@@ -2861,8 +2602,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_multai_runtime_python">
 <a href="#integration_multai_runtime_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>multai_<wbr>runtime</a>
@@ -2871,8 +2611,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_nomad_python">
 <a href="#integration_nomad_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>nomad</a>
@@ -2881,8 +2620,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_rancher_python">
 <a href="#integration_rancher_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>rancher</a>
@@ -2891,8 +2629,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_route53_python">
 <a href="#integration_route53_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>route53</a>
@@ -2901,8 +2638,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -2911,8 +2647,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_period_python">
 <a href="#lifetime_period_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>period</a>
@@ -2920,8 +2655,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -2930,8 +2664,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_options_python">
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
@@ -2940,8 +2673,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_size_python">
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -2950,8 +2682,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_instance_lifetime_python">
 <a href="#minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
@@ -2960,8 +2691,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multai_target_sets_python">
 <a href="#multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
@@ -2970,8 +2700,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">Sequence[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2980,8 +2709,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -2989,8 +2717,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondemand_count_python">
 <a href="#ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
@@ -2999,8 +2726,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persist_block_devices_python">
 <a href="#persist_block_devices_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>block_<wbr>devices</a>
@@ -3009,8 +2735,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persist_private_ip_python">
 <a href="#persist_private_ip_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>private_<wbr>ip</a>
@@ -3019,8 +2744,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persist_root_device_python">
 <a href="#persist_root_device_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>root_<wbr>device</a>
@@ -3029,8 +2753,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_tenancy_python">
 <a href="#placement_tenancy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>tenancy</a>
@@ -3039,8 +2762,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_availability_zones_python">
 <a href="#preferred_availability_zones_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>availability_<wbr>zones</a>
@@ -3050,8 +2772,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ips_python">
 <a href="#private_ips_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ips</a>
@@ -3060,8 +2781,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3071,8 +2791,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revert_to_spot_python">
 <a href="#revert_to_spot_python" style="color: inherit; text-decoration: inherit;">revert_<wbr>to_<wbr>spot</a>
@@ -3081,8 +2800,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_down_policies_python">
 <a href="#scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
@@ -3090,8 +2808,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_strategies_python">
 <a href="#scaling_strategies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>strategies</a>
@@ -3100,8 +2817,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">Sequence[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_target_policies_python">
 <a href="#scaling_target_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>target_<wbr>policies</a>
@@ -3109,8 +2825,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_up_policies_python">
 <a href="#scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
@@ -3118,8 +2833,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduled_tasks_python">
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
@@ -3127,8 +2841,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shutdown_script_python">
 <a href="#shutdown_script_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>script</a>
@@ -3137,8 +2850,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signals_python">
 <a href="#signals_python" style="color: inherit; text-decoration: inherit;">signals</a>
@@ -3146,8 +2858,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">Sequence[Elastigroup<wbr>Signal<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_percentage_python">
 <a href="#spot_percentage_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>percentage</a>
@@ -3156,8 +2867,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateful_deallocation_python">
 <a href="#stateful_deallocation_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>deallocation</a>
@@ -3165,8 +2875,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -3176,8 +2885,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3186,8 +2894,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">Sequence[Elastigroup<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_group_arns_python">
 <a href="#target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
@@ -3196,8 +2903,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_policy_python">
 <a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
@@ -3205,8 +2911,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -3215,8 +2920,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilize_commitments_python">
 <a href="#utilize_commitments_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>commitments</a>
@@ -3224,8 +2928,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="utilize_reserved_instances_python">
 <a href="#utilize_reserved_instances_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>reserved_<wbr>instances</a>
@@ -3234,8 +2937,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_capacity_python">
 <a href="#wait_for_capacity_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity</a>
@@ -3244,8 +2946,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_capacity_timeout_python">
 <a href="#wait_for_capacity_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity_<wbr>timeout</a>
@@ -3254,8 +2955,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3266,8 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3275,13 +2974,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3289,13 +2986,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3303,13 +2998,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3317,8 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3445,8 +3137,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -3457,8 +3148,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockdevicesmode_csharp">
 <a href="#state_blockdevicesmode_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
@@ -3467,8 +3157,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacityunit_csharp">
 <a href="#state_capacityunit_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Unit</a>
@@ -3477,8 +3166,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_csharp">
 <a href="#state_cpucredits_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -3487,8 +3175,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuoptions_csharp">
 <a href="#state_cpuoptions_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
@@ -3497,8 +3184,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3507,8 +3193,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_csharp">
 <a href="#state_desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -3517,8 +3202,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_csharp">
 <a href="#state_drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -3527,8 +3211,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_csharp">
 <a href="#state_ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -3536,8 +3219,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_csharp">
 <a href="#state_ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -3546,8 +3228,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticips_csharp">
 <a href="#state_elasticips_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ips</a>
@@ -3556,8 +3237,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticloadbalancers_csharp">
 <a href="#state_elasticloadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancers</a>
@@ -3566,8 +3246,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablemonitoring_csharp">
 <a href="#state_enablemonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -3576,8 +3255,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_csharp">
 <a href="#state_ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -3585,8 +3263,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_csharp">
 <a href="#state_fallbacktoondemand_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -3595,8 +3272,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_csharp">
 <a href="#state_healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -3605,8 +3281,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_csharp">
 <a href="#state_healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -3615,8 +3290,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckunhealthydurationbeforereplacement_csharp">
 <a href="#state_healthcheckunhealthydurationbeforereplacement_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Unhealthy<wbr>Duration<wbr>Before<wbr>Replacement</a>
@@ -3625,8 +3299,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_csharp">
 <a href="#state_iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -3635,8 +3308,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -3645,8 +3317,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesondemand_csharp">
 <a href="#state_instancetypesondemand_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
@@ -3655,8 +3326,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypespreferredspots_csharp">
 <a href="#state_instancetypespreferredspots_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preferred<wbr>Spots</a>
@@ -3665,8 +3335,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesspots_csharp">
 <a href="#state_instancetypesspots_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
@@ -3675,8 +3344,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesweights_csharp">
 <a href="#state_instancetypesweights_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Weights</a>
@@ -3685,8 +3353,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationbeanstalk_csharp">
 <a href="#state_integrationbeanstalk_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Beanstalk</a>
@@ -3694,8 +3361,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationcodedeploy_csharp">
 <a href="#state_integrationcodedeploy_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Codedeploy</a>
@@ -3704,8 +3370,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationdockerswarm_csharp">
 <a href="#state_integrationdockerswarm_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
@@ -3714,8 +3379,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationecs_csharp">
 <a href="#state_integrationecs_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Ecs</a>
@@ -3724,8 +3388,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationgitlab_csharp">
 <a href="#state_integrationgitlab_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gitlab</a>
@@ -3734,8 +3397,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkubernetes_csharp">
 <a href="#state_integrationkubernetes_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Kubernetes</a>
@@ -3744,8 +3406,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmesosphere_csharp">
 <a href="#state_integrationmesosphere_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Mesosphere</a>
@@ -3754,8 +3415,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmultairuntime_csharp">
 <a href="#state_integrationmultairuntime_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Multai<wbr>Runtime</a>
@@ -3764,8 +3424,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationnomad_csharp">
 <a href="#state_integrationnomad_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Nomad</a>
@@ -3774,8 +3433,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationrancher_csharp">
 <a href="#state_integrationrancher_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Rancher</a>
@@ -3784,8 +3442,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationroute53_csharp">
 <a href="#state_integrationroute53_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Route53</a>
@@ -3794,8 +3451,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
 <a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -3804,8 +3460,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimeperiod_csharp">
 <a href="#state_lifetimeperiod_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Period</a>
@@ -3813,8 +3468,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_csharp">
 <a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -3823,8 +3477,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_csharp">
 <a href="#state_metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -3833,8 +3486,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minsize_csharp">
 <a href="#state_minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -3843,8 +3495,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimuminstancelifetime_csharp">
 <a href="#state_minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
@@ -3853,8 +3504,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multaitargetsets_csharp">
 <a href="#state_multaitargetsets_csharp" style="color: inherit; text-decoration: inherit;">Multai<wbr>Target<wbr>Sets</a>
@@ -3863,8 +3513,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3873,8 +3522,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_csharp">
 <a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -3882,8 +3530,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_csharp">
 <a href="#state_ondemandcount_csharp" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
@@ -3892,8 +3539,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orientation_csharp">
 <a href="#state_orientation_csharp" style="color: inherit; text-decoration: inherit;">Orientation</a>
@@ -3902,8 +3548,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_csharp">
 <a href="#state_persistblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Block<wbr>Devices</a>
@@ -3912,8 +3557,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistprivateip_csharp">
 <a href="#state_persistprivateip_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Private<wbr>Ip</a>
@@ -3922,8 +3566,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistrootdevice_csharp">
 <a href="#state_persistrootdevice_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Root<wbr>Device</a>
@@ -3932,8 +3575,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementtenancy_csharp">
 <a href="#state_placementtenancy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -3942,8 +3584,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_csharp">
 <a href="#state_preferredavailabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -3953,8 +3594,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateips_csharp">
 <a href="#state_privateips_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ips</a>
@@ -3963,8 +3603,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_csharp">
 <a href="#state_product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -3974,8 +3613,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3985,8 +3623,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_csharp">
 <a href="#state_reverttospot_csharp" style="color: inherit; text-decoration: inherit;">Revert<wbr>To<wbr>Spot</a>
@@ -3995,8 +3632,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_csharp">
 <a href="#state_scalingdownpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
@@ -4004,8 +3640,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingstrategies_csharp">
 <a href="#state_scalingstrategies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Strategies</a>
@@ -4014,8 +3649,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingtargetpolicies_csharp">
 <a href="#state_scalingtargetpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Target<wbr>Policies</a>
@@ -4023,8 +3657,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_csharp">
 <a href="#state_scalinguppolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
@@ -4032,8 +3665,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_csharp">
 <a href="#state_scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -4041,8 +3673,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_csharp">
 <a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -4051,8 +3682,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_csharp">
 <a href="#state_shutdownscript_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
@@ -4061,8 +3691,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signals_csharp">
 <a href="#state_signals_csharp" style="color: inherit; text-decoration: inherit;">Signals</a>
@@ -4070,8 +3699,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Signal<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotpercentage_csharp">
 <a href="#state_spotpercentage_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -4080,8 +3708,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statefuldeallocation_csharp">
 <a href="#state_statefuldeallocation_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Deallocation</a>
@@ -4089,8 +3716,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_csharp">
 <a href="#state_subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -4100,8 +3726,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4110,8 +3735,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_csharp">
 <a href="#state_targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -4120,8 +3744,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_csharp">
 <a href="#state_updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -4129,8 +3752,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -4139,8 +3761,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizecommitments_csharp">
 <a href="#state_utilizecommitments_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -4148,8 +3769,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizereservedinstances_csharp">
 <a href="#state_utilizereservedinstances_csharp" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -4158,8 +3778,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacity_csharp">
 <a href="#state_waitforcapacity_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity</a>
@@ -4168,8 +3787,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacitytimeout_csharp">
 <a href="#state_waitforcapacitytimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -4178,13 +3796,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -4195,8 +3811,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockdevicesmode_go">
 <a href="#state_blockdevicesmode_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Devices<wbr>Mode</a>
@@ -4205,8 +3820,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacityunit_go">
 <a href="#state_capacityunit_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Unit</a>
@@ -4215,8 +3829,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_go">
 <a href="#state_cpucredits_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -4225,8 +3838,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuoptions_go">
 <a href="#state_cpuoptions_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Options</a>
@@ -4235,8 +3847,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4245,8 +3856,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
 <a href="#state_desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
@@ -4255,8 +3865,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_go">
 <a href="#state_drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -4265,8 +3874,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_go">
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -4274,8 +3882,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">[]Elastigroup<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_go">
 <a href="#state_ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -4284,8 +3891,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticips_go">
 <a href="#state_elasticips_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ips</a>
@@ -4294,8 +3900,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticloadbalancers_go">
 <a href="#state_elasticloadbalancers_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancers</a>
@@ -4304,8 +3909,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablemonitoring_go">
 <a href="#state_enablemonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -4314,8 +3918,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_go">
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -4323,8 +3926,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">[]Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_go">
 <a href="#state_fallbacktoondemand_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
@@ -4333,8 +3935,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_go">
 <a href="#state_healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -4343,8 +3944,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_go">
 <a href="#state_healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -4353,8 +3953,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckunhealthydurationbeforereplacement_go">
 <a href="#state_healthcheckunhealthydurationbeforereplacement_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Unhealthy<wbr>Duration<wbr>Before<wbr>Replacement</a>
@@ -4363,8 +3962,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_go">
 <a href="#state_iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -4373,8 +3971,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -4383,8 +3980,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesondemand_go">
 <a href="#state_instancetypesondemand_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
@@ -4393,8 +3989,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypespreferredspots_go">
 <a href="#state_instancetypespreferredspots_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preferred<wbr>Spots</a>
@@ -4403,8 +3998,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesspots_go">
 <a href="#state_instancetypesspots_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Spots</a>
@@ -4413,8 +4007,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesweights_go">
 <a href="#state_instancetypesweights_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Weights</a>
@@ -4423,8 +4016,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">[]Elastigroup<wbr>Instance<wbr>Types<wbr>Weight</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationbeanstalk_go">
 <a href="#state_integrationbeanstalk_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Beanstalk</a>
@@ -4432,8 +4024,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationcodedeploy_go">
 <a href="#state_integrationcodedeploy_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Codedeploy</a>
@@ -4442,8 +4033,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationdockerswarm_go">
 <a href="#state_integrationdockerswarm_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
@@ -4452,8 +4042,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationecs_go">
 <a href="#state_integrationecs_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Ecs</a>
@@ -4462,8 +4051,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationgitlab_go">
 <a href="#state_integrationgitlab_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gitlab</a>
@@ -4472,8 +4060,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkubernetes_go">
 <a href="#state_integrationkubernetes_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Kubernetes</a>
@@ -4482,8 +4069,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmesosphere_go">
 <a href="#state_integrationmesosphere_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Mesosphere</a>
@@ -4492,8 +4078,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmultairuntime_go">
 <a href="#state_integrationmultairuntime_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Multai<wbr>Runtime</a>
@@ -4502,8 +4087,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationnomad_go">
 <a href="#state_integrationnomad_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Nomad</a>
@@ -4512,8 +4096,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationrancher_go">
 <a href="#state_integrationrancher_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Rancher</a>
@@ -4522,8 +4105,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationroute53_go">
 <a href="#state_integrationroute53_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Route53</a>
@@ -4532,8 +4114,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_go">
 <a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -4542,8 +4123,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimeperiod_go">
 <a href="#state_lifetimeperiod_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Period</a>
@@ -4551,8 +4131,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_go">
 <a href="#state_maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
@@ -4561,8 +4140,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_go">
 <a href="#state_metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -4571,8 +4149,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minsize_go">
 <a href="#state_minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
@@ -4581,8 +4158,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimuminstancelifetime_go">
 <a href="#state_minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
@@ -4591,8 +4167,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multaitargetsets_go">
 <a href="#state_multaitargetsets_go" style="color: inherit; text-decoration: inherit;">Multai<wbr>Target<wbr>Sets</a>
@@ -4601,8 +4176,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">[]Elastigroup<wbr>Multai<wbr>Target<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4611,8 +4185,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_go">
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -4620,8 +4193,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">[]Elastigroup<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_go">
 <a href="#state_ondemandcount_go" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
@@ -4630,8 +4202,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orientation_go">
 <a href="#state_orientation_go" style="color: inherit; text-decoration: inherit;">Orientation</a>
@@ -4640,8 +4211,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_go">
 <a href="#state_persistblockdevices_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Block<wbr>Devices</a>
@@ -4650,8 +4220,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistprivateip_go">
 <a href="#state_persistprivateip_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Private<wbr>Ip</a>
@@ -4660,8 +4229,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistrootdevice_go">
 <a href="#state_persistrootdevice_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Root<wbr>Device</a>
@@ -4670,8 +4238,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementtenancy_go">
 <a href="#state_placementtenancy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -4680,8 +4247,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_go">
 <a href="#state_preferredavailabilityzones_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Availability<wbr>Zones</a>
@@ -4691,8 +4257,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateips_go">
 <a href="#state_privateips_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ips</a>
@@ -4701,8 +4266,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_go">
 <a href="#state_product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -4712,8 +4276,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -4723,8 +4286,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_go">
 <a href="#state_reverttospot_go" style="color: inherit; text-decoration: inherit;">Revert<wbr>To<wbr>Spot</a>
@@ -4733,8 +4295,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_go">
 <a href="#state_scalingdownpolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
@@ -4742,8 +4303,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingstrategies_go">
 <a href="#state_scalingstrategies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Strategies</a>
@@ -4752,8 +4312,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">[]Elastigroup<wbr>Scaling<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingtargetpolicies_go">
 <a href="#state_scalingtargetpolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Target<wbr>Policies</a>
@@ -4761,8 +4320,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">[]Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_go">
 <a href="#state_scalinguppolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
@@ -4770,8 +4328,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_go">
 <a href="#state_scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
@@ -4779,8 +4336,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_go">
 <a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -4789,8 +4345,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_go">
 <a href="#state_shutdownscript_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
@@ -4799,8 +4354,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signals_go">
 <a href="#state_signals_go" style="color: inherit; text-decoration: inherit;">Signals</a>
@@ -4808,8 +4362,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">[]Elastigroup<wbr>Signal</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotpercentage_go">
 <a href="#state_spotpercentage_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
@@ -4818,8 +4371,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statefuldeallocation_go">
 <a href="#state_statefuldeallocation_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Deallocation</a>
@@ -4827,8 +4379,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_go">
 <a href="#state_subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -4838,8 +4389,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4848,8 +4398,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">[]Elastigroup<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_go">
 <a href="#state_targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -4858,8 +4407,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_go">
 <a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -4867,8 +4415,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -4877,8 +4424,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizecommitments_go">
 <a href="#state_utilizecommitments_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Commitments</a>
@@ -4886,8 +4432,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizereservedinstances_go">
 <a href="#state_utilizereservedinstances_go" style="color: inherit; text-decoration: inherit;">Utilize<wbr>Reserved<wbr>Instances</a>
@@ -4896,8 +4441,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacity_go">
 <a href="#state_waitforcapacity_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity</a>
@@ -4906,8 +4450,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacitytimeout_go">
 <a href="#state_waitforcapacitytimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -4916,13 +4459,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -4933,8 +4474,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockdevicesmode_nodejs">
 <a href="#state_blockdevicesmode_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Devices<wbr>Mode</a>
@@ -4943,8 +4483,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacityunit_nodejs">
 <a href="#state_capacityunit_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Unit</a>
@@ -4953,8 +4492,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpucredits_nodejs">
 <a href="#state_cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
@@ -4963,8 +4501,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpuoptions_nodejs">
 <a href="#state_cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
@@ -4973,8 +4510,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4983,8 +4519,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_nodejs">
 <a href="#state_desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
@@ -4993,8 +4528,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_nodejs">
 <a href="#state_drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
@@ -5003,8 +4537,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_nodejs">
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -5012,8 +4545,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_nodejs">
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -5022,8 +4554,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticips_nodejs">
 <a href="#state_elasticips_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ips</a>
@@ -5032,8 +4563,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticloadbalancers_nodejs">
 <a href="#state_elasticloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancers</a>
@@ -5042,8 +4572,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablemonitoring_nodejs">
 <a href="#state_enablemonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Monitoring</a>
@@ -5052,8 +4581,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_nodejs">
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -5061,8 +4589,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_nodejs">
 <a href="#state_fallbacktoondemand_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>To<wbr>Ondemand</a>
@@ -5071,8 +4598,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_nodejs">
 <a href="#state_healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
@@ -5081,8 +4607,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_nodejs">
 <a href="#state_healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
@@ -5091,8 +4616,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckunhealthydurationbeforereplacement_nodejs">
 <a href="#state_healthcheckunhealthydurationbeforereplacement_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Unhealthy<wbr>Duration<wbr>Before<wbr>Replacement</a>
@@ -5101,8 +4625,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_nodejs">
 <a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -5111,8 +4634,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -5121,8 +4643,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesondemand_nodejs">
 <a href="#state_instancetypesondemand_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Ondemand</a>
@@ -5131,8 +4652,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypespreferredspots_nodejs">
 <a href="#state_instancetypespreferredspots_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Preferred<wbr>Spots</a>
@@ -5141,8 +4661,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesspots_nodejs">
 <a href="#state_instancetypesspots_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Spots</a>
@@ -5151,8 +4670,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesweights_nodejs">
 <a href="#state_instancetypesweights_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Weights</a>
@@ -5161,8 +4679,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight[]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationbeanstalk_nodejs">
 <a href="#state_integrationbeanstalk_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Beanstalk</a>
@@ -5170,8 +4687,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationcodedeploy_nodejs">
 <a href="#state_integrationcodedeploy_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Codedeploy</a>
@@ -5180,8 +4696,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationdockerswarm_nodejs">
 <a href="#state_integrationdockerswarm_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Docker<wbr>Swarm</a>
@@ -5190,8 +4705,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationecs_nodejs">
 <a href="#state_integrationecs_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Ecs</a>
@@ -5200,8 +4714,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationgitlab_nodejs">
 <a href="#state_integrationgitlab_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Gitlab</a>
@@ -5210,8 +4723,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkubernetes_nodejs">
 <a href="#state_integrationkubernetes_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Kubernetes</a>
@@ -5220,8 +4732,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmesosphere_nodejs">
 <a href="#state_integrationmesosphere_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Mesosphere</a>
@@ -5230,8 +4741,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationmultairuntime_nodejs">
 <a href="#state_integrationmultairuntime_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Multai<wbr>Runtime</a>
@@ -5240,8 +4750,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationnomad_nodejs">
 <a href="#state_integrationnomad_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Nomad</a>
@@ -5250,8 +4759,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationrancher_nodejs">
 <a href="#state_integrationrancher_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Rancher</a>
@@ -5260,8 +4768,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationroute53_nodejs">
 <a href="#state_integrationroute53_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Route53</a>
@@ -5270,8 +4777,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_nodejs">
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -5280,8 +4786,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetimeperiod_nodejs">
 <a href="#state_lifetimeperiod_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Period</a>
@@ -5289,8 +4794,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_nodejs">
 <a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
@@ -5299,8 +4803,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_nodejs">
 <a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
@@ -5309,8 +4812,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minsize_nodejs">
 <a href="#state_minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
@@ -5319,8 +4821,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimuminstancelifetime_nodejs">
 <a href="#state_minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
@@ -5329,8 +4830,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multaitargetsets_nodejs">
 <a href="#state_multaitargetsets_nodejs" style="color: inherit; text-decoration: inherit;">multai<wbr>Target<wbr>Sets</a>
@@ -5339,8 +4839,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5349,8 +4848,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_nodejs">
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -5358,8 +4856,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_nodejs">
 <a href="#state_ondemandcount_nodejs" style="color: inherit; text-decoration: inherit;">ondemand<wbr>Count</a>
@@ -5368,8 +4865,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orientation_nodejs">
 <a href="#state_orientation_nodejs" style="color: inherit; text-decoration: inherit;">orientation</a>
@@ -5378,8 +4874,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistblockdevices_nodejs">
 <a href="#state_persistblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Block<wbr>Devices</a>
@@ -5388,8 +4883,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistprivateip_nodejs">
 <a href="#state_persistprivateip_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Private<wbr>Ip</a>
@@ -5398,8 +4892,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistrootdevice_nodejs">
 <a href="#state_persistrootdevice_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Root<wbr>Device</a>
@@ -5408,8 +4901,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementtenancy_nodejs">
 <a href="#state_placementtenancy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Tenancy</a>
@@ -5418,8 +4910,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredavailabilityzones_nodejs">
 <a href="#state_preferredavailabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Availability<wbr>Zones</a>
@@ -5429,8 +4920,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateips_nodejs">
 <a href="#state_privateips_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ips</a>
@@ -5439,8 +4929,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_nodejs">
 <a href="#state_product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -5450,8 +4939,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -5461,8 +4949,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_nodejs">
 <a href="#state_reverttospot_nodejs" style="color: inherit; text-decoration: inherit;">revert<wbr>To<wbr>Spot</a>
@@ -5471,8 +4958,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_nodejs">
 <a href="#state_scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
@@ -5480,8 +4966,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingstrategies_nodejs">
 <a href="#state_scalingstrategies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Strategies</a>
@@ -5490,8 +4975,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingtargetpolicies_nodejs">
 <a href="#state_scalingtargetpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Target<wbr>Policies</a>
@@ -5499,8 +4983,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_nodejs">
 <a href="#state_scalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Up<wbr>Policies</a>
@@ -5508,8 +4991,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_nodejs">
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
@@ -5517,8 +4999,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_nodejs">
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -5527,8 +5008,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_nodejs">
 <a href="#state_shutdownscript_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Script</a>
@@ -5537,8 +5017,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signals_nodejs">
 <a href="#state_signals_nodejs" style="color: inherit; text-decoration: inherit;">signals</a>
@@ -5546,8 +5025,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">Elastigroup<wbr>Signal[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotpercentage_nodejs">
 <a href="#state_spotpercentage_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Percentage</a>
@@ -5556,8 +5034,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statefuldeallocation_nodejs">
 <a href="#state_statefuldeallocation_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Deallocation</a>
@@ -5565,8 +5042,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_nodejs">
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -5576,8 +5052,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5586,8 +5061,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">Elastigroup<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_nodejs">
 <a href="#state_targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
@@ -5596,8 +5070,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_nodejs">
 <a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
@@ -5605,8 +5078,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -5615,8 +5087,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizecommitments_nodejs">
 <a href="#state_utilizecommitments_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Commitments</a>
@@ -5624,8 +5095,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilizereservedinstances_nodejs">
 <a href="#state_utilizereservedinstances_nodejs" style="color: inherit; text-decoration: inherit;">utilize<wbr>Reserved<wbr>Instances</a>
@@ -5634,8 +5104,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacity_nodejs">
 <a href="#state_waitforcapacity_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Capacity</a>
@@ -5644,8 +5113,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforcapacitytimeout_nodejs">
 <a href="#state_waitforcapacitytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Capacity<wbr>Timeout</a>
@@ -5654,13 +5122,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -5671,8 +5137,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     <dd>{{% md %}}List of Strings of availability zones. When this parameter is set, `subnet_ids` should be left unused.
 Note: `availability_zones` naming syntax follows the convention `availability-zone:subnet:placement-group-name`. For example, to set an AZ in `us-east-1` with subnet `subnet-123456` and placement group `ClusterI03`, you would set:
 `availability_zones = ["us-east-1a:subnet-123456:ClusterI03"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_block_devices_mode_python">
 <a href="#state_block_devices_mode_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices_<wbr>mode</a>
@@ -5681,8 +5146,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, determine the way we attach the data volumes to the data devices, possible values: `"reattach"` and `"onLaunch"` (default is onLaunch).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_unit_python">
 <a href="#state_capacity_unit_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>unit</a>
@@ -5691,8 +5155,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The capacity unit to launch instances by. If not specified, when choosing the weight unit, each instance will weight as the number of its vCPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_credits_python">
 <a href="#state_cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
@@ -5701,8 +5164,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how T3 instances are launched. Valid values: `standard`, `unlimited`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_options_python">
 <a href="#state_cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
@@ -5711,8 +5173,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instances that are launched within the group:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -5721,8 +5182,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
@@ -5731,8 +5191,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_draining_timeout_python">
 <a href="#state_draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
@@ -5741,8 +5200,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_block_devices_python">
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -5750,8 +5208,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupebsblockdevice">Sequence[Elastigroup<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_optimized_python">
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -5760,8 +5217,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable high bandwidth connectivity between instances and AWS’s Elastic Block Store (EBS). For instance types that are EBS-optimized by default this parameter will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elastic_ips_python">
 <a href="#state_elastic_ips_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ips</a>
@@ -5770,8 +5226,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of [AWS Elastic IP](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) allocation IDs to associate to the group instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elastic_load_balancers_python">
 <a href="#state_elastic_load_balancers_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancers</a>
@@ -5780,8 +5235,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Elastic Load Balancers names (ELB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_monitoring_python">
 <a href="#state_enable_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>monitoring</a>
@@ -5790,8 +5244,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether monitoring is enabled for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_block_devices_python">
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -5799,8 +5252,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupephemeralblockdevice">Sequence[Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_to_ondemand_python">
 <a href="#state_fallback_to_ondemand_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>to_<wbr>ondemand</a>
@@ -5809,8 +5261,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of no Spot instances available, Elastigroup will launch on-demand instances instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_grace_period_python">
 <a href="#state_health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
@@ -5819,8 +5270,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to starts and check its health
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_type_python">
 <a href="#state_health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
@@ -5829,8 +5279,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_unhealthy_duration_before_replacement_python">
 <a href="#state_health_check_unhealthy_duration_before_replacement_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>unhealthy_<wbr>duration_<wbr>before_<wbr>replacement</a>
@@ -5839,8 +5288,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will wait before replacing an instance that is running and became unhealthy (this is only applicable for instances that were once healthy)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_instance_profile_python">
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -5849,8 +5297,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -5859,8 +5306,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_ondemand_python">
 <a href="#state_instance_types_ondemand_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>ondemand</a>
@@ -5869,8 +5315,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance determines your instance's CPU capacity, memory and storage (e.g., m1.small, c1.xlarge).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_preferred_spots_python">
 <a href="#state_instance_types_preferred_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preferred_<wbr>spots</a>
@@ -5879,8 +5324,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Prioritize a subset of spot instance types. Must be a subset of the selected spot instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_spots_python">
 <a href="#state_instance_types_spots_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>spots</a>
@@ -5889,8 +5333,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more instance types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_weights_python">
 <a href="#state_instance_types_weights_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>weights</a>
@@ -5899,8 +5342,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupinstancetypesweight">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Weight<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of weights per instance type for weighted groups. Each object in the list should have the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_beanstalk_python">
 <a href="#state_integration_beanstalk_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>beanstalk</a>
@@ -5908,8 +5350,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_codedeploy_python">
 <a href="#state_integration_codedeploy_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>codedeploy</a>
@@ -5918,8 +5359,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Code Deploy](https://aws.amazon.com/documentation/codedeploy/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_docker_swarm_python">
 <a href="#state_integration_docker_swarm_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>docker_<wbr>swarm</a>
@@ -5928,8 +5368,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_ecs_python">
 <a href="#state_integration_ecs_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>ecs</a>
@@ -5938,8 +5377,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [EC2 Container Service](https://aws.amazon.com/documentation/ecs/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_gitlab_python">
 <a href="#state_integration_gitlab_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>gitlab</a>
@@ -5948,8 +5386,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Gitlab](https://api.spotinst.com/integration-docs/gitlab/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_kubernetes_python">
 <a href="#state_integration_kubernetes_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>kubernetes</a>
@@ -5958,8 +5395,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_mesosphere_python">
 <a href="#state_integration_mesosphere_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>mesosphere</a>
@@ -5968,8 +5404,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Mesosphere](https://mesosphere.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_multai_runtime_python">
 <a href="#state_integration_multai_runtime_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>multai_<wbr>runtime</a>
@@ -5978,8 +5413,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_nomad_python">
 <a href="#state_integration_nomad_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>nomad</a>
@@ -5988,8 +5422,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Nomad](https://www.nomadproject.io/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_rancher_python">
 <a href="#state_integration_rancher_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>rancher</a>
@@ -5998,8 +5431,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Rancher](http://rancherlabs.com/) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_route53_python">
 <a href="#state_integration_route53_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>route53</a>
@@ -6008,8 +5440,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -6018,8 +5449,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_period_python">
 <a href="#state_lifetime_period_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>period</a>
@@ -6027,8 +5457,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_python">
 <a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
@@ -6037,8 +5466,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_options_python">
 <a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
@@ -6047,8 +5475,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data that used to configure or manage the running instances:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_size_python">
 <a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
@@ -6057,8 +5484,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_instance_lifetime_python">
 <a href="#state_minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
@@ -6067,8 +5493,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multai_target_sets_python">
 <a href="#state_multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
@@ -6077,8 +5502,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type"><a href="#elastigroupmultaitargetset">Sequence[Elastigroup<wbr>Multai<wbr>Target<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of targets to register.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6087,8 +5511,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interfaces_python">
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -6096,8 +5519,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondemand_count_python">
 <a href="#state_ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
@@ -6106,8 +5528,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of on demand instances to launch in the group. All other instances will be spot instances. When this parameter is set the `spot_percentage` parameter is being ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orientation_python">
 <a href="#state_orientation_python" style="color: inherit; text-decoration: inherit;">orientation</a>
@@ -6116,8 +5537,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Select a prediction strategy. Valid values: `"balanced"`, `"costOriented"`, `"equalAzDistribution"`, `"availabilityOriented"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persist_block_devices_python">
 <a href="#state_persist_block_devices_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>block_<wbr>devices</a>
@@ -6126,8 +5546,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its Data volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persist_private_ip_python">
 <a href="#state_persist_private_ip_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>private_<wbr>ip</a>
@@ -6136,8 +5555,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its private IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persist_root_device_python">
 <a href="#state_persist_root_device_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>root_<wbr>device</a>
@@ -6146,8 +5564,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, should the instance maintain its root device volumes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_tenancy_python">
 <a href="#state_placement_tenancy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>tenancy</a>
@@ -6156,8 +5573,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable dedicated tenancy. Note: There is a flat hourly fee for each region in which dedicated tenancy is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_availability_zones_python">
 <a href="#state_preferred_availability_zones_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>availability_<wbr>zones</a>
@@ -6167,8 +5583,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
     </dt>
     <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ips_python">
 <a href="#state_private_ips_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ips</a>
@@ -6177,8 +5592,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Private IPs to associate to the group instances.(e.g. "172.1.1.0"). Please note: This setting will only apply if persistence.persist_private_ip is set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_python">
 <a href="#state_product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -6188,8 +5602,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -6199,8 +5612,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revert_to_spot_python">
 <a href="#state_revert_to_spot_python" style="color: inherit; text-decoration: inherit;">revert_<wbr>to_<wbr>spot</a>
@@ -6209,8 +5621,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hold settings for strategy correction – replacing On-Demand for Spot instances. Supported Values: `"never"`, `"always"`, `"timeWindow"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_down_policies_python">
 <a href="#state_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
@@ -6218,8 +5629,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_strategies_python">
 <a href="#state_scaling_strategies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>strategies</a>
@@ -6228,8 +5638,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type"><a href="#elastigroupscalingstrategy">Sequence[Elastigroup<wbr>Scaling<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set termination policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_target_policies_python">
 <a href="#state_scaling_target_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>target_<wbr>policies</a>
@@ -6237,8 +5646,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingtargetpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_up_policies_python">
 <a href="#state_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
@@ -6246,8 +5654,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_tasks_python">
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
@@ -6255,8 +5662,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_groups_python">
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -6265,8 +5671,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shutdown_script_python">
 <a href="#state_shutdown_script_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>script</a>
@@ -6275,8 +5680,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signals_python">
 <a href="#state_signals_python" style="color: inherit; text-decoration: inherit;">signals</a>
@@ -6284,8 +5688,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsignal">Sequence[Elastigroup<wbr>Signal<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_percentage_python">
 <a href="#state_spot_percentage_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>percentage</a>
@@ -6294,8 +5697,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stateful_deallocation_python">
 <a href="#state_stateful_deallocation_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>deallocation</a>
@@ -6303,8 +5705,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_ids_python">
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -6314,8 +5715,7 @@ Note: This parameter is required if you specify subnets (through subnet_ids). Th
     </dt>
     <dd>{{% md %}}List of Strings of subnet identifiers.
 Note: When this parameter is set, `availability_zones` should be left unused.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -6324,8 +5724,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigrouptag">Sequence[Elastigroup<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_group_arns_python">
 <a href="#state_target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
@@ -6334,8 +5733,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Target Group ARNs to register the instances to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_policy_python">
 <a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
@@ -6343,8 +5741,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -6353,8 +5750,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilize_commitments_python">
 <a href="#state_utilize_commitments_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>commitments</a>
@@ -6362,8 +5758,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_utilize_reserved_instances_python">
 <a href="#state_utilize_reserved_instances_python" style="color: inherit; text-decoration: inherit;">utilize_<wbr>reserved_<wbr>instances</a>
@@ -6372,8 +5767,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In a case of any available reserved instances, Elastigroup will utilize them first before purchasing Spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_capacity_python">
 <a href="#state_wait_for_capacity_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity</a>
@@ -6382,8 +5776,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances in a 'HEALTHY' status that is required before continuing. This is ignored when updating with blue/green deployment. Cannot exceed `desired_capacity`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_capacity_timeout_python">
 <a href="#state_wait_for_capacity_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>capacity_<wbr>timeout</a>
@@ -6392,8 +5785,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) to wait for instances to report a 'HEALTHY' status. Useful for plans with multiple dependencies that take some time to initialize. Leave undefined or set to `0` to indicate no wait. This is ignored when updating with blue/green deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -6408,8 +5800,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <h4 id="elastigroupcpuoptions">Elastigroup<wbr>Cpu<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threadspercore_csharp">
 <a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
@@ -6418,13 +5809,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ability to define the number of threads per core in instances that allow this.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threadspercore_go">
 <a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
@@ -6433,13 +5822,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ability to define the number of threads per core in instances that allow this.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threadspercore_nodejs">
 <a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
@@ -6448,13 +5835,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ability to define the number of threads per core in instances that allow this.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threads_per_core_python">
 <a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
@@ -6463,15 +5848,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ability to define the number of threads per core in instances that allow this.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -6480,8 +5863,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -6490,8 +5872,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -6500,8 +5881,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -6510,8 +5890,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -6520,8 +5899,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID for a user managed CMK under which the EBS Volume is encrypted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -6530,8 +5908,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -6540,8 +5917,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volume_type` = gp3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -6550,8 +5926,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -6560,13 +5935,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"st1"` or `"sc1"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -6575,8 +5948,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -6585,8 +5957,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -6595,8 +5966,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -6605,8 +5975,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -6615,8 +5984,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID for a user managed CMK under which the EBS Volume is encrypted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -6625,8 +5993,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -6635,8 +6002,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volume_type` = gp3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -6645,8 +6011,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -6655,13 +6020,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"st1"` or `"sc1"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -6670,8 +6033,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -6680,8 +6042,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -6690,8 +6051,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -6700,8 +6060,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -6710,8 +6069,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID for a user managed CMK under which the EBS Volume is encrypted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -6720,8 +6078,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -6730,8 +6087,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volume_type` = gp3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -6740,8 +6096,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -6750,13 +6105,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"st1"` or `"sc1"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -6765,8 +6118,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -6775,8 +6127,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -6785,8 +6136,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -6795,8 +6145,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `"io1"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -6805,8 +6154,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID for a user managed CMK under which the EBS Volume is encrypted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -6815,8 +6163,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -6825,8 +6172,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of data transferred to or from a storage device per second, you can use this param just in a case that `volume_type` = gp3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -6835,8 +6181,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -6845,15 +6190,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"st1"` or `"sc1"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -6862,8 +6205,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -6873,13 +6215,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}The [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
 (e.g. `"ephemeral0"`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -6888,8 +6228,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -6899,13 +6238,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}The [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
 (e.g. `"ephemeral0"`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -6914,8 +6251,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
@@ -6925,13 +6261,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}The [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
 (e.g. `"ephemeral0"`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -6940,8 +6274,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_name_python">
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
@@ -6951,15 +6284,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}The [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
 (e.g. `"ephemeral0"`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -6968,8 +6299,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of instance type (String).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -6978,13 +6308,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight per instance type (Integer).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -6993,8 +6321,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of instance type (String).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -7003,13 +6330,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight per instance type (Integer).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -7018,8 +6343,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of instance type (String).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -7028,13 +6352,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight per instance type (Integer).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -7043,8 +6365,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of instance type (String).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -7053,15 +6374,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight per instance type (Integer).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentpreferences_csharp">
 <a href="#deploymentpreferences_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Preferences</a>
@@ -7070,8 +6389,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentid_csharp">
 <a href="#environmentid_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
@@ -7079,8 +6397,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedactions_csharp">
 <a href="#managedactions_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Actions</a>
@@ -7089,13 +6406,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentpreferences_go">
 <a href="#deploymentpreferences_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Preferences</a>
@@ -7104,8 +6419,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentid_go">
 <a href="#environmentid_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
@@ -7113,8 +6427,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedactions_go">
 <a href="#managedactions_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Actions</a>
@@ -7123,13 +6436,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deploymentpreferences_nodejs">
 <a href="#deploymentpreferences_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Preferences</a>
@@ -7138,8 +6449,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentid_nodejs">
 <a href="#environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
@@ -7147,8 +6457,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedactions_nodejs">
 <a href="#managedactions_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Actions</a>
@@ -7157,13 +6466,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deployment_preferences_python">
 <a href="#deployment_preferences_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>preferences</a>
@@ -7172,8 +6479,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preferences when performing a roll
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_id_python">
 <a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
@@ -7181,8 +6487,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_actions_python">
 <a href="#managed_actions_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>actions</a>
@@ -7191,15 +6496,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Actions parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="automaticroll_csharp">
 <a href="#automaticroll_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Roll</a>
@@ -7208,8 +6511,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_csharp">
 <a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -7218,8 +6520,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
 <a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -7228,8 +6529,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_csharp">
 <a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
@@ -7238,13 +6538,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="automaticroll_go">
 <a href="#automaticroll_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Roll</a>
@@ -7253,8 +6551,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_go">
 <a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -7263,8 +6560,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
 <a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -7273,8 +6569,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_go">
 <a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
@@ -7283,13 +6578,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="automaticroll_nodejs">
 <a href="#automaticroll_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Roll</a>
@@ -7298,8 +6591,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_nodejs">
 <a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
@@ -7308,8 +6600,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
@@ -7318,8 +6609,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_nodejs">
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
@@ -7328,13 +6618,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="automatic_roll_python">
 <a href="#automatic_roll_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>roll</a>
@@ -7343,8 +6631,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should roll perform automatically
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_percentage_python">
 <a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
@@ -7353,8 +6640,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
@@ -7363,8 +6649,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_python">
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
@@ -7373,15 +6658,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -7390,8 +6673,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddraininstances_csharp">
 <a href="#shoulddraininstances_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Drain<wbr>Instances</a>
@@ -7400,13 +6682,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -7415,8 +6695,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddraininstances_go">
 <a href="#shoulddraininstances_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Drain<wbr>Instances</a>
@@ -7425,13 +6704,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -7440,8 +6717,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddraininstances_nodejs">
 <a href="#shoulddraininstances_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
@@ -7450,13 +6726,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -7465,8 +6739,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_drain_instances_python">
 <a href="#should_drain_instances_python" style="color: inherit; text-decoration: inherit;">should_<wbr>drain_<wbr>instances</a>
@@ -7475,15 +6748,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="platformupdate_csharp">
 <a href="#platformupdate_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Update</a>
@@ -7492,13 +6763,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="platformupdate_go">
 <a href="#platformupdate_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Update</a>
@@ -7507,13 +6776,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="platformupdate_nodejs">
 <a href="#platformupdate_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Update</a>
@@ -7522,13 +6789,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="platform_update_python">
 <a href="#platform_update_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>update</a>
@@ -7537,15 +6802,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Platform Update parameters
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="performat_csharp">
 <a href="#performat_csharp" style="color: inherit; text-decoration: inherit;">Perform<wbr>At</a>
@@ -7554,8 +6817,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindow_csharp">
 <a href="#timewindow_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window</a>
@@ -7564,8 +6826,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelevel_csharp">
 <a href="#updatelevel_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Level</a>
@@ -7574,13 +6835,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Level to update
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="performat_go">
 <a href="#performat_go" style="color: inherit; text-decoration: inherit;">Perform<wbr>At</a>
@@ -7589,8 +6848,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindow_go">
 <a href="#timewindow_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window</a>
@@ -7599,8 +6857,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelevel_go">
 <a href="#updatelevel_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Level</a>
@@ -7609,13 +6866,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Level to update
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="performat_nodejs">
 <a href="#performat_nodejs" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
@@ -7624,8 +6879,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindow_nodejs">
 <a href="#timewindow_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
@@ -7634,8 +6888,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelevel_nodejs">
 <a href="#updatelevel_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Level</a>
@@ -7644,13 +6897,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Level to update
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="perform_at_python">
 <a href="#perform_at_python" style="color: inherit; text-decoration: inherit;">perform_<wbr>at</a>
@@ -7659,8 +6910,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_window_python">
 <a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
@@ -7669,8 +6919,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time Window for when action occurs ex. Mon:23:50-Tue:00:20
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_level_python">
 <a href="#update_level_python" style="color: inherit; text-decoration: inherit;">update_<wbr>level</a>
@@ -7679,15 +6928,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Level to update
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cleanuponfailure_csharp">
 <a href="#cleanuponfailure_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>On<wbr>Failure</a>
@@ -7696,8 +6943,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Cleanup automatically after a failed deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroups_csharp">
 <a href="#deploymentgroups_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Groups</a>
@@ -7706,8 +6952,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify the deployment groups details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminateinstanceonfailure_csharp">
 <a href="#terminateinstanceonfailure_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instance<wbr>On<wbr>Failure</a>
@@ -7716,13 +6961,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate the instance automatically after a failed deploy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cleanuponfailure_go">
 <a href="#cleanuponfailure_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>On<wbr>Failure</a>
@@ -7731,8 +6974,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Cleanup automatically after a failed deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroups_go">
 <a href="#deploymentgroups_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Groups</a>
@@ -7741,8 +6983,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">[]Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Specify the deployment groups details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminateinstanceonfailure_go">
 <a href="#terminateinstanceonfailure_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instance<wbr>On<wbr>Failure</a>
@@ -7751,13 +6992,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate the instance automatically after a failed deploy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cleanuponfailure_nodejs">
 <a href="#cleanuponfailure_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>On<wbr>Failure</a>
@@ -7766,8 +7005,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Cleanup automatically after a failed deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroups_nodejs">
 <a href="#deploymentgroups_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Groups</a>
@@ -7776,8 +7014,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Specify the deployment groups details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminateinstanceonfailure_nodejs">
 <a href="#terminateinstanceonfailure_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instance<wbr>On<wbr>Failure</a>
@@ -7786,13 +7023,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Terminate the instance automatically after a failed deploy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cleanup_on_failure_python">
 <a href="#cleanup_on_failure_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>on_<wbr>failure</a>
@@ -7801,8 +7036,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Cleanup automatically after a failed deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deployment_groups_python">
 <a href="#deployment_groups_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>groups</a>
@@ -7811,8 +7045,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationcodedeploydeploymentgroup">Sequence[Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify the deployment groups details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminate_instance_on_failure_python">
 <a href="#terminate_instance_on_failure_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instance_<wbr>on_<wbr>failure</a>
@@ -7821,15 +7054,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate the instance automatically after a failed deploy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationcodedeploydeploymentgroup">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -7838,8 +7069,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroupname_csharp">
 <a href="#deploymentgroupname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Name</a>
@@ -7848,13 +7078,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment group name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -7863,8 +7091,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroupname_go">
 <a href="#deploymentgroupname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Group<wbr>Name</a>
@@ -7873,13 +7100,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment group name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -7888,8 +7113,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentgroupname_nodejs">
 <a href="#deploymentgroupname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Group<wbr>Name</a>
@@ -7898,13 +7122,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment group name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -7913,8 +7135,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deployment_group_name_python">
 <a href="#deployment_group_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>group_<wbr>name</a>
@@ -7923,15 +7144,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment group name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="masterhost_csharp">
 <a href="#masterhost_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
@@ -7940,8 +7159,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterport_csharp">
 <a href="#masterport_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Port</a>
@@ -7950,8 +7168,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_csharp">
 <a href="#autoscalecooldown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -7960,8 +7177,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
 <a href="#autoscaledown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -7970,8 +7186,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
 <a href="#autoscaleheadroom_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -7980,8 +7195,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_csharp">
 <a href="#autoscaleisenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -7990,13 +7204,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="masterhost_go">
 <a href="#masterhost_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
@@ -8005,8 +7217,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterport_go">
 <a href="#masterport_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Port</a>
@@ -8015,8 +7226,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_go">
 <a href="#autoscalecooldown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -8025,8 +7235,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
 <a href="#autoscaledown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -8035,8 +7244,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
 <a href="#autoscaleheadroom_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -8045,8 +7253,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_go">
 <a href="#autoscaleisenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -8055,13 +7262,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="masterhost_nodejs">
 <a href="#masterhost_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
@@ -8070,8 +7275,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterport_nodejs">
 <a href="#masterport_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Port</a>
@@ -8080,8 +7284,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_nodejs">
 <a href="#autoscalecooldown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
@@ -8090,8 +7293,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
@@ -8100,8 +7302,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
@@ -8110,8 +7311,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_nodejs">
 <a href="#autoscaleisenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
@@ -8120,13 +7320,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="master_host_python">
 <a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
@@ -8135,8 +7333,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_port_python">
 <a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
@@ -8145,8 +7342,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_cooldown_python">
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
@@ -8155,8 +7351,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_down_python">
 <a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
@@ -8165,8 +7360,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_headroom_python">
 <a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
@@ -8175,8 +7369,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type"><a href="#elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_enabled_python">
 <a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
@@ -8185,15 +7378,13 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -8202,8 +7393,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_csharp">
 <a href="#maxscaledownpercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -8213,13 +7403,11 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -8228,8 +7416,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_go">
 <a href="#maxscaledownpercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -8239,13 +7426,11 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -8254,8 +7439,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_nodejs">
 <a href="#maxscaledownpercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -8265,13 +7449,11 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -8280,8 +7462,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_scale_down_percentage_python">
 <a href="#max_scale_down_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scale_<wbr>down_<wbr>percentage</a>
@@ -8291,15 +7472,13 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_csharp">
 <a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -8308,8 +7487,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
 <a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -8318,8 +7496,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
 <a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -8328,13 +7505,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_go">
 <a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -8343,8 +7518,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
 <a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -8353,8 +7527,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
 <a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -8363,13 +7536,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_nodejs">
 <a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
@@ -8378,8 +7549,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
 <a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
@@ -8388,8 +7558,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
 <a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
@@ -8398,13 +7567,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_per_unit_python">
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
@@ -8413,8 +7580,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
@@ -8423,8 +7589,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
@@ -8433,15 +7598,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -8450,8 +7613,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the EC2 Container Service cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleattributes_csharp">
 <a href="#autoscaleattributes_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Attributes</a>
@@ -8460,8 +7622,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_csharp">
 <a href="#autoscalecooldown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -8470,8 +7631,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
 <a href="#autoscaledown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -8480,8 +7640,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
 <a href="#autoscaleheadroom_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -8490,8 +7649,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_csharp">
 <a href="#autoscaleisautoconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -8500,8 +7658,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_csharp">
 <a href="#autoscaleisenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -8510,8 +7667,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalescaledownnonservicetasks_csharp">
 <a href="#autoscalescaledownnonservicetasks_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Scale<wbr>Down<wbr>Non<wbr>Service<wbr>Tasks</a>
@@ -8520,8 +7676,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to scale down non-service tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_csharp">
 <a href="#batch_csharp" style="color: inherit; text-decoration: inherit;">Batch</a>
@@ -8529,13 +7684,11 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -8544,8 +7697,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the EC2 Container Service cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleattributes_go">
 <a href="#autoscaleattributes_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Attributes</a>
@@ -8554,8 +7706,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">[]Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_go">
 <a href="#autoscalecooldown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -8564,8 +7715,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
 <a href="#autoscaledown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -8574,8 +7724,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
 <a href="#autoscaleheadroom_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -8584,8 +7733,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_go">
 <a href="#autoscaleisautoconfig_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -8594,8 +7742,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_go">
 <a href="#autoscaleisenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -8604,8 +7751,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalescaledownnonservicetasks_go">
 <a href="#autoscalescaledownnonservicetasks_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Scale<wbr>Down<wbr>Non<wbr>Service<wbr>Tasks</a>
@@ -8614,8 +7760,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to scale down non-service tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_go">
 <a href="#batch_go" style="color: inherit; text-decoration: inherit;">Batch</a>
@@ -8623,13 +7768,11 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -8638,8 +7781,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the EC2 Container Service cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleattributes_nodejs">
 <a href="#autoscaleattributes_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Attributes</a>
@@ -8648,8 +7790,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_nodejs">
 <a href="#autoscalecooldown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
@@ -8658,8 +7799,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
@@ -8668,8 +7808,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
@@ -8678,8 +7817,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_nodejs">
 <a href="#autoscaleisautoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -8688,8 +7826,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_nodejs">
 <a href="#autoscaleisenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
@@ -8698,8 +7835,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalescaledownnonservicetasks_nodejs">
 <a href="#autoscalescaledownnonservicetasks_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Scale<wbr>Down<wbr>Non<wbr>Service<wbr>Tasks</a>
@@ -8708,8 +7844,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether to scale down non-service tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_nodejs">
 <a href="#batch_nodejs" style="color: inherit; text-decoration: inherit;">batch</a>
@@ -8717,13 +7852,11 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -8732,8 +7865,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the EC2 Container Service cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_attributes_python">
 <a href="#autoscale_attributes_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>attributes</a>
@@ -8742,8 +7874,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleattribute">Sequence[Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_cooldown_python">
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
@@ -8752,8 +7883,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_down_python">
 <a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
@@ -8762,8 +7892,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_headroom_python">
 <a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
@@ -8772,8 +7901,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_auto_config_python">
 <a href="#autoscale_is_auto_config_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>auto_<wbr>config</a>
@@ -8782,8 +7910,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_enabled_python">
 <a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
@@ -8792,8 +7919,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_scale_down_non_service_tasks_python">
 <a href="#autoscale_scale_down_non_service_tasks_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>scale_<wbr>down_<wbr>non_<wbr>service_<wbr>tasks</a>
@@ -8802,8 +7928,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to scale down non-service tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_python">
 <a href="#batch_python" style="color: inherit; text-decoration: inherit;">batch</a>
@@ -8811,15 +7936,13 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -8827,8 +7950,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -8837,13 +7959,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -8851,8 +7971,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -8861,13 +7980,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -8875,8 +7992,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -8885,13 +8001,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -8899,8 +8013,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -8909,15 +8022,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -8926,8 +8037,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_csharp">
 <a href="#maxscaledownpercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -8937,13 +8047,11 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -8952,8 +8060,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_go">
 <a href="#maxscaledownpercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -8963,13 +8070,11 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -8978,8 +8083,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_nodejs">
 <a href="#maxscaledownpercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scale<wbr>Down<wbr>Percentage</a>
@@ -8989,13 +8093,11 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -9004,8 +8106,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_scale_down_percentage_python">
 <a href="#max_scale_down_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scale_<wbr>down_<wbr>percentage</a>
@@ -9015,15 +8116,13 @@ Usage:
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.  
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_csharp">
 <a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -9032,8 +8131,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
 <a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -9042,8 +8140,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
 <a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -9052,13 +8149,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_go">
 <a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -9067,8 +8162,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
 <a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -9077,8 +8171,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
 <a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -9087,13 +8180,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_nodejs">
 <a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
@@ -9102,8 +8193,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
 <a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
@@ -9112,8 +8202,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
 <a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
@@ -9122,13 +8211,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_per_unit_python">
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
@@ -9137,8 +8224,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
@@ -9147,8 +8233,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
@@ -9157,15 +8242,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobqueuenames_csharp">
 <a href="#jobqueuenames_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Queue<wbr>Names</a>
@@ -9173,13 +8256,11 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobqueuenames_go">
 <a href="#jobqueuenames_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Queue<wbr>Names</a>
@@ -9187,13 +8268,11 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobqueuenames_nodejs">
 <a href="#jobqueuenames_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Queue<wbr>Names</a>
@@ -9201,13 +8280,11 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="job_queue_names_python">
 <a href="#job_queue_names_python" style="color: inherit; text-decoration: inherit;">job_<wbr>queue_<wbr>names</a>
@@ -9215,15 +8292,13 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="runner_csharp">
 <a href="#runner_csharp" style="color: inherit; text-decoration: inherit;">Runner</a>
@@ -9232,13 +8307,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Gitlab runner.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="runner_go">
 <a href="#runner_go" style="color: inherit; text-decoration: inherit;">Runner</a>
@@ -9247,13 +8320,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</a></span>
     </dt>
     <dd>{{% md %}}Settings for Gitlab runner.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="runner_nodejs">
 <a href="#runner_nodejs" style="color: inherit; text-decoration: inherit;">runner</a>
@@ -9262,13 +8333,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</a></span>
     </dt>
     <dd>{{% md %}}Settings for Gitlab runner.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="runner_python">
 <a href="#runner_python" style="color: inherit; text-decoration: inherit;">runner</a>
@@ -9277,15 +8346,13 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Gitlab runner.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -9294,13 +8361,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the integration is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -9309,13 +8374,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the integration is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -9324,13 +8387,11 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the integration is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -9339,15 +8400,13 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the integration is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiserver_csharp">
 <a href="#apiserver_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server</a>
@@ -9356,8 +8415,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_csharp">
 <a href="#autoscalecooldown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -9366,8 +8424,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
 <a href="#autoscaledown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -9376,8 +8433,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
 <a href="#autoscaleheadroom_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -9386,8 +8442,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_csharp">
 <a href="#autoscaleisautoconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -9396,8 +8451,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_csharp">
 <a href="#autoscaleisenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -9406,8 +8460,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_csharp">
 <a href="#autoscalelabels_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Labels</a>
@@ -9416,8 +8469,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteridentifier_csharp">
 <a href="#clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -9425,8 +8477,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmode_csharp">
 <a href="#integrationmode_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Mode</a>
@@ -9435,8 +8486,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `"saas"`, `"pod"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -9445,13 +8495,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes Token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiserver_go">
 <a href="#apiserver_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server</a>
@@ -9460,8 +8508,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_go">
 <a href="#autoscalecooldown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -9470,8 +8517,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
 <a href="#autoscaledown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -9480,8 +8526,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
 <a href="#autoscaleheadroom_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -9490,8 +8535,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_go">
 <a href="#autoscaleisautoconfig_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -9500,8 +8544,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_go">
 <a href="#autoscaleisenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -9510,8 +8553,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_go">
 <a href="#autoscalelabels_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Labels</a>
@@ -9520,8 +8562,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">[]Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteridentifier_go">
 <a href="#clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -9529,8 +8570,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmode_go">
 <a href="#integrationmode_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Mode</a>
@@ -9539,8 +8579,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `"saas"`, `"pod"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -9549,13 +8588,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes Token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiserver_nodejs">
 <a href="#apiserver_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server</a>
@@ -9564,8 +8601,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_nodejs">
 <a href="#autoscalecooldown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
@@ -9574,8 +8610,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
@@ -9584,8 +8619,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
@@ -9594,8 +8628,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_nodejs">
 <a href="#autoscaleisautoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
@@ -9604,8 +8637,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_nodejs">
 <a href="#autoscaleisenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
@@ -9614,8 +8646,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_nodejs">
 <a href="#autoscalelabels_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Labels</a>
@@ -9624,8 +8655,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteridentifier_nodejs">
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -9633,8 +8663,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationmode_nodejs">
 <a href="#integrationmode_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Mode</a>
@@ -9643,8 +8672,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `"saas"`, `"pod"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -9653,13 +8681,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes Token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_server_python">
 <a href="#api_server_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server</a>
@@ -9668,8 +8694,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_cooldown_python">
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
@@ -9678,8 +8703,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_down_python">
 <a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
@@ -9688,8 +8712,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_headroom_python">
 <a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
@@ -9698,8 +8721,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_auto_config_python">
 <a href="#autoscale_is_auto_config_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>auto_<wbr>config</a>
@@ -9708,8 +8730,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enabling the automatic k8s auto-scaler functionality. For more information please see: [Kubernetes auto scaler](https://api.spotinst.com/integration-docs/elastigroup/container-management/kubernetes/autoscaler/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_enabled_python">
 <a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
@@ -9718,8 +8739,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_labels_python">
 <a href="#autoscale_labels_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>labels</a>
@@ -9728,8 +8748,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationkubernetesautoscalelabel">Sequence[Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_identifier_python">
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -9737,8 +8756,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_mode_python">
 <a href="#integration_mode_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>mode</a>
@@ -9747,8 +8765,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: `"saas"`, `"pod"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -9757,15 +8774,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kubernetes Token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -9774,13 +8789,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -9789,13 +8802,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -9804,13 +8815,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -9819,15 +8828,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_csharp">
 <a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -9836,8 +8843,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
 <a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -9846,8 +8852,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
 <a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -9856,13 +8861,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_go">
 <a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -9871,8 +8874,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
 <a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -9881,8 +8883,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
 <a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -9891,13 +8892,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_nodejs">
 <a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
@@ -9906,8 +8905,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
 <a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
@@ -9916,8 +8914,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
 <a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
@@ -9926,13 +8923,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_per_unit_python">
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
@@ -9941,8 +8936,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
@@ -9951,8 +8945,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
@@ -9961,15 +8954,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetesautoscalelabel">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -9977,8 +8968,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -9987,13 +8977,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -10001,8 +8989,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -10011,13 +8998,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -10025,8 +9010,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -10035,13 +9019,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -10049,8 +9031,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -10059,15 +9040,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserver_csharp">
 <a href="#apiserver_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server</a>
@@ -10076,13 +9055,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserver_go">
 <a href="#apiserver_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server</a>
@@ -10091,13 +9068,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserver_nodejs">
 <a href="#apiserver_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server</a>
@@ -10106,13 +9081,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_server_python">
 <a href="#api_server_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server</a>
@@ -10121,15 +9094,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP of the DC/OS Master.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -10138,13 +9109,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment id you want to get
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -10153,13 +9122,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment id you want to get
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -10168,13 +9135,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment id you want to get
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -10183,15 +9148,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment id you want to get
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="masterhost_csharp">
 <a href="#masterhost_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
@@ -10200,8 +9163,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterport_csharp">
 <a href="#masterport_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Port</a>
@@ -10210,8 +9172,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acltoken_csharp">
 <a href="#acltoken_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Token</a>
@@ -10220,8 +9181,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Nomad ACL Token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleconstraints_csharp">
 <a href="#autoscaleconstraints_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Constraints</a>
@@ -10230,8 +9190,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_csharp">
 <a href="#autoscalecooldown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -10240,8 +9199,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
 <a href="#autoscaledown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -10250,8 +9208,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
 <a href="#autoscaleheadroom_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -10260,8 +9217,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_csharp">
 <a href="#autoscaleisenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -10270,13 +9226,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="masterhost_go">
 <a href="#masterhost_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
@@ -10285,8 +9239,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterport_go">
 <a href="#masterport_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Port</a>
@@ -10295,8 +9248,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acltoken_go">
 <a href="#acltoken_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Token</a>
@@ -10305,8 +9257,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Nomad ACL Token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleconstraints_go">
 <a href="#autoscaleconstraints_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Constraints</a>
@@ -10315,8 +9266,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">[]Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_go">
 <a href="#autoscalecooldown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
@@ -10325,8 +9275,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
 <a href="#autoscaledown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
@@ -10335,8 +9284,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
 <a href="#autoscaleheadroom_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
@@ -10345,8 +9293,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_go">
 <a href="#autoscaleisenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
@@ -10355,13 +9302,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="masterhost_nodejs">
 <a href="#masterhost_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
@@ -10370,8 +9315,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterport_nodejs">
 <a href="#masterport_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Port</a>
@@ -10380,8 +9324,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acltoken_nodejs">
 <a href="#acltoken_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Token</a>
@@ -10390,8 +9333,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Nomad ACL Token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleconstraints_nodejs">
 <a href="#autoscaleconstraints_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Constraints</a>
@@ -10400,8 +9342,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_nodejs">
 <a href="#autoscalecooldown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
@@ -10410,8 +9351,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
@@ -10420,8 +9360,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
@@ -10430,8 +9369,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_nodejs">
 <a href="#autoscaleisenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
@@ -10440,13 +9378,11 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="master_host_python">
 <a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
@@ -10455,8 +9391,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_port_python">
 <a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
@@ -10465,8 +9400,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The network port for the master host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_token_python">
 <a href="#acl_token_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>token</a>
@@ -10475,8 +9409,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Nomad ACL Token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_constraints_python">
 <a href="#autoscale_constraints_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>constraints</a>
@@ -10485,8 +9418,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleconstraint">Sequence[Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_cooldown_python">
 <a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
@@ -10495,8 +9427,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_down_python">
 <a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
@@ -10505,8 +9436,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for scale down actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_headroom_python">
 <a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
@@ -10515,8 +9445,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An option to set compute reserve for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_enabled_python">
 <a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
@@ -10525,15 +9454,13 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomadautoscaleconstraint">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -10541,8 +9468,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -10551,13 +9477,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -10565,8 +9489,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -10575,13 +9498,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -10589,8 +9510,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -10599,13 +9519,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -10613,8 +9531,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -10623,15 +9540,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -10640,13 +9555,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -10655,13 +9568,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -10670,13 +9581,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -10685,15 +9594,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many evaluation periods should accumulate before a scale down action takes place.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_csharp">
 <a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -10702,8 +9609,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
 <a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -10712,8 +9618,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
 <a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -10722,13 +9627,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_go">
 <a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
@@ -10737,8 +9640,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
 <a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
@@ -10747,8 +9649,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
 <a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
@@ -10757,13 +9658,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpuperunit_nodejs">
 <a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
@@ -10772,8 +9671,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
 <a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
@@ -10782,8 +9680,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
 <a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
@@ -10792,13 +9689,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cpu_per_unit_python">
 <a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
@@ -10807,8 +9702,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much CPU (MHz) to allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
 <a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
@@ -10817,8 +9711,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How much Memory allocate for headroom unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
 <a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
@@ -10827,15 +9720,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many units of headroom to allocate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -10844,8 +9735,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterhost_csharp">
 <a href="#masterhost_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
@@ -10854,8 +9744,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -10864,8 +9753,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -10875,13 +9763,11 @@ Usage:
     </dt>
     <dd>{{% md %}}The Rancher version. Must be `"1"` or `"2"`. If this field is omitted, it’s assumed that the Rancher cluster is version 1. Note that Kubernetes is required when using Rancher version 2^.
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -10890,8 +9776,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterhost_go">
 <a href="#masterhost_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
@@ -10900,8 +9785,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -10910,8 +9794,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -10921,13 +9804,11 @@ Usage:
     </dt>
     <dd>{{% md %}}The Rancher version. Must be `"1"` or `"2"`. If this field is omitted, it’s assumed that the Rancher cluster is version 1. Note that Kubernetes is required when using Rancher version 2^.
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -10936,8 +9817,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterhost_nodejs">
 <a href="#masterhost_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
@@ -10946,8 +9826,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -10956,8 +9835,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -10967,13 +9845,11 @@ Usage:
     </dt>
     <dd>{{% md %}}The Rancher version. Must be `"1"` or `"2"`. If this field is omitted, it’s assumed that the Rancher cluster is version 1. Note that Kubernetes is required when using Rancher version 2^.
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -10982,8 +9858,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_host_python">
 <a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
@@ -10992,8 +9867,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Nomad master host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -11002,8 +9876,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret key of the Rancher API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -11013,15 +9886,13 @@ Usage:
     </dt>
     <dd>{{% md %}}The Rancher version. Must be `"1"` or `"2"`. If this field is omitted, it’s assumed that the Rancher cluster is version 1. Note that Kubernetes is required when using Rancher version 2^.
 Usage:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_csharp">
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -11030,13 +9901,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domain">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of one or more domains to register.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_go">
 <a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -11045,13 +9914,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domain">[]Elastigroup<wbr>Integration<wbr>Route53Domain</a></span>
     </dt>
     <dd>{{% md %}}Collection of one or more domains to register.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_nodejs">
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -11060,13 +9927,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domain">Elastigroup<wbr>Integration<wbr>Route53Domain[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of one or more domains to register.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_python">
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -11075,15 +9940,13 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domain">Sequence[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of one or more domains to register.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationroute53domain">Elastigroup<wbr>Integration<wbr>Route53Domain</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -11092,8 +9955,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id associated with a hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordsets_csharp">
 <a href="#recordsets_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Sets</a>
@@ -11102,8 +9964,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of records containing authoritative DNS information for the specified domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordsettype_csharp">
 <a href="#recordsettype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Set<wbr>Type</a>
@@ -11112,8 +9973,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstacctid_csharp">
 <a href="#spotinstacctid_csharp" style="color: inherit; text-decoration: inherit;">Spotinst<wbr>Acct<wbr>Id</a>
@@ -11122,13 +9982,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 Hosted Zone ID. The default is the user Spotinst account provided as a URL parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostedzoneid_go">
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -11137,8 +9995,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id associated with a hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordsets_go">
 <a href="#recordsets_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Sets</a>
@@ -11147,8 +10004,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">[]Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Collection of records containing authoritative DNS information for the specified domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordsettype_go">
 <a href="#recordsettype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Set<wbr>Type</a>
@@ -11157,8 +10013,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstacctid_go">
 <a href="#spotinstacctid_go" style="color: inherit; text-decoration: inherit;">Spotinst<wbr>Acct<wbr>Id</a>
@@ -11167,13 +10022,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 Hosted Zone ID. The default is the user Spotinst account provided as a URL parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -11182,8 +10035,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id associated with a hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordsets_nodejs">
 <a href="#recordsets_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
@@ -11192,8 +10044,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of records containing authoritative DNS information for the specified domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordsettype_nodejs">
 <a href="#recordsettype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Type</a>
@@ -11202,8 +10053,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstacctid_nodejs">
 <a href="#spotinstacctid_nodejs" style="color: inherit; text-decoration: inherit;">spotinst<wbr>Acct<wbr>Id</a>
@@ -11212,13 +10062,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 Hosted Zone ID. The default is the user Spotinst account provided as a URL parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosted_zone_id_python">
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -11227,8 +10075,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id associated with a hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="record_sets_python">
 <a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
@@ -11237,8 +10084,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">Sequence[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of records containing authoritative DNS information for the specified domain name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_set_type_python">
 <a href="#record_set_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>set_<wbr>type</a>
@@ -11247,8 +10093,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinst_acct_id_python">
 <a href="#spotinst_acct_id_python" style="color: inherit; text-decoration: inherit;">spotinst_<wbr>acct_<wbr>id</a>
@@ -11257,15 +10102,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 Hosted Zone ID. The default is the user Spotinst account provided as a URL parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationroute53domainrecordset">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11274,8 +10117,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicdns_csharp">
 <a href="#usepublicdns_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Dns</a>
@@ -11284,8 +10126,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicip_csharp">
 <a href="#usepublicip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip</a>
@@ -11294,13 +10135,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11309,8 +10148,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicdns_go">
 <a href="#usepublicdns_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Dns</a>
@@ -11319,8 +10157,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicip_go">
 <a href="#usepublicip_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip</a>
@@ -11329,13 +10166,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11344,8 +10179,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicdns_nodejs">
 <a href="#usepublicdns_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Dns</a>
@@ -11354,8 +10188,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicip_nodejs">
 <a href="#usepublicip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip</a>
@@ -11364,13 +10197,11 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11379,8 +10210,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_public_dns_python">
 <a href="#use_public_dns_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>dns</a>
@@ -11389,8 +10219,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_public_ip_python">
 <a href="#use_public_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip</a>
@@ -11399,15 +10228,13 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httptokens_csharp">
 <a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -11416,8 +10243,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of token usage for your instance metadata requests. Valid values: `optional` or `required`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_csharp">
 <a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -11426,13 +10252,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values: Integers from `1` to `64`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httptokens_go">
 <a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -11441,8 +10265,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of token usage for your instance metadata requests. Valid values: `optional` or `required`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_go">
 <a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -11451,13 +10274,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values: Integers from `1` to `64`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httptokens_nodejs">
 <a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
@@ -11466,8 +10287,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of token usage for your instance metadata requests. Valid values: `optional` or `required`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_nodejs">
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -11476,13 +10296,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values: Integers from `1` to `64`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_tokens_python">
 <a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
@@ -11491,8 +10309,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of token usage for your instance metadata requests. Valid values: `optional` or `required`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_put_response_hop_limit_python">
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
@@ -11501,15 +10318,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values: Integers from `1` to `64`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="balancerid_csharp">
 <a href="#balancerid_csharp" style="color: inherit; text-decoration: inherit;">Balancer<wbr>Id</a>
@@ -11518,8 +10333,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Multai Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsetid_csharp">
 <a href="#targetsetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Set<wbr>Id</a>
@@ -11528,13 +10342,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Multai target set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="balancerid_go">
 <a href="#balancerid_go" style="color: inherit; text-decoration: inherit;">Balancer<wbr>Id</a>
@@ -11543,8 +10355,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Multai Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsetid_go">
 <a href="#targetsetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Set<wbr>Id</a>
@@ -11553,13 +10364,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Multai target set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="balancerid_nodejs">
 <a href="#balancerid_nodejs" style="color: inherit; text-decoration: inherit;">balancer<wbr>Id</a>
@@ -11568,8 +10377,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Multai Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsetid_nodejs">
 <a href="#targetsetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Set<wbr>Id</a>
@@ -11578,13 +10386,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Multai target set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="balancer_id_python">
 <a href="#balancer_id_python" style="color: inherit; text-decoration: inherit;">balancer_<wbr>id</a>
@@ -11593,8 +10399,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Multai Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_set_id_python">
 <a href="#target_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>set_<wbr>id</a>
@@ -11603,15 +10408,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Multai target set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceindex_csharp">
 <a href="#deviceindex_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Index</a>
@@ -11620,8 +10423,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index of the device on the instance for the network interface attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associateipv6address_csharp">
 <a href="#associateipv6address_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Ipv6Address</a>
@@ -11630,8 +10432,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign IPV6 addresses to your instance. Requires a subnet with IPV6 CIDR block ranges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
 <a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -11640,8 +10441,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign a public IP address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -11650,8 +10450,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the interface is deleted when the instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -11660,8 +10459,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_csharp">
 <a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -11670,8 +10468,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -11680,8 +10477,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryprivateipaddresscount_csharp">
 <a href="#secondaryprivateipaddresscount_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Private<wbr>Ip<wbr>Address<wbr>Count</a>
@@ -11690,13 +10486,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceindex_go">
 <a href="#deviceindex_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Index</a>
@@ -11705,8 +10499,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index of the device on the instance for the network interface attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associateipv6address_go">
 <a href="#associateipv6address_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Ipv6Address</a>
@@ -11715,8 +10508,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign IPV6 addresses to your instance. Requires a subnet with IPV6 CIDR block ranges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
 <a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -11725,8 +10517,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign a public IP address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -11735,8 +10526,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the interface is deleted when the instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -11745,8 +10535,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_go">
 <a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -11755,8 +10544,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -11765,8 +10553,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryprivateipaddresscount_go">
 <a href="#secondaryprivateipaddresscount_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Private<wbr>Ip<wbr>Address<wbr>Count</a>
@@ -11775,13 +10562,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceindex_nodejs">
 <a href="#deviceindex_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Index</a>
@@ -11790,8 +10575,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index of the device on the instance for the network interface attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associateipv6address_nodejs">
 <a href="#associateipv6address_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Ipv6Address</a>
@@ -11800,8 +10584,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign IPV6 addresses to your instance. Requires a subnet with IPV6 CIDR block ranges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -11810,8 +10593,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign a public IP address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -11820,8 +10602,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the interface is deleted when the instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -11830,8 +10611,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaceid_nodejs">
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
@@ -11840,8 +10620,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -11850,8 +10629,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryprivateipaddresscount_nodejs">
 <a href="#secondaryprivateipaddresscount_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Private<wbr>Ip<wbr>Address<wbr>Count</a>
@@ -11860,13 +10638,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_index_python">
 <a href="#device_index_python" style="color: inherit; text-decoration: inherit;">device_<wbr>index</a>
@@ -11875,8 +10651,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The index of the device on the instance for the network interface attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_ipv6_address_python">
 <a href="#associate_ipv6_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>ipv6_<wbr>address</a>
@@ -11885,8 +10660,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign IPV6 addresses to your instance. Requires a subnet with IPV6 CIDR block ranges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -11895,8 +10669,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign a public IP address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -11905,8 +10678,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the interface is deleted when the instance is terminated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -11915,8 +10687,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_id_python">
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
@@ -11925,8 +10696,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -11935,8 +10705,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address of the network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_private_ip_address_count_python">
 <a href="#secondary_private_ip_address_count_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ip_<wbr>address_<wbr>count</a>
@@ -11945,15 +10714,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IP addresses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="performat_csharp">
 <a href="#performat_csharp" style="color: inherit; text-decoration: inherit;">Perform<wbr>At</a>
@@ -11962,8 +10729,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindows_csharp">
 <a href="#timewindows_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Windows</a>
@@ -11972,13 +10738,11 @@ Usage:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify a list of time windows for to execute revertToSpot strategy. Time window format: `ddd:hh:mm-ddd:hh:mm`. Example: `Mon:03:00-Wed:02:30`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="performat_go">
 <a href="#performat_go" style="color: inherit; text-decoration: inherit;">Perform<wbr>At</a>
@@ -11987,8 +10751,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindows_go">
 <a href="#timewindows_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Windows</a>
@@ -11997,13 +10760,11 @@ Usage:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify a list of time windows for to execute revertToSpot strategy. Time window format: `ddd:hh:mm-ddd:hh:mm`. Example: `Mon:03:00-Wed:02:30`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="performat_nodejs">
 <a href="#performat_nodejs" style="color: inherit; text-decoration: inherit;">perform<wbr>At</a>
@@ -12012,8 +10773,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timewindows_nodejs">
 <a href="#timewindows_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Windows</a>
@@ -12022,13 +10782,11 @@ Usage:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify a list of time windows for to execute revertToSpot strategy. Time window format: `ddd:hh:mm-ddd:hh:mm`. Example: `Mon:03:00-Wed:02:30`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="perform_at_python">
 <a href="#perform_at_python" style="color: inherit; text-decoration: inherit;">perform_<wbr>at</a>
@@ -12037,8 +10795,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Actions to perform (options: timeWindow, never)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_windows_python">
 <a href="#time_windows_python" style="color: inherit; text-decoration: inherit;">time_<wbr>windows</a>
@@ -12047,15 +10804,13 @@ Usage:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify a list of time windows for to execute revertToSpot strategy. Time window format: `ddd:hh:mm-ddd:hh:mm`. Example: `Mon:03:00-Wed:02:30`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -12064,8 +10819,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -12074,8 +10828,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -12084,8 +10837,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -12094,8 +10846,7 @@ Usage:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -12104,8 +10855,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
 <a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
@@ -12114,8 +10864,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -12124,8 +10873,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -12134,8 +10882,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -12144,8 +10891,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -12154,8 +10900,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_csharp">
 <a href="#maxtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
@@ -12164,8 +10909,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
 <a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -12174,8 +10918,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
 <a href="#mintargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
@@ -12184,8 +10927,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
 <a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -12194,8 +10936,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -12204,8 +10945,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -12214,8 +10954,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -12224,8 +10963,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -12234,8 +10972,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -12244,8 +10981,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -12254,13 +10990,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -12269,8 +11003,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -12279,8 +11012,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -12289,8 +11021,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -12299,8 +11030,7 @@ Usage:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -12309,8 +11039,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
 <a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
@@ -12319,8 +11048,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -12329,8 +11057,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -12339,8 +11066,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -12349,8 +11075,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -12359,8 +11084,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_go">
 <a href="#maxtargetcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
@@ -12369,8 +11093,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
 <a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -12379,8 +11102,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
 <a href="#mintargetcapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
@@ -12389,8 +11111,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
 <a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -12399,8 +11120,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -12409,8 +11129,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -12419,8 +11138,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -12429,8 +11147,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -12439,8 +11156,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -12449,8 +11165,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -12459,13 +11174,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -12474,8 +11187,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -12484,8 +11196,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -12494,8 +11205,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -12504,8 +11214,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -12514,8 +11223,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
 <a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
@@ -12524,8 +11232,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -12534,8 +11241,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -12544,8 +11250,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -12554,8 +11259,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -12564,8 +11268,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_nodejs">
 <a href="#maxtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
@@ -12574,8 +11277,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -12584,8 +11286,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
 <a href="#mintargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
@@ -12594,8 +11295,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -12604,8 +11304,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -12614,8 +11313,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -12624,8 +11322,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -12634,8 +11331,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -12644,8 +11340,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -12654,8 +11349,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -12664,13 +11358,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -12679,8 +11371,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -12689,8 +11380,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -12699,8 +11389,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -12709,8 +11398,7 @@ Usage:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_type_python">
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -12719,8 +11407,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
@@ -12729,8 +11416,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -12739,8 +11425,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -12749,8 +11434,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -12759,8 +11443,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -12769,8 +11452,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_target_capacity_python">
 <a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
@@ -12779,8 +11461,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -12789,8 +11470,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
 <a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
@@ -12799,8 +11479,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -12809,8 +11488,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -12819,8 +11497,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -12829,8 +11506,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -12839,8 +11515,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -12849,8 +11524,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -12859,8 +11533,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -12869,15 +11542,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12886,8 +11557,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -12896,13 +11566,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12911,8 +11579,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -12921,13 +11588,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12936,8 +11601,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -12946,13 +11610,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12961,8 +11623,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -12971,15 +11632,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="terminateatendofbillinghour_csharp">
 <a href="#terminateatendofbillinghour_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>At<wbr>End<wbr>Of<wbr>Billing<wbr>Hour</a>
@@ -12988,8 +11647,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to terminate instances at the end of each billing hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationpolicy_csharp">
 <a href="#terminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Policy</a>
@@ -12998,13 +11656,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Determines whether to terminate the newest instances when performing a scaling action. Valid values: `"default"`, `"newestInstance"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="terminateatendofbillinghour_go">
 <a href="#terminateatendofbillinghour_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>At<wbr>End<wbr>Of<wbr>Billing<wbr>Hour</a>
@@ -13013,8 +11669,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to terminate instances at the end of each billing hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationpolicy_go">
 <a href="#terminationpolicy_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Policy</a>
@@ -13023,13 +11678,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Determines whether to terminate the newest instances when performing a scaling action. Valid values: `"default"`, `"newestInstance"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="terminateatendofbillinghour_nodejs">
 <a href="#terminateatendofbillinghour_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>At<wbr>End<wbr>Of<wbr>Billing<wbr>Hour</a>
@@ -13038,8 +11691,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether to terminate instances at the end of each billing hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationpolicy_nodejs">
 <a href="#terminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Policy</a>
@@ -13048,13 +11700,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Determines whether to terminate the newest instances when performing a scaling action. Valid values: `"default"`, `"newestInstance"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="terminate_at_end_of_billing_hour_python">
 <a href="#terminate_at_end_of_billing_hour_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>at_<wbr>end_<wbr>of_<wbr>billing_<wbr>hour</a>
@@ -13063,8 +11713,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to terminate instances at the end of each billing hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_policy_python">
 <a href="#termination_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>policy</a>
@@ -13073,15 +11722,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Determines whether to terminate the newest instances when performing a scaling action. Valid values: `"default"`, `"newestInstance"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -13090,8 +11737,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -13100,8 +11746,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -13110,8 +11755,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -13120,8 +11764,7 @@ Usage:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -13130,8 +11773,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer the amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -13140,8 +11782,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacityperscale_csharp">
 <a href="#maxcapacityperscale_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Per<wbr>Scale</a>
@@ -13150,8 +11791,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivemode_csharp">
 <a href="#predictivemode_csharp" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Mode</a>
@@ -13160,8 +11800,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start a metric prediction process to determine the expected target metric value within the next two days. See [Predictive Autoscaling](https://api.spotinst.com/elastigroup-for-aws/concepts/scaling-concepts/predictive-autoscaling/) documentation for more info. Valid values: `FORECAST_AND_SCALE`, `FORECAST_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -13170,8 +11809,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -13180,8 +11818,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -13190,13 +11827,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, tThe unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -13205,8 +11840,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -13215,8 +11849,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -13225,8 +11858,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -13235,8 +11867,7 @@ Usage:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -13245,8 +11876,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer the amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -13255,8 +11885,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">[]Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacityperscale_go">
 <a href="#maxcapacityperscale_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Per<wbr>Scale</a>
@@ -13265,8 +11894,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivemode_go">
 <a href="#predictivemode_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Mode</a>
@@ -13275,8 +11903,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start a metric prediction process to determine the expected target metric value within the next two days. See [Predictive Autoscaling](https://api.spotinst.com/elastigroup-for-aws/concepts/scaling-concepts/predictive-autoscaling/) documentation for more info. Valid values: `FORECAST_AND_SCALE`, `FORECAST_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -13285,8 +11912,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -13295,8 +11921,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -13305,13 +11930,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, tThe unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -13320,8 +11943,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -13330,8 +11952,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -13340,8 +11961,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -13350,8 +11970,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -13360,8 +11979,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer the amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -13370,8 +11988,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacityperscale_nodejs">
 <a href="#maxcapacityperscale_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Per<wbr>Scale</a>
@@ -13380,8 +11997,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictivemode_nodejs">
 <a href="#predictivemode_nodejs" style="color: inherit; text-decoration: inherit;">predictive<wbr>Mode</a>
@@ -13390,8 +12006,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start a metric prediction process to determine the expected target metric value within the next two days. See [Predictive Autoscaling](https://api.spotinst.com/elastigroup-for-aws/concepts/scaling-concepts/predictive-autoscaling/) documentation for more info. Valid values: `FORECAST_AND_SCALE`, `FORECAST_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -13400,8 +12015,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -13410,8 +12024,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, the metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -13420,13 +12033,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, tThe unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -13435,8 +12046,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, the name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -13445,8 +12055,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, the namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -13455,8 +12064,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, the name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -13465,8 +12073,7 @@ Usage:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -13475,8 +12082,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer the amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -13485,8 +12091,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalingtargetpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_capacity_per_scale_python">
 <a href="#max_capacity_per_scale_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>per_<wbr>scale</a>
@@ -13495,8 +12100,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, restrict the maximal number of instances which can be added in each scale-up action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictive_mode_python">
 <a href="#predictive_mode_python" style="color: inherit; text-decoration: inherit;">predictive_<wbr>mode</a>
@@ -13505,8 +12109,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start a metric prediction process to determine the expected target metric value within the next two days. See [Predictive Autoscaling](https://api.spotinst.com/elastigroup-for-aws/concepts/scaling-concepts/predictive-autoscaling/) documentation for more info. Valid values: `FORECAST_AND_SCALE`, `FORECAST_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -13515,8 +12118,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, the source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -13525,8 +12127,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, the metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -13535,15 +12136,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, tThe unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingtargetpolicydimension">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -13552,8 +12151,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -13562,13 +12160,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -13577,8 +12173,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -13587,13 +12182,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13602,8 +12195,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -13612,13 +12204,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13627,8 +12217,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -13637,15 +12226,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -13654,8 +12241,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -13664,8 +12250,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -13674,8 +12259,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -13684,8 +12268,7 @@ Usage:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -13694,8 +12277,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
 <a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
@@ -13704,8 +12286,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -13714,8 +12295,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -13724,8 +12304,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -13734,8 +12313,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -13744,8 +12322,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_csharp">
 <a href="#maxtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
@@ -13754,8 +12331,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
 <a href="#maximum_csharp" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -13764,8 +12340,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
 <a href="#mintargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
@@ -13774,8 +12349,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
 <a href="#minimum_csharp" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -13784,8 +12358,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -13794,8 +12367,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -13804,8 +12376,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -13814,8 +12385,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -13824,8 +12394,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -13834,8 +12403,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -13844,13 +12412,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -13859,8 +12425,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -13869,8 +12434,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -13879,8 +12443,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -13889,8 +12452,7 @@ Usage:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -13899,8 +12461,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
 <a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
@@ -13909,8 +12470,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
@@ -13919,8 +12479,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -13929,8 +12488,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
@@ -13939,8 +12497,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -13949,8 +12506,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_go">
 <a href="#maxtargetcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Target<wbr>Capacity</a>
@@ -13959,8 +12515,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
 <a href="#maximum_go" style="color: inherit; text-decoration: inherit;">Maximum</a>
@@ -13969,8 +12524,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
 <a href="#mintargetcapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Target<wbr>Capacity</a>
@@ -13979,8 +12533,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
 <a href="#minimum_go" style="color: inherit; text-decoration: inherit;">Minimum</a>
@@ -13989,8 +12542,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -13999,8 +12551,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -14009,8 +12560,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -14019,8 +12569,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
@@ -14029,8 +12578,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -14039,8 +12587,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -14049,13 +12596,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -14064,8 +12609,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -14074,8 +12618,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -14084,8 +12627,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -14094,8 +12636,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -14104,8 +12645,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
 <a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
@@ -14114,8 +12654,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -14124,8 +12663,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -14134,8 +12672,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
@@ -14144,8 +12681,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -14154,8 +12690,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_nodejs">
 <a href="#maxtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Target<wbr>Capacity</a>
@@ -14164,8 +12699,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -14174,8 +12708,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
 <a href="#mintargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Target<wbr>Capacity</a>
@@ -14184,8 +12717,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -14194,8 +12726,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -14204,8 +12735,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -14214,8 +12744,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -14224,8 +12753,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -14234,8 +12762,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -14244,8 +12771,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -14254,13 +12780,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -14269,8 +12793,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric, with or without spaces.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -14279,8 +12802,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace for the alarm's associated metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -14289,8 +12811,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -14299,8 +12820,7 @@ Usage:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value against which the specified statistic is compared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_type_python">
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -14309,8 +12829,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
@@ -14319,8 +12838,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed. Can be used as advanced expression for scaling of instances to add/remove to/from the target capacity when scale is needed. You can see more information here: Advanced expression. Example value: `"MAX(currCapacity / 5, value * 10)"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
@@ -14329,8 +12847,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -14339,8 +12856,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dimensions describing qualities of the metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
 <a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
@@ -14349,8 +12865,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -14359,8 +12874,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scaling policy described in this block is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_target_capacity_python">
 <a href="#max_target_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>target_<wbr>capacity</a>
@@ -14369,8 +12883,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and maximum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
@@ -14379,8 +12892,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
 <a href="#min_target_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>target_<wbr>capacity</a>
@@ -14389,8 +12901,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. The number of the desired target (and minimum) capacity
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
@@ -14399,8 +12910,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimal number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -14409,8 +12919,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -14419,8 +12928,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -14429,8 +12937,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source of the metric. Valid values: `"cloudWatch"`, `"spectrum"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
@@ -14439,8 +12946,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -14449,8 +12955,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target number of instances to have in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -14459,15 +12964,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -14476,8 +12979,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -14486,13 +12988,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -14501,8 +13001,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -14511,13 +13010,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -14526,8 +13023,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -14536,13 +13032,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -14551,8 +13045,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record set name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -14561,15 +13054,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
 <a href="#tasktype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
@@ -14578,8 +13069,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
 <a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
@@ -14588,8 +13078,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_csharp">
 <a href="#adjustmentpercentage_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Percentage</a>
@@ -14598,8 +13087,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_csharp">
 <a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -14608,8 +13096,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronexpression_csharp">
 <a href="#cronexpression_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
@@ -14618,8 +13105,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -14628,8 +13114,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
 <a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -14638,8 +13123,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -14648,8 +13132,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting the task to being enabled or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_csharp">
 <a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -14658,8 +13141,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincapacity_csharp">
 <a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
@@ -14668,8 +13150,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_csharp">
 <a href="#scalemaxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Max<wbr>Capacity</a>
@@ -14678,8 +13159,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_csharp">
 <a href="#scalemincapacity_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Min<wbr>Capacity</a>
@@ -14688,8 +13168,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_csharp">
 <a href="#scaletargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Capacity</a>
@@ -14698,8 +13177,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -14708,8 +13186,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set a start time for one time tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_csharp">
 <a href="#targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
@@ -14718,13 +13195,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tasktype_go">
 <a href="#tasktype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
@@ -14733,8 +13208,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
 <a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
@@ -14743,8 +13217,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_go">
 <a href="#adjustmentpercentage_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Percentage</a>
@@ -14753,8 +13226,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_go">
 <a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -14763,8 +13235,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronexpression_go">
 <a href="#cronexpression_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
@@ -14773,8 +13244,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -14783,8 +13253,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
 <a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -14793,8 +13262,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -14803,8 +13271,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting the task to being enabled or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_go">
 <a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
@@ -14813,8 +13280,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincapacity_go">
 <a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
@@ -14823,8 +13289,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_go">
 <a href="#scalemaxcapacity_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Max<wbr>Capacity</a>
@@ -14833,8 +13298,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_go">
 <a href="#scalemincapacity_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Min<wbr>Capacity</a>
@@ -14843,8 +13307,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_go">
 <a href="#scaletargetcapacity_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Capacity</a>
@@ -14853,8 +13316,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -14863,8 +13325,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set a start time for one time tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_go">
 <a href="#targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
@@ -14873,13 +13334,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
 <a href="#tasktype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
@@ -14888,8 +13347,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
 <a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
@@ -14898,8 +13356,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_nodejs">
 <a href="#adjustmentpercentage_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Percentage</a>
@@ -14908,8 +13365,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_nodejs">
 <a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
@@ -14918,8 +13374,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronexpression_nodejs">
 <a href="#cronexpression_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
@@ -14928,8 +13383,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -14938,8 +13392,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
@@ -14948,8 +13401,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -14958,8 +13410,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Setting the task to being enabled or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_nodejs">
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
@@ -14968,8 +13419,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincapacity_nodejs">
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
@@ -14978,8 +13428,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_nodejs">
 <a href="#scalemaxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Max<wbr>Capacity</a>
@@ -14988,8 +13437,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_nodejs">
 <a href="#scalemincapacity_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Min<wbr>Capacity</a>
@@ -14998,8 +13446,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_nodejs">
 <a href="#scaletargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Capacity</a>
@@ -15008,8 +13455,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -15018,8 +13464,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set a start time for one time tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_nodejs">
 <a href="#targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
@@ -15028,13 +13473,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="task_type_python">
 <a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
@@ -15043,8 +13486,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
@@ -15053,8 +13495,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adjustment_percentage_python">
 <a href="#adjustment_percentage_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>percentage</a>
@@ -15063,8 +13504,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of instances to add or remove.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_percentage_python">
 <a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
@@ -15073,8 +13513,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cron_expression_python">
 <a href="#cron_expression_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>expression</a>
@@ -15083,8 +13522,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -15093,8 +13531,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
@@ -15103,8 +13540,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -15113,8 +13549,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Setting the task to being enabled or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_capacity_python">
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
@@ -15123,8 +13558,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_capacity_python">
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
@@ -15133,8 +13567,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_max_capacity_python">
 <a href="#scale_max_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>max_<wbr>capacity</a>
@@ -15143,8 +13576,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_min_capacity_python">
 <a href="#scale_min_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>min_<wbr>capacity</a>
@@ -15153,8 +13585,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_target_capacity_python">
 <a href="#scale_target_capacity_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>target_<wbr>capacity</a>
@@ -15163,8 +13594,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -15173,8 +13603,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set a start time for one time tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_capacity_python">
 <a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
@@ -15183,15 +13612,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupsignal">Elastigroup<wbr>Signal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -15200,8 +13627,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the signal defined for the group. Valid Values: `"INSTANCE_READY"`, `"INSTANCE_READY_TO_SHUTDOWN"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -15210,13 +13636,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The signals defined timeout- default is 40 minutes (1800 seconds).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -15225,8 +13649,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the signal defined for the group. Valid Values: `"INSTANCE_READY"`, `"INSTANCE_READY_TO_SHUTDOWN"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -15235,13 +13658,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The signals defined timeout- default is 40 minutes (1800 seconds).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -15250,8 +13671,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the signal defined for the group. Valid Values: `"INSTANCE_READY"`, `"INSTANCE_READY_TO_SHUTDOWN"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -15260,13 +13680,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The signals defined timeout- default is 40 minutes (1800 seconds).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -15275,8 +13693,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the signal defined for the group. Valid Values: `"INSTANCE_READY"`, `"INSTANCE_READY_TO_SHUTDOWN"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -15285,15 +13702,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The signals defined timeout- default is 40 minutes (1800 seconds).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shoulddeleteimages_csharp">
 <a href="#shoulddeleteimages_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Images</a>
@@ -15302,8 +13717,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletenetworkinterfaces_csharp">
 <a href="#shoulddeletenetworkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Network<wbr>Interfaces</a>
@@ -15312,8 +13726,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove network interfaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletesnapshots_csharp">
 <a href="#shoulddeletesnapshots_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Snapshots</a>
@@ -15322,8 +13735,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove snapshots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletevolumes_csharp">
 <a href="#shoulddeletevolumes_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Volumes</a>
@@ -15332,13 +13744,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent volumes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shoulddeleteimages_go">
 <a href="#shoulddeleteimages_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Images</a>
@@ -15347,8 +13757,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletenetworkinterfaces_go">
 <a href="#shoulddeletenetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Network<wbr>Interfaces</a>
@@ -15357,8 +13766,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove network interfaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletesnapshots_go">
 <a href="#shoulddeletesnapshots_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Snapshots</a>
@@ -15367,8 +13775,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove snapshots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletevolumes_go">
 <a href="#shoulddeletevolumes_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Delete<wbr>Volumes</a>
@@ -15377,13 +13784,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent volumes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="shoulddeleteimages_nodejs">
 <a href="#shoulddeleteimages_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Images</a>
@@ -15392,8 +13797,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletenetworkinterfaces_nodejs">
 <a href="#shoulddeletenetworkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Network<wbr>Interfaces</a>
@@ -15402,8 +13806,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove network interfaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletesnapshots_nodejs">
 <a href="#shoulddeletesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Snapshots</a>
@@ -15412,8 +13815,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove snapshots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddeletevolumes_nodejs">
 <a href="#shoulddeletevolumes_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Delete<wbr>Volumes</a>
@@ -15422,13 +13824,11 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent volumes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="should_delete_images_python">
 <a href="#should_delete_images_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>images</a>
@@ -15437,8 +13837,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_delete_network_interfaces_python">
 <a href="#should_delete_network_interfaces_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>network_<wbr>interfaces</a>
@@ -15447,8 +13846,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove network interfaces.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_delete_snapshots_python">
 <a href="#should_delete_snapshots_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>snapshots</a>
@@ -15457,8 +13855,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove snapshots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_delete_volumes_python">
 <a href="#should_delete_volumes_python" style="color: inherit; text-decoration: inherit;">should_<wbr>delete_<wbr>volumes</a>
@@ -15467,15 +13864,13 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stateful groups: remove persistent volumes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigrouptag">Elastigroup<wbr>Tag</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -15483,8 +13878,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -15493,13 +13887,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -15507,8 +13899,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -15517,13 +13908,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -15531,8 +13920,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -15541,13 +13929,11 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -15555,8 +13941,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -15565,15 +13950,13 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shouldresumestateful_csharp">
 <a href="#shouldresumestateful_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Resume<wbr>Stateful</a>
@@ -15582,8 +13965,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will apply resuming action for Stateful instances in the Elastigroup upon scale up or capacity changes. Example usage will be for Elastigroups that will have scheduling rules to set a target capacity of 0 instances in the night and automatically restore the same state of the instances in the morning.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shouldroll_csharp">
 <a href="#shouldroll_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
@@ -15592,8 +13974,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the enablement of the roll option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoapplytags_csharp">
 <a href="#autoapplytags_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Apply<wbr>Tags</a>
@@ -15602,8 +13983,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables updates to tags without rolling the group when set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollconfig_csharp">
 <a href="#rollconfig_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
@@ -15612,13 +13992,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shouldresumestateful_go">
 <a href="#shouldresumestateful_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Resume<wbr>Stateful</a>
@@ -15627,8 +14005,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will apply resuming action for Stateful instances in the Elastigroup upon scale up or capacity changes. Example usage will be for Elastigroups that will have scheduling rules to set a target capacity of 0 instances in the night and automatically restore the same state of the instances in the morning.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shouldroll_go">
 <a href="#shouldroll_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Roll</a>
@@ -15637,8 +14014,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the enablement of the roll option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoapplytags_go">
 <a href="#autoapplytags_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Apply<wbr>Tags</a>
@@ -15647,8 +14023,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables updates to tags without rolling the group when set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollconfig_go">
 <a href="#rollconfig_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Config</a>
@@ -15657,13 +14032,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shouldresumestateful_nodejs">
 <a href="#shouldresumestateful_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Resume<wbr>Stateful</a>
@@ -15672,8 +14045,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This will apply resuming action for Stateful instances in the Elastigroup upon scale up or capacity changes. Example usage will be for Elastigroups that will have scheduling rules to set a target capacity of 0 instances in the night and automatically restore the same state of the instances in the morning.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shouldroll_nodejs">
 <a href="#shouldroll_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Roll</a>
@@ -15682,8 +14054,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the enablement of the roll option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoapplytags_nodejs">
 <a href="#autoapplytags_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Apply<wbr>Tags</a>
@@ -15692,8 +14063,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables updates to tags without rolling the group when set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollconfig_nodejs">
 <a href="#rollconfig_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Config</a>
@@ -15702,13 +14072,11 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="should_resume_stateful_python">
 <a href="#should_resume_stateful_python" style="color: inherit; text-decoration: inherit;">should_<wbr>resume_<wbr>stateful</a>
@@ -15717,8 +14085,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will apply resuming action for Stateful instances in the Elastigroup upon scale up or capacity changes. Example usage will be for Elastigroups that will have scheduling rules to set a target capacity of 0 instances in the night and automatically restore the same state of the instances in the morning.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="should_roll_python">
 <a href="#should_roll_python" style="color: inherit; text-decoration: inherit;">should_<wbr>roll</a>
@@ -15727,8 +14094,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the enablement of the roll option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_apply_tags_python">
 <a href="#auto_apply_tags_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>apply_<wbr>tags</a>
@@ -15737,8 +14103,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables updates to tags without rolling the group when set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roll_config_python">
 <a href="#roll_config_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>config</a>
@@ -15747,15 +14112,13 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batchsizepercentage_csharp">
 <a href="#batchsizepercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -15764,8 +14127,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
 <a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -15774,8 +14136,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_csharp">
 <a href="#healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -15784,8 +14145,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_csharp">
 <a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
@@ -15794,8 +14154,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforrollpercentage_csharp">
 <a href="#waitforrollpercentage_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Roll<wbr>Percentage</a>
@@ -15804,8 +14163,7 @@ Usage:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets minimum % of roll required to complete before continuing the plan. Required if `wait_for_roll_timeout` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforrolltimeout_csharp">
 <a href="#waitforrolltimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Roll<wbr>Timeout</a>
@@ -15814,13 +14172,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets how long to wait for the deployed % of a roll to exceed `wait_for_roll_percentage` before continuing the plan. Required if `wait_for_roll_percentage` is set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batchsizepercentage_go">
 <a href="#batchsizepercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Percentage</a>
@@ -15829,8 +14185,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
 <a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -15839,8 +14194,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_go">
 <a href="#healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
@@ -15849,8 +14203,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_go">
 <a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
@@ -15859,8 +14212,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforrollpercentage_go">
 <a href="#waitforrollpercentage_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Roll<wbr>Percentage</a>
@@ -15869,8 +14221,7 @@ Usage:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets minimum % of roll required to complete before continuing the plan. Required if `wait_for_roll_timeout` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforrolltimeout_go">
 <a href="#waitforrolltimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Roll<wbr>Timeout</a>
@@ -15879,13 +14230,11 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets how long to wait for the deployed % of a roll to exceed `wait_for_roll_percentage` before continuing the plan. Required if `wait_for_roll_percentage` is set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batchsizepercentage_nodejs">
 <a href="#batchsizepercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Percentage</a>
@@ -15894,8 +14243,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
@@ -15904,8 +14252,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_nodejs">
 <a href="#healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
@@ -15914,8 +14261,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_nodejs">
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
@@ -15924,8 +14270,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforrollpercentage_nodejs">
 <a href="#waitforrollpercentage_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Roll<wbr>Percentage</a>
@@ -15934,8 +14279,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets minimum % of roll required to complete before continuing the plan. Required if `wait_for_roll_timeout` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforrolltimeout_nodejs">
 <a href="#waitforrolltimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Roll<wbr>Timeout</a>
@@ -15944,13 +14288,11 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets how long to wait for the deployed % of a roll to exceed `wait_for_roll_percentage` before continuing the plan. Required if `wait_for_roll_percentage` is set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="batch_size_percentage_python">
 <a href="#batch_size_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>percentage</a>
@@ -15959,8 +14301,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
@@ -15969,8 +14310,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the grace period for new instances to become healthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_type_python">
 <a href="#health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
@@ -15979,8 +14319,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the health check type to use. Valid values: `"EC2"`, `"ECS_CLUSTER_INSTANCE"`, `"ELB"`, `"HCS"`, `"MLB"`, `"TARGET_GROUP"`, `"MULTAI_TARGET_SET"`, `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategy_python">
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
@@ -15989,8 +14328,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Strategy parameters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_roll_percentage_python">
 <a href="#wait_for_roll_percentage_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>roll_<wbr>percentage</a>
@@ -15999,8 +14337,7 @@ Usage:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets minimum % of roll required to complete before continuing the plan. Required if `wait_for_roll_timeout` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_roll_timeout_python">
 <a href="#wait_for_roll_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>roll_<wbr>timeout</a>
@@ -16009,15 +14346,13 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For use with `should_roll`. Sets how long to wait for the deployed % of a roll to exceed `wait_for_roll_percentage` before continuing the plan. Required if `wait_for_roll_percentage` is set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -16026,8 +14361,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchminhealthypercentage_csharp">
 <a href="#batchminhealthypercentage_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Min<wbr>Healthy<wbr>Percentage</a>
@@ -16036,8 +14370,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the threshold of minimum healthy instances in single batch. If the amount of healthy instances in single batch is under the threshold, the deployment will fail. Range `1` - `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfailure_csharp">
 <a href="#onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -16046,8 +14379,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set detach options to the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddraininstances_csharp">
 <a href="#shoulddraininstances_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Drain<wbr>Instances</a>
@@ -16056,13 +14388,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -16071,8 +14401,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchminhealthypercentage_go">
 <a href="#batchminhealthypercentage_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Min<wbr>Healthy<wbr>Percentage</a>
@@ -16081,8 +14410,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the threshold of minimum healthy instances in single batch. If the amount of healthy instances in single batch is under the threshold, the deployment will fail. Range `1` - `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfailure_go">
 <a href="#onfailure_go" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -16091,8 +14419,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Set detach options to the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddraininstances_go">
 <a href="#shoulddraininstances_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Drain<wbr>Instances</a>
@@ -16101,13 +14428,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -16116,8 +14441,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchminhealthypercentage_nodejs">
 <a href="#batchminhealthypercentage_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Min<wbr>Healthy<wbr>Percentage</a>
@@ -16126,8 +14450,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the threshold of minimum healthy instances in single batch. If the amount of healthy instances in single batch is under the threshold, the deployment will fail. Range `1` - `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfailure_nodejs">
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
@@ -16136,8 +14459,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Set detach options to the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddraininstances_nodejs">
 <a href="#shoulddraininstances_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Drain<wbr>Instances</a>
@@ -16146,13 +14468,11 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -16161,8 +14481,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to take. Valid values: `REPLACE_SERVER`, `RESTART_SERVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_min_healthy_percentage_python">
 <a href="#batch_min_healthy_percentage_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>min_<wbr>healthy_<wbr>percentage</a>
@@ -16171,8 +14490,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the threshold of minimum healthy instances in single batch. If the amount of healthy instances in single batch is under the threshold, the deployment will fail. Range `1` - `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_failure_python">
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
@@ -16181,8 +14499,7 @@ Usage:
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set detach options to the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_drain_instances_python">
 <a href="#should_drain_instances_python" style="color: inherit; text-decoration: inherit;">should_<wbr>drain_<wbr>instances</a>
@@ -16191,15 +14508,13 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether to drain incoming TCP connections before terminating a server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -16208,8 +14523,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the action that will take place, Accepted values are: `DETACH_OLD`, `DETACH_NEW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchnum_csharp">
 <a href="#batchnum_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Num</a>
@@ -16217,8 +14531,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_csharp">
 <a href="#drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -16227,8 +14540,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddecrementtargetcapacity_csharp">
 <a href="#shoulddecrementtargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Decrement<wbr>Target<wbr>Capacity</a>
@@ -16237,8 +14549,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Decrementing the group target capacity after detaching the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldhandleallbatches_csharp">
 <a href="#shouldhandleallbatches_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Handle<wbr>All<wbr>Batches</a>
@@ -16247,13 +14558,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicator if the action should apply to all batches of the deployment or only the latest batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -16262,8 +14571,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the action that will take place, Accepted values are: `DETACH_OLD`, `DETACH_NEW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchnum_go">
 <a href="#batchnum_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Num</a>
@@ -16271,8 +14579,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_go">
 <a href="#drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
@@ -16281,8 +14588,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddecrementtargetcapacity_go">
 <a href="#shoulddecrementtargetcapacity_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Decrement<wbr>Target<wbr>Capacity</a>
@@ -16291,8 +14597,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Decrementing the group target capacity after detaching the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldhandleallbatches_go">
 <a href="#shouldhandleallbatches_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Handle<wbr>All<wbr>Batches</a>
@@ -16301,13 +14606,11 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicator if the action should apply to all batches of the deployment or only the latest batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -16316,8 +14619,7 @@ Usage:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the action that will take place, Accepted values are: `DETACH_OLD`, `DETACH_NEW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchnum_nodejs">
 <a href="#batchnum_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Num</a>
@@ -16325,8 +14627,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_nodejs">
 <a href="#drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
@@ -16335,8 +14636,7 @@ Usage:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shoulddecrementtargetcapacity_nodejs">
 <a href="#shoulddecrementtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Decrement<wbr>Target<wbr>Capacity</a>
@@ -16345,8 +14645,7 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Decrementing the group target capacity after detaching the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shouldhandleallbatches_nodejs">
 <a href="#shouldhandleallbatches_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Handle<wbr>All<wbr>Batches</a>
@@ -16355,13 +14654,11 @@ Usage:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicator if the action should apply to all batches of the deployment or only the latest batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_type_python">
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -16370,8 +14667,7 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the action that will take place, Accepted values are: `DETACH_OLD`, `DETACH_NEW`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_num_python">
 <a href="#batch_num_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>num</a>
@@ -16379,8 +14675,7 @@ Usage:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="draining_timeout_python">
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
@@ -16389,8 +14684,7 @@ Usage:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates (in seconds) the timeout to wait until instance are detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_decrement_target_capacity_python">
 <a href="#should_decrement_target_capacity_python" style="color: inherit; text-decoration: inherit;">should_<wbr>decrement_<wbr>target_<wbr>capacity</a>
@@ -16399,8 +14693,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Decrementing the group target capacity after detaching the instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="should_handle_all_batches_python">
 <a href="#should_handle_all_batches_python" style="color: inherit; text-decoration: inherit;">should_<wbr>handle_<wbr>all_<wbr>batches</a>
@@ -16409,8 +14702,7 @@ Usage:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicator if the action should apply to all batches of the deployment or only the latest batch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

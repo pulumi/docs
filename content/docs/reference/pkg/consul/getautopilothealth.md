@@ -147,8 +147,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -158,13 +157,11 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -174,13 +171,11 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -190,13 +185,11 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -206,8 +199,7 @@ default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the agent's
 default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -220,8 +212,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="failuretolerance_csharp">
 <a href="#failuretolerance_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Tolerance</a>
@@ -231,8 +222,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The number of redundant healthy servers that could fail
 without causing an outage
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="healthy_csharp">
 <a href="#healthy_csharp" style="color: inherit; text-decoration: inherit;">Healthy</a>
@@ -242,8 +232,7 @@ without causing an outage
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -252,8 +241,7 @@ configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -263,8 +251,7 @@ configuration
     </dt>
     <dd>{{% md %}}A list of server health information. See below for details on the
 available information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -272,13 +259,11 @@ available information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="failuretolerance_go">
 <a href="#failuretolerance_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Tolerance</a>
@@ -288,8 +273,7 @@ available information.
     </dt>
     <dd>{{% md %}}The number of redundant healthy servers that could fail
 without causing an outage
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="healthy_go">
 <a href="#healthy_go" style="color: inherit; text-decoration: inherit;">Healthy</a>
@@ -299,8 +283,7 @@ without causing an outage
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -309,8 +292,7 @@ configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -320,8 +302,7 @@ configuration
     </dt>
     <dd>{{% md %}}A list of server health information. See below for details on the
 available information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -329,13 +310,11 @@ available information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="failuretolerance_nodejs">
 <a href="#failuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Tolerance</a>
@@ -345,8 +324,7 @@ available information.
     </dt>
     <dd>{{% md %}}The number of redundant healthy servers that could fail
 without causing an outage
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="healthy_nodejs">
 <a href="#healthy_nodejs" style="color: inherit; text-decoration: inherit;">healthy</a>
@@ -356,8 +334,7 @@ without causing an outage
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -366,8 +343,7 @@ configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -377,8 +353,7 @@ configuration
     </dt>
     <dd>{{% md %}}A list of server health information. See below for details on the
 available information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -386,13 +361,11 @@ available information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="failure_tolerance_python">
 <a href="#failure_tolerance_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>tolerance</a>
@@ -402,8 +375,7 @@ available information.
     </dt>
     <dd>{{% md %}}The number of redundant healthy servers that could fail
 without causing an outage
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="healthy_python">
 <a href="#healthy_python" style="color: inherit; text-decoration: inherit;">healthy</a>
@@ -413,8 +385,7 @@ without causing an outage
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -423,8 +394,7 @@ configuration
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -434,8 +404,7 @@ configuration
     </dt>
     <dd>{{% md %}}A list of server health information. See below for details on the
 available information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -443,8 +412,7 @@ available information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -458,8 +426,7 @@ available information.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -468,8 +435,7 @@ available information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthy_csharp">
 <a href="#healthy_csharp" style="color: inherit; text-decoration: inherit;">Healthy</a>
@@ -479,8 +445,7 @@ available information.
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,8 +454,7 @@ configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Raft ID of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcontact_csharp">
 <a href="#lastcontact_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact</a>
@@ -500,8 +464,7 @@ configuration
     </dt>
     <dd>{{% md %}}The time elapsed since the server's last contact with
 the leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastindex_csharp">
 <a href="#lastindex_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Index</a>
@@ -510,8 +473,7 @@ the leader
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The index of the server's last committed Raft log entry
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastterm_csharp">
 <a href="#lastterm_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Term</a>
@@ -520,8 +482,7 @@ the leader
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server's last known Raft leader term
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leader_csharp">
 <a href="#leader_csharp" style="color: inherit; text-decoration: inherit;">Leader</a>
@@ -530,8 +491,7 @@ the leader
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the server is currently leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -540,8 +500,7 @@ the leader
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node name of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serfstatus_csharp">
 <a href="#serfstatus_csharp" style="color: inherit; text-decoration: inherit;">Serf<wbr>Status</a>
@@ -550,8 +509,7 @@ the leader
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the SerfHealth check of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stablesince_csharp">
 <a href="#stablesince_csharp" style="color: inherit; text-decoration: inherit;">Stable<wbr>Since</a>
@@ -561,8 +519,7 @@ the leader
     </dt>
     <dd>{{% md %}}The time this server has been in its current ``Healthy``
 state
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -571,8 +528,7 @@ state
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul version of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="voter_csharp">
 <a href="#voter_csharp" style="color: inherit; text-decoration: inherit;">Voter</a>
@@ -581,13 +537,11 @@ state
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the server is a voting member of the Raft cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -596,8 +550,7 @@ state
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthy_go">
 <a href="#healthy_go" style="color: inherit; text-decoration: inherit;">Healthy</a>
@@ -607,8 +560,7 @@ state
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -617,8 +569,7 @@ configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Raft ID of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcontact_go">
 <a href="#lastcontact_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Contact</a>
@@ -628,8 +579,7 @@ configuration
     </dt>
     <dd>{{% md %}}The time elapsed since the server's last contact with
 the leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastindex_go">
 <a href="#lastindex_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Index</a>
@@ -638,8 +588,7 @@ the leader
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The index of the server's last committed Raft log entry
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastterm_go">
 <a href="#lastterm_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Term</a>
@@ -648,8 +597,7 @@ the leader
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server's last known Raft leader term
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leader_go">
 <a href="#leader_go" style="color: inherit; text-decoration: inherit;">Leader</a>
@@ -658,8 +606,7 @@ the leader
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the server is currently leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -668,8 +615,7 @@ the leader
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node name of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serfstatus_go">
 <a href="#serfstatus_go" style="color: inherit; text-decoration: inherit;">Serf<wbr>Status</a>
@@ -678,8 +624,7 @@ the leader
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the SerfHealth check of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stablesince_go">
 <a href="#stablesince_go" style="color: inherit; text-decoration: inherit;">Stable<wbr>Since</a>
@@ -689,8 +634,7 @@ the leader
     </dt>
     <dd>{{% md %}}The time this server has been in its current ``Healthy``
 state
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -699,8 +643,7 @@ state
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul version of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="voter_go">
 <a href="#voter_go" style="color: inherit; text-decoration: inherit;">Voter</a>
@@ -709,13 +652,11 @@ state
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the server is a voting member of the Raft cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -724,8 +665,7 @@ state
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthy_nodejs">
 <a href="#healthy_nodejs" style="color: inherit; text-decoration: inherit;">healthy</a>
@@ -735,8 +675,7 @@ state
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -745,8 +684,7 @@ configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Raft ID of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastcontact_nodejs">
 <a href="#lastcontact_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Contact</a>
@@ -756,8 +694,7 @@ configuration
     </dt>
     <dd>{{% md %}}The time elapsed since the server's last contact with
 the leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastindex_nodejs">
 <a href="#lastindex_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Index</a>
@@ -766,8 +703,7 @@ the leader
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The index of the server's last committed Raft log entry
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastterm_nodejs">
 <a href="#lastterm_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Term</a>
@@ -776,8 +712,7 @@ the leader
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The server's last known Raft leader term
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leader_nodejs">
 <a href="#leader_nodejs" style="color: inherit; text-decoration: inherit;">leader</a>
@@ -786,8 +721,7 @@ the leader
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the server is currently leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -796,8 +730,7 @@ the leader
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node name of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serfstatus_nodejs">
 <a href="#serfstatus_nodejs" style="color: inherit; text-decoration: inherit;">serf<wbr>Status</a>
@@ -806,8 +739,7 @@ the leader
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the SerfHealth check of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stablesince_nodejs">
 <a href="#stablesince_nodejs" style="color: inherit; text-decoration: inherit;">stable<wbr>Since</a>
@@ -817,8 +749,7 @@ the leader
     </dt>
     <dd>{{% md %}}The time this server has been in its current ``Healthy``
 state
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -827,8 +758,7 @@ state
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul version of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="voter_nodejs">
 <a href="#voter_nodejs" style="color: inherit; text-decoration: inherit;">voter</a>
@@ -837,13 +767,11 @@ state
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the server is a voting member of the Raft cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -852,8 +780,7 @@ state
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthy_python">
 <a href="#healthy_python" style="color: inherit; text-decoration: inherit;">healthy</a>
@@ -863,8 +790,7 @@ state
     </dt>
     <dd>{{% md %}}Whether the server is healthy according to the current Autopilot
 configuration
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -873,8 +799,7 @@ configuration
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Raft ID of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_contact_python">
 <a href="#last_contact_python" style="color: inherit; text-decoration: inherit;">last_<wbr>contact</a>
@@ -884,8 +809,7 @@ configuration
     </dt>
     <dd>{{% md %}}The time elapsed since the server's last contact with
 the leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_index_python">
 <a href="#last_index_python" style="color: inherit; text-decoration: inherit;">last_<wbr>index</a>
@@ -894,8 +818,7 @@ the leader
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The index of the server's last committed Raft log entry
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_term_python">
 <a href="#last_term_python" style="color: inherit; text-decoration: inherit;">last_<wbr>term</a>
@@ -904,8 +827,7 @@ the leader
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server's last known Raft leader term
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leader_python">
 <a href="#leader_python" style="color: inherit; text-decoration: inherit;">leader</a>
@@ -914,8 +836,7 @@ the leader
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the server is currently leader
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -924,8 +845,7 @@ the leader
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node name of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serf_status_python">
 <a href="#serf_status_python" style="color: inherit; text-decoration: inherit;">serf_<wbr>status</a>
@@ -934,8 +854,7 @@ the leader
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the SerfHealth check of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stable_since_python">
 <a href="#stable_since_python" style="color: inherit; text-decoration: inherit;">stable_<wbr>since</a>
@@ -945,8 +864,7 @@ the leader
     </dt>
     <dd>{{% md %}}The time this server has been in its current ``Healthy``
 state
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -955,8 +873,7 @@ state
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consul version of the server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="voter_python">
 <a href="#voter_python" style="color: inherit; text-decoration: inherit;">voter</a>
@@ -965,8 +882,7 @@ state
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the server is a voting member of the Raft cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

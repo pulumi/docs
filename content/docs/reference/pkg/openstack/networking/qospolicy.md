@@ -258,8 +258,7 @@ The QosPolicy resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -269,8 +268,7 @@ The QosPolicy resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -281,8 +279,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -292,8 +289,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -303,8 +299,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -316,8 +311,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_csharp">
 <a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -328,8 +322,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -338,8 +331,7 @@ QoS policy.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -348,13 +340,11 @@ QoS policy.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -364,8 +354,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -376,8 +365,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -387,8 +375,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -398,8 +385,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -411,8 +397,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_go">
 <a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -423,8 +408,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -433,8 +417,7 @@ QoS policy.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -443,13 +426,11 @@ QoS policy.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -459,8 +440,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -471,8 +451,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -482,8 +461,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -493,8 +471,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -506,8 +483,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_nodejs">
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -518,8 +494,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -528,8 +503,7 @@ QoS policy.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -538,13 +512,11 @@ QoS policy.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -554,8 +526,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -566,8 +537,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -577,8 +547,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -588,8 +557,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -601,8 +569,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_python">
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -613,8 +580,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -623,8 +589,7 @@ QoS policy.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -633,8 +598,7 @@ QoS policy.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -645,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -656,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -666,8 +628,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -675,8 +636,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_csharp">
 <a href="#revisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -685,8 +645,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -695,13 +654,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -711,8 +668,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -721,8 +677,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -730,8 +685,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_go">
 <a href="#revisionnumber_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -740,8 +694,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -750,13 +703,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -766,8 +717,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -776,8 +726,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,8 +734,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_nodejs">
 <a href="#revisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Number</a>
@@ -795,8 +743,7 @@ explicitly and implicitly added.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -805,13 +752,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -821,8 +766,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -831,8 +775,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -840,8 +783,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revision_number_python">
 <a href="#revision_number_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>number</a>
@@ -850,8 +792,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -860,8 +801,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -988,8 +928,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -999,8 +938,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1009,8 +947,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1020,8 +957,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isdefault_csharp">
 <a href="#state_isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -1032,8 +968,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1043,8 +978,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1054,8 +988,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1067,8 +1000,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionnumber_csharp">
 <a href="#state_revisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1077,8 +1009,7 @@ QoS policy.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_csharp">
 <a href="#state_shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1089,8 +1020,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1099,8 +1029,7 @@ QoS policy.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_csharp">
 <a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1109,8 +1038,7 @@ QoS policy.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1119,13 +1047,11 @@ QoS policy.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1135,8 +1061,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1145,8 +1070,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1156,8 +1080,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isdefault_go">
 <a href="#state_isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -1168,8 +1091,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1179,8 +1101,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1190,8 +1111,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1203,8 +1123,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionnumber_go">
 <a href="#state_revisionnumber_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1213,8 +1132,7 @@ QoS policy.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_go">
 <a href="#state_shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1225,8 +1143,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1235,8 +1152,7 @@ QoS policy.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_go">
 <a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1245,8 +1161,7 @@ QoS policy.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1255,13 +1170,11 @@ QoS policy.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1271,8 +1184,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1281,8 +1193,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1292,8 +1203,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isdefault_nodejs">
 <a href="#state_isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -1304,8 +1214,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1315,8 +1224,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1326,8 +1234,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1339,8 +1246,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionnumber_nodejs">
 <a href="#state_revisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Number</a>
@@ -1349,8 +1255,7 @@ QoS policy.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_nodejs">
 <a href="#state_shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1361,8 +1266,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1371,8 +1275,7 @@ QoS policy.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_nodejs">
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1381,8 +1284,7 @@ QoS policy.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1391,13 +1293,11 @@ QoS policy.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1407,8 +1307,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the QoS policy, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1417,8 +1316,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1428,8 +1326,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The human-readable description for the QoS policy.
 Changing this updates the description of the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_default_python">
 <a href="#state_is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -1440,8 +1337,7 @@ Changing this updates the description of the existing QoS policy.
     <dd>{{% md %}}Indicates whether the QoS policy is default
 QoS policy or not. Changing this updates the default status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1451,8 +1347,7 @@ QoS policy.
     </dt>
     <dd>{{% md %}}The name of the QoS policy. Changing this updates the name of
 the existing QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1462,8 +1357,7 @@ the existing QoS policy.
     </dt>
     <dd>{{% md %}}The owner of the QoS policy. Required if admin wants to
 create a QoS policy for another project. Changing this creates a new QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1475,8 +1369,7 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 A Networking client is needed to create a Neutron Qos policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_number_python">
 <a href="#state_revision_number_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>number</a>
@@ -1485,8 +1378,7 @@ QoS policy.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_python">
 <a href="#state_shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1497,8 +1389,7 @@ QoS policy.
     <dd>{{% md %}}Indicates whether this QoS policy is shared across
 all projects. Changing this updates the shared status of the existing
 QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1507,8 +1398,7 @@ QoS policy.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_at_python">
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1517,8 +1407,7 @@ QoS policy.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which QoS policy was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1527,8 +1416,7 @@ QoS policy.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -220,8 +220,7 @@ The LaunchConfiguration resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -230,8 +229,7 @@ The LaunchConfiguration resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -240,8 +238,7 @@ The LaunchConfiguration resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
 <a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -250,8 +247,7 @@ The LaunchConfiguration resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_csharp">
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -261,8 +257,7 @@ The LaunchConfiguration resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -271,8 +266,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemonitoring_csharp">
 <a href="#enablemonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -281,8 +275,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_csharp">
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -292,8 +285,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_csharp">
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -303,8 +295,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -313,8 +304,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_csharp">
 <a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -323,8 +313,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +323,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -345,8 +333,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_csharp">
 <a href="#placementtenancy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -357,8 +344,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootblockdevice_csharp">
 <a href="#rootblockdevice_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Device</a>
@@ -368,8 +354,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -378,8 +363,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -388,8 +372,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -398,8 +381,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatabase64_csharp">
 <a href="#userdatabase64_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Base64</a>
@@ -408,8 +390,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcclassiclinkid_csharp">
 <a href="#vpcclassiclinkid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Id</a>
@@ -418,8 +399,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcclassiclinksecuritygroups_csharp">
 <a href="#vpcclassiclinksecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</a>
@@ -428,13 +408,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -443,8 +421,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -453,8 +430,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
 <a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -463,8 +439,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_go">
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -474,8 +449,7 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -484,8 +458,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemonitoring_go">
 <a href="#enablemonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -494,8 +467,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_go">
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -505,8 +477,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_go">
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -516,8 +487,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -526,8 +496,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_go">
 <a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -536,8 +505,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +515,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -558,8 +525,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_go">
 <a href="#placementtenancy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -570,8 +536,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootblockdevice_go">
 <a href="#rootblockdevice_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Device</a>
@@ -581,8 +546,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -591,8 +555,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_go">
 <a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -601,8 +564,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -611,8 +573,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatabase64_go">
 <a href="#userdatabase64_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Base64</a>
@@ -621,8 +582,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcclassiclinkid_go">
 <a href="#vpcclassiclinkid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Id</a>
@@ -631,8 +591,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcclassiclinksecuritygroups_go">
 <a href="#vpcclassiclinksecuritygroups_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</a>
@@ -641,13 +600,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -656,8 +613,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -666,8 +622,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -676,8 +631,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_nodejs">
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -687,8 +641,7 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -697,8 +650,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemonitoring_nodejs">
 <a href="#enablemonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Monitoring</a>
@@ -707,8 +659,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -718,8 +669,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_nodejs">
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -729,8 +679,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -739,8 +688,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_nodejs">
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
@@ -749,8 +697,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -760,8 +707,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -771,8 +717,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_nodejs">
 <a href="#placementtenancy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Tenancy</a>
@@ -783,8 +728,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootblockdevice_nodejs">
 <a href="#rootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Device</a>
@@ -794,8 +738,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -804,8 +747,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -814,8 +756,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -824,8 +765,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatabase64_nodejs">
 <a href="#userdatabase64_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Base64</a>
@@ -834,8 +774,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcclassiclinkid_nodejs">
 <a href="#vpcclassiclinkid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Classic<wbr>Link<wbr>Id</a>
@@ -844,8 +783,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcclassiclinksecuritygroups_nodejs">
 <a href="#vpcclassiclinksecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</a>
@@ -854,13 +792,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -869,8 +805,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -879,8 +814,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -889,8 +823,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_block_devices_python">
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -900,8 +833,7 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -910,8 +842,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_monitoring_python">
 <a href="#enable_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>monitoring</a>
@@ -920,8 +851,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_block_devices_python">
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -931,8 +861,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_python">
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -942,8 +871,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -952,8 +880,7 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_options_python">
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
@@ -962,8 +889,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -973,8 +899,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -984,8 +909,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_tenancy_python">
 <a href="#placement_tenancy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>tenancy</a>
@@ -996,8 +920,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_block_device_python">
 <a href="#root_block_device_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>device</a>
@@ -1007,8 +930,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -1017,8 +939,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_price_python">
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -1027,8 +948,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -1037,8 +957,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_base64_python">
 <a href="#user_data_base64_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>base64</a>
@@ -1047,8 +966,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_classic_link_id_python">
 <a href="#vpc_classic_link_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>classic_<wbr>link_<wbr>id</a>
@@ -1057,8 +975,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_classic_link_security_groups_python">
 <a href="#vpc_classic_link_security_groups_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</a>
@@ -1067,8 +984,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1079,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1089,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1098,13 +1012,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1113,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1122,13 +1033,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1137,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1146,13 +1054,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1161,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1170,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1298,8 +1202,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1308,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatepublicipaddress_csharp">
 <a href="#state_associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1318,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_csharp">
 <a href="#state_ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -1329,8 +1230,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_csharp">
 <a href="#state_ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -1339,8 +1239,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablemonitoring_csharp">
 <a href="#state_enablemonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -1349,8 +1248,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_csharp">
 <a href="#state_ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -1360,8 +1258,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_csharp">
 <a href="#state_iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -1371,8 +1268,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1381,8 +1277,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_csharp">
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1391,8 +1286,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
 <a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1401,8 +1295,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_csharp">
 <a href="#state_metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -1411,8 +1304,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1422,8 +1314,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1433,8 +1324,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementtenancy_csharp">
 <a href="#state_placementtenancy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -1445,8 +1335,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootblockdevice_csharp">
 <a href="#state_rootblockdevice_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Device</a>
@@ -1456,8 +1345,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_csharp">
 <a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1466,8 +1354,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotprice_csharp">
 <a href="#state_spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -1476,8 +1363,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1486,8 +1372,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdatabase64_csharp">
 <a href="#state_userdatabase64_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Base64</a>
@@ -1496,8 +1381,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcclassiclinkid_csharp">
 <a href="#state_vpcclassiclinkid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Id</a>
@@ -1506,8 +1390,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcclassiclinksecuritygroups_csharp">
 <a href="#state_vpcclassiclinksecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</a>
@@ -1516,13 +1399,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1531,8 +1412,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatepublicipaddress_go">
 <a href="#state_associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1541,8 +1421,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_go">
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -1552,8 +1431,7 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_go">
 <a href="#state_ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -1562,8 +1440,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablemonitoring_go">
 <a href="#state_enablemonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Monitoring</a>
@@ -1572,8 +1449,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_go">
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -1583,8 +1459,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_go">
 <a href="#state_iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -1594,8 +1469,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1604,8 +1478,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_go">
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1614,8 +1487,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_go">
 <a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1624,8 +1496,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_go">
 <a href="#state_metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -1634,8 +1505,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1645,8 +1515,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1656,8 +1525,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementtenancy_go">
 <a href="#state_placementtenancy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -1668,8 +1536,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootblockdevice_go">
 <a href="#state_rootblockdevice_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Device</a>
@@ -1679,8 +1546,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_go">
 <a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1689,8 +1555,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotprice_go">
 <a href="#state_spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -1699,8 +1564,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1709,8 +1573,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdatabase64_go">
 <a href="#state_userdatabase64_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Base64</a>
@@ -1719,8 +1582,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcclassiclinkid_go">
 <a href="#state_vpcclassiclinkid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Id</a>
@@ -1729,8 +1591,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcclassiclinksecuritygroups_go">
 <a href="#state_vpcclassiclinksecuritygroups_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</a>
@@ -1739,13 +1600,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1754,8 +1613,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatepublicipaddress_nodejs">
 <a href="#state_associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1764,8 +1622,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsblockdevices_nodejs">
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -1775,8 +1632,7 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebsoptimized_nodejs">
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -1785,8 +1641,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablemonitoring_nodejs">
 <a href="#state_enablemonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Monitoring</a>
@@ -1795,8 +1650,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeralblockdevices_nodejs">
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -1806,8 +1660,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iaminstanceprofile_nodejs">
 <a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -1817,8 +1670,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -1827,8 +1679,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancetype_nodejs">
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1837,8 +1688,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_nodejs">
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -1847,8 +1697,7 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_nodejs">
 <a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
@@ -1857,8 +1706,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1868,8 +1716,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -1879,8 +1726,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placementtenancy_nodejs">
 <a href="#state_placementtenancy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Tenancy</a>
@@ -1891,8 +1737,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootblockdevice_nodejs">
 <a href="#state_rootblockdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Device</a>
@@ -1902,8 +1747,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_nodejs">
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1912,8 +1756,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotprice_nodejs">
 <a href="#state_spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -1922,8 +1765,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -1932,8 +1774,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdatabase64_nodejs">
 <a href="#state_userdatabase64_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Base64</a>
@@ -1942,8 +1783,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcclassiclinkid_nodejs">
 <a href="#state_vpcclassiclinkid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Classic<wbr>Link<wbr>Id</a>
@@ -1952,8 +1792,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcclassiclinksecuritygroups_nodejs">
 <a href="#state_vpcclassiclinksecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</a>
@@ -1962,13 +1801,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1977,8 +1814,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associate_public_ip_address_python">
 <a href="#state_associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -1987,8 +1823,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_block_devices_python">
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -1998,8 +1833,7 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ebs_optimized_python">
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -2008,8 +1842,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_monitoring_python">
 <a href="#state_enable_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>monitoring</a>
@@ -2018,8 +1851,7 @@ instance.  See Block Devices below for details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ephemeral_block_devices_python">
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -2029,8 +1861,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_instance_profile_python">
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -2040,8 +1871,7 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2050,8 +1880,7 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EC2 image ID to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_type_python">
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -2060,8 +1889,7 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of instance to launch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -2070,8 +1898,7 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_options_python">
 <a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
@@ -2080,8 +1907,7 @@ with launched instances.
         <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2091,8 +1917,7 @@ with launched instances.
     </dt>
     <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -2102,8 +1927,7 @@ this blank, this provider will auto-generate a unique name.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_tenancy_python">
 <a href="#state_placement_tenancy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>tenancy</a>
@@ -2114,8 +1938,7 @@ prefix. Conflicts with `name`.
     <dd>{{% md %}}The tenancy of the instance. Valid values are
 `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_block_device_python">
 <a href="#state_root_block_device_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>device</a>
@@ -2125,8 +1948,7 @@ for more details
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_groups_python">
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2135,8 +1957,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of associated security group IDS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_price_python">
 <a href="#state_spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -2145,8 +1966,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum price to use for reserving spot instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -2155,8 +1975,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_base64_python">
 <a href="#state_user_data_base64_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>base64</a>
@@ -2165,8 +1984,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_classic_link_id_python">
 <a href="#state_vpc_classic_link_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>classic_<wbr>link_<wbr>id</a>
@@ -2175,8 +1993,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_classic_link_security_groups_python">
 <a href="#state_vpc_classic_link_security_groups_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</a>
@@ -2185,8 +2002,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2201,8 +2017,7 @@ device of the instance. See Block Devices below for details.
 <h4 id="launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2210,8 +2025,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2219,8 +2033,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2228,8 +2041,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2237,8 +2049,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodevice_csharp">
 <a href="#nodevice_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
@@ -2246,8 +2057,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2255,8 +2065,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2264,8 +2073,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2273,13 +2081,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2287,8 +2093,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2296,8 +2101,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2305,8 +2109,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2314,8 +2117,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodevice_go">
 <a href="#nodevice_go" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
@@ -2323,8 +2125,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2332,8 +2133,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2341,8 +2141,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2350,13 +2149,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2364,8 +2161,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -2373,8 +2169,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2382,8 +2177,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2391,8 +2185,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodevice_nodejs">
 <a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
@@ -2400,8 +2193,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -2409,8 +2201,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -2418,8 +2209,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -2427,13 +2217,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2441,8 +2229,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -2450,8 +2237,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2459,8 +2245,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2468,8 +2253,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_device_python">
 <a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
@@ -2477,8 +2261,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -2486,8 +2269,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -2495,8 +2277,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -2504,15 +2285,13 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2520,8 +2299,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -2529,13 +2307,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2543,8 +2319,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -2552,13 +2327,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2566,8 +2339,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
@@ -2575,13 +2347,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2589,8 +2359,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_name_python">
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
@@ -2598,15 +2367,13 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpendpoint_csharp">
 <a href="#httpendpoint_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
@@ -2615,8 +2382,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_csharp">
 <a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2625,8 +2391,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httptokens_csharp">
 <a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -2635,13 +2400,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpendpoint_go">
 <a href="#httpendpoint_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
@@ -2650,8 +2413,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_go">
 <a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2660,8 +2422,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httptokens_go">
 <a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -2670,13 +2431,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpendpoint_nodejs">
 <a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
@@ -2685,8 +2444,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpputresponsehoplimit_nodejs">
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2695,8 +2453,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httptokens_nodejs">
 <a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
@@ -2705,13 +2462,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="http_endpoint_python">
 <a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
@@ -2720,8 +2475,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_put_response_hop_limit_python">
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
@@ -2730,8 +2484,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_tokens_python">
 <a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
@@ -2740,15 +2493,13 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2756,8 +2507,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2765,8 +2515,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2774,8 +2523,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2783,8 +2531,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2792,13 +2539,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2806,8 +2551,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2815,8 +2559,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2824,8 +2567,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2833,8 +2575,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2842,13 +2583,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -2856,8 +2595,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2865,8 +2603,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2874,8 +2611,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -2883,8 +2619,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -2892,13 +2627,11 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -2906,8 +2639,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2915,8 +2647,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2924,8 +2655,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -2933,8 +2663,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -2942,8 +2671,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

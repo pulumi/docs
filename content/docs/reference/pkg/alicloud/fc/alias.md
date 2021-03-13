@@ -296,8 +296,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aliasname_csharp">
 <a href="#aliasname_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
@@ -306,8 +305,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -316,8 +314,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceversion_csharp">
 <a href="#serviceversion_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Version</a>
@@ -326,8 +323,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -336,8 +332,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingconfig_csharp">
 <a href="#routingconfig_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Config</a>
@@ -346,13 +341,11 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#aliasroutingconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Alias<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aliasname_go">
 <a href="#aliasname_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
@@ -361,8 +354,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -371,8 +363,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceversion_go">
 <a href="#serviceversion_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Version</a>
@@ -381,8 +372,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -391,8 +381,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingconfig_go">
 <a href="#routingconfig_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Config</a>
@@ -401,13 +390,11 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aliasname_nodejs">
 <a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
@@ -416,8 +403,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -426,8 +412,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceversion_nodejs">
 <a href="#serviceversion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Version</a>
@@ -436,8 +421,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -446,8 +430,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingconfig_nodejs">
 <a href="#routingconfig_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Config</a>
@@ -456,13 +439,11 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_name_python">
 <a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
@@ -471,8 +452,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -481,8 +461,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_version_python">
 <a href="#service_version_python" style="color: inherit; text-decoration: inherit;">service_<wbr>version</a>
@@ -491,8 +470,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -501,8 +479,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_config_python">
 <a href="#routing_config_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>config</a>
@@ -511,8 +488,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -523,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -532,13 +507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -546,13 +519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -560,13 +531,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -574,8 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -702,8 +670,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliasname_csharp">
 <a href="#state_aliasname_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
@@ -712,8 +679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -722,8 +688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingconfig_csharp">
 <a href="#state_routingconfig_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Config</a>
@@ -732,8 +697,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#aliasroutingconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Alias<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -742,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceversion_csharp">
 <a href="#state_serviceversion_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Version</a>
@@ -752,13 +715,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliasname_go">
 <a href="#state_aliasname_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
@@ -767,8 +728,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -777,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingconfig_go">
 <a href="#state_routingconfig_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Config</a>
@@ -787,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -797,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceversion_go">
 <a href="#state_serviceversion_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Version</a>
@@ -807,13 +764,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliasname_nodejs">
 <a href="#state_aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
@@ -822,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -832,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingconfig_nodejs">
 <a href="#state_routingconfig_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Config</a>
@@ -842,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -852,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceversion_nodejs">
 <a href="#state_serviceversion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Version</a>
@@ -862,13 +813,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_name_python">
 <a href="#state_alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
@@ -877,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -887,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_config_python">
 <a href="#state_routing_config_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>config</a>
@@ -897,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Function Compute alias' route configuration settings. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -907,8 +853,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_version_python">
 <a href="#state_service_version_python" style="color: inherit; text-decoration: inherit;">service_<wbr>version</a>
@@ -917,8 +862,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service version for which you are creating the alias. Pattern: (LATEST|[0-9]+).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -933,8 +877,7 @@ The following state arguments are supported:
 <h4 id="aliasroutingconfig">Alias<wbr>Routing<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalversionweights_csharp">
 <a href="#additionalversionweights_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Version<wbr>Weights</a>
@@ -943,13 +886,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, double&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a Function Compute service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalversionweights_go">
 <a href="#additionalversionweights_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Version<wbr>Weights</a>
@@ -958,13 +899,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]float64</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a Function Compute service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalversionweights_nodejs">
 <a href="#additionalversionweights_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Version<wbr>Weights</a>
@@ -973,13 +912,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a Function Compute service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_version_weights_python">
 <a href="#additional_version_weights_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>version_<wbr>weights</a>
@@ -988,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, float]</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a Function Compute service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

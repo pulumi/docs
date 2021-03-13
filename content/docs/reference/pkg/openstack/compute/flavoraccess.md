@@ -305,8 +305,7 @@ The FlavorAccess resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flavorid_csharp">
 <a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -315,8 +314,7 @@ The FlavorAccess resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -326,8 +324,7 @@ The FlavorAccess resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -338,13 +335,11 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flavorid_go">
 <a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -353,8 +348,7 @@ Changing this creates a new flavor access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -364,8 +358,7 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -376,13 +369,11 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flavorid_nodejs">
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -391,8 +382,7 @@ Changing this creates a new flavor access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -402,8 +392,7 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -414,13 +403,11 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flavor_id_python">
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -429,8 +416,7 @@ Changing this creates a new flavor access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -440,8 +426,7 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -452,8 +437,7 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -464,8 +448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -473,13 +456,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -487,13 +468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -501,13 +480,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -515,8 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -643,8 +619,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_csharp">
 <a href="#state_flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -653,8 +628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -665,8 +639,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -676,13 +649,11 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_go">
 <a href="#state_flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -691,8 +662,7 @@ Changing this creates a new flavor access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -703,8 +673,7 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -714,13 +683,11 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_nodejs">
 <a href="#state_flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -729,8 +696,7 @@ Changing this creates a new flavor access.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -741,8 +707,7 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -752,13 +717,11 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_flavor_id_python">
 <a href="#state_flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -767,8 +730,7 @@ Changing this creates a new flavor access.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of flavor to use. Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -779,8 +741,7 @@ Changing this creates a new flavor access.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -790,8 +751,7 @@ Changing this creates a new flavor access.
     </dt>
     <dd>{{% md %}}The UUID of tenant which is allowed to use the flavor.
 Changing this creates a new flavor access.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

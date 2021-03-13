@@ -354,8 +354,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceid_csharp">
 <a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
@@ -364,8 +363,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -374,8 +372,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletewhenabsent_csharp">
 <a href="#deletewhenabsent_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>When<wbr>Absent</a>
@@ -384,8 +381,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_csharp">
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -394,13 +390,11 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#mappingmapping">List&lt;Mapping<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceid_go">
 <a href="#sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
@@ -409,8 +403,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_go">
 <a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -419,8 +412,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletewhenabsent_go">
 <a href="#deletewhenabsent_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>When<wbr>Absent</a>
@@ -429,8 +421,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_go">
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -439,13 +430,11 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#mappingmapping">[]Mapping<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceid_nodejs">
 <a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
@@ -454,8 +443,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_nodejs">
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -464,8 +452,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletewhenabsent_nodejs">
 <a href="#deletewhenabsent_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>When<wbr>Absent</a>
@@ -474,8 +461,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_nodejs">
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -484,13 +470,11 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#mappingmapping">Mapping<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_id_python">
 <a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
@@ -499,8 +483,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_id_python">
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -509,8 +492,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_when_absent_python">
 <a href="#delete_when_absent_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>when_<wbr>absent</a>
@@ -519,8 +501,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappings_python">
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -529,8 +510,7 @@ The Mapping resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#mappingmapping">Sequence[Mapping<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -541,8 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -550,8 +529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcename_csharp">
 <a href="#sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -560,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -570,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetname_csharp">
 <a href="#targetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
@@ -580,8 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targettype_csharp">
 <a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -590,13 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -604,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcename_go">
 <a href="#sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -614,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -624,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetname_go">
 <a href="#targetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
@@ -634,8 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targettype_go">
 <a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -644,13 +613,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -658,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcename_nodejs">
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -668,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
@@ -678,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetname_nodejs">
 <a href="#targetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
@@ -688,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targettype_nodejs">
 <a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
@@ -698,13 +661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -712,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_name_python">
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -722,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_type_python">
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
@@ -732,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_name_python">
 <a href="#target_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name</a>
@@ -742,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_type_python">
 <a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
@@ -752,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -880,8 +836,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletewhenabsent_csharp">
 <a href="#state_deletewhenabsent_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>When<wbr>Absent</a>
@@ -890,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappings_csharp">
 <a href="#state_mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -900,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mappingmapping">List&lt;Mapping<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceid_csharp">
 <a href="#state_sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
@@ -910,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcename_csharp">
 <a href="#state_sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -920,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_csharp">
 <a href="#state_sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -930,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_csharp">
 <a href="#state_targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -940,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetname_csharp">
 <a href="#state_targetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
@@ -950,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_csharp">
 <a href="#state_targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -960,13 +908,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletewhenabsent_go">
 <a href="#state_deletewhenabsent_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>When<wbr>Absent</a>
@@ -975,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappings_go">
 <a href="#state_mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -985,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mappingmapping">[]Mapping<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceid_go">
 <a href="#state_sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
@@ -995,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcename_go">
 <a href="#state_sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1005,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_go">
 <a href="#state_sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1015,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_go">
 <a href="#state_targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1025,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetname_go">
 <a href="#state_targetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
@@ -1035,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_go">
 <a href="#state_targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -1045,13 +984,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletewhenabsent_nodejs">
 <a href="#state_deletewhenabsent_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>When<wbr>Absent</a>
@@ -1060,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappings_nodejs">
 <a href="#state_mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -1070,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mappingmapping">Mapping<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceid_nodejs">
 <a href="#state_sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
@@ -1080,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcename_nodejs">
 <a href="#state_sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -1090,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_nodejs">
 <a href="#state_sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
@@ -1100,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_nodejs">
 <a href="#state_targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1110,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetname_nodejs">
 <a href="#state_targetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
@@ -1120,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_nodejs">
 <a href="#state_targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
@@ -1130,13 +1060,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_delete_when_absent_python">
 <a href="#state_delete_when_absent_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>when_<wbr>absent</a>
@@ -1145,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Tells the provider whether to attempt to delete missing mappings under profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mappings_python">
 <a href="#state_mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -1155,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#mappingmapping">Sequence[Mapping<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_id_python">
 <a href="#state_source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
@@ -1165,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source id of the profile mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_name_python">
 <a href="#state_source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -1175,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_type_python">
 <a href="#state_source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
@@ -1185,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the mapping source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_id_python">
 <a href="#state_target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -1195,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_name_python">
 <a href="#state_target_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name</a>
@@ -1205,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the mapping target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_type_python">
 <a href="#state_target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
@@ -1215,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the mapping target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1231,8 +1151,7 @@ The following state arguments are supported:
 <h4 id="mappingmapping">Mapping<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1241,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Combination or single source properties that will be mapped to the target property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1251,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushstatus_csharp">
 <a href="#pushstatus_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Status</a>
@@ -1261,13 +1178,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to update target properties on user create & update or just on create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1276,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Combination or single source properties that will be mapped to the target property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1286,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushstatus_go">
 <a href="#pushstatus_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Status</a>
@@ -1296,13 +1209,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to update target properties on user create & update or just on create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1311,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Combination or single source properties that will be mapped to the target property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1321,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushstatus_nodejs">
 <a href="#pushstatus_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Status</a>
@@ -1331,13 +1240,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to update target properties on user create & update or just on create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1346,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Combination or single source properties that will be mapped to the target property.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1356,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="push_status_python">
 <a href="#push_status_python" style="color: inherit; text-decoration: inherit;">push_<wbr>status</a>
@@ -1366,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to update target properties on user create & update or just on create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

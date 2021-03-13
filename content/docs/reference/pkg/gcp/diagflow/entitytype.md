@@ -372,8 +372,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -382,8 +381,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -397,8 +395,7 @@ The EntityType resource accepts the following [input]({{< relref "/docs/intro/co
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefuzzyextraction_csharp">
 <a href="#enablefuzzyextraction_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
@@ -407,8 +404,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entities_csharp">
 <a href="#entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -418,8 +414,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -429,13 +424,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -444,8 +437,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -459,8 +451,7 @@ If it is not provided, the provider project is used.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefuzzyextraction_go">
 <a href="#enablefuzzyextraction_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
@@ -469,8 +460,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entities_go">
 <a href="#entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -480,8 +470,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -491,13 +480,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -506,8 +493,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -521,8 +507,7 @@ If it is not provided, the provider project is used.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefuzzyextraction_nodejs">
 <a href="#enablefuzzyextraction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fuzzy<wbr>Extraction</a>
@@ -531,8 +516,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entities_nodejs">
 <a href="#entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -542,8 +526,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -553,13 +536,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -568,8 +549,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -583,8 +563,7 @@ If it is not provided, the provider project is used.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_fuzzy_extraction_python">
 <a href="#enable_fuzzy_extraction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fuzzy_<wbr>extraction</a>
@@ -593,8 +572,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entities_python">
 <a href="#entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -604,8 +582,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -615,8 +592,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -627,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -646,13 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -660,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -670,13 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -684,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -694,13 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -708,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -718,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -846,8 +810,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -856,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablefuzzyextraction_csharp">
 <a href="#state_enablefuzzyextraction_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
@@ -866,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_csharp">
 <a href="#state_entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -877,8 +838,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -892,8 +852,7 @@ Structure is documented below.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -902,8 +861,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -913,13 +871,11 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -928,8 +884,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablefuzzyextraction_go">
 <a href="#state_enablefuzzyextraction_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fuzzy<wbr>Extraction</a>
@@ -938,8 +893,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_go">
 <a href="#state_entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -949,8 +903,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -964,8 +917,7 @@ Structure is documented below.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -974,8 +926,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -985,13 +936,11 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1000,8 +949,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablefuzzyextraction_nodejs">
 <a href="#state_enablefuzzyextraction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fuzzy<wbr>Extraction</a>
@@ -1010,8 +958,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_nodejs">
 <a href="#state_entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -1021,8 +968,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1036,8 +982,7 @@ Structure is documented below.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1046,8 +991,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1057,13 +1001,11 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1072,8 +1014,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this entity type to be displayed on the console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_fuzzy_extraction_python">
 <a href="#state_enable_fuzzy_extraction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fuzzy_<wbr>extraction</a>
@@ -1082,8 +1023,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables fuzzy entity extraction during classification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_python">
 <a href="#state_entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -1093,8 +1033,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The collection of entity entries associated with the entity type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1108,8 +1047,7 @@ Structure is documented below.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
 Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1118,8 +1056,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1129,8 +1066,7 @@ Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1145,8 +1081,7 @@ If it is not provided, the provider project is used.
 <h4 id="entitytypeentity">Entity<wbr>Type<wbr>Entity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_csharp">
 <a href="#synonyms_csharp" style="color: inherit; text-decoration: inherit;">Synonyms</a>
@@ -1158,8 +1093,7 @@ If it is not provided, the provider project is used.
 could be green onions.
 For KIND_LIST entity types:
 * This collection must contain exactly one synonym equal to value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1173,13 +1107,11 @@ For KIND_MAP entity types:
 * A reference value to be used in place of synonyms.
 For KIND_LIST entity types:
 * A string that can contain references to other entity types (with or without aliases).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_go">
 <a href="#synonyms_go" style="color: inherit; text-decoration: inherit;">Synonyms</a>
@@ -1191,8 +1123,7 @@ For KIND_LIST entity types:
 could be green onions.
 For KIND_LIST entity types:
 * This collection must contain exactly one synonym equal to value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1206,13 +1137,11 @@ For KIND_MAP entity types:
 * A reference value to be used in place of synonyms.
 For KIND_LIST entity types:
 * A string that can contain references to other entity types (with or without aliases).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_nodejs">
 <a href="#synonyms_nodejs" style="color: inherit; text-decoration: inherit;">synonyms</a>
@@ -1224,8 +1153,7 @@ For KIND_LIST entity types:
 could be green onions.
 For KIND_LIST entity types:
 * This collection must contain exactly one synonym equal to value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1239,13 +1167,11 @@ For KIND_MAP entity types:
 * A reference value to be used in place of synonyms.
 For KIND_LIST entity types:
 * A string that can contain references to other entity types (with or without aliases).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_python">
 <a href="#synonyms_python" style="color: inherit; text-decoration: inherit;">synonyms</a>
@@ -1257,8 +1183,7 @@ For KIND_LIST entity types:
 could be green onions.
 For KIND_LIST entity types:
 * This collection must contain exactly one synonym equal to value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1272,8 +1197,7 @@ For KIND_MAP entity types:
 * A reference value to be used in place of synonyms.
 For KIND_LIST entity types:
 * A string that can contain references to other entity types (with or without aliases).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

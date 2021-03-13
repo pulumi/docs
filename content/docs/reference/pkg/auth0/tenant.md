@@ -1,8 +1,8 @@
 
 ---
 title: "Tenant"
-title_tag: "Resource Tenant | Package Auth0"
-meta_desc: "Explore the Tenant resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can manage Auth0 tenants, including setting logos and support contact information, setting error pages, and configuring default tenant behaviors."
+title_tag: "auth0.Tenant"
+meta_desc: "Documentation for the auth0.Tenant resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,11 +18,17 @@ Auth0 does not currently support adding/removing extensions on tenants through t
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -68,13 +74,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_auth0 as auth0
@@ -104,9 +116,12 @@ tenant = auth0.Tenant("tenant",
     support_url="http://mysite/support")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -139,9 +154,16 @@ const tenant = new auth0.Tenant("tenant", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Tenant Resource {#create}
@@ -166,9 +188,7 @@ const tenant = new auth0.Tenant("tenant", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -176,9 +196,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -186,9 +204,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -196,10 +212,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -225,9 +238,7 @@ const tenant = new auth0.Tenant("tenant", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -235,9 +246,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +254,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +262,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,18 +270,13 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -284,9 +284,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -294,9 +292,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -304,10 +300,7 @@ const tenant = new auth0.Tenant("tenant", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -322,9 +315,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedlogouturls_csharp">
 <a href="#allowedlogouturls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -333,8 +324,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changepassword_csharp">
 <a href="#changepassword_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Password</a>
@@ -343,8 +333,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaudience_csharp">
 <a href="#defaultaudience_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Audience</a>
@@ -353,8 +342,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdirectory_csharp">
 <a href="#defaultdirectory_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Directory</a>
@@ -363,8 +351,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultredirectionuri_csharp">
 <a href="#defaultredirectionuri_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirection<wbr>Uri</a>
@@ -373,8 +360,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledlocales_csharp">
 <a href="#enabledlocales_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Locales</a>
@@ -382,8 +368,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorpage_csharp">
 <a href="#errorpage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -392,8 +377,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -402,8 +386,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -412,8 +395,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guardianmfapage_csharp">
 <a href="#guardianmfapage_csharp" style="color: inherit; text-decoration: inherit;">Guardian<wbr>Mfa<wbr>Page</a>
@@ -422,8 +404,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idlesessionlifetime_csharp">
 <a href="#idlesessionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Session<wbr>Lifetime</a>
@@ -432,8 +413,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pictureurl_csharp">
 <a href="#pictureurl_csharp" style="color: inherit; text-decoration: inherit;">Picture<wbr>Url</a>
@@ -442,8 +422,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandboxversion_csharp">
 <a href="#sandboxversion_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Version</a>
@@ -452,8 +431,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlifetime_csharp">
 <a href="#sessionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -462,8 +440,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportemail_csharp">
 <a href="#supportemail_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -472,8 +449,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supporturl_csharp">
 <a href="#supporturl_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Url</a>
@@ -482,8 +458,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universallogin_csharp">
 <a href="#universallogin_csharp" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login</a>
@@ -492,14 +467,11 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedlogouturls_go">
 <a href="#allowedlogouturls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -508,8 +480,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changepassword_go">
 <a href="#changepassword_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Password</a>
@@ -518,8 +489,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaudience_go">
 <a href="#defaultaudience_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Audience</a>
@@ -528,8 +498,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdirectory_go">
 <a href="#defaultdirectory_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Directory</a>
@@ -538,8 +507,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultredirectionuri_go">
 <a href="#defaultredirectionuri_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirection<wbr>Uri</a>
@@ -548,8 +516,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledlocales_go">
 <a href="#enabledlocales_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Locales</a>
@@ -557,8 +524,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorpage_go">
 <a href="#errorpage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -567,8 +533,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -577,8 +542,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -587,8 +551,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guardianmfapage_go">
 <a href="#guardianmfapage_go" style="color: inherit; text-decoration: inherit;">Guardian<wbr>Mfa<wbr>Page</a>
@@ -597,8 +560,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idlesessionlifetime_go">
 <a href="#idlesessionlifetime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Session<wbr>Lifetime</a>
@@ -607,8 +569,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pictureurl_go">
 <a href="#pictureurl_go" style="color: inherit; text-decoration: inherit;">Picture<wbr>Url</a>
@@ -617,8 +578,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandboxversion_go">
 <a href="#sandboxversion_go" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Version</a>
@@ -627,8 +587,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlifetime_go">
 <a href="#sessionlifetime_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -637,8 +596,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportemail_go">
 <a href="#supportemail_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -647,8 +605,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supporturl_go">
 <a href="#supporturl_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Url</a>
@@ -657,8 +614,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universallogin_go">
 <a href="#universallogin_go" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login</a>
@@ -667,14 +623,11 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedlogouturls_nodejs">
 <a href="#allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
@@ -683,8 +636,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changepassword_nodejs">
 <a href="#changepassword_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Password</a>
@@ -693,8 +645,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultaudience_nodejs">
 <a href="#defaultaudience_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Audience</a>
@@ -703,8 +654,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdirectory_nodejs">
 <a href="#defaultdirectory_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Directory</a>
@@ -713,8 +663,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultredirectionuri_nodejs">
 <a href="#defaultredirectionuri_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirection<wbr>Uri</a>
@@ -723,8 +672,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledlocales_nodejs">
 <a href="#enabledlocales_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Locales</a>
@@ -732,8 +680,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorpage_nodejs">
 <a href="#errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
@@ -742,8 +689,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -752,8 +698,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -762,8 +707,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guardianmfapage_nodejs">
 <a href="#guardianmfapage_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Mfa<wbr>Page</a>
@@ -772,8 +716,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idlesessionlifetime_nodejs">
 <a href="#idlesessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Session<wbr>Lifetime</a>
@@ -782,8 +725,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pictureurl_nodejs">
 <a href="#pictureurl_nodejs" style="color: inherit; text-decoration: inherit;">picture<wbr>Url</a>
@@ -792,8 +734,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandboxversion_nodejs">
 <a href="#sandboxversion_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Version</a>
@@ -802,8 +743,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlifetime_nodejs">
 <a href="#sessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Lifetime</a>
@@ -812,8 +752,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportemail_nodejs">
 <a href="#supportemail_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Email</a>
@@ -822,8 +761,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supporturl_nodejs">
 <a href="#supporturl_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Url</a>
@@ -832,8 +770,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universallogin_nodejs">
 <a href="#universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
@@ -842,14 +779,11 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_logout_urls_python">
 <a href="#allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
@@ -858,8 +792,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="change_password_python">
 <a href="#change_password_python" style="color: inherit; text-decoration: inherit;">change_<wbr>password</a>
@@ -868,8 +801,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_audience_python">
 <a href="#default_audience_python" style="color: inherit; text-decoration: inherit;">default_<wbr>audience</a>
@@ -878,8 +810,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_directory_python">
 <a href="#default_directory_python" style="color: inherit; text-decoration: inherit;">default_<wbr>directory</a>
@@ -888,8 +819,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_redirection_uri_python">
 <a href="#default_redirection_uri_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirection_<wbr>uri</a>
@@ -898,8 +828,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_locales_python">
 <a href="#enabled_locales_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>locales</a>
@@ -907,8 +836,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_page_python">
 <a href="#error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
@@ -917,8 +845,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -927,8 +854,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -937,8 +863,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guardian_mfa_page_python">
 <a href="#guardian_mfa_page_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>mfa_<wbr>page</a>
@@ -947,8 +872,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_session_lifetime_python">
 <a href="#idle_session_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>session_<wbr>lifetime</a>
@@ -957,8 +881,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="picture_url_python">
 <a href="#picture_url_python" style="color: inherit; text-decoration: inherit;">picture_<wbr>url</a>
@@ -967,8 +890,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sandbox_version_python">
 <a href="#sandbox_version_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>version</a>
@@ -977,8 +899,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_lifetime_python">
 <a href="#session_lifetime_python" style="color: inherit; text-decoration: inherit;">session_<wbr>lifetime</a>
@@ -987,8 +908,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_email_python">
 <a href="#support_email_python" style="color: inherit; text-decoration: inherit;">support_<wbr>email</a>
@@ -997,8 +917,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_url_python">
 <a href="#support_url_python" style="color: inherit; text-decoration: inherit;">support_<wbr>url</a>
@@ -1007,8 +926,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universal_login_python">
 <a href="#universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
@@ -1017,8 +935,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1029,9 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1039,14 +954,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1054,14 +966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1069,14 +978,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1084,8 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1212,9 +1117,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedlogouturls_csharp">
 <a href="#state_allowedlogouturls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -1223,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changepassword_csharp">
 <a href="#state_changepassword_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Password</a>
@@ -1233,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultaudience_csharp">
 <a href="#state_defaultaudience_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Audience</a>
@@ -1243,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultdirectory_csharp">
 <a href="#state_defaultdirectory_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Directory</a>
@@ -1253,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultredirectionuri_csharp">
 <a href="#state_defaultredirectionuri_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirection<wbr>Uri</a>
@@ -1263,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledlocales_csharp">
 <a href="#state_enabledlocales_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Locales</a>
@@ -1272,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errorpage_csharp">
 <a href="#state_errorpage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -1282,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flags_csharp">
 <a href="#state_flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -1292,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_csharp">
 <a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1302,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guardianmfapage_csharp">
 <a href="#state_guardianmfapage_csharp" style="color: inherit; text-decoration: inherit;">Guardian<wbr>Mfa<wbr>Page</a>
@@ -1312,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idlesessionlifetime_csharp">
 <a href="#state_idlesessionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Session<wbr>Lifetime</a>
@@ -1322,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pictureurl_csharp">
 <a href="#state_pictureurl_csharp" style="color: inherit; text-decoration: inherit;">Picture<wbr>Url</a>
@@ -1332,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandboxversion_csharp">
 <a href="#state_sandboxversion_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Version</a>
@@ -1342,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionlifetime_csharp">
 <a href="#state_sessionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -1352,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportemail_csharp">
 <a href="#state_supportemail_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -1362,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supporturl_csharp">
 <a href="#state_supporturl_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Url</a>
@@ -1372,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_universallogin_csharp">
 <a href="#state_universallogin_csharp" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login</a>
@@ -1382,14 +1269,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedlogouturls_go">
 <a href="#state_allowedlogouturls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Logout<wbr>Urls</a>
@@ -1398,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changepassword_go">
 <a href="#state_changepassword_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Password</a>
@@ -1408,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultaudience_go">
 <a href="#state_defaultaudience_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Audience</a>
@@ -1418,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultdirectory_go">
 <a href="#state_defaultdirectory_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Directory</a>
@@ -1428,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultredirectionuri_go">
 <a href="#state_defaultredirectionuri_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Redirection<wbr>Uri</a>
@@ -1438,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledlocales_go">
 <a href="#state_enabledlocales_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Locales</a>
@@ -1447,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errorpage_go">
 <a href="#state_errorpage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Page</a>
@@ -1457,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flags_go">
 <a href="#state_flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -1467,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_go">
 <a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1477,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guardianmfapage_go">
 <a href="#state_guardianmfapage_go" style="color: inherit; text-decoration: inherit;">Guardian<wbr>Mfa<wbr>Page</a>
@@ -1487,8 +1362,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idlesessionlifetime_go">
 <a href="#state_idlesessionlifetime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Session<wbr>Lifetime</a>
@@ -1497,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pictureurl_go">
 <a href="#state_pictureurl_go" style="color: inherit; text-decoration: inherit;">Picture<wbr>Url</a>
@@ -1507,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandboxversion_go">
 <a href="#state_sandboxversion_go" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Version</a>
@@ -1517,8 +1389,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionlifetime_go">
 <a href="#state_sessionlifetime_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -1527,8 +1398,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportemail_go">
 <a href="#state_supportemail_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -1537,8 +1407,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supporturl_go">
 <a href="#state_supporturl_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Url</a>
@@ -1547,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_universallogin_go">
 <a href="#state_universallogin_go" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login</a>
@@ -1557,14 +1425,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedlogouturls_nodejs">
 <a href="#state_allowedlogouturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Logout<wbr>Urls</a>
@@ -1573,8 +1438,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changepassword_nodejs">
 <a href="#state_changepassword_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Password</a>
@@ -1583,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultaudience_nodejs">
 <a href="#state_defaultaudience_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Audience</a>
@@ -1593,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultdirectory_nodejs">
 <a href="#state_defaultdirectory_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Directory</a>
@@ -1603,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultredirectionuri_nodejs">
 <a href="#state_defaultredirectionuri_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Redirection<wbr>Uri</a>
@@ -1613,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledlocales_nodejs">
 <a href="#state_enabledlocales_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Locales</a>
@@ -1622,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errorpage_nodejs">
 <a href="#state_errorpage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Page</a>
@@ -1632,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flags_nodejs">
 <a href="#state_flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -1642,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_nodejs">
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -1652,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guardianmfapage_nodejs">
 <a href="#state_guardianmfapage_nodejs" style="color: inherit; text-decoration: inherit;">guardian<wbr>Mfa<wbr>Page</a>
@@ -1662,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idlesessionlifetime_nodejs">
 <a href="#state_idlesessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Session<wbr>Lifetime</a>
@@ -1672,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pictureurl_nodejs">
 <a href="#state_pictureurl_nodejs" style="color: inherit; text-decoration: inherit;">picture<wbr>Url</a>
@@ -1682,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandboxversion_nodejs">
 <a href="#state_sandboxversion_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Version</a>
@@ -1692,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionlifetime_nodejs">
 <a href="#state_sessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Lifetime</a>
@@ -1702,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportemail_nodejs">
 <a href="#state_supportemail_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Email</a>
@@ -1712,8 +1563,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supporturl_nodejs">
 <a href="#state_supporturl_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Url</a>
@@ -1722,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_universallogin_nodejs">
 <a href="#state_universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
@@ -1732,14 +1581,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_logout_urls_python">
 <a href="#state_allowed_logout_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>logout_<wbr>urls</a>
@@ -1748,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List(String). URLs that Auth0 may redirect to after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_change_password_python">
 <a href="#state_change_password_python" style="color: inherit; text-decoration: inherit;">change_<wbr>password</a>
@@ -1758,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantchangepassword">Tenant<wbr>Change<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for change passsword page. For details, see Change Password Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_audience_python">
 <a href="#state_default_audience_python" style="color: inherit; text-decoration: inherit;">default_<wbr>audience</a>
@@ -1768,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. API Audience to use by default for API Authorization flows. This setting is equivalent to appending the audience to every authorization request made to the tenant for every application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_directory_python">
 <a href="#state_default_directory_python" style="color: inherit; text-decoration: inherit;">default_<wbr>directory</a>
@@ -1778,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Name of the connection to be used for Password Grant exchanges. Options include `auth0-adldap`, `ad`, `auth0`, `email`, `sms`, `waad`, and `adfs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_redirection_uri_python">
 <a href="#state_default_redirection_uri_python" style="color: inherit; text-decoration: inherit;">default_<wbr>redirection_<wbr>uri</a>
@@ -1788,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. The default absolute redirection uri, must be https and cannot contain a fragment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_locales_python">
 <a href="#state_enabled_locales_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>locales</a>
@@ -1797,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_error_page_python">
 <a href="#state_error_page_python" style="color: inherit; text-decoration: inherit;">error_<wbr>page</a>
@@ -1807,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenanterrorpage">Tenant<wbr>Error<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for error pages. For details, see Error Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flags_python">
 <a href="#state_flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -1817,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantflags">Tenant<wbr>Flags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for tenant flags. For details, see Flags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendly_name_python">
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -1827,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Friendly name for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guardian_mfa_page_python">
 <a href="#state_guardian_mfa_page_python" style="color: inherit; text-decoration: inherit;">guardian_<wbr>mfa_<wbr>page</a>
@@ -1837,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for the Guardian MFA page. For details, see Guardian MFA Page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idle_session_lifetime_python">
 <a href="#state_idle_session_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>session_<wbr>lifetime</a>
@@ -1847,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session can be inactive before the user must log in again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_picture_url_python">
 <a href="#state_picture_url_python" style="color: inherit; text-decoration: inherit;">picture_<wbr>url</a>
@@ -1857,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}. String URL of logo to be shown for the tenant. Recommended size is 150px x 150px. If no URL is provided, the Auth0 logo will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sandbox_version_python">
 <a href="#state_sandbox_version_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>version</a>
@@ -1867,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Selected sandbox version for the extensibility environment, which allows you to use custom scripts to extend parts of Auth0's functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_lifetime_python">
 <a href="#state_session_lifetime_python" style="color: inherit; text-decoration: inherit;">session_<wbr>lifetime</a>
@@ -1877,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Integer. Number of hours during which a session will stay valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_support_email_python">
 <a href="#state_support_email_python" style="color: inherit; text-decoration: inherit;">support_<wbr>email</a>
@@ -1887,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Support email address for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_support_url_python">
 <a href="#state_support_url_python" style="color: inherit; text-decoration: inherit;">support_<wbr>url</a>
@@ -1897,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. Support URL for authenticating users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_universal_login_python">
 <a href="#state_universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
@@ -1907,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogin">Tenant<wbr>Universal<wbr>Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login. For details, see Universal Login.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1923,9 +1752,7 @@ The following state arguments are supported:
 <h4 id="tenantchangepassword">Tenant<wbr>Change<wbr>Password</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1934,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom change password page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_csharp">
 <a href="#html_csharp" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -1944,14 +1770,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the change password page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1960,8 +1783,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom change password page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_go">
 <a href="#html_go" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -1970,14 +1792,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the change password page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1986,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom change password page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_nodejs">
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
@@ -1996,14 +1814,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the change password page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2012,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom change password page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_python">
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
@@ -2022,16 +1836,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the change password page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenanterrorpage">Tenant<wbr>Error<wbr>Page</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="html_csharp">
 <a href="#html_csharp" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -2040,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="showloglink_csharp">
 <a href="#showloglink_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Log<wbr>Link</a>
@@ -2050,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to show the link to logs as part of the default error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2060,14 +1869,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. URL to redirect to when an error occurs rather than showing the default error page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="html_go">
 <a href="#html_go" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -2076,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="showloglink_go">
 <a href="#showloglink_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Log<wbr>Link</a>
@@ -2086,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to show the link to logs as part of the default error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2096,14 +1900,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. URL to redirect to when an error occurs rather than showing the default error page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="html_nodejs">
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
@@ -2112,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="showloglink_nodejs">
 <a href="#showloglink_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Log<wbr>Link</a>
@@ -2122,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to show the link to logs as part of the default error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2132,14 +1931,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String. URL to redirect to when an error occurs rather than showing the default error page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="html_python">
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
@@ -2148,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="show_log_link_python">
 <a href="#show_log_link_python" style="color: inherit; text-decoration: inherit;">show_<wbr>log_<wbr>link</a>
@@ -2158,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to show the link to logs as part of the default error page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2168,16 +1962,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String. URL to redirect to when an error occurs rather than showing the default error page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantflags">Tenant<wbr>Flags</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="changepwdflowv1_csharp">
 <a href="#changepwdflowv1_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Pwd<wbr>Flow<wbr>V1</a>
@@ -2186,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableclickjackprotectionheaders_csharp">
 <a href="#disableclickjackprotectionheaders_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Clickjack<wbr>Protection<wbr>Headers</a>
@@ -2196,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableapissection_csharp">
 <a href="#enableapissection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Apis<wbr>Section</a>
@@ -2206,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the APIs section is enabled for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclientconnections_csharp">
 <a href="#enableclientconnections_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Client<wbr>Connections</a>
@@ -2216,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecustomdomaininemails_csharp">
 <a href="#enablecustomdomaininemails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Custom<wbr>Domain<wbr>In<wbr>Emails</a>
@@ -2226,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows custom domains in emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledynamicclientregistration_csharp">
 <a href="#enabledynamicclientregistration_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dynamic<wbr>Client<wbr>Registration</a>
@@ -2236,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows dynamic client registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacylogssearchv2_csharp">
 <a href="#enablelegacylogssearchv2_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Legacy<wbr>Logs<wbr>Search<wbr>V2</a>
@@ -2246,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v2 legacy logs search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepipeline2_csharp">
 <a href="#enablepipeline2_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pipeline2</a>
@@ -2256,8 +2040,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepublicsignupuserexistserror_csharp">
 <a href="#enablepublicsignupuserexistserror_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public<wbr>Signup<wbr>User<wbr>Exists<wbr>Error</a>
@@ -2266,8 +2049,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the public sign up process shows a user_exists error if the user already exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universallogin_csharp">
 <a href="#universallogin_csharp" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login</a>
@@ -2276,8 +2058,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant uses universal login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usescopedescriptionsforconsent_csharp">
 <a href="#usescopedescriptionsforconsent_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Scope<wbr>Descriptions<wbr>For<wbr>Consent</a>
@@ -2285,14 +2066,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="changepwdflowv1_go">
 <a href="#changepwdflowv1_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Pwd<wbr>Flow<wbr>V1</a>
@@ -2301,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableclickjackprotectionheaders_go">
 <a href="#disableclickjackprotectionheaders_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Clickjack<wbr>Protection<wbr>Headers</a>
@@ -2311,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableapissection_go">
 <a href="#enableapissection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Apis<wbr>Section</a>
@@ -2321,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the APIs section is enabled for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclientconnections_go">
 <a href="#enableclientconnections_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Client<wbr>Connections</a>
@@ -2331,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecustomdomaininemails_go">
 <a href="#enablecustomdomaininemails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Custom<wbr>Domain<wbr>In<wbr>Emails</a>
@@ -2341,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows custom domains in emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledynamicclientregistration_go">
 <a href="#enabledynamicclientregistration_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dynamic<wbr>Client<wbr>Registration</a>
@@ -2351,8 +2124,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows dynamic client registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacylogssearchv2_go">
 <a href="#enablelegacylogssearchv2_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Legacy<wbr>Logs<wbr>Search<wbr>V2</a>
@@ -2361,8 +2133,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v2 legacy logs search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepipeline2_go">
 <a href="#enablepipeline2_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pipeline2</a>
@@ -2371,8 +2142,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepublicsignupuserexistserror_go">
 <a href="#enablepublicsignupuserexistserror_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Public<wbr>Signup<wbr>User<wbr>Exists<wbr>Error</a>
@@ -2381,8 +2151,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the public sign up process shows a user_exists error if the user already exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universallogin_go">
 <a href="#universallogin_go" style="color: inherit; text-decoration: inherit;">Universal<wbr>Login</a>
@@ -2391,8 +2160,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant uses universal login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usescopedescriptionsforconsent_go">
 <a href="#usescopedescriptionsforconsent_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Scope<wbr>Descriptions<wbr>For<wbr>Consent</a>
@@ -2400,14 +2168,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="changepwdflowv1_nodejs">
 <a href="#changepwdflowv1_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Pwd<wbr>Flow<wbr>V1</a>
@@ -2416,8 +2181,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableclickjackprotectionheaders_nodejs">
 <a href="#disableclickjackprotectionheaders_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Clickjack<wbr>Protection<wbr>Headers</a>
@@ -2426,8 +2190,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableapissection_nodejs">
 <a href="#enableapissection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Apis<wbr>Section</a>
@@ -2436,8 +2199,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the APIs section is enabled for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableclientconnections_nodejs">
 <a href="#enableclientconnections_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Client<wbr>Connections</a>
@@ -2446,8 +2208,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecustomdomaininemails_nodejs">
 <a href="#enablecustomdomaininemails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Custom<wbr>Domain<wbr>In<wbr>Emails</a>
@@ -2456,8 +2217,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows custom domains in emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledynamicclientregistration_nodejs">
 <a href="#enabledynamicclientregistration_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dynamic<wbr>Client<wbr>Registration</a>
@@ -2466,8 +2226,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows dynamic client registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelegacylogssearchv2_nodejs">
 <a href="#enablelegacylogssearchv2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Legacy<wbr>Logs<wbr>Search<wbr>V2</a>
@@ -2476,8 +2235,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v2 legacy logs search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepipeline2_nodejs">
 <a href="#enablepipeline2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pipeline2</a>
@@ -2486,8 +2244,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepublicsignupuserexistserror_nodejs">
 <a href="#enablepublicsignupuserexistserror_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Public<wbr>Signup<wbr>User<wbr>Exists<wbr>Error</a>
@@ -2496,8 +2253,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the public sign up process shows a user_exists error if the user already exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universallogin_nodejs">
 <a href="#universallogin_nodejs" style="color: inherit; text-decoration: inherit;">universal<wbr>Login</a>
@@ -2506,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant uses universal login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usescopedescriptionsforconsent_nodejs">
 <a href="#usescopedescriptionsforconsent_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Scope<wbr>Descriptions<wbr>For<wbr>Consent</a>
@@ -2515,14 +2270,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="change_pwd_flow_v1_python">
 <a href="#change_pwd_flow_v1_python" style="color: inherit; text-decoration: inherit;">change_<wbr>pwd_<wbr>flow_<wbr>v1</a>
@@ -2531,8 +2283,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v1 change password flow. Not recommended except for backward compatibility.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_clickjack_protection_headers_python">
 <a href="#disable_clickjack_protection_headers_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>clickjack_<wbr>protection_<wbr>headers</a>
@@ -2541,8 +2292,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicated whether or not classic Universal Login prompts include additional security headers to prevent clickjacking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_apis_section_python">
 <a href="#enable_apis_section_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>apis_<wbr>section</a>
@@ -2551,8 +2301,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the APIs section is enabled for the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_client_connections_python">
 <a href="#enable_client_connections_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>client_<wbr>connections</a>
@@ -2561,8 +2310,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not all current connections should be enabled when a new client is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_custom_domain_in_emails_python">
 <a href="#enable_custom_domain_in_emails_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>custom_<wbr>domain_<wbr>in_<wbr>emails</a>
@@ -2571,8 +2319,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows custom domains in emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_dynamic_client_registration_python">
 <a href="#enable_dynamic_client_registration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dynamic_<wbr>client_<wbr>registration</a>
@@ -2581,8 +2328,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant allows dynamic client registration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_legacy_logs_search_v2_python">
 <a href="#enable_legacy_logs_search_v2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>legacy_<wbr>logs_<wbr>search_<wbr>v2</a>
@@ -2591,8 +2337,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the older v2 legacy logs search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_pipeline2_python">
 <a href="#enable_pipeline2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pipeline2</a>
@@ -2601,8 +2346,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not advanced API Authorization scenarios are enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_public_signup_user_exists_error_python">
 <a href="#enable_public_signup_user_exists_error_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>public_<wbr>signup_<wbr>user_<wbr>exists_<wbr>error</a>
@@ -2611,8 +2355,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the public sign up process shows a user_exists error if the user already exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="universal_login_python">
 <a href="#universal_login_python" style="color: inherit; text-decoration: inherit;">universal_<wbr>login</a>
@@ -2621,8 +2364,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not the tenant uses universal login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_scope_descriptions_for_consent_python">
 <a href="#use_scope_descriptions_for_consent_python" style="color: inherit; text-decoration: inherit;">use_<wbr>scope_<wbr>descriptions_<wbr>for_<wbr>consent</a>
@@ -2630,16 +2372,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantguardianmfapage">Tenant<wbr>Guardian<wbr>Mfa<wbr>Page</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2648,8 +2387,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom Guardian page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_csharp">
 <a href="#html_csharp" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -2658,14 +2396,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2674,8 +2409,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom Guardian page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_go">
 <a href="#html_go" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -2684,14 +2418,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2700,8 +2431,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom Guardian page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_nodejs">
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
@@ -2710,14 +2440,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2726,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. Indicates whether or not to use the custom Guardian page.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_python">
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
@@ -2736,16 +2462,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, HTML format with supported Liquid syntax. Customized content of the Guardian page.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantuniversallogin">Tenant<wbr>Universal<wbr>Login</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colors_csharp">
 <a href="#colors_csharp" style="color: inherit; text-decoration: inherit;">Colors</a>
@@ -2754,14 +2477,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colors_go">
 <a href="#colors_go" style="color: inherit; text-decoration: inherit;">Colors</a>
@@ -2770,14 +2490,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colors_nodejs">
 <a href="#colors_nodejs" style="color: inherit; text-decoration: inherit;">colors</a>
@@ -2786,14 +2503,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colors_python">
 <a href="#colors_python" style="color: inherit; text-decoration: inherit;">colors</a>
@@ -2802,16 +2516,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List(Resource). Configuration settings for Universal Login colors. See Universal Login - Colors.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantuniversallogincolors">Tenant<wbr>Universal<wbr>Login<wbr>Colors</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pagebackground_csharp">
 <a href="#pagebackground_csharp" style="color: inherit; text-decoration: inherit;">Page<wbr>Background</a>
@@ -2820,8 +2531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Background color of login pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_csharp">
 <a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
@@ -2830,14 +2540,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Primary button background color.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pagebackground_go">
 <a href="#pagebackground_go" style="color: inherit; text-decoration: inherit;">Page<wbr>Background</a>
@@ -2846,8 +2553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Background color of login pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_go">
 <a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
@@ -2856,14 +2562,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Primary button background color.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pagebackground_nodejs">
 <a href="#pagebackground_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Background</a>
@@ -2872,8 +2575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Background color of login pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_nodejs">
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
@@ -2882,14 +2584,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Primary button background color.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="page_background_python">
 <a href="#page_background_python" style="color: inherit; text-decoration: inherit;">page_<wbr>background</a>
@@ -2898,8 +2597,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Background color of login pages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_python">
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
@@ -2908,8 +2606,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String, Hexadecimal. Primary button background color.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

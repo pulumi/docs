@@ -407,8 +407,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnerservers_csharp">
 <a href="#partnerservers_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
@@ -417,8 +416,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergrouppartnerserver">List&lt;Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readwriteendpointfailoverpolicy_csharp">
 <a href="#readwriteendpointfailoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -427,8 +425,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -437,8 +434,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -447,8 +443,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_csharp">
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -457,8 +452,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -467,8 +461,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonlyendpointfailoverpolicy_csharp">
 <a href="#readonlyendpointfailoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -477,8 +470,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -487,13 +479,11 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnerservers_go">
 <a href="#partnerservers_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
@@ -502,8 +492,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergrouppartnerserver">[]Failover<wbr>Group<wbr>Partner<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readwriteendpointfailoverpolicy_go">
 <a href="#readwriteendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -512,8 +501,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -522,8 +510,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -532,8 +519,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_go">
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -542,8 +528,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -552,8 +537,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonlyendpointfailoverpolicy_go">
 <a href="#readonlyendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -562,8 +546,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -572,13 +555,11 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnerservers_nodejs">
 <a href="#partnerservers_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Servers</a>
@@ -587,8 +568,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergrouppartnerserver">Failover<wbr>Group<wbr>Partner<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readwriteendpointfailoverpolicy_nodejs">
 <a href="#readwriteendpointfailoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -597,8 +577,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -607,8 +586,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -617,8 +595,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_nodejs">
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -627,8 +604,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -637,8 +613,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonlyendpointfailoverpolicy_nodejs">
 <a href="#readonlyendpointfailoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -647,8 +622,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -657,13 +631,11 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partner_servers_python">
 <a href="#partner_servers_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>servers</a>
@@ -672,8 +644,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergrouppartnerserver">Sequence[Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_write_endpoint_failover_policy_python">
 <a href="#read_write_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
@@ -682,8 +653,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -692,8 +662,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -702,8 +671,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_python">
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -712,8 +680,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -722,8 +689,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonly_endpoint_failover_policy_python">
 <a href="#readonly_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
@@ -732,8 +698,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -742,8 +707,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -754,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -763,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -773,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -783,13 +744,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -797,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -807,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -817,13 +774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -831,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -841,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -851,13 +804,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -865,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -875,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -885,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1013,8 +961,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databases_csharp">
 <a href="#state_databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -1023,8 +970,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1033,8 +979,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1043,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partnerservers_csharp">
 <a href="#state_partnerservers_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
@@ -1053,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergrouppartnerserver">List&lt;Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readwriteendpointfailoverpolicy_csharp">
 <a href="#state_readwriteendpointfailoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -1063,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonlyendpointfailoverpolicy_csharp">
 <a href="#state_readonlyendpointfailoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -1073,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1083,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1093,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_csharp">
 <a href="#state_servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1103,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1113,13 +1051,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databases_go">
 <a href="#state_databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -1128,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1138,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1148,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partnerservers_go">
 <a href="#state_partnerservers_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
@@ -1158,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergrouppartnerserver">[]Failover<wbr>Group<wbr>Partner<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readwriteendpointfailoverpolicy_go">
 <a href="#state_readwriteendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -1168,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonlyendpointfailoverpolicy_go">
 <a href="#state_readonlyendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -1178,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1188,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1198,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_go">
 <a href="#state_servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1208,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1218,13 +1145,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databases_nodejs">
 <a href="#state_databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -1233,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1243,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1253,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partnerservers_nodejs">
 <a href="#state_partnerservers_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Servers</a>
@@ -1263,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergrouppartnerserver">Failover<wbr>Group<wbr>Partner<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readwriteendpointfailoverpolicy_nodejs">
 <a href="#state_readwriteendpointfailoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -1273,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonlyendpointfailoverpolicy_nodejs">
 <a href="#state_readonlyendpointfailoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
@@ -1283,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1293,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1303,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_nodejs">
 <a href="#state_servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -1313,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1323,13 +1239,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databases_python">
 <a href="#state_databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -1338,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of database ids to add to the failover group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1348,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1358,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the failover group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partner_servers_python">
 <a href="#state_partner_servers_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>servers</a>
@@ -1368,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergrouppartnerserver">Sequence[Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_read_write_endpoint_failover_policy_python">
 <a href="#state_read_write_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
@@ -1378,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readonly_endpoint_failover_policy_python">
 <a href="#state_readonly_endpoint_failover_policy_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>endpoint_<wbr>failover_<wbr>policy</a>
@@ -1388,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1398,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the SQL server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1408,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_name_python">
 <a href="#state_server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -1418,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the primary SQL server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1428,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1444,8 +1348,7 @@ The following state arguments are supported:
 <h4 id="failovergrouppartnerserver">Failover<wbr>Group<wbr>Partner<wbr>Server</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1454,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the SQL server ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1464,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1474,13 +1375,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1489,8 +1388,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the SQL server ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1499,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1509,13 +1406,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1524,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the SQL server ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1534,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1544,13 +1437,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1559,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the SQL server ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1569,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the location of the failover group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1579,15 +1468,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}local replication role of the failover group instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1596,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the failover mode. Possible values are `Manual`, `Automatic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceminutes_csharp">
 <a href="#graceminutes_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Minutes</a>
@@ -1606,13 +1492,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Applies only if `mode` is `Automatic`. The grace period in minutes before failover with data loss is attempted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1621,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the failover mode. Possible values are `Manual`, `Automatic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceminutes_go">
 <a href="#graceminutes_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Minutes</a>
@@ -1631,13 +1514,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Applies only if `mode` is `Automatic`. The grace period in minutes before failover with data loss is attempted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1646,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the failover mode. Possible values are `Manual`, `Automatic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceminutes_nodejs">
 <a href="#graceminutes_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Minutes</a>
@@ -1656,13 +1536,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Applies only if `mode` is `Automatic`. The grace period in minutes before failover with data loss is attempted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1671,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the failover mode. Possible values are `Manual`, `Automatic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grace_minutes_python">
 <a href="#grace_minutes_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>minutes</a>
@@ -1681,15 +1558,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Applies only if `mode` is `Automatic`. The grace period in minutes before failover with data loss is attempted
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1698,13 +1573,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Failover policy for the read-only endpoint. Possible values are `Enabled`, and `Disabled`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1713,13 +1586,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Failover policy for the read-only endpoint. Possible values are `Enabled`, and `Disabled`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1728,13 +1599,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Failover policy for the read-only endpoint. Possible values are `Enabled`, and `Disabled`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1743,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Failover policy for the read-only endpoint. Possible values are `Enabled`, and `Disabled`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

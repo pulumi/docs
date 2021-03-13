@@ -170,8 +170,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -180,8 +179,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autocreatenetwork_csharp">
 <a href="#autocreatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
@@ -193,8 +191,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingaccount_csharp">
 <a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -207,8 +204,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderid_csharp">
 <a href="#folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
@@ -221,8 +217,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -231,8 +226,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -241,8 +235,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orgid_csharp">
 <a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -256,8 +249,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdelete_csharp">
 <a href="#skipdelete_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
@@ -267,13 +259,11 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -282,8 +272,7 @@ without deleting the Project via the Google API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autocreatenetwork_go">
 <a href="#autocreatenetwork_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
@@ -295,8 +284,7 @@ without deleting the Project via the Google API.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingaccount_go">
 <a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -309,8 +297,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderid_go">
 <a href="#folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
@@ -323,8 +310,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -333,8 +319,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +328,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orgid_go">
 <a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -358,8 +342,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdelete_go">
 <a href="#skipdelete_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
@@ -369,13 +352,11 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -384,8 +365,7 @@ without deleting the Project via the Google API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autocreatenetwork_nodejs">
 <a href="#autocreatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Network</a>
@@ -397,8 +377,7 @@ without deleting the Project via the Google API.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingaccount_nodejs">
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
@@ -411,8 +390,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folderid_nodejs">
 <a href="#folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
@@ -425,8 +403,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -435,8 +412,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -445,8 +421,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orgid_nodejs">
 <a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
@@ -460,8 +435,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipdelete_nodejs">
 <a href="#skipdelete_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Delete</a>
@@ -471,13 +445,11 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -486,8 +458,7 @@ without deleting the Project via the Google API.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_create_network_python">
 <a href="#auto_create_network_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>network</a>
@@ -499,8 +470,7 @@ without deleting the Project via the Google API.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_account_python">
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
@@ -513,8 +483,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_id_python">
 <a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
@@ -527,8 +496,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -537,8 +505,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,8 +514,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="org_id_python">
 <a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
@@ -562,8 +528,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_delete_python">
 <a href="#skip_delete_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>delete</a>
@@ -573,8 +538,7 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -585,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -594,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -604,13 +566,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -618,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -628,13 +587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -642,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
@@ -652,13 +608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
@@ -676,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -804,8 +756,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autocreatenetwork_csharp">
 <a href="#state_autocreatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
@@ -817,8 +768,7 @@ The following state arguments are supported:
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_csharp">
 <a href="#state_billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -831,8 +781,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folderid_csharp">
 <a href="#state_folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
@@ -845,8 +794,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -855,8 +803,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -865,8 +812,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_csharp">
 <a href="#state_number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -875,8 +821,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_csharp">
 <a href="#state_orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -890,8 +835,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -900,8 +844,7 @@ organization.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipdelete_csharp">
 <a href="#state_skipdelete_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
@@ -911,13 +854,11 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autocreatenetwork_go">
 <a href="#state_autocreatenetwork_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
@@ -929,8 +870,7 @@ without deleting the Project via the Google API.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_go">
 <a href="#state_billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -943,8 +883,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folderid_go">
 <a href="#state_folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
@@ -957,8 +896,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -967,8 +905,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -977,8 +914,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_go">
 <a href="#state_number_go" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -987,8 +923,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_go">
 <a href="#state_orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -1002,8 +937,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1012,8 +946,7 @@ organization.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipdelete_go">
 <a href="#state_skipdelete_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
@@ -1023,13 +956,11 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autocreatenetwork_nodejs">
 <a href="#state_autocreatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Network</a>
@@ -1041,8 +972,7 @@ without deleting the Project via the Google API.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_nodejs">
 <a href="#state_billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
@@ -1055,8 +985,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folderid_nodejs">
 <a href="#state_folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
@@ -1069,8 +998,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1079,8 +1007,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1089,8 +1016,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_nodejs">
 <a href="#state_number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
@@ -1099,8 +1025,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_nodejs">
 <a href="#state_orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
@@ -1114,8 +1039,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1124,8 +1048,7 @@ organization.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipdelete_nodejs">
 <a href="#state_skipdelete_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Delete</a>
@@ -1135,13 +1058,11 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_create_network_python">
 <a href="#state_auto_create_network_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>network</a>
@@ -1153,8 +1074,7 @@ without deleting the Project via the Google API.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_account_python">
 <a href="#state_billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
@@ -1167,8 +1087,7 @@ belongs to. The user or service account performing this operation with the provi
 must have at mininum Billing Account User privileges (`roles/billing.user`) on the billing account.
 See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_id_python">
 <a href="#state_folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
@@ -1181,8 +1100,7 @@ created under. Only one of `org_id` or `folder_id` may be
 specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1191,8 +1109,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1201,8 +1118,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_python">
 <a href="#state_number_python" style="color: inherit; text-decoration: inherit;">number</a>
@@ -1211,8 +1127,7 @@ project to be migrated to the newly specified folder.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_org_id_python">
 <a href="#state_org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
@@ -1226,8 +1141,7 @@ Changing this forces a new project to be created.  Only one of
 specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1236,8 +1150,7 @@ organization.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skip_delete_python">
 <a href="#state_skip_delete_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>delete</a>
@@ -1247,8 +1160,7 @@ organization.
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -186,8 +186,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -199,8 +198,7 @@ The following arguments are supported:
 They should be defined using reference as shown above to set up dependencies correctly.
 These properties cannot be changed once the service is created. Doing so will result in
 the topic being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -208,8 +206,7 @@ the topic being deleted and new one created instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicname_csharp">
 <a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -220,8 +217,7 @@ the topic being deleted and new one created instead.
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
 created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cleanuppolicy_csharp">
 <a href="#cleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
@@ -230,8 +226,7 @@ created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -240,8 +235,7 @@ created instead.
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminsyncreplicas_csharp">
 <a href="#minimuminsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
@@ -250,8 +244,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitions_csharp">
 <a href="#partitions_csharp" style="color: inherit; text-decoration: inherit;">Partitions</a>
@@ -260,8 +253,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_csharp">
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -270,8 +262,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionbytes_csharp">
 <a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
@@ -280,8 +271,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionhours_csharp">
 <a href="#retentionhours_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
@@ -290,8 +280,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -299,13 +288,11 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -317,8 +304,7 @@ created instead.
 They should be defined using reference as shown above to set up dependencies correctly.
 These properties cannot be changed once the service is created. Doing so will result in
 the topic being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -326,8 +312,7 @@ the topic being deleted and new one created instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicname_go">
 <a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -338,8 +323,7 @@ the topic being deleted and new one created instead.
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
 created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cleanuppolicy_go">
 <a href="#cleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
@@ -348,8 +332,7 @@ created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -358,8 +341,7 @@ created instead.
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminsyncreplicas_go">
 <a href="#minimuminsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
@@ -368,8 +350,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitions_go">
 <a href="#partitions_go" style="color: inherit; text-decoration: inherit;">Partitions</a>
@@ -378,8 +359,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_go">
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -388,8 +368,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionbytes_go">
 <a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
@@ -398,8 +377,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionhours_go">
 <a href="#retentionhours_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
@@ -408,8 +386,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -417,13 +394,11 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -435,8 +410,7 @@ created instead.
 They should be defined using reference as shown above to set up dependencies correctly.
 These properties cannot be changed once the service is created. Doing so will result in
 the topic being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -444,8 +418,7 @@ the topic being deleted and new one created instead.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicname_nodejs">
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
@@ -456,8 +429,7 @@ the topic being deleted and new one created instead.
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
 created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cleanuppolicy_nodejs">
 <a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
@@ -466,8 +438,7 @@ created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -476,8 +447,7 @@ created instead.
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimuminsyncreplicas_nodejs">
 <a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
@@ -486,8 +456,7 @@ created instead.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitions_nodejs">
 <a href="#partitions_nodejs" style="color: inherit; text-decoration: inherit;">partitions</a>
@@ -496,8 +465,7 @@ created instead.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_nodejs">
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -506,8 +474,7 @@ created instead.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionbytes_nodejs">
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
@@ -516,8 +483,7 @@ created instead.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionhours_nodejs">
 <a href="#retentionhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Hours</a>
@@ -526,8 +492,7 @@ created instead.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -535,13 +500,11 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -553,8 +516,7 @@ created instead.
 They should be defined using reference as shown above to set up dependencies correctly.
 These properties cannot be changed once the service is created. Doing so will result in
 the topic being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -562,8 +524,7 @@ the topic being deleted and new one created instead.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_name_python">
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
@@ -574,8 +535,7 @@ the topic being deleted and new one created instead.
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
 created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cleanup_policy_python">
 <a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
@@ -584,8 +544,7 @@ created instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -594,8 +553,7 @@ created instead.
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_in_sync_replicas_python">
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
@@ -604,8 +562,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitions_python">
 <a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
@@ -614,8 +571,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_python">
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -624,8 +580,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_bytes_python">
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
@@ -634,8 +589,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_hours_python">
 <a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
@@ -644,8 +598,7 @@ created instead.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -653,8 +606,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -667,8 +619,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -677,8 +628,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -686,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -695,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topicname_csharp">
 <a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -704,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cleanuppolicy_csharp">
 <a href="#cleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
@@ -714,8 +661,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -724,8 +670,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minimuminsyncreplicas_csharp">
 <a href="#minimuminsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
@@ -734,8 +679,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitions_csharp">
 <a href="#partitions_csharp" style="color: inherit; text-decoration: inherit;">Partitions</a>
@@ -744,8 +688,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_csharp">
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -754,8 +697,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionbytes_csharp">
 <a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
@@ -764,8 +706,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionhours_csharp">
 <a href="#retentionhours_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
@@ -774,8 +715,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -783,13 +723,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -798,8 +736,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -807,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -816,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topicname_go">
 <a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -825,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cleanuppolicy_go">
 <a href="#cleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
@@ -835,8 +769,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -845,8 +778,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minimuminsyncreplicas_go">
 <a href="#minimuminsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
@@ -855,8 +787,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitions_go">
 <a href="#partitions_go" style="color: inherit; text-decoration: inherit;">Partitions</a>
@@ -865,8 +796,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_go">
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
@@ -875,8 +805,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionbytes_go">
 <a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
@@ -885,8 +814,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionhours_go">
 <a href="#retentionhours_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Hours</a>
@@ -895,8 +823,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -904,13 +831,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -919,8 +844,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -928,8 +852,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -937,8 +860,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topicname_nodejs">
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
@@ -946,8 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cleanuppolicy_nodejs">
 <a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
@@ -956,8 +877,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -966,8 +886,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minimuminsyncreplicas_nodejs">
 <a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
@@ -976,8 +895,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitions_nodejs">
 <a href="#partitions_nodejs" style="color: inherit; text-decoration: inherit;">partitions</a>
@@ -986,8 +904,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_nodejs">
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -996,8 +913,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionbytes_nodejs">
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
@@ -1006,8 +922,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionhours_nodejs">
 <a href="#retentionhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Hours</a>
@@ -1016,8 +931,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -1025,13 +939,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1040,8 +952,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1049,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1058,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="topic_name_python">
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
@@ -1067,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cleanup_policy_python">
 <a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
@@ -1077,8 +985,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1087,8 +994,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minimum_in_sync_replicas_python">
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
@@ -1097,8 +1003,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas (ISR) to produce to a partition.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitions_python">
 <a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
@@ -1107,8 +1012,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_python">
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
@@ -1117,8 +1021,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retention_bytes_python">
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
@@ -1127,8 +1030,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retention_hours_python">
 <a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
@@ -1137,8 +1039,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -1146,8 +1047,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1161,8 +1061,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanuppolicy_csharp">
 <a href="#cleanuppolicy_csharp" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
@@ -1171,8 +1070,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressiontype_csharp">
 <a href="#compressiontype_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
@@ -1181,8 +1079,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}compression.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteretentionms_csharp">
 <a href="#deleteretentionms_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
@@ -1191,8 +1088,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}delete.retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filedeletedelayms_csharp">
 <a href="#filedeletedelayms_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
@@ -1201,8 +1097,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}file.delete.delay.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushmessages_csharp">
 <a href="#flushmessages_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
@@ -1211,8 +1106,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}flush.messages value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushms_csharp">
 <a href="#flushms_csharp" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
@@ -1221,8 +1115,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}flush.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexintervalbytes_csharp">
 <a href="#indexintervalbytes_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Interval<wbr>Bytes</a>
@@ -1231,8 +1124,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}index.interval.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcompactionlagms_csharp">
 <a href="#maxcompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -1241,8 +1133,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}max.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmessagebytes_csharp">
 <a href="#maxmessagebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
@@ -1251,8 +1142,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}max.message.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagedownconversionenable_csharp">
 <a href="#messagedownconversionenable_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Downconversion<wbr>Enable</a>
@@ -1261,8 +1151,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.downconversion.enable value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageformatversion_csharp">
 <a href="#messageformatversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format<wbr>Version</a>
@@ -1271,8 +1160,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.format.version value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetimestampdifferencemaxms_csharp">
 <a href="#messagetimestampdifferencemaxms_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
@@ -1281,8 +1169,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.timestamp.difference.max.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetimestamptype_csharp">
 <a href="#messagetimestamptype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Type</a>
@@ -1291,8 +1178,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.timestamp.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincleanabledirtyratio_csharp">
 <a href="#mincleanabledirtyratio_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
@@ -1301,8 +1187,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.cleanable.dirty.ratio value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincompactionlagms_csharp">
 <a href="#mincompactionlagms_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -1311,8 +1196,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininsyncreplicas_csharp">
 <a href="#mininsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
@@ -1321,8 +1205,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.insync.replicas value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preallocate_csharp">
 <a href="#preallocate_csharp" style="color: inherit; text-decoration: inherit;">Preallocate</a>
@@ -1331,8 +1214,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}preallocate value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionbytes_csharp">
 <a href="#retentionbytes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
@@ -1341,8 +1223,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionms_csharp">
 <a href="#retentionms_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
@@ -1351,8 +1232,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentbytes_csharp">
 <a href="#segmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
@@ -1361,8 +1241,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentindexbytes_csharp">
 <a href="#segmentindexbytes_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Index<wbr>Bytes</a>
@@ -1371,8 +1250,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.index.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentjitterms_csharp">
 <a href="#segmentjitterms_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Jitter<wbr>Ms</a>
@@ -1381,8 +1259,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.jitter.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentms_csharp">
 <a href="#segmentms_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Ms</a>
@@ -1391,8 +1268,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncleanleaderelectionenable_csharp">
 <a href="#uncleanleaderelectionenable_csharp" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
@@ -1401,13 +1277,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unclean.leader.election.enable value
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanuppolicy_go">
 <a href="#cleanuppolicy_go" style="color: inherit; text-decoration: inherit;">Cleanup<wbr>Policy</a>
@@ -1416,8 +1290,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressiontype_go">
 <a href="#compressiontype_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Type</a>
@@ -1426,8 +1299,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}compression.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteretentionms_go">
 <a href="#deleteretentionms_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Ms</a>
@@ -1436,8 +1308,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}delete.retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filedeletedelayms_go">
 <a href="#filedeletedelayms_go" style="color: inherit; text-decoration: inherit;">File<wbr>Delete<wbr>Delay<wbr>Ms</a>
@@ -1446,8 +1317,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}file.delete.delay.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushmessages_go">
 <a href="#flushmessages_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Messages</a>
@@ -1456,8 +1326,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}flush.messages value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushms_go">
 <a href="#flushms_go" style="color: inherit; text-decoration: inherit;">Flush<wbr>Ms</a>
@@ -1466,8 +1335,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}flush.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexintervalbytes_go">
 <a href="#indexintervalbytes_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Interval<wbr>Bytes</a>
@@ -1476,8 +1344,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}index.interval.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcompactionlagms_go">
 <a href="#maxcompactionlagms_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -1486,8 +1353,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}max.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmessagebytes_go">
 <a href="#maxmessagebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Message<wbr>Bytes</a>
@@ -1496,8 +1362,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}max.message.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagedownconversionenable_go">
 <a href="#messagedownconversionenable_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Downconversion<wbr>Enable</a>
@@ -1506,8 +1371,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.downconversion.enable value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageformatversion_go">
 <a href="#messageformatversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format<wbr>Version</a>
@@ -1516,8 +1380,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.format.version value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetimestampdifferencemaxms_go">
 <a href="#messagetimestampdifferencemaxms_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
@@ -1526,8 +1389,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.timestamp.difference.max.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetimestamptype_go">
 <a href="#messagetimestamptype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Timestamp<wbr>Type</a>
@@ -1536,8 +1398,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.timestamp.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincleanabledirtyratio_go">
 <a href="#mincleanabledirtyratio_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
@@ -1546,8 +1407,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.cleanable.dirty.ratio value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincompactionlagms_go">
 <a href="#mincompactionlagms_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -1556,8 +1416,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininsyncreplicas_go">
 <a href="#mininsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Insync<wbr>Replicas</a>
@@ -1566,8 +1425,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.insync.replicas value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preallocate_go">
 <a href="#preallocate_go" style="color: inherit; text-decoration: inherit;">Preallocate</a>
@@ -1576,8 +1434,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}preallocate value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionbytes_go">
 <a href="#retentionbytes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Bytes</a>
@@ -1586,8 +1443,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionms_go">
 <a href="#retentionms_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Ms</a>
@@ -1596,8 +1452,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentbytes_go">
 <a href="#segmentbytes_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Bytes</a>
@@ -1606,8 +1461,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentindexbytes_go">
 <a href="#segmentindexbytes_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Index<wbr>Bytes</a>
@@ -1616,8 +1470,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.index.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentjitterms_go">
 <a href="#segmentjitterms_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Jitter<wbr>Ms</a>
@@ -1626,8 +1479,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.jitter.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentms_go">
 <a href="#segmentms_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Ms</a>
@@ -1636,8 +1488,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncleanleaderelectionenable_go">
 <a href="#uncleanleaderelectionenable_go" style="color: inherit; text-decoration: inherit;">Unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
@@ -1646,13 +1497,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unclean.leader.election.enable value
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanuppolicy_nodejs">
 <a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
@@ -1661,8 +1510,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressiontype_nodejs">
 <a href="#compressiontype_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
@@ -1671,8 +1519,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}compression.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteretentionms_nodejs">
 <a href="#deleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Ms</a>
@@ -1681,8 +1528,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}delete.retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filedeletedelayms_nodejs">
 <a href="#filedeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Delete<wbr>Delay<wbr>Ms</a>
@@ -1691,8 +1537,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}file.delete.delay.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushmessages_nodejs">
 <a href="#flushmessages_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Messages</a>
@@ -1701,8 +1546,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}flush.messages value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flushms_nodejs">
 <a href="#flushms_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Ms</a>
@@ -1711,8 +1555,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}flush.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexintervalbytes_nodejs">
 <a href="#indexintervalbytes_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Interval<wbr>Bytes</a>
@@ -1721,8 +1564,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}index.interval.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcompactionlagms_nodejs">
 <a href="#maxcompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -1731,8 +1573,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}max.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmessagebytes_nodejs">
 <a href="#maxmessagebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Bytes</a>
@@ -1741,8 +1582,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}max.message.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagedownconversionenable_nodejs">
 <a href="#messagedownconversionenable_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Downconversion<wbr>Enable</a>
@@ -1751,8 +1591,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.downconversion.enable value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageformatversion_nodejs">
 <a href="#messageformatversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format<wbr>Version</a>
@@ -1761,8 +1600,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.format.version value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetimestampdifferencemaxms_nodejs">
 <a href="#messagetimestampdifferencemaxms_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
@@ -1771,8 +1609,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.timestamp.difference.max.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetimestamptype_nodejs">
 <a href="#messagetimestamptype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Timestamp<wbr>Type</a>
@@ -1781,8 +1618,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}message.timestamp.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincleanabledirtyratio_nodejs">
 <a href="#mincleanabledirtyratio_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
@@ -1791,8 +1627,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.cleanable.dirty.ratio value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincompactionlagms_nodejs">
 <a href="#mincompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
@@ -1801,8 +1636,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininsyncreplicas_nodejs">
 <a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
@@ -1811,8 +1645,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}min.insync.replicas value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preallocate_nodejs">
 <a href="#preallocate_nodejs" style="color: inherit; text-decoration: inherit;">preallocate</a>
@@ -1821,8 +1654,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}preallocate value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionbytes_nodejs">
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
@@ -1831,8 +1663,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionms_nodejs">
 <a href="#retentionms_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Ms</a>
@@ -1841,8 +1672,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentbytes_nodejs">
 <a href="#segmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Bytes</a>
@@ -1851,8 +1681,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentindexbytes_nodejs">
 <a href="#segmentindexbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Index<wbr>Bytes</a>
@@ -1861,8 +1690,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.index.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentjitterms_nodejs">
 <a href="#segmentjitterms_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Jitter<wbr>Ms</a>
@@ -1871,8 +1699,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.jitter.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentms_nodejs">
 <a href="#segmentms_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Ms</a>
@@ -1881,8 +1708,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}segment.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncleanleaderelectionenable_nodejs">
 <a href="#uncleanleaderelectionenable_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
@@ -1891,13 +1717,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unclean.leader.election.enable value
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cleanup_policy_python">
 <a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
@@ -1906,8 +1730,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_type_python">
 <a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
@@ -1916,8 +1739,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}compression.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_retention_ms_python">
 <a href="#delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>ms</a>
@@ -1926,8 +1748,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}delete.retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_delete_delay_ms_python">
 <a href="#file_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">file_<wbr>delete_<wbr>delay_<wbr>ms</a>
@@ -1936,8 +1757,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}file.delete.delay.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flush_messages_python">
 <a href="#flush_messages_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>messages</a>
@@ -1946,8 +1766,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}flush.messages value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flush_ms_python">
 <a href="#flush_ms_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>ms</a>
@@ -1956,8 +1775,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}flush.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_interval_bytes_python">
 <a href="#index_interval_bytes_python" style="color: inherit; text-decoration: inherit;">index_<wbr>interval_<wbr>bytes</a>
@@ -1966,8 +1784,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}index.interval.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_compaction_lag_ms_python">
 <a href="#max_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">max_<wbr>compaction_<wbr>lag_<wbr>ms</a>
@@ -1976,8 +1793,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}max.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_message_bytes_python">
 <a href="#max_message_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>bytes</a>
@@ -1986,8 +1802,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}max.message.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_downconversion_enable_python">
 <a href="#message_downconversion_enable_python" style="color: inherit; text-decoration: inherit;">message_<wbr>downconversion_<wbr>enable</a>
@@ -1996,8 +1811,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}message.downconversion.enable value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_format_version_python">
 <a href="#message_format_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format_<wbr>version</a>
@@ -2006,8 +1820,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}message.format.version value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_timestamp_difference_max_ms_python">
 <a href="#message_timestamp_difference_max_ms_python" style="color: inherit; text-decoration: inherit;">message_<wbr>timestamp_<wbr>difference_<wbr>max_<wbr>ms</a>
@@ -2016,8 +1829,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}message.timestamp.difference.max.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_timestamp_type_python">
 <a href="#message_timestamp_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>timestamp_<wbr>type</a>
@@ -2026,8 +1838,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}message.timestamp.type value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_cleanable_dirty_ratio_python">
 <a href="#min_cleanable_dirty_ratio_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cleanable_<wbr>dirty_<wbr>ratio</a>
@@ -2036,8 +1847,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}min.cleanable.dirty.ratio value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_compaction_lag_ms_python">
 <a href="#min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
@@ -2046,8 +1856,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}min.compaction.lag.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_insync_replicas_python">
 <a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
@@ -2056,8 +1865,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}min.insync.replicas value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preallocate_python">
 <a href="#preallocate_python" style="color: inherit; text-decoration: inherit;">preallocate</a>
@@ -2066,8 +1874,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}preallocate value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_bytes_python">
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
@@ -2076,8 +1883,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_ms_python">
 <a href="#retention_ms_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>ms</a>
@@ -2086,8 +1892,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}retention.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segment_bytes_python">
 <a href="#segment_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>bytes</a>
@@ -2096,8 +1901,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}segment.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segment_index_bytes_python">
 <a href="#segment_index_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>index_<wbr>bytes</a>
@@ -2106,8 +1910,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}segment.index.bytes value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segment_jitter_ms_python">
 <a href="#segment_jitter_ms_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>jitter_<wbr>ms</a>
@@ -2116,8 +1919,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}segment.jitter.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segment_ms_python">
 <a href="#segment_ms_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>ms</a>
@@ -2126,8 +1928,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}segment.ms value
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unclean_leader_election_enable_python">
 <a href="#unclean_leader_election_enable_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>leader_<wbr>election_<wbr>enable</a>
@@ -2136,8 +1937,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}unclean.leader.election.enable value
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

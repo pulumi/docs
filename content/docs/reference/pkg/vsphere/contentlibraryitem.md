@@ -162,8 +162,7 @@ The ContentLibraryItem resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="libraryid_csharp">
 <a href="#libraryid_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Id</a>
@@ -172,8 +171,7 @@ The ContentLibraryItem resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -182,8 +180,7 @@ The ContentLibraryItem resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileurl_csharp">
 <a href="#fileurl_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Url</a>
@@ -193,8 +190,7 @@ The ContentLibraryItem resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -203,8 +199,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuuid_csharp">
 <a href="#sourceuuid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uuid</a>
@@ -213,8 +208,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -223,13 +217,11 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="libraryid_go">
 <a href="#libraryid_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Id</a>
@@ -238,8 +230,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -248,8 +239,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileurl_go">
 <a href="#fileurl_go" style="color: inherit; text-decoration: inherit;">File<wbr>Url</a>
@@ -259,8 +249,7 @@ OVAs will be parsed and associated files will also be imported.
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -269,8 +258,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuuid_go">
 <a href="#sourceuuid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uuid</a>
@@ -279,8 +267,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -289,13 +276,11 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="libraryid_nodejs">
 <a href="#libraryid_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Id</a>
@@ -304,8 +289,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -314,8 +298,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileurl_nodejs">
 <a href="#fileurl_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Url</a>
@@ -325,8 +308,7 @@ OVAs will be parsed and associated files will also be imported.
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -335,8 +317,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuuid_nodejs">
 <a href="#sourceuuid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uuid</a>
@@ -345,8 +326,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -355,13 +335,11 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="library_id_python">
 <a href="#library_id_python" style="color: inherit; text-decoration: inherit;">library_<wbr>id</a>
@@ -370,8 +348,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -380,8 +357,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_url_python">
 <a href="#file_url_python" style="color: inherit; text-decoration: inherit;">file_<wbr>url</a>
@@ -391,8 +367,7 @@ OVAs will be parsed and associated files will also be imported.
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -401,8 +376,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uuid_python">
 <a href="#source_uuid_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uuid</a>
@@ -411,8 +385,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -421,8 +394,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -433,8 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,13 +413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -456,13 +425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -470,13 +437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -484,8 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -612,8 +576,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -622,8 +585,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fileurl_csharp">
 <a href="#state_fileurl_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Url</a>
@@ -633,8 +595,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_libraryid_csharp">
 <a href="#state_libraryid_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Id</a>
@@ -643,8 +604,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -653,8 +613,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceuuid_csharp">
 <a href="#state_sourceuuid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uuid</a>
@@ -663,8 +622,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -673,13 +631,11 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -688,8 +644,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fileurl_go">
 <a href="#state_fileurl_go" style="color: inherit; text-decoration: inherit;">File<wbr>Url</a>
@@ -699,8 +654,7 @@ OVAs will be parsed and associated files will also be imported.
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_libraryid_go">
 <a href="#state_libraryid_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Id</a>
@@ -709,8 +663,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -719,8 +672,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceuuid_go">
 <a href="#state_sourceuuid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uuid</a>
@@ -729,8 +681,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -739,13 +690,11 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -754,8 +703,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fileurl_nodejs">
 <a href="#state_fileurl_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Url</a>
@@ -765,8 +713,7 @@ OVAs will be parsed and associated files will also be imported.
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_libraryid_nodejs">
 <a href="#state_libraryid_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Id</a>
@@ -775,8 +722,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -785,8 +731,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceuuid_nodejs">
 <a href="#state_sourceuuid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uuid</a>
@@ -795,8 +740,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -805,13 +749,11 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -820,8 +762,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_url_python">
 <a href="#state_file_url_python" style="color: inherit; text-decoration: inherit;">file_<wbr>url</a>
@@ -831,8 +772,7 @@ OVAs will be parsed and associated files will also be imported.
     </dt>
     <dd>{{% md %}}File to import into the Content Library item. OVFs and
 OVAs will be parsed and associated files will also be imported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_library_id_python">
 <a href="#state_library_id_python" style="color: inherit; text-decoration: inherit;">library_<wbr>id</a>
@@ -841,8 +781,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Content Library the item should be created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -851,8 +790,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the item to be created in the Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_uuid_python">
 <a href="#state_source_uuid_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uuid</a>
@@ -861,8 +799,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual machine UUID to clone to Content Library.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -871,8 +808,7 @@ OVAs will be parsed and associated files will also be imported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of content library item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

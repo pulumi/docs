@@ -461,8 +461,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amazonec2config_csharp">
 <a href="#amazonec2config_csharp" style="color: inherit; text-decoration: inherit;">Amazonec2Config</a>
@@ -471,8 +470,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -481,8 +479,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authcertificateauthority_csharp">
 <a href="#authcertificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Certificate<wbr>Authority</a>
@@ -491,8 +488,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authkey_csharp">
 <a href="#authkey_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Key</a>
@@ -501,8 +497,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureconfig_csharp">
 <a href="#azureconfig_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Config</a>
@@ -511,8 +506,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudcredentialid_csharp">
 <a href="#cloudcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
@@ -521,8 +515,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -531,8 +524,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitaloceanconfig_csharp">
 <a href="#digitaloceanconfig_csharp" style="color: inherit; text-decoration: inherit;">Digitalocean<wbr>Config</a>
@@ -541,8 +533,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driverid_csharp">
 <a href="#driverid_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Id</a>
@@ -551,8 +542,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineenv_csharp">
 <a href="#engineenv_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Env</a>
@@ -561,8 +551,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineinsecureregistries_csharp">
 <a href="#engineinsecureregistries_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Insecure<wbr>Registries</a>
@@ -571,8 +560,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineinstallurl_csharp">
 <a href="#engineinstallurl_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Install<wbr>Url</a>
@@ -581,8 +569,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enginelabel_csharp">
 <a href="#enginelabel_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Label</a>
@@ -591,8 +578,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineopt_csharp">
 <a href="#engineopt_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Opt</a>
@@ -601,8 +587,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineregistrymirrors_csharp">
 <a href="#engineregistrymirrors_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Registry<wbr>Mirrors</a>
@@ -611,8 +596,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enginestoragedriver_csharp">
 <a href="#enginestoragedriver_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Storage<wbr>Driver</a>
@@ -621,8 +605,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hetznerconfig_csharp">
 <a href="#hetznerconfig_csharp" style="color: inherit; text-decoration: inherit;">Hetzner<wbr>Config</a>
@@ -631,8 +614,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -641,8 +623,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linodeconfig_csharp">
 <a href="#linodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Linode<wbr>Config</a>
@@ -651,8 +632,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -661,8 +641,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -671,8 +650,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatenodetaint">List&lt;Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opennebulaconfig_csharp">
 <a href="#opennebulaconfig_csharp" style="color: inherit; text-decoration: inherit;">Opennebula<wbr>Config</a>
@@ -681,8 +659,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openstackconfig_csharp">
 <a href="#openstackconfig_csharp" style="color: inherit; text-decoration: inherit;">Openstack<wbr>Config</a>
@@ -691,8 +668,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinternalipaddress_csharp">
 <a href="#useinternalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
@@ -701,8 +677,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphereconfig_csharp">
 <a href="#vsphereconfig_csharp" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Config</a>
@@ -711,13 +686,11 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amazonec2config_go">
 <a href="#amazonec2config_go" style="color: inherit; text-decoration: inherit;">Amazonec2Config</a>
@@ -726,8 +699,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -736,8 +708,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authcertificateauthority_go">
 <a href="#authcertificateauthority_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Certificate<wbr>Authority</a>
@@ -746,8 +717,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authkey_go">
 <a href="#authkey_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Key</a>
@@ -756,8 +726,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureconfig_go">
 <a href="#azureconfig_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Config</a>
@@ -766,8 +735,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudcredentialid_go">
 <a href="#cloudcredentialid_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
@@ -776,8 +744,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -786,8 +753,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitaloceanconfig_go">
 <a href="#digitaloceanconfig_go" style="color: inherit; text-decoration: inherit;">Digitalocean<wbr>Config</a>
@@ -796,8 +762,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driverid_go">
 <a href="#driverid_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Id</a>
@@ -806,8 +771,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineenv_go">
 <a href="#engineenv_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Env</a>
@@ -816,8 +780,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineinsecureregistries_go">
 <a href="#engineinsecureregistries_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Insecure<wbr>Registries</a>
@@ -826,8 +789,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineinstallurl_go">
 <a href="#engineinstallurl_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Install<wbr>Url</a>
@@ -836,8 +798,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enginelabel_go">
 <a href="#enginelabel_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Label</a>
@@ -846,8 +807,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineopt_go">
 <a href="#engineopt_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Opt</a>
@@ -856,8 +816,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineregistrymirrors_go">
 <a href="#engineregistrymirrors_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Registry<wbr>Mirrors</a>
@@ -866,8 +825,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enginestoragedriver_go">
 <a href="#enginestoragedriver_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Storage<wbr>Driver</a>
@@ -876,8 +834,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hetznerconfig_go">
 <a href="#hetznerconfig_go" style="color: inherit; text-decoration: inherit;">Hetzner<wbr>Config</a>
@@ -886,8 +843,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -896,8 +852,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linodeconfig_go">
 <a href="#linodeconfig_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Config</a>
@@ -906,8 +861,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -916,8 +870,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_go">
 <a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -926,8 +879,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatenodetaint">[]Node<wbr>Template<wbr>Node<wbr>Taint</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opennebulaconfig_go">
 <a href="#opennebulaconfig_go" style="color: inherit; text-decoration: inherit;">Opennebula<wbr>Config</a>
@@ -936,8 +888,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openstackconfig_go">
 <a href="#openstackconfig_go" style="color: inherit; text-decoration: inherit;">Openstack<wbr>Config</a>
@@ -946,8 +897,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinternalipaddress_go">
 <a href="#useinternalipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
@@ -956,8 +906,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphereconfig_go">
 <a href="#vsphereconfig_go" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Config</a>
@@ -966,13 +915,11 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amazonec2config_nodejs">
 <a href="#amazonec2config_nodejs" style="color: inherit; text-decoration: inherit;">amazonec2Config</a>
@@ -981,8 +928,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -991,8 +937,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authcertificateauthority_nodejs">
 <a href="#authcertificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Certificate<wbr>Authority</a>
@@ -1001,8 +946,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authkey_nodejs">
 <a href="#authkey_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Key</a>
@@ -1011,8 +955,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureconfig_nodejs">
 <a href="#azureconfig_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Config</a>
@@ -1021,8 +964,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudcredentialid_nodejs">
 <a href="#cloudcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Credential<wbr>Id</a>
@@ -1031,8 +973,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1041,8 +982,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitaloceanconfig_nodejs">
 <a href="#digitaloceanconfig_nodejs" style="color: inherit; text-decoration: inherit;">digitalocean<wbr>Config</a>
@@ -1051,8 +991,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driverid_nodejs">
 <a href="#driverid_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Id</a>
@@ -1061,8 +1000,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineenv_nodejs">
 <a href="#engineenv_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Env</a>
@@ -1071,8 +1009,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineinsecureregistries_nodejs">
 <a href="#engineinsecureregistries_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Insecure<wbr>Registries</a>
@@ -1081,8 +1018,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineinstallurl_nodejs">
 <a href="#engineinstallurl_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Install<wbr>Url</a>
@@ -1091,8 +1027,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enginelabel_nodejs">
 <a href="#enginelabel_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Label</a>
@@ -1101,8 +1036,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineopt_nodejs">
 <a href="#engineopt_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Opt</a>
@@ -1111,8 +1045,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineregistrymirrors_nodejs">
 <a href="#engineregistrymirrors_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Registry<wbr>Mirrors</a>
@@ -1121,8 +1054,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enginestoragedriver_nodejs">
 <a href="#enginestoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Storage<wbr>Driver</a>
@@ -1131,8 +1063,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hetznerconfig_nodejs">
 <a href="#hetznerconfig_nodejs" style="color: inherit; text-decoration: inherit;">hetzner<wbr>Config</a>
@@ -1141,8 +1072,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1151,8 +1081,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linodeconfig_nodejs">
 <a href="#linodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Config</a>
@@ -1161,8 +1090,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1171,8 +1099,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -1181,8 +1108,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opennebulaconfig_nodejs">
 <a href="#opennebulaconfig_nodejs" style="color: inherit; text-decoration: inherit;">opennebula<wbr>Config</a>
@@ -1191,8 +1117,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openstackconfig_nodejs">
 <a href="#openstackconfig_nodejs" style="color: inherit; text-decoration: inherit;">openstack<wbr>Config</a>
@@ -1201,8 +1126,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinternalipaddress_nodejs">
 <a href="#useinternalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Internal<wbr>Ip<wbr>Address</a>
@@ -1211,8 +1135,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphereconfig_nodejs">
 <a href="#vsphereconfig_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Config</a>
@@ -1221,13 +1144,11 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="amazonec2_config_python">
 <a href="#amazonec2_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>config</a>
@@ -1236,8 +1157,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1246,8 +1166,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_certificate_authority_python">
 <a href="#auth_certificate_authority_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>certificate_<wbr>authority</a>
@@ -1256,8 +1175,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_key_python">
 <a href="#auth_key_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>key</a>
@@ -1266,8 +1184,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_config_python">
 <a href="#azure_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>config</a>
@@ -1276,8 +1193,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_credential_id_python">
 <a href="#cloud_credential_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>credential_<wbr>id</a>
@@ -1286,8 +1202,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1296,8 +1211,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalocean_config_python">
 <a href="#digitalocean_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>config</a>
@@ -1306,8 +1220,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driver_id_python">
 <a href="#driver_id_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>id</a>
@@ -1316,8 +1229,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_env_python">
 <a href="#engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
@@ -1326,8 +1238,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_insecure_registries_python">
 <a href="#engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
@@ -1336,8 +1247,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_install_url_python">
 <a href="#engine_install_url_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>install_<wbr>url</a>
@@ -1346,8 +1256,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_label_python">
 <a href="#engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
@@ -1356,8 +1265,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_opt_python">
 <a href="#engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
@@ -1366,8 +1274,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_registry_mirrors_python">
 <a href="#engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
@@ -1376,8 +1283,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_storage_driver_python">
 <a href="#engine_storage_driver_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>storage_<wbr>driver</a>
@@ -1386,8 +1292,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hetzner_config_python">
 <a href="#hetzner_config_python" style="color: inherit; text-decoration: inherit;">hetzner_<wbr>config</a>
@@ -1396,8 +1301,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1406,8 +1310,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linode_config_python">
 <a href="#linode_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>config</a>
@@ -1416,8 +1319,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1426,8 +1328,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_taints_python">
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -1436,8 +1337,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatenodetaint">Sequence[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opennebula_config_python">
 <a href="#opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
@@ -1446,8 +1346,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openstack_config_python">
 <a href="#openstack_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>config</a>
@@ -1456,8 +1355,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_internal_ip_address_python">
 <a href="#use_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>internal_<wbr>ip_<wbr>address</a>
@@ -1466,8 +1364,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsphere_config_python">
 <a href="#vsphere_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>config</a>
@@ -1476,8 +1373,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1488,8 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="driver_csharp">
 <a href="#driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -1498,8 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1507,13 +1401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="driver_go">
 <a href="#driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -1522,8 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1531,13 +1422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="driver_nodejs">
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -1546,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1555,13 +1443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="driver_python">
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -1570,8 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1579,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1707,8 +1591,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_amazonec2config_csharp">
 <a href="#state_amazonec2config_csharp" style="color: inherit; text-decoration: inherit;">Amazonec2Config</a>
@@ -1717,8 +1600,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1727,8 +1609,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authcertificateauthority_csharp">
 <a href="#state_authcertificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Certificate<wbr>Authority</a>
@@ -1737,8 +1618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authkey_csharp">
 <a href="#state_authkey_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Key</a>
@@ -1747,8 +1627,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azureconfig_csharp">
 <a href="#state_azureconfig_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Config</a>
@@ -1757,8 +1636,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudcredentialid_csharp">
 <a href="#state_cloudcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
@@ -1767,8 +1645,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1777,8 +1654,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaloceanconfig_csharp">
 <a href="#state_digitaloceanconfig_csharp" style="color: inherit; text-decoration: inherit;">Digitalocean<wbr>Config</a>
@@ -1787,8 +1663,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_csharp">
 <a href="#state_driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -1797,8 +1672,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driverid_csharp">
 <a href="#state_driverid_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Id</a>
@@ -1807,8 +1681,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineenv_csharp">
 <a href="#state_engineenv_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Env</a>
@@ -1817,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineinsecureregistries_csharp">
 <a href="#state_engineinsecureregistries_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Insecure<wbr>Registries</a>
@@ -1827,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineinstallurl_csharp">
 <a href="#state_engineinstallurl_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Install<wbr>Url</a>
@@ -1837,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginelabel_csharp">
 <a href="#state_enginelabel_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Label</a>
@@ -1847,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineopt_csharp">
 <a href="#state_engineopt_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Opt</a>
@@ -1857,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineregistrymirrors_csharp">
 <a href="#state_engineregistrymirrors_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Registry<wbr>Mirrors</a>
@@ -1867,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginestoragedriver_csharp">
 <a href="#state_enginestoragedriver_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Storage<wbr>Driver</a>
@@ -1877,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hetznerconfig_csharp">
 <a href="#state_hetznerconfig_csharp" style="color: inherit; text-decoration: inherit;">Hetzner<wbr>Config</a>
@@ -1887,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1897,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodeconfig_csharp">
 <a href="#state_linodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Linode<wbr>Config</a>
@@ -1907,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1917,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetaints_csharp">
 <a href="#state_nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -1927,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatenodetaint">List&lt;Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opennebulaconfig_csharp">
 <a href="#state_opennebulaconfig_csharp" style="color: inherit; text-decoration: inherit;">Opennebula<wbr>Config</a>
@@ -1937,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openstackconfig_csharp">
 <a href="#state_openstackconfig_csharp" style="color: inherit; text-decoration: inherit;">Openstack<wbr>Config</a>
@@ -1947,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useinternalipaddress_csharp">
 <a href="#state_useinternalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
@@ -1957,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsphereconfig_csharp">
 <a href="#state_vsphereconfig_csharp" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Config</a>
@@ -1967,13 +1825,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_amazonec2config_go">
 <a href="#state_amazonec2config_go" style="color: inherit; text-decoration: inherit;">Amazonec2Config</a>
@@ -1982,8 +1838,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1992,8 +1847,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authcertificateauthority_go">
 <a href="#state_authcertificateauthority_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Certificate<wbr>Authority</a>
@@ -2002,8 +1856,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authkey_go">
 <a href="#state_authkey_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Key</a>
@@ -2012,8 +1865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azureconfig_go">
 <a href="#state_azureconfig_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Config</a>
@@ -2022,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudcredentialid_go">
 <a href="#state_cloudcredentialid_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Credential<wbr>Id</a>
@@ -2032,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2042,8 +1892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaloceanconfig_go">
 <a href="#state_digitaloceanconfig_go" style="color: inherit; text-decoration: inherit;">Digitalocean<wbr>Config</a>
@@ -2052,8 +1901,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_go">
 <a href="#state_driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -2062,8 +1910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driverid_go">
 <a href="#state_driverid_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Id</a>
@@ -2072,8 +1919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineenv_go">
 <a href="#state_engineenv_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Env</a>
@@ -2082,8 +1928,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineinsecureregistries_go">
 <a href="#state_engineinsecureregistries_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Insecure<wbr>Registries</a>
@@ -2092,8 +1937,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineinstallurl_go">
 <a href="#state_engineinstallurl_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Install<wbr>Url</a>
@@ -2102,8 +1946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginelabel_go">
 <a href="#state_enginelabel_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Label</a>
@@ -2112,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineopt_go">
 <a href="#state_engineopt_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Opt</a>
@@ -2122,8 +1964,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineregistrymirrors_go">
 <a href="#state_engineregistrymirrors_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Registry<wbr>Mirrors</a>
@@ -2132,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginestoragedriver_go">
 <a href="#state_enginestoragedriver_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Storage<wbr>Driver</a>
@@ -2142,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hetznerconfig_go">
 <a href="#state_hetznerconfig_go" style="color: inherit; text-decoration: inherit;">Hetzner<wbr>Config</a>
@@ -2152,8 +1991,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2162,8 +2000,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodeconfig_go">
 <a href="#state_linodeconfig_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Config</a>
@@ -2172,8 +2009,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2182,8 +2018,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetaints_go">
 <a href="#state_nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -2192,8 +2027,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatenodetaint">[]Node<wbr>Template<wbr>Node<wbr>Taint</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opennebulaconfig_go">
 <a href="#state_opennebulaconfig_go" style="color: inherit; text-decoration: inherit;">Opennebula<wbr>Config</a>
@@ -2202,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openstackconfig_go">
 <a href="#state_openstackconfig_go" style="color: inherit; text-decoration: inherit;">Openstack<wbr>Config</a>
@@ -2212,8 +2045,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useinternalipaddress_go">
 <a href="#state_useinternalipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Internal<wbr>Ip<wbr>Address</a>
@@ -2222,8 +2054,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsphereconfig_go">
 <a href="#state_vsphereconfig_go" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Config</a>
@@ -2232,13 +2063,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_amazonec2config_nodejs">
 <a href="#state_amazonec2config_nodejs" style="color: inherit; text-decoration: inherit;">amazonec2Config</a>
@@ -2247,8 +2076,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2257,8 +2085,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authcertificateauthority_nodejs">
 <a href="#state_authcertificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Certificate<wbr>Authority</a>
@@ -2267,8 +2094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authkey_nodejs">
 <a href="#state_authkey_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Key</a>
@@ -2277,8 +2103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azureconfig_nodejs">
 <a href="#state_azureconfig_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Config</a>
@@ -2287,8 +2112,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudcredentialid_nodejs">
 <a href="#state_cloudcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Credential<wbr>Id</a>
@@ -2297,8 +2121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2307,8 +2130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaloceanconfig_nodejs">
 <a href="#state_digitaloceanconfig_nodejs" style="color: inherit; text-decoration: inherit;">digitalocean<wbr>Config</a>
@@ -2317,8 +2139,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_nodejs">
 <a href="#state_driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -2327,8 +2148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driverid_nodejs">
 <a href="#state_driverid_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Id</a>
@@ -2337,8 +2157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineenv_nodejs">
 <a href="#state_engineenv_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Env</a>
@@ -2347,8 +2166,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineinsecureregistries_nodejs">
 <a href="#state_engineinsecureregistries_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Insecure<wbr>Registries</a>
@@ -2357,8 +2175,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineinstallurl_nodejs">
 <a href="#state_engineinstallurl_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Install<wbr>Url</a>
@@ -2367,8 +2184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginelabel_nodejs">
 <a href="#state_enginelabel_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Label</a>
@@ -2377,8 +2193,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineopt_nodejs">
 <a href="#state_engineopt_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Opt</a>
@@ -2387,8 +2202,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineregistrymirrors_nodejs">
 <a href="#state_engineregistrymirrors_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Registry<wbr>Mirrors</a>
@@ -2397,8 +2211,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginestoragedriver_nodejs">
 <a href="#state_enginestoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Storage<wbr>Driver</a>
@@ -2407,8 +2220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hetznerconfig_nodejs">
 <a href="#state_hetznerconfig_nodejs" style="color: inherit; text-decoration: inherit;">hetzner<wbr>Config</a>
@@ -2417,8 +2229,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2427,8 +2238,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodeconfig_nodejs">
 <a href="#state_linodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Config</a>
@@ -2437,8 +2247,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2447,8 +2256,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetaints_nodejs">
 <a href="#state_nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -2457,8 +2265,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opennebulaconfig_nodejs">
 <a href="#state_opennebulaconfig_nodejs" style="color: inherit; text-decoration: inherit;">opennebula<wbr>Config</a>
@@ -2467,8 +2274,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openstackconfig_nodejs">
 <a href="#state_openstackconfig_nodejs" style="color: inherit; text-decoration: inherit;">openstack<wbr>Config</a>
@@ -2477,8 +2283,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useinternalipaddress_nodejs">
 <a href="#state_useinternalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Internal<wbr>Ip<wbr>Address</a>
@@ -2487,8 +2292,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsphereconfig_nodejs">
 <a href="#state_vsphereconfig_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Config</a>
@@ -2497,13 +2301,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_amazonec2_config_python">
 <a href="#state_amazonec2_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>config</a>
@@ -2512,8 +2314,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2522,8 +2323,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_certificate_authority_python">
 <a href="#state_auth_certificate_authority_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>certificate_<wbr>authority</a>
@@ -2532,8 +2332,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_key_python">
 <a href="#state_auth_key_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>key</a>
@@ -2542,8 +2341,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_config_python">
 <a href="#state_azure_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>config</a>
@@ -2552,8 +2350,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_credential_id_python">
 <a href="#state_cloud_credential_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>credential_<wbr>id</a>
@@ -2562,8 +2359,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2572,8 +2368,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitalocean_config_python">
 <a href="#state_digitalocean_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>config</a>
@@ -2582,8 +2377,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_python">
 <a href="#state_driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -2592,8 +2386,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_id_python">
 <a href="#state_driver_id_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>id</a>
@@ -2602,8 +2395,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_env_python">
 <a href="#state_engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
@@ -2612,8 +2404,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_insecure_registries_python">
 <a href="#state_engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
@@ -2622,8 +2413,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_install_url_python">
 <a href="#state_engine_install_url_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>install_<wbr>url</a>
@@ -2632,8 +2422,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_label_python">
 <a href="#state_engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
@@ -2642,8 +2431,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_opt_python">
 <a href="#state_engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
@@ -2652,8 +2440,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_registry_mirrors_python">
 <a href="#state_engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
@@ -2662,8 +2449,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_storage_driver_python">
 <a href="#state_engine_storage_driver_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>storage_<wbr>driver</a>
@@ -2672,8 +2458,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hetzner_config_python">
 <a href="#state_hetzner_config_python" style="color: inherit; text-decoration: inherit;">hetzner_<wbr>config</a>
@@ -2682,8 +2467,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2692,8 +2476,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linode_config_python">
 <a href="#state_linode_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>config</a>
@@ -2702,8 +2485,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2712,8 +2494,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_taints_python">
 <a href="#state_node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -2722,8 +2503,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatenodetaint">Sequence[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opennebula_config_python">
 <a href="#state_opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
@@ -2732,8 +2512,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openstack_config_python">
 <a href="#state_openstack_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>config</a>
@@ -2742,8 +2521,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_internal_ip_address_python">
 <a href="#state_use_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>internal_<wbr>ip_<wbr>address</a>
@@ -2752,8 +2530,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsphere_config_python">
 <a href="#state_vsphere_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>config</a>
@@ -2762,8 +2539,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2778,8 +2554,7 @@ The following state arguments are supported:
 <h4 id="nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_csharp">
 <a href="#ami_csharp" style="color: inherit; text-decoration: inherit;">Ami</a>
@@ -2788,8 +2563,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS machine image (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2798,8 +2572,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -2808,8 +2581,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2818,8 +2590,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS VPC subnet id (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -2828,8 +2599,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS VPC id. (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -2838,8 +2608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS zone for instance (i.e. a,b,c,d,e) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -2848,8 +2617,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockdurationminutes_csharp">
 <a href="#blockdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
@@ -2858,8 +2626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360). Default `0` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2868,8 +2635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptebsvolume_csharp">
 <a href="#encryptebsvolume_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -2878,8 +2644,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -2888,8 +2653,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional endpoint URL (hostname only or fully qualified URI) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_csharp">
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -2898,8 +2662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS IAM Instance Profile (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretransport_csharp">
 <a href="#insecuretransport_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Transport</a>
@@ -2908,8 +2671,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable SSL when sending requests (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2918,8 +2680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_csharp">
 <a href="#keypairname_csharp" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Name</a>
@@ -2928,8 +2689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_csharp">
 <a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
@@ -2938,8 +2698,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -2948,8 +2707,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_csharp">
 <a href="#openports_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Ports</a>
@@ -2958,8 +2716,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaddressonly_csharp">
 <a href="#privateaddressonly_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Address<wbr>Only</a>
@@ -2968,8 +2725,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only use a private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestspotinstance_csharp">
 <a href="#requestspotinstance_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Spot<wbr>Instance</a>
@@ -2978,8 +2734,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this flag to request spot instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -2988,8 +2743,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set retry count for recoverable failures (use -1 to disable). Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootsize_csharp">
 <a href="#rootsize_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Size</a>
@@ -2998,8 +2752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS root disk size (in GB). Default `16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -3008,8 +2761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupreadonly_csharp">
 <a href="#securitygroupreadonly_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Readonly</a>
@@ -3018,8 +2770,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Skip adding default rules to security groups (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontoken_csharp">
 <a href="#sessiontoken_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
@@ -3028,8 +2779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Session Token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -3038,8 +2788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS spot instance bid price (in dollar). Default `0.50` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeypath_csharp">
 <a href="#sshkeypath_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keypath</a>
@@ -3048,8 +2797,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH Key for Instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -3058,8 +2806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3068,8 +2815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useebsoptimizedinstance_csharp">
 <a href="#useebsoptimizedinstance_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instance</a>
@@ -3078,8 +2824,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create an EBS optimized instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateaddress_csharp">
 <a href="#useprivateaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Address</a>
@@ -3088,8 +2833,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the usage of private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">Userdata</a>
@@ -3098,8 +2842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -3108,13 +2851,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_go">
 <a href="#ami_go" style="color: inherit; text-decoration: inherit;">Ami</a>
@@ -3123,8 +2864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS machine image (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3133,8 +2873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -3143,8 +2882,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3153,8 +2891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS VPC subnet id (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -3163,8 +2900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS VPC id. (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -3173,8 +2909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS zone for instance (i.e. a,b,c,d,e) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -3183,8 +2918,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockdurationminutes_go">
 <a href="#blockdurationminutes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
@@ -3193,8 +2927,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360). Default `0` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -3203,8 +2936,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptebsvolume_go">
 <a href="#encryptebsvolume_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -3213,8 +2945,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -3223,8 +2954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional endpoint URL (hostname only or fully qualified URI) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_go">
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -3233,8 +2963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS IAM Instance Profile (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretransport_go">
 <a href="#insecuretransport_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Transport</a>
@@ -3243,8 +2972,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable SSL when sending requests (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -3253,8 +2981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_go">
 <a href="#keypairname_go" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Name</a>
@@ -3263,8 +2990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_go">
 <a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
@@ -3273,8 +2999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -3283,8 +3008,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_go">
 <a href="#openports_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Ports</a>
@@ -3293,8 +3017,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaddressonly_go">
 <a href="#privateaddressonly_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Address<wbr>Only</a>
@@ -3303,8 +3026,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only use a private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestspotinstance_go">
 <a href="#requestspotinstance_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Spot<wbr>Instance</a>
@@ -3313,8 +3035,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this flag to request spot instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -3323,8 +3044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set retry count for recoverable failures (use -1 to disable). Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootsize_go">
 <a href="#rootsize_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Size</a>
@@ -3333,8 +3053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS root disk size (in GB). Default `16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -3343,8 +3062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupreadonly_go">
 <a href="#securitygroupreadonly_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Readonly</a>
@@ -3353,8 +3071,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Skip adding default rules to security groups (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontoken_go">
 <a href="#sessiontoken_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
@@ -3363,8 +3080,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Session Token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_go">
 <a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -3373,8 +3089,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS spot instance bid price (in dollar). Default `0.50` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeypath_go">
 <a href="#sshkeypath_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keypath</a>
@@ -3383,8 +3098,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH Key for Instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -3393,8 +3107,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3403,8 +3116,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useebsoptimizedinstance_go">
 <a href="#useebsoptimizedinstance_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instance</a>
@@ -3413,8 +3125,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create an EBS optimized instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateaddress_go">
 <a href="#useprivateaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Address</a>
@@ -3423,8 +3134,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the usage of private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">Userdata</a>
@@ -3433,8 +3143,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -3443,13 +3152,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_nodejs">
 <a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
@@ -3458,8 +3165,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS machine image (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3468,8 +3174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -3478,8 +3183,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -3488,8 +3192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS VPC subnet id (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -3498,8 +3201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS VPC id. (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -3508,8 +3210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS zone for instance (i.e. a,b,c,d,e) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -3518,8 +3219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockdurationminutes_nodejs">
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
@@ -3528,8 +3228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360). Default `0` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -3538,8 +3237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptebsvolume_nodejs">
 <a href="#encryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ebs<wbr>Volume</a>
@@ -3548,8 +3246,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -3558,8 +3255,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional endpoint URL (hostname only or fully qualified URI) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_nodejs">
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -3568,8 +3264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS IAM Instance Profile (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretransport_nodejs">
 <a href="#insecuretransport_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Transport</a>
@@ -3578,8 +3273,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable SSL when sending requests (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -3588,8 +3282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_nodejs">
 <a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">keypair<wbr>Name</a>
@@ -3598,8 +3291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_nodejs">
 <a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
@@ -3608,8 +3300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -3618,8 +3309,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_nodejs">
 <a href="#openports_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
@@ -3628,8 +3318,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaddressonly_nodejs">
 <a href="#privateaddressonly_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Address<wbr>Only</a>
@@ -3638,8 +3327,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only use a private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestspotinstance_nodejs">
 <a href="#requestspotinstance_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Spot<wbr>Instance</a>
@@ -3648,8 +3336,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this flag to request spot instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -3658,8 +3345,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set retry count for recoverable failures (use -1 to disable). Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootsize_nodejs">
 <a href="#rootsize_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Size</a>
@@ -3668,8 +3354,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS root disk size (in GB). Default `16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -3678,8 +3363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupreadonly_nodejs">
 <a href="#securitygroupreadonly_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Readonly</a>
@@ -3688,8 +3372,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Skip adding default rules to security groups (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessiontoken_nodejs">
 <a href="#sessiontoken_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
@@ -3698,8 +3381,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Session Token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -3708,8 +3390,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS spot instance bid price (in dollar). Default `0.50` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeypath_nodejs">
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keypath</a>
@@ -3718,8 +3399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH Key for Instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -3728,8 +3408,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3738,8 +3417,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useebsoptimizedinstance_nodejs">
 <a href="#useebsoptimizedinstance_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instance</a>
@@ -3748,8 +3426,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create an EBS optimized instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateaddress_nodejs">
 <a href="#useprivateaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Address</a>
@@ -3758,8 +3435,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Force the usage of private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
@@ -3768,8 +3444,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -3778,13 +3453,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_python">
 <a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
@@ -3793,8 +3466,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS machine image (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3803,8 +3475,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -3813,8 +3484,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -3823,8 +3493,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS VPC subnet id (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -3833,8 +3502,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS VPC id. (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -3843,8 +3511,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS zone for instance (i.e. a,b,c,d,e) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -3853,8 +3520,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_duration_minutes_python">
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
@@ -3863,8 +3529,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360). Default `0` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -3873,8 +3538,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_ebs_volume_python">
 <a href="#encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>ebs_<wbr>volume</a>
@@ -3883,8 +3547,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -3893,8 +3556,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional endpoint URL (hostname only or fully qualified URI) (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_python">
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -3903,8 +3565,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS IAM Instance Profile (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_transport_python">
 <a href="#insecure_transport_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>transport</a>
@@ -3913,8 +3574,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable SSL when sending requests (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -3923,8 +3583,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypair_name_python">
 <a href="#keypair_name_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>name</a>
@@ -3933,8 +3592,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_python">
 <a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
@@ -3943,8 +3601,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -3953,8 +3610,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_ports_python">
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
@@ -3963,8 +3619,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_address_only_python">
 <a href="#private_address_only_python" style="color: inherit; text-decoration: inherit;">private_<wbr>address_<wbr>only</a>
@@ -3973,8 +3628,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only use a private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_spot_instance_python">
 <a href="#request_spot_instance_python" style="color: inherit; text-decoration: inherit;">request_<wbr>spot_<wbr>instance</a>
@@ -3983,8 +3637,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this flag to request spot instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -3993,8 +3646,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set retry count for recoverable failures (use -1 to disable). Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_size_python">
 <a href="#root_size_python" style="color: inherit; text-decoration: inherit;">root_<wbr>size</a>
@@ -4003,8 +3655,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS root disk size (in GB). Default `16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -4013,8 +3664,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_readonly_python">
 <a href="#security_group_readonly_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>readonly</a>
@@ -4023,8 +3673,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Skip adding default rules to security groups (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_token_python">
 <a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
@@ -4033,8 +3682,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Session Token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_price_python">
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -4043,8 +3691,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS spot instance bid price (in dollar). Default `0.50` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_keypath_python">
 <a href="#ssh_keypath_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keypath</a>
@@ -4053,8 +3700,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH Key for Instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -4063,8 +3709,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4073,8 +3718,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_ebs_optimized_instance_python">
 <a href="#use_ebs_optimized_instance_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instance</a>
@@ -4083,8 +3727,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create an EBS optimized instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_private_address_python">
 <a href="#use_private_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>address</a>
@@ -4093,8 +3736,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the usage of private IP address. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_python">
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
@@ -4103,8 +3745,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -4113,15 +3754,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilityset_csharp">
 <a href="#availabilityset_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Set</a>
@@ -4130,8 +3769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Availability Set to place the virtual machine into. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4140,8 +3778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4150,8 +3787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -4160,8 +3796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with custom-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -4170,8 +3805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -4180,8 +3814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique DNS label for the public IP adddress (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerport_csharp">
 <a href="#dockerport_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Port</a>
@@ -4190,8 +3823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -4200,8 +3832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultdomaincount_csharp">
 <a href="#faultdomaincount_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Domain<wbr>Count</a>
@@ -4210,8 +3841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -4220,8 +3850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -4230,8 +3859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure region to create the virtual machine. Default `westus` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisks_csharp">
 <a href="#manageddisks_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
@@ -4240,8 +3868,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures VM and availability set for managed disks. Just for Rancher v2.3.x and above. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nopublicip_csharp">
 <a href="#nopublicip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Public<wbr>Ip</a>
@@ -4250,8 +3877,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsg_csharp">
 <a href="#nsg_csharp" style="color: inherit; text-decoration: inherit;">Nsg</a>
@@ -4260,8 +3886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_csharp">
 <a href="#openports_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Ports</a>
@@ -4270,8 +3895,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -4280,8 +3904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a static private IP address for the machine. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -4290,8 +3913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group name (will be created if missing). Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -4300,8 +3922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -4310,8 +3931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticpublicip_csharp">
 <a href="#staticpublicip_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Public<wbr>Ip</a>
@@ -4320,8 +3940,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a static public IP address to the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -4330,8 +3949,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Storage Account to host the OS Disk for the machine. Default `Standard_LRS` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -4340,8 +3958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Subnet Name to be used within the Virtual Network. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetprefix_csharp">
 <a href="#subnetprefix_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Prefix</a>
@@ -4350,8 +3967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private CIDR block to be used for the new subnet, should comply RFC 1918. Default `192.168.0.0/16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -4360,8 +3976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedomaincount_csharp">
 <a href="#updatedomaincount_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Domain<wbr>Count</a>
@@ -4370,8 +3985,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update domain count to use for availability set. Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateip_csharp">
 <a href="#useprivateip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -4380,8 +3994,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private IP address of the machine to connect. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_csharp">
 <a href="#vnet_csharp" style="color: inherit; text-decoration: inherit;">Vnet</a>
@@ -4390,13 +4003,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Virtual Network name to connect the virtual machine (in [resourcegroup:]name format). Default `docker-machine-vnet` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilityset_go">
 <a href="#availabilityset_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Set</a>
@@ -4405,8 +4016,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Availability Set to place the virtual machine into. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4415,8 +4025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4425,8 +4034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -4435,8 +4043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with custom-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_go">
 <a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -4445,8 +4052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -4455,8 +4061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique DNS label for the public IP adddress (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerport_go">
 <a href="#dockerport_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Port</a>
@@ -4465,8 +4070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -4475,8 +4079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultdomaincount_go">
 <a href="#faultdomaincount_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Domain<wbr>Count</a>
@@ -4485,8 +4088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -4495,8 +4097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -4505,8 +4106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure region to create the virtual machine. Default `westus` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisks_go">
 <a href="#manageddisks_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
@@ -4515,8 +4115,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures VM and availability set for managed disks. Just for Rancher v2.3.x and above. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nopublicip_go">
 <a href="#nopublicip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Public<wbr>Ip</a>
@@ -4525,8 +4124,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsg_go">
 <a href="#nsg_go" style="color: inherit; text-decoration: inherit;">Nsg</a>
@@ -4535,8 +4133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_go">
 <a href="#openports_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Ports</a>
@@ -4545,8 +4142,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -4555,8 +4151,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a static private IP address for the machine. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -4565,8 +4160,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group name (will be created if missing). Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -4575,8 +4169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -4585,8 +4178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticpublicip_go">
 <a href="#staticpublicip_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Public<wbr>Ip</a>
@@ -4595,8 +4187,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a static public IP address to the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -4605,8 +4196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Storage Account to host the OS Disk for the machine. Default `Standard_LRS` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -4615,8 +4205,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Subnet Name to be used within the Virtual Network. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetprefix_go">
 <a href="#subnetprefix_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Prefix</a>
@@ -4625,8 +4214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private CIDR block to be used for the new subnet, should comply RFC 1918. Default `192.168.0.0/16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -4635,8 +4223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedomaincount_go">
 <a href="#updatedomaincount_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Domain<wbr>Count</a>
@@ -4645,8 +4232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update domain count to use for availability set. Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateip_go">
 <a href="#useprivateip_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -4655,8 +4241,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private IP address of the machine to connect. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_go">
 <a href="#vnet_go" style="color: inherit; text-decoration: inherit;">Vnet</a>
@@ -4665,13 +4250,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Virtual Network name to connect the virtual machine (in [resourcegroup:]name format). Default `docker-machine-vnet` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilityset_nodejs">
 <a href="#availabilityset_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set</a>
@@ -4680,8 +4263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Availability Set to place the virtual machine into. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4690,8 +4272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -4700,8 +4281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -4710,8 +4290,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with custom-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
@@ -4720,8 +4299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -4730,8 +4308,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique DNS label for the public IP adddress (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerport_nodejs">
 <a href="#dockerport_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Port</a>
@@ -4740,8 +4317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -4750,8 +4326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultdomaincount_nodejs">
 <a href="#faultdomaincount_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain<wbr>Count</a>
@@ -4760,8 +4335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -4770,8 +4344,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -4780,8 +4353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure region to create the virtual machine. Default `westus` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisks_nodejs">
 <a href="#manageddisks_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
@@ -4790,8 +4362,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configures VM and availability set for managed disks. Just for Rancher v2.3.x and above. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nopublicip_nodejs">
 <a href="#nopublicip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Public<wbr>Ip</a>
@@ -4800,8 +4371,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsg_nodejs">
 <a href="#nsg_nodejs" style="color: inherit; text-decoration: inherit;">nsg</a>
@@ -4810,8 +4380,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_nodejs">
 <a href="#openports_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
@@ -4820,8 +4389,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -4830,8 +4398,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a static private IP address for the machine. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -4840,8 +4407,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group name (will be created if missing). Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -4850,8 +4416,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -4860,8 +4425,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticpublicip_nodejs">
 <a href="#staticpublicip_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Public<wbr>Ip</a>
@@ -4870,8 +4434,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Assign a static public IP address to the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
@@ -4880,8 +4443,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Storage Account to host the OS Disk for the machine. Default `Standard_LRS` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -4890,8 +4452,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Subnet Name to be used within the Virtual Network. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetprefix_nodejs">
 <a href="#subnetprefix_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix</a>
@@ -4900,8 +4461,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private CIDR block to be used for the new subnet, should comply RFC 1918. Default `192.168.0.0/16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -4910,8 +4470,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedomaincount_nodejs">
 <a href="#updatedomaincount_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Domain<wbr>Count</a>
@@ -4920,8 +4479,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update domain count to use for availability set. Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivateip_nodejs">
 <a href="#useprivateip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
@@ -4930,8 +4488,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use private IP address of the machine to connect. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_nodejs">
 <a href="#vnet_nodejs" style="color: inherit; text-decoration: inherit;">vnet</a>
@@ -4940,13 +4497,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Virtual Network name to connect the virtual machine (in [resourcegroup:]name format). Default `docker-machine-vnet` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_set_python">
 <a href="#availability_set_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set</a>
@@ -4955,8 +4510,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Availability Set to place the virtual machine into. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4965,8 +4519,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -4975,8 +4528,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -4985,8 +4537,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to file with custom-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_python">
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
@@ -4995,8 +4546,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -5005,8 +4555,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique DNS label for the public IP adddress (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_port_python">
 <a href="#docker_port_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>port</a>
@@ -5015,8 +4564,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_python">
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -5025,8 +4573,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fault_domain_count_python">
 <a href="#fault_domain_count_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain_<wbr>count</a>
@@ -5035,8 +4582,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -5045,8 +4591,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -5055,8 +4600,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure region to create the virtual machine. Default `westus` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disks_python">
 <a href="#managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
@@ -5065,8 +4609,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures VM and availability set for managed disks. Just for Rancher v2.3.x and above. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_public_ip_python">
 <a href="#no_public_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>public_<wbr>ip</a>
@@ -5075,8 +4618,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsg_python">
 <a href="#nsg_python" style="color: inherit; text-decoration: inherit;">nsg</a>
@@ -5085,8 +4627,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_ports_python">
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
@@ -5095,8 +4636,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -5105,8 +4645,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a static private IP address for the machine. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -5115,8 +4654,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group name (will be created if missing). Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -5125,8 +4663,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -5135,8 +4672,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_public_ip_python">
 <a href="#static_public_ip_python" style="color: inherit; text-decoration: inherit;">static_<wbr>public_<wbr>ip</a>
@@ -5145,8 +4681,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a static public IP address to the machine. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
@@ -5155,8 +4690,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Storage Account to host the OS Disk for the machine. Default `Standard_LRS` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -5165,8 +4699,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Subnet Name to be used within the Virtual Network. Default `docker-machine` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_prefix_python">
 <a href="#subnet_prefix_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix</a>
@@ -5175,8 +4708,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private CIDR block to be used for the new subnet, should comply RFC 1918. Default `192.168.0.0/16` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -5185,8 +4717,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_domain_count_python">
 <a href="#update_domain_count_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain_<wbr>count</a>
@@ -5195,8 +4726,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Update domain count to use for availability set. Default `5` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_private_ip_python">
 <a href="#use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>
@@ -5205,8 +4735,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private IP address of the machine to connect. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_python">
 <a href="#vnet_python" style="color: inherit; text-decoration: inherit;">vnet</a>
@@ -5215,15 +4744,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Virtual Network name to connect the virtual machine (in [resourcegroup:]name format). Default `docker-machine-vnet` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -5232,8 +4759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_csharp">
 <a href="#backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -5242,8 +4768,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable backups for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -5252,8 +4777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -5262,8 +4786,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ipv6 for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -5272,8 +4795,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetworking_csharp">
 <a href="#privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -5282,8 +4804,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable private networking for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -5292,8 +4813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -5302,8 +4822,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeyfingerprint_csharp">
 <a href="#sshkeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Fingerprint</a>
@@ -5312,8 +4831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key fingerprint (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeypath_csharp">
 <a href="#sshkeypath_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Path</a>
@@ -5322,8 +4840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH private key path (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -5332,8 +4849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -5342,8 +4858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5352,8 +4867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">Userdata</a>
@@ -5362,13 +4876,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -5377,8 +4889,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_go">
 <a href="#backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -5387,8 +4898,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable backups for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -5397,8 +4907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -5407,8 +4916,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ipv6 for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -5417,8 +4925,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetworking_go">
 <a href="#privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -5427,8 +4934,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable private networking for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -5437,8 +4943,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -5447,8 +4952,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeyfingerprint_go">
 <a href="#sshkeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Fingerprint</a>
@@ -5457,8 +4961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key fingerprint (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeypath_go">
 <a href="#sshkeypath_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Path</a>
@@ -5467,8 +4970,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH private key path (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -5477,8 +4979,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -5487,8 +4988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -5497,8 +4997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">Userdata</a>
@@ -5507,13 +5006,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -5522,8 +5019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_nodejs">
 <a href="#backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -5532,8 +5028,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable backups for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -5542,8 +5037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -5552,8 +5046,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable ipv6 for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -5562,8 +5055,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetworking_nodejs">
 <a href="#privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
@@ -5572,8 +5064,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable private networking for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -5582,8 +5073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -5592,8 +5082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeyfingerprint_nodejs">
 <a href="#sshkeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Fingerprint</a>
@@ -5602,8 +5091,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH key fingerprint (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshkeypath_nodejs">
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Path</a>
@@ -5612,8 +5100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSH private key path (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -5622,8 +5109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -5632,8 +5118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5642,8 +5127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
@@ -5652,13 +5136,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -5667,8 +5149,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_python">
 <a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -5677,8 +5158,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable backups for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -5687,8 +5167,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -5697,8 +5176,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ipv6 for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -5707,8 +5185,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_networking_python">
 <a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
@@ -5717,8 +5194,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable private networking for droplet. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -5727,8 +5203,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -5737,8 +5212,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_key_fingerprint_python">
 <a href="#ssh_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>fingerprint</a>
@@ -5747,8 +5221,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH key fingerprint (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_key_path_python">
 <a href="#ssh_key_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>path</a>
@@ -5757,8 +5230,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH private key path (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -5767,8 +5239,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -5777,8 +5248,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5787,8 +5257,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_python">
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
@@ -5797,15 +5266,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apitoken_csharp">
 <a href="#apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -5814,8 +5281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud project API token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -5824,8 +5290,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -5834,8 +5299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of network IDs or names which should be attached to the server private network interface (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverlocation_csharp">
 <a href="#serverlocation_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Location</a>
@@ -5844,8 +5308,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud datacenter. Default `nbg1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servertype_csharp">
 <a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
@@ -5854,8 +5317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivatenetworks_csharp">
 <a href="#useprivatenetworks_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Networks</a>
@@ -5864,8 +5326,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private network. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">Userdata</a>
@@ -5874,8 +5335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -5884,13 +5344,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of volume IDs or names which should be attached to the server (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apitoken_go">
 <a href="#apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -5899,8 +5357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud project API token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -5909,8 +5366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -5919,8 +5375,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of network IDs or names which should be attached to the server private network interface (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverlocation_go">
 <a href="#serverlocation_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Location</a>
@@ -5929,8 +5384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud datacenter. Default `nbg1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servertype_go">
 <a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
@@ -5939,8 +5393,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivatenetworks_go">
 <a href="#useprivatenetworks_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Networks</a>
@@ -5949,8 +5402,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private network. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">Userdata</a>
@@ -5959,8 +5411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_go">
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -5969,13 +5420,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of volume IDs or names which should be attached to the server (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apitoken_nodejs">
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
@@ -5984,8 +5433,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud project API token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -5994,8 +5442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -6004,8 +5451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of network IDs or names which should be attached to the server private network interface (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverlocation_nodejs">
 <a href="#serverlocation_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Location</a>
@@ -6014,8 +5460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud datacenter. Default `nbg1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servertype_nodejs">
 <a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
@@ -6024,8 +5469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivatenetworks_nodejs">
 <a href="#useprivatenetworks_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Networks</a>
@@ -6034,8 +5478,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use private network. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
@@ -6044,8 +5487,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -6054,13 +5496,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of volume IDs or names which should be attached to the server (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_token_python">
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
@@ -6069,8 +5509,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud project API token (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -6079,8 +5518,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -6089,8 +5527,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of network IDs or names which should be attached to the server private network interface (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_location_python">
 <a href="#server_location_python" style="color: inherit; text-decoration: inherit;">server_<wbr>location</a>
@@ -6099,8 +5536,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud datacenter. Default `nbg1` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_type_python">
 <a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
@@ -6109,8 +5545,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_private_networks_python">
 <a href="#use_private_networks_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>networks</a>
@@ -6119,8 +5554,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private network. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_python">
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
@@ -6129,8 +5563,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -6139,15 +5572,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of volume IDs or names which should be attached to the server (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizedusers_csharp">
 <a href="#authorizedusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Users</a>
@@ -6156,8 +5587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode user accounts (seperated by commas) whose Linode SSH keys will be permitted root access to the created node. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createprivateip_csharp">
 <a href="#createprivateip_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Private<wbr>Ip</a>
@@ -6166,8 +5596,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create private IP for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerport_csharp">
 <a href="#dockerport_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Port</a>
@@ -6176,8 +5605,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -6186,8 +5614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -6196,8 +5623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -6206,8 +5632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode Instance Label. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -6216,8 +5641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootpass_csharp">
 <a href="#rootpass_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Pass</a>
@@ -6226,8 +5650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root Password (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -6236,8 +5659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -6246,8 +5668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscript_csharp">
 <a href="#stackscript_csharp" style="color: inherit; text-decoration: inherit;">Stackscript</a>
@@ -6256,8 +5677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode StackScript to use to create the instance. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscriptdata_csharp">
 <a href="#stackscriptdata_csharp" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Data</a>
@@ -6266,8 +5686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string specifying data for the selected StackScript. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swapsize_csharp">
 <a href="#swapsize_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>Size</a>
@@ -6276,8 +5695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode Instance Swap Size (MB). Default `512` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -6286,8 +5704,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -6296,8 +5713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uaprefix_csharp">
 <a href="#uaprefix_csharp" style="color: inherit; text-decoration: inherit;">Ua<wbr>Prefix</a>
@@ -6306,13 +5722,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix the User-Agent in Linode API calls with some 'product/version' (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizedusers_go">
 <a href="#authorizedusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Users</a>
@@ -6321,8 +5735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode user accounts (seperated by commas) whose Linode SSH keys will be permitted root access to the created node. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createprivateip_go">
 <a href="#createprivateip_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Private<wbr>Ip</a>
@@ -6331,8 +5744,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create private IP for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerport_go">
 <a href="#dockerport_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Port</a>
@@ -6341,8 +5753,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -6351,8 +5762,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -6361,8 +5771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -6371,8 +5780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode Instance Label. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -6381,8 +5789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootpass_go">
 <a href="#rootpass_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Pass</a>
@@ -6391,8 +5798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root Password (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -6401,8 +5807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -6411,8 +5816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscript_go">
 <a href="#stackscript_go" style="color: inherit; text-decoration: inherit;">Stackscript</a>
@@ -6421,8 +5825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode StackScript to use to create the instance. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscriptdata_go">
 <a href="#stackscriptdata_go" style="color: inherit; text-decoration: inherit;">Stackscript<wbr>Data</a>
@@ -6431,8 +5834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string specifying data for the selected StackScript. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swapsize_go">
 <a href="#swapsize_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>Size</a>
@@ -6441,8 +5843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode Instance Swap Size (MB). Default `512` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -6451,8 +5852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -6461,8 +5861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uaprefix_go">
 <a href="#uaprefix_go" style="color: inherit; text-decoration: inherit;">Ua<wbr>Prefix</a>
@@ -6471,13 +5870,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix the User-Agent in Linode API calls with some 'product/version' (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizedusers_nodejs">
 <a href="#authorizedusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Users</a>
@@ -6486,8 +5883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode user accounts (seperated by commas) whose Linode SSH keys will be permitted root access to the created node. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createprivateip_nodejs">
 <a href="#createprivateip_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Private<wbr>Ip</a>
@@ -6496,8 +5892,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create private IP for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerport_nodejs">
 <a href="#dockerport_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Port</a>
@@ -6506,8 +5901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -6516,8 +5910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -6526,8 +5919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -6536,8 +5928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode Instance Label. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -6546,8 +5937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootpass_nodejs">
 <a href="#rootpass_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Pass</a>
@@ -6556,8 +5946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root Password (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -6566,8 +5955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -6576,8 +5964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscript_nodejs">
 <a href="#stackscript_nodejs" style="color: inherit; text-decoration: inherit;">stackscript</a>
@@ -6586,8 +5973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode StackScript to use to create the instance. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscriptdata_nodejs">
 <a href="#stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
@@ -6596,8 +5982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string specifying data for the selected StackScript. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swapsize_nodejs">
 <a href="#swapsize_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Size</a>
@@ -6606,8 +5991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode Instance Swap Size (MB). Default `512` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -6616,8 +6000,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -6626,8 +6009,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uaprefix_nodejs">
 <a href="#uaprefix_nodejs" style="color: inherit; text-decoration: inherit;">ua<wbr>Prefix</a>
@@ -6636,13 +6018,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix the User-Agent in Linode API calls with some 'product/version' (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorized_users_python">
 <a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
@@ -6651,8 +6031,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linode user accounts (seperated by commas) whose Linode SSH keys will be permitted root access to the created node. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_private_ip_python">
 <a href="#create_private_ip_python" style="color: inherit; text-decoration: inherit;">create_<wbr>private_<wbr>ip</a>
@@ -6661,8 +6040,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create private IP for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_port_python">
 <a href="#docker_port_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>port</a>
@@ -6671,8 +6049,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -6681,8 +6058,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -6691,8 +6067,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -6701,8 +6076,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linode Instance Label. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -6711,8 +6085,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_pass_python">
 <a href="#root_pass_python" style="color: inherit; text-decoration: inherit;">root_<wbr>pass</a>
@@ -6721,8 +6094,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root Password (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -6731,8 +6103,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -6741,8 +6112,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscript_python">
 <a href="#stackscript_python" style="color: inherit; text-decoration: inherit;">stackscript</a>
@@ -6751,8 +6121,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode StackScript to use to create the instance. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stackscript_data_python">
 <a href="#stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
@@ -6761,8 +6130,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON string specifying data for the selected StackScript. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="swap_size_python">
 <a href="#swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
@@ -6771,8 +6139,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linode Instance Swap Size (MB). Default `512` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -6781,8 +6148,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -6791,8 +6157,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ua_prefix_python">
 <a href="#ua_prefix_python" style="color: inherit; text-decoration: inherit;">ua_<wbr>prefix</a>
@@ -6801,15 +6166,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prefix the User-Agent in Linode API calls with some 'product/version' (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -6818,8 +6181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint key (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -6828,8 +6190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint value (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_csharp">
 <a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
@@ -6838,8 +6199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeadded_csharp">
 <a href="#timeadded_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Added</a>
@@ -6848,13 +6208,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint time added (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -6863,8 +6221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint key (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -6873,8 +6230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint value (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_go">
 <a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
@@ -6883,8 +6239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeadded_go">
 <a href="#timeadded_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Added</a>
@@ -6893,13 +6248,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint time added (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -6908,8 +6261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint key (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -6918,8 +6270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint value (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_nodejs">
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
@@ -6928,8 +6279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeadded_nodejs">
 <a href="#timeadded_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Added</a>
@@ -6938,13 +6288,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Taint time added (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -6953,8 +6301,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Taint key (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -6963,8 +6310,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Taint value (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_python">
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
@@ -6973,8 +6319,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_added_python">
 <a href="#time_added_python" style="color: inherit; text-decoration: inherit;">time_<wbr>added</a>
@@ -6983,15 +6328,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Taint time added (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -7000,8 +6343,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -7010,8 +6352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the user for the XML-RPC API authentication (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xmlrpcurl_csharp">
 <a href="#xmlrpcurl_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Rpc<wbr>Url</a>
@@ -7020,8 +6361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the url for the Opennebula XML-RPC API (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="b2dsize_csharp">
 <a href="#b2dsize_csharp" style="color: inherit; text-decoration: inherit;">B2d<wbr>Size</a>
@@ -7030,8 +6370,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the Volatile disk in MB - only for b2d (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -7040,8 +6379,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CPU value for the VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devprefix_csharp">
 <a href="#devprefix_csharp" style="color: inherit; text-decoration: inherit;">Dev<wbr>Prefix</a>
@@ -7050,8 +6388,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dev prefix to use for the images. E.g.: 'vd', 'sd', 'hd' (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablevnc_csharp">
 <a href="#disablevnc_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Vnc</a>
@@ -7060,8 +6397,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}VNC is enabled by default. Disable it with this flag (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskresize_csharp">
 <a href="#diskresize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Resize</a>
@@ -7070,8 +6406,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the disk for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -7080,8 +6415,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -7090,8 +6424,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageowner_csharp">
 <a href="#imageowner_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner</a>
@@ -7100,8 +6433,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -7110,8 +6442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the memory for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -7120,8 +6451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula network ID to connect the machine to. Conflicts with `network_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkname_csharp">
 <a href="#networkname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
@@ -7130,8 +6460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula network to connect the machine to. Conflicts with `network_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkowner_csharp">
 <a href="#networkowner_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Owner</a>
@@ -7140,8 +6469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula user ID of the Network to connect the machine to (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -7150,8 +6478,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateid_csharp">
 <a href="#templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -7160,8 +6487,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula template ID to use. Conflicts with `template_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatename_csharp">
 <a href="#templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -7170,8 +6496,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Opennbula template to use. Conflicts with `template_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcpu_csharp">
 <a href="#vcpu_csharp" style="color: inherit; text-decoration: inherit;">Vcpu</a>
@@ -7180,13 +6505,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VCPUs for the VM (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -7195,8 +6518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -7205,8 +6527,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the user for the XML-RPC API authentication (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xmlrpcurl_go">
 <a href="#xmlrpcurl_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Rpc<wbr>Url</a>
@@ -7215,8 +6536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the url for the Opennebula XML-RPC API (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="b2dsize_go">
 <a href="#b2dsize_go" style="color: inherit; text-decoration: inherit;">B2d<wbr>Size</a>
@@ -7225,8 +6545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the Volatile disk in MB - only for b2d (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -7235,8 +6554,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CPU value for the VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devprefix_go">
 <a href="#devprefix_go" style="color: inherit; text-decoration: inherit;">Dev<wbr>Prefix</a>
@@ -7245,8 +6563,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dev prefix to use for the images. E.g.: 'vd', 'sd', 'hd' (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablevnc_go">
 <a href="#disablevnc_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Vnc</a>
@@ -7255,8 +6572,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}VNC is enabled by default. Disable it with this flag (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskresize_go">
 <a href="#diskresize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Resize</a>
@@ -7265,8 +6581,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the disk for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -7275,8 +6590,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -7285,8 +6599,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageowner_go">
 <a href="#imageowner_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner</a>
@@ -7295,8 +6608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -7305,8 +6617,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the memory for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -7315,8 +6626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula network ID to connect the machine to. Conflicts with `network_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkname_go">
 <a href="#networkname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
@@ -7325,8 +6635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula network to connect the machine to. Conflicts with `network_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkowner_go">
 <a href="#networkowner_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Owner</a>
@@ -7335,8 +6644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula user ID of the Network to connect the machine to (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -7345,8 +6653,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateid_go">
 <a href="#templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -7355,8 +6662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula template ID to use. Conflicts with `template_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatename_go">
 <a href="#templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -7365,8 +6671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Opennbula template to use. Conflicts with `template_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcpu_go">
 <a href="#vcpu_go" style="color: inherit; text-decoration: inherit;">Vcpu</a>
@@ -7375,13 +6680,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VCPUs for the VM (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -7390,8 +6693,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -7400,8 +6702,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the user for the XML-RPC API authentication (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xmlrpcurl_nodejs">
 <a href="#xmlrpcurl_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Rpc<wbr>Url</a>
@@ -7410,8 +6711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the url for the Opennebula XML-RPC API (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="b2dsize_nodejs">
 <a href="#b2dsize_nodejs" style="color: inherit; text-decoration: inherit;">b2d<wbr>Size</a>
@@ -7420,8 +6720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the Volatile disk in MB - only for b2d (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -7430,8 +6729,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CPU value for the VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devprefix_nodejs">
 <a href="#devprefix_nodejs" style="color: inherit; text-decoration: inherit;">dev<wbr>Prefix</a>
@@ -7440,8 +6738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dev prefix to use for the images. E.g.: 'vd', 'sd', 'hd' (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablevnc_nodejs">
 <a href="#disablevnc_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Vnc</a>
@@ -7450,8 +6747,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}VNC is enabled by default. Disable it with this flag (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskresize_nodejs">
 <a href="#diskresize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Resize</a>
@@ -7460,8 +6756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the disk for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -7470,8 +6765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -7480,8 +6774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageowner_nodejs">
 <a href="#imageowner_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner</a>
@@ -7490,8 +6783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -7500,8 +6792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the memory for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -7510,8 +6801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula network ID to connect the machine to. Conflicts with `network_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkname_nodejs">
 <a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
@@ -7520,8 +6810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula network to connect the machine to. Conflicts with `network_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkowner_nodejs">
 <a href="#networkowner_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Owner</a>
@@ -7530,8 +6819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula user ID of the Network to connect the machine to (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -7540,8 +6828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateid_nodejs">
 <a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
@@ -7550,8 +6837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opennebula template ID to use. Conflicts with `template_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatename_nodejs">
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
@@ -7560,8 +6846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Opennbula template to use. Conflicts with `template_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcpu_nodejs">
 <a href="#vcpu_nodejs" style="color: inherit; text-decoration: inherit;">vcpu</a>
@@ -7570,13 +6855,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VCPUs for the VM (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -7585,8 +6868,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -7595,8 +6877,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the user for the XML-RPC API authentication (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="xml_rpc_url_python">
 <a href="#xml_rpc_url_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>rpc_<wbr>url</a>
@@ -7605,8 +6886,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the url for the Opennebula XML-RPC API (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="b2d_size_python">
 <a href="#b2d_size_python" style="color: inherit; text-decoration: inherit;">b2d_<wbr>size</a>
@@ -7615,8 +6895,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the Volatile disk in MB - only for b2d (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -7625,8 +6904,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CPU value for the VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dev_prefix_python">
 <a href="#dev_prefix_python" style="color: inherit; text-decoration: inherit;">dev_<wbr>prefix</a>
@@ -7635,8 +6913,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dev prefix to use for the images. E.g.: 'vd', 'sd', 'hd' (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_vnc_python">
 <a href="#disable_vnc_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>vnc</a>
@@ -7645,8 +6922,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}VNC is enabled by default. Disable it with this flag (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_resize_python">
 <a href="#disk_resize_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>resize</a>
@@ -7655,8 +6931,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the disk for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -7665,8 +6940,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -7675,8 +6949,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_owner_python">
 <a href="#image_owner_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner</a>
@@ -7685,8 +6958,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -7695,8 +6967,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the memory for the VM in MB (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -7705,8 +6976,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opennebula network ID to connect the machine to. Conflicts with `network_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_name_python">
 <a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
@@ -7715,8 +6985,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opennebula network to connect the machine to. Conflicts with `network_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_owner_python">
 <a href="#network_owner_python" style="color: inherit; text-decoration: inherit;">network_<wbr>owner</a>
@@ -7725,8 +6994,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opennebula user ID of the Network to connect the machine to (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -7735,8 +7003,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_id_python">
 <a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
@@ -7745,8 +7012,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opennebula template ID to use. Conflicts with `template_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_name_python">
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
@@ -7755,8 +7021,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Opennbula template to use. Conflicts with `template_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcpu_python">
 <a href="#vcpu_python" style="color: inherit; text-decoration: inherit;">vcpu</a>
@@ -7765,15 +7030,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VCPUs for the VM (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authurl_csharp">
 <a href="#authurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -7782,8 +7045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack authentication URL (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -7792,8 +7054,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack availability zone (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -7802,8 +7063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activetimeout_csharp">
 <a href="#activetimeout_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Timeout</a>
@@ -7812,8 +7072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_csharp">
 <a href="#applicationcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Id</a>
@@ -7822,8 +7081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_csharp">
 <a href="#applicationcredentialname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Name</a>
@@ -7832,8 +7090,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_csharp">
 <a href="#applicationcredentialsecret_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Secret</a>
@@ -7842,8 +7099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootfromvolume_csharp">
 <a href="#bootfromvolume_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>From<wbr>Volume</a>
@@ -7852,8 +7108,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Cacert</a>
@@ -7862,8 +7117,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate bundle to verify against (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configdrive_csharp">
 <a href="#configdrive_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Drive</a>
@@ -7872,8 +7126,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the OpenStack config drive for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -7882,8 +7135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack domain ID. Identity v3 only. Conflicts with `domain_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -7892,8 +7144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack domain name. Identity v3 only. Conflicts with `domain_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtype_csharp">
 <a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -7902,8 +7153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack endpoint type. adminURL, internalURL or publicURL (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_csharp">
 <a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -7912,8 +7162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor id to use for the instance. Conflicts with `flavor_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorname_csharp">
 <a href="#flavorname_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Name</a>
@@ -7922,8 +7171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor name to use for the instance. Conflicts with `flavor_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingippool_csharp">
 <a href="#floatingippool_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Pool</a>
@@ -7932,8 +7180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack floating IP pool to get an IP from to assign to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -7942,8 +7189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -7952,8 +7198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
 <a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
@@ -7962,8 +7207,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable TLS credential checking. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -7972,8 +7216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack version of IP address assigned for the machine Default `4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_csharp">
 <a href="#keypairname_csharp" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Name</a>
@@ -7982,8 +7225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netid_csharp">
 <a href="#netid_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Id</a>
@@ -7992,8 +7234,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack network id the machine will be connected on. Conflicts with `net_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netname_csharp">
 <a href="#netname_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Name</a>
@@ -8002,8 +7243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack network name the machine will be connected on. Conflicts with `net_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="novanetwork_csharp">
 <a href="#novanetwork_csharp" style="color: inherit; text-decoration: inherit;">Nova<wbr>Network</a>
@@ -8012,8 +7252,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the nova networking services instead of neutron (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -8022,8 +7261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeyfile_csharp">
 <a href="#privatekeyfile_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>File</a>
@@ -8032,8 +7270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private key content to use for SSH (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secgroups_csharp">
 <a href="#secgroups_csharp" style="color: inherit; text-decoration: inherit;">Sec<wbr>Groups</a>
@@ -8042,8 +7279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack comma separated security groups for the machine (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -8052,8 +7288,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -8062,8 +7297,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -8072,8 +7306,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantname_csharp">
 <a href="#tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -8082,8 +7315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatafile_csharp">
 <a href="#userdatafile_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>File</a>
@@ -8092,8 +7324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -8102,8 +7333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumedevicepath_csharp">
 <a href="#volumedevicepath_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Device<wbr>Path</a>
@@ -8112,8 +7342,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -8122,8 +7351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -8132,8 +7360,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -8142,8 +7369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -8152,13 +7378,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authurl_go">
 <a href="#authurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -8167,8 +7391,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack authentication URL (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -8177,8 +7400,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack availability zone (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -8187,8 +7409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activetimeout_go">
 <a href="#activetimeout_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Timeout</a>
@@ -8197,8 +7418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_go">
 <a href="#applicationcredentialid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Id</a>
@@ -8207,8 +7427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_go">
 <a href="#applicationcredentialname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Name</a>
@@ -8217,8 +7436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_go">
 <a href="#applicationcredentialsecret_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Credential<wbr>Secret</a>
@@ -8227,8 +7445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootfromvolume_go">
 <a href="#bootfromvolume_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>From<wbr>Volume</a>
@@ -8237,8 +7454,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_go">
 <a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Cacert</a>
@@ -8247,8 +7463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate bundle to verify against (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configdrive_go">
 <a href="#configdrive_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Drive</a>
@@ -8257,8 +7472,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the OpenStack config drive for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -8267,8 +7481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack domain ID. Identity v3 only. Conflicts with `domain_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -8277,8 +7490,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack domain name. Identity v3 only. Conflicts with `domain_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtype_go">
 <a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
@@ -8287,8 +7499,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack endpoint type. adminURL, internalURL or publicURL (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_go">
 <a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -8297,8 +7508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor id to use for the instance. Conflicts with `flavor_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorname_go">
 <a href="#flavorname_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Name</a>
@@ -8307,8 +7517,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor name to use for the instance. Conflicts with `flavor_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingippool_go">
 <a href="#floatingippool_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Pool</a>
@@ -8317,8 +7526,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack floating IP pool to get an IP from to assign to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -8327,8 +7535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -8337,8 +7544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
 <a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
@@ -8347,8 +7553,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable TLS credential checking. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -8357,8 +7562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack version of IP address assigned for the machine Default `4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_go">
 <a href="#keypairname_go" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Name</a>
@@ -8367,8 +7571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netid_go">
 <a href="#netid_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Id</a>
@@ -8377,8 +7580,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack network id the machine will be connected on. Conflicts with `net_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netname_go">
 <a href="#netname_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Name</a>
@@ -8387,8 +7589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack network name the machine will be connected on. Conflicts with `net_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="novanetwork_go">
 <a href="#novanetwork_go" style="color: inherit; text-decoration: inherit;">Nova<wbr>Network</a>
@@ -8397,8 +7598,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the nova networking services instead of neutron (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -8407,8 +7607,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeyfile_go">
 <a href="#privatekeyfile_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>File</a>
@@ -8417,8 +7616,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private key content to use for SSH (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secgroups_go">
 <a href="#secgroups_go" style="color: inherit; text-decoration: inherit;">Sec<wbr>Groups</a>
@@ -8427,8 +7625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack comma separated security groups for the machine (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -8437,8 +7634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -8447,8 +7643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -8457,8 +7652,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantname_go">
 <a href="#tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -8467,8 +7661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatafile_go">
 <a href="#userdatafile_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>File</a>
@@ -8477,8 +7670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -8487,8 +7679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumedevicepath_go">
 <a href="#volumedevicepath_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Device<wbr>Path</a>
@@ -8497,8 +7688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -8507,8 +7697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -8517,8 +7706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -8527,8 +7715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -8537,13 +7724,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authurl_nodejs">
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
@@ -8552,8 +7737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack authentication URL (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -8562,8 +7746,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack availability zone (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -8572,8 +7755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activetimeout_nodejs">
 <a href="#activetimeout_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Timeout</a>
@@ -8582,8 +7764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_nodejs">
 <a href="#applicationcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Id</a>
@@ -8592,8 +7773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialname_nodejs">
 <a href="#applicationcredentialname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Name</a>
@@ -8602,8 +7782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialsecret_nodejs">
 <a href="#applicationcredentialsecret_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Secret</a>
@@ -8612,8 +7791,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootfromvolume_nodejs">
 <a href="#bootfromvolume_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>From<wbr>Volume</a>
@@ -8622,8 +7800,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_nodejs">
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">cacert</a>
@@ -8632,8 +7809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate bundle to verify against (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configdrive_nodejs">
 <a href="#configdrive_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Drive</a>
@@ -8642,8 +7818,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the OpenStack config drive for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -8652,8 +7827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack domain ID. Identity v3 only. Conflicts with `domain_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -8662,8 +7836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack domain name. Identity v3 only. Conflicts with `domain_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointtype_nodejs">
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
@@ -8672,8 +7845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack endpoint type. adminURL, internalURL or publicURL (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_nodejs">
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -8682,8 +7854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor id to use for the instance. Conflicts with `flavor_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorname_nodejs">
 <a href="#flavorname_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Name</a>
@@ -8692,8 +7863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor name to use for the instance. Conflicts with `flavor_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingippool_nodejs">
 <a href="#floatingippool_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Pool</a>
@@ -8702,8 +7872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack floating IP pool to get an IP from to assign to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -8712,8 +7881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -8722,8 +7890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
 <a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
@@ -8732,8 +7899,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable TLS credential checking. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -8742,8 +7908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack version of IP address assigned for the machine Default `4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairname_nodejs">
 <a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">keypair<wbr>Name</a>
@@ -8752,8 +7917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netid_nodejs">
 <a href="#netid_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Id</a>
@@ -8762,8 +7926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack network id the machine will be connected on. Conflicts with `net_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netname_nodejs">
 <a href="#netname_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Name</a>
@@ -8772,8 +7935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack network name the machine will be connected on. Conflicts with `net_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="novanetwork_nodejs">
 <a href="#novanetwork_nodejs" style="color: inherit; text-decoration: inherit;">nova<wbr>Network</a>
@@ -8782,8 +7944,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use the nova networking services instead of neutron (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -8792,8 +7953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeyfile_nodejs">
 <a href="#privatekeyfile_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>File</a>
@@ -8802,8 +7962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private key content to use for SSH (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secgroups_nodejs">
 <a href="#secgroups_nodejs" style="color: inherit; text-decoration: inherit;">sec<wbr>Groups</a>
@@ -8812,8 +7971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack comma separated security groups for the machine (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -8822,8 +7980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -8832,8 +7989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -8842,8 +7998,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantname_nodejs">
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -8852,8 +8007,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdatafile_nodejs">
 <a href="#userdatafile_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>File</a>
@@ -8862,8 +8016,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -8872,8 +8025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumedevicepath_nodejs">
 <a href="#volumedevicepath_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Device<wbr>Path</a>
@@ -8882,8 +8034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -8892,8 +8043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
@@ -8902,8 +8052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -8912,8 +8061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -8922,13 +8070,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auth_url_python">
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
@@ -8937,8 +8083,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack authentication URL (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -8947,8 +8092,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack availability zone (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -8957,8 +8101,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_timeout_python">
 <a href="#active_timeout_python" style="color: inherit; text-decoration: inherit;">active_<wbr>timeout</a>
@@ -8967,8 +8110,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_credential_id_python">
 <a href="#application_credential_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>id</a>
@@ -8977,8 +8119,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_credential_name_python">
 <a href="#application_credential_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>name</a>
@@ -8987,8 +8128,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_credential_secret_python">
 <a href="#application_credential_secret_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>secret</a>
@@ -8997,8 +8137,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boot_from_volume_python">
 <a href="#boot_from_volume_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>from_<wbr>volume</a>
@@ -9007,8 +8146,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_python">
 <a href="#cacert_python" style="color: inherit; text-decoration: inherit;">cacert</a>
@@ -9017,8 +8155,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CA certificate bundle to verify against (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_drive_python">
 <a href="#config_drive_python" style="color: inherit; text-decoration: inherit;">config_<wbr>drive</a>
@@ -9027,8 +8164,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the OpenStack config drive for the instance. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -9037,8 +8173,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack domain ID. Identity v3 only. Conflicts with `domain_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -9047,8 +8182,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack domain name. Identity v3 only. Conflicts with `domain_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_type_python">
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
@@ -9057,8 +8191,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack endpoint type. adminURL, internalURL or publicURL (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavor_id_python">
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -9067,8 +8200,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor id to use for the instance. Conflicts with `flavor_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavor_name_python">
 <a href="#flavor_name_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>name</a>
@@ -9077,8 +8209,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor name to use for the instance. Conflicts with `flavor_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floating_ip_pool_python">
 <a href="#floating_ip_pool_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>pool</a>
@@ -9087,8 +8218,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack floating IP pool to get an IP from to assign to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -9097,8 +8227,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -9107,8 +8236,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
 <a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
@@ -9117,8 +8245,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable TLS credential checking. Default `false` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -9127,8 +8254,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack version of IP address assigned for the machine Default `4` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypair_name_python">
 <a href="#keypair_name_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>name</a>
@@ -9137,8 +8263,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_id_python">
 <a href="#net_id_python" style="color: inherit; text-decoration: inherit;">net_<wbr>id</a>
@@ -9147,8 +8272,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack network id the machine will be connected on. Conflicts with `net_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_name_python">
 <a href="#net_name_python" style="color: inherit; text-decoration: inherit;">net_<wbr>name</a>
@@ -9157,8 +8281,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack network name the machine will be connected on. Conflicts with `net_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nova_network_python">
 <a href="#nova_network_python" style="color: inherit; text-decoration: inherit;">nova_<wbr>network</a>
@@ -9167,8 +8290,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the nova networking services instead of neutron (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -9177,8 +8299,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_file_python">
 <a href="#private_key_file_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>file</a>
@@ -9187,8 +8308,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private key content to use for SSH (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sec_groups_python">
 <a href="#sec_groups_python" style="color: inherit; text-decoration: inherit;">sec_<wbr>groups</a>
@@ -9197,8 +8317,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack comma separated security groups for the machine (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -9207,8 +8326,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -9217,8 +8335,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -9227,8 +8344,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_name_python">
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -9237,8 +8353,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_file_python">
 <a href="#user_data_file_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>file</a>
@@ -9247,8 +8362,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -9257,8 +8371,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_device_path_python">
 <a href="#volume_device_path_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>device_<wbr>path</a>
@@ -9267,8 +8380,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -9277,8 +8389,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
@@ -9287,8 +8398,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -9297,8 +8407,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -9307,15 +8416,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boot2dockerurl_csharp">
 <a href="#boot2dockerurl_csharp" style="color: inherit; text-decoration: inherit;">Boot2docker<wbr>Url</a>
@@ -9324,8 +8431,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere URL for boot2docker iso image. Default `https://releases.rancher.com/os/latest/rancheros-vmware.iso` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cfgparams_csharp">
 <a href="#cfgparams_csharp" style="color: inherit; text-decoration: inherit;">Cfgparams</a>
@@ -9334,8 +8440,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clonefrom_csharp">
 <a href="#clonefrom_csharp" style="color: inherit; text-decoration: inherit;">Clone<wbr>From</a>
@@ -9344,8 +8449,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_csharp">
 <a href="#cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
@@ -9354,8 +8458,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudinit_csharp">
 <a href="#cloudinit_csharp" style="color: inherit; text-decoration: inherit;">Cloudinit</a>
@@ -9364,8 +8467,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere cloud-init file or url to set in the guestinfo (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlibrary_csharp">
 <a href="#contentlibrary_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Library</a>
@@ -9374,8 +8476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucount_csharp">
 <a href="#cpucount_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Count</a>
@@ -9384,8 +8485,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere CPU number for docker VM. Default `2` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtype_csharp">
 <a href="#creationtype_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Type</a>
@@ -9394,8 +8494,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default `legacy`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -9404,8 +8503,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -9414,8 +8512,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datacenter for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_csharp">
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -9424,8 +8521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datastore for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorecluster_csharp">
 <a href="#datastorecluster_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster</a>
@@ -9434,8 +8530,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -9444,8 +8539,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -9454,8 +8548,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere folder for the docker VM. This folder must already exist in the datacenter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystem_csharp">
 <a href="#hostsystem_csharp" style="color: inherit; text-decoration: inherit;">Hostsystem</a>
@@ -9464,8 +8557,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysize_csharp">
 <a href="#memorysize_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -9474,8 +8566,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of memory for docker VM (in MB). Default `2048` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -9484,8 +8575,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -9494,8 +8584,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_csharp">
 <a href="#pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -9504,8 +8593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere resource pool for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshpassword_csharp">
 <a href="#sshpassword_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Password</a>
@@ -9514,8 +8602,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh password. Default `tcuser`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -9524,8 +8611,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_csharp">
 <a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -9534,8 +8620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshusergroup_csharp">
 <a href="#sshusergroup_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User<wbr>Group</a>
@@ -9544,8 +8629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image the uploaded keys will need chown'ed. Default `staff`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -9554,8 +8638,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -9564,8 +8647,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappipallocationpolicy_csharp">
 <a href="#vappipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Ip<wbr>Allocation<wbr>Policy</a>
@@ -9574,8 +8656,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP allocation policy. Supported values are: `dhcp`, `fixed`, `transient` and `fixedAllocated` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappipprotocol_csharp">
 <a href="#vappipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Ip<wbr>Protocol</a>
@@ -9584,8 +8665,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP protocol for this deployment. Supported values are: `IPv4` and `IPv6` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappproperties_csharp">
 <a href="#vappproperties_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Properties</a>
@@ -9594,8 +8674,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapptransport_csharp">
 <a href="#vapptransport_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transport</a>
@@ -9604,8 +8683,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere OVF environment transports to use for properties. Supported values are: `iso` and `com.vmware.guestInfo` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenter_csharp">
 <a href="#vcenter_csharp" style="color: inherit; text-decoration: inherit;">Vcenter</a>
@@ -9614,8 +8692,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenterport_csharp">
 <a href="#vcenterport_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Port</a>
@@ -9624,13 +8701,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boot2dockerurl_go">
 <a href="#boot2dockerurl_go" style="color: inherit; text-decoration: inherit;">Boot2docker<wbr>Url</a>
@@ -9639,8 +8714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere URL for boot2docker iso image. Default `https://releases.rancher.com/os/latest/rancheros-vmware.iso` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cfgparams_go">
 <a href="#cfgparams_go" style="color: inherit; text-decoration: inherit;">Cfgparams</a>
@@ -9649,8 +8723,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clonefrom_go">
 <a href="#clonefrom_go" style="color: inherit; text-decoration: inherit;">Clone<wbr>From</a>
@@ -9659,8 +8732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_go">
 <a href="#cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
@@ -9669,8 +8741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudinit_go">
 <a href="#cloudinit_go" style="color: inherit; text-decoration: inherit;">Cloudinit</a>
@@ -9679,8 +8750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere cloud-init file or url to set in the guestinfo (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlibrary_go">
 <a href="#contentlibrary_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Library</a>
@@ -9689,8 +8759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucount_go">
 <a href="#cpucount_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Count</a>
@@ -9699,8 +8768,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere CPU number for docker VM. Default `2` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtype_go">
 <a href="#creationtype_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Type</a>
@@ -9709,8 +8777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default `legacy`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -9719,8 +8786,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -9729,8 +8795,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datacenter for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_go">
 <a href="#datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -9739,8 +8804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datastore for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorecluster_go">
 <a href="#datastorecluster_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster</a>
@@ -9749,8 +8813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_go">
 <a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -9759,8 +8822,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -9769,8 +8831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere folder for the docker VM. This folder must already exist in the datacenter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystem_go">
 <a href="#hostsystem_go" style="color: inherit; text-decoration: inherit;">Hostsystem</a>
@@ -9779,8 +8840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysize_go">
 <a href="#memorysize_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size</a>
@@ -9789,8 +8849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of memory for docker VM (in MB). Default `2048` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -9799,8 +8858,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -9809,8 +8867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_go">
 <a href="#pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -9819,8 +8876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere resource pool for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshpassword_go">
 <a href="#sshpassword_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Password</a>
@@ -9829,8 +8885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh password. Default `tcuser`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -9839,8 +8894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_go">
 <a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
@@ -9849,8 +8903,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshusergroup_go">
 <a href="#sshusergroup_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User<wbr>Group</a>
@@ -9859,8 +8912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image the uploaded keys will need chown'ed. Default `staff`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -9869,8 +8921,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -9879,8 +8930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappipallocationpolicy_go">
 <a href="#vappipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Ip<wbr>Allocation<wbr>Policy</a>
@@ -9889,8 +8939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP allocation policy. Supported values are: `dhcp`, `fixed`, `transient` and `fixedAllocated` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappipprotocol_go">
 <a href="#vappipprotocol_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Ip<wbr>Protocol</a>
@@ -9899,8 +8948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP protocol for this deployment. Supported values are: `IPv4` and `IPv6` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappproperties_go">
 <a href="#vappproperties_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Properties</a>
@@ -9909,8 +8957,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapptransport_go">
 <a href="#vapptransport_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transport</a>
@@ -9919,8 +8966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere OVF environment transports to use for properties. Supported values are: `iso` and `com.vmware.guestInfo` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenter_go">
 <a href="#vcenter_go" style="color: inherit; text-decoration: inherit;">Vcenter</a>
@@ -9929,8 +8975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenterport_go">
 <a href="#vcenterport_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Port</a>
@@ -9939,13 +8984,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boot2dockerurl_nodejs">
 <a href="#boot2dockerurl_nodejs" style="color: inherit; text-decoration: inherit;">boot2docker<wbr>Url</a>
@@ -9954,8 +8997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere URL for boot2docker iso image. Default `https://releases.rancher.com/os/latest/rancheros-vmware.iso` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cfgparams_nodejs">
 <a href="#cfgparams_nodejs" style="color: inherit; text-decoration: inherit;">cfgparams</a>
@@ -9964,8 +9006,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clonefrom_nodejs">
 <a href="#clonefrom_nodejs" style="color: inherit; text-decoration: inherit;">clone<wbr>From</a>
@@ -9974,8 +9015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_nodejs">
 <a href="#cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
@@ -9984,8 +9024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudinit_nodejs">
 <a href="#cloudinit_nodejs" style="color: inherit; text-decoration: inherit;">cloudinit</a>
@@ -9994,8 +9033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere cloud-init file or url to set in the guestinfo (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlibrary_nodejs">
 <a href="#contentlibrary_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Library</a>
@@ -10004,8 +9042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucount_nodejs">
 <a href="#cpucount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Count</a>
@@ -10014,8 +9051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere CPU number for docker VM. Default `2` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtype_nodejs">
 <a href="#creationtype_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Type</a>
@@ -10024,8 +9060,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default `legacy`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -10034,8 +9069,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -10044,8 +9078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datacenter for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_nodejs">
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -10054,8 +9087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datastore for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorecluster_nodejs">
 <a href="#datastorecluster_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster</a>
@@ -10064,8 +9096,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
@@ -10074,8 +9105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -10084,8 +9114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere folder for the docker VM. This folder must already exist in the datacenter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystem_nodejs">
 <a href="#hostsystem_nodejs" style="color: inherit; text-decoration: inherit;">hostsystem</a>
@@ -10094,8 +9123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysize_nodejs">
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
@@ -10104,8 +9132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere size of memory for docker VM (in MB). Default `2048` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -10114,8 +9141,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -10124,8 +9150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_nodejs">
 <a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -10134,8 +9159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere resource pool for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshpassword_nodejs">
 <a href="#sshpassword_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Password</a>
@@ -10144,8 +9168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh password. Default `tcuser`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -10154,8 +9177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshuser_nodejs">
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
@@ -10164,8 +9186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshusergroup_nodejs">
 <a href="#sshusergroup_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User<wbr>Group</a>
@@ -10174,8 +9195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image the uploaded keys will need chown'ed. Default `staff`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -10184,8 +9204,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -10194,8 +9213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappipallocationpolicy_nodejs">
 <a href="#vappipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Ip<wbr>Allocation<wbr>Policy</a>
@@ -10204,8 +9222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP allocation policy. Supported values are: `dhcp`, `fixed`, `transient` and `fixedAllocated` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappipprotocol_nodejs">
 <a href="#vappipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Ip<wbr>Protocol</a>
@@ -10214,8 +9231,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP protocol for this deployment. Supported values are: `IPv4` and `IPv6` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vappproperties_nodejs">
 <a href="#vappproperties_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Properties</a>
@@ -10224,8 +9240,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapptransport_nodejs">
 <a href="#vapptransport_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transport</a>
@@ -10234,8 +9249,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere OVF environment transports to use for properties. Supported values are: `iso` and `com.vmware.guestInfo` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenter_nodejs">
 <a href="#vcenter_nodejs" style="color: inherit; text-decoration: inherit;">vcenter</a>
@@ -10244,8 +9258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenterport_nodejs">
 <a href="#vcenterport_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Port</a>
@@ -10254,13 +9267,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boot2docker_url_python">
 <a href="#boot2docker_url_python" style="color: inherit; text-decoration: inherit;">boot2docker_<wbr>url</a>
@@ -10269,8 +9280,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere URL for boot2docker iso image. Default `https://releases.rancher.com/os/latest/rancheros-vmware.iso` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cfgparams_python">
 <a href="#cfgparams_python" style="color: inherit; text-decoration: inherit;">cfgparams</a>
@@ -10279,8 +9289,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clone_from_python">
 <a href="#clone_from_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>from</a>
@@ -10289,8 +9298,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_config_python">
 <a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
@@ -10299,8 +9307,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudinit_python">
 <a href="#cloudinit_python" style="color: inherit; text-decoration: inherit;">cloudinit</a>
@@ -10309,8 +9316,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere cloud-init file or url to set in the guestinfo (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_library_python">
 <a href="#content_library_python" style="color: inherit; text-decoration: inherit;">content_<wbr>library</a>
@@ -10319,8 +9325,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_count_python">
 <a href="#cpu_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>count</a>
@@ -10329,8 +9334,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere CPU number for docker VM. Default `2` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_type_python">
 <a href="#creation_type_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>type</a>
@@ -10339,8 +9343,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default `legacy`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -10349,8 +9352,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -10359,8 +9361,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere datacenter for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_python">
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -10369,8 +9370,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere datastore for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_cluster_python">
 <a href="#datastore_cluster_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster</a>
@@ -10379,8 +9379,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_python">
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
@@ -10389,8 +9388,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -10399,8 +9397,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere folder for the docker VM. This folder must already exist in the datacenter (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystem_python">
 <a href="#hostsystem_python" style="color: inherit; text-decoration: inherit;">hostsystem</a>
@@ -10409,8 +9406,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_size_python">
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
@@ -10419,8 +9415,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere size of memory for docker VM (in MB). Default `2048` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -10429,8 +9424,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -10439,8 +9433,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_python">
 <a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -10449,8 +9442,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere resource pool for docker VM (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_password_python">
 <a href="#ssh_password_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>password</a>
@@ -10459,8 +9451,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh password. Default `tcuser`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -10469,8 +9460,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_python">
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
@@ -10479,8 +9469,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_user_group_python">
 <a href="#ssh_user_group_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user_<wbr>group</a>
@@ -10489,8 +9478,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image the uploaded keys will need chown'ed. Default `staff`. From Rancher v2.3.3 (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -10499,8 +9487,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -10509,8 +9496,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapp_ip_allocation_policy_python">
 <a href="#vapp_ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>ip_<wbr>allocation_<wbr>policy</a>
@@ -10519,8 +9505,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP allocation policy. Supported values are: `dhcp`, `fixed`, `transient` and `fixedAllocated` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapp_ip_protocol_python">
 <a href="#vapp_ip_protocol_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>ip_<wbr>protocol</a>
@@ -10529,8 +9514,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP protocol for this deployment. Supported values are: `IPv4` and `IPv6` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapp_properties_python">
 <a href="#vapp_properties_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>properties</a>
@@ -10539,8 +9523,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vapp_transport_python">
 <a href="#vapp_transport_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transport</a>
@@ -10549,8 +9532,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere OVF environment transports to use for properties. Supported values are: `iso` and `com.vmware.guestInfo` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenter_python">
 <a href="#vcenter_python" style="color: inherit; text-decoration: inherit;">vcenter</a>
@@ -10559,8 +9541,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenter_port_python">
 <a href="#vcenter_port_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>port</a>
@@ -10569,8 +9550,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

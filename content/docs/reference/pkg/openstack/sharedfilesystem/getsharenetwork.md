@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -156,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -166,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP version of the share network. Can either be 4 or 6.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -176,8 +173,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktype_csharp">
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -187,8 +183,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The share network type. Can either be VLAN, VXLAN,
 GRE, or flat.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutronnetid_csharp">
 <a href="#neutronnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
@@ -197,8 +192,7 @@ GRE, or flat.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The neutron network UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutronsubnetid_csharp">
 <a href="#neutronsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
@@ -207,8 +201,7 @@ GRE, or flat.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The neutron subnet UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -219,8 +212,7 @@ GRE, or flat.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to read a share network. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityserviceid_csharp">
 <a href="#securityserviceid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
@@ -230,8 +222,7 @@ A Shared File System client is needed to read a share network. If omitted, the
     </dt>
     <dd>{{% md %}}The security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentationid_csharp">
 <a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -240,13 +231,11 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share network segmentation ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -255,8 +244,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -265,8 +253,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP version of the share network. Can either be 4 or 6.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -275,8 +262,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktype_go">
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -286,8 +272,7 @@ the share network.
     </dt>
     <dd>{{% md %}}The share network type. Can either be VLAN, VXLAN,
 GRE, or flat.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutronnetid_go">
 <a href="#neutronnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
@@ -296,8 +281,7 @@ GRE, or flat.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The neutron network UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutronsubnetid_go">
 <a href="#neutronsubnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
@@ -306,8 +290,7 @@ GRE, or flat.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The neutron subnet UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -318,8 +301,7 @@ GRE, or flat.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to read a share network. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityserviceid_go">
 <a href="#securityserviceid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
@@ -329,8 +311,7 @@ A Shared File System client is needed to read a share network. If omitted, the
     </dt>
     <dd>{{% md %}}The security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentationid_go">
 <a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -339,13 +320,11 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share network segmentation ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -354,8 +333,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -364,8 +342,7 @@ the share network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP version of the share network. Can either be 4 or 6.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -374,8 +351,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktype_nodejs">
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
@@ -385,8 +361,7 @@ the share network.
     </dt>
     <dd>{{% md %}}The share network type. Can either be VLAN, VXLAN,
 GRE, or flat.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutronnetid_nodejs">
 <a href="#neutronnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Net<wbr>Id</a>
@@ -395,8 +370,7 @@ GRE, or flat.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The neutron network UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutronsubnetid_nodejs">
 <a href="#neutronsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Subnet<wbr>Id</a>
@@ -405,8 +379,7 @@ GRE, or flat.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The neutron subnet UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -417,8 +390,7 @@ GRE, or flat.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to read a share network. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityserviceid_nodejs">
 <a href="#securityserviceid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Id</a>
@@ -428,8 +400,7 @@ A Shared File System client is needed to read a share network. If omitted, the
     </dt>
     <dd>{{% md %}}The security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentationid_nodejs">
 <a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
@@ -438,13 +409,11 @@ the share network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share network segmentation ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -453,8 +422,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable description of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -463,8 +431,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP version of the share network. Can either be 4 or 6.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -473,8 +440,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_type_python">
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
@@ -484,8 +450,7 @@ the share network.
     </dt>
     <dd>{{% md %}}The share network type. Can either be VLAN, VXLAN,
 GRE, or flat.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutron_net_id_python">
 <a href="#neutron_net_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>net_<wbr>id</a>
@@ -494,8 +459,7 @@ GRE, or flat.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The neutron network UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="neutron_subnet_id_python">
 <a href="#neutron_subnet_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>subnet_<wbr>id</a>
@@ -504,8 +468,7 @@ GRE, or flat.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The neutron subnet UUID of the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -516,8 +479,7 @@ GRE, or flat.
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to read a share network. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_service_id_python">
 <a href="#security_service_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>id</a>
@@ -527,8 +489,7 @@ A Shared File System client is needed to read a share network. If omitted, the
     </dt>
     <dd>{{% md %}}The security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentation_id_python">
 <a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
@@ -537,8 +498,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share network segmentation ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -551,8 +511,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -561,8 +520,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -571,8 +529,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -581,8 +538,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -591,8 +547,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -601,8 +556,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networktype_csharp">
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -611,8 +565,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutronnetid_csharp">
 <a href="#neutronnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
@@ -621,8 +574,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutronsubnetid_csharp">
 <a href="#neutronsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
@@ -631,8 +583,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -641,8 +592,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -651,8 +601,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securityserviceids_csharp">
 <a href="#securityserviceids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Ids</a>
@@ -662,8 +611,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segmentationid_csharp">
 <a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -672,8 +620,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securityserviceid_csharp">
 <a href="#securityserviceid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
@@ -682,13 +629,11 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -697,8 +642,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -707,8 +651,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -717,8 +660,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -727,8 +669,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -737,8 +678,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networktype_go">
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -747,8 +687,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutronnetid_go">
 <a href="#neutronnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Net<wbr>Id</a>
@@ -757,8 +696,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutronsubnetid_go">
 <a href="#neutronsubnetid_go" style="color: inherit; text-decoration: inherit;">Neutron<wbr>Subnet<wbr>Id</a>
@@ -767,8 +705,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -777,8 +714,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -787,8 +723,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securityserviceids_go">
 <a href="#securityserviceids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Ids</a>
@@ -798,8 +733,7 @@ the share network.
     </dt>
     <dd>{{% md %}}The list of security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segmentationid_go">
 <a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -808,8 +742,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securityserviceid_go">
 <a href="#securityserviceid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Service<wbr>Id</a>
@@ -818,13 +751,11 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -833,8 +764,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -843,8 +773,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -853,8 +782,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -863,8 +791,7 @@ the share network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -873,8 +800,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networktype_nodejs">
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
@@ -883,8 +809,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutronnetid_nodejs">
 <a href="#neutronnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Net<wbr>Id</a>
@@ -893,8 +818,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutronsubnetid_nodejs">
 <a href="#neutronsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">neutron<wbr>Subnet<wbr>Id</a>
@@ -903,8 +827,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -913,8 +836,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -923,8 +845,7 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securityserviceids_nodejs">
 <a href="#securityserviceids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Ids</a>
@@ -934,8 +855,7 @@ the share network.
     </dt>
     <dd>{{% md %}}The list of security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segmentationid_nodejs">
 <a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
@@ -944,8 +864,7 @@ the share network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securityserviceid_nodejs">
 <a href="#securityserviceid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Service<wbr>Id</a>
@@ -954,13 +873,11 @@ the share network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -969,8 +886,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -979,8 +895,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -989,8 +904,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -999,8 +913,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1009,8 +922,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_type_python">
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
@@ -1019,8 +931,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutron_net_id_python">
 <a href="#neutron_net_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>net_<wbr>id</a>
@@ -1029,8 +940,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="neutron_subnet_id_python">
 <a href="#neutron_subnet_id_python" style="color: inherit; text-decoration: inherit;">neutron_<wbr>subnet_<wbr>id</a>
@@ -1039,8 +949,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1049,8 +958,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the Share Network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1059,8 +967,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_service_ids_python">
 <a href="#security_service_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>ids</a>
@@ -1070,8 +977,7 @@ the share network.
     </dt>
     <dd>{{% md %}}The list of security service IDs associated with
 the share network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segmentation_id_python">
 <a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
@@ -1080,8 +986,7 @@ the share network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_service_id_python">
 <a href="#security_service_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>service_<wbr>id</a>
@@ -1090,8 +995,7 @@ the share network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -1190,8 +1190,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1200,8 +1199,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctions_csharp">
 <a href="#lambdafunctions_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
@@ -1210,8 +1208,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queues_csharp">
 <a href="#queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1220,8 +1217,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -1230,13 +1226,11 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1245,8 +1239,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctions_go">
 <a href="#lambdafunctions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
@@ -1255,8 +1248,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queues_go">
 <a href="#queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1265,8 +1257,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -1275,13 +1266,11 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1290,8 +1279,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctions_nodejs">
 <a href="#lambdafunctions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Functions</a>
@@ -1300,8 +1288,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queues_nodejs">
 <a href="#queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -1310,8 +1297,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1320,13 +1306,11 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1335,8 +1319,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_functions_python">
 <a href="#lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
@@ -1345,8 +1328,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationlambdafunction">Sequence[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queues_python">
 <a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -1355,8 +1337,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationqueue">Sequence[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1365,8 +1346,7 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#bucketnotificationtopic">Sequence[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1377,8 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1386,13 +1365,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1400,13 +1377,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1414,13 +1389,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1428,8 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1556,8 +1528,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1566,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdafunctions_csharp">
 <a href="#state_lambdafunctions_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
@@ -1576,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_csharp">
 <a href="#state_queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1586,8 +1555,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_csharp">
 <a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -1596,13 +1564,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1611,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdafunctions_go">
 <a href="#state_lambdafunctions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
@@ -1621,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_go">
 <a href="#state_queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1631,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_go">
 <a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
@@ -1641,13 +1604,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1656,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdafunctions_nodejs">
 <a href="#state_lambdafunctions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Functions</a>
@@ -1666,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_nodejs">
 <a href="#state_queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -1676,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_nodejs">
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1686,13 +1644,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1701,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambda_functions_python">
 <a href="#state_lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
@@ -1711,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationlambdafunction">Sequence[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_python">
 <a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -1721,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationqueue">Sequence[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topics_python">
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
@@ -1731,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bucketnotificationtopic">Sequence[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1747,8 +1699,7 @@ The following state arguments are supported:
 <h4 id="bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1757,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_csharp">
 <a href="#filterprefix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
@@ -1767,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_csharp">
 <a href="#filtersuffix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
@@ -1777,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1787,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionarn_csharp">
 <a href="#lambdafunctionarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Arn</a>
@@ -1797,13 +1744,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1812,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_go">
 <a href="#filterprefix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
@@ -1822,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_go">
 <a href="#filtersuffix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
@@ -1832,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1842,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionarn_go">
 <a href="#lambdafunctionarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Arn</a>
@@ -1852,13 +1793,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1867,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_nodejs">
 <a href="#filterprefix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
@@ -1877,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_nodejs">
 <a href="#filtersuffix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
@@ -1887,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1897,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionarn_nodejs">
 <a href="#lambdafunctionarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Arn</a>
@@ -1907,13 +1842,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1922,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_prefix_python">
 <a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
@@ -1932,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_suffix_python">
 <a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
@@ -1942,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1952,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_function_arn_python">
 <a href="#lambda_function_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>arn</a>
@@ -1962,15 +1891,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1979,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queuearn_csharp">
 <a href="#queuearn_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Arn</a>
@@ -1989,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_csharp">
 <a href="#filterprefix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
@@ -1999,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_csharp">
 <a href="#filtersuffix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
@@ -2009,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2019,13 +1942,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -2034,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queuearn_go">
 <a href="#queuearn_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Arn</a>
@@ -2044,8 +1964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_go">
 <a href="#filterprefix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
@@ -2054,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_go">
 <a href="#filtersuffix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
@@ -2064,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2074,13 +1991,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2089,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queuearn_nodejs">
 <a href="#queuearn_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Arn</a>
@@ -2099,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_nodejs">
 <a href="#filterprefix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
@@ -2109,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_nodejs">
 <a href="#filtersuffix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
@@ -2119,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2129,13 +2040,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2144,8 +2053,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queue_arn_python">
 <a href="#queue_arn_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>arn</a>
@@ -2154,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_prefix_python">
 <a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
@@ -2164,8 +2071,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_suffix_python">
 <a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
@@ -2174,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2184,15 +2089,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -2201,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2211,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_csharp">
 <a href="#filterprefix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
@@ -2221,8 +2122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_csharp">
 <a href="#filtersuffix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
@@ -2231,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2241,13 +2140,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -2256,8 +2153,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
@@ -2266,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_go">
 <a href="#filterprefix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
@@ -2276,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_go">
 <a href="#filtersuffix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
@@ -2286,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2296,13 +2189,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2311,8 +2202,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
@@ -2321,8 +2211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterprefix_nodejs">
 <a href="#filterprefix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
@@ -2331,8 +2220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_nodejs">
 <a href="#filtersuffix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
@@ -2341,8 +2229,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2351,13 +2238,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2366,8 +2251,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
@@ -2376,8 +2260,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_prefix_python">
 <a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
@@ -2386,8 +2269,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_suffix_python">
 <a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
@@ -2396,8 +2278,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2406,8 +2287,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

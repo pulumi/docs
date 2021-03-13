@@ -362,8 +362,7 @@ The RemediationConfiguration resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configrulename_csharp">
 <a href="#configrulename_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Name</a>
@@ -372,8 +371,7 @@ The RemediationConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -382,8 +380,7 @@ The RemediationConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettype_csharp">
 <a href="#targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -392,8 +389,7 @@ The RemediationConfiguration resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -403,8 +399,7 @@ The RemediationConfiguration resource accepts the following [input]({{< relref "
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -413,8 +408,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetversion_csharp">
 <a href="#targetversion_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Version</a>
@@ -423,13 +417,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configrulename_go">
 <a href="#configrulename_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Name</a>
@@ -438,8 +430,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_go">
 <a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -448,8 +439,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettype_go">
 <a href="#targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -458,8 +448,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -469,8 +458,7 @@ parameter. Each parameter block supports fields documented below.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -479,8 +467,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetversion_go">
 <a href="#targetversion_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Version</a>
@@ -489,13 +476,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configrulename_nodejs">
 <a href="#configrulename_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Rule<wbr>Name</a>
@@ -504,8 +489,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_nodejs">
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -514,8 +498,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettype_nodejs">
 <a href="#targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
@@ -524,8 +507,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -535,8 +517,7 @@ parameter. Each parameter block supports fields documented below.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -545,8 +526,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetversion_nodejs">
 <a href="#targetversion_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Version</a>
@@ -555,13 +535,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_rule_name_python">
 <a href="#config_rule_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>rule_<wbr>name</a>
@@ -570,8 +548,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_id_python">
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -580,8 +557,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_type_python">
 <a href="#target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
@@ -590,8 +566,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -601,8 +576,7 @@ parameter. Each parameter block supports fields documented below.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -611,8 +585,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_version_python">
 <a href="#target_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>version</a>
@@ -621,8 +594,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -633,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -642,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -651,13 +621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -665,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -674,13 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -688,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -697,13 +661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -711,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -720,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -848,8 +808,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -857,8 +816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configrulename_csharp">
 <a href="#state_configrulename_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Name</a>
@@ -867,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -878,8 +835,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcetype_csharp">
 <a href="#state_resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -888,8 +844,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_csharp">
 <a href="#state_targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -898,8 +853,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_csharp">
 <a href="#state_targettype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -908,8 +862,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetversion_csharp">
 <a href="#state_targetversion_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Version</a>
@@ -918,13 +871,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -932,8 +883,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configrulename_go">
 <a href="#state_configrulename_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Name</a>
@@ -942,8 +892,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -953,8 +902,7 @@ parameter. Each parameter block supports fields documented below.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcetype_go">
 <a href="#state_resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -963,8 +911,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_go">
 <a href="#state_targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -973,8 +920,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_go">
 <a href="#state_targettype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Type</a>
@@ -983,8 +929,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetversion_go">
 <a href="#state_targetversion_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Version</a>
@@ -993,13 +938,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1007,8 +950,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configrulename_nodejs">
 <a href="#state_configrulename_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Rule<wbr>Name</a>
@@ -1017,8 +959,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1028,8 +969,7 @@ parameter. Each parameter block supports fields documented below.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcetype_nodejs">
 <a href="#state_resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1038,8 +978,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_nodejs">
 <a href="#state_targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1048,8 +987,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettype_nodejs">
 <a href="#state_targettype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Type</a>
@@ -1058,8 +996,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetversion_nodejs">
 <a href="#state_targetversion_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Version</a>
@@ -1068,13 +1005,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1082,8 +1017,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_rule_name_python">
 <a href="#state_config_rule_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>rule_<wbr>name</a>
@@ -1092,8 +1026,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Config rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1103,8 +1036,7 @@ parameter. Each parameter block supports fields documented below.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 parameter. Each parameter block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_type_python">
 <a href="#state_resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -1113,8 +1045,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of a resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_id_python">
 <a href="#state_target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -1123,8 +1054,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target ID is the name of the public document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_type_python">
 <a href="#state_target_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>type</a>
@@ -1133,8 +1063,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the target. Target executes remediation. For example, SSM document
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_version_python">
 <a href="#state_target_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>version</a>
@@ -1143,8 +1072,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the target. For example, version of the SSM document
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1159,8 +1087,7 @@ parameter. Each parameter block supports fields documented below.
 <h4 id="remediationconfigurationparameter">Remediation<wbr>Configuration<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1169,8 +1096,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcevalue_csharp">
 <a href="#resourcevalue_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Value</a>
@@ -1179,8 +1105,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is dynamic and changes at run-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticvalue_csharp">
 <a href="#staticvalue_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Value</a>
@@ -1189,13 +1114,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is static and does not change at run-time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1204,8 +1127,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcevalue_go">
 <a href="#resourcevalue_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Value</a>
@@ -1214,8 +1136,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is dynamic and changes at run-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticvalue_go">
 <a href="#staticvalue_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Value</a>
@@ -1224,13 +1145,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is static and does not change at run-time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1239,8 +1158,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcevalue_nodejs">
 <a href="#resourcevalue_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Value</a>
@@ -1249,8 +1167,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is dynamic and changes at run-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticvalue_nodejs">
 <a href="#staticvalue_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Value</a>
@@ -1259,13 +1176,11 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is static and does not change at run-time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1274,8 +1189,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_value_python">
 <a href="#resource_value_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>value</a>
@@ -1284,8 +1198,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value is dynamic and changes at run-time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_value_python">
 <a href="#static_value_python" style="color: inherit; text-decoration: inherit;">static_<wbr>value</a>
@@ -1294,8 +1207,7 @@ parameter. Each parameter block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value is static and does not change at run-time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -147,8 +147,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -157,8 +156,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -168,8 +166,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -179,13 +176,11 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -194,8 +189,7 @@ is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -205,8 +199,7 @@ is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -216,13 +209,11 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -231,8 +222,7 @@ is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -242,8 +232,7 @@ is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -253,13 +242,11 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -268,8 +255,7 @@ is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -279,8 +265,7 @@ is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -290,8 +275,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -304,8 +288,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availablememorymb_csharp">
 <a href="#availablememorymb_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>Mb</a>
@@ -314,8 +297,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="buildenvironmentvariables_csharp">
 <a href="#buildenvironmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
@@ -323,8 +305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -333,8 +314,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entrypoint_csharp">
 <a href="#entrypoint_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
@@ -343,8 +323,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -352,8 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventtriggers_csharp">
 <a href="#eventtriggers_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Triggers</a>
@@ -362,8 +340,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctioneventtrigger">List&lt;Get<wbr>Function<wbr>Event<wbr>Trigger&gt;</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpstriggerurl_csharp">
 <a href="#httpstriggerurl_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Trigger<wbr>Url</a>
@@ -372,8 +349,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -382,8 +358,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingresssettings_csharp">
 <a href="#ingresssettings_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
@@ -392,8 +367,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls what traffic can reach the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -402,8 +376,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -412,8 +385,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -422,8 +394,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtime_csharp">
 <a href="#runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -432,8 +403,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemail_csharp">
 <a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -442,8 +412,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcearchivebucket_csharp">
 <a href="#sourcearchivebucket_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Bucket</a>
@@ -452,8 +421,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcearchiveobject_csharp">
 <a href="#sourcearchiveobject_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Object</a>
@@ -462,8 +430,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcerepositories_csharp">
 <a href="#sourcerepositories_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repositories</a>
@@ -472,8 +439,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionsourcerepository">List&lt;Get<wbr>Function<wbr>Source<wbr>Repository&gt;</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -482,8 +448,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggerhttp_csharp">
 <a href="#triggerhttp_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Http</a>
@@ -492,8 +457,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcconnector_csharp">
 <a href="#vpcconnector_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector</a>
@@ -502,8 +466,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcconnectoregresssettings_csharp">
 <a href="#vpcconnectoregresssettings_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -512,8 +475,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -521,8 +483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -530,13 +491,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availablememorymb_go">
 <a href="#availablememorymb_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>Mb</a>
@@ -545,8 +504,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="buildenvironmentvariables_go">
 <a href="#buildenvironmentvariables_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
@@ -554,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -564,8 +521,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entrypoint_go">
 <a href="#entrypoint_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
@@ -574,8 +530,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -583,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventtriggers_go">
 <a href="#eventtriggers_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Triggers</a>
@@ -593,8 +547,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctioneventtrigger">[]Get<wbr>Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpstriggerurl_go">
 <a href="#httpstriggerurl_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Trigger<wbr>Url</a>
@@ -603,8 +556,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -613,8 +565,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingresssettings_go">
 <a href="#ingresssettings_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
@@ -623,8 +574,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls what traffic can reach the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -633,8 +583,7 @@ The following output properties are available:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -643,8 +592,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -653,8 +601,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtime_go">
 <a href="#runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -663,8 +610,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemail_go">
 <a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -673,8 +619,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcearchivebucket_go">
 <a href="#sourcearchivebucket_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Bucket</a>
@@ -683,8 +628,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcearchiveobject_go">
 <a href="#sourcearchiveobject_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Object</a>
@@ -693,8 +637,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcerepositories_go">
 <a href="#sourcerepositories_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repositories</a>
@@ -703,8 +646,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionsourcerepository">[]Get<wbr>Function<wbr>Source<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -713,8 +655,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggerhttp_go">
 <a href="#triggerhttp_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Http</a>
@@ -723,8 +664,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcconnector_go">
 <a href="#vpcconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector</a>
@@ -733,8 +673,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcconnectoregresssettings_go">
 <a href="#vpcconnectoregresssettings_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -743,8 +682,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -752,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -761,13 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availablememorymb_nodejs">
 <a href="#availablememorymb_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>Mb</a>
@@ -776,8 +711,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="buildenvironmentvariables_nodejs">
 <a href="#buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
@@ -785,8 +719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -795,8 +728,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entrypoint_nodejs">
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
@@ -805,8 +737,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -814,8 +745,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventtriggers_nodejs">
 <a href="#eventtriggers_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Triggers</a>
@@ -824,8 +754,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctioneventtrigger">Get<wbr>Function<wbr>Event<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpstriggerurl_nodejs">
 <a href="#httpstriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Trigger<wbr>Url</a>
@@ -834,8 +763,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -844,8 +772,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingresssettings_nodejs">
 <a href="#ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
@@ -854,8 +781,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls what traffic can reach the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -864,8 +790,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
@@ -874,8 +799,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -884,8 +808,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtime_nodejs">
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -894,8 +817,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemail_nodejs">
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
@@ -904,8 +826,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcearchivebucket_nodejs">
 <a href="#sourcearchivebucket_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Bucket</a>
@@ -914,8 +835,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcearchiveobject_nodejs">
 <a href="#sourcearchiveobject_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Object</a>
@@ -924,8 +844,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcerepositories_nodejs">
 <a href="#sourcerepositories_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repositories</a>
@@ -934,8 +853,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionsourcerepository">Get<wbr>Function<wbr>Source<wbr>Repository[]</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -944,8 +862,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggerhttp_nodejs">
 <a href="#triggerhttp_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Http</a>
@@ -954,8 +871,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcconnector_nodejs">
 <a href="#vpcconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector</a>
@@ -964,8 +880,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcconnectoregresssettings_nodejs">
 <a href="#vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -974,8 +889,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -983,8 +897,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -992,13 +905,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="available_memory_mb_python">
 <a href="#available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
@@ -1007,8 +918,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="build_environment_variables_python">
 <a href="#build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
@@ -1016,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1026,8 +935,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entry_point_python">
 <a href="#entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
@@ -1036,8 +944,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -1045,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="event_triggers_python">
 <a href="#event_triggers_python" style="color: inherit; text-decoration: inherit;">event_<wbr>triggers</a>
@@ -1055,8 +961,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctioneventtrigger">Sequence[Get<wbr>Function<wbr>Event<wbr>Trigger]</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="https_trigger_url_python">
 <a href="#https_trigger_url_python" style="color: inherit; text-decoration: inherit;">https_<wbr>trigger_<wbr>url</a>
@@ -1065,8 +970,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1075,8 +979,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingress_settings_python">
 <a href="#ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
@@ -1085,8 +988,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls what traffic can reach the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1095,8 +997,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
@@ -1105,8 +1006,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1115,8 +1015,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtime_python">
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -1125,8 +1024,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_account_email_python">
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
@@ -1135,8 +1033,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_archive_bucket_python">
 <a href="#source_archive_bucket_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>bucket</a>
@@ -1145,8 +1042,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_archive_object_python">
 <a href="#source_archive_object_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>object</a>
@@ -1155,8 +1051,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_repositories_python">
 <a href="#source_repositories_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repositories</a>
@@ -1165,8 +1060,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionsourcerepository">Sequence[Get<wbr>Function<wbr>Source<wbr>Repository]</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Cloud Source Repository that the function is deployed from. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1175,8 +1069,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trigger_http_python">
 <a href="#trigger_http_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>http</a>
@@ -1185,8 +1078,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_connector_python">
 <a href="#vpc_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector</a>
@@ -1195,8 +1087,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_connector_egress_settings_python">
 <a href="#vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
@@ -1205,8 +1096,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1214,8 +1104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1223,8 +1112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1238,8 +1126,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -1250,8 +1137,7 @@ The following output properties are available:
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
 for a full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failurepolicies_csharp">
 <a href="#failurepolicies_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policies</a>
@@ -1260,8 +1146,7 @@ for a full reference of accepted triggers.
         <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">List&lt;Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -1270,13 +1155,11 @@ for a full reference of accepted triggers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_go">
 <a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -1287,8 +1170,7 @@ for a full reference of accepted triggers.
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
 for a full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failurepolicies_go">
 <a href="#failurepolicies_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policies</a>
@@ -1297,8 +1179,7 @@ for a full reference of accepted triggers.
         <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">[]Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -1307,13 +1188,11 @@ for a full reference of accepted triggers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
@@ -1324,8 +1203,7 @@ for a full reference of accepted triggers.
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
 for a full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failurepolicies_nodejs">
 <a href="#failurepolicies_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policies</a>
@@ -1334,8 +1212,7 @@ for a full reference of accepted triggers.
         <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -1344,13 +1221,11 @@ for a full reference of accepted triggers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_type_python">
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
@@ -1361,8 +1236,7 @@ for a full reference of accepted triggers.
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
 for a full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failure_policies_python">
 <a href="#failure_policies_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policies</a>
@@ -1371,8 +1245,7 @@ for a full reference of accepted triggers.
         <span class="property-type"><a href="#getfunctioneventtriggerfailurepolicy">Sequence[Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -1381,8 +1254,7 @@ for a full reference of accepted triggers.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getfunctioneventtriggerfailurepolicy">Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</h4>
@@ -1390,8 +1262,7 @@ for a full reference of accepted triggers.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_csharp">
 <a href="#retry_csharp" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -1400,13 +1271,11 @@ for a full reference of accepted triggers.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_go">
 <a href="#retry_go" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -1415,13 +1284,11 @@ for a full reference of accepted triggers.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_nodejs">
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -1430,13 +1297,11 @@ for a full reference of accepted triggers.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_python">
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -1445,8 +1310,7 @@ for a full reference of accepted triggers.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getfunctionsourcerepository">Get<wbr>Function<wbr>Source<wbr>Repository</h4>
@@ -1454,8 +1318,7 @@ for a full reference of accepted triggers.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployedurl_csharp">
 <a href="#deployedurl_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Url</a>
@@ -1463,8 +1326,7 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1473,13 +1335,11 @@ for a full reference of accepted triggers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployedurl_go">
 <a href="#deployedurl_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Url</a>
@@ -1487,8 +1347,7 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1497,13 +1356,11 @@ for a full reference of accepted triggers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployedurl_nodejs">
 <a href="#deployedurl_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Url</a>
@@ -1511,8 +1368,7 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1521,13 +1377,11 @@ for a full reference of accepted triggers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployed_url_python">
 <a href="#deployed_url_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>url</a>
@@ -1535,8 +1389,7 @@ for a full reference of accepted triggers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1545,8 +1398,7 @@ for a full reference of accepted triggers.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -363,8 +363,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_csharp">
 <a href="#contact_csharp" style="color: inherit; text-decoration: inherit;">Contact</a>
@@ -373,8 +372,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -383,8 +381,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -393,8 +390,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipmentaddress_csharp">
 <a href="#shipmentaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Address</a>
@@ -403,13 +399,11 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_go">
 <a href="#contact_go" style="color: inherit; text-decoration: inherit;">Contact</a>
@@ -418,8 +412,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -428,8 +421,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -438,8 +430,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipmentaddress_go">
 <a href="#shipmentaddress_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Address</a>
@@ -448,13 +439,11 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_nodejs">
 <a href="#contact_nodejs" style="color: inherit; text-decoration: inherit;">contact</a>
@@ -463,8 +452,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -473,8 +461,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -483,8 +470,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipmentaddress_nodejs">
 <a href="#shipmentaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Address</a>
@@ -493,13 +479,11 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_python">
 <a href="#contact_python" style="color: inherit; text-decoration: inherit;">contact</a>
@@ -508,8 +492,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -518,8 +501,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -528,8 +510,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipment_address_python">
 <a href="#shipment_address_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>address</a>
@@ -538,8 +519,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -569,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="returntrackings_csharp">
 <a href="#returntrackings_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Trackings</a>
@@ -579,8 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderreturntracking">List&lt;Order<wbr>Return<wbr>Tracking&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -589,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipmenthistories_csharp">
 <a href="#shipmenthistories_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Histories</a>
@@ -599,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenthistory">List&lt;Order<wbr>Shipment<wbr>History&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipmenttrackings_csharp">
 <a href="#shipmenttrackings_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Trackings</a>
@@ -609,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenttracking">List&lt;Order<wbr>Shipment<wbr>Tracking&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -619,13 +592,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderstatus">List&lt;Order<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,8 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -643,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="returntrackings_go">
 <a href="#returntrackings_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Trackings</a>
@@ -653,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderreturntracking">[]Order<wbr>Return<wbr>Tracking</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -663,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipmenthistories_go">
 <a href="#shipmenthistories_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Histories</a>
@@ -673,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenthistory">[]Order<wbr>Shipment<wbr>History</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipmenttrackings_go">
 <a href="#shipmenttrackings_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Trackings</a>
@@ -683,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenttracking">[]Order<wbr>Shipment<wbr>Tracking</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -693,13 +658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderstatus">[]Order<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -707,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -717,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="returntrackings_nodejs">
 <a href="#returntrackings_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Trackings</a>
@@ -727,8 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderreturntracking">Order<wbr>Return<wbr>Tracking[]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -737,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipmenthistories_nodejs">
 <a href="#shipmenthistories_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Histories</a>
@@ -747,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenthistory">Order<wbr>Shipment<wbr>History[]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipmenttrackings_nodejs">
 <a href="#shipmenttrackings_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Trackings</a>
@@ -757,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenttracking">Order<wbr>Shipment<wbr>Tracking[]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -767,13 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderstatus">Order<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -781,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -791,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="return_trackings_python">
 <a href="#return_trackings_python" style="color: inherit; text-decoration: inherit;">return_<wbr>trackings</a>
@@ -801,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderreturntracking">Sequence[Order<wbr>Return<wbr>Tracking]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -811,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipment_histories_python">
 <a href="#shipment_histories_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>histories</a>
@@ -821,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenthistory">Sequence[Order<wbr>Shipment<wbr>History]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shipment_trackings_python">
 <a href="#shipment_trackings_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>trackings</a>
@@ -831,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ordershipmenttracking">Sequence[Order<wbr>Shipment<wbr>Tracking]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -841,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#orderstatus">Sequence[Order<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -969,8 +917,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contact_csharp">
 <a href="#state_contact_csharp" style="color: inherit; text-decoration: inherit;">Contact</a>
@@ -979,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_csharp">
 <a href="#state_devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -989,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -999,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1009,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_returntrackings_csharp">
 <a href="#state_returntrackings_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Trackings</a>
@@ -1019,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderreturntracking">List&lt;Order<wbr>Return<wbr>Tracking<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialnumber_csharp">
 <a href="#state_serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1029,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmentaddress_csharp">
 <a href="#state_shipmentaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Address</a>
@@ -1039,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmenthistories_csharp">
 <a href="#state_shipmenthistories_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Histories</a>
@@ -1049,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenthistory">List&lt;Order<wbr>Shipment<wbr>History<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmenttrackings_csharp">
 <a href="#state_shipmenttrackings_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Trackings</a>
@@ -1059,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenttracking">List&lt;Order<wbr>Shipment<wbr>Tracking<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_csharp">
 <a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1069,13 +1007,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderstatus">List&lt;Order<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contact_go">
 <a href="#state_contact_go" style="color: inherit; text-decoration: inherit;">Contact</a>
@@ -1084,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_go">
 <a href="#state_devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1094,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1104,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1114,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_returntrackings_go">
 <a href="#state_returntrackings_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Trackings</a>
@@ -1124,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderreturntracking">[]Order<wbr>Return<wbr>Tracking</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialnumber_go">
 <a href="#state_serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1134,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmentaddress_go">
 <a href="#state_shipmentaddress_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Address</a>
@@ -1144,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmenthistories_go">
 <a href="#state_shipmenthistories_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Histories</a>
@@ -1154,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenthistory">[]Order<wbr>Shipment<wbr>History</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmenttrackings_go">
 <a href="#state_shipmenttrackings_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Trackings</a>
@@ -1164,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenttracking">[]Order<wbr>Shipment<wbr>Tracking</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_go">
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1174,13 +1101,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderstatus">[]Order<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contact_nodejs">
 <a href="#state_contact_nodejs" style="color: inherit; text-decoration: inherit;">contact</a>
@@ -1189,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_nodejs">
 <a href="#state_devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -1199,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1209,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1219,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_returntrackings_nodejs">
 <a href="#state_returntrackings_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Trackings</a>
@@ -1229,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderreturntracking">Order<wbr>Return<wbr>Tracking[]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialnumber_nodejs">
 <a href="#state_serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -1239,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmentaddress_nodejs">
 <a href="#state_shipmentaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Address</a>
@@ -1249,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmenthistories_nodejs">
 <a href="#state_shipmenthistories_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Histories</a>
@@ -1259,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenthistory">Order<wbr>Shipment<wbr>History[]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipmenttrackings_nodejs">
 <a href="#state_shipmenttrackings_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Trackings</a>
@@ -1269,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenttracking">Order<wbr>Shipment<wbr>Tracking[]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_nodejs">
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1279,13 +1195,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderstatus">Order<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contact_python">
 <a href="#state_contact_python" style="color: inherit; text-decoration: inherit;">contact</a>
@@ -1294,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_name_python">
 <a href="#state_device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -1304,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1314,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1324,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_return_trackings_python">
 <a href="#state_return_trackings_python" style="color: inherit; text-decoration: inherit;">return_<wbr>trackings</a>
@@ -1334,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderreturntracking">Sequence[Order<wbr>Return<wbr>Tracking<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serial_number_python">
 <a href="#state_serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -1344,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipment_address_python">
 <a href="#state_shipment_address_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>address</a>
@@ -1354,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipment_histories_python">
 <a href="#state_shipment_histories_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>histories</a>
@@ -1364,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenthistory">Sequence[Order<wbr>Shipment<wbr>History<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shipment_trackings_python">
 <a href="#state_shipment_trackings_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>trackings</a>
@@ -1374,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ordershipmenttracking">Sequence[Order<wbr>Shipment<wbr>Tracking<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_python">
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1384,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orderstatus">Sequence[Order<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1400,8 +1304,7 @@ The following state arguments are supported:
 <h4 id="ordercontact">Order<wbr>Contact</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="companyname_csharp">
 <a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -1410,8 +1313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the company. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -1420,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email address to send order notification to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1430,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -1440,13 +1340,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="companyname_go">
 <a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -1455,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the company. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -1465,8 +1362,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email address to send order notification to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1475,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -1485,13 +1380,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="companyname_nodejs">
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
@@ -1500,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the company. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -1510,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email address to send order notification to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1520,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
@@ -1530,13 +1420,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="company_name_python">
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
@@ -1545,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the company. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -1555,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email address to send order notification to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1565,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
@@ -1575,15 +1460,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="orderreturntracking">Order<wbr>Return<wbr>Tracking</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -1592,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1602,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingid_csharp">
 <a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
@@ -1612,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingurl_csharp">
 <a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
@@ -1622,13 +1502,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -1637,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1647,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingid_go">
 <a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
@@ -1657,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingurl_go">
 <a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
@@ -1667,13 +1542,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -1682,8 +1555,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -1692,8 +1564,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingid_nodejs">
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
@@ -1702,8 +1573,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingurl_nodejs">
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
@@ -1712,13 +1582,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -1727,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -1737,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracking_id_python">
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
@@ -1747,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracking_url_python">
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
@@ -1757,15 +1622,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ordershipmentaddress">Order<wbr>Shipment<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addresses_csharp">
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
@@ -1774,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of upto 3 lines for address information. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1784,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1794,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the country to ship the Databox Edge Device to. Valid values are "Algeria", "Argentina", "Australia", "Austria", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Bermuda", "Bolivia", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Cayman Islands", "Chile", "Colombia", "Costa Rica", "Croatia", "Cyprus", "Czechia", "CÃ´te D'ivoire", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia", "Ethiopia", "Finland", "France", "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Nigeria", "Norway", "Oman", "Pakistan", "Palestinian Authority", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of Korea", "Romania", "Russia", "Rwanda", "Saint Kitts And Nevis", "Saudi Arabia", "Senegal", "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "U.S. Virgin Islands", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "Zambia" or "Zimbabwe". Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1804,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1814,13 +1673,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the state to ship the Databox Edge Device to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addresses_go">
 <a href="#addresses_go" style="color: inherit; text-decoration: inherit;">Addresses</a>
@@ -1829,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of upto 3 lines for address information. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1839,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1849,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the country to ship the Databox Edge Device to. Valid values are "Algeria", "Argentina", "Australia", "Austria", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Bermuda", "Bolivia", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Cayman Islands", "Chile", "Colombia", "Costa Rica", "Croatia", "Cyprus", "Czechia", "CÃ´te D'ivoire", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia", "Ethiopia", "Finland", "France", "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Nigeria", "Norway", "Oman", "Pakistan", "Palestinian Authority", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of Korea", "Romania", "Russia", "Rwanda", "Saint Kitts And Nevis", "Saudi Arabia", "Senegal", "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "U.S. Virgin Islands", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "Zambia" or "Zimbabwe". Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1859,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1869,13 +1722,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the state to ship the Databox Edge Device to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addresses_nodejs">
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
@@ -1884,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of upto 3 lines for address information. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1894,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1904,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the country to ship the Databox Edge Device to. Valid values are "Algeria", "Argentina", "Australia", "Austria", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Bermuda", "Bolivia", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Cayman Islands", "Chile", "Colombia", "Costa Rica", "Croatia", "Cyprus", "Czechia", "CÃ´te D'ivoire", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia", "Ethiopia", "Finland", "France", "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Nigeria", "Norway", "Oman", "Pakistan", "Palestinian Authority", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of Korea", "Romania", "Russia", "Rwanda", "Saint Kitts And Nevis", "Saudi Arabia", "Senegal", "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "U.S. Virgin Islands", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "Zambia" or "Zimbabwe". Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1914,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1924,13 +1771,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the state to ship the Databox Edge Device to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="addresses_python">
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
@@ -1939,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of upto 3 lines for address information. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1949,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The city name. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1959,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the country to ship the Databox Edge Device to. Valid values are "Algeria", "Argentina", "Australia", "Austria", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Bermuda", "Bolivia", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Cayman Islands", "Chile", "Colombia", "Costa Rica", "Croatia", "Cyprus", "Czechia", "CÃ´te D'ivoire", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia", "Ethiopia", "Finland", "France", "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Nigeria", "Norway", "Oman", "Pakistan", "Palestinian Authority", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of Korea", "Romania", "Russia", "Rwanda", "Saint Kitts And Nevis", "Saudi Arabia", "Senegal", "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "U.S. Virgin Islands", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "Zambia" or "Zimbabwe". Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1969,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1979,15 +1820,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the state to ship the Databox Edge Device to. Changing this forces a new Databox Edge Order to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ordershipmenthistory">Order<wbr>Shipment<wbr>History</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionaldetails_csharp">
 <a href="#additionaldetails_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Details</a>
@@ -1996,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_csharp">
 <a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -2006,8 +1844,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdate_csharp">
 <a href="#lastupdate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update</a>
@@ -2016,13 +1853,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionaldetails_go">
 <a href="#additionaldetails_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Details</a>
@@ -2031,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_go">
 <a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -2041,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdate_go">
 <a href="#lastupdate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update</a>
@@ -2051,13 +1884,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionaldetails_nodejs">
 <a href="#additionaldetails_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Details</a>
@@ -2066,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_nodejs">
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -2076,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdate_nodejs">
 <a href="#lastupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update</a>
@@ -2086,13 +1915,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_details_python">
 <a href="#additional_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>details</a>
@@ -2101,8 +1928,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_python">
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -2111,8 +1937,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_update_python">
 <a href="#last_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update</a>
@@ -2121,15 +1946,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ordershipmenttracking">Order<wbr>Shipment<wbr>Tracking</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -2138,8 +1961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -2148,8 +1970,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingid_csharp">
 <a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
@@ -2158,8 +1979,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingurl_csharp">
 <a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
@@ -2168,13 +1988,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -2183,8 +2001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -2193,8 +2010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingid_go">
 <a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
@@ -2203,8 +2019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingurl_go">
 <a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
@@ -2213,13 +2028,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -2228,8 +2041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -2238,8 +2050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingid_nodejs">
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
@@ -2248,8 +2059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trackingurl_nodejs">
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
@@ -2258,13 +2068,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -2273,8 +2081,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -2283,8 +2090,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracking_id_python">
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
@@ -2293,8 +2099,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracking_url_python">
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
@@ -2303,15 +2108,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="orderstatus">Order<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionaldetails_csharp">
 <a href="#additionaldetails_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Details</a>
@@ -2320,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_csharp">
 <a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -2330,8 +2132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="info_csharp">
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -2340,8 +2141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the order. Possible values include `Untracked`, `AwaitingFulfilment`, `AwaitingPreparation`, `AwaitingShipment`, `Shipped`, `Arriving`, `Delivered`, `ReplacementRequested`, `LostDevice`, `Declined`, `ReturnInitiated`, `AwaitingReturnShipment`, `ShippedBack` or `CollectedAtMicrosoft`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdate_csharp">
 <a href="#lastupdate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Update</a>
@@ -2350,13 +2150,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionaldetails_go">
 <a href="#additionaldetails_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Details</a>
@@ -2365,8 +2163,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_go">
 <a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -2375,8 +2172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="info_go">
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -2385,8 +2181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the order. Possible values include `Untracked`, `AwaitingFulfilment`, `AwaitingPreparation`, `AwaitingShipment`, `Shipped`, `Arriving`, `Delivered`, `ReplacementRequested`, `LostDevice`, `Declined`, `ReturnInitiated`, `AwaitingReturnShipment`, `ShippedBack` or `CollectedAtMicrosoft`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdate_go">
 <a href="#lastupdate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Update</a>
@@ -2395,13 +2190,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionaldetails_nodejs">
 <a href="#additionaldetails_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Details</a>
@@ -2410,8 +2203,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_nodejs">
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -2420,8 +2212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="info_nodejs">
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
@@ -2430,8 +2221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the order. Possible values include `Untracked`, `AwaitingFulfilment`, `AwaitingPreparation`, `AwaitingShipment`, `Shipped`, `Arriving`, `Delivered`, `ReplacementRequested`, `LostDevice`, `Declined`, `ReturnInitiated`, `AwaitingReturnShipment`, `ShippedBack` or `CollectedAtMicrosoft`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdate_nodejs">
 <a href="#lastupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update</a>
@@ -2440,13 +2230,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_details_python">
 <a href="#additional_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>details</a>
@@ -2455,8 +2243,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_python">
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -2465,8 +2252,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="info_python">
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
@@ -2475,8 +2261,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of the order. Possible values include `Untracked`, `AwaitingFulfilment`, `AwaitingPreparation`, `AwaitingShipment`, `Shipped`, `Arriving`, `Delivered`, `ReplacementRequested`, `LostDevice`, `Declined`, `ReturnInitiated`, `AwaitingReturnShipment`, `ShippedBack` or `CollectedAtMicrosoft`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_update_python">
 <a href="#last_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update</a>
@@ -2485,8 +2270,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of status update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

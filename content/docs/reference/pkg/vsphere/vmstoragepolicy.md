@@ -366,8 +366,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tagrules_csharp">
 <a href="#tagrules_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Rules</a>
@@ -376,8 +375,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#vmstoragepolicytagrule">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -386,8 +384,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -396,13 +393,11 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tagrules_go">
 <a href="#tagrules_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Rules</a>
@@ -411,8 +406,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#vmstoragepolicytagrule">[]Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -421,8 +415,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -431,13 +424,11 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tagrules_nodejs">
 <a href="#tagrules_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Rules</a>
@@ -446,8 +437,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#vmstoragepolicytagrule">Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -456,8 +446,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -466,13 +455,11 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tag_rules_python">
 <a href="#tag_rules_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>rules</a>
@@ -481,8 +468,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#vmstoragepolicytagrule">Sequence[Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -491,8 +477,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -501,8 +486,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -513,8 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -522,13 +505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -536,13 +517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -550,13 +529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -564,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -692,8 +668,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -702,8 +677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -712,8 +686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagrules_csharp">
 <a href="#state_tagrules_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Rules</a>
@@ -722,13 +695,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vmstoragepolicytagrule">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -737,8 +708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -747,8 +717,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagrules_go">
 <a href="#state_tagrules_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Rules</a>
@@ -757,13 +726,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vmstoragepolicytagrule">[]Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -772,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -782,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagrules_nodejs">
 <a href="#state_tagrules_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Rules</a>
@@ -792,13 +757,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vmstoragepolicytagrule">Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -807,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -817,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tag_rules_python">
 <a href="#state_tag_rules_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>rules</a>
@@ -827,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vmstoragepolicytagrule">Sequence[Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -843,8 +803,7 @@ The following state arguments are supported:
 <h4 id="vmstoragepolicytagrule">Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tagcategory_csharp">
 <a href="#tagcategory_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Category</a>
@@ -853,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the tag category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -863,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Name of tags to select from the given category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedatastoreswithtags_csharp">
 <a href="#includedatastoreswithtags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Datastores<wbr>With<wbr>Tags</a>
@@ -874,13 +831,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether to include datastores with the given tags or exclude. Default 
 value is true i.e. include datastores with the given tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tagcategory_go">
 <a href="#tagcategory_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Category</a>
@@ -889,8 +844,7 @@ value is true i.e. include datastores with the given tags.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the tag category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -899,8 +853,7 @@ value is true i.e. include datastores with the given tags.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Name of tags to select from the given category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedatastoreswithtags_go">
 <a href="#includedatastoreswithtags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Datastores<wbr>With<wbr>Tags</a>
@@ -910,13 +863,11 @@ value is true i.e. include datastores with the given tags.
     </dt>
     <dd>{{% md %}}Whether to include datastores with the given tags or exclude. Default 
 value is true i.e. include datastores with the given tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tagcategory_nodejs">
 <a href="#tagcategory_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Category</a>
@@ -925,8 +876,7 @@ value is true i.e. include datastores with the given tags.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the tag category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -935,8 +885,7 @@ value is true i.e. include datastores with the given tags.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Name of tags to select from the given category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedatastoreswithtags_nodejs">
 <a href="#includedatastoreswithtags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Datastores<wbr>With<wbr>Tags</a>
@@ -946,13 +895,11 @@ value is true i.e. include datastores with the given tags.
     </dt>
     <dd>{{% md %}}Whether to include datastores with the given tags or exclude. Default 
 value is true i.e. include datastores with the given tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tag_category_python">
 <a href="#tag_category_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>category</a>
@@ -961,8 +908,7 @@ value is true i.e. include datastores with the given tags.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the tag category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -971,8 +917,7 @@ value is true i.e. include datastores with the given tags.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Name of tags to select from the given category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_datastores_with_tags_python">
 <a href="#include_datastores_with_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>datastores_<wbr>with_<wbr>tags</a>
@@ -982,8 +927,7 @@ value is true i.e. include datastores with the given tags.
     </dt>
     <dd>{{% md %}}Whether to include datastores with the given tags or exclude. Default 
 value is true i.e. include datastores with the given tags.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

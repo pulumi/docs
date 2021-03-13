@@ -57,8 +57,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -67,8 +66,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -80,8 +78,7 @@ The following arguments are supported:
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -91,8 +88,7 @@ configured to talk to.
     </dt>
     <dd>{{% md %}}A filter expression to refine the query, see https://www.consul.io/api-docs/features/filtering
 and https://www.consul.io/api-docs/catalog#filtering-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryoptions_csharp">
 <a href="#queryoptions_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Options</a>
@@ -101,8 +97,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
         <span class="property-type"><a href="#getservicequeryoption">List&lt;Get<wbr>Service<wbr>Query<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -112,13 +107,11 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list of nodes
 to return based on a single matching tag..
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -127,8 +120,7 @@ to return based on a single matching tag..
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -140,8 +132,7 @@ to return based on a single matching tag..
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -151,8 +142,7 @@ configured to talk to.
     </dt>
     <dd>{{% md %}}A filter expression to refine the query, see https://www.consul.io/api-docs/features/filtering
 and https://www.consul.io/api-docs/catalog#filtering-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryoptions_go">
 <a href="#queryoptions_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Options</a>
@@ -161,8 +151,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
         <span class="property-type"><a href="#getservicequeryoption">[]Get<wbr>Service<wbr>Query<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -172,13 +161,11 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list of nodes
 to return based on a single matching tag..
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -187,8 +174,7 @@ to return based on a single matching tag..
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -200,8 +186,7 @@ to return based on a single matching tag..
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -211,8 +196,7 @@ configured to talk to.
     </dt>
     <dd>{{% md %}}A filter expression to refine the query, see https://www.consul.io/api-docs/features/filtering
 and https://www.consul.io/api-docs/catalog#filtering-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryoptions_nodejs">
 <a href="#queryoptions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Options</a>
@@ -221,8 +205,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
         <span class="property-type"><a href="#getservicequeryoption">Get<wbr>Service<wbr>Query<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -232,13 +215,11 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list of nodes
 to return based on a single matching tag..
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -247,8 +228,7 @@ to return based on a single matching tag..
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -260,8 +240,7 @@ to return based on a single matching tag..
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -271,8 +250,7 @@ configured to talk to.
     </dt>
     <dd>{{% md %}}A filter expression to refine the query, see https://www.consul.io/api-docs/features/filtering
 and https://www.consul.io/api-docs/catalog#filtering-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_options_python">
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
@@ -281,8 +259,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
         <span class="property-type"><a href="#getservicequeryoption">Sequence[Get<wbr>Service<wbr>Query<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -292,8 +269,7 @@ and https://www.consul.io/api-docs/catalog#filtering-1.
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list of nodes
 to return based on a single matching tag..
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -306,8 +282,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +291,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -326,8 +300,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -338,8 +311,7 @@ The following output properties are available:
     <dd>{{% md %}}A list of nodes and details about each endpoint advertising a
 service.  Each element in the list is a map of attributes that correspond to
 each individual node.  The list of per-node attributes is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -348,8 +320,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -357,8 +328,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queryoptions_csharp">
 <a href="#queryoptions_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Options</a>
@@ -366,8 +336,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicequeryoption">List&lt;Get<wbr>Service<wbr>Query<wbr>Option&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -376,13 +345,11 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list of nodes in `service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -391,8 +358,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -401,8 +367,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -413,8 +378,7 @@ each individual node.  The list of per-node attributes is detailed below.
     <dd>{{% md %}}A list of nodes and details about each endpoint advertising a
 service.  Each element in the list is a map of attributes that correspond to
 each individual node.  The list of per-node attributes is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -423,8 +387,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -432,8 +395,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queryoptions_go">
 <a href="#queryoptions_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Options</a>
@@ -441,8 +403,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicequeryoption">[]Get<wbr>Service<wbr>Query<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -451,13 +412,11 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list of nodes in `service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -466,8 +425,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -476,8 +434,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -488,8 +445,7 @@ each individual node.  The list of per-node attributes is detailed below.
     <dd>{{% md %}}A list of nodes and details about each endpoint advertising a
 service.  Each element in the list is a map of attributes that correspond to
 each individual node.  The list of per-node attributes is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -498,8 +454,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -507,8 +462,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queryoptions_nodejs">
 <a href="#queryoptions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Options</a>
@@ -516,8 +470,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicequeryoption">Get<wbr>Service<wbr>Query<wbr>Option[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -526,13 +479,11 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list of nodes in `service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -541,8 +492,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -551,8 +501,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -563,8 +512,7 @@ each individual node.  The list of per-node attributes is detailed below.
     <dd>{{% md %}}A list of nodes and details about each endpoint advertising a
 service.  Each element in the list is a map of attributes that correspond to
 each individual node.  The list of per-node attributes is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -573,8 +521,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -582,8 +529,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_options_python">
 <a href="#query_options_python" style="color: inherit; text-decoration: inherit;">query_<wbr>options</a>
@@ -591,8 +537,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getservicequeryoption">Sequence[Get<wbr>Service<wbr>Query<wbr>Option]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -601,8 +546,7 @@ each individual node.  The list of per-node attributes is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list of nodes in `service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -616,8 +560,7 @@ each individual node.  The list of per-node attributes is detailed below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowstale_csharp">
 <a href="#allowstale_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stale</a>
@@ -627,8 +570,7 @@ each individual node.  The list of per-node attributes is detailed below.
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -640,8 +582,7 @@ Consul servers that are followers.
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -650,8 +591,7 @@ configured to talk to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_csharp">
 <a href="#near_csharp" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -659,8 +599,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_csharp">
 <a href="#nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -668,8 +607,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireconsistent_csharp">
 <a href="#requireconsistent_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Consistent</a>
@@ -680,8 +618,7 @@ configured to talk to.
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -692,8 +629,7 @@ to `false`.
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitindex_csharp">
 <a href="#waitindex_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Index</a>
@@ -702,8 +638,7 @@ provider but may be overriden if necessary.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittime_csharp">
 <a href="#waittime_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Time</a>
@@ -713,13 +648,11 @@ provider but may be overriden if necessary.
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowstale_go">
 <a href="#allowstale_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stale</a>
@@ -729,8 +662,7 @@ to return.
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -742,8 +674,7 @@ Consul servers that are followers.
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -752,8 +683,7 @@ configured to talk to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_go">
 <a href="#near_go" style="color: inherit; text-decoration: inherit;">Near</a>
@@ -761,8 +691,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_go">
 <a href="#nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -770,8 +699,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireconsistent_go">
 <a href="#requireconsistent_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Consistent</a>
@@ -782,8 +710,7 @@ configured to talk to.
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -794,8 +721,7 @@ to `false`.
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitindex_go">
 <a href="#waitindex_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Index</a>
@@ -804,8 +730,7 @@ provider but may be overriden if necessary.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittime_go">
 <a href="#waittime_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Time</a>
@@ -815,13 +740,11 @@ provider but may be overriden if necessary.
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowstale_nodejs">
 <a href="#allowstale_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Stale</a>
@@ -831,8 +754,7 @@ to return.
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -844,8 +766,7 @@ Consul servers that are followers.
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -854,8 +775,7 @@ configured to talk to.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_nodejs">
 <a href="#near_nodejs" style="color: inherit; text-decoration: inherit;">near</a>
@@ -863,8 +783,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodemeta_nodejs">
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
@@ -872,8 +791,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireconsistent_nodejs">
 <a href="#requireconsistent_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Consistent</a>
@@ -884,8 +802,7 @@ configured to talk to.
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -896,8 +813,7 @@ to `false`.
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitindex_nodejs">
 <a href="#waitindex_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Index</a>
@@ -906,8 +822,7 @@ provider but may be overriden if necessary.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittime_nodejs">
 <a href="#waittime_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Time</a>
@@ -917,13 +832,11 @@ provider but may be overriden if necessary.
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_stale_python">
 <a href="#allow_stale_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stale</a>
@@ -933,8 +846,7 @@ to return.
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -946,8 +858,7 @@ Consul servers that are followers.
 same value found in `query_options` parameter specified below, or if that is
 empty, the `datacenter` value found in the Consul agent that this provider is
 configured to talk to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -956,8 +867,7 @@ configured to talk to.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="near_python">
 <a href="#near_python" style="color: inherit; text-decoration: inherit;">near</a>
@@ -965,8 +875,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_meta_python">
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
@@ -974,8 +883,7 @@ configured to talk to.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_consistent_python">
 <a href="#require_consistent_python" style="color: inherit; text-decoration: inherit;">require_<wbr>consistent</a>
@@ -986,8 +894,7 @@ configured to talk to.
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
 to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -998,8 +905,7 @@ to `false`.
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
 provider but may be overriden if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_index_python">
 <a href="#wait_index_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>index</a>
@@ -1008,8 +914,7 @@ provider but may be overriden if necessary.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_time_python">
 <a href="#wait_time_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>time</a>
@@ -1019,8 +924,7 @@ provider but may be overriden if necessary.
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getserviceservice">Get<wbr>Service<wbr>Service</h4>
@@ -1028,8 +932,7 @@ to return.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1037,8 +940,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createindex_csharp">
 <a href="#createindex_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Index</a>
@@ -1046,8 +948,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabletagoverride_csharp">
 <a href="#enabletagoverride_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
@@ -1055,8 +956,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1064,8 +964,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1073,8 +972,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifyindex_csharp">
 <a href="#modifyindex_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Index</a>
@@ -1082,8 +980,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1092,8 +989,7 @@ to return.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaddress_csharp">
 <a href="#nodeaddress_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Address</a>
@@ -1101,8 +997,7 @@ to return.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1133,8 +1028,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 List of tags for the service.
 * [`meta`](https://www.consul.io/docs/agent/http/catalog.html#Meta) - Service meta
 data tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodemeta_csharp">
 <a href="#nodemeta_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -1142,8 +1036,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodename_csharp">
 <a href="#nodename_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
@@ -1151,8 +1044,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1160,8 +1052,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taggedaddresses_csharp">
 <a href="#taggedaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tagged<wbr>Addresses</a>
@@ -1169,8 +1060,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1178,13 +1068,11 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1192,8 +1080,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createindex_go">
 <a href="#createindex_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Index</a>
@@ -1201,8 +1088,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabletagoverride_go">
 <a href="#enabletagoverride_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Tag<wbr>Override</a>
@@ -1210,8 +1096,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1219,8 +1104,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
@@ -1228,8 +1112,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifyindex_go">
 <a href="#modifyindex_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Index</a>
@@ -1237,8 +1120,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1247,8 +1129,7 @@ data tag information, if any.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaddress_go">
 <a href="#nodeaddress_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Address</a>
@@ -1256,8 +1137,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1288,8 +1168,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 List of tags for the service.
 * [`meta`](https://www.consul.io/docs/agent/http/catalog.html#Meta) - Service meta
 data tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodemeta_go">
 <a href="#nodemeta_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Meta</a>
@@ -1297,8 +1176,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodename_go">
 <a href="#nodename_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Name</a>
@@ -1306,8 +1184,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1315,8 +1192,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taggedaddresses_go">
 <a href="#taggedaddresses_go" style="color: inherit; text-decoration: inherit;">Tagged<wbr>Addresses</a>
@@ -1324,8 +1200,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1333,13 +1208,11 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1347,8 +1220,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createindex_nodejs">
 <a href="#createindex_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Index</a>
@@ -1356,8 +1228,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabletagoverride_nodejs">
 <a href="#enabletagoverride_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tag<wbr>Override</a>
@@ -1365,8 +1236,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1374,8 +1244,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1383,8 +1252,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifyindex_nodejs">
 <a href="#modifyindex_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Index</a>
@@ -1392,8 +1260,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1402,8 +1269,7 @@ data tag information, if any.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaddress_nodejs">
 <a href="#nodeaddress_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Address</a>
@@ -1411,8 +1277,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -1443,8 +1308,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 List of tags for the service.
 * [`meta`](https://www.consul.io/docs/agent/http/catalog.html#Meta) - Service meta
 data tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodemeta_nodejs">
 <a href="#nodemeta_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Meta</a>
@@ -1452,8 +1316,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodename_nodejs">
 <a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
@@ -1461,8 +1324,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1470,8 +1332,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taggedaddresses_nodejs">
 <a href="#taggedaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tagged<wbr>Addresses</a>
@@ -1479,8 +1340,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1488,13 +1348,11 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1502,8 +1360,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_index_python">
 <a href="#create_index_python" style="color: inherit; text-decoration: inherit;">create_<wbr>index</a>
@@ -1511,8 +1368,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_tag_override_python">
 <a href="#enable_tag_override_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tag_<wbr>override</a>
@@ -1520,8 +1376,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1529,8 +1384,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
@@ -1538,8 +1392,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modify_index_python">
 <a href="#modify_index_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>index</a>
@@ -1547,8 +1400,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1557,8 +1409,7 @@ data tag information, if any.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_address_python">
 <a href="#node_address_python" style="color: inherit; text-decoration: inherit;">node_<wbr>address</a>
@@ -1566,8 +1417,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -1598,8 +1448,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 List of tags for the service.
 * [`meta`](https://www.consul.io/docs/agent/http/catalog.html#Meta) - Service meta
 data tag information, if any.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_meta_python">
 <a href="#node_meta_python" style="color: inherit; text-decoration: inherit;">node_<wbr>meta</a>
@@ -1607,8 +1456,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_name_python">
 <a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
@@ -1616,8 +1464,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1625,8 +1472,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagged_addresses_python">
 <a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
@@ -1634,8 +1480,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1643,8 +1488,7 @@ data tag information, if any.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

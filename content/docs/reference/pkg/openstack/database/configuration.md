@@ -299,8 +299,7 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_csharp">
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -310,8 +309,7 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -320,8 +318,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurations_csharp">
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
@@ -330,8 +327,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type"><a href="#configurationconfiguration">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Configuration<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -340,8 +336,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -351,13 +346,11 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_go">
 <a href="#datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -367,8 +360,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -377,8 +369,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurations_go">
 <a href="#configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
@@ -387,8 +378,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type"><a href="#configurationconfiguration">[]Configuration<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +387,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -408,13 +397,11 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_nodejs">
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -424,8 +411,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -434,8 +420,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurations_nodejs">
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
@@ -444,8 +429,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -454,8 +438,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -465,13 +448,11 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_python">
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -481,8 +462,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -491,8 +471,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurations_python">
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
@@ -501,8 +480,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type"><a href="#configurationconfiguration">Sequence[Configuration<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -511,8 +489,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -522,8 +499,7 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -534,8 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -543,13 +518,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -557,13 +530,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,13 +542,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -585,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -713,8 +681,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurations_csharp">
 <a href="#state_configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
@@ -723,8 +690,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#configurationconfiguration">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Database.<wbr>Inputs.<wbr>Configuration<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_csharp">
 <a href="#state_datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -734,8 +700,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -744,8 +709,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -754,8 +718,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -765,13 +728,11 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurations_go">
 <a href="#state_configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
@@ -780,8 +741,7 @@ creates a new instance.
         <span class="property-type"><a href="#configurationconfiguration">[]Configuration<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_go">
 <a href="#state_datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -791,8 +751,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -801,8 +760,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -811,8 +769,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -822,13 +779,11 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurations_nodejs">
 <a href="#state_configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
@@ -837,8 +792,7 @@ creates a new instance.
         <span class="property-type"><a href="#configurationconfiguration">Configuration<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_nodejs">
 <a href="#state_datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -848,8 +802,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -858,8 +811,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -868,8 +820,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -879,13 +830,11 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurations_python">
 <a href="#state_configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
@@ -894,8 +843,7 @@ creates a new instance.
         <span class="property-type"><a href="#configurationconfiguration">Sequence[Configuration<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_python">
 <a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -905,8 +853,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -915,8 +862,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -925,8 +871,7 @@ object structure is documented below. Changing this creates resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -936,8 +881,7 @@ object structure is documented below. Changing this creates resource.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -952,8 +896,7 @@ creates a new instance.
 <h4 id="configurationconfiguration">Configuration<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -962,8 +905,7 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -972,13 +914,11 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter value. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -987,8 +927,7 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -997,13 +936,11 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter value. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1012,8 +949,7 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1022,13 +958,11 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration parameter value. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1037,8 +971,7 @@ creates a new instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration parameter name. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1047,15 +980,13 @@ creates a new instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration parameter value. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationdatastore">Configuration<wbr>Datastore</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1064,8 +995,7 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1074,13 +1004,11 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1089,8 +1017,7 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1099,13 +1026,11 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1114,8 +1039,7 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1124,13 +1048,11 @@ creates a new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1139,8 +1061,7 @@ creates a new instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1149,8 +1070,7 @@ creates a new instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of database engine type to be used with this configuration. Changing this creates a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

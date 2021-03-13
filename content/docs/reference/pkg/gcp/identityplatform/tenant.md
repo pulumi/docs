@@ -270,8 +270,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -280,8 +279,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpasswordsignup_csharp">
 <a href="#allowpasswordsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Password<wbr>Signup</a>
@@ -290,8 +288,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableauth_csharp">
 <a href="#disableauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auth</a>
@@ -302,8 +299,7 @@ The Tenant resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableemaillinksignin_csharp">
 <a href="#enableemaillinksignin_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Email<wbr>Link<wbr>Signin</a>
@@ -312,8 +308,7 @@ are not able to manage its users.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -323,13 +318,11 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -338,8 +331,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpasswordsignup_go">
 <a href="#allowpasswordsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Password<wbr>Signup</a>
@@ -348,8 +340,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableauth_go">
 <a href="#disableauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auth</a>
@@ -360,8 +351,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableemaillinksignin_go">
 <a href="#enableemaillinksignin_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Email<wbr>Link<wbr>Signin</a>
@@ -370,8 +360,7 @@ are not able to manage its users.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -381,13 +370,11 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -396,8 +383,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpasswordsignup_nodejs">
 <a href="#allowpasswordsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Password<wbr>Signup</a>
@@ -406,8 +392,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableauth_nodejs">
 <a href="#disableauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Auth</a>
@@ -418,8 +403,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableemaillinksignin_nodejs">
 <a href="#enableemaillinksignin_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Email<wbr>Link<wbr>Signin</a>
@@ -428,8 +412,7 @@ are not able to manage its users.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -439,13 +422,11 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -454,8 +435,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_password_signup_python">
 <a href="#allow_password_signup_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>password_<wbr>signup</a>
@@ -464,8 +444,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_auth_python">
 <a href="#disable_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>auth</a>
@@ -476,8 +455,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_email_link_signin_python">
 <a href="#enable_email_link_signin_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>email_<wbr>link_<wbr>signin</a>
@@ -486,8 +464,7 @@ are not able to manage its users.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -497,8 +474,7 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -509,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -518,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -528,13 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -542,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -552,13 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -566,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -576,13 +544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -590,8 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -600,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -728,8 +692,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowpasswordsignup_csharp">
 <a href="#state_allowpasswordsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Password<wbr>Signup</a>
@@ -738,8 +701,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableauth_csharp">
 <a href="#state_disableauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auth</a>
@@ -750,8 +712,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -760,8 +721,7 @@ are not able to manage its users.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableemaillinksignin_csharp">
 <a href="#state_enableemaillinksignin_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Email<wbr>Link<wbr>Signin</a>
@@ -770,8 +730,7 @@ are not able to manage its users.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -780,8 +739,7 @@ are not able to manage its users.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -791,13 +749,11 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowpasswordsignup_go">
 <a href="#state_allowpasswordsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Password<wbr>Signup</a>
@@ -806,8 +762,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableauth_go">
 <a href="#state_disableauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auth</a>
@@ -818,8 +773,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -828,8 +782,7 @@ are not able to manage its users.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableemaillinksignin_go">
 <a href="#state_enableemaillinksignin_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Email<wbr>Link<wbr>Signin</a>
@@ -838,8 +791,7 @@ are not able to manage its users.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -848,8 +800,7 @@ are not able to manage its users.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -859,13 +810,11 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowpasswordsignup_nodejs">
 <a href="#state_allowpasswordsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Password<wbr>Signup</a>
@@ -874,8 +823,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableauth_nodejs">
 <a href="#state_disableauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Auth</a>
@@ -886,8 +834,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -896,8 +843,7 @@ are not able to manage its users.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableemaillinksignin_nodejs">
 <a href="#state_enableemaillinksignin_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Email<wbr>Link<wbr>Signin</a>
@@ -906,8 +852,7 @@ are not able to manage its users.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -916,8 +861,7 @@ are not able to manage its users.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -927,13 +871,11 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_password_signup_python">
 <a href="#state_allow_password_signup_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>password_<wbr>signup</a>
@@ -942,8 +884,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow email/password user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_auth_python">
 <a href="#state_disable_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>auth</a>
@@ -954,8 +895,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Whether authentication is disabled for the tenant. If true, the users under
 the disabled tenant are not allowed to sign-in. Admins of the disabled tenant
 are not able to manage its users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -964,8 +904,7 @@ are not able to manage its users.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human friendly display name of the tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_email_link_signin_python">
 <a href="#state_enable_email_link_signin_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>email_<wbr>link_<wbr>signin</a>
@@ -974,8 +913,7 @@ are not able to manage its users.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable email link user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -984,8 +922,7 @@ are not able to manage its users.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the tenant that is generated by the server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -995,8 +932,7 @@ are not able to manage its users.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

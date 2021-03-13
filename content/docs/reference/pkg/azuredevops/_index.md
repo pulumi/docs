@@ -1,6 +1,6 @@
 ---
 title: "Azure DevOps"
-title_tag: "Package Azure DevOps"
+title_tag: "Azure DevOps Package"
 meta_desc: "A Pulumi package for creating and managing Azure DevOps."
 menu:
     reference:
@@ -88,6 +88,6 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.1</dd>
+	<dd>1.2.2</dd>
 </dl>
 

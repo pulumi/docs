@@ -308,8 +308,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratorid_csharp">
 <a href="#acceleratorid_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Id</a>
@@ -318,8 +317,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portranges_csharp">
 <a href="#portranges_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -328,8 +326,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Listener<wbr>Port<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -338,8 +335,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenercertificate">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Listener<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientaffinity_csharp">
 <a href="#clientaffinity_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -350,8 +346,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -360,8 +355,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -370,8 +364,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -380,8 +373,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_csharp">
 <a href="#proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -390,13 +382,11 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratorid_go">
 <a href="#acceleratorid_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Id</a>
@@ -405,8 +395,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portranges_go">
 <a href="#portranges_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -415,8 +404,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -425,8 +413,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenercertificate">[]Listener<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientaffinity_go">
 <a href="#clientaffinity_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -437,8 +424,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -447,8 +433,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -457,8 +442,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -467,8 +451,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_go">
 <a href="#proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -477,13 +460,11 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratorid_nodejs">
 <a href="#acceleratorid_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Id</a>
@@ -492,8 +473,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portranges_nodejs">
 <a href="#portranges_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Ranges</a>
@@ -502,8 +482,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -512,8 +491,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenercertificate">Listener<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientaffinity_nodejs">
 <a href="#clientaffinity_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity</a>
@@ -524,8 +502,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -534,8 +511,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -544,8 +520,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -554,8 +529,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_nodejs">
 <a href="#proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
@@ -564,13 +538,11 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accelerator_id_python">
 <a href="#accelerator_id_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>id</a>
@@ -579,8 +551,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_ranges_python">
 <a href="#port_ranges_python" style="color: inherit; text-decoration: inherit;">port_<wbr>ranges</a>
@@ -589,8 +560,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenerportrange">Sequence[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -599,8 +569,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#listenercertificate">Sequence[Listener<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_affinity_python">
 <a href="#client_affinity_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity</a>
@@ -611,8 +580,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -621,8 +589,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -631,8 +598,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -641,8 +607,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_protocol_python">
 <a href="#proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
@@ -651,8 +616,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -663,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -682,13 +644,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -696,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -706,13 +665,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -720,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -730,13 +686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -744,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -754,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -882,8 +834,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorid_csharp">
 <a href="#state_acceleratorid_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Id</a>
@@ -892,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_csharp">
 <a href="#state_certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -902,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenercertificate">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Listener<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientaffinity_csharp">
 <a href="#state_clientaffinity_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -914,8 +863,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -924,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -934,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portranges_csharp">
 <a href="#state_portranges_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -944,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ga.<wbr>Inputs.<wbr>Listener<wbr>Port<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -954,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_csharp">
 <a href="#state_proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -964,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -974,13 +917,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorid_go">
 <a href="#state_acceleratorid_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Id</a>
@@ -989,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_go">
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -999,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenercertificate">[]Listener<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientaffinity_go">
 <a href="#state_clientaffinity_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity</a>
@@ -1011,8 +950,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1021,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1031,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portranges_go">
 <a href="#state_portranges_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
@@ -1041,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1051,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_go">
 <a href="#state_proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -1061,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1071,13 +1004,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorid_nodejs">
 <a href="#state_acceleratorid_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Id</a>
@@ -1086,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_nodejs">
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1096,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenercertificate">Listener<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientaffinity_nodejs">
 <a href="#state_clientaffinity_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity</a>
@@ -1108,8 +1037,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1118,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1128,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portranges_nodejs">
 <a href="#state_portranges_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Ranges</a>
@@ -1138,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">Listener<wbr>Port<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1148,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_nodejs">
 <a href="#state_proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
@@ -1158,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1168,13 +1091,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accelerator_id_python">
 <a href="#state_accelerator_id_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>id</a>
@@ -1183,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_python">
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1193,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenercertificate">Sequence[Listener<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The certificates of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_affinity_python">
 <a href="#state_client_affinity_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity</a>
@@ -1205,8 +1124,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `NONE`: client affinity is not maintained, that is, connection requests from the same client cannot always be directed to the same terminal node.
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1215,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1225,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_ranges_python">
 <a href="#state_port_ranges_python" style="color: inherit; text-decoration: inherit;">port_<wbr>ranges</a>
@@ -1235,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#listenerportrange">Sequence[Listener<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The portRanges of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1245,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_protocol_python">
 <a href="#state_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
@@ -1255,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The proxy protocol of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1265,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1281,8 +1193,7 @@ The following state arguments are supported:
 <h4 id="listenercertificate">Listener<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1291,13 +1202,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1306,13 +1215,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1321,13 +1228,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1336,15 +1241,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="listenerportrange">Listener<wbr>Port<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -1353,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1363,13 +1265,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -1378,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1388,13 +1287,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
@@ -1403,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -1413,13 +1309,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
@@ -1428,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
@@ -1438,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end listening port used to receive requests and forward them to terminal nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

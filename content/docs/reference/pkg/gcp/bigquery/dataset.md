@@ -178,8 +178,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -188,8 +187,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesses_csharp">
 <a href="#accesses_csharp" style="color: inherit; text-decoration: inherit;">Accesses</a>
@@ -199,8 +197,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultencryptionconfiguration_csharp">
 <a href="#defaultencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
@@ -212,8 +209,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpartitionexpirationms_csharp">
 <a href="#defaultpartitionexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
@@ -223,8 +219,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttableexpirationms_csharp">
 <a href="#defaulttableexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
@@ -234,8 +229,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletecontentsondestroy_csharp">
 <a href="#deletecontentsondestroy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
@@ -246,8 +240,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +249,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -266,8 +258,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -277,8 +268,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -288,8 +278,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -299,13 +288,11 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -314,8 +301,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesses_go">
 <a href="#accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
@@ -325,8 +311,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultencryptionconfiguration_go">
 <a href="#defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
@@ -338,8 +323,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpartitionexpirationms_go">
 <a href="#defaultpartitionexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
@@ -349,8 +333,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttableexpirationms_go">
 <a href="#defaulttableexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
@@ -360,8 +343,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletecontentsondestroy_go">
 <a href="#deletecontentsondestroy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
@@ -372,8 +354,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -382,8 +363,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -392,8 +372,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -403,8 +382,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -414,8 +392,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -425,13 +402,11 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -440,8 +415,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesses_nodejs">
 <a href="#accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
@@ -451,8 +425,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultencryptionconfiguration_nodejs">
 <a href="#defaultencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Configuration</a>
@@ -464,8 +437,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpartitionexpirationms_nodejs">
 <a href="#defaultpartitionexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
@@ -475,8 +447,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttableexpirationms_nodejs">
 <a href="#defaulttableexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Table<wbr>Expiration<wbr>Ms</a>
@@ -486,8 +457,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletecontentsondestroy_nodejs">
 <a href="#deletecontentsondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Contents<wbr>On<wbr>Destroy</a>
@@ -498,8 +468,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -508,8 +477,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -518,8 +486,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -529,8 +496,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -540,8 +506,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -551,13 +516,11 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -566,8 +529,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesses_python">
 <a href="#accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
@@ -577,8 +539,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_encryption_configuration_python">
 <a href="#default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
@@ -590,8 +551,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_partition_expiration_ms_python">
 <a href="#default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
@@ -601,8 +561,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_table_expiration_ms_python">
 <a href="#default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
@@ -612,8 +571,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_contents_on_destroy_python">
 <a href="#delete_contents_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>contents_<wbr>on_<wbr>destroy</a>
@@ -624,8 +582,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -634,8 +591,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -644,8 +600,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -655,8 +610,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -666,8 +620,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -677,8 +630,7 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -689,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -699,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -709,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -718,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -728,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -738,13 +685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -753,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -763,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -772,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -782,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -792,13 +733,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -807,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -817,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -836,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -846,13 +781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -861,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -871,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -880,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -890,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -900,8 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1028,8 +956,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesses_csharp">
 <a href="#state_accesses_csharp" style="color: inherit; text-decoration: inherit;">Accesses</a>
@@ -1039,8 +966,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_csharp">
 <a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1049,8 +975,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasetid_csharp">
 <a href="#state_datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -1059,8 +984,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultencryptionconfiguration_csharp">
 <a href="#state_defaultencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
@@ -1072,8 +996,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpartitionexpirationms_csharp">
 <a href="#state_defaultpartitionexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
@@ -1083,8 +1006,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttableexpirationms_csharp">
 <a href="#state_defaulttableexpirationms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
@@ -1094,8 +1016,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletecontentsondestroy_csharp">
 <a href="#state_deletecontentsondestroy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
@@ -1106,8 +1027,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1116,8 +1036,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1126,8 +1045,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_csharp">
 <a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1136,8 +1054,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1147,8 +1064,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_csharp">
 <a href="#state_lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1157,8 +1073,7 @@ organize and group your datasets
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1168,8 +1083,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1179,8 +1093,7 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1189,13 +1102,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesses_go">
 <a href="#state_accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
@@ -1205,8 +1116,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_go">
 <a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1215,8 +1125,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasetid_go">
 <a href="#state_datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -1225,8 +1134,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultencryptionconfiguration_go">
 <a href="#state_defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
@@ -1238,8 +1146,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpartitionexpirationms_go">
 <a href="#state_defaultpartitionexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
@@ -1249,8 +1156,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttableexpirationms_go">
 <a href="#state_defaulttableexpirationms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Table<wbr>Expiration<wbr>Ms</a>
@@ -1260,8 +1166,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletecontentsondestroy_go">
 <a href="#state_deletecontentsondestroy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Contents<wbr>On<wbr>Destroy</a>
@@ -1272,8 +1177,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1282,8 +1186,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1292,8 +1195,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_go">
 <a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -1302,8 +1204,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1313,8 +1214,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_go">
 <a href="#state_lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1323,8 +1223,7 @@ organize and group your datasets
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1334,8 +1233,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1345,8 +1243,7 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1355,13 +1252,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesses_nodejs">
 <a href="#state_accesses_nodejs" style="color: inherit; text-decoration: inherit;">accesses</a>
@@ -1371,8 +1266,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_nodejs">
 <a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -1381,8 +1275,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasetid_nodejs">
 <a href="#state_datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -1391,8 +1284,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultencryptionconfiguration_nodejs">
 <a href="#state_defaultencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Configuration</a>
@@ -1404,8 +1296,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpartitionexpirationms_nodejs">
 <a href="#state_defaultpartitionexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Partition<wbr>Expiration<wbr>Ms</a>
@@ -1415,8 +1306,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttableexpirationms_nodejs">
 <a href="#state_defaulttableexpirationms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Table<wbr>Expiration<wbr>Ms</a>
@@ -1426,8 +1316,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletecontentsondestroy_nodejs">
 <a href="#state_deletecontentsondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Contents<wbr>On<wbr>Destroy</a>
@@ -1438,8 +1327,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1448,8 +1336,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1458,8 +1345,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_nodejs">
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -1468,8 +1354,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1479,8 +1364,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_nodejs">
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -1489,8 +1373,7 @@ organize and group your datasets
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1500,8 +1383,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1511,8 +1393,7 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1521,13 +1402,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesses_python">
 <a href="#state_accesses_python" style="color: inherit; text-decoration: inherit;">accesses</a>
@@ -1537,8 +1416,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_time_python">
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -1547,8 +1425,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this dataset was created, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_id_python">
 <a href="#state_dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -1557,8 +1434,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_encryption_configuration_python">
 <a href="#state_default_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>configuration</a>
@@ -1570,8 +1446,7 @@ Structure is documented below.
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_partition_expiration_ms_python">
 <a href="#state_default_partition_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>partition_<wbr>expiration_<wbr>ms</a>
@@ -1581,8 +1456,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_table_expiration_ms_python">
 <a href="#state_default_table_expiration_ms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>table_<wbr>expiration_<wbr>ms</a>
@@ -1592,8 +1466,7 @@ the dataset, in milliseconds.
     </dt>
     <dd>{{% md %}}The default lifetime of all tables in the dataset, in milliseconds.
 The minimum value is 3600000 milliseconds (one hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_contents_on_destroy_python">
 <a href="#state_delete_contents_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>contents_<wbr>on_<wbr>destroy</a>
@@ -1604,8 +1477,7 @@ The minimum value is 3600000 milliseconds (one hour).
     <dd>{{% md %}}If set to `true`, delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1614,8 +1486,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-friendly description of the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1624,8 +1495,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_friendly_name_python">
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -1634,8 +1504,7 @@ destroying the resource will fail if tables are present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1645,8 +1514,7 @@ destroying the resource will fail if tables are present.
     </dt>
     <dd>{{% md %}}The labels associated with this dataset. You can use these to
 organize and group your datasets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_time_python">
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1655,8 +1523,7 @@ organize and group your datasets
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1666,8 +1533,7 @@ organize and group your datasets
     </dt>
     <dd>{{% md %}}The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1677,8 +1543,7 @@ See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1687,8 +1552,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1703,8 +1567,7 @@ If it is not provided, the provider project is used.
 <h4 id="datasetaccess">Dataset<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1714,8 +1577,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbyemail_csharp">
 <a href="#groupbyemail_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
@@ -1724,8 +1586,7 @@ domain specified will be granted the specified access
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An email address of a Google Group to grant access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1738,8 +1599,7 @@ member of the access object. Basic, predefined, and custom roles
 are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specialgroup_csharp">
 <a href="#specialgroup_csharp" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
@@ -1748,8 +1608,7 @@ are swapped by the API to their basic counterparts. See
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A special group to grant access to. Possible values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userbyemail_csharp">
 <a href="#userbyemail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
@@ -1759,8 +1618,7 @@ are swapped by the API to their basic counterparts. See
     </dt>
     <dd>{{% md %}}An email address of a user to grant access to. For example:
 fred@example.com
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="view_csharp">
 <a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
@@ -1774,13 +1632,11 @@ this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1790,8 +1646,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbyemail_go">
 <a href="#groupbyemail_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Email</a>
@@ -1800,8 +1655,7 @@ domain specified will be granted the specified access
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An email address of a Google Group to grant access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1814,8 +1668,7 @@ member of the access object. Basic, predefined, and custom roles
 are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specialgroup_go">
 <a href="#specialgroup_go" style="color: inherit; text-decoration: inherit;">Special<wbr>Group</a>
@@ -1824,8 +1677,7 @@ are swapped by the API to their basic counterparts. See
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A special group to grant access to. Possible values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userbyemail_go">
 <a href="#userbyemail_go" style="color: inherit; text-decoration: inherit;">User<wbr>By<wbr>Email</a>
@@ -1835,8 +1687,7 @@ are swapped by the API to their basic counterparts. See
     </dt>
     <dd>{{% md %}}An email address of a user to grant access to. For example:
 fred@example.com
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="view_go">
 <a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
@@ -1850,13 +1701,11 @@ this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1866,8 +1715,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbyemail_nodejs">
 <a href="#groupbyemail_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Email</a>
@@ -1876,8 +1724,7 @@ domain specified will be granted the specified access
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An email address of a Google Group to grant access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1890,8 +1737,7 @@ member of the access object. Basic, predefined, and custom roles
 are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specialgroup_nodejs">
 <a href="#specialgroup_nodejs" style="color: inherit; text-decoration: inherit;">special<wbr>Group</a>
@@ -1900,8 +1746,7 @@ are swapped by the API to their basic counterparts. See
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A special group to grant access to. Possible values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userbyemail_nodejs">
 <a href="#userbyemail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>By<wbr>Email</a>
@@ -1911,8 +1756,7 @@ are swapped by the API to their basic counterparts. See
     </dt>
     <dd>{{% md %}}An email address of a user to grant access to. For example:
 fred@example.com
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="view_nodejs">
 <a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
@@ -1926,13 +1770,11 @@ this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1942,8 +1784,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_by_email_python">
 <a href="#group_by_email_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>email</a>
@@ -1952,8 +1793,7 @@ domain specified will be granted the specified access
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An email address of a Google Group to grant access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1966,8 +1806,7 @@ member of the access object. Basic, predefined, and custom roles
 are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="special_group_python">
 <a href="#special_group_python" style="color: inherit; text-decoration: inherit;">special_<wbr>group</a>
@@ -1976,8 +1815,7 @@ are swapped by the API to their basic counterparts. See
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A special group to grant access to. Possible values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_by_email_python">
 <a href="#user_by_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>by_<wbr>email</a>
@@ -1987,8 +1825,7 @@ are swapped by the API to their basic counterparts. See
     </dt>
     <dd>{{% md %}}An email address of a user to grant access to. For example:
 fred@example.com
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="view_python">
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
@@ -2002,15 +1839,13 @@ this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
 needs to be granted again via an update operation.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetaccessview">Dataset<wbr>Access<wbr>View</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -2019,8 +1854,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2029,8 +1863,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
@@ -2041,13 +1874,11 @@ Structure is documented below.
     <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -2056,8 +1887,7 @@ is 1,024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2066,8 +1896,7 @@ is 1,024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
@@ -2078,13 +1907,11 @@ is 1,024 characters.
     <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -2093,8 +1920,7 @@ is 1,024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -2103,8 +1929,7 @@ is 1,024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
@@ -2115,13 +1940,11 @@ is 1,024 characters.
     <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -2130,8 +1953,7 @@ is 1,024 characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2140,8 +1962,7 @@ is 1,024 characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
@@ -2152,15 +1973,13 @@ is 1,024 characters.
     <dd>{{% md %}}The ID of the table. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2171,13 +1990,11 @@ is 1,024 characters.
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2188,13 +2005,11 @@ access to this encryption key.
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -2205,13 +2020,11 @@ access to this encryption key.
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -2222,8 +2035,7 @@ access to this encryption key.
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

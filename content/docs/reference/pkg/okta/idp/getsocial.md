@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -156,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the social idp to retrieve, conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -166,13 +164,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the social idp to retrieve, conflicts with `id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -181,8 +177,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the social idp to retrieve, conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -191,13 +186,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the social idp to retrieve, conflicts with `id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -206,8 +199,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the social idp to retrieve, conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -216,13 +208,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the social idp to retrieve, conflicts with `id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -231,8 +221,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the social idp to retrieve, conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -241,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the social idp to retrieve, conflicts with `id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -255,8 +243,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountlinkaction_csharp">
 <a href="#accountlinkaction_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Action</a>
@@ -265,8 +252,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountlinkgroupincludes_csharp">
 <a href="#accountlinkgroupincludes_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -275,8 +261,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationbinding_csharp">
 <a href="#authorizationbinding_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Binding</a>
@@ -285,8 +270,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an authorization request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationurl_csharp">
 <a href="#authorizationurl_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Url</a>
@@ -295,8 +279,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -305,8 +288,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -315,8 +297,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprovisionedaction_csharp">
 <a href="#deprovisionedaction_csharp" style="color: inherit; text-decoration: inherit;">Deprovisioned<wbr>Action</a>
@@ -325,8 +306,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsaction_csharp">
 <a href="#groupsaction_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Action</a>
@@ -335,8 +315,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsassignments_csharp">
 <a href="#groupsassignments_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Assignments</a>
@@ -345,8 +324,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsattribute_csharp">
 <a href="#groupsattribute_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Attribute</a>
@@ -355,8 +333,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsfilters_csharp">
 <a href="#groupsfilters_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Filters</a>
@@ -365,8 +342,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuermode_csharp">
 <a href="#issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -375,8 +351,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxclockskew_csharp">
 <a href="#maxclockskew_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Clock<wbr>Skew</a>
@@ -385,8 +360,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profilemaster_csharp">
 <a href="#profilemaster_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Master</a>
@@ -395,8 +369,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocoltype_csharp">
 <a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
@@ -405,8 +378,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of protocol to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningaction_csharp">
 <a href="#provisioningaction_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Action</a>
@@ -415,8 +387,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -425,8 +396,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The scopes of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -435,8 +405,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subjectmatchattribute_csharp">
 <a href="#subjectmatchattribute_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Attribute</a>
@@ -445,8 +414,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subjectmatchtype_csharp">
 <a href="#subjectmatchtype_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Type</a>
@@ -455,8 +423,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="suspendedaction_csharp">
 <a href="#suspendedaction_csharp" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Action</a>
@@ -465,8 +432,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenbinding_csharp">
 <a href="#tokenbinding_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Binding</a>
@@ -475,8 +441,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making a token request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenurl_csharp">
 <a href="#tokenurl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
@@ -485,8 +450,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -495,8 +459,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Social IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usernametemplate_csharp">
 <a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
@@ -505,8 +468,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -514,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -523,13 +484,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountlinkaction_go">
 <a href="#accountlinkaction_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Action</a>
@@ -538,8 +497,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountlinkgroupincludes_go">
 <a href="#accountlinkgroupincludes_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -548,8 +506,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationbinding_go">
 <a href="#authorizationbinding_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Binding</a>
@@ -558,8 +515,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an authorization request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationurl_go">
 <a href="#authorizationurl_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Url</a>
@@ -568,8 +524,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -578,8 +533,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -588,8 +542,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprovisionedaction_go">
 <a href="#deprovisionedaction_go" style="color: inherit; text-decoration: inherit;">Deprovisioned<wbr>Action</a>
@@ -598,8 +551,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsaction_go">
 <a href="#groupsaction_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Action</a>
@@ -608,8 +560,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsassignments_go">
 <a href="#groupsassignments_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Assignments</a>
@@ -618,8 +569,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsattribute_go">
 <a href="#groupsattribute_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Attribute</a>
@@ -628,8 +578,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsfilters_go">
 <a href="#groupsfilters_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Filters</a>
@@ -638,8 +587,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuermode_go">
 <a href="#issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -648,8 +596,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxclockskew_go">
 <a href="#maxclockskew_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Clock<wbr>Skew</a>
@@ -658,8 +605,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profilemaster_go">
 <a href="#profilemaster_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Master</a>
@@ -668,8 +614,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocoltype_go">
 <a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
@@ -678,8 +623,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of protocol to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningaction_go">
 <a href="#provisioningaction_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Action</a>
@@ -688,8 +632,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -698,8 +641,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The scopes of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -708,8 +650,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subjectmatchattribute_go">
 <a href="#subjectmatchattribute_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Attribute</a>
@@ -718,8 +659,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subjectmatchtype_go">
 <a href="#subjectmatchtype_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Match<wbr>Type</a>
@@ -728,8 +668,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="suspendedaction_go">
 <a href="#suspendedaction_go" style="color: inherit; text-decoration: inherit;">Suspended<wbr>Action</a>
@@ -738,8 +677,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenbinding_go">
 <a href="#tokenbinding_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Binding</a>
@@ -748,8 +686,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making a token request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenurl_go">
 <a href="#tokenurl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
@@ -758,8 +695,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -768,8 +704,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Social IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usernametemplate_go">
 <a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Template</a>
@@ -778,8 +713,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -787,8 +721,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -796,13 +729,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountlinkaction_nodejs">
 <a href="#accountlinkaction_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Action</a>
@@ -811,8 +742,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accountlinkgroupincludes_nodejs">
 <a href="#accountlinkgroupincludes_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Link<wbr>Group<wbr>Includes</a>
@@ -821,8 +751,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationbinding_nodejs">
 <a href="#authorizationbinding_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Binding</a>
@@ -831,8 +760,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making an authorization request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationurl_nodejs">
 <a href="#authorizationurl_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Url</a>
@@ -841,8 +769,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -851,8 +778,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -861,8 +787,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprovisionedaction_nodejs">
 <a href="#deprovisionedaction_nodejs" style="color: inherit; text-decoration: inherit;">deprovisioned<wbr>Action</a>
@@ -871,8 +796,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsaction_nodejs">
 <a href="#groupsaction_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Action</a>
@@ -881,8 +805,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsassignments_nodejs">
 <a href="#groupsassignments_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Assignments</a>
@@ -891,8 +814,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsattribute_nodejs">
 <a href="#groupsattribute_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Attribute</a>
@@ -901,8 +823,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupsfilters_nodejs">
 <a href="#groupsfilters_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Filters</a>
@@ -911,8 +832,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuermode_nodejs">
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
@@ -921,8 +841,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxclockskew_nodejs">
 <a href="#maxclockskew_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Clock<wbr>Skew</a>
@@ -931,8 +850,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profilemaster_nodejs">
 <a href="#profilemaster_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Master</a>
@@ -941,8 +859,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocoltype_nodejs">
 <a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
@@ -951,8 +868,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of protocol to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningaction_nodejs">
 <a href="#provisioningaction_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Action</a>
@@ -961,8 +877,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -971,8 +886,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The scopes of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -981,8 +895,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subjectmatchattribute_nodejs">
 <a href="#subjectmatchattribute_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Attribute</a>
@@ -991,8 +904,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subjectmatchtype_nodejs">
 <a href="#subjectmatchtype_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Match<wbr>Type</a>
@@ -1001,8 +913,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="suspendedaction_nodejs">
 <a href="#suspendedaction_nodejs" style="color: inherit; text-decoration: inherit;">suspended<wbr>Action</a>
@@ -1011,8 +922,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenbinding_nodejs">
 <a href="#tokenbinding_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Binding</a>
@@ -1021,8 +931,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of making a token request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenurl_nodejs">
 <a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
@@ -1031,8 +940,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1041,8 +949,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Social IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usernametemplate_nodejs">
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Template</a>
@@ -1051,8 +958,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1060,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1069,13 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="account_link_action_python">
 <a href="#account_link_action_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>action</a>
@@ -1084,8 +987,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the account linking action for an IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="account_link_group_includes_python">
 <a href="#account_link_group_includes_python" style="color: inherit; text-decoration: inherit;">account_<wbr>link_<wbr>group_<wbr>includes</a>
@@ -1094,8 +996,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Group memberships to determine link candidates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_binding_python">
 <a href="#authorization_binding_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>binding</a>
@@ -1104,8 +1005,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method of making an authorization request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_url_python">
 <a href="#authorization_url_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>url</a>
@@ -1114,8 +1014,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1124,8 +1023,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -1134,8 +1032,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client secret issued by AS for the Okta IdP instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprovisioned_action_python">
 <a href="#deprovisioned_action_python" style="color: inherit; text-decoration: inherit;">deprovisioned_<wbr>action</a>
@@ -1144,8 +1041,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action for a previously deprovisioned IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groups_action_python">
 <a href="#groups_action_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>action</a>
@@ -1154,8 +1050,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning action for IdP user's group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groups_assignments_python">
 <a href="#groups_assignments_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>assignments</a>
@@ -1164,8 +1059,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Okta Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groups_attribute_python">
 <a href="#groups_attribute_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>attribute</a>
@@ -1174,8 +1068,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IdP user profile attribute name for an array value that contains group memberships.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groups_filters_python">
 <a href="#groups_filters_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>filters</a>
@@ -1184,8 +1077,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Whitelist of Okta Group identifiers.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_mode_python">
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
@@ -1194,8 +1086,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_clock_skew_python">
 <a href="#max_clock_skew_python" style="color: inherit; text-decoration: inherit;">max_<wbr>clock_<wbr>skew</a>
@@ -1204,8 +1095,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowable clock-skew when processing messages from the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profile_master_python">
 <a href="#profile_master_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>master</a>
@@ -1214,8 +1104,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the IdP should act as a source of truth for user profile attributes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_type_python">
 <a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
@@ -1224,8 +1113,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of protocol to use.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_action_python">
 <a href="#provisioning_action_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>action</a>
@@ -1234,8 +1122,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning action for an IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1244,8 +1131,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The scopes of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1254,8 +1140,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subject_match_attribute_python">
 <a href="#subject_match_attribute_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>attribute</a>
@@ -1264,8 +1149,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Okta user profile attribute for matching transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subject_match_type_python">
 <a href="#subject_match_type_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>match_<wbr>type</a>
@@ -1274,8 +1158,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="suspended_action_python">
 <a href="#suspended_action_python" style="color: inherit; text-decoration: inherit;">suspended_<wbr>action</a>
@@ -1284,8 +1167,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action for a previously suspended IdP user during authentication.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_binding_python">
 <a href="#token_binding_python" style="color: inherit; text-decoration: inherit;">token_<wbr>binding</a>
@@ -1294,8 +1176,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method of making a token request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_url_python">
 <a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
@@ -1304,8 +1185,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1314,8 +1194,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Social IdP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="username_template_python">
 <a href="#username_template_python" style="color: inherit; text-decoration: inherit;">username_<wbr>template</a>
@@ -1324,8 +1203,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Okta EL Expression to generate or transform a unique username for the IdP user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1333,8 +1211,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1342,8 +1219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

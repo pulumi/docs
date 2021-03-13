@@ -313,8 +313,7 @@ The QuotaV2 resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -324,8 +323,7 @@ The QuotaV2 resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_csharp">
 <a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floatingip</a>
@@ -335,8 +333,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -346,8 +343,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -357,8 +353,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rbacpolicy_csharp">
 <a href="#rbacpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rbac<wbr>Policy</a>
@@ -368,8 +363,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -380,8 +374,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -391,8 +384,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroup_csharp">
 <a href="#securitygroup_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
@@ -402,8 +394,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygrouprule_csharp">
 <a href="#securitygrouprule_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Rule</a>
@@ -413,8 +404,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -424,8 +414,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpool_csharp">
 <a href="#subnetpool_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool</a>
@@ -435,13 +424,11 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -451,8 +438,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_go">
 <a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floatingip</a>
@@ -462,8 +448,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -473,8 +458,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -484,8 +468,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rbacpolicy_go">
 <a href="#rbacpolicy_go" style="color: inherit; text-decoration: inherit;">Rbac<wbr>Policy</a>
@@ -495,8 +478,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -507,8 +489,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -518,8 +499,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroup_go">
 <a href="#securitygroup_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
@@ -529,8 +509,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygrouprule_go">
 <a href="#securitygrouprule_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Rule</a>
@@ -540,8 +519,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -551,8 +529,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpool_go">
 <a href="#subnetpool_go" style="color: inherit; text-decoration: inherit;">Subnetpool</a>
@@ -562,13 +539,11 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -578,8 +553,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_nodejs">
 <a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floatingip</a>
@@ -589,8 +563,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -600,8 +573,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -611,8 +583,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rbacpolicy_nodejs">
 <a href="#rbacpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rbac<wbr>Policy</a>
@@ -622,8 +593,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -634,8 +604,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -645,8 +614,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroup_nodejs">
 <a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
@@ -656,8 +624,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygrouprule_nodejs">
 <a href="#securitygrouprule_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Rule</a>
@@ -667,8 +634,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -678,8 +644,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpool_nodejs">
 <a href="#subnetpool_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool</a>
@@ -689,13 +654,11 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -705,8 +668,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_python">
 <a href="#floatingip_python" style="color: inherit; text-decoration: inherit;">floatingip</a>
@@ -716,8 +678,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -727,8 +688,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -738,8 +698,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rbac_policy_python">
 <a href="#rbac_policy_python" style="color: inherit; text-decoration: inherit;">rbac_<wbr>policy</a>
@@ -749,8 +708,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -761,8 +719,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -772,8 +729,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_python">
 <a href="#security_group_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group</a>
@@ -783,8 +739,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_rule_python">
 <a href="#security_group_rule_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>rule</a>
@@ -794,8 +749,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -805,8 +759,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpool_python">
 <a href="#subnetpool_python" style="color: inherit; text-decoration: inherit;">subnetpool</a>
@@ -816,8 +769,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -828,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -837,13 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -851,13 +800,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -865,13 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -879,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1007,8 +951,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_csharp">
 <a href="#state_floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floatingip</a>
@@ -1018,8 +961,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1029,8 +971,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1040,8 +981,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1051,8 +991,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rbacpolicy_csharp">
 <a href="#state_rbacpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rbac<wbr>Policy</a>
@@ -1062,8 +1001,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1074,8 +1012,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_csharp">
 <a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1085,8 +1022,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroup_csharp">
 <a href="#state_securitygroup_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
@@ -1096,8 +1032,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygrouprule_csharp">
 <a href="#state_securitygrouprule_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Rule</a>
@@ -1107,8 +1042,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_csharp">
 <a href="#state_subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1118,8 +1052,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpool_csharp">
 <a href="#state_subnetpool_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool</a>
@@ -1129,13 +1062,11 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_go">
 <a href="#state_floatingip_go" style="color: inherit; text-decoration: inherit;">Floatingip</a>
@@ -1145,8 +1076,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1156,8 +1086,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1167,8 +1096,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1178,8 +1106,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rbacpolicy_go">
 <a href="#state_rbacpolicy_go" style="color: inherit; text-decoration: inherit;">Rbac<wbr>Policy</a>
@@ -1189,8 +1116,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1201,8 +1127,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_go">
 <a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1212,8 +1137,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroup_go">
 <a href="#state_securitygroup_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
@@ -1223,8 +1147,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygrouprule_go">
 <a href="#state_securitygrouprule_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Rule</a>
@@ -1234,8 +1157,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_go">
 <a href="#state_subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1245,8 +1167,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpool_go">
 <a href="#state_subnetpool_go" style="color: inherit; text-decoration: inherit;">Subnetpool</a>
@@ -1256,13 +1177,11 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_nodejs">
 <a href="#state_floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floatingip</a>
@@ -1272,8 +1191,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1283,8 +1201,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1294,8 +1211,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1305,8 +1221,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rbacpolicy_nodejs">
 <a href="#state_rbacpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rbac<wbr>Policy</a>
@@ -1316,8 +1231,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1328,8 +1242,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_nodejs">
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1339,8 +1252,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroup_nodejs">
 <a href="#state_securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
@@ -1350,8 +1262,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygrouprule_nodejs">
 <a href="#state_securitygrouprule_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Rule</a>
@@ -1361,8 +1272,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_nodejs">
 <a href="#state_subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1372,8 +1282,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpool_nodejs">
 <a href="#state_subnetpool_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool</a>
@@ -1383,13 +1292,11 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_python">
 <a href="#state_floatingip_python" style="color: inherit; text-decoration: inherit;">floatingip</a>
@@ -1399,8 +1306,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1410,8 +1316,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1421,8 +1326,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1432,8 +1336,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rbac_policy_python">
 <a href="#state_rbac_policy_python" style="color: inherit; text-decoration: inherit;">rbac_<wbr>policy</a>
@@ -1443,8 +1346,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1455,8 +1357,7 @@ Changing this updates the existing quota.
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
 creates new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_python">
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1466,8 +1367,7 @@ creates new quota.
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_python">
 <a href="#state_security_group_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group</a>
@@ -1477,8 +1377,7 @@ existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_rule_python">
 <a href="#state_security_group_rule_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>rule</a>
@@ -1488,8 +1387,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_python">
 <a href="#state_subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1499,8 +1397,7 @@ Changing this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpool_python">
 <a href="#state_subnetpool_python" style="color: inherit; text-decoration: inherit;">subnetpool</a>
@@ -1510,8 +1407,7 @@ this updates the existing quota.
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

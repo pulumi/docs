@@ -170,8 +170,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogname_csharp">
 <a href="#catalogname_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Name</a>
@@ -180,8 +179,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -190,8 +188,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -200,8 +197,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterapptarget">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatename_csharp">
 <a href="#templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -210,8 +206,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -220,8 +215,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_csharp">
 <a href="#answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -230,8 +224,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -240,8 +233,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -250,8 +242,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -260,8 +251,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revisionhistorylimit_csharp">
 <a href="#revisionhistorylimit_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>History<wbr>Limit</a>
@@ -270,8 +260,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revisionid_csharp">
 <a href="#revisionid_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Id</a>
@@ -280,8 +269,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateversion_csharp">
 <a href="#templateversion_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Version</a>
@@ -290,8 +278,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradestrategy_csharp">
 <a href="#upgradestrategy_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
@@ -300,8 +287,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_csharp">
 <a href="#wait_csharp" style="color: inherit; text-decoration: inherit;">Wait</a>
@@ -310,13 +296,11 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogname_go">
 <a href="#catalogname_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Name</a>
@@ -325,8 +309,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -335,8 +318,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -345,8 +327,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterapptarget">[]Multi<wbr>Cluster<wbr>App<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatename_go">
 <a href="#templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -355,8 +336,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -365,8 +345,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_go">
 <a href="#answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -375,8 +354,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappanswer">[]Multi<wbr>Cluster<wbr>App<wbr>Answer</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -385,8 +363,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -395,8 +372,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappmember">[]Multi<wbr>Cluster<wbr>App<wbr>Member</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -405,8 +381,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revisionhistorylimit_go">
 <a href="#revisionhistorylimit_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>History<wbr>Limit</a>
@@ -415,8 +390,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revisionid_go">
 <a href="#revisionid_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Id</a>
@@ -425,8 +399,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateversion_go">
 <a href="#templateversion_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Version</a>
@@ -435,8 +408,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradestrategy_go">
 <a href="#upgradestrategy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
@@ -445,8 +417,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_go">
 <a href="#wait_go" style="color: inherit; text-decoration: inherit;">Wait</a>
@@ -455,13 +426,11 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogname_nodejs">
 <a href="#catalogname_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Name</a>
@@ -470,8 +439,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -480,8 +448,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -490,8 +457,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatename_nodejs">
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
@@ -500,8 +466,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -510,8 +475,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_nodejs">
 <a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -520,8 +484,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -530,8 +493,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -540,8 +502,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -550,8 +511,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revisionhistorylimit_nodejs">
 <a href="#revisionhistorylimit_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>History<wbr>Limit</a>
@@ -560,8 +520,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revisionid_nodejs">
 <a href="#revisionid_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Id</a>
@@ -570,8 +529,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateversion_nodejs">
 <a href="#templateversion_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version</a>
@@ -580,8 +538,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradestrategy_nodejs">
 <a href="#upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
@@ -590,8 +547,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_nodejs">
 <a href="#wait_nodejs" style="color: inherit; text-decoration: inherit;">wait</a>
@@ -600,13 +556,11 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_name_python">
 <a href="#catalog_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>name</a>
@@ -615,8 +569,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -625,8 +578,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -635,8 +587,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterapptarget">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_name_python">
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
@@ -645,8 +596,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -655,8 +605,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="answers_python">
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -665,8 +614,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappanswer">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -675,8 +623,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -685,8 +632,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappmember">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -695,8 +641,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_history_limit_python">
 <a href="#revision_history_limit_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>history_<wbr>limit</a>
@@ -705,8 +650,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_id_python">
 <a href="#revision_id_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>id</a>
@@ -715,8 +659,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_version_python">
 <a href="#template_version_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version</a>
@@ -725,8 +668,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_strategy_python">
 <a href="#upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
@@ -735,8 +677,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_python">
 <a href="#wait_python" style="color: inherit; text-decoration: inherit;">wait</a>
@@ -745,8 +686,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -757,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -766,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templateversionid_csharp">
 <a href="#templateversionid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Version<wbr>Id</a>
@@ -776,13 +714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -790,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templateversionid_go">
 <a href="#templateversionid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Version<wbr>Id</a>
@@ -800,13 +735,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -814,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templateversionid_nodejs">
 <a href="#templateversionid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version<wbr>Id</a>
@@ -824,13 +756,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -838,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="template_version_id_python">
 <a href="#template_version_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version_<wbr>id</a>
@@ -848,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -976,8 +904,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -986,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_answers_csharp">
 <a href="#state_answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -996,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappanswer">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogname_csharp">
 <a href="#state_catalogname_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Name</a>
@@ -1006,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1016,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_csharp">
 <a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -1026,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappmember">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1036,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionhistorylimit_csharp">
 <a href="#state_revisionhistorylimit_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>History<wbr>Limit</a>
@@ -1046,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionid_csharp">
 <a href="#state_revisionid_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Id</a>
@@ -1056,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1066,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_csharp">
 <a href="#state_targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -1076,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterapptarget">List&lt;Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatename_csharp">
 <a href="#state_templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -1086,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateversion_csharp">
 <a href="#state_templateversion_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Version</a>
@@ -1096,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateversionid_csharp">
 <a href="#state_templateversionid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Version<wbr>Id</a>
@@ -1106,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradestrategy_csharp">
 <a href="#state_upgradestrategy_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
@@ -1116,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_csharp">
 <a href="#state_wait_csharp" style="color: inherit; text-decoration: inherit;">Wait</a>
@@ -1126,13 +1039,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1141,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_answers_go">
 <a href="#state_answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
@@ -1151,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappanswer">[]Multi<wbr>Cluster<wbr>App<wbr>Answer</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogname_go">
 <a href="#state_catalogname_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Name</a>
@@ -1161,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1171,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_go">
 <a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -1181,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappmember">[]Multi<wbr>Cluster<wbr>App<wbr>Member</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1191,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionhistorylimit_go">
 <a href="#state_revisionhistorylimit_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>History<wbr>Limit</a>
@@ -1201,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionid_go">
 <a href="#state_revisionid_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Id</a>
@@ -1211,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1221,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_go">
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -1231,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterapptarget">[]Multi<wbr>Cluster<wbr>App<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatename_go">
 <a href="#state_templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -1241,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateversion_go">
 <a href="#state_templateversion_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Version</a>
@@ -1251,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateversionid_go">
 <a href="#state_templateversionid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Version<wbr>Id</a>
@@ -1261,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradestrategy_go">
 <a href="#state_upgradestrategy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Strategy</a>
@@ -1271,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_go">
 <a href="#state_wait_go" style="color: inherit; text-decoration: inherit;">Wait</a>
@@ -1281,13 +1178,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1296,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_answers_nodejs">
 <a href="#state_answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -1306,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogname_nodejs">
 <a href="#state_catalogname_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Name</a>
@@ -1316,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1326,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_nodejs">
 <a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -1336,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1346,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionhistorylimit_nodejs">
 <a href="#state_revisionhistorylimit_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>History<wbr>Limit</a>
@@ -1356,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionid_nodejs">
 <a href="#state_revisionid_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Id</a>
@@ -1366,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1376,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_nodejs">
 <a href="#state_targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -1386,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatename_nodejs">
 <a href="#state_templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
@@ -1396,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateversion_nodejs">
 <a href="#state_templateversion_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version</a>
@@ -1406,8 +1290,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateversionid_nodejs">
 <a href="#state_templateversionid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version<wbr>Id</a>
@@ -1416,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgradestrategy_nodejs">
 <a href="#state_upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
@@ -1426,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_nodejs">
 <a href="#state_wait_nodejs" style="color: inherit; text-decoration: inherit;">wait</a>
@@ -1436,13 +1317,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1451,8 +1330,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_answers_python">
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
@@ -1461,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappanswer">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalog_name_python">
 <a href="#state_catalog_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>name</a>
@@ -1471,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1481,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_python">
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -1491,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappmember">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1501,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_history_limit_python">
 <a href="#state_revision_history_limit_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>history_<wbr>limit</a>
@@ -1511,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_id_python">
 <a href="#state_revision_id_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>id</a>
@@ -1521,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1531,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_python">
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -1541,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterapptarget">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_name_python">
 <a href="#state_template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
@@ -1551,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_version_python">
 <a href="#state_template_version_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version</a>
@@ -1561,8 +1429,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_version_id_python">
 <a href="#state_template_version_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version_<wbr>id</a>
@@ -1571,8 +1438,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upgrade_strategy_python">
 <a href="#state_upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
@@ -1581,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_python">
 <a href="#state_wait_python" style="color: inherit; text-decoration: inherit;">wait</a>
@@ -1591,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1607,8 +1471,7 @@ The following state arguments are supported:
 <h4 id="multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1617,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1627,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1637,13 +1498,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1652,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1662,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1672,13 +1529,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1687,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1697,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1707,13 +1560,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1722,8 +1573,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1732,8 +1582,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1742,15 +1591,13 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstype_csharp">
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -1759,8 +1606,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupprincipalid_csharp">
 <a href="#groupprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Principal<wbr>Id</a>
@@ -1769,8 +1615,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalid_csharp">
 <a href="#userprincipalid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Id</a>
@@ -1779,13 +1624,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstype_go">
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -1794,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupprincipalid_go">
 <a href="#groupprincipalid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Principal<wbr>Id</a>
@@ -1804,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalid_go">
 <a href="#userprincipalid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Id</a>
@@ -1814,13 +1655,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstype_nodejs">
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
@@ -1829,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupprincipalid_nodejs">
 <a href="#groupprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Principal<wbr>Id</a>
@@ -1839,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalid_nodejs">
 <a href="#userprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Id</a>
@@ -1849,13 +1686,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_type_python">
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
@@ -1864,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_principal_id_python">
 <a href="#group_principal_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>principal_<wbr>id</a>
@@ -1874,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_principal_id_python">
 <a href="#user_principal_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>id</a>
@@ -1884,15 +1717,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1901,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1911,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthstate_csharp">
 <a href="#healthstate_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>State</a>
@@ -1921,8 +1750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1931,13 +1759,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1946,8 +1772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1956,8 +1781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthstate_go">
 <a href="#healthstate_go" style="color: inherit; text-decoration: inherit;">Health<wbr>State</a>
@@ -1966,8 +1790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1976,13 +1799,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1991,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -2001,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthstate_nodejs">
 <a href="#healthstate_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State</a>
@@ -2011,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2021,13 +1839,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2036,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -2046,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App ID for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_state_python">
 <a href="#health_state_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state</a>
@@ -2056,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2066,15 +1879,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rollingupdate_csharp">
 <a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
@@ -2083,13 +1894,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rollingupdate_go">
 <a href="#rollingupdate_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
@@ -2098,13 +1907,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rollingupdate_nodejs">
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
@@ -2113,13 +1920,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rolling_update_python">
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
@@ -2128,15 +1933,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -2145,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -2155,13 +1957,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -2170,8 +1970,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -2180,13 +1979,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -2195,8 +1992,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -2205,13 +2001,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -2220,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -2230,8 +2023,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

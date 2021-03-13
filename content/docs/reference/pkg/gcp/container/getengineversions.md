@@ -203,8 +203,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -216,8 +215,7 @@ The following arguments are supported:
 Must exactly match the location the cluster will be deployed in, or listed
 versions may not be available. If `location`, `region`, and `zone` are not
 specified, the provider-level zone must be set and is used instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -227,8 +225,7 @@ specified, the provider-level zone must be set and is used instead.
     </dt>
     <dd>{{% md %}}ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
 Defaults to the project that the provider is authenticated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionprefix_csharp">
 <a href="#versionprefix_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
@@ -242,13 +239,11 @@ releases. Since this is just a string match, it's recommended that you append a
 `.` after minor versions to ensure that prefixes such as `1.1` don't match
 versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
 for full details on how version strings are formatted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -260,8 +255,7 @@ for full details on how version strings are formatted.
 Must exactly match the location the cluster will be deployed in, or listed
 versions may not be available. If `location`, `region`, and `zone` are not
 specified, the provider-level zone must be set and is used instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -271,8 +265,7 @@ specified, the provider-level zone must be set and is used instead.
     </dt>
     <dd>{{% md %}}ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
 Defaults to the project that the provider is authenticated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionprefix_go">
 <a href="#versionprefix_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
@@ -286,13 +279,11 @@ releases. Since this is just a string match, it's recommended that you append a
 `.` after minor versions to ensure that prefixes such as `1.1` don't match
 versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
 for full details on how version strings are formatted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -304,8 +295,7 @@ for full details on how version strings are formatted.
 Must exactly match the location the cluster will be deployed in, or listed
 versions may not be available. If `location`, `region`, and `zone` are not
 specified, the provider-level zone must be set and is used instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -315,8 +305,7 @@ specified, the provider-level zone must be set and is used instead.
     </dt>
     <dd>{{% md %}}ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
 Defaults to the project that the provider is authenticated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionprefix_nodejs">
 <a href="#versionprefix_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prefix</a>
@@ -330,13 +319,11 @@ releases. Since this is just a string match, it's recommended that you append a
 `.` after minor versions to ensure that prefixes such as `1.1` don't match
 versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
 for full details on how version strings are formatted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -348,8 +335,7 @@ for full details on how version strings are formatted.
 Must exactly match the location the cluster will be deployed in, or listed
 versions may not be available. If `location`, `region`, and `zone` are not
 specified, the provider-level zone must be set and is used instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -359,8 +345,7 @@ specified, the provider-level zone must be set and is used instead.
     </dt>
     <dd>{{% md %}}ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
 Defaults to the project that the provider is authenticated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_prefix_python">
 <a href="#version_prefix_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prefix</a>
@@ -374,8 +359,7 @@ releases. Since this is just a string match, it's recommended that you append a
 `.` after minor versions to ensure that prefixes such as `1.1` don't match
 versions like `1.12.5-gke.10` accidentally. See [the docs on versioning schema](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#versioning_scheme)
 for full details on how version strings are formatted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -388,8 +372,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultclusterversion_csharp">
 <a href="#defaultclusterversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cluster<wbr>Version</a>
@@ -398,8 +381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes the service deploys by default.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -408,8 +390,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestmasterversion_csharp">
 <a href="#latestmasterversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Master<wbr>Version</a>
@@ -418,8 +399,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestnodeversion_csharp">
 <a href="#latestnodeversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Node<wbr>Version</a>
@@ -428,8 +408,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releasechanneldefaultversion_csharp">
 <a href="#releasechanneldefaultversion_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel<wbr>Default<wbr>Version</a>
@@ -438,8 +417,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map from a release channel name to the channel's default version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validmasterversions_csharp">
 <a href="#validmasterversions_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Master<wbr>Versions</a>
@@ -448,8 +426,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validnodeversions_csharp">
 <a href="#validnodeversions_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Node<wbr>Versions</a>
@@ -458,8 +435,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -467,8 +443,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -476,8 +451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionprefix_csharp">
 <a href="#versionprefix_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
@@ -485,13 +459,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultclusterversion_go">
 <a href="#defaultclusterversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cluster<wbr>Version</a>
@@ -500,8 +472,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes the service deploys by default.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -510,8 +481,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestmasterversion_go">
 <a href="#latestmasterversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Master<wbr>Version</a>
@@ -520,8 +490,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestnodeversion_go">
 <a href="#latestnodeversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Node<wbr>Version</a>
@@ -530,8 +499,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releasechanneldefaultversion_go">
 <a href="#releasechanneldefaultversion_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel<wbr>Default<wbr>Version</a>
@@ -540,8 +508,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map from a release channel name to the channel's default version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validmasterversions_go">
 <a href="#validmasterversions_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Master<wbr>Versions</a>
@@ -550,8 +517,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validnodeversions_go">
 <a href="#validnodeversions_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Node<wbr>Versions</a>
@@ -560,8 +526,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -569,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -578,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionprefix_go">
 <a href="#versionprefix_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
@@ -587,13 +550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultclusterversion_nodejs">
 <a href="#defaultclusterversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cluster<wbr>Version</a>
@@ -602,8 +563,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes the service deploys by default.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -612,8 +572,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestmasterversion_nodejs">
 <a href="#latestmasterversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Master<wbr>Version</a>
@@ -622,8 +581,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestnodeversion_nodejs">
 <a href="#latestnodeversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Node<wbr>Version</a>
@@ -632,8 +590,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releasechanneldefaultversion_nodejs">
 <a href="#releasechanneldefaultversion_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel<wbr>Default<wbr>Version</a>
@@ -642,8 +599,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map from a release channel name to the channel's default version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validmasterversions_nodejs">
 <a href="#validmasterversions_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Master<wbr>Versions</a>
@@ -652,8 +608,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validnodeversions_nodejs">
 <a href="#validnodeversions_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Node<wbr>Versions</a>
@@ -662,8 +617,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -671,8 +625,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -680,8 +633,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionprefix_nodejs">
 <a href="#versionprefix_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prefix</a>
@@ -689,13 +641,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="default_cluster_version_python">
 <a href="#default_cluster_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cluster_<wbr>version</a>
@@ -704,8 +654,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Kubernetes the service deploys by default.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -714,8 +663,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_master_version_python">
 <a href="#latest_master_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>master_<wbr>version</a>
@@ -724,8 +672,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_node_version_python">
 <a href="#latest_node_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>node_<wbr>version</a>
@@ -734,8 +681,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The latest version available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="release_channel_default_version_python">
 <a href="#release_channel_default_version_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel_<wbr>default_<wbr>version</a>
@@ -744,8 +690,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map from a release channel name to the channel's default version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_master_versions_python">
 <a href="#valid_master_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>master_<wbr>versions</a>
@@ -754,8 +699,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with master instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_node_versions_python">
 <a href="#valid_node_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>node_<wbr>versions</a>
@@ -764,8 +708,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of versions available in the given zone for use with node instances.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -773,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -782,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_prefix_python">
 <a href="#version_prefix_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prefix</a>
@@ -791,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

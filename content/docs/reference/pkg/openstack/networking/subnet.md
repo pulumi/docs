@@ -277,8 +277,7 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -288,8 +287,7 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationpools_csharp">
 <a href="#allocationpools_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
@@ -303,8 +301,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="allocationpoolscollection_csharp">
 <a href="#allocationpoolscollection_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
@@ -315,8 +312,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -327,8 +323,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -338,8 +333,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnameservers_csharp">
 <a href="#dnsnameservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
@@ -350,8 +344,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledhcp_csharp">
 <a href="#enabledhcp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
@@ -362,8 +355,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayip_csharp">
 <a href="#gatewayip_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -375,8 +367,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hostroutes_csharp">
 <a href="#hostroutes_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
@@ -389,8 +380,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -400,8 +390,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addressmode_csharp">
 <a href="#ipv6addressmode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -411,8 +400,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6ramode_csharp">
 <a href="#ipv6ramode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -422,8 +410,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +420,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nogateway_csharp">
 <a href="#nogateway_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
@@ -444,8 +430,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlength_csharp">
 <a href="#prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
@@ -457,8 +442,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -470,8 +454,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpoolid_csharp">
 <a href="#subnetpoolid_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -480,8 +463,7 @@ subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -490,8 +472,7 @@ subnet.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -501,8 +482,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -511,13 +491,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -527,8 +505,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationpools_go">
 <a href="#allocationpools_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
@@ -542,8 +519,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="allocationpoolscollection_go">
 <a href="#allocationpoolscollection_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
@@ -554,8 +530,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -566,8 +541,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -577,8 +551,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnameservers_go">
 <a href="#dnsnameservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
@@ -589,8 +562,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledhcp_go">
 <a href="#enabledhcp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
@@ -601,8 +573,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayip_go">
 <a href="#gatewayip_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -614,8 +585,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hostroutes_go">
 <a href="#hostroutes_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
@@ -628,8 +598,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -639,8 +608,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addressmode_go">
 <a href="#ipv6addressmode_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -650,8 +618,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6ramode_go">
 <a href="#ipv6ramode_go" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -661,8 +628,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -672,8 +638,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nogateway_go">
 <a href="#nogateway_go" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
@@ -683,8 +648,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlength_go">
 <a href="#prefixlength_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
@@ -696,8 +660,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -709,8 +672,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpoolid_go">
 <a href="#subnetpoolid_go" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -719,8 +681,7 @@ subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -729,8 +690,7 @@ subnet.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -740,8 +700,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -750,13 +709,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -766,8 +723,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationpools_nodejs">
 <a href="#allocationpools_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools</a>
@@ -781,8 +737,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="allocationpoolscollection_nodejs">
 <a href="#allocationpoolscollection_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools<wbr>Collection</a>
@@ -793,8 +748,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -805,8 +759,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -816,8 +769,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnameservers_nodejs">
 <a href="#dnsnameservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameservers</a>
@@ -828,8 +780,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledhcp_nodejs">
 <a href="#enabledhcp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dhcp</a>
@@ -840,8 +791,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayip_nodejs">
 <a href="#gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
@@ -853,8 +803,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="hostroutes_nodejs">
 <a href="#hostroutes_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Routes</a>
@@ -867,8 +816,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -878,8 +826,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addressmode_nodejs">
 <a href="#ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
@@ -889,8 +836,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6ramode_nodejs">
 <a href="#ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
@@ -900,8 +846,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -911,8 +856,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nogateway_nodejs">
 <a href="#nogateway_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Gateway</a>
@@ -922,8 +866,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlength_nodejs">
 <a href="#prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
@@ -935,8 +878,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -948,8 +890,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpoolid_nodejs">
 <a href="#subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
@@ -958,8 +899,7 @@ subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -968,8 +908,7 @@ subnet.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -979,8 +918,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -989,13 +927,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1005,8 +941,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocation_pools_python">
 <a href="#allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
@@ -1020,8 +955,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="allocation_pools_collection_python">
 <a href="#allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
@@ -1032,8 +966,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1044,8 +977,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1055,8 +987,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_nameservers_python">
 <a href="#dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
@@ -1067,8 +998,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_dhcp_python">
 <a href="#enable_dhcp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dhcp</a>
@@ -1079,8 +1009,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_ip_python">
 <a href="#gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
@@ -1092,8 +1021,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="host_routes_python">
 <a href="#host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
@@ -1106,8 +1034,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -1117,8 +1044,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_mode_python">
 <a href="#ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
@@ -1128,8 +1054,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_ra_mode_python">
 <a href="#ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
@@ -1139,8 +1064,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1150,8 +1074,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_gateway_python">
 <a href="#no_gateway_python" style="color: inherit; text-decoration: inherit;">no_<wbr>gateway</a>
@@ -1161,8 +1084,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_length_python">
 <a href="#prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
@@ -1174,8 +1096,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1187,8 +1108,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpool_id_python">
 <a href="#subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
@@ -1197,8 +1117,7 @@ subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1207,8 +1126,7 @@ subnet.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1218,8 +1136,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1228,8 +1145,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1240,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1251,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1260,13 +1174,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1276,8 +1188,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1285,13 +1196,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1301,8 +1210,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1310,13 +1218,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1326,8 +1232,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1335,8 +1240,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1463,8 +1367,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1474,8 +1377,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allocationpools_csharp">
 <a href="#state_allocationpools_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
@@ -1489,8 +1391,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_allocationpoolscollection_csharp">
 <a href="#state_allocationpoolscollection_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
@@ -1501,8 +1402,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_csharp">
 <a href="#state_cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1513,8 +1413,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1524,8 +1423,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnameservers_csharp">
 <a href="#state_dnsnameservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
@@ -1536,8 +1434,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledhcp_csharp">
 <a href="#state_enabledhcp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
@@ -1548,8 +1445,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayip_csharp">
 <a href="#state_gatewayip_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -1561,8 +1457,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hostroutes_csharp">
 <a href="#state_hostroutes_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
@@ -1575,8 +1470,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_csharp">
 <a href="#state_ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1586,8 +1480,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addressmode_csharp">
 <a href="#state_ipv6addressmode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -1597,8 +1490,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6ramode_csharp">
 <a href="#state_ipv6ramode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -1608,8 +1500,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1619,8 +1510,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
 <a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1630,8 +1520,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nogateway_csharp">
 <a href="#state_nogateway_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
@@ -1641,8 +1530,7 @@ creates a new subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlength_csharp">
 <a href="#state_prefixlength_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
@@ -1654,8 +1542,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1667,8 +1554,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpoolid_csharp">
 <a href="#state_subnetpoolid_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -1677,8 +1563,7 @@ subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1687,8 +1572,7 @@ subnet.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1698,8 +1582,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1708,13 +1591,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1724,8 +1605,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allocationpools_go">
 <a href="#state_allocationpools_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools</a>
@@ -1739,8 +1619,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_allocationpoolscollection_go">
 <a href="#state_allocationpoolscollection_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Pools<wbr>Collection</a>
@@ -1751,8 +1630,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_go">
 <a href="#state_cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1763,8 +1641,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1774,8 +1651,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnameservers_go">
 <a href="#state_dnsnameservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameservers</a>
@@ -1786,8 +1662,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledhcp_go">
 <a href="#state_enabledhcp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dhcp</a>
@@ -1798,8 +1673,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayip_go">
 <a href="#state_gatewayip_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -1811,8 +1685,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hostroutes_go">
 <a href="#state_hostroutes_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Routes</a>
@@ -1825,8 +1698,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_go">
 <a href="#state_ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1836,8 +1708,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addressmode_go">
 <a href="#state_ipv6addressmode_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -1847,8 +1718,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6ramode_go">
 <a href="#state_ipv6ramode_go" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -1858,8 +1728,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1869,8 +1738,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
 <a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1880,8 +1748,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nogateway_go">
 <a href="#state_nogateway_go" style="color: inherit; text-decoration: inherit;">No<wbr>Gateway</a>
@@ -1891,8 +1758,7 @@ creates a new subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlength_go">
 <a href="#state_prefixlength_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Length</a>
@@ -1904,8 +1770,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1917,8 +1782,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpoolid_go">
 <a href="#state_subnetpoolid_go" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -1927,8 +1791,7 @@ subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1937,8 +1800,7 @@ subnet.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1948,8 +1810,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1958,13 +1819,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1974,8 +1833,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allocationpools_nodejs">
 <a href="#state_allocationpools_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools</a>
@@ -1989,8 +1847,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_allocationpoolscollection_nodejs">
 <a href="#state_allocationpoolscollection_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools<wbr>Collection</a>
@@ -2001,8 +1858,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_nodejs">
 <a href="#state_cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -2013,8 +1869,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2024,8 +1879,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnameservers_nodejs">
 <a href="#state_dnsnameservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameservers</a>
@@ -2036,8 +1890,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledhcp_nodejs">
 <a href="#state_enabledhcp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dhcp</a>
@@ -2048,8 +1901,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayip_nodejs">
 <a href="#state_gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
@@ -2061,8 +1913,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_hostroutes_nodejs">
 <a href="#state_hostroutes_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Routes</a>
@@ -2075,8 +1926,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_nodejs">
 <a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -2086,8 +1936,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addressmode_nodejs">
 <a href="#state_ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
@@ -2097,8 +1946,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6ramode_nodejs">
 <a href="#state_ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
@@ -2108,8 +1956,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2119,8 +1966,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -2130,8 +1976,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nogateway_nodejs">
 <a href="#state_nogateway_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Gateway</a>
@@ -2141,8 +1986,7 @@ creates a new subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlength_nodejs">
 <a href="#state_prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
@@ -2154,8 +1998,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2167,8 +2010,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpoolid_nodejs">
 <a href="#state_subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
@@ -2177,8 +2019,7 @@ subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2187,8 +2028,7 @@ subnet.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -2198,8 +2038,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -2208,13 +2047,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -2224,8 +2061,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allocation_pools_python">
 <a href="#state_allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
@@ -2239,8 +2075,7 @@ the IP addresses available for use with DHCP in this subnet. Multiple
 than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_allocation_pools_collection_python">
 <a href="#state_allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
@@ -2251,8 +2086,7 @@ The `allocation_pool` block is documented below.
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_python">
 <a href="#state_cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -2263,8 +2097,7 @@ The `allocation_pools` block is documented below.
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2274,8 +2107,7 @@ subnet pool.
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_nameservers_python">
 <a href="#state_dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
@@ -2286,8 +2118,7 @@ updates the name of the existing subnet.
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_dhcp_python">
 <a href="#state_enable_dhcp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dhcp</a>
@@ -2298,8 +2129,7 @@ subnet.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_ip_python">
 <a href="#state_gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
@@ -2311,8 +2141,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 Leaving this blank and not setting `no_gateway` will cause a default
 gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_host_routes_python">
 <a href="#state_host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
@@ -2325,8 +2154,7 @@ instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_version_python">
 <a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -2336,8 +2164,7 @@ for the existing subnet.
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_address_mode_python">
 <a href="#state_ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
@@ -2347,8 +2174,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_ra_mode_python">
 <a href="#state_ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
@@ -2358,8 +2184,7 @@ new subnet.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2369,8 +2194,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -2380,8 +2204,7 @@ the existing subnet.
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_gateway_python">
 <a href="#state_no_gateway_python" style="color: inherit; text-decoration: inherit;">no_<wbr>gateway</a>
@@ -2391,8 +2214,7 @@ creates a new subnet.
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_length_python">
 <a href="#state_prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
@@ -2404,8 +2226,7 @@ this removes or adds a default gateway IP of the existing subnet.
 from a subnet pool. The default subnet pool prefix length that was defined
 when creating the subnet pool will be used if not provided. Changing this
 creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2417,8 +2238,7 @@ creates a new subnet.
 A Networking client is needed to create a Neutron subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetpool_id_python">
 <a href="#state_subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
@@ -2427,8 +2247,7 @@ subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2437,8 +2256,7 @@ subnet.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2448,8 +2266,7 @@ subnet.
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -2458,8 +2275,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2474,8 +2290,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <h4 id="subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2484,8 +2299,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2494,13 +2308,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2509,8 +2321,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2519,13 +2330,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2534,8 +2343,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2544,13 +2352,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2559,8 +2365,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2569,15 +2374,13 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2586,8 +2389,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2596,13 +2398,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2611,8 +2411,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2621,13 +2420,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2636,8 +2433,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2646,13 +2442,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2661,8 +2455,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ending address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2671,15 +2464,13 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The starting address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnethostroute">Subnet<wbr>Host<wbr>Route</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidr_csharp">
 <a href="#destinationcidr_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
@@ -2688,8 +2479,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_csharp">
 <a href="#nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -2698,13 +2488,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidr_go">
 <a href="#destinationcidr_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
@@ -2713,8 +2501,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_go">
 <a href="#nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -2723,13 +2510,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidr_nodejs">
 <a href="#destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
@@ -2738,8 +2523,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_nodejs">
 <a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
@@ -2748,13 +2532,11 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_cidr_python">
 <a href="#destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
@@ -2763,8 +2545,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="next_hop_python">
 <a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
@@ -2773,8 +2554,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -383,8 +383,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -393,8 +392,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressipversion_csharp">
 <a href="#addressipversion_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
@@ -403,8 +401,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_csharp">
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -415,8 +412,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_csharp">
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -426,8 +422,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteprotection_csharp">
 <a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -436,8 +431,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -446,8 +440,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="internet_csharp">
 <a href="#internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
@@ -456,8 +449,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetchargetype_csharp">
 <a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
@@ -468,8 +460,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterzoneid_csharp">
 <a href="#masterzoneid_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
@@ -478,8 +469,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -487,8 +477,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -497,8 +486,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -507,8 +495,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slavezoneid_csharp">
 <a href="#slavezoneid_csharp" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
@@ -517,8 +504,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_csharp">
 <a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -529,8 +515,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -539,8 +524,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -549,13 +533,11 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -564,8 +546,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressipversion_go">
 <a href="#addressipversion_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
@@ -574,8 +555,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_go">
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -586,8 +566,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_go">
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -597,8 +576,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteprotection_go">
 <a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -607,8 +585,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -617,8 +594,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="internet_go">
 <a href="#internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
@@ -627,8 +603,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetchargetype_go">
 <a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
@@ -639,8 +614,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterzoneid_go">
 <a href="#masterzoneid_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
@@ -649,8 +623,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -658,8 +631,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -668,8 +640,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -678,8 +649,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slavezoneid_go">
 <a href="#slavezoneid_go" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
@@ -688,8 +658,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_go">
 <a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -700,8 +669,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -710,8 +678,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -720,13 +687,11 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -735,8 +700,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressipversion_nodejs">
 <a href="#addressipversion_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Ip<wbr>Version</a>
@@ -745,8 +709,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_nodejs">
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -757,8 +720,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_nodejs">
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -768,8 +730,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteprotection_nodejs">
 <a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
@@ -778,8 +739,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -788,8 +748,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="internet_nodejs">
 <a href="#internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
@@ -798,8 +757,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetchargetype_nodejs">
 <a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
@@ -810,8 +768,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterzoneid_nodejs">
 <a href="#masterzoneid_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Zone<wbr>Id</a>
@@ -820,8 +777,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -829,8 +785,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -839,8 +794,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -849,8 +803,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slavezoneid_nodejs">
 <a href="#slavezoneid_nodejs" style="color: inherit; text-decoration: inherit;">slave<wbr>Zone<wbr>Id</a>
@@ -859,8 +812,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_nodejs">
 <a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -871,8 +823,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -881,8 +832,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -891,13 +841,11 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -906,8 +854,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_ip_version_python">
 <a href="#address_ip_version_python" style="color: inherit; text-decoration: inherit;">address_<wbr>ip_<wbr>version</a>
@@ -916,8 +863,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_type_python">
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
@@ -928,8 +874,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_python">
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -939,8 +884,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_protection_python">
 <a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
@@ -949,8 +893,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -959,8 +902,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="internet_python">
 <a href="#internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
@@ -969,8 +911,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internet_charge_type_python">
 <a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
@@ -981,8 +922,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_zone_id_python">
 <a href="#master_zone_id_python" style="color: inherit; text-decoration: inherit;">master_<wbr>zone_<wbr>id</a>
@@ -991,8 +931,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1000,8 +939,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1010,8 +948,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1020,8 +957,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slave_zone_id_python">
 <a href="#slave_zone_id_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>zone_<wbr>id</a>
@@ -1030,8 +966,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specification_python">
 <a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1042,8 +977,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1052,8 +986,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1062,8 +995,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1074,8 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1083,13 +1014,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1097,13 +1026,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1111,13 +1038,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1125,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1253,8 +1177,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1263,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressipversion_csharp">
 <a href="#state_addressipversion_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
@@ -1273,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addresstype_csharp">
 <a href="#state_addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -1285,8 +1206,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
 <a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1296,8 +1216,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteprotection_csharp">
 <a href="#state_deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -1306,8 +1225,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_csharp">
 <a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -1316,8 +1234,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_internet_csharp">
 <a href="#state_internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
@@ -1326,8 +1243,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetchargetype_csharp">
 <a href="#state_internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
@@ -1338,8 +1254,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterzoneid_csharp">
 <a href="#state_masterzoneid_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
@@ -1348,8 +1263,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1357,8 +1271,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1367,8 +1280,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1377,8 +1289,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slavezoneid_csharp">
 <a href="#state_slavezoneid_csharp" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
@@ -1387,8 +1298,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_csharp">
 <a href="#state_specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1399,8 +1309,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1409,8 +1318,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1419,13 +1327,11 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1434,8 +1340,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressipversion_go">
 <a href="#state_addressipversion_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Ip<wbr>Version</a>
@@ -1444,8 +1349,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addresstype_go">
 <a href="#state_addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -1456,8 +1360,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
 <a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1467,8 +1370,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteprotection_go">
 <a href="#state_deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -1477,8 +1379,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_go">
 <a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -1487,8 +1388,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_internet_go">
 <a href="#state_internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
@@ -1497,8 +1397,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetchargetype_go">
 <a href="#state_internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
@@ -1509,8 +1408,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterzoneid_go">
 <a href="#state_masterzoneid_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Zone<wbr>Id</a>
@@ -1519,8 +1417,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1528,8 +1425,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1538,8 +1434,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1548,8 +1443,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slavezoneid_go">
 <a href="#state_slavezoneid_go" style="color: inherit; text-decoration: inherit;">Slave<wbr>Zone<wbr>Id</a>
@@ -1558,8 +1452,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_go">
 <a href="#state_specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1570,8 +1463,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1580,8 +1472,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1590,13 +1481,11 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1605,8 +1494,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressipversion_nodejs">
 <a href="#state_addressipversion_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Ip<wbr>Version</a>
@@ -1615,8 +1503,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addresstype_nodejs">
 <a href="#state_addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -1627,8 +1514,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1638,8 +1524,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteprotection_nodejs">
 <a href="#state_deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
@@ -1648,8 +1533,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_nodejs">
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -1658,8 +1542,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_internet_nodejs">
 <a href="#state_internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
@@ -1668,8 +1551,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetchargetype_nodejs">
 <a href="#state_internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
@@ -1680,8 +1562,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterzoneid_nodejs">
 <a href="#state_masterzoneid_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Zone<wbr>Id</a>
@@ -1690,8 +1571,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1699,8 +1579,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1709,8 +1588,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1719,8 +1597,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slavezoneid_nodejs">
 <a href="#state_slavezoneid_nodejs" style="color: inherit; text-decoration: inherit;">slave<wbr>Zone<wbr>Id</a>
@@ -1729,8 +1606,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_nodejs">
 <a href="#state_specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1741,8 +1617,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1751,8 +1626,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -1761,13 +1635,11 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1776,8 +1648,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the IP address of the private network for the SLB instance, which must be in the destination CIDR block of the correspond ing switch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_address_ip_version_python">
 <a href="#state_address_ip_version_python" style="color: inherit; text-decoration: inherit;">address_<wbr>ip_<wbr>version</a>
@@ -1786,8 +1657,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP version of the SLB instance to be created, which can be set to ipv4 or ipv6 . Default to "ipv4". Now, only internet instance support ipv6 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_address_type_python">
 <a href="#state_address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
@@ -1798,8 +1668,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     <dd>{{% md %}}The network type of the SLB instance. Valid values: ["internet", "intranet"]. If load balancer launched in VPC, this value must be "intranet".
 - internet: After an Internet SLB instance is created, the system allocates a public IP address so that the instance can forward requests from the Internet.
 - intranet: After an intranet SLB instance is created, the system allocates an intranet IP address so that the instance can only forward intranet requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1809,8 +1678,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
     </dt>
     <dd>{{% md %}}Valid
 value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic", then this value will be ignore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_protection_python">
 <a href="#state_delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
@@ -1819,8 +1687,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not. on: Enable deletion protection. off: Disable deletion protection. Default to off. Only postpaid instance support this function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_charge_type_python">
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -1829,8 +1696,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing method of the load balancer. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_internet_python">
 <a href="#state_internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
@@ -1839,8 +1705,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Field 'internet' has been deprecated from provider version 1.55.3. Use 'address_type' replaces it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;internet&#39; has been deprecated from provider version 1.55.3. Use &#39;address_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_charge_type_python">
 <a href="#state_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
@@ -1851,8 +1716,7 @@ value is between 1 and 1000, If argument "internet_charge_type" is "paybytraffic
     <dd>{{% md %}}Valid
 values are `PayByBandwidth`, `PayByTraffic`. If this value is "PayByBandwidth", then argument "internet" must be "true". Default is "PayByTraffic". If load balancer launched in VPC, this value must be "PayByTraffic".
 Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_zone_id_python">
 <a href="#state_master_zone_id_python" style="color: inherit; text-decoration: inherit;">master_<wbr>zone_<wbr>id</a>
@@ -1861,8 +1725,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1870,8 +1733,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1880,8 +1742,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1890,8 +1751,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the SLB belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slave_zone_id_python">
 <a href="#state_slave_zone_id_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>zone_<wbr>id</a>
@@ -1900,8 +1760,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The standby zone ID of the SLB instance. If not specified, the system will be randomly assigned. You can query the primary and standby zones in a region by calling the DescribeZone API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_specification_python">
 <a href="#state_specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1912,8 +1771,7 @@ Before version 1.10.1, the valid values are "paybybandwidth" and "paybytraffic".
     <dd>{{% md %}}The specification of the Server Load Balancer instance. Default to empty string indicating it is "Shared-Performance" instance.
 Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail/27657.htm)" instance, it is must be specified and it valid values are: "slb.s1.small", "slb.s2.small", "slb.s2.medium",
 "slb.s3.small", "slb.s3.medium", "slb.s3.large" and "slb.s4.large".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1922,8 +1780,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The `tags` can have a maximum of 10 tag for every load balancer instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1932,8 +1789,7 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VSwitch ID to launch in. If `address_type` is internet, it will be ignore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

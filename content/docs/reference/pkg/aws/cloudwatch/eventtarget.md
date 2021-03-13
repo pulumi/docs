@@ -714,8 +714,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -724,8 +723,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_csharp">
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -734,8 +732,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchtarget_csharp">
 <a href="#batchtarget_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Target</a>
@@ -744,8 +741,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterconfig_csharp">
 <a href="#deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -754,8 +750,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_csharp">
 <a href="#ecstarget_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
@@ -764,8 +759,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventbusname_csharp">
 <a href="#eventbusname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
@@ -774,8 +768,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_csharp">
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -784,8 +777,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpath_csharp">
 <a href="#inputpath_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Path</a>
@@ -794,8 +786,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputtransformer_csharp">
 <a href="#inputtransformer_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Transformer</a>
@@ -804,8 +795,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesistarget_csharp">
 <a href="#kinesistarget_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Target</a>
@@ -814,8 +804,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -824,8 +813,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -834,8 +822,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommandtargets_csharp">
 <a href="#runcommandtargets_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Targets</a>
@@ -844,8 +831,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqstarget_csharp">
 <a href="#sqstarget_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Target</a>
@@ -854,8 +840,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -864,13 +849,11 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -879,8 +862,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_go">
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -889,8 +871,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchtarget_go">
 <a href="#batchtarget_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Target</a>
@@ -899,8 +880,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterconfig_go">
 <a href="#deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -909,8 +889,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_go">
 <a href="#ecstarget_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
@@ -919,8 +898,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventbusname_go">
 <a href="#eventbusname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
@@ -929,8 +907,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_go">
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -939,8 +916,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpath_go">
 <a href="#inputpath_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Path</a>
@@ -949,8 +925,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputtransformer_go">
 <a href="#inputtransformer_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Transformer</a>
@@ -959,8 +934,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesistarget_go">
 <a href="#kinesistarget_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Target</a>
@@ -969,8 +943,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -979,8 +952,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -989,8 +961,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommandtargets_go">
 <a href="#runcommandtargets_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Targets</a>
@@ -999,8 +970,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetruncommandtarget">[]Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqstarget_go">
 <a href="#sqstarget_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Target</a>
@@ -1009,8 +979,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetid_go">
 <a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1019,13 +988,11 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1034,8 +1001,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_nodejs">
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -1044,8 +1010,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchtarget_nodejs">
 <a href="#batchtarget_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Target</a>
@@ -1054,8 +1019,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterconfig_nodejs">
 <a href="#deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
@@ -1064,8 +1028,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecstarget_nodejs">
 <a href="#ecstarget_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Target</a>
@@ -1074,8 +1037,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventbusname_nodejs">
 <a href="#eventbusname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Bus<wbr>Name</a>
@@ -1084,8 +1046,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_nodejs">
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
@@ -1094,8 +1055,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpath_nodejs">
 <a href="#inputpath_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Path</a>
@@ -1104,8 +1064,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputtransformer_nodejs">
 <a href="#inputtransformer_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Transformer</a>
@@ -1114,8 +1073,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesistarget_nodejs">
 <a href="#kinesistarget_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Target</a>
@@ -1124,8 +1082,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -1134,8 +1091,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -1144,8 +1100,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommandtargets_nodejs">
 <a href="#runcommandtargets_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command<wbr>Targets</a>
@@ -1154,8 +1109,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqstarget_nodejs">
 <a href="#sqstarget_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Target</a>
@@ -1164,8 +1118,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetid_nodejs">
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1174,13 +1127,11 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1189,8 +1140,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_python">
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -1199,8 +1149,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_target_python">
 <a href="#batch_target_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>target</a>
@@ -1209,8 +1158,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_config_python">
 <a href="#dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
@@ -1219,8 +1167,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ecs_target_python">
 <a href="#ecs_target_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>target</a>
@@ -1229,8 +1176,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_bus_name_python">
 <a href="#event_bus_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>bus_<wbr>name</a>
@@ -1239,8 +1185,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_python">
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
@@ -1249,8 +1194,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_path_python">
 <a href="#input_path_python" style="color: inherit; text-decoration: inherit;">input_<wbr>path</a>
@@ -1259,8 +1203,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_transformer_python">
 <a href="#input_transformer_python" style="color: inherit; text-decoration: inherit;">input_<wbr>transformer</a>
@@ -1269,8 +1212,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinesis_target_python">
 <a href="#kinesis_target_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>target</a>
@@ -1279,8 +1221,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -1289,8 +1230,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -1299,8 +1239,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_command_targets_python">
 <a href="#run_command_targets_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>targets</a>
@@ -1309,8 +1248,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetruncommandtarget">Sequence[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqs_target_python">
 <a href="#sqs_target_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>target</a>
@@ -1319,8 +1257,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_id_python">
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -1329,8 +1266,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1341,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1350,13 +1285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1364,13 +1297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1378,13 +1309,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1392,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1520,8 +1448,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1530,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_csharp">
 <a href="#state_batchtarget_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Target</a>
@@ -1540,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterconfig_csharp">
 <a href="#state_deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -1550,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_csharp">
 <a href="#state_ecstarget_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
@@ -1560,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventbusname_csharp">
 <a href="#state_eventbusname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
@@ -1570,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_csharp">
 <a href="#state_input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -1580,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputpath_csharp">
 <a href="#state_inputpath_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Path</a>
@@ -1590,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputtransformer_csharp">
 <a href="#state_inputtransformer_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Transformer</a>
@@ -1600,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kinesistarget_csharp">
 <a href="#state_kinesistarget_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Target</a>
@@ -1610,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_csharp">
 <a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -1620,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1630,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rule_csharp">
 <a href="#state_rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -1640,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runcommandtargets_csharp">
 <a href="#state_runcommandtargets_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Targets</a>
@@ -1650,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetruncommandtarget">List&lt;Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqstarget_csharp">
 <a href="#state_sqstarget_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Target</a>
@@ -1660,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_csharp">
 <a href="#state_targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1670,13 +1583,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1685,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_go">
 <a href="#state_batchtarget_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Target</a>
@@ -1695,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterconfig_go">
 <a href="#state_deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
@@ -1705,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_go">
 <a href="#state_ecstarget_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
@@ -1715,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventbusname_go">
 <a href="#state_eventbusname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Bus<wbr>Name</a>
@@ -1725,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_go">
 <a href="#state_input_go" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -1735,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputpath_go">
 <a href="#state_inputpath_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Path</a>
@@ -1745,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputtransformer_go">
 <a href="#state_inputtransformer_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Transformer</a>
@@ -1755,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kinesistarget_go">
 <a href="#state_kinesistarget_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Target</a>
@@ -1765,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_go">
 <a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -1775,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1785,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rule_go">
 <a href="#state_rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
@@ -1795,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runcommandtargets_go">
 <a href="#state_runcommandtargets_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Targets</a>
@@ -1805,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetruncommandtarget">[]Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqstarget_go">
 <a href="#state_sqstarget_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Target</a>
@@ -1815,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_go">
 <a href="#state_targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1825,13 +1722,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1840,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_nodejs">
 <a href="#state_batchtarget_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Target</a>
@@ -1850,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterconfig_nodejs">
 <a href="#state_deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
@@ -1860,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecstarget_nodejs">
 <a href="#state_ecstarget_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Target</a>
@@ -1870,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventbusname_nodejs">
 <a href="#state_eventbusname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Bus<wbr>Name</a>
@@ -1880,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_nodejs">
 <a href="#state_input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
@@ -1890,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputpath_nodejs">
 <a href="#state_inputpath_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Path</a>
@@ -1900,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inputtransformer_nodejs">
 <a href="#state_inputtransformer_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Transformer</a>
@@ -1910,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kinesistarget_nodejs">
 <a href="#state_kinesistarget_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Target</a>
@@ -1920,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_nodejs">
 <a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -1930,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -1940,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rule_nodejs">
 <a href="#state_rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -1950,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runcommandtargets_nodejs">
 <a href="#state_runcommandtargets_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command<wbr>Targets</a>
@@ -1960,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqstarget_nodejs">
 <a href="#state_sqstarget_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Target</a>
@@ -1970,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_nodejs">
 <a href="#state_targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1980,13 +1861,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1995,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batch_target_python">
 <a href="#state_batch_target_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>target</a>
@@ -2005,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dead_letter_config_python">
 <a href="#state_dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
@@ -2015,8 +1892,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecs_target_python">
 <a href="#state_ecs_target_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>target</a>
@@ -2025,8 +1901,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_bus_name_python">
 <a href="#state_event_bus_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>bus_<wbr>name</a>
@@ -2035,8 +1910,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event bus to associate with the rule. If you omit this, the `default` event bus is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_python">
 <a href="#state_input_python" style="color: inherit; text-decoration: inherit;">input</a>
@@ -2045,8 +1919,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_path_python">
 <a href="#state_input_path_python" style="color: inherit; text-decoration: inherit;">input_<wbr>path</a>
@@ -2055,8 +1928,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_input_transformer_python">
 <a href="#state_input_transformer_python" style="color: inherit; text-decoration: inherit;">input_<wbr>transformer</a>
@@ -2065,8 +1937,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kinesis_target_python">
 <a href="#state_kinesis_target_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>target</a>
@@ -2075,8 +1946,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retry_policy_python">
 <a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -2085,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -2095,8 +1964,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rule_python">
 <a href="#state_rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
@@ -2105,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_run_command_targets_python">
 <a href="#state_run_command_targets_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>targets</a>
@@ -2115,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetruncommandtarget">Sequence[Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqs_target_python">
 <a href="#state_sqs_target_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>target</a>
@@ -2125,8 +1991,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_id_python">
 <a href="#state_target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -2135,8 +2000,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2151,8 +2015,7 @@ The following state arguments are supported:
 <h4 id="eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobdefinition_csharp">
 <a href="#jobdefinition_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Definition</a>
@@ -2161,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -2171,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arraysize_csharp">
 <a href="#arraysize_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Size</a>
@@ -2181,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobattempts_csharp">
 <a href="#jobattempts_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Attempts</a>
@@ -2191,13 +2051,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobdefinition_go">
 <a href="#jobdefinition_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Definition</a>
@@ -2206,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -2216,8 +2073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arraysize_go">
 <a href="#arraysize_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Size</a>
@@ -2226,8 +2082,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobattempts_go">
 <a href="#jobattempts_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Attempts</a>
@@ -2236,13 +2091,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobdefinition_nodejs">
 <a href="#jobdefinition_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Definition</a>
@@ -2251,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
@@ -2261,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arraysize_nodejs">
 <a href="#arraysize_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Size</a>
@@ -2271,8 +2122,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobattempts_nodejs">
 <a href="#jobattempts_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Attempts</a>
@@ -2281,13 +2131,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="job_definition_python">
 <a href="#job_definition_python" style="color: inherit; text-decoration: inherit;">job_<wbr>definition</a>
@@ -2296,8 +2144,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
@@ -2306,8 +2153,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_size_python">
 <a href="#array_size_python" style="color: inherit; text-decoration: inherit;">array_<wbr>size</a>
@@ -2316,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_attempts_python">
 <a href="#job_attempts_python" style="color: inherit; text-decoration: inherit;">job_<wbr>attempts</a>
@@ -2326,15 +2171,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2343,13 +2186,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2358,13 +2199,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2373,13 +2212,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2388,15 +2225,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="taskdefinitionarn_csharp">
 <a href="#taskdefinitionarn_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition<wbr>Arn</a>
@@ -2405,8 +2240,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_csharp">
 <a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -2415,8 +2249,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtype_csharp">
 <a href="#launchtype_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Type</a>
@@ -2425,8 +2258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_csharp">
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -2435,8 +2267,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformversion_csharp">
 <a href="#platformversion_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
@@ -2445,8 +2276,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskcount_csharp">
 <a href="#taskcount_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Count</a>
@@ -2455,13 +2285,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="taskdefinitionarn_go">
 <a href="#taskdefinitionarn_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Definition<wbr>Arn</a>
@@ -2470,8 +2298,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_go">
 <a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -2480,8 +2307,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtype_go">
 <a href="#launchtype_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Type</a>
@@ -2490,8 +2316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_go">
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
@@ -2500,8 +2325,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformversion_go">
 <a href="#platformversion_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
@@ -2510,8 +2334,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskcount_go">
 <a href="#taskcount_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Count</a>
@@ -2520,13 +2343,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="taskdefinitionarn_nodejs">
 <a href="#taskdefinitionarn_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Definition<wbr>Arn</a>
@@ -2535,8 +2356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_nodejs">
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -2545,8 +2365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtype_nodejs">
 <a href="#launchtype_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Type</a>
@@ -2555,8 +2374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfiguration_nodejs">
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
@@ -2565,8 +2383,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformversion_nodejs">
 <a href="#platformversion_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Version</a>
@@ -2575,8 +2392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskcount_nodejs">
 <a href="#taskcount_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Count</a>
@@ -2585,13 +2401,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="task_definition_arn_python">
 <a href="#task_definition_arn_python" style="color: inherit; text-decoration: inherit;">task_<wbr>definition_<wbr>arn</a>
@@ -2600,8 +2414,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_python">
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -2610,8 +2423,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launch_type_python">
 <a href="#launch_type_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>type</a>
@@ -2620,8 +2432,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_configuration_python">
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
@@ -2630,8 +2441,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_version_python">
 <a href="#platform_version_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>version</a>
@@ -2640,8 +2450,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="task_count_python">
 <a href="#task_count_python" style="color: inherit; text-decoration: inherit;">task_<wbr>count</a>
@@ -2650,15 +2459,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2667,8 +2474,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_csharp">
 <a href="#assignpublicip_csharp" style="color: inherit; text-decoration: inherit;">Assign<wbr>Public<wbr>Ip</a>
@@ -2677,8 +2483,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -2687,13 +2492,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2702,8 +2505,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_go">
 <a href="#assignpublicip_go" style="color: inherit; text-decoration: inherit;">Assign<wbr>Public<wbr>Ip</a>
@@ -2712,8 +2514,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -2722,13 +2523,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2737,8 +2536,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_nodejs">
 <a href="#assignpublicip_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Public<wbr>Ip</a>
@@ -2747,8 +2545,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -2757,13 +2554,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2772,8 +2567,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assign_public_ip_python">
 <a href="#assign_public_ip_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>public_<wbr>ip</a>
@@ -2782,8 +2576,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2792,15 +2585,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inputtemplate_csharp">
 <a href="#inputtemplate_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Template</a>
@@ -2808,8 +2599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpaths_csharp">
 <a href="#inputpaths_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Paths</a>
@@ -2821,13 +2611,11 @@ The following state arguments are supported:
 * You can have as many as 10 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inputtemplate_go">
 <a href="#inputtemplate_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Template</a>
@@ -2835,8 +2623,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpaths_go">
 <a href="#inputpaths_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Paths</a>
@@ -2848,13 +2635,11 @@ The following state arguments are supported:
 * You can have as many as 10 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inputtemplate_nodejs">
 <a href="#inputtemplate_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Template</a>
@@ -2862,8 +2647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputpaths_nodejs">
 <a href="#inputpaths_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Paths</a>
@@ -2875,13 +2659,11 @@ The following state arguments are supported:
 * You can have as many as 10 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="input_template_python">
 <a href="#input_template_python" style="color: inherit; text-decoration: inherit;">input_<wbr>template</a>
@@ -2889,8 +2671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_paths_python">
 <a href="#input_paths_python" style="color: inherit; text-decoration: inherit;">input_<wbr>paths</a>
@@ -2902,15 +2683,13 @@ The following state arguments are supported:
 * You can have as many as 10 key-value pairs.
 * You must use JSON dot notation, not bracket notation.
 * The keys can't start with "AWS".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partitionkeypath_csharp">
 <a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
@@ -2919,13 +2698,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partitionkeypath_go">
 <a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
@@ -2934,13 +2711,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partitionkeypath_nodejs">
 <a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
@@ -2949,13 +2724,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="partition_key_path_python">
 <a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
@@ -2964,15 +2737,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_csharp">
 <a href="#maximumeventageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -2981,8 +2752,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in seconds to continue to make retry attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_csharp">
 <a href="#maximumretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
@@ -2991,13 +2761,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum number of retry attempts to make before the request fails
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_go">
 <a href="#maximumeventageinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -3006,8 +2774,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in seconds to continue to make retry attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_go">
 <a href="#maximumretryattempts_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
@@ -3016,13 +2783,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum number of retry attempts to make before the request fails
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_nodejs">
 <a href="#maximumeventageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -3031,8 +2796,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The age in seconds to continue to make retry attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_nodejs">
 <a href="#maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
@@ -3041,13 +2805,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}maximum number of retry attempts to make before the request fails
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maximum_event_age_in_seconds_python">
 <a href="#maximum_event_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</a>
@@ -3056,8 +2818,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The age in seconds to continue to make retry attempts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_retry_attempts_python">
 <a href="#maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
@@ -3066,15 +2827,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum number of retry attempts to make before the request fails
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3083,8 +2842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3093,13 +2851,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3108,8 +2864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3118,13 +2873,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3133,8 +2886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3143,13 +2895,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3158,8 +2908,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3168,15 +2917,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="messagegroupid_csharp">
 <a href="#messagegroupid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Group<wbr>Id</a>
@@ -3185,13 +2932,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="messagegroupid_go">
 <a href="#messagegroupid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Group<wbr>Id</a>
@@ -3200,13 +2945,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="messagegroupid_nodejs">
 <a href="#messagegroupid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Group<wbr>Id</a>
@@ -3215,13 +2958,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_group_id_python">
 <a href="#message_group_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>group_<wbr>id</a>
@@ -3230,8 +2971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

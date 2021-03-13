@@ -1761,8 +1761,7 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allports_csharp">
 <a href="#allports_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Ports</a>
@@ -1775,8 +1774,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowglobalaccess_csharp">
 <a href="#allowglobalaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Global<wbr>Access</a>
@@ -1786,8 +1784,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -1797,8 +1794,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1808,8 +1804,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1837,8 +1832,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1850,8 +1844,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ismirroringcollector_csharp">
 <a href="#ismirroringcollector_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Mirroring<wbr>Collector</a>
@@ -1865,8 +1858,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1875,8 +1867,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_csharp">
 <a href="#loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -1893,8 +1884,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1909,8 +1899,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1922,8 +1911,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktier_csharp">
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -1934,8 +1922,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_csharp">
 <a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1959,8 +1946,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1975,8 +1961,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1986,8 +1971,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1997,8 +1981,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicelabel_csharp">
 <a href="#servicelabel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Label</a>
@@ -2016,8 +1999,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2030,8 +2012,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2043,13 +2024,11 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allports_go">
 <a href="#allports_go" style="color: inherit; text-decoration: inherit;">All<wbr>Ports</a>
@@ -2062,8 +2041,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowglobalaccess_go">
 <a href="#allowglobalaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Global<wbr>Access</a>
@@ -2073,8 +2051,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -2084,8 +2061,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2095,8 +2071,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2124,8 +2099,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -2137,8 +2111,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ismirroringcollector_go">
 <a href="#ismirroringcollector_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Mirroring<wbr>Collector</a>
@@ -2152,8 +2125,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2162,8 +2134,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_go">
 <a href="#loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -2180,8 +2151,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2196,8 +2166,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2209,8 +2178,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktier_go">
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -2221,8 +2189,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_go">
 <a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -2246,8 +2213,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2262,8 +2228,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2273,8 +2238,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2284,8 +2248,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicelabel_go">
 <a href="#servicelabel_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Label</a>
@@ -2303,8 +2266,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2317,8 +2279,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2330,13 +2291,11 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allports_nodejs">
 <a href="#allports_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Ports</a>
@@ -2349,8 +2308,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowglobalaccess_nodejs">
 <a href="#allowglobalaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Global<wbr>Access</a>
@@ -2360,8 +2318,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -2371,8 +2328,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2382,8 +2338,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2411,8 +2366,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -2424,8 +2378,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ismirroringcollector_nodejs">
 <a href="#ismirroringcollector_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mirroring<wbr>Collector</a>
@@ -2439,8 +2392,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2449,8 +2401,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_nodejs">
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
@@ -2467,8 +2418,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2483,8 +2433,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2496,8 +2445,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networktier_nodejs">
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
@@ -2508,8 +2456,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_nodejs">
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
@@ -2533,8 +2480,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2549,8 +2495,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2560,8 +2505,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2571,8 +2515,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicelabel_nodejs">
 <a href="#servicelabel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Label</a>
@@ -2590,8 +2533,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2604,8 +2546,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2617,13 +2558,11 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_ports_python">
 <a href="#all_ports_python" style="color: inherit; text-decoration: inherit;">all_<wbr>ports</a>
@@ -2636,8 +2575,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_global_access_python">
 <a href="#allow_global_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>global_<wbr>access</a>
@@ -2647,8 +2585,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -2658,8 +2595,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2669,8 +2605,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2698,8 +2633,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -2711,8 +2645,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_mirroring_collector_python">
 <a href="#is_mirroring_collector_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mirroring_<wbr>collector</a>
@@ -2726,8 +2659,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2736,8 +2668,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancing_scheme_python">
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
@@ -2754,8 +2685,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2770,8 +2700,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2783,8 +2712,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_tier_python">
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
@@ -2795,8 +2723,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_range_python">
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
@@ -2820,8 +2747,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2836,8 +2762,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2847,8 +2772,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2858,8 +2782,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_label_python">
 <a href="#service_label_python" style="color: inherit; text-decoration: inherit;">service_<wbr>label</a>
@@ -2877,8 +2800,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2891,8 +2813,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2904,8 +2825,7 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2916,8 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2926,8 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2935,8 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2945,8 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2955,8 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -2965,13 +2880,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -2980,8 +2893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2989,8 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -2999,8 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3009,8 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -3019,13 +2928,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -3034,8 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3043,8 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -3053,8 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -3063,8 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -3073,13 +2976,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -3088,8 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3097,8 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -3107,8 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -3117,8 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -3127,8 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3255,8 +3151,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allports_csharp">
 <a href="#state_allports_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Ports</a>
@@ -3269,8 +3164,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowglobalaccess_csharp">
 <a href="#state_allowglobalaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Global<wbr>Access</a>
@@ -3280,8 +3174,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendservice_csharp">
 <a href="#state_backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -3291,8 +3184,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3301,8 +3193,7 @@ for INTERNAL load balancing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3312,8 +3203,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3341,8 +3231,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_csharp">
 <a href="#state_ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -3354,8 +3243,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ismirroringcollector_csharp">
 <a href="#state_ismirroringcollector_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Mirroring<wbr>Collector</a>
@@ -3369,8 +3257,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -3379,8 +3266,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3389,8 +3275,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_csharp">
 <a href="#state_loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -3407,8 +3292,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3423,8 +3307,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -3436,8 +3319,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networktier_csharp">
 <a href="#state_networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -3448,8 +3330,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrange_csharp">
 <a href="#state_portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -3473,8 +3354,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_csharp">
 <a href="#state_ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -3489,8 +3369,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -3500,8 +3379,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3511,8 +3389,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3521,8 +3398,7 @@ This field is not applicable to global forwarding rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicelabel_csharp">
 <a href="#state_servicelabel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Label</a>
@@ -3540,8 +3416,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -3550,8 +3425,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_csharp">
 <a href="#state_subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -3564,8 +3438,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3577,13 +3450,11 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allports_go">
 <a href="#state_allports_go" style="color: inherit; text-decoration: inherit;">All<wbr>Ports</a>
@@ -3596,8 +3467,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowglobalaccess_go">
 <a href="#state_allowglobalaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Global<wbr>Access</a>
@@ -3607,8 +3477,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendservice_go">
 <a href="#state_backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -3618,8 +3487,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3628,8 +3496,7 @@ for INTERNAL load balancing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3639,8 +3506,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3668,8 +3534,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_go">
 <a href="#state_ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -3681,8 +3546,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ismirroringcollector_go">
 <a href="#state_ismirroringcollector_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Mirroring<wbr>Collector</a>
@@ -3696,8 +3560,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -3706,8 +3569,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3716,8 +3578,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_go">
 <a href="#state_loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
@@ -3734,8 +3595,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3750,8 +3610,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -3763,8 +3622,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networktier_go">
 <a href="#state_networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -3775,8 +3633,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrange_go">
 <a href="#state_portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -3800,8 +3657,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_go">
 <a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -3816,8 +3672,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -3827,8 +3682,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3838,8 +3692,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3848,8 +3701,7 @@ This field is not applicable to global forwarding rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicelabel_go">
 <a href="#state_servicelabel_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Label</a>
@@ -3867,8 +3719,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -3877,8 +3728,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_go">
 <a href="#state_subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -3891,8 +3741,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -3904,13 +3753,11 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allports_nodejs">
 <a href="#state_allports_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Ports</a>
@@ -3923,8 +3770,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowglobalaccess_nodejs">
 <a href="#state_allowglobalaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Global<wbr>Access</a>
@@ -3934,8 +3780,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendservice_nodejs">
 <a href="#state_backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -3945,8 +3790,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -3955,8 +3799,7 @@ for INTERNAL load balancing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3966,8 +3809,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -3995,8 +3837,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipprotocol_nodejs">
 <a href="#state_ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -4008,8 +3849,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ismirroringcollector_nodejs">
 <a href="#state_ismirroringcollector_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mirroring<wbr>Collector</a>
@@ -4023,8 +3863,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -4033,8 +3872,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -4043,8 +3881,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_nodejs">
 <a href="#state_loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
@@ -4061,8 +3898,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4077,8 +3913,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -4090,8 +3925,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networktier_nodejs">
 <a href="#state_networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
@@ -4102,8 +3936,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrange_nodejs">
 <a href="#state_portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
@@ -4127,8 +3960,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_nodejs">
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -4143,8 +3975,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -4154,8 +3985,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -4165,8 +3995,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -4175,8 +4004,7 @@ This field is not applicable to global forwarding rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicelabel_nodejs">
 <a href="#state_servicelabel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Label</a>
@@ -4194,8 +4022,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -4204,8 +4031,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_nodejs">
 <a href="#state_subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -4218,8 +4044,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -4231,13 +4056,11 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_ports_python">
 <a href="#state_all_ports_python" style="color: inherit; text-decoration: inherit;">all_<wbr>ports</a>
@@ -4250,8 +4073,7 @@ INTERNAL and protocol is TCP/UDP), set this to true to allow packets
 addressed to any ports to be forwarded to the backends configured
 with this forwarding rule. Used with backend service. Cannot be set
 if port or portRange are set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_global_access_python">
 <a href="#state_allow_global_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>global_<wbr>access</a>
@@ -4261,8 +4083,7 @@ if port or portRange are set.
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_service_python">
 <a href="#state_backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -4272,8 +4093,7 @@ Otherwise only allows from the local region the ILB is located at.
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -4282,8 +4102,7 @@ for INTERNAL load balancing.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4293,8 +4112,7 @@ for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -4322,8 +4140,7 @@ the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
 or unnecessary diffs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_protocol_python">
 <a href="#state_ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -4335,8 +4152,7 @@ or unnecessary diffs.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_mirroring_collector_python">
 <a href="#state_is_mirroring_collector_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mirroring_<wbr>collector</a>
@@ -4350,8 +4166,7 @@ instances behind this load balancer will not have their traffic
 mirrored even if a PacketMirroring rule applies to them. This
 can only be set to true for load balancers that have their
 loadBalancingScheme set to INTERNAL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -4360,8 +4175,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -4370,8 +4184,7 @@ loadBalancingScheme set to INTERNAL.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_scheme_python">
 <a href="#state_load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
@@ -4388,8 +4201,7 @@ and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
 Default value is `EXTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4404,8 +4216,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -4417,8 +4228,7 @@ character, which cannot be a dash.
 the load balanced IP should belong to for this Forwarding Rule. If
 this field is not specified, the default network will be used.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_tier_python">
 <a href="#state_network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
@@ -4429,8 +4239,7 @@ This field is only used for INTERNAL load balancing.
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 Possible values are `PREMIUM` and `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_range_python">
 <a href="#state_port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
@@ -4454,8 +4263,7 @@ ports:
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
 1883, 5222
 * TargetVpnGateway: 500, 4500
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_python">
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -4470,8 +4278,7 @@ separated list of ports can be configured. Only packets addressed to
 these ports will be forwarded to the backends configured with this
 forwarding rule.
 You may specify a maximum of up to 5 ports.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -4481,8 +4288,7 @@ You may specify a maximum of up to 5 ports.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -4492,8 +4298,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -4502,8 +4307,7 @@ This field is not applicable to global forwarding rules.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_label_python">
 <a href="#state_service_label_python" style="color: inherit; text-decoration: inherit;">service_<wbr>label</a>
@@ -4521,8 +4325,7 @@ character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -4531,8 +4334,7 @@ This field is only used for INTERNAL load balancing.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_python">
 <a href="#state_subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -4545,8 +4347,7 @@ Forwarding Rule.  This field is only used for INTERNAL load balancing.
 If the network specified is in auto subnet mode, this field is
 optional. However, if the network is in custom subnet mode, a
 subnetwork must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -4558,8 +4359,7 @@ subnetwork must be specified.
 The target must live in the same region as the forwarding rule.
 The forwarded traffic must be of a type appropriate to the target
 object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

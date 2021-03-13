@@ -385,8 +385,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_csharp">
 <a href="#digitaltwinsid_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -395,8 +394,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubprimaryconnectionstring_csharp">
 <a href="#eventhubprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -405,8 +403,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubsecondaryconnectionstring_csharp">
 <a href="#eventhubsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -415,8 +412,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_csharp">
 <a href="#deadletterstoragesecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -425,8 +421,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -435,13 +430,11 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_go">
 <a href="#digitaltwinsid_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -450,8 +443,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubprimaryconnectionstring_go">
 <a href="#eventhubprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -460,8 +452,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubsecondaryconnectionstring_go">
 <a href="#eventhubsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -470,8 +461,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_go">
 <a href="#deadletterstoragesecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -480,8 +470,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -490,13 +479,11 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_nodejs">
 <a href="#digitaltwinsid_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Twins<wbr>Id</a>
@@ -505,8 +492,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubprimaryconnectionstring_nodejs">
 <a href="#eventhubprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -515,8 +501,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubsecondaryconnectionstring_nodejs">
 <a href="#eventhubsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -525,8 +510,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_nodejs">
 <a href="#deadletterstoragesecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -535,8 +519,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -545,13 +528,11 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digital_twins_id_python">
 <a href="#digital_twins_id_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>twins_<wbr>id</a>
@@ -560,8 +541,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhub_primary_connection_string_python">
 <a href="#eventhub_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>primary_<wbr>connection_<wbr>string</a>
@@ -570,8 +550,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhub_secondary_connection_string_python">
 <a href="#eventhub_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>secondary_<wbr>connection_<wbr>string</a>
@@ -580,8 +559,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_storage_secret_python">
 <a href="#dead_letter_storage_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>storage_<wbr>secret</a>
@@ -590,8 +568,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -600,8 +577,7 @@ The EndpointEventHub resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -612,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -621,13 +596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -635,13 +608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -649,13 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -663,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -791,8 +759,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_csharp">
 <a href="#state_deadletterstoragesecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -801,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_csharp">
 <a href="#state_digitaltwinsid_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -811,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubprimaryconnectionstring_csharp">
 <a href="#state_eventhubprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -821,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubsecondaryconnectionstring_csharp">
 <a href="#state_eventhubsecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -831,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -841,13 +804,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_go">
 <a href="#state_deadletterstoragesecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -856,8 +817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_go">
 <a href="#state_digitaltwinsid_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -866,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubprimaryconnectionstring_go">
 <a href="#state_eventhubprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -876,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubsecondaryconnectionstring_go">
 <a href="#state_eventhubsecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -886,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -896,13 +853,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_nodejs">
 <a href="#state_deadletterstoragesecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -911,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_nodejs">
 <a href="#state_digitaltwinsid_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Twins<wbr>Id</a>
@@ -921,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubprimaryconnectionstring_nodejs">
 <a href="#state_eventhubprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -931,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubsecondaryconnectionstring_nodejs">
 <a href="#state_eventhubsecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -941,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -951,13 +902,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dead_letter_storage_secret_python">
 <a href="#state_dead_letter_storage_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>storage_<wbr>secret</a>
@@ -966,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digital_twins_id_python">
 <a href="#state_digital_twins_id_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>twins_<wbr>id</a>
@@ -976,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhub_primary_connection_string_python">
 <a href="#state_eventhub_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>primary_<wbr>connection_<wbr>string</a>
@@ -986,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhub_secondary_connection_string_python">
 <a href="#state_eventhub_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>secondary_<wbr>connection_<wbr>string</a>
@@ -996,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1006,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

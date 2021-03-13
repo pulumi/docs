@@ -162,8 +162,7 @@ The VappEntity resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerid_csharp">
 <a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -173,8 +172,7 @@ The VappEntity resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -184,8 +182,7 @@ container the entity is a member of.
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -194,8 +191,7 @@ to power on or power off. This can be a virtual machine or a vApp.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startaction_csharp">
 <a href="#startaction_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
@@ -206,8 +202,7 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdelay_csharp">
 <a href="#startdelay_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
@@ -217,8 +212,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startorder_csharp">
 <a href="#startorder_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
@@ -227,8 +221,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopaction_csharp">
 <a href="#stopaction_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
@@ -239,8 +232,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopdelay_csharp">
 <a href="#stopdelay_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
@@ -251,8 +243,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -261,8 +252,7 @@ guestShutdown. Default: 120
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforguest_csharp">
 <a href="#waitforguest_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
@@ -273,13 +263,11 @@ guestShutdown. Default: 120
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerid_go">
 <a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -289,8 +277,7 @@ property has no effect for vApps. Default: false
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_go">
 <a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -300,8 +287,7 @@ container the entity is a member of.
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -310,8 +296,7 @@ to power on or power off. This can be a virtual machine or a vApp.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startaction_go">
 <a href="#startaction_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
@@ -322,8 +307,7 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdelay_go">
 <a href="#startdelay_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
@@ -333,8 +317,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startorder_go">
 <a href="#startorder_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
@@ -343,8 +326,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopaction_go">
 <a href="#stopaction_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
@@ -355,8 +337,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopdelay_go">
 <a href="#stopdelay_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
@@ -367,8 +348,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -377,8 +357,7 @@ guestShutdown. Default: 120
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforguest_go">
 <a href="#waitforguest_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
@@ -389,13 +368,11 @@ guestShutdown. Default: 120
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerid_nodejs">
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
@@ -405,8 +382,7 @@ property has no effect for vApps. Default: false
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetid_nodejs">
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -416,8 +392,7 @@ container the entity is a member of.
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -426,8 +401,7 @@ to power on or power off. This can be a virtual machine or a vApp.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startaction_nodejs">
 <a href="#startaction_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Action</a>
@@ -438,8 +412,7 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdelay_nodejs">
 <a href="#startdelay_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay</a>
@@ -449,8 +422,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startorder_nodejs">
 <a href="#startorder_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Order</a>
@@ -459,8 +431,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopaction_nodejs">
 <a href="#stopaction_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Action</a>
@@ -471,8 +442,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopdelay_nodejs">
 <a href="#stopdelay_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Delay</a>
@@ -483,8 +453,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -493,8 +462,7 @@ guestShutdown. Default: 120
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforguest_nodejs">
 <a href="#waitforguest_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest</a>
@@ -505,13 +473,11 @@ guestShutdown. Default: 120
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_id_python">
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
@@ -521,8 +487,7 @@ property has no effect for vApps. Default: false
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_id_python">
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -532,8 +497,7 @@ container the entity is a member of.
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -542,8 +506,7 @@ to power on or power off. This can be a virtual machine or a vApp.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_action_python">
 <a href="#start_action_python" style="color: inherit; text-decoration: inherit;">start_<wbr>action</a>
@@ -554,8 +517,7 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_delay_python">
 <a href="#start_delay_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay</a>
@@ -565,8 +527,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_order_python">
 <a href="#start_order_python" style="color: inherit; text-decoration: inherit;">start_<wbr>order</a>
@@ -575,8 +536,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_action_python">
 <a href="#stop_action_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>action</a>
@@ -587,8 +547,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_delay_python">
 <a href="#stop_delay_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>delay</a>
@@ -599,8 +558,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -609,8 +567,7 @@ guestShutdown. Default: 120
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_guest_python">
 <a href="#wait_for_guest_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest</a>
@@ -621,8 +578,7 @@ guestShutdown. Default: 120
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -633,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -642,13 +597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -656,13 +609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,13 +621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -684,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -812,8 +760,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerid_csharp">
 <a href="#state_containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -823,8 +770,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -833,8 +779,7 @@ container the entity is a member of.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startaction_csharp">
 <a href="#state_startaction_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
@@ -845,8 +790,7 @@ container the entity is a member of.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdelay_csharp">
 <a href="#state_startdelay_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
@@ -856,8 +800,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startorder_csharp">
 <a href="#state_startorder_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
@@ -866,8 +809,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stopaction_csharp">
 <a href="#state_stopaction_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
@@ -878,8 +820,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stopdelay_csharp">
 <a href="#state_stopdelay_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
@@ -890,8 +831,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -900,8 +840,7 @@ guestShutdown. Default: 120
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_csharp">
 <a href="#state_targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -911,8 +850,7 @@ guestShutdown. Default: 120
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforguest_csharp">
 <a href="#state_waitforguest_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
@@ -923,13 +861,11 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerid_go">
 <a href="#state_containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -939,8 +875,7 @@ property has no effect for vApps. Default: false
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -949,8 +884,7 @@ container the entity is a member of.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startaction_go">
 <a href="#state_startaction_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Action</a>
@@ -961,8 +895,7 @@ container the entity is a member of.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdelay_go">
 <a href="#state_startdelay_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay</a>
@@ -972,8 +905,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startorder_go">
 <a href="#state_startorder_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Order</a>
@@ -982,8 +914,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stopaction_go">
 <a href="#state_stopaction_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Action</a>
@@ -994,8 +925,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stopdelay_go">
 <a href="#state_stopdelay_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Delay</a>
@@ -1006,8 +936,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1016,8 +945,7 @@ guestShutdown. Default: 120
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_go">
 <a href="#state_targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1027,8 +955,7 @@ guestShutdown. Default: 120
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforguest_go">
 <a href="#state_waitforguest_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest</a>
@@ -1039,13 +966,11 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerid_nodejs">
 <a href="#state_containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
@@ -1055,8 +980,7 @@ property has no effect for vApps. Default: false
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -1065,8 +989,7 @@ container the entity is a member of.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startaction_nodejs">
 <a href="#state_startaction_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Action</a>
@@ -1077,8 +1000,7 @@ container the entity is a member of.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdelay_nodejs">
 <a href="#state_startdelay_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay</a>
@@ -1088,8 +1010,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startorder_nodejs">
 <a href="#state_startorder_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Order</a>
@@ -1098,8 +1019,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stopaction_nodejs">
 <a href="#state_stopaction_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Action</a>
@@ -1110,8 +1030,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stopdelay_nodejs">
 <a href="#state_stopdelay_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Delay</a>
@@ -1122,8 +1041,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1132,8 +1050,7 @@ guestShutdown. Default: 120
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_nodejs">
 <a href="#state_targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1143,8 +1060,7 @@ guestShutdown. Default: 120
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforguest_nodejs">
 <a href="#state_waitforguest_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest</a>
@@ -1155,13 +1071,11 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_id_python">
 <a href="#state_container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
@@ -1171,8 +1085,7 @@ property has no effect for vApps. Default: false
     </dt>
     <dd>{{% md %}}Managed object ID of the vApp
 container the entity is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -1181,8 +1094,7 @@ container the entity is a member of.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_action_python">
 <a href="#state_start_action_python" style="color: inherit; text-decoration: inherit;">start_<wbr>action</a>
@@ -1193,8 +1105,7 @@ container the entity is a member of.
     <dd>{{% md %}}How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_delay_python">
 <a href="#state_start_delay_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay</a>
@@ -1204,8 +1115,7 @@ Default: powerOn
     </dt>
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_order_python">
 <a href="#state_start_order_python" style="color: inherit; text-decoration: inherit;">start_<wbr>order</a>
@@ -1214,8 +1124,7 @@ entity in the order of entities to be started. Default: 120
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order to start and stop target in vApp. Default: 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stop_action_python">
 <a href="#state_stop_action_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>action</a>
@@ -1226,8 +1135,7 @@ entity in the order of entities to be started. Default: 120
     <dd>{{% md %}}Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stop_delay_python">
 <a href="#state_stop_delay_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>delay</a>
@@ -1238,8 +1146,7 @@ does not participate in auto-stop. Default: powerOff
     <dd>{{% md %}}Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1248,8 +1155,7 @@ guestShutdown. Default: 120
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_id_python">
 <a href="#state_target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -1259,8 +1165,7 @@ guestShutdown. Default: 120
     </dt>
     <dd>{{% md %}}Managed object ID of the entity
 to power on or power off. This can be a virtual machine or a vApp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_guest_python">
 <a href="#state_wait_for_guest_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest</a>
@@ -1271,8 +1176,7 @@ to power on or power off. This can be a virtual machine or a vApp.
     <dd>{{% md %}}Determines if the VM should be marked as being
 started when VMware Tools are ready instead of waiting for `start_delay`. This
 property has no effect for vApps. Default: false
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
